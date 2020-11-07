@@ -13,153 +13,147 @@
 <div class="exespotbody">
   <div class="grid">
   <span  class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
-    <div >
+    <a href="lending.pdf">
+    <div>
       <p>Lending</p>
     </div>
     <div class="col-reports-div">
       <div class="col-report" id="myEditReportButton">
       <span  ></span>
       </div>
-      <a href="https://fintechhorizonsmedia.com/reports/lending.pdf" >
+
       <div class="col-report" id="myReportPdfButton">
       <span class="mdi mdi-pdf-box "></span>
       </div>
-      </a>
-      <a href="https://fintechhorizonsmedia.com/showreports/index.pdf?report=lending">
+ 
       <div class="col-report" id="myViewReportLinkTag">
         <span class="mdi mdi-eye "></span>
       </div>
-      </a>
     </div>
+    </a>
   </span>
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
+     <a href="insurtech.pdf">
     <div >
       <p>Insurtech</p>
     </div>
     <div class="col-reports-div">
-      <a href="https://fintechhorizonsmedia.com/reports/insurtech.pdf" >
+  
       <div class="col-report" id="myReportPdfButton">
       <span class="mdi mdi-pdf-box " ></span>
       </div>
-      </a>
-     <a href="https://fintechhorizonsmedia.com/showreports/index.pdf?report=insurtech">
       <div class="col-report" id="myViewReportLinkTag">
       <span class="mdi mdi-eye "></span>
       </div>
-      </a>
       </div>
+    </a>
   </span>
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
+     <a href="blockchain.pdf">
     <div >
       <p>Blockchain/DLT</p>
     </div>
     <div class="col-reports-div">
 
 
-      <a href="https://fintechhorizonsmedia.com/reports/blockchain.pdf" >
       <div class="col-report" id="myReportPdfButton">
       <span class="mdi mdi-pdf-box " ></span>
       </div>
-      </a>
-      <a href="https://fintechhorizonsmedia.com/showreports/index.pdf?report=blockchain">
       <div class="col-report" id="myViewReportLinkTag">
        <span class="mdi mdi-eye "></span>
       </div>
-      </a>
       </div>
+    </a>
   </span>
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
+    <a href="banking.pdf">
     <div >
       <p>Banking</p>
     </div>
     <div class="col-reports-div">
 
-
-      <a href="https://fintechhorizonsmedia.com/reports/banking.pdf" >
       <div class="col-report" id="myReportPdfButton">
       <span class="mdi mdi-pdf-box " ></span>
       </div>
-      </a>
-      <a href="https://fintechhorizonsmedia.com/showreports/index.pdf?report=banking">
+  
+
       <div class="col-report" id="myViewReportLinkTag">
       <span class="mdi mdi-eye "></span>
       </div>
-      </a>
       </div>
+    </a>
   </span>
 </div>
 </div>
 <div class="exespotbody">
   <div class="grid">
+
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
+    <a href="wealthtech.pdf">
     <div >
       <p>WealthTech</p>
     </div>
     <div class="col-reports-div">
-      <a href="https://fintechhorizonsmedia.com/reports/wealthtech.pdf" >
+     
       <div class="col-report" id="myReportPdfButton">
       <span class="mdi mdi-pdf-box "></span>
       </div>
-      </a>
-       <a href="https://fintechhorizonsmedia.com/showreports/index.pdf?report=wealthtech">
+
       <div class="col-report" id="myViewReportLinkTag">
       <span class="mdi mdi-eye "></span>
       </div>
-      </a>
     </div>
+    </a>
   </span>
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
+    <a href="payments.pdf">
     <div >
       <p>Payments</p>
     </div>
     <div class="col-reports-div">
 
-       <a href="https://fintechhorizonsmedia.com/reports/payments.pdf">
+  
       <div class="col-report" id="myReportPdfButton">
       <span class="mdi mdi-pdf-box " ></span>
       </div>
-        </a>
-        <a href="https://fintechhorizonsmedia.com/showreports/index.pdf?report=payments"> 
       <div class="col-report" id="myViewReportLinkTag">
     <span class="mdi mdi-eye "></span>
       </div>
-        </a>
       </div>
+    </a>
   </span>
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
+       <a href="cyber.pdf">
     <div >
       <p>CyberSecurity</p>
     </div>
     <div class="col-reports-div">
 
-       <a href="https://fintechhorizonsmedia.com/reports/cyber.pdf"  >
       <div class="col-report" id="myReportPdfButton">
       <span class="mdi mdi-pdf-box " ></span>
       </div>
-        </a>
-      <a href="https://fintechhorizonsmedia.com/showreports/index.pdf?report=cyber">
       <div class="col-report" id="myViewReportLinkTag">
       <span class="mdi mdi-eye "></span>
       </div>
-      </a>
       </div>
+    </a>
   </span>
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
+    <a href="identity.pdf">
     <div >
       <p>Identity</p>
     </div>
     <div class="col-reports-div">
-      <a href="https://fintechhorizonsmedia.com/reports/identity.pdf" >
+     
       <div class="col-report" id="myReportPdfButton">
       <span class="mdi mdi-pdf-box " ></span>
       </div>
-      </a>
-      <a href="https://fintechhorizonsmedia.com/showreports/index.pdf?report=identity">
+
       <div class="col-report" id="myViewReportLinkTag">
       <span class="mdi mdi-eye "></span>
       </div>
-      </a>
       </div>
+    </a>
   </span>
 </div>
 </div>
