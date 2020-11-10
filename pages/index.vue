@@ -30,14 +30,16 @@ your team streamline and possibly <span style='mso-spacerun:yes'> elimiate </sp
 completed by research teams, including analysts and interns. DealFunnels can also be used to send leads to clients in addition to its use in-house.
 Our product is simple to use and organized in a
 straightforward manner.
-<br>
-<p ><br>
-To learn more about subsciptions and our services, or to receive a demo, click here or call
-<span style="color:#000099"> 480-438-5302 </span> for more information. </p>
-</span>
-
-
+<br></span>
 </p>
+
+<div class="footer">
+  <p ><br>
+  To learn more about subsciptions and our services, or to receive a demo, click here or call
+  <span style="color:#000099"> 480-438-5302 </span> for more information. </p>
+  </span>
+</div>
+
 </div>
 </template>
 
@@ -53,6 +55,15 @@ export default {
 </script>
 
 <style scoped>
+.footer{
+  width:100%;
+  height:50px;
+  background-color: #4f81bd;
+  color: #ffffff;
+  bottom: 0px;
+  position: absolute;
+  text-align: center;
+}
 .intro {
   position: relative;
   padding: 30px;
