@@ -3,7 +3,7 @@
 <div id="main">
 <ol>
 <ul v-for="post in posts">
-<div class="w-dyn-list featuredsidemenu"  >
+<div class="w-dyn-list "  >
   <div class="article-card" style="margin:10px;">
   <div style="height:1px;margin-left:auto;margin-right:auto;margin-top:20px;" class="coolbar"> </div>
     <div class="w-dyn-items">
@@ -17,7 +17,7 @@
                  <div class="w-row ">
                   <div v-if="!(post.logo_url==null)" class="flex-img">
                  <div class="centering-imgs w-col w-col-6 w-col-medium-6 w6-hide-tiny">
-                
+
                       <a class="blog-image w-inline-block" >
                           <img :src="post.logo_url" width="180" style="max-width: 180px ;max-height:130; overflow:none;"
                          >
@@ -45,13 +45,13 @@
                                 </tr
 
                                 <tr v-if="!(post.advisors==='')"><td><b> Advisors:</b><br> {{post.advisors}}<br><br></td></tr>
-                            
+
                                <tr v-if="!(post.investors.length === 0)"><td><b> Investors: </b><br> {{ post.investors }}<br><br></td></tr>
-                                
+
                                 <tr v-if="!(post.execheader==='')"><td><b>{{post.execheader}}</b><br><br></td></tr>
                                 <tr>
                                     <td>{{ post.execname }}<br><br></td>
-                                </tr>                     
+                                </tr>
                                <tr v-if="!(post.exec_url==null)" class="centering-imgs">
                                <td>
                                  <a class="blog-image exec-image-posts" >
@@ -65,7 +65,7 @@
                                 </tr>
                                 <tr v-if="!(post.interest==='')" >
                                    <td>
-                                    <b> Interesting Fact: </b> {{ post.interest}} 
+                                    <b> Interesting Fact: </b> {{ post.interest}}
                                     <br><br>
                                   </td>
                                 </tr>
@@ -83,7 +83,7 @@
     </ul>
     </ol>
     </div>
-</template>   
+</template>
 
 <script>
 
@@ -100,13 +100,13 @@
       }
    return 0;
 },
-      
+
   postFilter: function(posts) {
 
        return this.posts.filter(post => post.id==this.idlists(post.id));
      }
   },
-   
+
 };
 
 </script>
@@ -121,7 +121,7 @@
     }
   }
   .post-main-text {
-    height: 385px !important;
+    height: auto;
     display: inline-block;
     border-bottom-style: groove;
     border-bottom-color: #d2e8ff1f;
@@ -195,6 +195,10 @@
 .w-col-medium-3 {
   text-align: left;
 }
+img.in-your-face {
+  width:50px;
+  margin:auto;
+}
 .w-col-w-col-9{
   text-align:left;
 }
@@ -205,14 +209,19 @@
     box-shadow: 0 1px 5px 0 rgb(0 89 132 / 30%);
     border-radius: 10px;
     padding: 10px;
-    height: 1300px;
+    height: auto;
+    width: 80%;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom: 50px !important;
+
 }
 .article-card:hover {
     box-shadow: 0 1px 5px 0 rgba(0, 89, 132, 0.16);
     overflow: hidden;
     border-radius:10px;
 }
-  
+
 .article-card .w-col-9 {
     text-align: left;
     width: 100%;
