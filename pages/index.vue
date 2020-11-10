@@ -7,9 +7,17 @@
 <img  class="deal-f-logo" src="Dfunnels_files/image017.gif" v:shapes="Group_x0020_4507 Rectangle_x0020_510 Rectangle_x0020_512 Rectangle_x0020_514 Picture_x0020_4688 Shape_x0020_590 Picture_x0020_592"><![endif]><!--[if mso & !supportInlineShapes & supportFields]><v:shape
  id="_x0000_i1025" type="#_x0000_t75" style='width:474.3pt;height:180.45pt'>
  <v:imagedata croptop="-65520f" cropbottom="65520f"/>
-</v:shape><span style='mso-element:field-end'></span><![endif]--></p>
+</v:shape><span style='mso-element:field-end'></span><![endif]-->
 
 <h1 data-ix="slide-in-effect-on-load" style="padding-bottom: 0px; margin-bottom: 0px; opacity: 1; transform: translateX(0px) translateY(0px) translateZ(0px); transition: opacity 0.5s ease 0s, transform 0.7s ease 0s, opacity 500ms ease 0s, transform 700ms ease 0s;" class="intro-title">news and data service that provides actionable information <br></h1>
+
+<div >
+    <div id="subscribebuttonlanding" style="margin-right:auto; margin-left:auto;" class="text-block-20">
+    <a class="btn-link" href="/users/sign_up"></a>
+    <a style="color:white;" class="front-subscribe-button" href="/pricing">subscribe</a>
+  </div>
+</div>
+
 
 <p class=MsoNormal ><span class="intro-p" style='font-size:
 20.0pt;mso-bidi-font-size:11.0pt'>Focus – <span class=SpellE>DealFunnel</span>
@@ -35,6 +43,38 @@ straightforward manner.
 <br></span>
 </p>
 
+<div class="rem-img">
+  <img width="400px" src="https://firebasestorage.googleapis.com/v0/b/deal-funnel.appspot.com/o/deal%20funnel%20web%20stock%2Fgraph.png?alt=media&amp;token=a913daac-672b-4969-a69b-b734fbc437db">
+  </div>
+  <div class="featuredmenusection">
+
+                                      <div style="margin-top:50px; margin-bottom:50px; margin-left: 25px; margin-right: 25px;" class="coolbar"></div>
+
+
+  																			<!-- column -->
+  																			<div><center>
+  																			<h3 class="fea-headings"><br></h3>
+  																			</center>
+  																			<ul class="featured-cols-lists w-list-unstyled">
+  									  <center>
+  																			<h3 class="execspottittle" style="display:inline;">Deal Funnel Tour</h3>
+  																			<br><br>
+  																			<center>
+                                         <div style="height:1px" class="bluebar"> </div>
+                                         </center>
+  																			</center>
+
+                                        <center><li><p class="p-class-j">our news provide readers with more useful information than they can find in other publications because our journalists ask forward-looking questions of the executives they interview. This approach helps readers learn about a featured company's strategic priorities and its future needs. Click on the <i>'See the Tour'</i> button below for examples of our forward-looking coverage. The animated tour is hosted by FHM's <i>'The Pig'</i>, and is designed to provide a fun and informative overview of FHM content.</p>
+                                    	</li></center>
+
+  																			</ul>
+  																			<p>
+
+  																			</p></div>
+  																			<center><a href="http://localhost:3000/tourreview/index?product_tour_id=97066">
+  																		<button class="gardient-button">See the Tour</button>
+  																			</a></center>
+  																			</div>
 <div class="footer">
   <p ><br>
   To learn more about subsciptions and our services, or to receive a demo, click here or call
@@ -57,6 +97,63 @@ export default {
 </script>
 
 <style scoped>
+.gardient-button {
+    background-image: linear-gradient(200deg, #4F81BD 10%, #4F81BD 39%, #8ab4f8 80%);
+    background-size: 400% 400% !important;
+    animation: gradient 15s ease infinite !important;
+    width: fit-content !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    border-radius: 10px !important;
+    border: none !important;
+    padding: 10px 20px !important;
+    font-family: poppins !important;
+    color: white !important;
+    font-size: 12px !important;
+}
+.featuredmenusection {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px 0 #a5a5a5;
+    overflow: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+    padding-bottom: 100px;
+    width: 90%;
+}
+.rem-img {
+  top: 350px;
+  left: 8rem;
+  position: absolute;
+}
+@media screen and (max-width:1550px) {
+  .rem-img {
+    top: 300px;
+    left: 8rem;
+    position: initial;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    transition: 0.5s;
+  }
+}
+.text-block-20 {
+    background-color: #5082be !important;
+    border-radius: 10px;
+    color: white !important;
+    padding: 14px 25px;
+    width: max-content;
+    transition: 0.5s;
+    margin-top:20px;
+}
+.text-block-20:hover {
+    background: #ff9140 !important;
+    box-shadow: 0 0 6px -1px #43454659, inset 0 0 26px 0px #ffe844 !important;
+    cursor: pointer !important;
+}
 .intro-title {
     position: static;
     display: block;
@@ -76,7 +173,7 @@ export default {
   background-color: #4f81bd;
   color: #ffffff;
   bottom: 0px;
-  position: absolute;
+  position: fixed;
   text-align: center;
 }
 .intro {
