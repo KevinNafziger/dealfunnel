@@ -1,8 +1,8 @@
 
 <template>
 <div id="main">
-<ol>
-<ul v-for="post in posts">
+<ol class="div-mobile-col">
+<ul class="art-rows" v-for="post in posts">
 <div class="w-dyn-list "  >
   <div class="article-card" style="margin:10px;">
   <div style="height:1px;margin-left:auto;margin-right:auto;margin-top:20px;" class="coolbar"> </div>
@@ -119,6 +119,16 @@
     .post-main-text {
       overflow:auto;
     }
+    .art-rows {
+      width: 100% !important;
+    }
+  }
+  .art-rows {
+    display: inline-flex;
+    width: 33%;
+  }
+  .div-mobile-col {
+
   }
   .post-main-text {
     height: auto;
@@ -210,11 +220,11 @@ img.in-your-face {
     border-radius: 10px;
     padding: 10px;
     height: auto;
-    width: 80%;
+    width: 100%;
     margin-left: auto !important;
     margin-right: auto !important;
     margin-bottom: 50px !important;
-
+    min-height: 900px;
 }
 .article-card:hover {
     box-shadow: 0 1px 5px 0 rgba(0, 89, 132, 0.16);
