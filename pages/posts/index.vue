@@ -22,9 +22,12 @@ export default {
   align-items: center;
 }
 .datetag {
-  border-radius: 3px;
+  border-radius: 3px !important;
   padding: 3px;
-  color: #ffffff;
+  color: #ffffff !important;
+}
+a:hover {
+  text-decoration: none;
 }
 
 </style>
