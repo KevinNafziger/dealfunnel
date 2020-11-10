@@ -1,21 +1,19 @@
-<template> 
+<template>
 <div width="100%" class="w-container-2">
-    <h1 style="color:#474747;" class=" news-h execspottittle">News AI
-    
-    </h1>
+  <div data-v-50f93fd9="" class="title"><div data-v-50f93fd9="" class="content"><br data-v-50f93fd9=""> <h2 data-v-50f93fd9="">News AI</h2></div></div>
     <div class="section-15">
       <div class="row-15 w-row">
-      
+
           <div class="w-col w-col-9">
                 <ul class="w-list-unstyled">
-                
+
                     <li v-for="link in links" id="examples" style="text-align: center; margin-bottom: 20px;" class="list-item-9 featuredsidemenu">
                       <span class="datetag tl-c" style="margin-right:15px">
                        >
                       </span>
                       <h3  class="heading-24 example">
                         <br>
-                        
+
                       </h3>
                       <br>
                       <div class="text-block-13">
@@ -23,7 +21,7 @@
                           <br>
                           <br>
                           <span style="margin-right:15px">
-                        
+
                           </span>
                         </em>
                       </div>
@@ -34,7 +32,7 @@
                       <div class="w-row">
                         <div class="w-col w-col-6">
                           <div>
-                        
+
                           </div>
                         </div>
                       </div>
