@@ -141,6 +141,7 @@ h2 {
     height: 250px;
     color: #474747;
     overflow: auto;
+    padding: 20px;
 }
   #examples {
    display: inline-block;
