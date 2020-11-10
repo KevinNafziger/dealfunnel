@@ -117,6 +117,7 @@ export default {
      td {
        min-width: 80px;
        word-break: break-word;
+       width: 650px;
      }
      tbody td:hover {
         box-shadow: 1px 1px 8px -5px grey;
