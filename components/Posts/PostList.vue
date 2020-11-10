@@ -119,16 +119,14 @@
     .post-main-text {
       overflow:auto;
     }
-    .art-rows {
-      width: 100% !important;
-    }
   }
   .art-rows {
     display: inline-flex;
     width: 33%;
+    padding: 10px;
   }
   .div-mobile-col {
-
+    padding:0px;
   }
   .post-main-text {
     height: auto;
@@ -194,12 +192,13 @@
         color: red;
         margin-top: 8vw;
 }
+
 @media screen and (max-width: 940px) {
       .post-info p {
       margin-top: 20px;
       }
-      .article-card {
-          height: auto !important;
+      .art-rows {
+        width: 100% !important;
       }
     }
 .w-col-medium-3 {
