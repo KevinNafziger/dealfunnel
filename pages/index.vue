@@ -9,6 +9,8 @@
  <v:imagedata croptop="-65520f" cropbottom="65520f"/>
 </v:shape><span style='mso-element:field-end'></span><![endif]--></p>
 
+<h1 data-ix="slide-in-effect-on-load" style="padding-bottom: 0px; margin-bottom: 0px; opacity: 1; transform: translateX(0px) translateY(0px) translateZ(0px); transition: opacity 0.5s ease 0s, transform 0.7s ease 0s, opacity 500ms ease 0s, transform 700ms ease 0s;" class="intro-title">news and data service that provides actionable information <br></h1>
+
 <p class=MsoNormal ><span class="intro-p" style='font-size:
 20.0pt;mso-bidi-font-size:11.0pt'>Focus – <span class=SpellE>DealFunnel</span>
 is initially focused on delivering information on emerging technology
@@ -55,6 +57,19 @@ export default {
 </script>
 
 <style scoped>
+.intro-title {
+    position: static;
+    display: block;
+    margin: 0px;
+    padding: 0px 46px;
+    background-color: #4286ff;
+    background-image: linear-gradient(200deg, #4F81BD 10%, #0000005e 39%, #4F81BD 80%);
+    color: #fff;
+    font-size: 31px;
+    line-height: 52px;
+    font-weight: 400;
+    text-align: center;
+  }
 .footer{
   width:100%;
   height:50px;
