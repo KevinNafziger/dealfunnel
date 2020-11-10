@@ -52,25 +52,73 @@ straightforward manner.
   	<h3 class="fea-headings"><br></h3>
   </center>
   <ul class="featured-cols-lists w-list-unstyled">
-  									  <center>
-                        <h3 class="execspottittle" style="display:inline;">Deal Funnel Tour</h3>
-  																			<br><br>
-  																			<center>
-                                         <div style="height:1px" class="bluebar"> </div>
-                                         </center>
-  																			</center>
+  	<center>
+      <h3 class="execspottittle" style="display:inline;">Deal Funnel Tour</h3>
+  			<br><br>
+  				<center>
+            <div style="height:1px" class="bluebar"> </div>
+              </center>
+  					    </center>  <center><li><p class="p-class-j">our news provide readers with more useful information than they can find in other publications because our journalists ask forward-looking questions of the executives they interview. This approach helps readers learn about a featured company's strategic priorities and its future needs. Click on the <i>'See the Tour'</i> button below for examples of our forward-looking coverage. The animated tour is hosted by FHM's <i>'The Pig'</i>, and is designed to provide a fun and informative overview of FHM content.</p>
+                </li></center>	</ul>
+  							<p>
+  							</p></div>
+  							<center><a href="http://localhost:3000/tourreview/index?product_tour_id=97066">
+  							<button class="gardient-button">See the Tour</button>
+  					</a></center>  </div>
+            <div class="testimonials">
+    <!-- CARD 1 START-->
+    <div class="card">
+      <div class="layer"></div>
+      <div class="content">
+        <p>Famous Person, I love this product because it does it all for me, what i mean it does the search work for me that takes hours and hours off my day and this product gets me the data i need in seconds. and more things like getting pdf directly from the site.</p>
+        <div class="image">
+         <img src="https://upload.wikimedia.org/wikipedia/commons/2/28/Female_portrait_placeholder_cropped.jpg" alt="">
+        </div>
+        <div class="details">
+          <h2>
+            Someone Famous <br>
+            <span>SOMEONE FAMOUS ARTIST</span>
+          </h2>
+        </div>
+      </div>
+    </div>
+    <!-- CARD 1 end-->
 
-                                        <center><li><p class="p-class-j">our news provide readers with more useful information than they can find in other publications because our journalists ask forward-looking questions of the executives they interview. This approach helps readers learn about a featured company's strategic priorities and its future needs. Click on the <i>'See the Tour'</i> button below for examples of our forward-looking coverage. The animated tour is hosted by FHM's <i>'The Pig'</i>, and is designed to provide a fun and informative overview of FHM content.</p>
-                                    	</li></center>
-
-  																			</ul>
-  																			<p>
-
-  																			</p></div>
-  																			<center><a href="http://localhost:3000/tourreview/index?product_tour_id=97066">
-  																		<button class="gardient-button">See the Tour</button>
-  																			</a></center>
-  																			</div>
+    <!-- CARD 2 START-->
+    <div class="card">
+      <div class="layer"></div>
+      <div class="content">
+        <p>Famous Person, I love this product because it does it all for me, what i mean it does the search work for me that takes hours and hours off my day and this product gets me the data i need in seconds. and more things like getting pdf directly from the site.</p>
+        <div class="image">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/2/28/Female_portrait_placeholder_cropped.jpg" alt="">
+        </div>
+        <div class="details">
+          <h2>
+            Someone Famous 2 <br>
+            <span>SOMEONE FAMOUS WEB DEV</span>
+          </h2>
+        </div>
+      </div>
+    </div>
+    <!-- CARD 2 end-->
+    <!-- CARD 3 START-->
+    <div class="card">
+      <div class="layer"></div>
+      <div class="content">
+        <p>Famous Person, I love this product because it does it all for me, what i mean it does the search work for me that takes hours and hours off my day and this product gets me the data i need in seconds. and more things like getting pdf directly from the site.</p>
+        <div class="image">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/2/28/Female_portrait_placeholder_cropped.jpg" alt="">
+        </div>
+        <div class="details">
+          <h2>
+            Someone Famous 3 <br>
+            <span>FRONT-END ENGINEER</span>
+          </h2>
+        </div>
+      </div>
+    </div>
+    <!-- CARD 3 end-->
+  </div>
 <div class="footer">
   <p ><br>
   To learn more about subsciptions and our services, or to receive a demo, click here or call
@@ -80,12 +128,7 @@ straightforward manner.
 
 </div>
 </template>
-
-
-
 <script>
-
-
 export default {
 
 }
@@ -93,6 +136,75 @@ export default {
 </script>
 
 <style scoped>
+body{
+margin:0;
+padding:0;
+width:100%;
+height:100%;
+font-family:arial !important;
+
+}
+.testimonials{
+font-family:arial !important;
+margin:200px auto 100px;
+display:grid;
+grid-template-columns: repeat(auto-fit,minmax(350px, 1fr));
+grid-gap:20px;
+}
+.testimonials .card{
+position:relative;
+width:350px;
+margin:0 auto;
+background:#0616217a;
+padding:20px;
+box-sizing: border-box;
+text-align:center;
+box-shadow:0 10px 40px gray;
+overflow: hidden;
+}
+.testimonials .card .layer{
+position: absolute;
+top: calc(100% - 3px);
+width:100%;
+height:100%;
+left:0;
+background:linear-gradient( #4f81B4, #4F81BD);
+z-index:1;
+transition:0.5s;
+}
+.testimonials .card:hover .layer{
+top:0;
+}
+.testimonials .card .content{
+position:relative;
+z-index:2;
+}
+.testimonials .card .content p{
+font-size:18px;
+line-height:24px;
+color:#FFF;
+}
+.testimonials .card .content .image{
+width:100px;
+height:100px;
+margin: 0 auto;
+border-radius:50%;
+overflow:hidden;
+box-shadow: 0 10px 20px gray;
+}
+.testimonials .card .content .details h2{
+font-size:15px;
+color:#fff;
+}
+.testimonials .card .content .details h2 span{
+color:#03a9f4;
+font-size:12px;
+transtion:0.5s;
+}
+.testimonials .card:hover .content .details h2 span{
+color:#fff;
+}
+
 @media screen and (max-width:1550px) {
   .img-G {
     display: none;
