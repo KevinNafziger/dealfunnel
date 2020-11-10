@@ -9,10 +9,11 @@
 
                     <li v-for="link in links" id="examples" style="text-align: center; margin-bottom: 20px;" class="list-item-9 featuredsidemenu">
                       <span class="datetag tl-c" style="margin-right:15px">
-                       >
+                       {{link.start_date}} 11/10/2020
                       </span>
+                      <br>
                       <h3  class="heading-24 example">
-                        <br>
+                        News Headings Titles
 
                       </h3>
                       <br>
@@ -142,7 +143,7 @@ h2 {
     overflow: auto;
 }
   #examples {
-   display: inline-flex;
+   display: inline-block;
    background-color: white;
    opacity: 0.95;
    margin: 0 auto;
@@ -156,10 +157,10 @@ h2 {
   background-color: #2fb7ff !important;
 }
 .tl-c {
-  margin-left: -7px;
+  margin-left: -280px;
   margin-top: 7px;
   font-family: poppins;
-  position: fixed;
+  position: absolute;
 }
 .f50 {
   width: 50%;
