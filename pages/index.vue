@@ -111,6 +111,14 @@ export default {
     color: white !important;
     font-size: 12px !important;
 }
+.execspottittle {
+    font-size: 40px;
+    background: -webkit-linear-gradient(#6b69ca, rgba(20, 160, 253, 0.82));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: rgba(20, 160, 253, 0.82);
+    padding: 15px;
+}
 .featuredmenusection {
     padding: 10px;
     border-radius: 10px;
@@ -122,6 +130,10 @@ export default {
     margin-bottom: 100px;
     padding-bottom: 100px;
     width: 90%;
+    transition: 0.5s;
+}
+.featuredmenusection:hover {
+  box-shadow: 0px 0px 10px -5px dimgray;
 }
 .rem-img {
   top: 350px;
