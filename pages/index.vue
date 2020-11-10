@@ -42,22 +42,18 @@ Our product is simple to use and organized in a
 straightforward manner.
 <br></span>
 </p>
-
+<img class="img-G" width="200px;" src="https://firebasestorage.googleapis.com/v0/b/deal-funnel.appspot.com/o/deal%20funnel%20web%20stock%2Fsada.png?alt=media&amp;token=dad23bb5-f65c-414d-807e-372dee5a5522">
 <div class="rem-img">
   <img width="400px" src="https://firebasestorage.googleapis.com/v0/b/deal-funnel.appspot.com/o/deal%20funnel%20web%20stock%2Fgraph.png?alt=media&amp;token=a913daac-672b-4969-a69b-b734fbc437db">
   </div>
   <div class="featuredmenusection">
-
                                       <div style="margin-top:50px; margin-bottom:50px; margin-left: 25px; margin-right: 25px;" class="coolbar"></div>
-
-
-  																			<!-- column -->
-  																			<div><center>
-  																			<h3 class="fea-headings"><br></h3>
-  																			</center>
-  																			<ul class="featured-cols-lists w-list-unstyled">
+	<!-- column -->	<div><center>
+  	<h3 class="fea-headings"><br></h3>
+  </center>
+  <ul class="featured-cols-lists w-list-unstyled">
   									  <center>
-  																			<h3 class="execspottittle" style="display:inline;">Deal Funnel Tour</h3>
+                        <h3 class="execspottittle" style="display:inline;">Deal Funnel Tour</h3>
   																			<br><br>
   																			<center>
                                          <div style="height:1px" class="bluebar"> </div>
@@ -97,6 +93,16 @@ export default {
 </script>
 
 <style scoped>
+@media screen and (max-width:1550px) {
+  .img-G {
+    display: none;
+  }
+}
+.img-G {
+  right: 140px;
+  position: absolute;
+  top: 290px;
+}
 .gardient-button {
     background-image: linear-gradient(200deg, #4F81BD 10%, #4F81BD 39%, #8ab4f8 80%);
     background-size: 400% 400% !important;
