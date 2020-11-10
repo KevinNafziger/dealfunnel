@@ -15,10 +15,16 @@ export default {
 </script>
 
 
-<style scoped>
+<style >
 .posts-page {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.datetag {
+  border-radius: 3px;
+  padding: 3px;
+  color: #ffffff;
+}
+
 </style>
