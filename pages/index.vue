@@ -277,7 +277,8 @@ color:#fff;
     padding: 14px 25px;
     width: max-content;
     transition: 0.5s;
-    margin-top:20px;
+    margin-top:50px;
+    margin-bottom:50px;
 }
 .text-block-20:hover {
     background: #ff9140 !important;
