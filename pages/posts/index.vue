@@ -20,7 +20,7 @@ export default {
 </script>
 
 
-<style >
+<style  scoped>
 .posts-page {
   display: flex;
   justify-content: center;
