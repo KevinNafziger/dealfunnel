@@ -4,7 +4,7 @@
 <div class="draft-div">
     <table class="table-striped" width="100%">
         <div class="fixed-head">
-        <tbody class="table-t">
+        <thead class="table-t">
           <th>
           <strong><span class="mdi mdi-calendar"></span>
             <h3>Date</h3></strong>
@@ -36,7 +36,7 @@
           <th>
             <strong><span class="mdi mdi-earth"></span><h3>Country</h3></strong>
           </th>
-        </tbody>
+        </thead>
         </div>
 <tbody class="table-scroll">
 
@@ -94,30 +94,15 @@ export default {
 </script>
 
  <style>
-    .headcomname {
-      margin-left:auto;
-      margin-right:auto;
-    }
-    .table-header {
-        height: 0px;
-        display: table;
-    }
-     .square2 .content {
-       display: table;
-       position: absolute;
-       overflow:auto;
+     #myCompanyTag {
+       width: 260px;
      }
-     .table-striped {
-       box-shadow: 1px 1px 8px -5px grey;
-     }
-     /* elements as classes */
      tr, td {
        padding: 10px;
      }
      td {
        min-width: 80px;
        word-break: break-word;
-       width: 650px;
      }
      tbody td:hover {
         box-shadow: 1px 1px 8px -5px grey;
@@ -163,10 +148,13 @@ export default {
          z-index: 9;
          width: 45px;
    }
+   .valuebtn{
+     width: 240px;
+   }
     .datetag {
     background: radial-gradient(circle, #3fb1fb 20%, #c755ff 340%) !important;
     border-radius: 1px;
-    display:;
+    width: 130px;
 }
 td {
   padding: 3px;
@@ -306,6 +294,13 @@ h2 {
 }
 
 .fixed-head {
-
+  padding: 20px;
+      width: 100%;
+      display: inherit;
+}
+ol, ul, dl {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    display: inherit;
 }
  </style>
