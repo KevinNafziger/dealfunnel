@@ -1,6 +1,6 @@
 <template>
 <div width="100%" class="w-container-2">
-  <div data-v-50f93fd9="" class="title"><div data-v-50f93fd9="" class="content"><br data-v-50f93fd9=""> <h2 data-v-50f93fd9="">News AI</h2></div></div>
+<div data-v-69296181="" id="top" class="sectionix"><div data-v-69296181="" class="title"><div data-v-69296181="" class="content"><br data-v-69296181=""> <h2 data-v-69296181="">News</h2></div></div></div>
     <div class="section-15">
       <div class="row-15 w-row">
 
