@@ -306,6 +306,7 @@ color:#fff;
   bottom: 0px;
   position: fixed;
   text-align: center;
+  z-index: 9;
 }
 .intro {
   position: relative;
