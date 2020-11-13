@@ -37,6 +37,7 @@
                               <div class="center-btn">
                                 <a class="gardient-button" href="#"> Read More</a>
                               </div>
+                              <br>
                           </table>
                         </div>
                         </div>
@@ -88,6 +89,7 @@
    width: fit-content !important;
    margin-left: auto !important;
    margin-right: auto !important;
+   margin-bottom: 20px !important;
    border-radius: 10px !important;
    border: none !important;
    padding: 10px 20px !important;
