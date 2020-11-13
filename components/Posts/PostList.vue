@@ -95,6 +95,9 @@
    color: #4f81bd !important;
    font-size: 12px !important;
  }
+ .gardient-button:hover {
+   box-shadow: 0px 0px 10px -5px gray;
+ }
  .center-btn{
        text-align: -webkit-center;
  }
