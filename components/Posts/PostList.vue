@@ -32,44 +32,11 @@
                                   <br><br>
                                 </td>
                                 </tr>
-
-                                <tr v-if="post.newdescript===''">
-                                   <td><b>Brief Summary:</b><br>{{ post.fact}}<a v-if="!(post.website==='')" id="myWebLinkTag" class="mdi mdi-web mdi-18px" :href="post.website" > website</a><br>
-                                      <br><br>
-                                  </td>
-                                </tr>
-                                <tr v-if="!(post.newdescript==='')">
-                                <td><b>Brief Summary:</b><br>{{ post.newdescript}}<a v-if="!(post.website==='')" id="myWebLinkTag" class="mdi mdi-web mdi-18px" :href="post.website" > website</a><br>
-                                      <br><br>
-                                  </td>
-                                </tr
-
-                                <tr v-if="!(post.advisors==='')"><td><b> Advisors:</b><br> {{post.advisors}}<br><br></td></tr>
-
-                               <tr v-if="!(post.investors.length === 0)"><td><b> Investors: </b><br> {{ post.investors }}<br><br></td></tr>
-
-                                <tr v-if="!(post.execheader==='')"><td><b>{{post.execheader}}</b><br><br></td></tr>
-                                <tr>
-                                    <td>{{ post.execname }}<br><br></td>
-                                </tr>
-                               <tr v-if="!(post.exec_url==null)" class="centering-imgs">
-                               <td>
-                                 <a class="blog-image exec-image-posts" >
-                                   <img :src="post.exec_url" width="90" style="max-width: 90px ;max=height:120px; overflow:none">
-                                 </a><br>
-                               </td>
-                               </tr>
-
-                                <tr v-if="!(post.linkedin==='')" class="center">
-                                    <td><div class="column-45 w-col w-col-2"><a :href="post.linkedin" _blank class="w-inline-block"><img src="https://filesforfintech.s3.amazonaws.com/images/linkeding-icon-gray-.png"   class="in-your-face" ></a><br><br></div><br><br><br></td>
-                                </tr>
-                                <tr v-if="!(post.interest==='')" >
-                                   <td>
-                                    <b> Interesting Fact: </b> {{ post.interest}}
-                                    <br><br>
-                                  </td>
-                                </tr>
                               </tbody>
+                              <br><br>
+                              <div class="center-btn">
+                                <a class="gardient-button" href="#"> Read More</a>
+                              </div>
                           </table>
                         </div>
                         </div>
@@ -111,6 +78,31 @@
 
 </script>
  <style scoped>
+ .gardient-button {
+   background-image: linear-gradient(200deg, #ffffff 10%, #ffffff 39%, #ffffff 80%);
+   background-size: 400% 400% !important;
+   -webkit-animation: gradient 15s ease infinite !important;
+   animation: gradient 15s ease infinite !important;
+   width: -webkit-fit-content !important;
+   width: -moz-fit-content !important;
+   width: fit-content !important;
+   margin-left: auto !important;
+   margin-right: auto !important;
+   border-radius: 10px !important;
+   border: none !important;
+   padding: 10px 20px !important;
+   font-family: poppins !important;
+   color: #4f81bd !important;
+   font-size: 12px !important;
+ }
+ .center-btn{
+       text-align: -webkit-center;
+ }
+ a {
+   color:#4f81bd;
+   font-weight: bold;
+   text-decoration: none;
+ }
   #myWebLinkTag {
     display: table !important;
     margin-top:10px;
@@ -122,8 +114,9 @@
   }
   .art-rows {
     display: inline-flex;
-    width: 33%;
+    width: 50%;
     padding: 10px;
+    place-content: center;
   }
   .div-mobile-col {
     padding:0px;
@@ -175,6 +168,7 @@
 }
      .blog-title-link {
        color: #004f96;
+
 }
      .readmore:hover {
         background: rgba(20, 160, 253, .82) !important;
@@ -214,21 +208,25 @@ img.in-your-face {
 .featuredsidemenu    {
     padding:30px;
 }
+.w-col.w-col-12.w-col-medium-12.w12-hide-tiny {
+    color: dimgray;
+}
 .article-card {
     box-shadow: 0 1px 5px 0 rgb(0 89 132 / 30%);
-    border-radius: 10px;
+    border-radius: 0px;
     padding: 10px;
     height: auto;
     width: 100%;
+    max-width: 600px;
     margin-left: auto !important;
     margin-right: auto !important;
     margin-bottom: 50px !important;
-    min-height: 900px;
+    min-height: 600px;
+    background-color:#dedede;
 }
 .article-card:hover {
     box-shadow: 0 1px 5px 0 rgba(0, 89, 132, 0.16);
     overflow: hidden;
-    border-radius:10px;
 }
 
 .article-card .w-col-9 {
@@ -240,10 +238,11 @@ img.in-your-face {
     height: 200px;
 }
 tr {
-    background-color: #ffffff !important;
     text-align: left !important;
     vertical-align: text-top;
     text-align-last: left !important;
+    font-style: italic;
+font-family: arabic script;
 }
 
 ol, ul, tr, td {
@@ -329,9 +328,14 @@ img {
     width: 100% !important;
     text-align:left !important;
   }
-  .td { text-align:left !important; }
+  .td  {
+      text-align:left !important;
+  }
 
 .datetag {
        position: relative !important;
+  }
+  .flex-img {
+    min-height: 250px;
   }
 </style>
