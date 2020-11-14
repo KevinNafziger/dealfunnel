@@ -207,7 +207,7 @@ table .table-t tr h3:hover{
   color: #ffffff !important;
 }
 .datetag {
-  background: radial-gradient(circle, #3fb1fb 20%, #c755ff 340%) !important;
+  background: radial-gradient(circle,#4f81bd 20%,#5d86b7 340%)!important;
   color: #ffffff !important;
 }
 .table-t {
