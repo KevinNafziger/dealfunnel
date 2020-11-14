@@ -60,13 +60,13 @@
             {{ raise.city}}
         </td>
          <td class="participating-td">
-data
+{{ raise.participating}}
         </td>
         <td>
-          data
+          {{ raise.city}}
         </td>
         <td>
-          data
+          {{ raise.country}}
         </td>
       </tr>
     </tr>
