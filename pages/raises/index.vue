@@ -5,6 +5,7 @@
     <table class="table-striped" width="100%">
 
           <thead class="fixed-head">
+            <th>
           <strong><span class="mdi mdi-calendar"></span>
             <h3>Date</h3></strong>
           </th>
