@@ -209,6 +209,7 @@ table .table-t tr h3:hover{
 }
 .datetag {
   background: radial-gradient(circle, #3fb1fb 20%, #c755ff 340%) !important;
+  color: #ffffff !important;
 }
 .table-t {
   box-shadow: 0px 0px 15px -7px skyblue !important;
