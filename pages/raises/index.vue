@@ -95,36 +95,36 @@ export default {
 
  <style  scoped>
      #myCompanyTag {
-       width: 260px;
+       width: 260px !important;
      }
      tr, td {
-       padding: 10px;
+       padding: 10px !important;
      }
      td {
-       min-width: 80px;
-       word-break: break-word;
+       min-width: 80px !important;
+       word-break: break-word !important;
      }
      tbody td:hover {
-        box-shadow: 1px 1px 8px -5px grey;
-        transition: 0.5s;
+        box-shadow: 1px 1px 8px -5px grey !important;
+        transition: 0.5s !important;
     }
      tr {
-       background-color: #ffffff ;
-       text-align: center;
-       vertical-align: text-top;
-       text-align-last: center;
+       background-color: #ffffff !important;
+       text-align: center !important;
+       vertical-align: text-top !important;
+       text-align-last: center !important;
      }
      tr:hover {
-       box-shadow: 1px 1px 8px -5px grey;
+       box-shadow: 1px 1px 8px -5px grey !important;
      }
      tr a {
        color: dodgerblue !important;
      }
      th {
-       border-bottom: outset #2877da30;
+       border-bottom: outset #2877da30 !important;
      }
       tbody {
-            border-radius: 10px;
+            border-radius: 10px !important;
       }
       /* media screen queries */
       @media screen and (max-width: 1292px) {
@@ -133,53 +133,53 @@ export default {
        display: contents !important;
       }
       h3 {
-        font-weight:bold;
+        font-weight:bold !important;
       }
      }
      .excel-download-btn {
-         color: dimgray;
-         position: fixed;
-         margin-top: -88px;
-         left: 10px;
-         border-radius: 100%;
-         padding: 5px;
-         background-color: ffffff;
-         box-shadow: 0px 0px 14px -7px grey;
-         z-index: 9;
-         width: 45px;
+         color: dimgray !important;
+         position: fixed !important;
+         margin-top: -88px !important;
+         left: 10px !important;
+         border-radius: 100% !important;
+         padding: 5px !important;
+         background-color: #ffffff !important;
+         box-shadow: 0px 0px 14px -7px grey !important;
+         z-index: 9 !important;
+         width: 45px !important;
    }
    .valuebtn{
-     width: 240px;
+     width: 240px !important;
    }
     .datetag {
     background: radial-gradient(circle, #3fb1fb 20%, #c755ff 340%) !important;
-    border-radius: 1px;
-    width: 130px;
+    border-radius: 1px !important;
+    width: 130px !important;
 }
 td {
-  padding: 3px;
+  padding: 3px !important;
 }
 .square2 .content {
-display: table;
+display: table !important;
 }
 .mdi {
-  color:white;
+  color:white !important;
 }
 .participating-td {
-  overflow:auto;
-  max-width: 500px;
+  overflow:auto !important;
+  max-width: 500px !important;
 }
   td {
-    color: #627082;
-font-family: poppins;
-font-weight: bold;
-box-shadow: 1px 1px 1px 0px rgb(38 63 80 / 6%);
+    color: #627082 !important;
+    font-family: poppins !important;
+    font-weight: bold !important;
+    box-shadow: 1px 1px 1px 0px rgb(38 63 80 / 6%) !important;
 }
 tr {
-  box-shadow: 0px 0px 1px 0px rgb(15 102 160 / 61%);
+  box-shadow: 0px 0px 1px 0px rgb(15 102 160 / 61%) !important;
 }
 .table-striped {
-  max-width:1550px;
+  max-width:1550px !important;
   margin-left:auto !important;
   margin-right: auto !important;
 }
@@ -204,22 +204,22 @@ table .table-t tr h3:hover{
   background: radial-gradient(circle, #3fb1fb 20%, #c755ff 340%) !important;
 }
 .table-t {
-  box-shadow: 0px 0px 15px -7px skyblue;
+  box-shadow: 0px 0px 15px -7px skyblue !important;
 }
 .cash::after {
   content: ' $';
 }
 .valuebtn {
-  font: message-box;
+  font: message-box !important;
 }
    .w-col .w-col {
-    padding-left: 0;
+    padding-left: 0 !important;
     width: 100% !important;
     margin-bottom: 20px !important;
-    padding-right: 0;
+    padding-right: 0 !important;
 }
    a.link-10.hover.hover-3 {
-    font-size: smaller;
+    font-size: smaller !important;
 }
    #megamenu3 {
      top:46px !important;
@@ -229,23 +229,23 @@ table .table-t tr h3:hover{
    }
 
   .column-29, .list-item-9 {
-     border-color: rgba(164, 219, 255, 0.45);
+     border-color: rgba(164, 219, 255, 0.45) !important;
    }
 
    .featuredsidemenu:hover {
-     box-shadow: 0 1px 5px 0 rgba(0, 89, 132, 0.16);
-     overflow: hidden;
-     border-radius:10px;
+     box-shadow: 0 1px 5px 0 rgba(0, 89, 132, 0.16) !important;
+     overflow: hidden !important;
+     border-radius:10px !important;
    }
 h3 {
-  font-size: 18px;
-  font-variant-caps: all-petite-caps;
+  font-size: 18px !important;
+  font-variant-caps: all-petite-caps !important;
 }
    h1 {
-     text-align:center;
+     text-align:center !important;
    }
 h2 {
-  color: #2fb7ff;
+  color: #2fb7ff !important;
 }
   @media screen and (max-width:1400px) {
     #examples{
@@ -253,54 +253,54 @@ h2 {
     }
   }
   .paragraph-19 {
-    margin-top: 9px;
-    height: 250px;
-    color: #474747;
-    overflow: auto;
+    margin-top: 9px !important;
+    height: 250px !important;
+    color: #474747 !important;
+    overflow: auto !important;
 }
   #examples {
-   display: inline-flex;
-   background-color: white;
-   opacity: 0.95;
-   margin: 0 auto;
-   width: 24%;
-   height: 530px;
-   background: linear-gradient(45deg, #f7f9fb, white);
+   display: inline-flex !important;
+   background-color: white !important;
+   opacity: 0.95 !important;
+   margin: 0 auto !important;
+   width: 24% !important;
+   height: 530px !important;
+   background: linear-gradient(45deg, #f7f9fb, white) !important;
   }
   .btn-link:hover, .btn-link:focus {
-  color: #23527c;
-  text-decoration: underline;
+  color: #23527c !important;
+  text-decoration: underline !important;
   background-color: #2fb7ff !important;
 }
 .tl-c {
-  margin-left: -7px;
-  margin-top: 7px;
-  font-family: poppins;
-  position: fixed;
+  margin-left: -7px !important;
+  margin-top: 7px !important;
+  font-family: poppins !important;
+  position: fixed !important;
 }
 .f50 {
-  width: 50%;
+  width: 50% !important;
 }
 .heading-24 {
-  min-height: 132px;
+  min-height: 132px !important;
 }
 #examples .example .hover {
-    display: inline-grid;
-    margin-bottom:20px;
+    display: inline-grid !important;
+    margin-bottom: 20px !important;
 }
 #myCompanyTag {
-  font-weight: bold;
-    font-style: normal;
+  font-weight: bold !important;
+    font-style: normal !important;
 }
 
 .fixed-head {
-  padding: 20px;
-      width: 100%;
-      display: inherit;
+  padding: 20px !important;
+      width: 100% !important;
+      display: inherit !important;
 }
 ol, ul, dl {
-    margin-top: 0;
-    margin-bottom: 1rem;
-    display: inherit;
+    margin-top: 0 !important;
+    margin-bottom: 1rem !important;
+    display: inherit !important;
 }
  </style>
