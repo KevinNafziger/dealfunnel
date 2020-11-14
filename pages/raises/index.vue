@@ -98,7 +98,7 @@ export default {
      #myCompanyTag {
        width: 260px !important;
      }
-     .thead {
+     thead {
     text-align: -webkit-center !important;
 }
      tr, td {
