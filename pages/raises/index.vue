@@ -96,7 +96,7 @@ export default {
 </script>
 
  <style  scoped>
- h2 {
+ h2, .ptitle{
    color: dimgray !important;
  }
      #myCompanyTag {
@@ -253,9 +253,7 @@ h3 {
    h1 {
      text-align:center !important;
    }
-h2 {
-  color: #2fb7ff !important;
-}
+
   @media screen and (max-width:1400px) {
     #examples{
       width:49% !important;
