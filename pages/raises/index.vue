@@ -4,7 +4,7 @@
 <div class="draft-div">
     <table class="table-striped" width="100%">
 
-          <thead>
+          <thead class="fixed-head">
           <strong><span class="mdi mdi-calendar"></span>
             <h3>Date</h3></strong>
           </th>
@@ -300,7 +300,6 @@ h2 {
 .fixed-head {
   padding: 20px !important;
       width: 100% !important;
-      display: inherit !important;
 }
 ol, ul, dl {
     margin-top: 0 !important;
