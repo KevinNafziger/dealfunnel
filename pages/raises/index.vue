@@ -3,9 +3,8 @@
   <div data-v-69296181="" id="top" class="sectionix"><div data-v-69296181="" class="title"><div data-v-69296181="" class="content"><br data-v-69296181=""> <h2 data-v-69296181="">Raises</h2></div></div></div>
 <div class="draft-div">
     <table class="table-striped" width="100%">
-        <div class="fixed-head">
-        <thead class="table-t">
-          <th>
+
+          <thead>
           <strong><span class="mdi mdi-calendar"></span>
             <h3>Date</h3></strong>
           </th>
@@ -37,11 +36,11 @@
             <strong><span class="mdi mdi-earth"></span><h3>Country</h3></strong>
           </th>
         </thead>
-        </div>
+
 <tbody class="table-scroll">
 
-    <ul v-for="raise in raises">
-      <tr style="margin-top:20px;">
+    <tr style="margin-top:20px;" v-for="raise in raises">
+
         <td class="datetag">
           {{ raise.item_date }}
         </td>
@@ -61,14 +60,16 @@
             {{ raise.city}}
         </td>
          <td class="participating-td">
-
+data
         </td>
         <td>
+          data
         </td>
         <td>
+          data
         </td>
       </tr>
-      </ul>
+    </tr>
     </tbody>
   </table>
   </div>
@@ -97,6 +98,9 @@ export default {
      #myCompanyTag {
        width: 260px !important;
      }
+     .thead {
+    text-align: -webkit-center !important;
+}
      tr, td {
        padding: 10px !important;
      }
