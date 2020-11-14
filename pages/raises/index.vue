@@ -18,10 +18,6 @@
             <h3>Amount</h3></strong>
           </th>
           <th>
-            <strong><span class="mdi mdi-tag"></span>
-              <h3>Type</h3></strong>
-          </th>
-          <th>
             <strong><span class="mdi mdi-account-star"></span>
               <h3>Lead</h3></strong>
           </th>
@@ -56,9 +52,6 @@
         </td>
         <td>
            {{ raise.lead }}
-        </td>
-        <td>
-            {{ raise.city}}
         </td>
          <td class="participating-td">
 {{ raise.participating}}
