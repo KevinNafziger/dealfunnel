@@ -191,7 +191,9 @@ tr {
   margin-left:auto !important;
   margin-right: auto !important;
 }
-
+table {
+      box-shadow: 0px 0px 10px -9px black;
+}
 table .table-t tr{
   background: #2196f3 !important;
   color: #ffffff;
