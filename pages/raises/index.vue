@@ -191,9 +191,7 @@ tr {
   margin-left:auto !important;
   margin-right: auto !important;
 }
-th:hover {
-  background: #2196f3 !important;
-}
+
 table .table-t tr{
   background: #2196f3 !important;
   color: #ffffff;
