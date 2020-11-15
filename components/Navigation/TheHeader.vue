@@ -13,6 +13,7 @@
         <li class="nav-item"><nuxt-link to="/reports">Reports</nuxt-link></li>
         <li class="nav-item"><nuxt-link to="/builder">Builder</nuxt-link></li>
         <li class="nav-item"><nuxt-link to="/raises">Raises</nuxt-link></li>
+        <li class="nav-item"><nuxt-link to="/companies">Companies</nuxt-link></li>
       </ul>
     </div>
   </header>
