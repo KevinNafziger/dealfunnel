@@ -1,56 +1,59 @@
 <template>
 <div>
-  <div data-v-69296181="" id="top" ><div data-v-69296181="" class="title"><div data-v-69296181="" class="content"><br data-v-69296181=""> <h2 data-v-69296181="">Raises</h2></div></div></div>
+  <div data-v-69296181="" id="top" ><div data-v-69296181="" class="title"><div data-v-69296181="" class="content"><br data-v-69296181=""> <h2 data-v-69296181="">Companies</h2></div></div></div>
 <div class="draft-div">
     <table class="table-striped" width="100%">
           <thead class="fixed-head">
             <th>
           <strong><span class="mdi mdi-calendar"></span>
-            <h3>Date</h3></strong>
+            <h3>Company</h3></strong>
           </th>
-          <th>
-            <strong><span class="mdi mdi-domain" ></span>
-              <h3>Company</h3></strong>
+          <th colspan="2" class="participating-td">
+            <strong><h3>About</h3></strong>
           </th>
           <th>
           <strong><span class="mdi mdi-cash-usd-outline"></span>
-            <h3>About</h3></strong>
+            <h3>Website</h3></strong>
           </th>
           <th>
             <strong><span class="mdi mdi-account-star"></span>
-              <h3>Website</h3></strong>
+              <h3>City</h3></strong>
           </th>
           <th>
             <strong><span class="mdi mdi-account-multiple-plus"></span>
-              <h3>City</h3></strong>
+              <h3>Category</h3></strong>
           </th>
           <th>
             <strong><span class="mdi mdi-earth"></span><h3>Country</h3></strong>
           </th>
+          <th>
+            <strong><span class="mdi mdi-earth"></span><h3>Founded</h3></strong>
+          </th>
         </thead>
 
     <tr style="margin-top:20px;" v-for="company in companies">
-
-        <td class="datetag">
-          {{ company.name }}
+        <td>
+             <div id="myCompanyTag" >
+          {{company.name}}
+            </div>
+        </td>
+        <td colspan="2" class="participating-td">
+          {{company.description}}
         </td>
         <td>
-                <div  id="myCompanyTag" >
-                    {{ company.name}}
-                      
-                </div>
+           <a :href="company.website"  target="_blank" style="color:#4286ff">  {{company.website}} </a>
         </td>
         <td>
-            <div class="valuebtn"> {{company.description}}</div>
+           {{company.city}}
+        </td>
+         <td>
+{{company.category}}
         </td>
         <td>
-           {{ company.website }}
-        </td>
-         <td class="participating-td">
-{{ company.city}}
+          {{company.country}}
         </td>
         <td>
-          {{ company.country}}
+          {{company.founding_yr}}
         </td>
       </tr>
   </table>
@@ -78,6 +81,11 @@ export default {
 };
 </script>
 <style  scoped>
+.participating-td {
+  overflow:auto !important;
+  max-width: 500px !important;
+}
+
  h2, .ptitle{
    color: dimgray !important;
  }
@@ -138,15 +146,8 @@ export default {
          z-index: 9 !important;
          width: 45px !important;
    }
-   .valuebtn{
-     width: 240px !important;
-   }
-    .datetag {
-    background: radial-gradient(circle, #3fb1fb 20%, #c755ff 340%) !important;
-    border-radius: 1px !important;
-    width: 130px !important;
-}
-td {
+
+ td {
   padding: 3px !important;
 }
 .square2 .content {
@@ -154,10 +155,6 @@ display: table !important;
 }
 .mdi {
   color:white !important;
-}
-.participating-td {
-  overflow:auto !important;
-  max-width: 500px !important;
 }
   td {
     color: #627082 !important;
@@ -190,20 +187,13 @@ table .table-t tr:hover{
 table .table-t tr h3:hover{
   color: #ffffff !important;
 }
-.datetag {
-  background: radial-gradient(circle,#4f81bd 20%,#5d86b7 340%)!important;
-  color: #ffffff !important;
-}
 .table-t {
   box-shadow: 0px 0px 15px -7px skyblue !important;
 }
 .cash::after {
   content: ' $';
 }
-.valuebtn {
-  font: message-box !important;
-}
-   .w-col .w-col {
+.w-col .w-col {
     padding-left: 0 !important;
     width: 100% !important;
     margin-bottom: 20px !important;
@@ -291,4 +281,5 @@ ol, ul, dl {
     margin-bottom: 1rem !important;
     display: inherit !important;
 }
+
  </style>

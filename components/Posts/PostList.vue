@@ -28,7 +28,7 @@
                           <table>
                                 <tbody style="text-transform:none !important;" class="post-main-text">
                                 <tr>
-                                  <td><b>Most Recent Coverage:</b><br><b><a id="myArticleLinkTag" href="#" class="mdi mdi-book-open mdi-18px" v-on:click="visitpostlink(post.id)" >{{post.teaser }}</a></b>, {{post.summary}} <i>(Please click on the hyperlink above to read this article)</i>
+                                  <td><b>Most Recent Coverage:</b><br><b><a id="myArticleLinkTag" href="#" class="mdi mdi-book-open mdi-18px" v-on:click="visitpostlink(post.id)" >{{post.teaser }}</a></b>, {{post.summary}} 
                                   <br><br>
                                 </td>
                                 </tr>

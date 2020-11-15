@@ -3,26 +3,22 @@
 <div data-v-69296181="" id="top" class="sectionix"><div data-v-69296181="" class="title"><div data-v-69296181="" class="content"><br data-v-69296181=""> <h2 data-v-69296181="">News</h2></div></div></div>
     <div class="section-15">
       <div class="row-15 w-row">
-
           <div class="w-col w-col-9">
                 <ul class="w-list-unstyled">
 
                     <li v-for="link in links" id="examples" style="text-align: center; margin-bottom: 20px;" class="list-item-9 featuredsidemenu">
                       <span class="datetag tl-c" style="margin-right:15px">
-                       {{link.start_date}} 11/10/2020
+                       {{link.published_on}}
                       </span>
                       <br>
                       <h3  class="heading-24 example">
-                        News Headings Titles
-
+                        {{link.header}}
                       </h3>
                       <br>
                       <div class="text-block-13">
                         <em>
-                          <br>
-                          <br>
                           <span style="margin-right:15px">
-
+                             <a :href="link.url"  target="_blank" style="color:#4286ff">  {{link.publication}} </a>
                           </span>
                         </em>
                       </div>
@@ -38,11 +34,7 @@
                         </div>
                       </div>
                     </li>
-
-
-
-
-                </ul>
+               </ul>
           </div>
       </div>
     </div>
