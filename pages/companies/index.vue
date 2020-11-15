@@ -3,7 +3,6 @@
   <div data-v-69296181="" id="top" ><div data-v-69296181="" class="title"><div data-v-69296181="" class="content"><br data-v-69296181=""> <h2 data-v-69296181="">Raises</h2></div></div></div>
 <div class="draft-div">
     <table class="table-striped" width="100%">
-
           <thead class="fixed-head">
             <th>
           <strong><span class="mdi mdi-calendar"></span>
@@ -15,18 +14,14 @@
           </th>
           <th>
           <strong><span class="mdi mdi-cash-usd-outline"></span>
-            <h3>Amount</h3></strong>
+            <h3>About</h3></strong>
           </th>
           <th>
             <strong><span class="mdi mdi-account-star"></span>
-              <h3>Lead</h3></strong>
+              <h3>Website</h3></strong>
           </th>
           <th>
             <strong><span class="mdi mdi-account-multiple-plus"></span>
-              <h3>Particip..</h3></strong>
-          </th>
-          <th>
-            <strong><span class="mdi mdi-city"></span>
               <h3>City</h3></strong>
           </th>
           <th>
@@ -34,17 +29,15 @@
           </th>
         </thead>
 
-<tbody class="table-scroll">
-
     <tr style="margin-top:20px;" v-for="company in companies">
 
         <td class="datetag">
           {{ company.name }}
         </td>
-        <td >
-
-                <div id="myCompanyTag" >
-                {{ company.name }}
+        <td>
+                <div  id="myCompanyTag" >
+                    {{ company.name}}
+                      
                 </div>
         </td>
         <td>
@@ -57,14 +50,9 @@
 {{ company.city}}
         </td>
         <td>
-      
-        </td>
-        <td>
           {{ company.country}}
         </td>
       </tr>
-    </tr>
-    </tbody>
   </table>
   </div>
   </div>
@@ -76,9 +64,9 @@ export default {
   layout: 'raises',
   asyncData(context) {
     return context.app.$axios.$get('/companies?country=US')
-      .then(data => {
+      .then(item => {
         return {
-          companies: data
+          companies: item
         }
       })
       .catch(e => context.error(e))

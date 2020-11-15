@@ -1,7 +1,17 @@
 <template>
 <div>
   <div data-v-69296181="" id="top" ><div data-v-69296181="" class="title"><div data-v-69296181="" class="content"><br data-v-69296181=""> <h2 data-v-69296181="">Raises</h2></div></div></div>
+  <text class="headcomname">
+    Raises
+  </text>
+  <div class="excel-ico">
+  <a href="https://fintechhorizonsmedia.com/fintechraises.xlsx"
+  class="mdi-microsoft-excel mdi-24px excel-download-btn" style="color:dimgray" id="myExcelIcoTag">Excel</a>
+  </div>
+
+
 <div class="draft-div">
+
     <table class="table-striped" width="100%">
 
           <thead class="fixed-head">
@@ -302,4 +312,21 @@ ol, ul, dl {
     margin-bottom: 1rem !important;
     display: inherit !important;
 }
- </style>
+
+
+.excel-ico {
+        background-image: url("https://filesforfintech.s3.amazonaws.com/images/web+design+graphics/pngbarn.png")  !important;
+        width: 30px !important;
+        padding: 30px !important;
+        background-repeat: no-repeat !important;
+        margin: 20px !important;
+        background-size: contain !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        background-position: center !important;
+        height: fit-content !important;
+        display: block !important;
+    }
+.square2 .content {
+display: table;
+}
