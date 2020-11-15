@@ -8,10 +8,10 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "heroku-postbuild": "npm run build"
-
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.12.2",
+    "@nuxtjs/vuetify": "^1.11.2",
     "bootstrap": "^4.5.2",
     "bootstrap-vue": "^2.17.3",
     "core-js": "^3.6.5",
