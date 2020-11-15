@@ -9,7 +9,7 @@
  <v:imagedata croptop="-65520f" cropbottom="65520f"/>
 </v:shape><span style='mso-element:field-end'></span><![endif]-->
 
-<h1 data-ix="slide-in-effect-on-load" style="padding-bottom: 0px; margin-bottom: 0px; opacity: 1; transform: translateX(0px) translateY(0px) translateZ(0px); transition: opacity 0.5s ease 0s, transform 0.7s ease 0s, opacity 500ms ease 0s, transform 700ms ease 0s;" class="intro-title">news and data service that provides actionable information <br></h1>
+<h1 data-ix="slide-in-effect-on-load" style="padding-bottom: 0px; margin-bottom: 0px; opacity: 1; transform: translateX(0px) translateY(0px) translateZ(0px); transition: opacity 0.5s ease 0s, transform 0.7s ease 0s, opacity 500ms ease 0s, transform 700ms ease 0s;" class="intro-title">Newsletters, data and reports <br></h1>
 
 <div >
     <div id="subscribebuttonlanding" style="margin-right:auto; margin-left:auto;" class="text-block-20">
