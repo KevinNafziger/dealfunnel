@@ -4,7 +4,7 @@
      <div class="title">
         <div class="content">
           <br>
-           <h2>raises</h2>
+           <h2>Raises</h2>
         </div>
      </div>
   </div>
