@@ -36,7 +36,7 @@
           {{company.name}}
           </div>
         </td>
-        <td colspan="2" class="participating-td">
+        <td colspan="2" >
           {{company.description}}
         </td>
         <td>
