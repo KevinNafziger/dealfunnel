@@ -78,6 +78,7 @@ export default {
 };
 </script>
 <style  scoped>
+tr:nth-child(odd) {background: #4f81bd14 !important}
 .title {
     text-align: -webkit-center;
     margin-top: 20px;
