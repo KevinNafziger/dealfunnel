@@ -76,7 +76,7 @@
           {{ raise.country}}
         </td>
       </tr>
-    </tr>
+  
     </tbody>
   </table>
   </div>
