@@ -68,7 +68,7 @@ export default {
      margin: 12px;
    }
    h2, h3 {
-    color: #4d5052 !important;
+    color: #4f81bd !important;
 }
    .mdi {
      color: #3f8ac5!important;
@@ -104,9 +104,6 @@ export default {
    h1 {
      text-align:center;
    }
-h2 {
-  color: #2fb7ff;
-}
   @media screen and (max-width:1400px) {
     #examples{
       width:49% !important;

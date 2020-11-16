@@ -35,6 +35,6 @@ a:hover {
   text-decoration: none;
 }
 h2 {
-  color: #696969;
+  color: #4f81bd !important;
 }
 </style>

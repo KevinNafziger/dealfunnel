@@ -165,6 +165,7 @@
   <style scoped>
     h2 {
     margin-top: 0px;
+      color: #4f81bd !important;
   }
     .alpha {
       box-shadow: 0px 0px 7px -5px;
