@@ -20,25 +20,21 @@
 
 
 <p class=MsoNormal ><span class="intro-p" style='font-size:
-20.0pt;mso-bidi-font-size:11.0pt'>Focus – <span class=SpellE>DealFunnel</span>
-is initially focused on delivering information on emerging technology
-businesses serving the financial services industry, but we <span class=GramE>don’t</span>
-stop there. In addition to our coverage of Fintech, <span class=SpellE>InsurTech</span>,
-and <span class=SpellE>WealthTech</span> firms, we are also compiling a glut of
-information on Blockchain, DLT and Crypto firms as well as info on the latest
-companies in <span class=SpellE>HealthTech</span>, Artificial Intelligence and
-LegalTech, just to name a few.<span style='mso-spacerun:yes'>  </span></span></p>
+20.0pt;mso-bidi-font-size:11.0pt'><b>Focus</b> – <span class=SpellE>DealFunnel</span>
+covers emerging technology businesses serving the financial services industry and beyond. 
+In addition to our coverage of Fintech, we provide newsletters, articles data and reports on Blockchain, DLT and Crypto firms as well as on 
+companies in <span class=SpellE>HealthTech</span>, Artificial Intelligence, 
+LegalTech, HealthTech and Cybersecurity.<span style='mso-spacerun:yes'>  </span></span></p>
 
 <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
 margin-left:-.25pt;text-indent:-.5pt'><span class="intro-p" style='font-size:
-20.0pt;mso-bidi-font-size:11.0pt'>Our Readers - <span class=SpellE>DealFunnel</span>
+20.0pt;mso-bidi-font-size:11.0pt'><b>Our Readers</b> - <span class=SpellE>DealFunnel</span>
 is a must have for investment
 bankers, venture capitalists, private equity directors, attorneys and company
-executives.<span class=SpellE>Not only will</span><span class=SpellE>DealFunnel</span>  keep you ahead of the curve, <span class=SpellE>our
+executives.<span class=SpellE> Not only will</span><span class=SpellE>DealFunnel</span> keep you ahead of the curve, <span class=SpellE>our
 products</span> will also help you and
-your team streamline and possibly <span style='mso-spacerun:yes'> elimiate </span>many tasks
-completed by research teams, including analysts and interns. DealFunnels can also be used to send leads to clients in addition to its use in-house.
-Our product is simple to use and organized in a
+your team streamline and possibly <span style='mso-spacerun:yes'> eliminate </span>many tasks
+completed by research teams. DealFunnel is also useful for generating leads for clients. It is simple to use and organized in a
 straightforward manner.
 <br></span>
 </p>

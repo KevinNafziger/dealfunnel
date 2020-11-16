@@ -3,7 +3,7 @@
   <div data-v-69296181="" id="top" ><div data-v-69296181="" class="title"><div data-v-69296181="" class="content"><br data-v-69296181=""> <h2 data-v-69296181="">Companies</h2></div></div></div>
 <div class="draft-div">
     <table class="table-striped" width="100%">
-          <thead class="fixed-head">
+        <thead class="fixed-head">
             <th>
           <strong><span class="mdi mdi-calendar"></span>
             <h3>Company</h3></strong>
@@ -30,12 +30,11 @@
             <strong><span class="mdi mdi-earth"></span><h3>Founded</h3></strong>
           </th>
         </thead>
-
-    <tr style="margin-top:20px;" v-for="company in companies">
+      <tr style="margin-top:20px;" v-for="company in companies">
         <td>
-             <div id="myCompanyTag" >
+          <div id="myCompanyTag" >
           {{company.name}}
-            </div>
+          </div>
         </td>
         <td colspan="2" class="participating-td">
           {{company.description}}
@@ -46,8 +45,8 @@
         <td>
            {{company.city}}
         </td>
-         <td>
-{{company.category}}
+        <td>
+            {{company.category}}
         </td>
         <td>
           {{company.country}}
@@ -60,8 +59,6 @@
   </div>
   </div>
 </template>
-
-
 <script>
 export default {
   layout: 'raises',
@@ -226,12 +223,12 @@ h3 {
      text-align:center !important;
    }
 
-  @media screen and (max-width:1400px) {
+@media screen and (max-width:1400px) {
     #examples{
       width:49% !important;
     }
   }
-  .paragraph-19 {
+ .paragraph-19 {
     margin-top: 9px !important;
     height: 250px !important;
     color: #474747 !important;
@@ -281,5 +278,4 @@ ol, ul, dl {
     margin-bottom: 1rem !important;
     display: inherit !important;
 }
-
- </style>
+</style>
