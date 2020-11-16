@@ -47,15 +47,14 @@ straightforward manner.
 	<!-- column -->	<div><center>
   	<h3 class="fea-headings"><br></h3>
   </center>
-  <ul class="featured-cols-lists w-list-unstyled">
   	<center>
       <h3 class="execspottittle" style="display:inline;">Deal Funnel Tour</h3>
   			<br><br>
   				<center>
             <div style="height:1px" class="bluebar"> </div>
               </center>
-  					    </center>  <center><li><p class="p-class-j">DealFunnel provide readers with articles and reports that contain information that is more actionable than can be found in other publications. This is because DealFunnel journalists ask forward-looking questions of the executives they interview. This approach helps readers learn about a featured company's strategic priorities and its future needs. Click on the <i>'See the Tour'</i> button below for examples of our forward-looking coverage. The tour is hosted by DealFunnel's <i>'The Pig'</i>, and provides a fun and informative overview of DealFunnel content.</p>
-                </center>	</ul>
+  					    </center>  <center><p class="p-class-j">DealFunnel provide readers with articles and reports that contain information that is more actionable than can be found in other publications. This is because DealFunnel journalists ask forward-looking questions of the executives they interview. This approach helps readers learn about a featured company's strategic priorities and its future needs. Click on the <i>'See the Tour'</i> button below for examples of our forward-looking coverage. The tour is hosted by DealFunnel's <i>'The Pig'</i>, and provides a fun and informative overview of DealFunnel content.</p>
+                </center>	
   							<p>
   							</p></div>
   							<center><a href="http://localhost:3000/tourreview/index?product_tour_id=97066">
