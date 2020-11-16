@@ -245,8 +245,8 @@ p {
   margin-bottom:20px;
 }
 .title {
-    padding:3%;
-   }
+    padding:20px;
+  }
 .right {
    float:right;
    padding:5%;
