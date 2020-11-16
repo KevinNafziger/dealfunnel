@@ -4,10 +4,13 @@
   <text class="headcomname">
     Raises
   </text>
-  <div class="excel-ico">
+
   <a href="https://fintechhorizonsmedia.com/fintechraises.xlsx"
-  class="mdi-microsoft-excel mdi-24px excel-download-btn" style="color:dimgray" id="myExcelIcoTag">Excel</a>
-  </div>
+  class="" style="color:dimgray" id="myExcelIcoTag">
+  <div class="excel-ico">  </div>
+  </a>
+
+
 
 
 <div class="draft-div">
@@ -326,7 +329,9 @@ ol, ul, dl {
         background-position: center !important;
         height: fit-content !important;
         display: block !important;
+        float: left;
     }
 .square2 .content {
 display: table;
 }
+</style>
