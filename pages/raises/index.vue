@@ -1,9 +1,13 @@
 <template>
 <div>
-  <div data-v-69296181="" id="top" ><div data-v-69296181="" class="title"><div data-v-69296181="" class="content"><br data-v-69296181=""> <h2 data-v-69296181="">Raises</h2></div></div></div>
-  <text class="headcomname">
-    Raises
-  </text>
+  <div class="sectionix" id="top">
+     <div class="title">
+        <div class="content">
+          <br>
+           <h2>raises</h2>
+        </div>
+     </div>
+  </div>
 
   <a href="https://fintechhorizonsmedia.com/fintechraises.xlsx"
   class="" style="color:dimgray" id="myExcelIcoTag">
@@ -76,7 +80,7 @@
           {{ raise.country}}
         </td>
       </tr>
-  
+
     </tbody>
   </table>
   </div>
