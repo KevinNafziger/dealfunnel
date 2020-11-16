@@ -31,7 +31,7 @@ margin-left:-.25pt;text-indent:-.5pt'><span class="intro-p" style='font-size:
 20.0pt;mso-bidi-font-size:11.0pt'><b>Our Readers</b> - <span class=SpellE>DealFunnel</span>
 is a must have for investment
 bankers, venture capitalists, private equity directors, attorneys and company
-executives.<span class=SpellE> Not only will</span><span class=SpellE>DealFunnel</span> keep you ahead of the curve, <span class=SpellE>our
+executives.<span class=SpellE> Not only will</span><span class=SpellE> DealFunnel</span> keep you ahead of the curve, <span class=SpellE>our
 products</span> will also help you and
 your team streamline and possibly <span style='mso-spacerun:yes'> eliminate </span>many tasks
 completed by research teams. DealFunnel is also useful for generating leads for clients. It is simple to use and organized in a
