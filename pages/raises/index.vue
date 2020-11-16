@@ -191,7 +191,6 @@ display: table !important;
   td {
     color: #627082 !important;
     font-family: poppins !important;
-    font-weight: bold !important;
     box-shadow: 1px 1px 1px 0px rgb(38 63 80 / 6%) !important;
 }
 tr {
@@ -307,7 +306,6 @@ h3 {
     margin-bottom: 20px !important;
 }
 #myCompanyTag {
-  font-weight: bold !important;
     font-style: normal !important;
 }
 
