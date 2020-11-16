@@ -25,6 +25,10 @@ covers emerging technology businesses serving the financial services industry an
 In addition to our coverage of Fintech, we provide newsletters, articles data and reports on Blockchain, DLT and Crypto firms as well as on 
 companies in <span class=SpellE>HealthTech</span>, Artificial Intelligence, 
 LegalTech, and Cybersecurity.<span style='mso-spacerun:yes'>  </span></span></p>
+covers emerging technology businesses serving the financial services industry and beyond.
+In addition to our coverage of Fintech, we provide newsletters, articles data and reports on Blockchain, DLT and Crypto firms as well as on
+companies in <span class=SpellE>HealthTech</span>, Artificial Intelligence,
+LegalTech, HealthTech and Cybersecurity.<span style='mso-spacerun:yes'>  </span></span></p>
 
 <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
 margin-left:-.25pt;text-indent:-.5pt'><span class="intro-p" style='font-size:
@@ -354,6 +358,9 @@ color:#fff;
 }
 p.MsoNormal {
     line-height: 35px;
+}
+h2 {
+    color: #4f81bd !important;
 }
 
 </style>

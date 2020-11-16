@@ -13,4 +13,7 @@
   text-align: center;
   padding: 30px;
 }
+h2 {
+    color: #4f81bd !important;
+}
 </style>

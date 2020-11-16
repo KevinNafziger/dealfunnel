@@ -100,7 +100,7 @@ export default {
 
  <style  scoped>
  h2, .ptitle{
-   color: dimgray !important;
+   color: #4f81bd !important;
  }
      #myCompanyTag {
        width: 260px !important;

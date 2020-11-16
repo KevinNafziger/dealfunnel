@@ -53,7 +53,7 @@
           </th>
           </tbody>
 
- 
+
       <tr v-for="post in posts" style="margin-top:20px;">
         <td class="datetag">
          {{post.created_date}}
@@ -102,6 +102,9 @@ export default {
 </script>
 
 <style  scoped>
+h2 {
+    color: #4f81bd !important;
+}
 .participating-td {
   overflow:auto;
   max-width: 500px;
