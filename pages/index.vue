@@ -22,13 +22,9 @@
 <p class=MsoNormal ><span class="intro-p" style='font-size:
 20.0pt;mso-bidi-font-size:11.0pt'><b>Focus</b> – <span class=SpellE>DealFunnel</span>
 covers emerging technology businesses serving the financial services industry and beyond. 
-In addition to our coverage of Fintech, we provide newsletters, articles data and reports on Blockchain, DLT and Crypto firms as well as on 
-companies in <span class=SpellE>HealthTech</span>, Artificial Intelligence, 
-LegalTech, and Cybersecurity.<span style='mso-spacerun:yes'>  </span></span></p>
-covers emerging technology businesses serving the financial services industry and beyond.
 In addition to our coverage of Fintech, we provide newsletters, articles data and reports on Blockchain, DLT and Crypto firms as well as on
 companies in <span class=SpellE>HealthTech</span>, Artificial Intelligence,
-LegalTech, HealthTech and Cybersecurity.<span style='mso-spacerun:yes'>  </span></span></p>
+LegalTech, and Cybersecurity.<span style='mso-spacerun:yes'>  </span></span></p>
 
 <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
 margin-left:-.25pt;text-indent:-.5pt'><span class="intro-p" style='font-size:
