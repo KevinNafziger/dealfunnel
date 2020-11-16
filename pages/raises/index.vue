@@ -1,13 +1,20 @@
 <template>
 <div>
-  <div data-v-69296181="" id="top" ><div data-v-69296181="" class="title"><div data-v-69296181="" class="content"><br data-v-69296181=""> <h2 data-v-69296181="">Raises</h2></div></div></div>
-  <text class="headcomname">
-    Raises
-  </text>
-  <div class="excel-ico">
-  <a href="https://fintechhorizonsmedia.com/fintechraises.xlsx"
-  class="mdi-microsoft-excel mdi-24px excel-download-btn" style="color:dimgray" id="myExcelIcoTag">Excel</a>
+  <div class="sectionix" id="top">
+     <div class="title">
+        <div class="content">
+          <br>
+           <h2>raises</h2>
+        </div>
+     </div>
   </div>
+
+  <a href="https://fintechhorizonsmedia.com/fintechraises.xlsx"
+  class="" style="color:dimgray" id="myExcelIcoTag">
+  <div class="excel-ico">  </div>
+  </a>
+
+
 
 
 <div class="draft-div">
@@ -73,7 +80,7 @@
           {{ raise.country}}
         </td>
       </tr>
-    </tr>
+
     </tbody>
   </table>
   </div>
@@ -326,7 +333,27 @@ ol, ul, dl {
         background-position: center !important;
         height: fit-content !important;
         display: block !important;
+        float: left;
     }
 .square2 .content {
 display: table;
 }
+.content {
+    background: #ffffffc7;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px -4px;
+    max-width: 1200px ;
+    width:auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+.content:hover {
+  box-shadow: 0px 0px 8px -4px;
+}
+.title {
+    text-align: -webkit-center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+</style>
