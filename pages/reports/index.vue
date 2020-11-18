@@ -13,7 +13,6 @@
 <div class="exespotbody">
   <div class="grid">
   <span  class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
-    <a href="lending.pdf">
     <div>
       <p>Lending</p>
     </div>
@@ -21,67 +20,70 @@
       <div class="col-report" id="myEditReportButton">
       <span  ></span>
       </div>
-
+      <a href="lendingcontent.pdf">
       <div class="col-report" id="myReportPdfButton">
       <span class="mdi mdi-pdf-box "></span>
       </div>
-
+      </a>
+      <a href="lending.pdf">
       <div class="col-report" id="myViewReportLinkTag">
         <span class="mdi mdi-eye "></span>
       </div>
+     </a> 
     </div>
-    </a>
   </span>
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
-     <a href="insurtech.pdf">
     <div >
       <p>Insurtech</p>
     </div>
     <div class="col-reports-div">
-
+      <a href="insurtechcontent.pdf">
       <div class="col-report" id="myReportPdfButton">
       <span class="mdi mdi-pdf-box " ></span>
       </div>
+      </a>
+      <a href="insurtech.pdf" >
       <div class="col-report" id="myViewReportLinkTag">
       <span class="mdi mdi-eye "></span>
       </div>
-      </div>
     </a>
+    </div>
   </span>
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
-     <a href="blockchain.pdf">
     <div >
       <p>Blockchain/DLT</p>
     </div>
     <div class="col-reports-div">
-
-
+       <a href="blockchain.pdf" >
       <div class="col-report" id="myReportPdfButton">
-      <span class="mdi mdi-pdf-box " ></span>
+      <span class="mdi mdi-pdf-box "></span>
       </div>
+      </a>
+       <a href="blockchaincontent.pdf">
       <div class="col-report" id="myViewReportLinkTag">
-       <span class="mdi mdi-eye "></span>
+        <span class="mdi mdi-eye "></span>
       </div>
-      </div>
-    </a>
+      </a>
+     </div>
   </span>
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
-    <a href="banking.pdf">
-    <div >
+      <div >
       <p>Banking</p>
     </div>
     <div class="col-reports-div">
-
+      <a href="bankingcontent.pdf">
       <div class="col-report" id="myReportPdfButton">
       <span class="mdi mdi-pdf-box " ></span>
       </div>
-
-
+      </a>
+      <a href="banking.pdf">
       <div class="col-report" id="myViewReportLinkTag">
       <span class="mdi mdi-eye "></span>
       </div>
+      </a>
       </div>
-    </a>
+    
+
   </span>
 </div>
 </div>
@@ -89,24 +91,25 @@
   <div class="grid">
 
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
-    <a href="wealthtech.pdf">
+  
     <div >
       <p>WealthTech</p>
     </div>
     <div class="col-reports-div">
-
       <div class="col-report" id="myReportPdfButton">
+      <a href="wealthtechcontent.pdf">
       <span class="mdi mdi-pdf-box "></span>
+      </a>
       </div>
-
+      
       <div class="col-report" id="myViewReportLinkTag">
-      <span class="mdi mdi-eye "></span>
+       <a href="wealthtech.pdf">
+       <span class="mdi mdi-eye "></span>
+        </a>
       </div>
     </div>
-    </a>
   </span>
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
-    <a href="payments.pdf">
     <div >
       <p>Payments</p>
     </div>
@@ -114,50 +117,217 @@
 
 
       <div class="col-report" id="myReportPdfButton">
+       <a href="paymentscontent.pdf">
       <span class="mdi mdi-pdf-box " ></span>
+        </a>
       </div>
       <div class="col-report" id="myViewReportLinkTag">
-    <span class="mdi mdi-eye "></span>
+      <a href="payments.pdf">
+      <span class="mdi mdi-eye "></span>
+      </a>
       </div>
       </div>
-    </a>
+    
   </span>
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
-       <a href="cyber.pdf">
+     
     <div >
       <p>CyberSecurity</p>
     </div>
-    <div class="col-reports-div">
 
+    <div class="col-reports-div">
+    
       <div class="col-report" id="myReportPdfButton">
+    <a href="cybercontent.pdf">
       <span class="mdi mdi-pdf-box " ></span>
+    </a>  
       </div>
       <div class="col-report" id="myViewReportLinkTag">
+    <a href="cyber.pdf">
       <span class="mdi mdi-eye "></span>
-      </div>
-      </div>
     </a>
+      </div>
+      </div>
   </span>
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
-    <a href="identity.pdf">
+
     <div >
       <p>Identity</p>
     </div>
     <div class="col-reports-div">
 
       <div class="col-report" id="myReportPdfButton">
+      <a href="identitycontent.pdf">
       <span class="mdi mdi-pdf-box " ></span>
+      </a>
       </div>
-
       <div class="col-report" id="myViewReportLinkTag">
+      <a href="identity.pdf">
       <span class="mdi mdi-eye "></span>
+      </a>
       </div>
       </div>
-    </a>
   </span>
 </div>
 </div>
+<div class="exespotbody">
+  <div class="grid">
+  <span  class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
+    <div>
+      <p>RegTech</p>
+    </div>
+    <div class="col-reports-div">
+      <div class="col-report" id="myEditReportButton">
+      <span  ></span>
+      </div>
+      <a href="regtechcontent.pdf">
+      <div class="col-report" id="myReportPdfButton">
+      <span class="mdi mdi-pdf-box "></span>
+      </div>
+      </a>
+      <a href="regtech.pdf">
+      <div class="col-report" id="myViewReportLinkTag">
+        <span class="mdi mdi-eye "></span>
+      </div>
+     </a> 
+    </div>
+  </span>
+  <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
+    <div >
+      <p>HealthTech</p>
+    </div>
+    <div class="col-reports-div">
+      <a href="healthtechcontent.pdf">
+      <div class="col-report" id="myReportPdfButton">
+      <span class="mdi mdi-pdf-box " ></span>
+      </div>
+      </a>
+      <div class="col-report" id="myViewReportLinkTag">
+      <a href="healthtech.pdf" >
+      <span class="mdi mdi-eye "></span>
+      </a>
+      </div>
+    </div>
+  </span>
+  <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
+    <div >
+      <p>Artificial Intelligence</p>
+    </div>
+    <div class="col-reports-div">
+       <a href="aicontent.pdf" >
+      <div class="col-report" id="myReportPdfButton">
+      <span class="mdi mdi-pdf-box "></span>
+      </div>
+      </a>
+       <a href="ai.pdf">
+      <div class="col-report" id="myViewReportLinkTag">
+        <span class="mdi mdi-eye "></span>
+      </div>
+      </a>
+     </div>
+  </span>
+  <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
+      <div >
+      <p>MGAs</p>
+    </div>
+    <div class="col-reports-div">
+      <a href="mgacontent.pdf">
+      <div class="col-report" id="myReportPdfButton">
+      <span class="mdi mdi-pdf-box " ></span>
+      </div>
+      </a>
+      <a href="mga.pdf">
+      <div class="col-report" id="myViewReportLinkTag">
+      <span class="mdi mdi-eye "></span>
+      </div>
+      </a>
+      </div>
+  </span>
+</div>
+</div>
+<div class="exespotbody">
+  <div class="grid">
 
+  <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
+  
+    <div >
+      <p>RealEstate</p>
+    </div>
+    <div class="col-reports-div">
+      <div class="col-report" id="myReportPdfButton">
+      <a href="realestatecontent.pdf">
+      <span class="mdi mdi-pdf-box "></span>
+      </a>
+      </div>
+      
+      <div class="col-report" id="myViewReportLinkTag">
+       <a href="realestate.pdf">
+       <span class="mdi mdi-eye "></span>
+        </a>
+      </div>
+    </div>
+  </span>
+  <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
+    <div >
+      <p>Remittances</p>
+    </div>
+    <div class="col-reports-div">
+
+
+      <div class="col-report" id="myReportPdfButton">
+       <a href="remittancescontent.pdf">
+      <span class="mdi mdi-pdf-box " ></span>
+        </a>
+      </div>
+      <div class="col-report" id="myViewReportLinkTag">
+      <a href="remittances.pdf">
+      <span class="mdi mdi-eye "></span>
+      </a>
+      </div>
+      </div>
+    
+  </span>
+  <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
+     
+    <div >
+      <p>Capital Markets</p>
+    </div>
+
+    <div class="col-reports-div">
+    
+      <div class="col-report" id="myReportPdfButton">
+    <a href="capitalmarketscontent.pdf">
+      <span class="mdi mdi-pdf-box " ></span>
+    </a>  
+      </div>
+      <div class="col-report" id="myViewReportLinkTag">
+    <a href="capitalmarkets.pdf">
+      <span class="mdi mdi-eye "></span>
+    </a>
+      </div>
+      </div>
+  </span>
+  <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
+
+    <div >
+      <p>Personal Finance</p>
+    </div>
+    <div class="col-reports-div">
+
+      <div class="col-report" id="myReportPdfButton">
+      <a href="personalfinancecontent.pdf">
+      <span class="mdi mdi-pdf-box " ></span>
+      </a>
+      </div>
+      <div class="col-report" id="myViewReportLinkTag">
+      <a href="personalfinance.pdf">
+      <span class="mdi mdi-eye "></span>
+      </a>
+      </div>
+      </div>
+  </span>
+</div>
+</div>
 </div>
 </template>
 
