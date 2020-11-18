@@ -15,7 +15,7 @@
         <li class="nav-item"><nuxt-link to="/raises">Raises</nuxt-link></li>
         <li class="nav-item"><nuxt-link to="/companies">Companies</nuxt-link></li>
         <li class="nav-item"><nuxt-link to="/data">Data</nuxt-link></li>
-         <li class="nav-item"><nuxt-link to="/data">Deals</nuxt-link></li>
+         <li class="nav-item"><nuxt-link to="/deals">Deals</nuxt-link></li>
       </ul>
     </div>
   </header>
