@@ -18,21 +18,14 @@
             <h2 style="inline-block"> Articles </h2>
           </div>
       <!--  <draggable v-model="units" ghost-class="ghost" class="list-group" array="units" group="a" @start="drag=true">-->
-        <draggable>
-          <div class="card-master">
-
   <!-- Here we can put in the json v-if loops -->
-
              <!--<card v-for="element in units":id="element.id" :key="element.id" draggable="true" class="list-group-item">
                     <h3> Title {{ element.title }} </h3>
                     <p> Date {{ element.created_date}} {{element.author.name}} </p>
              </card>-->
-             <Card>1</Card>
-             <Card>2</Card>
-        </div>
-        </draggable>
+             <Card id="card-1" draggable="true">1</Card>
+             <Card id="card-2" draggable="true">2</Card>
         </Board>
-
   </div>
 
   <div class="right-side">
@@ -64,9 +57,9 @@
           </button>
           </div>
         <br><br>
-        <Card>1</Card>
-        <Card>2</Card>
-        <Card>3</Card>
+        <Card id="card-3" draggable="true">3</Card>
+        <Card id="card-4" draggable="true">4</Card>
+        <Card id="card-5" draggable="true">5</Card>
       </Board>
   </div>
   </main>
