@@ -15,15 +15,20 @@
          <br>
             <Board id="board-2">
               <div class="heading-col-main">
-            <h2 style="inline-block"> Articles <i style="font-size: 13px; text-align:right">{{this.$root.filterMessage}}</i></h2>
+            <h2 style="inline-block"> Articles </h2>
           </div>
-            <Searchbar/>
-        <draggable v-model="units" ghost-class="ghost" class="list-group" array="units" group="a" @start="drag=true">
-        <div class="card-master">
-             <card v-for="element in units":id="element.id" :key="element.id" draggable="true" class="list-group-item">
-                    <h3> {{ element.title }} </h3>
-                    <p>{{ element.created_date}} {{element.author.name}} </p>
-             </card>
+      <!--  <draggable v-model="units" ghost-class="ghost" class="list-group" array="units" group="a" @start="drag=true">-->
+        <draggable>
+          <div class="card-master">
+
+  <!-- Here we can put in the json v-if loops -->
+
+             <!--<card v-for="element in units":id="element.id" :key="element.id" draggable="true" class="list-group-item">
+                    <h3> Title {{ element.title }} </h3>
+                    <p> Date {{ element.created_date}} {{element.author.name}} </p>
+             </card>-->
+             <Card>1</Card>
+             <Card>2</Card>
         </div>
         </draggable>
         </Board>
@@ -40,8 +45,8 @@
             Close View
           </button>
           <br><br><br></div><br>
-        <postys :posts="widgets" v-show="this.$root.showModal">
-        </postys>
+        <!--<postys :posts="widgets" v-show="this.$root.showModal">
+        </postys>-->
 
       <Board v-show="!(this.$root.showModal)" id="board-right" >
         <div class="builder-btns">
@@ -59,6 +64,9 @@
           </button>
           </div>
         <br><br>
+        <Card>1</Card>
+        <Card>2</Card>
+        <Card>3</Card>
       </Board>
   </div>
   </main>
@@ -66,7 +74,172 @@
   </div>
 </template>
 
-<style>
+
+<script>
+import axios from 'axios';
+import Vue from 'vue';
+
+import Board from '~/components/Draggable/Board';
+import Card from '~/components/Draggable/Card';
+import draggable from 'vuedraggable';
+import Vuetify from 'vuetify';
+
+Vue.component('Card', Card)
+Vue.component('Board', Board)
+
+Vue.use(Vuetify);
+
+export default {
+  name: 'app',
+  components: {
+  Board,
+   Card,
+   draggable,
+   Vuetify,
+   },
+    props: ["posts", "widgets", "totalRecords"],
+    data () {
+    return {
+        searchMessage: "",
+        propys: 1,
+           newpostarry: [],
+           FIRST_FETCH: 1,
+           AFTER_FIRST_FETCH: 2,
+        }
+    },
+  }
+//created: function() {
+
+//  window.eventBus.$on("refreshPosts", (items) => this.refreshPosts(items));
+
+//},
+//mounted: function() {
+
+//  this.$root.allArticles = this.widgets; //set global article
+//  this.$root.totalRecords = this.totalRecords;
+//  this.$root.totalPages = this.totalRecords/50;
+
+
+//},
+
+ //methods: {
+  //setshowModal() {
+  //  switch (this.$root.showModal)
+  //  {
+  //    case false:
+  //      this.$root.showModal= true;
+  //      break;
+  //    case true:
+  //      this.$root.showModal= false;
+  //      this.$root.showPDF = false;
+  //      break;
+  //  }
+//},
+//},
+//}
+//startReport() {
+//    eventBus.$emit("reportGen");
+//}
+//}
+//refreshPosts(fetchedItems) {
+
+//    if (!(fetchedItems.length == 0))
+//     {
+//      for (var x = 0; x<fetchedItems.length; x++)
+//      {
+
+//        if (this.$root.allArticles.length < 5000)
+//        {
+//          this.$root.allArticles.push(fetchedItems[x]);
+//        }
+
+//      }
+//    }
+
+
+
+//    if (!(this.$root.boardEnd.length == 0))
+//    {
+//      this.newpostarry = this.postFilter(this.$root.allArticles);
+      // start with only ones on right board, then add in left
+//    }
+//    else
+//    {
+//      this.newpostarry = [];  //when nothign on board right
+//    }
+
+//    if (!(fetchedItems.length == 0))
+//    {
+//      for (var x = 0; x<fetchedItems.length; x++)
+//      {
+//        this.newpostarry.push(fetchedItems[x]);
+//      }
+//        this.$root.resultsBlank = false;
+//    }
+//    else
+//    {
+      //nothing on board left
+//       this.$root.resultsBlank = true;
+//    }
+//    this.$root.units = this.newpostarry; // set global
+//    this.newpostarry = []; //set to blank again
+//    this.propys = this.AFTER_FIRST_FETCH;  //= 2 toggle for fetch
+//},
+//idlists(post_id) {
+//    for(var i = 0; i < this.$root.boardEnd.length; i++)
+//    {
+//      if(this.$root.boardEnd[i] == post_id)
+//        return post_id;
+//    }
+//   return 0;
+//},
+//postFilter(posts) {
+//  return this.posts.filter(post => post.id==this.idlists(post.id));
+//},
+//total: function() {
+
+//  this.$root.totalRecords = this.totalRecords;
+//  return this.totalRecords;
+//},
+//currentPageLessThanTotal: function() {
+
+//  if (this.$root.currentPage < this.$root.TotalPages)
+//  {
+//    return true;
+//  }
+///  else
+//  {
+//    return false;
+//  }
+
+//},
+//allStories: function() {
+//    this.$root.allArticles = this.widgets; //set global article
+//    return this.widgets;
+//},
+//totalPages: function() {
+//   this.$root.totalPages = this.totalRecords/50 ;
+//   return  this.$root.totalPages;
+//}
+//},
+//computed: {
+//units: function() {
+//    if (this.propys == this.FIRST_FETCH)  //first fetch is 1
+//     {
+//        //set posts first time from controller
+//         this.$root.units = this.posts;
+//         return this.posts;
+//     }
+//    else
+//    {
+//      // after first time assign global
+//      return this.$root.units;  //set from root variable w posts
+//    }
+//}
+
+//},
+//}
+</script>
 
 <style scoped>
 h3 {
@@ -441,6 +614,7 @@ flex: 1 1 200px;
 
  .card-holder {
    border-radius: 10px;
+
  }
 
 
@@ -454,6 +628,7 @@ flex: 1 1 200px;
 .card {
   box-shadow: none !important;
   background-color: transparent !important;
+   color: gray;
 }
 
 
@@ -531,5 +706,7 @@ margin-right: auto;
 .round-container {
   border-radius:10px !important;
 }
-
+button {
+  color: #4f81bd;
+}
 </style>

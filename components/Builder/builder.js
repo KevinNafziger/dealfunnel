@@ -18,9 +18,7 @@ Vue.use(Vuetify);
 
 Vue.component('builder', Builder)
 Vue.component('Card', Card)
-Vue.component('Modal', Modal)
-Vue.component('Searchbar', Searchbar)
-
+Vue.component('Board', Board)
 
 
 
