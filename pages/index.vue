@@ -21,7 +21,7 @@
 
 <p class=MsoNormal ><span class="intro-p" style='font-size:
 20.0pt;mso-bidi-font-size:11.0pt'><b>Focus</b> – <span class=SpellE>DealFunnel</span>
-covers emerging technology businesses serving the financial services industry and beyond. 
+covers emerging technology businesses serving the financial services industry and beyond.
 In addition to our coverage of Fintech, we provide newsletters, articles data and reports on Blockchain, DLT and Crypto firms as well as on
 companies in <span class=SpellE>HealthTech</span>, Artificial Intelligence,
 LegalTech, and Cybersecurity.<span style='mso-spacerun:yes'>  </span></span></p>
@@ -54,11 +54,11 @@ straightforward manner.
             <div style="height:1px" class="bluebar"> </div>
               </center>
   					    </center>  <center><p class="p-class-j">DealFunnel provide readers with articles and reports that contain information that is more actionable than can be found in other publications. This is because DealFunnel journalists ask forward-looking questions of the executives they interview. This approach helps readers learn about a featured company's strategic priorities and its future needs. Click on the <i>'See the Tour'</i> button below for examples of our forward-looking coverage. The tour is hosted by DealFunnel's <i>'The Pig'</i>, and provides a fun and informative overview of DealFunnel content.</p>
-                </center>	
+                </center>
   							<p>
   							</p></div>
   							<center><a href="http://localhost:3000/tourreview/index?product_tour_id=97066">
-  							<button class="gardient-button">See the Tour</button>
+  							<button class="gardient-button"><nuxt-link to="/tours/reports">See the Tour</nuxt-link></button>
   					</a></center>  </div>
             <div class="testimonials">
     <!-- CARD 1 START-->
@@ -131,6 +131,10 @@ export default {
 </script>
 
 <style scoped>
+a {
+  color:#ffffff;
+}
+
 body{
 margin:0;
 padding:0;
@@ -221,7 +225,7 @@ color:#fff;
     border: none !important;
     padding: 10px 20px !important;
     font-family: poppins !important;
-    color: white !important;
+    color: #ffffff !important;
     font-size: 12px !important;
 }
 .execspottittle {
