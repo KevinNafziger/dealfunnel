@@ -69,15 +69,13 @@
 
 
 <script>
-import axios from 'axios';
 import Vue from 'vue';
-
-import Board from '~/components/Draggable/Board';
-import Card from '~/components/Draggable/Card';
+import Board from '@/components/Draggable/Board';
+import Card from '@/components/Draggable/Card';
 import draggable from 'vuedraggable';
 import Vuetify from 'vuetify';
 
-Vue.component('Card', Card)
+Vue.component('Card', Card);
 Vue.component('Board', Board)
 
 Vue.use(Vuetify);
