@@ -201,4 +201,7 @@ export default {
 .modal-mark-content {
   display: table;
 }
+ul {
+  width: 100% !important;
+}
 </style>
