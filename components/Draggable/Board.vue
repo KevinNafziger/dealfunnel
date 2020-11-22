@@ -21,7 +21,7 @@ export default {
        const card = document.getElementById(card_id);
        card.style.display = "block";
        e.target.appendChild(card);
-       eventBus.$emit("addRight", card_id);     
+       $nuxt.$emit("addRight", card_id);     
    }, 
    }
   }
