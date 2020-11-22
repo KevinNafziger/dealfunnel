@@ -92,13 +92,15 @@
 </template>
 
 <script>
+import {mapState} from 'vuex';
 export default {
-  computed: {
-    posts() {
-      return this.$store.getters.loadedPosts
-    }
-  }
-};
+computed: {
+  ...mapState({
+          posts: state => state.posts.list,
+          //post:  state.posts.post
+   }),
+   }
+}
 </script>
 <style  scoped>
 tr:nth-child(odd) {background: #4f81bd14 !important}

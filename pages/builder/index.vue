@@ -17,14 +17,10 @@
               <div class="heading-col-main">
             <h2 style="inline-block"> Articles </h2>
           </div>
-      <!--  <draggable v-model="units" ghost-class="ghost" class="list-group" array="units" group="a" @start="drag=true">-->
-  <!-- Here we can put in the json v-if loops -->
-             <!--<card v-for="element in units":id="element.id" :key="element.id" draggable="true" class="list-group-item">
-                    <h3> Title {{ element.title }} </h3>
-                    <p> Date {{ element.created_date}} {{element.author.name}} </p>
-             </card>-->
-             <Card id="card-1" draggable="true">1</Card>
-             <Card id="card-2" draggable="true">2</Card>
+             <card v-for="post in posts":id="post.id" :key="post.id" draggable="true" class="list-group-item">
+                    <h3>  {{ post.title }} </h3>
+                    <p>  {{ post.created_date}} {{post.author.name}} </p>
+             </card>
         </Board>
   </div>
 
@@ -51,22 +47,18 @@
             <span class="mdi mdi-content-save"></span>
             Save
           </button>
-          <button v-on:click="startReport()" class="gardient-button b-lr-s">
+          <button v-on:click="generateReport()" class="gardient-button b-lr-s">
             <span class="mdi mdi-pdf-box"></span>
             PDF
           </button>
           </div>
-        <br><br>
-        <Card id="card-3" draggable="true">3</Card>
-        <Card id="card-4" draggable="true">4</Card>
-        <Card id="card-5" draggable="true">5</Card>
+
       </Board>
   </div>
   </main>
-  <p class="alpha">Beta - Version 2020</p>
+  <p class="alpha">DealFunnel - Version 2020</p>
   </div>
 </template>
-
 
 <script>
 import Vue from 'vue';
@@ -74,10 +66,11 @@ import Board from '@/components/Draggable/Board';
 import Card from '@/components/Draggable/Card';
 import draggable from 'vuedraggable';
 import Vuetify from 'vuetify';
-
+import {mapState, mapMutations} from 'vuex';
 Vue.component('Card', Card);
 Vue.component('Board', Board)
 
+window.eventBus = new Vue({});
 Vue.use(Vuetify);
 
 export default {
@@ -88,7 +81,7 @@ export default {
    draggable,
    Vuetify,
    },
-    props: ["posts", "widgets", "totalRecords"],
+    props: ["widgets", "totalRecords"],
     data () {
     return {
         searchMessage: "",
@@ -98,12 +91,16 @@ export default {
            AFTER_FIRST_FETCH: 2,
         }
     },
-  }
-//created: function() {
-
-//  window.eventBus.$on("refreshPosts", (items) => this.refreshPosts(items));
-
-//},
+ computed: {
+  ...mapState({
+          posts: state => state.posts.list,
+          myboard: state => state.boards.myboard
+          //post:  state.posts.post
+   }),
+   },
+  created()  {
+     eventBus.$on("addRight", (items) => this.addtoReportBoard(items));
+    },
 //mounted: function() {
 
 //  this.$root.allArticles = this.widgets; //set global article
@@ -113,7 +110,27 @@ export default {
 
 //},
 
- //methods: {
+ methods: {
+
+ addtoReportBoard: function(index) {
+
+        if (isNaN(index))
+        {
+        return
+        }
+        else
+        {
+        this.$store.dispatch("boards/updateBoard",index);
+        }
+    },
+  generateReport: function() {
+
+    window.location.href =  'https://fintechhorizonsmedia.com/showreports/view.pdf?idlist=' + this.myboard.toString();
+
+  }   
+
+}
+}
   //setshowModal() {
   //  switch (this.$root.showModal)
   //  {
