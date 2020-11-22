@@ -125,7 +125,7 @@ export default {
     },
   generateReport: function() {
 
-    window.location.href =  'https://fintechhorizonsmedia.com/showreports/view.pdf?idlist=' + this.myboard.toString();
+    window.open('https://fintechhorizonsmedia.com/showreports/view.pdf?idlist=' + this.myboard.toString() );
 
   }   
 
