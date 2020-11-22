@@ -25,7 +25,7 @@
                   </div>
                   <div class="w-col w-col-12 w-col-medium-12 w12-hide-tiny">
                           <table>
-                                <tbody class="post-main-text">
+                                <tbody style="text-transform:none !important;" class="post-main-text">
                                 <tr>
                                   <td><b>Most Recent Coverage:</b><br><b><a id="myArticleLinkTag" href="#" class="mdi mdi-book-open mdi-18px" v-on:click="visitpostlink(post.id)" >{{post.teaser }}</a></b>, {{post.summary}} <i>(Please click on the hyperlink above to read this article)</i>
                                   <br><br>
