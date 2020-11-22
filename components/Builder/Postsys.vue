@@ -23,7 +23,7 @@
                       </a>
                   </div>
                   </div>
-                  <div class="w-col w-col-12 w-col-medium-12 w12-hide-tiny">
+                  <div id="tree" class="w-col w-col-12 w-col-medium-12 w12-hide-tiny">
                           <table>
                                 <tbody style="text-transform:none !important;" class="post-main-text">
                                 <tr>
@@ -115,6 +115,9 @@ import Vuetify from 'vuetify';
 };
  </script>
  <style scoped>
+ #tree{
+  color:black;
+ }
   #myWebLinkTag {
     display: table !important;
     margin-top:10px;
