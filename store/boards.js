@@ -1,5 +1,6 @@
 export const state = () => ({
   myboard: [],
+  showModal: false,
 })
 
 export const mutations = {
@@ -9,8 +10,10 @@ export const mutations = {
   },
   remove(state, { todo }) {
     state.myboard.splice(state.list.indexOf(todo), 1)
+  },
+  toggle(state) {
+    state.showModal = !state.showModal;
   }
-
 }
  export const actions = {
     updateBoard(vuexContext, index) {
@@ -22,5 +25,8 @@ export const mutations = {
         {
           vuexContext.commit("add", index);
         } 
+      },
+      toggle(vuexContext) {
+      vuexContext.commit("toggle");
       }
   }

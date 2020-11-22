@@ -4,7 +4,7 @@
 <div id="app">
   <div>
     <div data-v-69296181="" id="top" class="sectionix">
-      <div data-v-69296181="" class="title"><div data-v-69296181="" class="content">
+      <div data-v-69296181="" class="title"><div  class="content">
         <br data-v-69296181="">
       <h2 data-v-69296181="">Builder</h2></div></div></div>
 </div>
@@ -28,25 +28,22 @@
 
             <h2> Your Report </h2>
 
-        <div v-show="this.$root.showModal" class="builder-btns" >
-         <button v-show="this.$root.showModal" v-on:click="setshowModal()" class="gardient-button b-lr-s">
+        <div class="builder-btns" >
+         <button v-show="this.showModal" v-on:click="toggleModal()" class="gardient-button b-lr-s">
             <span class="mdi mdi-file-eye"></span>
             Close View
           </button>
           <br><br><br></div><br>
-        <!--<postys :posts="widgets" v-show="this.$root.showModal">
-        </postys>-->
+        <postsys :posts="posts" :board="this.myboard" v-show="this.showModal">
+        </postsys>
 
-      <Board v-show="!(this.$root.showModal)" id="board-right" >
+      <Board v-show="!this.showModal" id="board-right" >
         <div class="builder-btns">
-          <button v-on:click="setshowModal()" class="gardient-button b-lr-s">
+          <button v-on:click="toggleModal()" class="gardient-button b-lr-s">
             <span class="mdi mdi-file-eye"></span>
             View
           </button>
-          <button href="/" class="gardient-button b-lr-s">
-            <span class="mdi mdi-content-save"></span>
-            Save
-          </button>
+      >
           <button v-on:click="generateReport()" class="gardient-button b-lr-s">
             <span class="mdi mdi-pdf-box"></span>
             PDF
@@ -64,13 +61,13 @@
 import Vue from 'vue';
 import Board from '@/components/Draggable/Board';
 import Card from '@/components/Draggable/Card';
+import postsys from '@/components/Builder/Postsys.vue';
 import draggable from 'vuedraggable';
 import Vuetify from 'vuetify';
 import {mapState, mapMutations} from 'vuex';
 Vue.component('Card', Card);
 Vue.component('Board', Board)
 
-window.eventBus = new Vue({});
 Vue.use(Vuetify);
 
 export default {
@@ -80,6 +77,7 @@ export default {
    Card,
    draggable,
    Vuetify,
+   postsys,
    },
     props: ["widgets", "totalRecords"],
     data () {
@@ -94,12 +92,13 @@ export default {
  computed: {
   ...mapState({
           posts: state => state.posts.list,
-          myboard: state => state.boards.myboard
+          myboard: state => state.boards.myboard,
+          showModal: state => state.boards.showModal
           //post:  state.posts.post
    }),
    },
   created()  {
-     eventBus.$on("addRight", (items) => this.addtoReportBoard(items));
+     this.$nuxt.$on("addRight", (items) => this.addtoReportBoard(items));
     },
 //mounted: function() {
 
@@ -127,21 +126,14 @@ export default {
 
     window.open('https://fintechhorizonsmedia.com/showreports/view.pdf?idlist=' + this.myboard.toString() );
 
-  }   
+  },   
 
+  toggleModal() {
+  
+      this.$store.dispatch("boards/toggle")
+    },
 }
 }
-  //setshowModal() {
-  //  switch (this.$root.showModal)
-  //  {
-  //    case false:
-  //      this.$root.showModal= true;
-  //      break;
-  //    case true:
-  //      this.$root.showModal= false;
-  //      this.$root.showPDF = false;
-  //      break;
-  //  }
 //},
 //},
 //}
