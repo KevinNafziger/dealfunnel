@@ -129,7 +129,6 @@ import Vuetify from 'vuetify';
   }
   .post-main-text {
     height: 385px !important;
-    display: autok;
     border-bottom-style: groove;
     border-bottom-color: #d2e8ff1f;
     overflow:auto;
@@ -167,7 +166,7 @@ import Vuetify from 'vuetify';
 }
 .post-summary-wrapper  {
        height: 400 !important;
-    overflow: scroll;
+    overflow: auto;
 }
      .blog-title {
        font-size: 20px !important;
