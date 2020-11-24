@@ -57,14 +57,17 @@
           </button>
           </div>
         <br><br>
-        <Card id="card-3" draggable="true">3</Card>
+        <Card id="card-3" draggable="true">3 {{mountains}}</Card>
         <Card id="card-4" draggable="true">4</Card>
         <Card id="card-5" draggable="true">5</Card>
       </Board>
   </div>
   </main>
   <p class="alpha">Beta - Version 2020</p>
+  <br>
+  <button @click="$fetch">fetch data</button>
   </div>
+
 </template>
 
 
@@ -89,8 +92,9 @@ export default {
    Vuetify,
    },
     props: ["posts", "widgets", "totalRecords"],
-    data () {
+    data() {
     return {
+          mountains: [],
         searchMessage: "",
         propys: 1,
            newpostarry: [],
@@ -98,7 +102,13 @@ export default {
            AFTER_FIRST_FETCH: 2,
         }
     },
+    async fetch() {
+      this.mountains = await fetch('https://api.nuxtjs.dev/mountains')
+      .then(res => res.json())
+    },
+    fetchOnServer: false
   }
+
 //created: function() {
 
 //  window.eventBus.$on("refreshPosts", (items) => this.refreshPosts(items));
@@ -230,6 +240,8 @@ export default {
 
 //},
 //}
+
+
 </script>
 
 <style scoped>
