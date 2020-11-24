@@ -41,7 +41,7 @@
                                 <td><b>Brief Summary:</b><br>{{ post.newdescript}}<a v-if="!(post.website==='')" id="myWebLinkTag" class="mdi mdi-web mdi-18px" :href="post.website" > website</a><br>
                                       <br><br>
                                   </td>
-                                </tr
+                                </tr>
 
                                 <tr v-if="!(post.advisors==='')"><td><b> Advisors:</b><br> {{post.advisors}}<br><br></td></tr>
                             
@@ -96,7 +96,7 @@ import Vuetify from 'vuetify';
 
   visitpostlink: function(tab) {  
      
-      window.location.href = this.$root.server + '/posts/' + tab ;
+      window.location.href = this.$root.server + '/articles?id=' + tab ;
      },
       idlists:  function(post_id) {
       for(var i = 0; i < this.board.length; i++) {
