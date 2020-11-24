@@ -124,7 +124,23 @@ straightforward manner.
 </div>
 </template>
 <script>
+import {mapState, mapMutations} from 'vuex';
 export default {
+methods: {
+  ...mapMutations({
+    setPosts: 'posts/set'
+  })
+},
+computed: {
+  ...mapState({
+          loadedPosts: state => state.posts.list,
+          //post:  state.posts.post
+
+   }),
+   },
+async fetch({store}) {
+  await store.dispatch("posts/nuxtServerInit")
+},
 
 }
 

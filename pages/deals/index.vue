@@ -48,7 +48,6 @@
         </thead>
 
 <tbody class="table-scroll">
-<nuxt-component :json="deals" />
     <tr style="margin-top:20px;" v-for="deal in deals">
 
         <td class="datetag">

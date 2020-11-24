@@ -10,13 +10,21 @@
 </template>
 
 <script>
+import {mapState, mapMutations} from 'vuex';
 export default {
-  computed: {
-    loadedPosts() {
-      return this.$store.getters.loadedPosts
-    }
-  }
-};
+methods: {
+  ...mapMutations({
+    setPosts: 'posts/set'
+  })
+},
+computed: {
+  ...mapState({
+          loadedPosts: state => state.posts.list,
+          //post:  state.posts.post
+   }),
+},
+}
+
 </script>
 
 
