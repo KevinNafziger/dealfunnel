@@ -166,7 +166,6 @@ import Vuetify from 'vuetify';
 }
 .post-summary-wrapper  {
        height: 400 !important;
-    overflow: auto;
 }
      .blog-title {
        font-size: 20px !important;
