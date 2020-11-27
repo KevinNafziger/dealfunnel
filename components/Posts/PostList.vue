@@ -28,14 +28,14 @@
                           <table>
                                 <tbody style="text-transform:none !important;" class="post-main-text">
                                 <tr>
-                                  <td><b>Most Recent Coverage:</b><br><b><a id="myArticleLinkTag" href="#" class="mdi mdi-book-open mdi-18px" v-on:click="visitpostlink(post.id)" >{{post.teaser }}</a></b>, {{post.summary}} 
+                                  <td><b>Most Recent Coverage:</b><br><b><nuxt-link id="myArticleLinkTag" :to="'/posts/' + post.id " class="mdi mdi-book-open mdi-18px"  >{{post.teaser }}</nuxt-link></b>, {{post.summary}} 
                                   <br><br>
                                 </td>
                                 </tr>
                               </tbody>
                               <br><br>
                               <div class="center-btn">
-                                <a class="gardient-button" href="#"> Read More</a>
+                                <nuxt-link class="gardient-button" :to="'/posts/' + post.id " > Read More</nuxt-link>
                               </div>
                               <br>
                           </table>
