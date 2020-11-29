@@ -26,7 +26,7 @@
 
 <p class=MsoNormal><span class="intro-p" style='font-size:
 20.0pt;mso-bidi-font-size:11.0pt'><b>Data Driven</b><span class=SpellE> DealFunnel</span> 
-datasets feature expected timelines for future actions, allowing dealmakers to categorize future opportunities by expected data, type, geography and size.  The forward-looking data  can be used to create innovative models dervived exclusively from primary sources.  <span style='mso-spacerun:yes'></span></span></p>
+datasets feature expected timelines for future actions, allowing dealmakers to categorize  opportunities by expected data, type, geography and size.  The forward-looking data  can be used to create innovative models dervived from primary sources.  <span style='mso-spacerun:yes'></span></span></p>
 </p>
 
 <img class="img-G" width="200px;" src="https://firebasestorage.googleapis.com/v0/b/deal-funnel.appspot.com/o/deal%20funnel%20web%20stock%2Fsada.png?alt=media&amp;token=dad23bb5-f65c-414d-807e-372dee5a5522">
@@ -44,7 +44,7 @@ datasets feature expected timelines for future actions, allowing dealmakers to c
   				<center>
             <div style="height:1px" class="bluebar"> </div>
               </center>
-  					    </center>  <center><p class="p-class-j">DealFunnel covers emerging technology businesses serving the financial services industry and beyond including companies in Blockchain, DLT and Crypto as well as in HealthTech, Artificial Intelligence, LegalTech, and Cybersecurity DealFunnel is perfect for  investment bankers, venture capitalists, private equity directors, attorneys as well as forward-looking companies intent on staying ahead of the curve. Learn more about DealFunnel's forward-looking approach by clicking on the <i>'See the Tour'</i> button.</p>
+  					    </center>  <center><p class="p-class-j">DealFunnel covers emerging technology businesses serving the financial services industry and beyond including companies in Blockchain, DLT and Crypto as well as in HealthTech, Artificial Intelligence, LegalTech, and Cybersecurity DealFunnel is perfect for  investment bankers, venture capitalists, private equity directors, attorneys and corporate executives. Learn more about DealFunnel's forward-looking approach by clicking on the <i>'See the Tour'</i> button.</p>
                 </center>
   							<p>
   							</p></div>
