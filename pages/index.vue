@@ -9,35 +9,26 @@
  <v:imagedata croptop="-65520f" cropbottom="65520f"/>
 </v:shape><span style='mso-element:field-end'></span><![endif]-->
 
-<h1 data-ix="slide-in-effect-on-load" style="padding-bottom: 0px; margin-bottom: 0px; opacity: 1; transform: translateX(0px) translateY(0px) translateZ(0px); transition: opacity 0.5s ease 0s, transform 0.7s ease 0s, opacity 500ms ease 0s, transform 700ms ease 0s;" class="intro-title">Newsletters, data and reports <br></h1>
-
-<div >
-    <div id="subscribebuttonlanding" style="margin-right:auto; margin-left:auto;" class="text-block-20">
-    <a class="btn-link" href="/users/sign_up"></a>
-    <a style="color:white;" class="front-subscribe-button" href="/pricing">subscribe</a>
-  </div>
-</div>
-
+<h1 data-ix="slide-in-effect-on-load" style="padding-bottom: 0px; margin-bottom: 0px; opacity: 1; transform: translateX(0px) translateY(0px) translateZ(0px); transition: opacity 0.5s ease 0s, transform 0.7s ease 0s, opacity 500ms ease 0s, transform 700ms ease 0s;" class="intro-title">Newsletters, data, and reports <br></h1><br>
 
 <p class=MsoNormal ><span class="intro-p" style='font-size:
-20.0pt;mso-bidi-font-size:11.0pt'><b>Focus</b> – <span class=SpellE>DealFunnel</span>
-covers emerging technology businesses serving the financial services industry and beyond.
-In addition to our coverage of Fintech, we provide newsletters, articles data and reports on Blockchain, DLT and Crypto firms as well as on
-companies in <span class=SpellE>HealthTech</span>, Artificial Intelligence,
-LegalTech, and Cybersecurity.<span style='mso-spacerun:yes'>  </span></span></p>
+20.0pt;mso-bidi-font-size:11.0pt'><b>Focused Insights</b> – <span class=SpellE>DealFunnel's</span>
+ articles are forward looking, focusing on a company’s plans related to capital raising, partnerships, international expansion and M&A. <span style='mso-spacerun:yes'></span></span></p>
 
-<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-margin-left:-.25pt;text-indent:-.5pt'><span class="intro-p" style='font-size:
-20.0pt;mso-bidi-font-size:11.0pt'><b>Our Readers</b> - <span class=SpellE>DealFunnel</span>
-is a must have for investment
-bankers, venture capitalists, private equity directors, attorneys and company
-executives.<span class=SpellE> Not only will</span><span class=SpellE> DealFunnel</span> keep you ahead of the curve, <span class=SpellE>our
-products</span> will also help you and
-your team streamline and possibly <span style='mso-spacerun:yes'> eliminate </span>many tasks
-completed by research teams. DealFunnel is also useful for generating leads for clients. It is simple to use and organized in a
-straightforward manner.
-<br></span>
+<p class=MsoNormal><span class="intro-p" style='font-size:
+20.0pt;mso-bidi-font-size:11.0pt'><b>Exclusive Content</b><span class=SpellE> DealFunnel</span>
+ newsletters summarize all transactions for a featured category. Newsletters and reports contain proprietary articles that highlight a company's strategic priorities, featuring firms of all sizes and stages of devlopment. <span style='mso-spacerun:yes'></span></span></p>
 </p>
+
+<p class=MsoNormal><span class="intro-p" style='font-size:
+20.0pt;mso-bidi-font-size:11.0pt'><b>Drag and Drop Reports </b><span class=SpellE> DealFunnel</span> reports make it easy to scout for opportunities because they aggregate all of our intel for that topic, geography or time period. Our drag and drop Reports Builder also lets dealmakers design their own reports, so they only include insights relevant to their firm and its clients.<span style='mso-spacerun:yes'></span></span></p>
+</p>
+
+<p class=MsoNormal><span class="intro-p" style='font-size:
+20.0pt;mso-bidi-font-size:11.0pt'><b>Data Driven</b><span class=SpellE> DealFunnel</span> 
+datasets feature expected timelines for future actions, allowing dealmakers to categorize future opportunities by expected data, type, geography and size.  The forward-looking data  can be used to create innovative models dervived exclusively from primary sources.  <span style='mso-spacerun:yes'></span></span></p>
+</p>
+
 <img class="img-G" width="200px;" src="https://firebasestorage.googleapis.com/v0/b/deal-funnel.appspot.com/o/deal%20funnel%20web%20stock%2Fsada.png?alt=media&amp;token=dad23bb5-f65c-414d-807e-372dee5a5522">
 <div class="rem-img">
   <img width="400px" src="https://firebasestorage.googleapis.com/v0/b/deal-funnel.appspot.com/o/deal%20funnel%20web%20stock%2Fgraph.png?alt=media&amp;token=a913daac-672b-4969-a69b-b734fbc437db">
@@ -53,7 +44,7 @@ straightforward manner.
   				<center>
             <div style="height:1px" class="bluebar"> </div>
               </center>
-  					    </center>  <center><p class="p-class-j">DealFunnel journalists ask forward-looking questions of the executives they interview. This approach helps readers learn about a featured company's strategic priorities and its future needs. Click on the <i>'See the Tour'</i> button below for examples of our forward-looking coverage. The tour is hosted by DealFunnel's <i>'The Pig'</i>, and provides a fun and informative overview of DealFunnel content.</p>
+  					    </center>  <center><p class="p-class-j">DealFunnel covers emerging technology businesses serving the financial services industry and beyond including companies in Blockchain, DLT and Crypto as well as in HealthTech, Artificial Intelligence, LegalTech, and Cybersecurity DealFunnel is perfect for  investment bankers, venture capitalists, private equity directors, attorneys as well as forward-looking companies intent on staying ahead of the curve. Learn more about DealFunnel's forward-looking approach by clicking on the <i>'See the Tour'</i> button.</p>
                 </center>
   							<p>
   							</p></div>
