@@ -1,32 +1,46 @@
 export const state = () => ({
   myboard: [],
+  myboardArry: [],
   showModal: false,
 })
 
 export const mutations = {
   add(state, id) {
 
-    state.myboard.push(id)
+    if (state.myboard.includes(id) == false) 
+    {
+      state.myboard.push(id);
+    }
   },
+  addboardArry(state, item )  {
+
+    if (state.myboardArry.includes(item[0]) == false) 
+    {
+      state.myboardArry.push(item[0]);
+    } 
+  }, 
   remove(state, { todo }) {
     state.myboard.splice(state.list.indexOf(todo), 1)
   },
-  toggle(state) {
+  toggle(state)  {
     state.showModal = !state.showModal;
   }
 }
  export const actions = {
-    updateBoard(vuexContext, index) {
-      if (isNaN(index))
-        {
-        return
-        }
-        else
-        {
-          vuexContext.commit("add", index);
-        } 
-      },
-      toggle(vuexContext) {
+   updateBoard(vuexContext, index) {
+     if (isNaN(index))
+     {
+      return
+     }
+     else
+     {
+      vuexContext.commit("add", index);
+      } 
+    },
+    updateBoardArry(vuexContext, index) {
+      vuexContext.commit("addboardArry", index);
+    },
+    toggle(vuexContext) {
       vuexContext.commit("toggle");
-      }
+    }
   }

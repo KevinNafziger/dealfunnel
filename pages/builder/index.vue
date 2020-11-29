@@ -11,15 +11,17 @@
     <br><br>
 <main class="flexbox">
        <div class="left-side">
+
          <h2> Report Content </h2>
          <br>
-            <Board id="board-2">
+            <Board id="board-2" :posts="posts" >
               <div class="heading-col-main">
-            <h2 style="inline-block"> Articles </h2>
+            <h2 style="inline-block"> Articles <i style="font-size: 13px; text-align:right">{{ filterMessage }}</i></h2>
           </div>
+            <Searchbar/>
              <card v-for="post in posts":id="post.id" :key="post.id" draggable="true" class="list-group-item">
                     <h3>  {{ post.title }} </h3>
-                    <p>  {{ post.created_date}} {{post.author.name}} </p>
+                    <p>  {{ post.created_date}} {{post.author.name }} </p>
              </card>
         </Board>
   </div>
@@ -34,22 +36,26 @@
             Close View
           </button>
           <br><br><br></div><br>
-        <postsys :posts="posts" :board="this.myboard" v-show="this.showModal">
+        <postsys :posts="myboards" :board="this.myboard" v-show="this.showModal">
         </postsys>
 
-      <Board v-show="!this.showModal" id="board-right" >
+      <Board v-show="!this.showModal" :posts="posts" id="board-right" >
         <div class="builder-btns">
           <button v-on:click="toggleModal()" class="gardient-button b-lr-s">
             <span class="mdi mdi-file-eye"></span>
             View
           </button>
-      >
+    
           <button v-on:click="generateReport()" class="gardient-button b-lr-s">
             <span class="mdi mdi-pdf-box"></span>
             PDF
           </button>
           </div>
-
+           <card v-for="myboard in myboards":id="myboard.id" :key="myboard.id" draggable="true" class="list-group-item">
+                    <h3>  {{ myboard.title }} </h3>
+                    <p>  {{myboard.created_date}} {{myboard.author.name }} </p>
+             </card>
+        
       </Board>
   </div>
   </main>
@@ -61,7 +67,8 @@
 import Vue from 'vue';
 import Board from '@/components/Draggable/Board';
 import Card from '@/components/Draggable/Card';
-import postsys from '@/components/Builder/Postsys.vue';
+import Searchbar from '@/components/Builder/Searchbar';
+import postsys from '@/components/Builder/Postsys';
 import draggable from 'vuedraggable';
 import Vuetify from 'vuetify';
 import {mapState, mapMutations} from 'vuex';
@@ -78,170 +85,137 @@ export default {
    draggable,
    Vuetify,
    postsys,
-   },
-    props: ["widgets", "totalRecords"],
-    data () {
-    return {
-        searchMessage: "",
-        propys: 1,
-           newpostarry: [],
-           FIRST_FETCH: 1,
-           AFTER_FIRST_FETCH: 2,
-        }
-    },
+   Searchbar,
+ },
+ props: [],
+
  computed: {
   ...mapState({
-          posts: state => state.posts.list,
-          myboard: state => state.boards.myboard,
-          showModal: state => state.boards.showModal
-          //post:  state.posts.post
+      starterPosts: state => state.posts.list,
+      myboard: state => state.boards.myboard,
+      showModal: state => state.boards.showModal,
+      firstTimeLoaded: state => state.pages.firstTimeLoaded,
+      activePostsInfo: state => state.pages.activePostsInfo,
+      myboardArry: state => state.boards.myboardArry,
+      myboards: state => state.boards.myboardArry,
+      activeTab: state => state.pages.activeTab,
+      numActivePage: state => state.pages.numActivePage, 
    }),
+   filterMessage() {
+      if (this.firstTimeLoaded == true)
+      {
+      return ''
+      }
+
+      if (this.activeTab == 'Page')
+      {
+        return this.activeTab + ' ' + this.numActivePage;   
+      }
+      else
+      {
+        return this.activeTab;   
+      }
+    },
+   posts() {
+      if (this.firstTimeLoaded == true)
+      {
+      return this.starterPosts
+      }
+      else
+      {   
+        return this.activePostsInfo;   
+      }
+    }
    },
   created()  {
      this.$nuxt.$on("addRight", (items) => this.addtoReportBoard(items));
-    },
-//mounted: function() {
+     this.$nuxt.$on("getCategory", (category) => this.getCategory(category));
+     this.$nuxt.$on("addRightArry", (item) => this.addtoBoardArry(item));
+     this.$nuxt.$on("changePage", (direction) => this.changePage(direction));
+     this.$nuxt.$on("submitSearch", (topic) => this.submitSearch(topic));
+  },
+  methods: {
 
-//  this.$root.allArticles = this.widgets; //set global article
-//  this.$root.totalRecords = this.totalRecords;
-//  this.$root.totalPages = this.totalRecords/50;
+  getCategory: function(category) {
 
+    switch(category) {
 
-//},
+      case 'Insurtech':
+         this.$store.dispatch("pages/setInsur");
+         break;
+      case 'Blockchain':
+         this.$store.dispatch("pages/setBlock");
+         break;
+      case 'Lending':
+         this.$store.dispatch("pages/setLend");
+         break;
+      case 'Payments':
+         this.$store.dispatch("pages/setPay");
+         break;
+      case 'Banking':
+         this.$store.dispatch("pages/setBank");
+         break;
+      }  
+   }, 
 
- methods: {
+   changePage: function(direction) {
 
- addtoReportBoard: function(index) {
+       switch(direction) {
+       case 'Previous':
+         var page = this.numActivePage;
+         page-- ; 
+         this.$store.dispatch("pages/goPrevious", page); 
+         break; 
+       case 'Next':        
+         var page = this.numActivePage;
+         page++ ;
+         this.$store.dispatch("pages/goNext", page); 
+         break;
+       case 'Last':
+         var page = this.numActivePage;
+         this.$store.dispatch("pages/goLast", page); 
+         break;
+       }
+    }, 
 
-        if (isNaN(index))
-        {
-        return
-        }
-        else
-        {
-        this.$store.dispatch("boards/updateBoard",index);
-        }
-    },
-  generateReport: function() {
+   addtoReportBoard: function(index) {
 
-    window.open('https://fintechhorizonsmedia.com/showreports/view.pdf?idlist=' + this.myboard.toString() );
+      if (isNaN(index))
+      {
+      return
+      }
+      else
+      {
+      this.$store.dispatch("boards/updateBoard",index);
+      }
+   },
 
-  },   
+   submitSearch: function (topic) {
+      this.$store.dispatch("pages/submitSearch", topic);
+      this.$store.dispatch("pages/setSearchTab", topic);
+   },
 
-  toggleModal() {
-  
+   addtoBoardArry: function(item) {
+      var item = this.postFilter(item);
+      this.$store.dispatch("boards/updateBoardArry", item);
+   },
+
+   generateReport: function() {
+      window.open('https://fintechhorizonsmedia.com/showreports/view.pdf?idlist=' + this.myboard.toString() );
+    }, 
+   toggleModal() {
       this.$store.dispatch("boards/toggle")
-    },
+  },
+
+  postFilter(card_id) {
+         return this.posts.filter(post => post.id == card_id);
+  }, 
 }
+
 }
-//},
-//},
-//}
-//startReport() {
-//    eventBus.$emit("reportGen");
-//}
-//}
-//refreshPosts(fetchedItems) {
-
-//    if (!(fetchedItems.length == 0))
-//     {
-//      for (var x = 0; x<fetchedItems.length; x++)
-//      {
-
-//        if (this.$root.allArticles.length < 5000)
-//        {
-//          this.$root.allArticles.push(fetchedItems[x]);
-//        }
-
-//      }
-//    }
-
-
-
-//    if (!(this.$root.boardEnd.length == 0))
-//    {
-//      this.newpostarry = this.postFilter(this.$root.allArticles);
-      // start with only ones on right board, then add in left
-//    }
-//    else
-//    {
-//      this.newpostarry = [];  //when nothign on board right
-//    }
-
-//    if (!(fetchedItems.length == 0))
-//    {
-//      for (var x = 0; x<fetchedItems.length; x++)
-//      {
-//        this.newpostarry.push(fetchedItems[x]);
-//      }
-//        this.$root.resultsBlank = false;
-//    }
-//    else
-//    {
-      //nothing on board left
-//       this.$root.resultsBlank = true;
-//    }
-//    this.$root.units = this.newpostarry; // set global
-//    this.newpostarry = []; //set to blank again
-//    this.propys = this.AFTER_FIRST_FETCH;  //= 2 toggle for fetch
-//},
-//idlists(post_id) {
-//    for(var i = 0; i < this.$root.boardEnd.length; i++)
-//    {
-//      if(this.$root.boardEnd[i] == post_id)
-//        return post_id;
-//    }
-//   return 0;
-//},
-//postFilter(posts) {
-//  return this.posts.filter(post => post.id==this.idlists(post.id));
-//},
-//total: function() {
-
-//  this.$root.totalRecords = this.totalRecords;
-//  return this.totalRecords;
-//},
-//currentPageLessThanTotal: function() {
-
-//  if (this.$root.currentPage < this.$root.TotalPages)
-//  {
-//    return true;
-//  }
-///  else
-//  {
-//    return false;
-//  }
-
-//},
-//allStories: function() {
-//    this.$root.allArticles = this.widgets; //set global article
-//    return this.widgets;
-//},
-//totalPages: function() {
-//   this.$root.totalPages = this.totalRecords/50 ;
-//   return  this.$root.totalPages;
-//}
-//},
-//computed: {
-//units: function() {
-//    if (this.propys == this.FIRST_FETCH)  //first fetch is 1
-//     {
-//        //set posts first time from controller
-//         this.$root.units = this.posts;
-//         return this.posts;
-//     }
-//    else
-//    {
-//      // after first time assign global
-//      return this.$root.units;  //set from root variable w posts
-//    }
-//}
-
-//},
-//}
 </script>
 
-<style scoped>
+<style scope>
 h3 {
   color:#14a0fdd1 !important;
 }
@@ -616,8 +590,6 @@ flex: 1 1 200px;
    border-radius: 10px;
 
  }
-
-
 
 .card:hover {
   box-shadow: 0px 0px 0px 2px #24a7ff !important;

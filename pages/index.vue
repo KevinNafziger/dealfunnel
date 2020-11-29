@@ -53,7 +53,7 @@ straightforward manner.
   				<center>
             <div style="height:1px" class="bluebar"> </div>
               </center>
-  					    </center>  <center><p class="p-class-j">DealFunnel provide readers with articles and reports that contain information that is more actionable than can be found in other publications. This is because DealFunnel journalists ask forward-looking questions of the executives they interview. This approach helps readers learn about a featured company's strategic priorities and its future needs. Click on the <i>'See the Tour'</i> button below for examples of our forward-looking coverage. The tour is hosted by DealFunnel's <i>'The Pig'</i>, and provides a fun and informative overview of DealFunnel content.</p>
+  					    </center>  <center><p class="p-class-j">DealFunnel journalists ask forward-looking questions of the executives they interview. This approach helps readers learn about a featured company's strategic priorities and its future needs. Click on the <i>'See the Tour'</i> button below for examples of our forward-looking coverage. The tour is hosted by DealFunnel's <i>'The Pig'</i>, and provides a fun and informative overview of DealFunnel content.</p>
                 </center>
   							<p>
   							</p></div>

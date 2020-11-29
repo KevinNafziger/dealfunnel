@@ -36,11 +36,15 @@ export default {
     'bootstrap-vue/nuxt',
     '@nuxtjs/axios',
     '@nuxtjs/vuetify',
-    '@nuxtjs/robots',
+    '@nuxt/http',
     ],
     axios: {
     baseURL: process.env.BASE_URL || 'https://fintechhorizonsmedia.com/api/v1'
     },
+
+      http: {
+     baseURL: process.env.BASE_URL || 'https://fintechhorizonsmedia.com/api/v1'
+  },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {

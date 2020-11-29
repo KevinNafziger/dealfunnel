@@ -27,8 +27,7 @@ computed: {
 
 </script>
 
-
-<style  scoped>
+<style scoped>
 .title {
     text-align: -webkit-center;
     margin-top: 20px;

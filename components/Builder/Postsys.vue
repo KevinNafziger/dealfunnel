@@ -27,7 +27,7 @@
                           <table>
                                 <tbody style="text-transform:none !important;" class="post-main-text">
                                 <tr>
-                                  <td><b>Most Recent Coverage:</b><br><b><a id="myArticleLinkTag" href="#" class="mdi mdi-book-open mdi-18px" v-on:click="visitpostlink(post.id)" >{{post.teaser }}</a></b>, {{post.summary}} <i>(Please click on the hyperlink above to read this article)</i>
+                                  <td><b>Most Recent Coverage:</b><br><b><nuxt-link id="myArticleLinkTag" href="#" class="mdi mdi-book-open mdi-18px" :to="'/posts/' + post.id "  >{{post.teaser }}</nuxt-link></b>, {{post.summary}} <i>(Please click on the hyperlink above to read this article)</i>
                                   <br><br>
                                 </td>
                                 </tr>
@@ -94,17 +94,13 @@ import Vuetify from 'vuetify';
  	methods: {
 
 
-  visitpostlink: function(tab) {  
-     
-      window.location.href = this.$root.server + '/articles?id=' + tab ;
-     },
-      idlists:  function(post_id) {
+  idlists:  function(post_id) {
       for(var i = 0; i < this.board.length; i++) {
      if(this.board[i] == post_id)
         return post_id;
       }
    return 0;
-},
+   },
       
   postFilter: function(posts) {
 
@@ -368,7 +364,7 @@ margin: auto;
   }
   @media screen and (max-width:1550px) {
     .post-main-text {
-      overflow:auto;
+      overflow:hidden;
     }
   }
   .post-main-text {
@@ -405,7 +401,7 @@ margin: auto;
 
 .post-summary-wrapper  {
        height: 430 ;
-    overflow: auto !important;
+    overflow: hidden !important;
 }
      .blog-title {
        font-size: 20px !important;

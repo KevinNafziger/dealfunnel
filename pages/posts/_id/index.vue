@@ -1,7 +1,6 @@
 
 <template>
 <div>
-<page>
 <div class="WordSection1">
 
 <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
@@ -20,20 +19,19 @@ margin-left:5%;line-height:109%;">
 
 
   <p  class='MsoNormal' style='margin-top:70px;margin-bottom:60px; text-indent:-.1pt;
-  line-height:109%;'><span style='line-height:109%; font-size:16pt;'>{{post.title }}</span></p>
+  line-height:109%;'><b><span style='line-height:109%; margin-left: 3%; font-size:16pt;'>{{post.title }}</span></b></p>
 
-   <span style="display:inline-block;width:50%;text-align:center;float:left;">  
+   <span style="display:inline-block;width:45%;text-align:center;float:left; margin:1%;">  
     <div v-html="firsthalf(post)" ></div>
    </span>
-   <span style="display:inline-block;width:50%; text-align:center;float:right;">  
+   <span style="display:inline-block;width:45%; text-align:center;float:right; margin:1%;">  
     <div v-html="partofsecond(post)" ></div>
     <p v-if="!(post.logo_url==null)" class=MsoNormal style='margin-bottom:0in; margin-top:01in;'><img width=261 height=154
         id="Picture 389" :src="post.logo_url"></p>
    </span>
  </div>
-
-</page>
 <sectiion style="margin-bottom:100px;"></sectiion>
+
 </div>
 </template>
 <script>
@@ -58,7 +56,6 @@ export default {
       return tree.blog_entry.slice(tree.blog_entry.length /2,tree.blog_entry.length); 
     },
     partofsecond(tree) {
-
       var added_string = this.secondhalf(tree).indexOf('/p>');
       return tree.blog_entry.slice(tree.blog_entry.length /2 + added_string + 4,tree.blog_entry.length);  
     }
@@ -91,7 +88,7 @@ export default {
 .MsoPapDefault
   {margin-bottom:8.0pt;
   line-height:107%;}
-@page WordSection1
+ .WordSection1
   {size:8.5in 11.0in;
   margin:1.0in 76.85pt 1.0in 1.0in;}
 div.WordSection1
@@ -101,7 +98,7 @@ div.WordSection1
   margin:1.0in 76.85pt 1.0in 1.0in;}
 div.WordSection2
   {page:WordSection2;}
-@page WordSection3
+ .WordSection3
   {size:8.5in 11.0in;
   margin:1.0in 76.85pt 1.0in 1.0in;}
 div.WordSection3

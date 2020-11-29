@@ -11,18 +11,20 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex';
+
 export default {
    props: ['id'],
    methods: 
    {
-     drop: e => {
-       const card_id = e.dataTransfer.getData('card_id');
-       const card = document.getElementById(card_id);
-       card.style.display = "block";
-       e.target.appendChild(card);
-       $nuxt.$emit("addRight", card_id);     
-   }, 
+  
+      drop: e => {
+        const card_id = e.dataTransfer.getData('card_id');
+        const card = document.getElementById(card_id);
+        card.style.display = "none";
+        //e.target.appendChild(card);
+        $nuxt.$emit("addRight", card_id);
+        $nuxt.$emit("addRightArry", card_id);    
+        },
+    },
    }
-  }
 </script>
