@@ -25,8 +25,8 @@
 </p>
 
 <p class=MsoNormal><span class="intro-p" style='font-size:
-20.0pt;mso-bidi-font-size:11.0pt'><b>Data Driven</b><span class=SpellE> DealFunnel</span> 
-datasets feature expected timelines for future actions, allowing dealmakers to categorize  opportunities by expected data, type, geography and size.  The forward-looking data  can be used to create innovative models dervived from primary sources.  <span style='mso-spacerun:yes'></span></span></p>
+20.0pt;mso-bidi-font-size:11.0pt'><b>Data Driven</b><span class=SpellE></span> 
+Our datasets on Fintech capital raises, M&A, articles and companies can be exported to Excel. Dealfunnel also offers data on expected timelines for future actions, allowing dealmakers to categorize opportunities by expected data, type, geography and size. <span style='mso-spacerun:yes'></span></span></p>
 </p>
 
 <img class="img-G" width="200px;" src="https://firebasestorage.googleapis.com/v0/b/deal-funnel.appspot.com/o/deal%20funnel%20web%20stock%2Fsada.png?alt=media&amp;token=dad23bb5-f65c-414d-807e-372dee5a5522">
