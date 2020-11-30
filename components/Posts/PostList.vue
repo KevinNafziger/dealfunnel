@@ -81,7 +81,8 @@
 </script>
  <style scoped>
  .sumary {
-   
+   overflow: auto;
+   height: 100px;
  }
  .w-dyn-list {
    width: 100% !important;
@@ -140,6 +141,10 @@
     border-bottom-style: groove;
     border-bottom-color: #d2e8ff1f;
     overflow:auto;
+    width: 100%;
+  }
+  table {
+    width: 100%;
   }
   .exec-image-posts {
     height:100px;
