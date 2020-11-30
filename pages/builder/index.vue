@@ -44,7 +44,7 @@
             <span class="mdi mdi-file-eye"></span>
             View
           </button>
-    
+
           <button v-on:click="generateReport()" class="gardient-button b-lr-s">
             <span class="mdi mdi-pdf-box"></span>
             PDF
@@ -95,7 +95,7 @@ export default {
       myboardArry: state => state.boards.myboardArry,
       myboards: state => state.boards.myboardArry,
       activeTab: state => state.posts.activeTab,
-      numActivePage: state => state.posts.numActivePage, 
+      numActivePage: state => state.posts.numActivePage,
    }),
    filterMessage() {
       if (this.firstTimeLoaded == true)
@@ -105,11 +105,11 @@ export default {
 
       if (this.activeTab == 'Page')
       {
-        return this.activeTab + ' ' + this.numActivePage;   
+        return this.activeTab + ' ' + this.numActivePage;
       }
       else
       {
-        return this.activeTab;   
+        return this.activeTab;
       }
     },
    posts() {
@@ -118,8 +118,8 @@ export default {
         return this.starterPosts
       }
       else
-      {   
-          return this.activePostsInfo;   
+      {
+          return this.activePostsInfo;
       }
     },
     items()  {
@@ -129,11 +129,11 @@ export default {
       }
       else if (this.myboardArry.length == 0)
       {
-        return this.activePostsInfo;   
+        return this.activePostsInfo;
       }
       else
       {
-        return this.activePostsInfo.concat(this.myboards);   
+        return this.activePostsInfo.concat(this.myboards);
       }
     }
   },
@@ -165,28 +165,28 @@ export default {
       case 'Banking':
          this.$store.dispatch("posts/setBank");
          break;
-      }  
-   }, 
+      }
+   },
 
    changePage: function(direction) {
 
        switch(direction) {
        case 'Previous':
          var page = this.numActivePage;
-         page-- ; 
-         this.$store.dispatch("posts/goPrevious", page); 
-         break; 
-       case 'Next':        
+         page-- ;
+         this.$store.dispatch("posts/goPrevious", page);
+         break;
+       case 'Next':
          var page = this.numActivePage;
          page++ ;
-         this.$store.dispatch("posts/goNext", page); 
+         this.$store.dispatch("posts/goNext", page);
          break;
        case 'Last':
          var page = this.numActivePage;
-         this.$store.dispatch("posts/goLast", page); 
+         this.$store.dispatch("posts/goLast", page);
          break;
        }
-    }, 
+    },
 
    addtoReportBoard: function(index) {
 
@@ -212,13 +212,13 @@ export default {
 
    generateReport: function() {
       window.open('https://fintechhorizonsmedia.com/showreports/view.pdf?idlist=' + this.myboard.toString() );
-    }, 
+    },
    toggleModal() {
       this.$store.dispatch("boards/toggle")
   },
   postFilter(card_id) {
          return this.posts.find(post => post.id == card_id);
-  }, 
+  },
   },
 async fetch({store}) {
   await store.dispatch("posts/nuxtServerInit")
@@ -591,7 +591,6 @@ flex: 1 1 200px;
    -moz-osx-font-smoothing: grayscale;
    text-align: center;
    color: #ffffff;
-   margin-top: 60px;
  }
 
  .card-holder {

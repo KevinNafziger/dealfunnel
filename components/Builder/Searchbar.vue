@@ -1,9 +1,12 @@
 <template>
-<div>
+ <div>
   <div class="search-bar-div">
+    <div class="search-div">
       <input type="text"  name="term" id="term"  v-model="searchMessage" style="margin-right: 10px" width="100%" class="text-field w-input w-col w-col-8" placeholder="search  content">
-      <button class="gardient-button" id="section-10" v-on:click="submitSearch(searchMessage)"  style="margin-left:1px;margin-top:5px;margin-bottom:10px" >
-      <i class="glyphicon glyphicon-search">Search</i></button>
+        <button class="gardient-button" id="section-10" v-on:click="submitSearch(searchMessage)"  style="margin-left:1px;margin-top:5px;margin-bottom:10px" >
+        <i class="glyphicon glyphicon-search">Search</i>
+      </button>
+    </div>
     <div class="tag-search-div">
       <a href="#" v-on:click="changePage('Last')" class="tagbtn">all</a>
       <a href="#" v-on:click="showGrouping('Payments')" class="tagbtn">payments</a>
@@ -18,7 +21,7 @@
   <div v-show="false">
    <br><i style="font-size: 13px;">No results found</i>
    </div>
-</div>
+ </div>
 </template>
 
 <script>
@@ -77,6 +80,14 @@ export default {
 
 
 <style scoped>
+.search-div {
+  position: sticky;
+    display: revert;
+    height: 30px;
+    border-radius: 3px;
+    margin-left: 20px;
+margin-right: 70px;
+}
    .tagbtn {
    background-color: #2fb7ff;
    color: white !important;
@@ -131,5 +142,16 @@ i.glyphicon {
 width: 80px;
 color: white;
   }
-
+  button#section-10 {
+    margin-left: 1px;
+    margin-top: 0px !important;
+    margin-bottom: 10px;
+    padding: 3px;
+    border-radius: 3px;
+    height: fit-content;
+    position: absolute;
+  }
+input {
+      background: rgba(105,105,105,0.07059);
+}
 </style>
