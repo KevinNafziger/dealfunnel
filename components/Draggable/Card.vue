@@ -17,7 +17,6 @@
     methods: {
       dragStart: e => {
         const target = e.target;
-
         e.dataTransfer.setData('card_id', target.id);
 //if we want cards to not disapear when hold comment line 23 24 25
       //  setTimeout (() => {

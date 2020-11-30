@@ -30,23 +30,21 @@ margin-left:5%;line-height:109%;">
         id="Picture 389" :src="post.logo_url"></p>
    </span>
  </div>
-<sectiion style="margin-bottom:100px;"></sectiion>
+<section style="margin-bottom:100px;"></section>
 
 </div>
 </template>
 <script>
 import {mapState} from 'vuex';
 export default {
-  
-
   computed: {
   ...mapState({
-          posts: state => state.posts.list,
+          posts: state => state.posts.pages[0],
    }),
     post() {
         return this.posts.find(p => p.id == this.$route.params.id)
     },
-    },
+ },
     methods:  {
     firsthalf(item) {
       var added_string = this.secondhalf(item).indexOf('/p>');

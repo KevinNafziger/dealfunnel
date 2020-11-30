@@ -4,9 +4,8 @@
       <input type="text"  name="term" id="term"  v-model="searchMessage" style="margin-right: 10px" width="100%" class="text-field w-input w-col w-col-8" placeholder="search  content">
       <button class="gardient-button" id="section-10" v-on:click="submitSearch(searchMessage)"  style="margin-left:1px;margin-top:5px;margin-bottom:10px" >
       <i class="glyphicon glyphicon-search">Search</i></button>
-    <br>
     <div class="tag-search-div">
-      <a href="#" v-on:click="" class="tagbtn">all</a>
+      <a href="#" v-on:click="changePage('Last')" class="tagbtn">all</a>
       <a href="#" v-on:click="showGrouping('Payments')" class="tagbtn">payments</a>
       <a href="#" v-on:click="showGrouping('Insurtech')"  class="tagbtn">insurtech</a>
       <a href="#" v-on:click="showGrouping('Lending')"   class="tagbtn">lending</a>
@@ -24,7 +23,8 @@
 
 <script>
 import {mapState} from 'vuex';
-
+import 'vuetify/dist/vuetify.min.css';
+import Vuetify from 'vuetify';
 export default {
   name: 'Searchbar',
   data () {
@@ -46,8 +46,8 @@ export default {
    },
    computed: {
   ...mapState({
-      numActivePage: state => state.pages.numActivePage,
-      activeTab: state => state.pages.activeTab,
+      numActivePage: state => state.posts.numActivePage,
+      activeTab: state => state.posts.activeTab,
    }),
     showPreviousBtn() {
         if (this.numActivePage >= 2 && (this.activeTab == 'Page' || this.activeTab =='All'))
@@ -75,7 +75,14 @@ export default {
 };
 </script>
 
-<style module>
+
+<style scoped>
+   .tagbtn {
+   background-color: #2fb7ff;
+   color: white !important;
+   padding: 1px 5px;
+   border-radius: 10px;
+ }
 .text-field{
   height: 30px !important;
 }
@@ -115,4 +122,14 @@ export default {
 .gardient-button {
   margin-top:10px;
 }
+i.glyphicon {
+  color: #ffffff !important;
+  heigth: 50px !important;
+}
+  #section-10 {
+    background-image: linear-gradient(92deg, rgba(20, 160, 253, .82), rgba(20, 160, 253, 0.82));
+width: 80px;
+color: white;
+  }
+
 </style>

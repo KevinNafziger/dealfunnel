@@ -96,10 +96,13 @@ import {mapState} from 'vuex';
 export default {
 computed: {
   ...mapState({
-          posts: state => state.posts.list,
-          //post:  state.posts.post
+          posts: state => state.posts.pages[0],
+          firstTimeLoaded: state => state.poara.firstTimeLoaded,
    }),
-   }
+},
+async fetch({store}) {
+  await store.dispatch("posts/nuxtServerInit")
+},
 }
 </script>
 <style  scoped>

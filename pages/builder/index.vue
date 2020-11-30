@@ -6,20 +6,19 @@
     <div data-v-69296181="" id="top" class="sectionix">
       <div data-v-69296181="" class="title"><div  class="content">
         <br data-v-69296181="">
-      <h2 data-v-69296181="">Builder</h2></div></div></div>
+      <h2 data-v-69296181="">Reports Builder</h2></div></div></div>
 </div>
     <br><br>
 <main class="flexbox">
        <div class="left-side">
-
          <h2> Report Content </h2>
          <br>
-            <Board id="board-2" :posts="posts" >
               <div class="heading-col-main">
             <h2 style="inline-block"> Articles <i style="font-size: 13px; text-align:right">{{ filterMessage }}</i></h2>
-          </div>
+            </div>
             <Searchbar/>
-             <card v-for="post in posts":id="post.id" :key="post.id" draggable="true" class="list-group-item">
+           <Board id="board-2">
+             <card v-for="post in posts" :id="post.id" :key="post.id" draggable="true" class="list-group-item">
                     <h3>  {{ post.title }} </h3>
                     <p>  {{ post.created_date}} {{post.author.name }} </p>
              </card>
@@ -36,7 +35,7 @@
             Close View
           </button>
           <br><br><br></div><br>
-        <postsys :posts="myboards" :board="this.myboard" v-show="this.showModal">
+        <postsys :posts="items" :board="this.myboard" v-show="this.showModal">
         </postsys>
 
       <Board v-show="!this.showModal" :posts="posts" id="board-right" >
@@ -51,15 +50,14 @@
             PDF
           </button>
           </div>
-           <card v-for="myboard in myboards":id="myboard.id" :key="myboard.id" draggable="true" class="list-group-item">
-                    <h3>  {{ myboard.title }} </h3>
-                    <p>  {{myboard.created_date}} {{myboard.author.name }} </p>
-             </card>
-        
+           <card v-for="myboard in myboards" :id="myboard.id" :key="myboard.id" draggable="true" class="list-group-item">
+              <h3>  {{ myboard.title }} </h3>
+              <p>  {{myboard.created_date}} {{myboard.author.name }} </p>
+          </card>
       </Board>
   </div>
   </main>
-  <p class="alpha">DealFunnel - Version 2020</p>
+  <p class="alpha">DealFunnel 2020</p>
   </div>
 </template>
 
@@ -67,13 +65,12 @@
 import Vue from 'vue';
 import Board from '@/components/Draggable/Board';
 import Card from '@/components/Draggable/Card';
-import Searchbar from '@/components/Builder/Searchbar';
 import postsys from '@/components/Builder/Postsys';
 import draggable from 'vuedraggable';
 import Vuetify from 'vuetify';
 import {mapState, mapMutations} from 'vuex';
 Vue.component('Card', Card);
-Vue.component('Board', Board)
+Vue.component('Board', Board);
 
 Vue.use(Vuetify);
 
@@ -85,21 +82,20 @@ export default {
    draggable,
    Vuetify,
    postsys,
-   Searchbar,
  },
  props: [],
 
  computed: {
   ...mapState({
-      starterPosts: state => state.posts.list,
+      starterPosts: state => state.posts.pages[0],
       myboard: state => state.boards.myboard,
       showModal: state => state.boards.showModal,
-      firstTimeLoaded: state => state.pages.firstTimeLoaded,
-      activePostsInfo: state => state.pages.activePostsInfo,
+      firstTimeLoaded: state => state.posts.firstTimeLoaded,
+      activePostsInfo: state => state.posts.activePostsInfo,
       myboardArry: state => state.boards.myboardArry,
       myboards: state => state.boards.myboardArry,
-      activeTab: state => state.pages.activeTab,
-      numActivePage: state => state.pages.numActivePage, 
+      activeTab: state => state.posts.activeTab,
+      numActivePage: state => state.posts.numActivePage, 
    }),
    filterMessage() {
       if (this.firstTimeLoaded == true)
@@ -119,21 +115,35 @@ export default {
    posts() {
       if (this.firstTimeLoaded == true)
       {
-      return this.starterPosts
+        return this.starterPosts
       }
       else
       {   
+          return this.activePostsInfo;   
+      }
+    },
+    items()  {
+      if (this.firstTimeLoaded == true)
+      {
+      return this.starterPosts
+      }
+      else if (this.myboardArry.length == 0)
+      {
         return this.activePostsInfo;   
       }
+      else
+      {
+        return this.activePostsInfo.concat(this.myboards);   
+      }
     }
-   },
+  },
   created()  {
      this.$nuxt.$on("addRight", (items) => this.addtoReportBoard(items));
      this.$nuxt.$on("getCategory", (category) => this.getCategory(category));
      this.$nuxt.$on("addRightArry", (item) => this.addtoBoardArry(item));
      this.$nuxt.$on("changePage", (direction) => this.changePage(direction));
      this.$nuxt.$on("submitSearch", (topic) => this.submitSearch(topic));
-  },
+    },
   methods: {
 
   getCategory: function(category) {
@@ -141,19 +151,19 @@ export default {
     switch(category) {
 
       case 'Insurtech':
-         this.$store.dispatch("pages/setInsur");
+         this.$store.dispatch("posts/setInsur");
          break;
       case 'Blockchain':
-         this.$store.dispatch("pages/setBlock");
+         this.$store.dispatch("posts/setBlock");
          break;
       case 'Lending':
-         this.$store.dispatch("pages/setLend");
+         this.$store.dispatch("posts/setLend");
          break;
       case 'Payments':
-         this.$store.dispatch("pages/setPay");
+         this.$store.dispatch("posts/setPay");
          break;
       case 'Banking':
-         this.$store.dispatch("pages/setBank");
+         this.$store.dispatch("posts/setBank");
          break;
       }  
    }, 
@@ -164,16 +174,16 @@ export default {
        case 'Previous':
          var page = this.numActivePage;
          page-- ; 
-         this.$store.dispatch("pages/goPrevious", page); 
+         this.$store.dispatch("posts/goPrevious", page); 
          break; 
        case 'Next':        
          var page = this.numActivePage;
          page++ ;
-         this.$store.dispatch("pages/goNext", page); 
+         this.$store.dispatch("posts/goNext", page); 
          break;
        case 'Last':
          var page = this.numActivePage;
-         this.$store.dispatch("pages/goLast", page); 
+         this.$store.dispatch("posts/goLast", page); 
          break;
        }
     }, 
@@ -191,8 +201,8 @@ export default {
    },
 
    submitSearch: function (topic) {
-      this.$store.dispatch("pages/submitSearch", topic);
-      this.$store.dispatch("pages/setSearchTab", topic);
+      this.$store.dispatch("posts/submitSearch", topic);
+      this.$store.dispatch("posts/setSearchTab", topic);
    },
 
    addtoBoardArry: function(item) {
@@ -206,16 +216,17 @@ export default {
    toggleModal() {
       this.$store.dispatch("boards/toggle")
   },
-
   postFilter(card_id) {
-         return this.posts.filter(post => post.id == card_id);
+         return this.posts.find(post => post.id == card_id);
   }, 
-}
-
+  },
+async fetch({store}) {
+  await store.dispatch("posts/nuxtServerInit")
+},
 }
 </script>
 
-<style scope>
+<style scoped>
 h3 {
   color:#14a0fdd1 !important;
 }
@@ -224,9 +235,6 @@ h2 {
 }
 section {
   color: #ffffff !important;
-}
-.builder-btns {
-
 }
 a .gardient-button {
   margin-left: 10px;

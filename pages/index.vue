@@ -1,15 +1,13 @@
 <template>
 <div class="home-page">
 
-<section class="intro">
+<section style="margin-bottom:30px;">
 </section>
+<center>
+<img src="dealfunnel.png" style="width:240.3pt;height:100.45pt">
+</center>
 
-<img  class="deal-f-logo" src="Dfunnels_files/image017.gif" v:shapes="Group_x0020_4507 Rectangle_x0020_510 Rectangle_x0020_512 Rectangle_x0020_514 Picture_x0020_4688 Shape_x0020_590 Picture_x0020_592"><![endif]><!--[if mso & !supportInlineShapes & supportFields]><v:shape
- id="_x0000_i1025" type="#_x0000_t75" style='width:474.3pt;height:180.45pt'>
- <v:imagedata croptop="-65520f" cropbottom="65520f"/>
-</v:shape><span style='mso-element:field-end'></span><![endif]-->
-
-<h1 data-ix="slide-in-effect-on-load" style="padding-bottom: 0px; margin-bottom: 0px; opacity: 1; transform: translateX(0px) translateY(0px) translateZ(0px); transition: opacity 0.5s ease 0s, transform 0.7s ease 0s, opacity 500ms ease 0s, transform 700ms ease 0s;" class="intro-title">Newsletters, data, and reports <br></h1><br>
+<h1 style="padding-top: 30px; margin-bottom: 0px; opacity: 1; transform: translateX(0px) translateY(0px) translateZ(0px);" class="intro-title">Newsletters, data, and reports <br></h1><br>
 
 <p class=MsoNormal ><span class="intro-p" style='font-size:
 20.0pt;mso-bidi-font-size:11.0pt'><b>Focused Insights</b> – <span class=SpellE>DealFunnel's</span>
@@ -26,7 +24,7 @@
 
 <p class=MsoNormal><span class="intro-p" style='font-size:
 20.0pt;mso-bidi-font-size:11.0pt'><b>Data Driven</b><span class=SpellE></span> 
-Our datasets on Fintech capital raises, M&A, articles and companies can be exported to Excel. Dealfunnel also offers data on expected timelines for future actions, allowing dealmakers to categorize opportunities by expected data, type, geography and size. <span style='mso-spacerun:yes'></span></span></p>
+DealFunnel datasets on Fintech capital raises, M&A, articles and companies can be exported to Excel. DealFunnel also provide exportable data for hundreds of company's expected timelines for future actions, allowing categorization of opportunities by expected data, type, geography and size. <span style='mso-spacerun:yes'></span></span></p>
 </p>
 
 <img class="img-G" width="200px;" src="https://firebasestorage.googleapis.com/v0/b/deal-funnel.appspot.com/o/deal%20funnel%20web%20stock%2Fsada.png?alt=media&amp;token=dad23bb5-f65c-414d-807e-372dee5a5522">
@@ -44,7 +42,7 @@ Our datasets on Fintech capital raises, M&A, articles and companies can be expor
   				<center>
             <div style="height:1px" class="bluebar"> </div>
               </center>
-  					    </center>  <center><p class="p-class-j">DealFunnel covers emerging technology businesses serving the financial services industry and beyond including companies in Blockchain, DLT and Crypto as well as in HealthTech, Artificial Intelligence, LegalTech, and Cybersecurity DealFunnel is perfect for  investment bankers, venture capitalists, private equity directors, attorneys and corporate executives. Learn more about DealFunnel's forward-looking approach by clicking on the <i>'See the Tour'</i> button.</p>
+  					    </center><center><p class="p-class-j">DealFunnel covers emerging technology businesses serving the financial services industry and beyond.  This includes companies in Blockchain, DLT and Crypto as well as in HealthTech, Artificial Intelligence, LegalTech, and Cybersecurity DealFunnel is perfect for  investment bankers, venture capitalists, private equity directors, attorneys and corporate executives. Learn more about DealFunnel by clicking on the <i>'See the Tour'</i> button.</p>
                 </center>
   							<p>
   							</p></div>
@@ -107,7 +105,7 @@ Our datasets on Fintech capital raises, M&A, articles and companies can be expor
   </div>
 <div class="footer">
   <p ><br>
-  To learn more about subsciptions and our services, or to receive a demo, click here or call
+  To learn more about our services, or to receive a demo, click here or call
   <span style="color:#000099"> 480-438-5302 </span> for more information. </p>
   </span>
 </div>
@@ -117,14 +115,10 @@ Our datasets on Fintech capital raises, M&A, articles and companies can be expor
 <script>
 import {mapState, mapMutations} from 'vuex';
 export default {
-methods: {
-  ...mapMutations({
-    setPosts: 'posts/set'
-  })
-},
+ 
 computed: {
   ...mapState({
-          loadedPosts: state => state.posts.list,
+          loadedPosts: pages => state.pages.pages[0],
           //post:  state.posts.post
 
    }),

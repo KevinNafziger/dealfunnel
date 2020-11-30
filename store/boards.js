@@ -14,9 +14,9 @@ export const mutations = {
   },
   addboardArry(state, item )  {
 
-    if (state.myboardArry.includes(item[0]) == false) 
+    if (state.myboardArry.includes(item) == false) 
     {
-      state.myboardArry.push(item[0]);
+      state.myboardArry.push(item);
     } 
   }, 
   remove(state, { todo }) {

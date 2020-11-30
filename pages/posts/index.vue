@@ -2,7 +2,6 @@
   <div>
 
   <center>  <div data-v-69296181="" id="top" class="sectionix"><div data-v-69296181="" class="title"><div data-v-69296181="" class="content"><br data-v-69296181=""> <h2 data-v-69296181="">Articles</h2></div></div></div></center>
-
   <div class="posts-page">
     <PostList :posts="loadedPosts" />
   </div>
@@ -10,18 +9,15 @@
 </template>
 
 <script>
-import {mapState, mapMutations} from 'vuex';
+import {mapState} from 'vuex';
 export default {
-methods: {
-  ...mapMutations({
-    setPosts: 'posts/set'
-  })
-},
 computed: {
   ...mapState({
-          loadedPosts: state => state.posts.list,
-          //post:  state.posts.post
+          loadedPosts: state => state.posts.pages[0],
    }),
+},
+async fetch({store}) {
+  await store.dispatch("posts/nuxtServerInit")
 },
 }
 
