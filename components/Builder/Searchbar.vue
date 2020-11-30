@@ -89,7 +89,7 @@ export default {
 margin-right: 70px;
 }
    .tagbtn {
-   background-color: #2fb7ff;
+   background-color: #4f81bd !important;
    color: white !important;
    padding: 1px 5px;
    border-radius: 10px;
@@ -132,6 +132,7 @@ margin-right: 70px;
 }
 .gardient-button {
   margin-top:10px;
+  background: #4f81bd !important;
 }
 i.glyphicon {
   color: #ffffff !important;

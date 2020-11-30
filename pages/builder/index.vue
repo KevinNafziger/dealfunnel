@@ -240,6 +240,7 @@ a .gardient-button {
   margin-left: 10px;
   margin-right: 10px;
 }
+
 .b-lr-s {
   margin-left: 5px !important;
   margin-right: 5px !important;
@@ -285,7 +286,7 @@ margin: auto;
     margin-bottom: 20px;
 }
 h3 {
-  color:#14a0fdd1 !important;
+  color:#4f81bd !important;
 }
 h2 {
   color: #606f8b !important;
