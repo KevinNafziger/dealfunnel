@@ -4,7 +4,7 @@
 <section style="margin-bottom:30px;">
 </section>
 <center>
-<img src="dealfunnel.png" style="width:240.3pt;height:100.45pt">
+<img src="dealfunnel.png" style="width:240.3pt;    height: 61.45pt;">
 </center>
 
 <h1 style="padding-top: 30px; margin-bottom: 0px; opacity: 1; transform: translateX(0px) translateY(0px) translateZ(0px);" class="intro-title">Newsletters, data, and reports <br></h1><br>
@@ -23,7 +23,7 @@
 </p>
 
 <p class=MsoNormal><span class="intro-p" style='font-size:
-20.0pt;mso-bidi-font-size:11.0pt'><b>Data Driven</b><span class=SpellE></span> 
+20.0pt;mso-bidi-font-size:11.0pt'><b>Data Driven</b><span class=SpellE></span>
 DealFunnel datasets on Fintech capital raises, M&A, articles and companies can be exported to Excel. DealFunnel also provide exportable data for hundreds of company's expected timelines for future actions, allowing categorization of opportunities by expected data, type, geography and size. <span style='mso-spacerun:yes'></span></span></p>
 </p>
 
@@ -115,7 +115,7 @@ DealFunnel datasets on Fintech capital raises, M&A, articles and companies can b
 <script>
 import {mapState, mapMutations} from 'vuex';
 export default {
- 
+
 computed: {
   ...mapState({
           loadedPosts: pages => state.pages.pages[0],
