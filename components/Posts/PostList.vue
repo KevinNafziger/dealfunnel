@@ -239,7 +239,7 @@ img.in-your-face {
     margin-left: auto !important;
     margin-right: auto !important;
     margin-bottom: 50px !important;
-    min-height: 705px;
+    min-height: 600px;
     background-color:#dedede;
 }
 .article-card:hover {
