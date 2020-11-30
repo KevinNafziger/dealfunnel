@@ -353,6 +353,12 @@ img {
 
 .datetag {
        position: relative !important;
+width: auto;
+margin-top: -50px;
+display: block;
+padding: 3px;
+border-radius: 3px;
+background: #ffffff80;
   }
   .flex-img {
     min-height: 250px;
