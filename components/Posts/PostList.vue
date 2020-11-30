@@ -28,7 +28,7 @@
                           <table>
                                 <tbody style="text-transform:none !important;" class="post-main-text">
                                 <tr>
-                                  <td><b>Most Recent Coverage:</b><br><b><nuxt-link id="myArticleLinkTag" :to="'/posts/' + post.id " class="mdi mdi-book-open mdi-18px"  >{{post.teaser }}</nuxt-link></b>, {{post.summary}} 
+                                  <td><b>Most Recent Coverage:</b><br><b><nuxt-link id="myArticleLinkTag" :to="'/posts/' + post.id " class="mdi mdi-book-open mdi-18px"  >{{post.teaser }}</nuxt-link></b>, {{post.summary}}
                                   <br><br>
                                 </td>
                                 </tr>
@@ -79,6 +79,9 @@
 
 </script>
  <style scoped>
+ .w-dyn-list {
+   width: 100% !important;
+ }
  .gardient-button {
    background-image: linear-gradient(200deg, #ffffff 10%, #ffffff 39%, #ffffff 80%);
    background-size: 400% 400% !important;
