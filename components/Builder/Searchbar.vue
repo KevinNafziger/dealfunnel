@@ -155,4 +155,7 @@ color: white;
 input {
       background: rgba(105,105,105,0.07059);
 }
+h3, h2 {
+  color: #4f81bd !important;
+}
 </style>

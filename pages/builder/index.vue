@@ -4,7 +4,7 @@
 <div id="app">
   <div>
     <div data-v-69296181="" id="top" class="sectionix">
-      <div data-v-69296181="" class="title"><div  class="content">
+      <div data-v-69296181="" ><div  class="content">
         <br data-v-69296181="">
       <h2 data-v-69296181="">Reports Builder</h2></div></div></div>
 </div>
@@ -228,11 +228,8 @@ async fetch({store}) {
 
 <style scoped>
 
-h3 {
-  color:#14a0fdd1 !important;
-}
-h2 {
-  color: #606f8b !important;
+h3, h2 {
+  color: #4f81bd !important;
 }
 section {
   color: #ffffff !important;
@@ -283,8 +280,6 @@ margin: auto;
 }
 .title {
     text-align: -webkit-center;
-    margin-top: 20px;
-    margin-bottom: 20px;
 }
 h3 {
   color:#4f81bd !important;
