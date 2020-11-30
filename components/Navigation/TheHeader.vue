@@ -37,6 +37,7 @@ export default {
 <style scoped>
 .header-container {
   height: 60px;
+  box-shadow: 0 1px 3px 0 #a5a5a5 !important;
 }
 
 .the-header {

@@ -144,6 +144,9 @@ height:100%;
 font-family:arial !important;
 
 }
+.header-container {
+  box-shadow: 0 1px 3px 0 #a5a5a5 !important;
+}
 .testimonials{
 font-family:arial !important;
 margin:200px auto 100px;
@@ -297,6 +300,7 @@ color:#fff;
     line-height: 52px;
     font-weight: 400;
     text-align: center;
+    box-shadow: 0 1px 3px 0 #a5a5a5 !important;
   }
 .footer{
   width:100%;
