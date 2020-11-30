@@ -28,7 +28,8 @@
                           <table>
                                 <tbody style="text-transform:none !important;" class="post-main-text">
                                 <tr>
-                                  <td><b>Most Recent Coverage:</b><br><b><nuxt-link id="myArticleLinkTag" :to="'/posts/' + post.id " class="mdi mdi-book-open mdi-18px"  >{{post.teaser }}</nuxt-link></b>, {{post.summary}}
+                                  <td><b>Most Recent Coverage:</b><br><b><nuxt-link id="myArticleLinkTag" :to="'/posts/' + post.id " class="mdi mdi-book-open mdi-18px"  >{{post.teaser }}</nuxt-link></b>,
+                                    <div class="sumary"> {{post.summary}} </div>
                                   <br><br>
                                 </td>
                                 </tr>
@@ -79,6 +80,9 @@
 
 </script>
  <style scoped>
+ .sumary {
+   
+ }
  .w-dyn-list {
    width: 100% !important;
  }
@@ -104,7 +108,8 @@
    box-shadow: 0px 0px 10px -5px gray;
  }
  .center-btn{
-       text-align: -webkit-center;
+   text-align: -webkit-center;
+   display: flex;
  }
  a {
    color:#4f81bd;
@@ -229,7 +234,7 @@ img.in-your-face {
     margin-left: auto !important;
     margin-right: auto !important;
     margin-bottom: 50px !important;
-    min-height: 600px;
+    min-height: 705px;
     background-color:#dedede;
 }
 .article-card:hover {
@@ -293,6 +298,7 @@ ol, ul, tr, td {
 img {
     max-width: 100%;
     height: auto;
+    max-height: 200px;
 }
 .icon-circle {
   display: block;
