@@ -227,6 +227,7 @@ async fetch({store}) {
 </script>
 
 <style scoped>
+
 h3 {
   color:#14a0fdd1 !important;
 }
