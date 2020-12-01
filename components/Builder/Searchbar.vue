@@ -90,6 +90,7 @@ export default {
 .w-col-8 {
     width: 80% !important;
 }
+
 }
 .search-div {
   position: sticky;

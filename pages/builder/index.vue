@@ -497,9 +497,9 @@ flex: 1 1 200px;
     display:flex;
     justify-content:space-between;
 
-    width: 100%;
-    max-width: 90%;
-    height: 80vh;
+    width: 100% !important;
+    max-width: 100%;
+    height: auto;
 
     overflow: hidden;
 
