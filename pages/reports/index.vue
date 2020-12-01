@@ -29,7 +29,7 @@
       <div class="col-report" id="myViewReportLinkTag">
         <span class="mdi mdi-eye "></span>
       </div>
-     </a> 
+     </a>
     </div>
   </span>
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
@@ -82,7 +82,7 @@
       </div>
       </a>
       </div>
-    
+
 
   </span>
 </div>
@@ -91,7 +91,7 @@
   <div class="grid">
 
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
-  
+
     <div >
       <p>WealthTech</p>
     </div>
@@ -101,7 +101,7 @@
       <span class="mdi mdi-pdf-box "></span>
       </a>
       </div>
-      
+
       <div class="col-report" id="myViewReportLinkTag">
        <a href="wealthtech.pdf">
        <span class="mdi mdi-eye "></span>
@@ -127,20 +127,20 @@
       </a>
       </div>
       </div>
-    
+
   </span>
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
-     
+
     <div >
       <p>CyberSecurity</p>
     </div>
 
     <div class="col-reports-div">
-    
+
       <div class="col-report" id="myReportPdfButton">
     <a href="cybercontent.pdf">
       <span class="mdi mdi-pdf-box " ></span>
-    </a>  
+    </a>
       </div>
       <div class="col-report" id="myViewReportLinkTag">
     <a href="cyber.pdf">
@@ -189,7 +189,7 @@
       <div class="col-report" id="myViewReportLinkTag">
         <span class="mdi mdi-eye "></span>
       </div>
-     </a> 
+     </a>
     </div>
   </span>
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
@@ -249,7 +249,7 @@
   <div class="grid">
 
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
-  
+
     <div >
       <p>RealEstate</p>
     </div>
@@ -259,7 +259,7 @@
       <span class="mdi mdi-pdf-box "></span>
       </a>
       </div>
-      
+
       <div class="col-report" id="myViewReportLinkTag">
        <a href="realestate.pdf">
        <span class="mdi mdi-eye "></span>
@@ -285,20 +285,20 @@
       </a>
       </div>
       </div>
-    
+
   </span>
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
-     
+
     <div >
       <p>Capital Markets</p>
     </div>
 
     <div class="col-reports-div">
-    
+
       <div class="col-report" id="myReportPdfButton">
     <a href="capitalmarketscontent.pdf">
       <span class="mdi mdi-pdf-box " ></span>
-    </a>  
+    </a>
       </div>
       <div class="col-report" id="myViewReportLinkTag">
     <a href="capitalmarkets.pdf">
@@ -489,10 +489,6 @@ box-shadow: 0px 0px 35px -16px rgba(161,161,161,1);
     margin-left: auto;
     margin-right: auto;
 }
-.content:hover {
-  box-shadow: 0px 0px 8px -4px;
-}
-
 .col-reports-div {
   display: flex;
   place-self: center;

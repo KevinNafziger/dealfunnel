@@ -347,9 +347,6 @@ display: table;
     margin-left: auto;
     margin-right: auto;
 }
-.content:hover {
-  box-shadow: 0px 0px 8px -4px;
-}
 .title {
     text-align: -webkit-center;
     margin-top: 20px;
