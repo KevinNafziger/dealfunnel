@@ -151,7 +151,7 @@ export default {
     display: inline-block;
     background-color: #fff;
     opacity: .95;
-    margin: 10px;
+    margin: 0px, auto;
     width: 33%;
     border-radius: 10px;
     height: 530px;
