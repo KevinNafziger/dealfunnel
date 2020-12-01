@@ -147,15 +147,16 @@ export default {
     width: 90%;
     margin: auto;
 }
-  #examples {
-   display: inline-block;
-   background-color: white;
-   opacity: 0.95;
-   margin: 0 auto;
-   width: 33%;
-   height: 530px;
-   background: linear-gradient(45deg, #f7f9fb, white);
-  }
+#examples {
+    display: inline-block;
+    background-color: #fff;
+    opacity: .95;
+    margin: 10px;
+    width: 33%;
+    border-radius: 10px;
+    height: 530px;
+    background: linear-gradient(45deg,#f7f9fb,#fff);
+}
   .btn-link:hover, .btn-link:focus {
   color: #23527c;
   text-decoration: underline;
