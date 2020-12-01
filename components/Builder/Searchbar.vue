@@ -80,13 +80,25 @@ export default {
 
 
 <style scoped>
+.text-field {
+  text-align-last: center;
+}
+@media screen and (min-width:1600px) {
+.search-div {
+    display: inherit;
+}
+.w-col-8 {
+    width: 80% !important;
+}
+}
 .search-div {
   position: sticky;
-    display: revert;
+    display: contents;
     height: 30px;
     border-radius: 3px;
     margin-left: 20px;
-margin-right: 70px;
+    margin-right: 70px;
+    margin-bottom: 30px;
 }
    .tagbtn {
    background-color: #4f81bd !important;
@@ -150,7 +162,7 @@ color: white;
     padding: 3px;
     border-radius: 3px;
     height: fit-content;
-    position: absolute;
+    position: inherit;
   }
 input {
       background: rgba(105,105,105,0.07059);
