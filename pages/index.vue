@@ -134,15 +134,14 @@ async fetch({store}) {
 <style scoped>
 a {
   color:#ffffff;
+  text-decoration: none !important;
 }
-
 body{
 margin:0;
 padding:0;
 width:100%;
 height:100%;
 font-family:arial !important;
-
 }
 .header-container {
   box-shadow: 0 1px 3px 0 #a5a5a5 !important;
@@ -231,6 +230,11 @@ color:#fff;
     font-family: poppins !important;
     color: #ffffff !important;
     font-size: 12px !important;
+    transition: 1s;
+    margin-top: 50px;
+}
+.gardient-button:hover {
+  box-shadow: 0px 1px 10px -3px dimgray;
 }
 .execspottittle {
     font-size: 40px;
