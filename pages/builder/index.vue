@@ -11,8 +11,8 @@
               <div class="heading-col-main">
             <h2 style="inline-block"> Articles <i style="font-size: 13px; text-align:right">{{ filterMessage }}</i></h2>
             </div>
-            <Searchbar/>
            <Board id="board-2">
+             <Searchbar/>
              <card v-for="post in posts" :id="post.id" :key="post.id" draggable="true" class="list-group-item">
                     <h3>  {{ post.title }} </h3>
                     <p>  {{ post.created_date}} {{post.author.name }} </p>
@@ -29,7 +29,7 @@
             <span class="mdi mdi-file-eye"></span>
             Close View
           </button>
-          <br><br><br></div><br>
+          <br><br><br></div>
         <postsys :posts="items" :board="this.myboard" v-show="this.showModal">
         </postsys>
 
