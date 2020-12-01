@@ -264,7 +264,7 @@ margin: auto;
     background: #ffffffc7;
     padding-bottom: 10px;
     border-radius: 10px;
-    box-shadow: 0px 0px 5px -4px;
+    box-shadow: 0px 0px 5px -3px gray !important;
     max-width: 1200px ;
     width:auto;
     margin-left: auto;
