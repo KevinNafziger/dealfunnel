@@ -680,4 +680,7 @@ margin-right: auto;
 button {
   color: #4f81bd;
 }
+#board-right {
+      margin-top: 0px;
+}
 </style>
