@@ -170,9 +170,10 @@ export default {
     font-family: poppins;
     position: inherit;
     background: #9e9e9e29;
-    color: #ffffff;
+    color: #5887c0;
     padding: 3px;
     border-radius: 3px;
+    font-family: cursive;
 }
 .f50 {
   width: 50%;
