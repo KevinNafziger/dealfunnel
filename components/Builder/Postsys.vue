@@ -321,7 +321,7 @@ img {
   color:#14a0fdd1 !important;
 }
 h2 {
-  color: #606f8b !important;
+  color:#4f81bd !important;
 }
 section {
   color: #ffffff !important;

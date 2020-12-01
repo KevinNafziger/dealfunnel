@@ -2,12 +2,7 @@
 <template>
 
 <div id="app">
-  <div>
-    <div data-v-69296181="" id="top" class="sectionix">
-      <div data-v-69296181="" ><div  class="content">
-        <br data-v-69296181="">
-      <h2 data-v-69296181="">Reports Builder</h2></div></div></div>
-</div>
+<div data-v-50f93fd9="" class="title"><div data-v-50f93fd9="" class="content"><br data-v-50f93fd9=""> <h2 data-v-50f93fd9="">Builder</h2></div></div>
     <br><br>
 <main class="flexbox">
        <div class="left-side">
@@ -285,7 +280,7 @@ h3 {
   color:#4f81bd !important;
 }
 h2 {
-  color: #606f8b !important;
+  color: #4f81bd !important;
 }
 
 
