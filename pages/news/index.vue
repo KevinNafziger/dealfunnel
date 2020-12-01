@@ -114,7 +114,6 @@ export default {
 
    .featuredsidemenu:hover {
      box-shadow: 0 1px 5px 0 rgba(0, 89, 132, 0.16);
-     overflow: hidden;
      border-radius:10px;
    }
    .link-10 {color: #23527c;}
@@ -149,6 +148,8 @@ export default {
     color: #474747;
     overflow: auto;
     padding: 20px;
+    width: 90%;
+    margin: auto;
 }
   #examples {
    display: inline-block;
@@ -164,17 +165,22 @@ export default {
   text-decoration: underline;
   background-color: #2fb7ff !important;
 }
-.tl-c {
-  margin-left: -280px;
-  margin-top: 7px;
-  font-family: poppins;
-  position: absolute;
+.tl-c{
+    margin-left: -525px;
+    font-family: poppins;
+    position: inherit;
+    background: #9e9e9e29;
+    color: #ffffff;
+    padding: 3px;
+    border-radius: 3px;
 }
 .f50 {
   width: 50%;
 }
 .heading-24 {
   min-height: 132px;
+  width: 90%;
+  margin: auto;
 }
 #examples .example .hover {
     display: inline-grid;
