@@ -19,7 +19,7 @@ margin-left:5%;line-height:109%;">
 
 
   <p  class='MsoNormal' style='margin-top:70px;margin-bottom:60px; text-indent:-.1pt;
-  line-height:109%;'><b><span style='line-height:109%; margin-left: 3%; font-size:16pt;'>{{post.title }}</span></b></p>
+  line-height:109%;'><b><span  v-if="!(post.title==-undefined)" style='line-height:109%; margin-left: 3%; font-size:16pt;'>{{post.title }}</span></b></p>
 
    <span style="display:inline-block;width:45%;text-align:center;float:left; margin:1%;">  
     <div v-html="firsthalf(post)" ></div>
