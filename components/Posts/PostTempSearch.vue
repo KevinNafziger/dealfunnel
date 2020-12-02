@@ -1,8 +1,9 @@
 <template>
  <div>
+ <client-only>
   <div class="search-bar-div">
     <div class="search-div">
-      <input type="text"  name="term" id="term"  v-model="searchMessage" style="margin-right: 10px" width="100%" class="text-field w-input w-col w-col-8" placeholder="search  content">
+      <input type="text"  name="term" id="term"  v-model="searchMessage" style="margin-right: 10px" width="100%" class="text-field w-input w-col w-col-6" placeholder="search  content">
         <button class="gardient-button" id="section-10" v-on:click="submitSearch(searchMessage)"  style="margin-left:1px;margin-top:5px;margin-bottom:10px" >
         <i class="glyphicon glyphicon-search">Search</i>
       </button>
@@ -18,9 +19,7 @@
       <a href="#" v-show="showNextBtn" class="tagbtn" v-on:click="changePage('Next')" >Next</a>
     </div>
   </div>
-  <div v-show="false">
-   <br><i style="font-size: 13px;">No results found</i>
-   </div>
+  </client-only>
  </div>
 </template>
 
@@ -29,7 +28,7 @@ import {mapState} from 'vuex';
 import 'vuetify/dist/vuetify.min.css';
 import Vuetify from 'vuetify';
 export default {
-  name: 'Searchbar',
+  name: 'PostTempSearch',
   data () {
     return {
       searchMessage: "",
@@ -49,8 +48,8 @@ export default {
    },
    computed: {
   ...mapState({
-      numActivePage: state => state.posts.numBuildPage,
-      activeTab: state => state.posts.activeBuildTab,
+      numActivePage: state => state.posts.numArticlePage,
+      activeTab: state => state.posts.activeArticleTab,
    }),
     showPreviousBtn() {
         if (this.numActivePage >= 2 && (this.activeTab == 'Page' || this.activeTab =='All'))
@@ -79,27 +78,15 @@ export default {
 </script>
 
 
-<style scoped>
-.text-field {
-  text-align-last: center;
-}
-@media screen and (min-width:1600px) {
-.search-div {
-    display: inherit;
-}
-.w-col-8 {
-    width: 80% !important;
-}
 
-}
+<style scoped>
 .search-div {
   position: sticky;
-    display: contents;
+    display: block;
     height: 30px;
     border-radius: 3px;
     margin-left: 20px;
-    margin-right: 70px;
-    margin-bottom: 30px;
+margin-right: 70px;
 }
    .tagbtn {
    background-color: #4f81bd !important;
@@ -163,7 +150,7 @@ color: white;
     padding: 3px;
     border-radius: 3px;
     height: fit-content;
-    position: inherit;
+    position: absolute;
   }
 input {
       background: rgba(105,105,105,0.07059);

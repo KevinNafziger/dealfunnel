@@ -1,57 +1,56 @@
 
 <template>
 <div id="main">
-<ol class="div-mobile-col">
+<ol>
 <ul class="art-rows" v-for="post in posts">
-<div class="w-dyn-list "  >
-  <div class="article-card" style="margin:10px;">
-  <div style="height:1px;margin-left:auto;margin-right:auto;margin-top:20px;" class="coolbar"> </div>
+  <div class="w-dyn-list" >
+    <div class="article-card" style="margin:10px;">
+    <div style="height:1px;margin-left:auto;margin-right:auto;margin-top:20px;" class="coolbar"> </div>
     <div class="w-dyn-items">
-      <div class="w-dyn-item">
-        <div class="post-wrapper">
-          <div class="post-content">
-           <br><br>
-             <div class="post-info">
-               <div v-if="!(post.created_date==null)" class="post-info" style="float:left;"><a class="datetag">{{post.created_date}}</a>
-                </div>
-                 <div class="w-row ">
-                  <div v-if="!(post.logo_url==null)" class="flex-img">
-                 <div class="centering-imgs w-col w-col-6 w-col-medium-6 w6-hide-tiny">
-
-                      <a class="blog-image w-inline-block" >
-                          <img :src="post.logo_url" width="180" style="max-width: 180px ;max-height:130; overflow:none;"
-                         >
-                      </a>
-                  </div>
-                  </div>
-                  <div class="w-col w-col-12 w-col-medium-12 w12-hide-tiny">
-                          <table>
-                                <tbody style="text-transform:none !important;" class="post-main-text">
-                                <tr>
-                                  <td><b>Most Recent Coverage:</b><br><b><nuxt-link id="myArticleLinkTag" :to="'/posts/' + post.id " class="mdi mdi-book-open mdi-18px"  >{{post.teaser }}</nuxt-link></b>,
-                                    <div class="sumary"> {{post.summary}} </div>
-                                  <br><br>
-                                </td>
-                                </tr>
-                              </tbody>
-                              <br><br>
-                              <div class="center-btn">
-                                <nuxt-link class="gardient-button" :to="'/posts/' + post.id " > Read More</nuxt-link>
-                              </div>
-                              <br>
-                          </table>
+    <div class="w-dyn-item">
+    <div class="post-wrapper">
+    <div class="post-content">
+            <br><br>
+    <div class="post-info">
+       
+       <div v-if="!(post.created_date==null)" class="post-info" style="float:left;"><a class="datetag">{{post.created_date}}</a>
+        </div>
+        
+        <div class="w-row">
+          <div v-if="!(post.logo_url==null)" class="flex-img">
+              <div class="centering-imgs w-col w-col-6 w-col-medium-6 w6-hide-tiny">
+                    <a class="blog-image w-inline-block" >
+                        <img :src="post.logo_url" width="180" style="max-width: 180px ;max-height:130; overflow:none;"
+                       >
+                    </a>
+               </div>
+           </div>
+           <div class="w-col w-col-12 w-col-medium-12 w12-hide-tiny">
+              <div>
+                <span style="text-transform:none !important;"  class="post-main-text">
+                       <b>Most Recent Coverage:</b><br><b><nuxt-link id="myArticleLinkTag" :to="'/posts/' + post.id " class="mdi mdi-book-open mdi-18px"  >{{post.teaser }}</nuxt-link></b>,
+                       
+                       <div class="sumary"> {{post.summary}} </div>
+                      <br><br>
+                        <br><br>
+                        <div class="center-btn">
+                          <nuxt-link class="gardient-button" :to="'/posts/' + post.id " > Read More</nuxt-link>
                         </div>
-                        </div>
-                      </div>
-                    </div>
+                        <br>
+                  </span>
                   </div>
               </div>
-            </div>
           </div>
+        </div>
+      </div>
+        </div>
+      </div>
+      </div>
+    </div>
   </div>
     </ul>
     </ol>
-    </div>
+  </div>
 </template>
 
 <script>
@@ -59,12 +58,12 @@
 
  export default {
   name: 'PostList',
-  props: ["posts"],
+  props: ["posts", "board"],
   methods: {
 
-      idlists:  function(post_id) {
-      for(var i = 0; i < this.$root.boardEnd.length; i++) {
-     if(this.$root.boardEnd[i] == post_id)
+    idlists:  function(post_id) {
+      for(var i = 0; i < this.board.length; i++) {
+     if(this.board[i] == post_id)
         return post_id;
       }
    return 0;
@@ -80,7 +79,7 @@
 
 </script>
  <style scoped>
- .sumary {
+ .sumamry {
    overflow: auto;
    height: 100px;
  }
@@ -205,14 +204,6 @@
         margin-top: 8vw;
 }
 
-@media screen and (max-width: 940px) {
-      .post-info p {
-      margin-top: 20px;
-      }
-      .art-rows {
-        width: 100% !important;
-      }
-    }
 .w-col-medium-3 {
   text-align: left;
 }
@@ -266,7 +257,6 @@ font-family: arabic script;
 ol, ul, tr, td {
   text-transform: none !important;
 }
-
 
 
     *{-webkit-text-size-adjust:none;-webkit-text-resize:100%;text-resize:100%;}

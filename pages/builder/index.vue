@@ -1,10 +1,12 @@
 
 <template>
 
-<div id="app">
-<div data-v-50f93fd9="" class="title"><div data-v-50f93fd9="" class="content"><br data-v-50f93fd9=""> <h2 data-v-50f93fd9="">Builder</h2></div></div>
+<div>
+    <div data-v-50f93fd9="" class="title"><div data-v-50f93fd9="" class="content"><br data-v-50f93fd9=""> <h2 data-v-50f93fd9="">Builder</h2></div></div>
     <br><br>
-<main class="flexbox">
+   
+    <main class="flexbox">
+       
        <div class="left-side">
          <h2> Report Content </h2>
          <br>
@@ -13,44 +15,48 @@
             </div>
            <Board id="board-2">
              <Searchbar/>
+             
              <card v-for="post in posts" :id="post.id" :key="post.id" draggable="true" class="list-group-item">
                     <h3>  {{ post.title }} </h3>
                     <p>  {{ post.created_date}} {{post.author.name }} </p>
              </card>
-        </Board>
-  </div>
+            
+            </Board>
+        </div>
 
-  <div class="right-side">
+        <div class="right-side">
 
             <h2> Your Report </h2>
 
-        <div class="builder-btns" >
-         <button v-show="this.showModal" v-on:click="toggleModal()" class="gardient-button b-lr-s">
-            <span class="mdi mdi-file-eye"></span>
+            <div class="builder-btns" >
+            <button v-show="this.showModal" v-on:click="toggleModal()" class="gardient-button b-lr-s">
+              <span class="mdi mdi-file-eye"></span>
             Close View
-          </button>
+            </button> 
           <br><br><br></div>
-        <postsys :posts="items" :board="this.myboard" v-show="this.showModal">
-        </postsys>
+        
+          <postsys :posts="items" :board="this.myboard" v-show="this.showModal">
+          </postsys>
 
-      <Board v-show="!this.showModal" :posts="posts" id="board-right" >
-        <div class="builder-btns">
-          <button v-on:click="toggleModal()" class="gardient-button b-lr-s">
-            <span class="mdi mdi-file-eye"></span>
-            View
-          </button>
+          <Board v-show="!this.showModal" :posts="posts" id="board-right" >
+            
+            <div class="builder-btns">
+              <button v-on:click="toggleModal()" class="gardient-button b-lr-s">
+              <span class="mdi mdi-file-eye"></span>
+              View
+              </button>
+              <button v-on:click="generateReport()" class="gardient-button b-lr-s">
+              <span class="mdi mdi-pdf-box"></span>
+              PDF
+              </button>
+            </div>
 
-          <button v-on:click="generateReport()" class="gardient-button b-lr-s">
-            <span class="mdi mdi-pdf-box"></span>
-            PDF
-          </button>
-          </div>
-           <card v-for="myboard in myboards" :id="myboard.id" :key="myboard.id" draggable="true" class="list-group-item">
-              <h3>  {{ myboard.title }} </h3>
-              <p>  {{myboard.created_date}} {{myboard.author.name }} </p>
-          </card>
-      </Board>
-  </div>
+             <card v-for="myboard in myboards" :id="myboard.id" :key="myboard.id" draggable="true" class="list-group-item">
+                <h3>  {{ myboard.title }} </h3>
+                <p>  {{myboard.created_date}} {{myboard.author.name }} </p>
+            </card>
+          </Board>
+      </div>
   </main>
   <p class="alpha">DealFunnel 2020</p>
   </div>
@@ -61,6 +67,7 @@ import Vue from 'vue';
 import Board from '@/components/Draggable/Board';
 import Card from '@/components/Draggable/Card';
 import postsys from '@/components/Builder/Postsys';
+import Searchbar from '@/components/Builder/Searchbar';
 import draggable from 'vuedraggable';
 import Vuetify from 'vuetify';
 import {mapState, mapMutations} from 'vuex';
@@ -77,27 +84,31 @@ export default {
    draggable,
    Vuetify,
    postsys,
+   Searchbar,
  },
  props: [],
 
  computed: {
+
   ...mapState({
       starterPosts: state => state.posts.pages[0],
       myboard: state => state.boards.myboard,
       showModal: state => state.boards.showModal,
-      firstTimeLoaded: state => state.posts.firstTimeLoaded,
-      activePostsInfo: state => state.posts.activePostsInfo,
+      firstBuildLoad: state => state.posts.firstBuildLoad,
+      activeBuilderInfo: state => state.posts.activeBuilderInfo,
       myboardArry: state => state.boards.myboardArry,
       myboards: state => state.boards.myboardArry,
-      activeTab: state => state.posts.activeTab,
-      numActivePage: state => state.posts.numActivePage,
+      activeTab: state => state.posts.activeBuildTab,
+      activeView:  state => state.posts.activeView,
+      numActivePage: state => state.posts.numBuildPage,
    }),
-   filterMessage() {
-      if (this.firstTimeLoaded == true)
-      {
-      return ''
-      }
 
+   filterMessage() {
+
+      if (this.firstLoad == true)
+      {
+        return ''
+      }
       if (this.activeTab == 'Page')
       {
         return this.activeTab + ' ' + this.numActivePage;
@@ -106,118 +117,160 @@ export default {
       {
         return this.activeTab;
       }
+    
     },
+
    posts() {
-      if (this.firstTimeLoaded == true)
+      if (this.firstBuildLoad == true)
       {
         return this.starterPosts
       }
       else
       {
-          return this.activePostsInfo;
+        return this.activeBuilderInfo;
       }
     },
+    
     items()  {
-      if (this.firstTimeLoaded == true)
-      {
-      return this.starterPosts
+
+        if (this.firstBuildLoad == true) {
+
+          return this.starterPosts
+        }
+        else if (this.myboardArry.length == 0) {
+          
+          return this.activeBuilderInfo;
+        }
+        else {
+
+          return this.activeBuilderInfo.concat(this.myboards);
+        }
       }
-      else if (this.myboardArry.length == 0)
-      {
-        return this.activePostsInfo;
-      }
-      else
-      {
-        return this.activePostsInfo.concat(this.myboards);
-      }
-    }
   },
   created()  {
+
      this.$nuxt.$on("addRight", (items) => this.addtoReportBoard(items));
-     this.$nuxt.$on("getCategory", (category) => this.getCategory(category));
+     this.$nuxt.$on("getCategory", (category) => this.getbyCategory(category));
      this.$nuxt.$on("addRightArry", (item) => this.addtoBoardArry(item));
-     this.$nuxt.$on("changePage", (direction) => this.changePage(direction));
+     this.$nuxt.$on("changePage", (direction) => this.setPage(direction));
      this.$nuxt.$on("submitSearch", (topic) => this.submitSearch(topic));
-    },
+   
+   },
   methods: {
 
-  getCategory: function(category) {
+    getbyCategory: function(category) {
 
-    switch(category) {
+      switch(category) {
 
-      case 'Insurtech':
-         this.$store.dispatch("posts/setInsur");
-         break;
-      case 'Blockchain':
-         this.$store.dispatch("posts/setBlock");
-         break;
-      case 'Lending':
-         this.$store.dispatch("posts/setLend");
-         break;
-      case 'Payments':
-         this.$store.dispatch("posts/setPay");
-         break;
-      case 'Banking':
-         this.$store.dispatch("posts/setBank");
-         break;
-      }
-   },
+        case 'Insurtech':
+           this.$store.commit("posts/setView", "Builder"); 
+           this.$store.dispatch("posts/setInsur");
+           break;
 
-   changePage: function(direction) {
+        case 'Blockchain':
+            this.$store.commit("posts/setView", "Builder"); 
+            this.$store.dispatch("posts/setBlock");
+            break;
+        case 'Lending':
+            this.$store.commit("posts/setView", "Builder");  
+            this.$store.dispatch("posts/setLend");
+            break;
+        case 'Payments':
+            this.$store.commit("posts/setView", "Builder");
+            this.$store.dispatch("posts/setPay");
+            break;
+        case 'Banking':
+            this.$store.commit("posts/setView", "Builder");
+            this.$store.dispatch("posts/setBank");
+            break;
+        }
+
+    },
+
+    setPage: function(direction) {
 
        switch(direction) {
-       case 'Previous':
-         var page = this.numActivePage;
-         page-- ;
-         this.$store.dispatch("posts/goPrevious", page);
-         break;
-       case 'Next':
-         var page = this.numActivePage;
-         page++ ;
-         this.$store.dispatch("posts/goNext", page);
-         break;
-       case 'Last':
-         var page = this.numActivePage;
-         this.$store.dispatch("posts/goLast", page);
-         break;
+
+         case 'Previous':
+            var page = this.numActivePage;
+            page-- ;
+            this.$store.commit("posts/setView", "Builder"); 
+            this.$store.dispatch("posts/goPrevious", page);
+            break;
+
+          case 'Next':
+            var page = this.numActivePage;
+            page++ ;
+            this.$store.commit("posts/setView", "Builder"); 
+            this.$store.dispatch("posts/goNext", page);
+            break;
+
+          case 'Last':
+            var page = this.numActivePage;
+            this.$store.commit("posts/setView", "Builder"); 
+            this.$store.dispatch("posts/goLast", page);
+            break;
        }
     },
 
-   addtoReportBoard: function(index) {
+    addtoReportBoard: function(index) {
 
       if (isNaN(index))
       {
-      return
+        return
       }
-      else
+        else
       {
-      this.$store.dispatch("boards/updateBoard",index);
+        this.$store.dispatch("boards/updateBoard",index);
       }
-   },
-
-   submitSearch: function (topic) {
-      this.$store.dispatch("posts/submitSearch", topic);
-      this.$store.dispatch("posts/setSearchTab", topic);
-   },
-
-   addtoBoardArry: function(item) {
-      var item = this.postFilter(item);
-      this.$store.dispatch("boards/updateBoardArry", item);
-   },
-
-   generateReport: function() {
-      window.open('https://fintechhorizonsmedia.com/showreports/view.pdf?idlist=' + this.myboard.toString() );
     },
-   toggleModal() {
-      this.$store.dispatch("boards/toggle")
+
+     submitSearch: function (topic) {
+      
+        this.$store.commit("posts/setView", "Builder"); 
+        this.$store.dispatch("posts/submitSearch", topic);
+        this.$store.dispatch("posts/setSearchTab", topic);
+     },
+
+     addtoBoardArry: function(item) {
+        var item = this.articleFilter(item);
+        this.$store.dispatch("boards/updateBoardArry", item);
+      },
+      generateReport: function() {
+
+        window.open('https://fintechhorizonsmedia.com/showreports/view.pdf?idlist=' + this.myboard.toString() );
+      },
+
+      toggleModal() {
+      
+        this.$store.dispatch("boards/toggle")
+     },
+
+    articleFilter(card_id) {
+  
+       return this.posts.find(post => post.id == card_id);
+     },
+    idlists:  function(post_id) {
+      
+       for (var i = 0; i < this.myboard.length; i++) {
+        
+        if(this.myboard[i] == post_id) {
+          return post_id;
+        }
+        return 0 ;
+        }
+    },
+     postFilter: function(posts) {
+
+       return this.posts.filter(post => post.id==this.idlists(post.id));
+     }
   },
-  postFilter(card_id) {
-         return this.posts.find(post => post.id == card_id);
+
+  async fetch({store}) {
+
+    await store.dispatch("posts/nuxtServerInit")
+  
   },
-  },
-async fetch({store}) {
-  await store.dispatch("posts/nuxtServerInit")
-},
 }
 </script>
 
