@@ -101,7 +101,7 @@ export default {
     switch(category) {
 
       case 'Insurtech':
-         var filteredRaises = this.allRaises.filter(raise => raise.group1=='Insurtech' || raise.group1 == 'insurtech' || raise.group2 == 'Insurtech' || raise.group2 == 'insurtech' );
+         var filteredRaises = this.allRaises.filter(raise => raise.group1=='insurtech' || raise.group2 == 'Insurtech');
          this.$store.dispatch("raise/setActiveTab", "Insurtech");
          this.$store.dispatch("raise/setRaiseInfo", filteredRaises); 
          break;
