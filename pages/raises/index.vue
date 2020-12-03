@@ -101,7 +101,7 @@ export default {
 
       case 'Insurtech':
          this.$store.dispatch("raise/setActiveTab", "Insurtech");
-         this.$store.dispatch("raise/setRaiseInfo", this.insurtech; 
+         this.$store.dispatch("raise/setRaiseInfo", this.insurtech); 
          break;
       case 'Blockchain':
          this.$store.dispatch("raise/setActiveTab", "Blockchain");
