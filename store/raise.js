@@ -31,13 +31,11 @@ export const mutations = {
  export const actions = {
 
      nuxtServerInit(vuexContext, data) {
-      if (!this.firstRaiseFetched)
-      {
+    
             return this.$axios.$get("/raises")
               .then(data => {
                 vuexContext.commit("setAll", data);
              })
-      }
       }, 
 
 
