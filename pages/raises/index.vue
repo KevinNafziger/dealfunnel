@@ -165,7 +165,7 @@ computed: {
      this.$nuxt.$on("getCategory", (category) => this.getbyCategory(category));
    },
 
-  asyncData(context) {
+   async asyncData(context)  {
 
     return context.app.$axios.$get('/raises')
       .then(data => {
