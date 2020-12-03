@@ -1,13 +1,12 @@
 <template>
 <div>
+<center>
   <div class="sectionix" id="top">
      <div class="title">
         <div class="content">
           <br>
            <h2>Raises</h2> <i style="font-size: 13px; text-align:right; margin-left:3px;">{{ filterMessage}} </i></h2></div></div></div></center>
-        </div>
-     </div>
-  </div>
+        
 
   <a href="https://fintechhorizonsmedia.com/fintechraises.xlsx"
   class="" style="color:dimgray" id="myExcelIcoTag">
