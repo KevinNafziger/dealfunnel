@@ -111,12 +111,12 @@ export default {
          this.$store.dispatch("raise/setRaiseInfo", filteredRaises); 
          break;
       case 'Lending':
-         var filteredRaises=this.allRaises.filter(raise => raise.group1=='Lending');
+         var filteredRaises=this.allRaises.filter(raise => raise.group1 =='lending' }} raise.group2 == 'Lending');
          this.$store.dispatch("raise/setActiveTab", "Lending");
          this.$store.dispatch("raise/setRaiseInfo", filteredRaises); 
          break;  
       case 'Payments':
-          var filteredRaises=this.allRaises.filter(raise => raise.group1=='Payments');
+          var filteredRaises=this.allRaises.filter(raise => raise.group1=='payments' || raise.group2 =='Payments');
          this.$store.dispatch("raise/setActiveTab", "Payments");
          this.$store.dispatch("raise/setRaiseInfo", filteredRaises); 
          break;
