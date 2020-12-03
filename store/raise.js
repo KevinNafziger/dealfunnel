@@ -187,7 +187,7 @@ export const mutations = {
     
     },  
 
-    itemsforCategory(category) {
+    itemsforCategory: (state, category) => {
 
       return state.raise.allRaises.filter(a => a.group1.toLowerCase()==category || a.group2.toLowerCase() == category);
     

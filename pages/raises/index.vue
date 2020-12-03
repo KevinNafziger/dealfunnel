@@ -142,28 +142,29 @@ computed: {
     },
 
     insurtech() {
-
-        this.$store.raise.getters.itemsforCategory('insurtech');
+      
+         this.$store.getters["raise/itemsforCategory", "insurtech"];
     },
     
     blockchain() {
 
-         this.$store.raise.getters.itemsforCategory('blockchain');
+         this.$store.getters["raise/itemsforCategory", "blockchain"];
     },
     
     payments() {
         
-        this.$store.raise.getters.itemsforCategory('payments');
+        this.$store.getters["raise/itemsforCategory", "payments"];
 
     },
     lending() {
         
-        this.$store.raise.getters.itemsforCategory('lending');
+         this.$store.getters["raise/itemsforCategory", "lending"];
     },
 
     
   },
   created() {
+
          this.$nuxt.$on("getCategory", (category) => this.getbyCategory(category));
 
   },  
