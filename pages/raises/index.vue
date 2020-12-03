@@ -143,23 +143,23 @@ computed: {
 
     insurtech() {
       
-         this.$store.raise.getters.itemsforCategory("insurtech");
+         this.$store.getters["raises/itemsforCategory"]("insurtech");
     },
     
     blockchain() {
 
-         this.$store.raise.getter.itemsforCategory("blockchain");
+         this.$store.getters["raise/itemsforCategory"}("blockchain");
     },
     
     payments() {
         
-        this.$store.raise.getters.itemsforCategory("payments");
+        this.$store.getters["raises/itemsforCategory"]("payments");
 
     },
 
     lending() {
         
-         this.$store.raise.getters.itemsforCategory("lending");
+         this.$store.getters["itemsforCategory"]("lending");
     },
 
     
