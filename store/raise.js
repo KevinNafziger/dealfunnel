@@ -60,6 +60,30 @@ export const mutations = {
 
       firstRaiseFetched() {
   
-    return state.raise.firstRaiseLoad == true;
-    },
+        return state.raise.firstRaiseLoad == true;
+      },
+
+      
+      insurtech() {
+      
+        var first =  state.raise.allRaises.filter(raise => raise.group1 == 'insurtech');
+        return first.concat(state.raise.allRaises.filter(raise => raise.group2 == 'Insurtech'));
+      
+      },
+      
+      payments()   {
+      
+        return  state.raise.allRaises.filter(raise => raise.group1 == 'payments'|| raise.group2 == 'Payments');
+      },
+      
+      lending() {
+      
+         return  state.raise.allRaises.filter(raise => raise.group1 == 'lending');
+      },
+
+      blockchain() {
+      
+        return  state.raise.allRaises.filter(raise => raise.group1 == 'blockchain'); 
+      
+      },
  }

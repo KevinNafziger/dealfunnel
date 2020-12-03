@@ -100,25 +100,21 @@ export default {
 
     switch(category) {
 
-      case 'Insurtech':
-         var filteredRaises = this.allRaises.filter(raise => raise.group1=='insurtech' || raise.group2 == 'Insurtech');
+      case 'Insurtech'
          this.$store.dispatch("raise/setActiveTab", "Insurtech");
-         this.$store.dispatch("raise/setRaiseInfo", filteredRaises); 
+         this.$store.dispatch("raise/setRaiseInfo", this.$store.getters.insurtech); 
          break;
       case 'Blockchain':
-        var filteredRaises =this.allRaises.filter(raise => raise.group1 =='blockchain' || raise.group2 == 'Blockchain');
          this.$store.dispatch("raise/setActiveTab", "Blockchain");
-         this.$store.dispatch("raise/setRaiseInfo", filteredRaises); 
+         this.$store.dispatch("raise/setRaiseInfo", this.$store.getters.blockchain); 
          break;
       case 'Lending':
-         var filteredRaises=this.allRaises.filter(raise => raise.group1 =='lending' || raise.group2 == 'Lending');
          this.$store.dispatch("raise/setActiveTab", "Lending");
-         this.$store.dispatch("raise/setRaiseInfo", filteredRaises); 
+         this.$store.dispatch("raise/setRaiseInfo", this.$store.getters.lending); 
          break;  
       case 'Payments':
-          var filteredRaises=this.allRaises.filter(raise => raise.group1=='payments' || raise.group2 =='Payments');
          this.$store.dispatch("raise/setActiveTab", "Payments");
-         this.$store.dispatch("raise/setRaiseInfo", filteredRaises); 
+         this.$store.dispatch("raise/setRaiseInfo", $this.store.getters.payments); 
          break;
       case 'All':
          this.$store.dispatch("raise/setActiveTab", "All");
@@ -134,10 +130,6 @@ computed: {
           activeTab: state => state.raise.activeTab,
           allRaises:  state => state.raise.allRaises,
           raises: state =>  state.raise.activeRaiseInfo, 
-          insurtech: state => state.raise.getters.insurtech
-          blockchain: state => state.raise.getters.blockchain
-          payments:  state => state.raise.getters.payments
-          lending:  state => state.raise.getters.lending
           firstRaiseLoad: state => state.raise.firstRaiseLoad,
    }),
     filterMessage() {
