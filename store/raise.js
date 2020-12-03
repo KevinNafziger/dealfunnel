@@ -102,14 +102,13 @@ export const mutations = {
     },
 
  
-     async setInsur({ commit }) {
+     async setInsur({ commit }, data) {
 
       if (!this.insurRaisesFetched)
       {
-        await this.$axios.get("/raises?report=\'insurtech\'")
-              .then(res => {
-                commit("setInsur", res.data);
-            })
+        
+        commit("setInsur", data);
+          
       }
       else
       {
@@ -117,14 +116,11 @@ export const mutations = {
       } 
     },
 
-      async setBlock({ commit }) {
+      async setBlock({ commit }, data) {
 
-       if (!this.blockRaisesFetched)
-       {
-              await this.$axios.get("/raises?report=blockchain")
-              .then(res => {
-                commit("setBlock", res.data);
-            })
+      if (!this.blockRaisesFetched) {
+      
+          commit("setBlock", data);
        }
        else
       {
@@ -132,14 +128,12 @@ export const mutations = {
       } 
     },
 
-       async setPay({ commit }) {
+       async setPay({ commit }, data) {
 
       if (!this.payRaisesFetched)
       {
-              await this.$axios.get("/raises?report=payments")
-              .then(res => {
-            commit("setPay", res.data);
-        })
+  
+            commit("setPay", data);
       } 
       else  
       {
@@ -148,14 +142,11 @@ export const mutations = {
        
        },
 
-       async setLend({ commit }) {
+       async setLend({ commit }, data) {
 
        if (!this.lendRaisesFetched)
        {  
-              await this.$axios.get("/raises?report=lending")
-                .then(res => {
-            commit("setLend", res.data);
-             })
+            commit("setLend", .data);
         }
        else
        {
@@ -163,7 +154,6 @@ export const mutations = {
        }
        
        },
-
   }
 
   export const getters = {
@@ -195,6 +185,13 @@ export const mutations = {
   
     return state.raise.lending.length > 0;
     
-    },    
+    },  
+
+    itemsforCategory(category) {
+
+      return state.raise.allRaises.filter(a => a.group1.toLowerCase()==category || a.group2.toLowerCase() == category);
+    
+    },
+ 
       
  }

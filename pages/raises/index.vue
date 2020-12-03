@@ -101,19 +101,19 @@ export default {
 
       case 'Insurtech':
          this.$store.dispatch("raise/setActiveTab", "Insurtech");
-         this.$store.dispatch("raise/setInsur"); 
+         this.$store.dispatch("raise/setInsur", this.insurtech); 
          break;
       case 'Blockchain':
          this.$store.dispatch("raise/setActiveTab", "Blockchain");
-         this.$store.dispatch("raise/setBlock"); 
+         this.$store.dispatch("raise/setBlock", this.blockchain); 
          break;
       case 'Lending':
          this.$store.dispatch("raise/setActiveTab", "Lending");
-         this.$store.dispatch("raise/setLend"); 
+         this.$store.dispatch("raise/setLend", this.lending); 
          break;  
       case 'Payments':
          this.$store.dispatch("raise/setActiveTab", "Payments");
-         this.$store.dispatch("raise/setPay"); 
+         this.$store.dispatch("raise/setPay", this.insurtech); 
          break;
       case 'All':
          this.$store.dispatch("raise/setActiveTab", "All");
@@ -140,6 +140,27 @@ computed: {
           return this.activeTab;
         }
     },
+
+    insurtech() {
+
+        this.$store.raise.getters.itemsforCategory('insurtech');
+    },
+    
+    blockchain() {
+
+         this.$store.raise.getters.itemsforCategory('blockchain');
+    },
+    
+    payments() {
+        
+        this.$store.raise.getters.itemsforCategory('payments');
+
+    },
+    lending() {
+        
+        this.$store.raise.getters.itemsforCategory('lending');
+    },
+
     
   },
   created() {
