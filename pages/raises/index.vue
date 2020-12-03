@@ -100,7 +100,7 @@ export default {
 
     switch(category) {
 
-      case 'Insurtech'
+      case 'Insurtech':
          this.$store.dispatch("raise/setActiveTab", "Insurtech");
          this.$store.dispatch("raise/setRaiseInfo", this.$store.getters.insurtech); 
          break;
