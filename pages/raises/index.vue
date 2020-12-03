@@ -100,9 +100,8 @@ export default {
     switch(category) {
 
       case 'Insurtech':
-         var filtered= this.allRaises.filter(raise => raise.group1 = 'insurtech');
          this.$store.dispatch("raise/setActiveTab", "Insurtech");
-         this.$store.dispatch("raise/setRaiseInfo", filtered); 
+         this.$store.dispatch("raise/setRaiseInfo", this.$store.getters.insurtech; 
          break;
       case 'Blockchain':
          this.$store.dispatch("raise/setActiveTab", "Blockchain");

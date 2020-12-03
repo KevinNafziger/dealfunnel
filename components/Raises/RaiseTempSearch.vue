@@ -2,11 +2,10 @@
 <template>
  <div>
     <div class="tag-search-div">
-      <a href="#" class="tagbtn">All</a>
+      <a href="#" v-on:click="showGrouping('All') class="tagbtn">All</a>
       <a href="#" v-on:click="showGrouping('Payments')" class="tagbtn">payments</a>
       <a href="#" v-on:click="showGrouping('Insurtech')"  class="tagbtn">insurtech</a>
       <a href="#" v-on:click="showGrouping('Lending')"   class="tagbtn">lending</a>
-      <a href="#" v-on:click="showGrouping('Banking')"   class="tagbtn">banking</a>
       <a href="#" v-on:click="showGrouping('Blockchain')" class="tagbtn">blockchain</a>
      </div>
 </div>

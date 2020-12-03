@@ -66,23 +66,22 @@ export const mutations = {
       
       insurtech() {
       
-        var first =  state.raise.allRaises.filter(raise => raise.group1 == 'insurtech');
-        return first.concat(state.raise.allRaises.filter(raise => raise.group2 == 'Insurtech'));
-      },
+        return state.raise.allRaises.filter(raise => raise.group1 == 'insurtech' || raise.group2 == 'insurtech');
+        },
       
       payments()   {
       
-        return  state.raise.allRaises.filter(raise => raise.group1 == 'payments'|| raise.group2 == 'Payments');
+        return  state.raise.allRaises.filter(raise => raise.group1 == 'payments' || raise.group2 == 'Payments');
       },
       
       lending() {
       
-         return  state.raise.allRaises.filter(raise => raise.group1 == 'lending');
+         return  state.raise.allRaises.filter(raise => raise.group1 == 'lending' || raise.group2 == 'Lending');
       },
 
       blockchain() {
       
-        return  state.raise.allRaises.filter(raise => raise.group1 == 'blockchain'); 
+        return  state.raise.allRaises.filter(raise => raise.group1 == 'blockchain' || raise.group2 == 'Blockchain'); 
       
       },
  }
