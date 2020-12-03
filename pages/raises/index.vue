@@ -8,12 +8,15 @@
            <h2>Raises</h2> <i style="font-size: 13px; text-align:right; margin-left:3px;">{{ filterMessage}} </i></h2></div></div></div></center>
         
 
+<RaiseTempSearch></RaiseTempSearch> <br>
+
+
   <a href="https://fintechhorizonsmedia.com/fintechraises.xlsx"
   class="" style="color:dimgray" id="myExcelIcoTag">
   <div class="excel-ico">  </div>
   </a>
 
-<RaiseTempSearch></RaiseTempSearch>
+
 
 
 <div class="draft-div">
@@ -98,7 +101,7 @@ export default {
     switch(category) {
 
       case 'Insurtech':
-         var filteredRaises=this.allRaises.filter(raise => raise.group1=='Insurtech');
+         var filteredRaises =t his.allRaises.filter(raise => raise.group1=='Insurtech' || raise.group1 == 'insurtech' || raise.group2 == 'Insurtech' || raise.group2 == 'insurtech' );
          this.$store.dispatch("raise/setActiveTab", "Insurtech");
          this.$store.dispatch("raise/setRaiseInfo", filteredRaises); 
          break;
