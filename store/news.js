@@ -181,7 +181,7 @@ export const mutations = {
 
 			if (!this.insurNewsFetched)
 			{
-				await this.$axios.get('/links?folder=Insurtech')
+				await this.$axios.get('/links?folder=insurtech')
            		.then(res => {
           			commit("setInsur", res.data);
          		})
