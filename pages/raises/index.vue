@@ -141,15 +141,25 @@ computed: {
         }
     },
     insurtech() {
+
         this.$store.getters.insurtech;
+    
     },
+    
     blockchain() {
+    
         this.$store.getters.blockchain;
+    
     },
+
     payments() {
+    
         this.$store.getters.payments;
-    }
+    
+    },
+
     lending() {
+    
         this.$store.getters.lending;
     }
 
