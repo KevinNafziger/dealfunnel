@@ -111,7 +111,7 @@ export default {
          this.$store.dispatch("raise/setRaiseInfo", filteredRaises); 
          break;
       case 'Lending':
-         var filteredRaises=this.allRaises.filter(raise => raise.group1 =='lending' }} raise.group2 == 'Lending');
+         var filteredRaises=this.allRaises.filter(raise => raise.group1 =='lending' || raise.group2 == 'Lending');
          this.$store.dispatch("raise/setActiveTab", "Lending");
          this.$store.dispatch("raise/setRaiseInfo", filteredRaises); 
          break;  
@@ -134,6 +134,10 @@ computed: {
           activeTab: state => state.raise.activeTab,
           allRaises:  state => state.raise.allRaises,
           raises: state =>  state.raise.activeRaiseInfo, 
+          insurtech: state => state.raise.getters.insurtech
+          blockchain: state => state.raise.getters.blockchain
+          payments:  state => state.raise.getters.payments
+          lending:  state => state.raise.getters.lending
           firstRaiseLoad: state => state.raise.firstRaiseLoad,
    }),
     filterMessage() {
