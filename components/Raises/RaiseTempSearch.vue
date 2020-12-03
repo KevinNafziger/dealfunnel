@@ -1,62 +1,41 @@
 
 <template>
  <div>
-  <div class="search-bar-div">
     <div class="tag-search-div">
-      <a href="#" v-on:click="" class="tagbtn">All</a>
+      <a href="#" class="tagbtn">All</a>
       <a href="#" v-on:click="showGrouping('Payments')" class="tagbtn">payments</a>
       <a href="#" v-on:click="showGrouping('Insurtech')"  class="tagbtn">insurtech</a>
       <a href="#" v-on:click="showGrouping('Lending')"   class="tagbtn">lending</a>
       <a href="#" v-on:click="showGrouping('Banking')"   class="tagbtn">banking</a>
       <a href="#" v-on:click="showGrouping('Blockchain')" class="tagbtn">blockchain</a>
-      <a href="#" v-show="showPreviousBtn" class="tagbtn" v-on:click="changePage('Previous')">Prev</a>
-      <a href="#" v-show="showNextBtn" class="tagbtn" v-on:click="changePage('Next')" >Next</a>
-    </div>
-  </div>
+     </div>
+</div>
 </template>
 
 <script>
-import {mapState} from 'vuex';
-import 'vuetify/dist/vuetify.min.css';;
+import 'vuetify/dist/vuetify.min.css';
+import Vuetify from 'vuetify';
+
 export default {
   name: 'RaiseTempSearch',
 
-  methods: function() {
-   showGrouping: function(category) {
+  methods: {
+   showGrouping(category) {
       $nuxt.$emit("getCategory", category);
     },
    },
-   computed() {
-  ...mapState({,
-      activeTab: state => state.raise.activeTab,
-   }),
-    
-   }
-}
+};
 </script>
 
 
 <style scoped>
-.text-field {
-  text-align-last: center;
-}
-@media screen and (min-width:1600px) {
-.search-div {
-    display: inherit;
-}
-.w-col-8 {
-    width: 80% !important;
-}
-
-}
 .search-div {
   position: sticky;
-    display: contents;
+    display: block;
     height: 30px;
     border-radius: 3px;
     margin-left: 20px;
-    margin-right: 70px;
-    margin-bottom: 30px;
+margin-right: 70px;
 }
    .tagbtn {
    background-color: #4f81bd !important;
@@ -120,7 +99,7 @@ color: white;
     padding: 3px;
     border-radius: 3px;
     height: fit-content;
-    position: inherit;
+    position: absolute;
   }
 input {
       background: rgba(105,105,105,0.07059);
