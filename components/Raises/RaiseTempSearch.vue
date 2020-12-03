@@ -13,31 +13,26 @@
       <a href="#" v-show="showNextBtn" class="tagbtn" v-on:click="changePage('Next')" >Next</a>
     </div>
   </div>
-  <div v-show="false">
-   <br><i style="font-size: 13px;">No results found</i>
-   </div>
- </div>
 </template>
 
 <script>
 import {mapState} from 'vuex';
-import 'vuetify/dist/vuetify.min.css';
-import Vuetify from 'vuetify';
+import 'vuetify/dist/vuetify.min.css';;
 export default {
   name: 'RaiseTempSearch',
 
-  methods: {
+  methods: function() {
    showGrouping: function(category) {
       $nuxt.$emit("getCategory", category);
     },
    },
-   computed: {
+   computed() {
   ...mapState({,
       activeTab: state => state.raise.activeTab,
    }),
     
    }
-};
+}
 </script>
 
 
