@@ -25,7 +25,8 @@ export const mutations = {
     state.insurtech = data; 
    	state.activeNewsInfo = data;
     state.firstNewsdLoad = false;
-    },
+   
+   },
 
 
   setBlock(state, data){
@@ -35,7 +36,7 @@ export const mutations = {
     state.activeNewsTab = 'Blockchain';
     state.firstNewsLoad =false;
     
-    },
+   },
 
    setPay(state, data){
 
@@ -44,7 +45,7 @@ export const mutations = {
   	 state.activeNewsTab = 'Payments';	
   	 state.firstNewsLoad =false;
 
-  	 },
+  	},
 
    setLend(state, data){
 
@@ -53,7 +54,7 @@ export const mutations = {
      state.activeNewsTab = 'Lending';	
      state.firstNewsLoad =false;
   	 
-  	 },
+   },
 
    setBank(state, data) {
 
@@ -62,7 +63,7 @@ export const mutations = {
   	 state.activeNewsTab = 'Banking';	
   	 state.firstNewsLoad =false;
 
-  	 },
+  	},
 
 
     setPrevious(state) {
@@ -89,7 +90,7 @@ export const mutations = {
 		state.activeNewsTab = 'Page';
 		state.firstNewsLoad =false;  
 
-   },
+    },
 
    setNextNoFetch(state){
 
@@ -104,14 +105,15 @@ export const mutations = {
 		state.activeNewsTab = 'Page';
 	    state.firstNewsLoad = false; 
 	  	state.numNewsPage = 1;	 
-	 },
+   },
 
 
  	set(state, page) {
 
 		if (!this.firstNewsFetched) {
 
-		 state.page.push(page);
+		 state.pages.push(page);
+
 		}
 
 		 state.activeNewsInfo = state.pages[0];
