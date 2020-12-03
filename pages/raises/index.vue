@@ -131,7 +131,7 @@ computed: {
   ...mapState({
           activeTab: state => state.raise.activeTab,
           allRaises:  state => state.raise.allRaises,
-          activeRaiseInfo: state =>  state.raise.activeRaiseInfo,
+          raises: state =>  state.raise.activeRaiseInfo, 
           firstRaiseLoad: state => state.raise.firstRaiseLoad,
    }),
     filterMessage() {
@@ -144,38 +144,14 @@ computed: {
         }
     },
 
-     raises() {
-  
-        if (this.firstRaiseLoad) {
-          return this.raises;
-        }
-        else
-        {
-          return this.activeRaiseInfo;
-        }
-      },
-
   },
-  mounted() {
 
-       this.$store.dispatch("raise/setAllRaises", this.raises); 
-  },
-  created() {
-
-     this.$nuxt.$on("getCategory", (category) => this.getbyCategory(category));
-   },
-
-   async asyncData(context)  {
-
-    return context.app.$axios.$get('/raises')
-      .then(data => {
-        return {
-          raises: data
-        }
-      })
-      .catch(e => context.error(e))
+  async fetch({store}) 
+  {
+  await store.dispatch("raise/nuxtServerInit")
   
-     },
+  },
+
 };
 </script>
 
