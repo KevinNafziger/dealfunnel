@@ -31,12 +31,14 @@ export const mutations = {
 
     state.blockchain = data;
     state.activeRaiseInfo = data;
+
   },
 
   setInsur(state, data) {
 
     state.insurtech = data;
     state.activeRaiseInfo = data;
+
   },
 
    setLend(state, data) {
@@ -73,10 +75,9 @@ export const mutations = {
   
     state.activeRaiseInfo = state.blockchain;
   
-  }
+  },
 
-
-},
+}
 
 
  export const actions = {
@@ -88,6 +89,7 @@ export const mutations = {
                 vuexContext.commit("setAll", data);
              })
       }, 
+
    setAllRaises(vuexContext, data) {
      
       vuexContext.commit("setAll", data);
@@ -95,8 +97,8 @@ export const mutations = {
 
     setActiveTab( vuexContext, tab) {
 
-      
      vuexContext.commit("setTab", tab);
+
     },
 
  
@@ -154,17 +156,16 @@ export const mutations = {
                 .then(res => {
             commit("setLend", res.data);
              })
-      }
+        }
        else
        {
         commit("setLendNoFetch");
        }
        
-       }
-
-
+       },
 
   }
+
   export const getters = {
 
       firstRaiseFetched() {
@@ -181,7 +182,7 @@ export const mutations = {
       blockRaisesFetched() {
     
         return state.raise.blockchain.length > 0 ;
-    },
+       },
     
   
     insurRaisesFetched() {
@@ -196,4 +197,4 @@ export const mutations = {
     
     },    
       
- },
+ }
