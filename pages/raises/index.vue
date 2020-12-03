@@ -4,7 +4,7 @@
      <div class="title">
         <div class="content">
           <br>
-           <h2>Raises</h2>
+           <h2>Raises</h2> <i style="font-size: 13px; text-align:right; margin-left:3px;">{{ filterMessage}} </i></h2></div></div></div></center>
         </div>
      </div>
   </div>
@@ -14,7 +14,7 @@
   <div class="excel-ico">  </div>
   </a>
 
-
+<RaiseTempSearch></RaiseTempSearch>
 
 
 <div class="draft-div">
@@ -71,7 +71,7 @@
            {{ raise.lead }}
         </td>
          <td class="participating-td">
-{{ raise.participating}}
+{{raise.participating}}
         </td>
         <td>
           {{ raise.city}}
@@ -87,25 +87,93 @@
   </div>
 </template>
 <script>
+import RaiseTempSearch from '@/components/Raises/RaiseTempSearch';
+import {mapState} from 'vuex';
 export default {
   layout: 'raises',
-  asyncData(context) {
-    return context.app.$axios.$get('/raises')
-      .then(data => {
-        return {
-          raises: data
-        }
-      })
-      .catch(e => context.error(e))
-  },
-  head: {
-    title: 'Raisest'
-  }
+    
+    methods: {
 
-};
+    getbyCategory(category) {
+
+    switch(category) {
+
+      case 'Insurtech':
+         var filteredRaises=this.allRaises.filter(raise => raise.group1=='Insurtech');
+         this.$store.dispatch("raise/setActiveTab", "Insurtech");
+         this.$store.dispatch("raise/setRaiseInfo", filteredRaises); 
+         break;
+      case 'Blockchain':
+        var filteredRaises =this.allRaises.filter(raise => raise.group1 =='Blockchain');
+         this.$store.dispatch("raise/setActiveTab", "Blockchain");
+         this.$store.dispatch("raise/setRaiseInfo", filteredRaises); 
+         break;
+      case 'Lending':
+         var filteredRaises=this.allRaises.filter(raise => raise.group1=='Lending');
+         this.$store.dispatch("raise/setActiveTab", "Lending");
+         this.$store.dispatch("raise/setRaiseInfo", filteredRaises); 
+         break;  
+      case 'Payments':
+          var filteredRaises=this.allRaises.filter(raise => raise.group1=='Payments');
+         this.$store.dispatch("raise/setActiveTab", "Payments");
+         this.$store.dispatch("raise/setRaiseInfo", filteredRaises); 
+         break;
+      case 'All':
+         this.$store.dispatch("raise/setActiveTab", "All");
+         this.$store.dispatch("raise/setRaiseInfo", this.allRaises); 
+         break;
+      }  
+   }
+
+},
+
+computed: {
+  ...mapState({
+          activeTab: state => state.raise.activeTab,
+          activeRaiseInfo: state =>  state.raise.activeRaiseInfo,
+          firstRaiseLoad: state => state.raise.firstRaiseLoad,
+   }),
+    filterMessage() {
+      
+        if (this.firstRaiseLoad) {
+          return 'All';
+        }
+        else {
+          return this.activeTab;
+        }
+    },
+
+     raises() {
+    
+        if (this.firstRaiseLoad == true) {
+
+           return this.AllRaises ;
+
+        }
+
+        else {
+
+          return this.activeRaiseInfo;
+        }
+
+      }
+  },    
+  
+  created() {
+
+     this.$nuxt.$on("getCategory", (category) => this.getbyCategory(category));
+   },
+   async fetch({store}) 
+  {
+  await store.dispatch("raise/nuxtServerInit");
+  },
+
+}
+
 </script>
 
- <style  scoped>
+
+ <style scoped>
  tr:nth-child(odd) {background: #4f81bd14 !important}
  h2, .ptitle{
    color: #4f81bd !important;

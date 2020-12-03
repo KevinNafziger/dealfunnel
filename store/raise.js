@@ -30,6 +30,17 @@ export const mutations = {
 }
  export const actions = {
 
+     nuxtServerInit(vuexContext, context) {
+      if (!this.firstRaiseFetched)
+      {
+            return this.$axios.$get("/raises")
+              .then(data => {
+                vuexContext.commit("setAll", data);
+             })
+      }
+      }, 
+
+
    setAllRaises(vuexContext, data) {
      
       vuexContext.commit("setAll", data);
@@ -45,5 +56,12 @@ export const mutations = {
 
      vuexContext.commit("setSelected", data); 
 
-    }
+    },
   }
+  export const getters = {
+
+      firstRaiseFetched() {
+  
+    return state.raise.firstRaiseLoad == true;
+    },
+ }
