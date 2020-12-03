@@ -106,7 +106,7 @@ export default {
          this.$store.dispatch("raise/setRaiseInfo", filteredRaises); 
          break;
       case 'Blockchain':
-        var filteredRaises =this.allRaises.filter(raise => raise.group1 =='Blockchain');
+        var filteredRaises =this.allRaises.filter(raise => raise.group1 =='blockchain' || raise.group2 == 'Blockchain');
          this.$store.dispatch("raise/setActiveTab", "Blockchain");
          this.$store.dispatch("raise/setRaiseInfo", filteredRaises); 
          break;
