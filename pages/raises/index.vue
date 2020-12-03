@@ -143,7 +143,7 @@ computed: {
 
     insurtech() {
       
-         this.$store.getters("raise/itemsforCategory",("insurtech");
+         this.$store.getters("raise/itemsforCategory", "insurtech");
     },
     
     blockchain() {
