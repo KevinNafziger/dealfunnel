@@ -106,7 +106,7 @@ export const mutations = {
 
       if (!this.insurRaisesFetched)
       {
-        await this.$axios.get("/raises?type=\'insurtech\'")
+        await this.$axios.get("/raises?report=\'insurtech\'")
               .then(res => {
                 commit("setInsur", res.data);
             })
@@ -121,7 +121,7 @@ export const mutations = {
 
        if (!this.blockRaisesFetched)
        {
-              await this.$axios.get("/raises?type=\'blockchain\'")
+              await this.$axios.get("/raises?report=\'blockchain\'")
               .then(res => {
                 commit("setBlock", res.data);
             })
@@ -136,7 +136,7 @@ export const mutations = {
 
       if (!this.payRaisesFetched)
       {
-              await this.$axios.get("/raises?type=\'payments\'")
+              await this.$axios.get("/raises?report=\'payments\'")
               .then(res => {
             commit("setPay", res.data);
         })
@@ -152,7 +152,7 @@ export const mutations = {
 
        if (!this.lendRaisesFetched)
        {  
-              await this.$axios.get("/raises?type=\'lending\'")
+              await this.$axios.get("/raises?report=\'lending\'")
                 .then(res => {
             commit("setLend", res.data);
              })
