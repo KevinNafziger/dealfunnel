@@ -150,7 +150,7 @@ computed: {
           return this.activeRaiseInfo;
       },
  
-  
+  },
   created() {
 
      this.$nuxt.$on("getCategory", (category) => this.getbyCategory(category));
@@ -160,7 +160,7 @@ computed: {
   await store.dispatch("raise/nuxtServerInit");
   },
 
-}
+};
 
 </script>
 
