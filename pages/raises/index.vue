@@ -175,7 +175,8 @@ computed: {
       })
       .catch(e => context.error(e))
   
-  }
+     },
+};
 </script>
 
 
