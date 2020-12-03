@@ -1,6 +1,6 @@
 <template>
 <div width="100%" class="w-container-2">
-<div data-v-69296181="" id="top" class="sectionix"><div data-v-69296181="" class="title"><div data-v-69296181="" class="content"><br data-v-69296181=""> <h2 data-v-69296181="">News</h2></div></div></div>
+<div data-v-69296181="" id="top" class="sectionix"><div data-v-69296181="" class="title"><div data-v-69296181="" class="content"><br data-v-69296181=""> <h2 data-v-69296181="">News i style="font-size: 13px; text-align:right; margin-left:3px;">{{ filterMessage }}</i></h2></div></div></div>
     <div class="section-15">
       <div class="row-15 w-row">
           <div class="w-col w-col-9">
@@ -29,7 +29,6 @@
                       <div class="w-row">
                         <div class="w-col w-col-6">
                           <div>
-
                           </div>
                         </div>
                       </div>
@@ -41,22 +40,110 @@
 </div>
 </template>
 <script>
+import {mapState} from 'vuex';
+import NewsTempSearch from '@/components/News/NewsTempSearch';
 export default {
   layout: 'raises',
-  asyncData(context) {
-    return context.app.$axios.$get('/links?custom=AI')
-      .then(data => {
-        return {
-          links: data
+  methods: {
+
+    getbyCategory: function(category) {
+
+      switch(category) {
+
+        case 'Insurtech':
+           this.$store.dispatch("news/setInsur");
+           break;
+        case 'Blockchain':
+            this.$store.dispatch("news/setBlock");
+            break;
+        case 'Lending':
+            this.$store.dispatch("news/setLend");
+            break;
+        case 'Payments':
+            this.$store.dispatch("news/setPay");
+            break;
         }
-      })
-      .catch(e => context.error(e))
+
+    },
+
+    setPage: function(direction) {
+
+       switch(direction) {
+
+         case 'Previous':
+            var page = this.numActivePage;
+            page-- ;
+            this.$store.dispatch("news/goPrevious", page);
+            break;
+
+          case 'Next':
+            var page = this.numActivePage;
+            page++ ;
+            this.$store.dispatch("news/goNext", page);
+            break;
+
+          case 'Last':
+            this.$store.dispatch("news/goLast", page);
+            break;
+         }
+     }
+ },
+  computed: {
+
+  ...mapState({
+      starterNews: state => state.news.pages[0],
+      firstLoad: state => state.news.firstNewsLoad,
+      activeNewsInfo: state => state.news.activeNewsInfo,
+      activeTab: state => state.news.activeNewsTab,
+      numActivePage: state => state.news.numNewsPage,
+   }),
+
+   filterMessage() {
+
+      if (this.firstLoad == true)
+      {
+        return ''
+      }
+      if (this.activeTab == 'Page')
+      {
+        return this.activeTab + ' ' + this.numActivePage;
+      }
+      else
+      {
+        return this.activeTab;
+      }
+    
+    },
+
+   links() {
+      if (this.firstNewsLoad == true)
+      {
+        return this.starterNews
+      }
+      else
+      {
+        return this.activeNewsInfo;
+      }
+    },
+    
   },
+  created()  {
+
+     this.$nuxt.$on("getCategory", (category) => this.getbyCategory(category));
+     this.$nuxt.$on("changePage", (direction) => this.setPage(direction));
+   
+   },
+   async fetch({store}) 
+  {
+  await store.dispatch("news/nuxtServerInit");
+  },
+
   head: {
     title: 'News'
-  }
+  },
 
 };
+   
 </script>
 
  <style scoped>
