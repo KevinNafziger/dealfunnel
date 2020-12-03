@@ -204,7 +204,7 @@ export const mutations = {
 
    		  case "Articles":
    		    state.numArticlePage++ ;	
-	  		state.activeArticleIsnfo = state.pages[state.numArticlePage];
+	  		state.activeArticlesInfo = state.pages[state.numArticlePage];
 	  		state.activeArticleTab = 'Page';
      	    state.firstArticleLoad =false;
      	    break;
@@ -284,7 +284,7 @@ export const mutations = {
 		  	break;
 
 		  case "Articles":
-		    state.activeArticlseInfo = state.pages[0];
+		    state.activeArticlesInfo = state.pages[0];
 		  	state.numArticlePage = 1;
 		  	state.firstArticleLoad = false; 
 		  	break;
@@ -447,7 +447,7 @@ export const mutations = {
 			}	
 			else	
 			{
-				commit("setPay", "setPostsNoFtech");
+				commit("setPostsNoFetch");
 			}	
   		 
   		 },
@@ -547,8 +547,6 @@ export const mutations = {
 
 	      		commit("setView", view);
 	    },
-
-
 
 
 	}  
