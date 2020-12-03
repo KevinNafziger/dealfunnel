@@ -187,11 +187,10 @@ export const mutations = {
     
     },  
 
-    itemsforCategory: (state, category) => {
+    itemsforCategory: (state) => (category) => {
 
       return state.allRaises.filter(a => a.group1.toLowerCase()==category || a.group2.toLowerCase() == category);
     
-    },
- 
+    }
       
  }
