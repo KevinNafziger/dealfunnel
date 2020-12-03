@@ -143,6 +143,10 @@ computed: {
     },
 
   },
+  created() {
+         this.$nuxt.$on("getCategory", (category) => this.getbyCategory(category));
+
+  },  
 
   async fetch({store}) 
   {
