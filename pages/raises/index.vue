@@ -158,7 +158,7 @@ computed: {
   },
   mounted() {
 
-       this.$store.dispatch("raise/setAllRaises", this.allRaises); 
+       this.$store.dispatch("raise/setAllRaises", this.raises); 
   },
   created() {
 
