@@ -151,7 +151,6 @@ computed: {
         }
         else
         {
-
           return this.activeRaiseInfo;
         }
       },
@@ -160,7 +159,7 @@ computed: {
   mounted() {
 
        this.$store.dispatch("raise/setAllRaises", this.allRaises); 
-  };
+  },
   created() {
 
      this.$nuxt.$on("getCategory", (category) => this.getbyCategory(category));
