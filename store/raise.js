@@ -30,7 +30,7 @@ export const mutations = {
 }
  export const actions = {
 
-     nuxtServerInit(vuexContext, context) {
+     nuxtServerInit(vuexContext, data) {
       if (!this.firstRaiseFetched)
       {
             return this.$axios.$get("/raises")
