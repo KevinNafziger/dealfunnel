@@ -146,22 +146,37 @@ computed: {
 
      raises() {
   
+        if (this.firstRaiseLoad) {
+          return this.allRaises;
+        }
+        else
+        {
 
           return this.activeRaiseInfo;
+        }
       },
- 
+
   },
+  mounted() {
+
+       this.$store.dispatch("raise/setAllRaises", this.allRaises); 
+  };
   created() {
 
      this.$nuxt.$on("getCategory", (category) => this.getbyCategory(category));
    },
-   async fetch({store}) 
-  {
-  await store.dispatch("raise/nuxtServerInit");
-  },
 
-};
+  asyncData(context) {
 
+    return context.app.$axios.$get('/raises')
+      .then(data => {
+        return {
+          allRaises: data
+        }
+      })
+      .catch(e => context.error(e))
+  
+  }
 </script>
 
 
