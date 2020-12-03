@@ -68,7 +68,6 @@ export const mutations = {
       
         var first =  state.raise.allRaises.filter(raise => raise.group1 == 'insurtech');
         return first.concat(state.raise.allRaises.filter(raise => raise.group2 == 'Insurtech'));
-      
       },
       
       payments()   {
