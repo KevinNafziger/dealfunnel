@@ -111,7 +111,7 @@ export const mutations = {
 
 		if (!this.firstNewsFetched) {
 
-		 state.news.push(page);
+		 state.page.push(page);
 		}
 
 		 state.activeNewsInfo = state.pages[0];
@@ -209,7 +209,7 @@ export const mutations = {
 
   		 async setPay({ commit }) {
 
-			if (!this.payNewssFetched)
+			if (!this.payNewsFetched)
 			{
   	       		await this.$axios.get('/links?folder=payments')
            		.then(res => {
@@ -218,7 +218,7 @@ export const mutations = {
 			}	
 			else	
 			{
-				commit("setPayNoFtech");
+				commit("setPayNoFetch");
 			}	
   		 
   		 },
@@ -290,7 +290,7 @@ export const mutations = {
 		   if (!this.firstNewsFetched) { 
 
               return this.$axios.$get("/links?custom=AI'")
-              .then(data => {
+              .then(res.data => {
                 vuexContext.commit("set", data);
               })
 		   }
