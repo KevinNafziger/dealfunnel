@@ -130,6 +130,7 @@ export default {
 computed: {
   ...mapState({
           activeTab: state => state.raise.activeTab,
+          allRaises:  state => state.raise.allRaises,
           activeRaiseInfo: state =>  state.raise.activeRaiseInfo,
           firstRaiseLoad: state => state.raise.firstRaiseLoad,
    }),
@@ -144,20 +145,11 @@ computed: {
     },
 
      raises() {
-    
-        if (this.firstRaiseLoad == true) {
-
-           return this.AllRaises ;
-
-        }
-
-        else {
+  
 
           return this.activeRaiseInfo;
-        }
-
-      }
-  },    
+      },
+ 
   
   created() {
 
