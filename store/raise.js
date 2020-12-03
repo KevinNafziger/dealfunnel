@@ -3,6 +3,11 @@ export const state = () => ({
  activeTab: 'All', 
  firstRaiseLoad: true,
  activeRaiseInfo: [],
+ insurtech: [],
+ payments: [],
+ lending:  [],
+ blockchain: [],
+
 })
 
 export const mutations = {
@@ -22,12 +27,58 @@ export const mutations = {
 
   },
 
-  setSelected(state, data) {
+  setBlock(state, data) {
 
+    state.blockchain = data;
     state.activeRaiseInfo = data;
   },
 
-}
+  setInsur(state, data) {
+
+    state.insurtech = data;
+    state.activeRaiseInfo = data;
+  },
+
+   setLend(state, data) {
+
+    state.lending = data;
+    state.activeRaiseInfo = data;
+  },
+
+   setPay(state, data) {
+
+    state.payments = data;
+    state.activeRaiseInfo = data;
+  
+  },
+
+  setLendNoFetch(state) {
+
+    state.activeRaiseInfo = state.lending;
+  
+  },
+
+  setPayNoFetch(state) {
+  
+    state.activeRaiseInfo = state.payments;
+  },
+
+  setInsurNoFetch(state) {
+
+    state.activeRaiseInfo = state.insurtech;
+  
+  },
+  
+  setBlockNoFetch(state) {
+  
+    state.activeRaiseInfo = state.blockchain;
+  
+  }
+
+
+},
+
+
  export const actions = {
 
      nuxtServerInit(vuexContext, data) {
@@ -37,8 +88,6 @@ export const mutations = {
                 vuexContext.commit("setAll", data);
              })
       }, 
-
-
    setAllRaises(vuexContext, data) {
      
       vuexContext.commit("setAll", data);
@@ -50,11 +99,71 @@ export const mutations = {
      vuexContext.commit("setTab", tab);
     },
 
-    setRaiseInfo( vuexContext, data) {
+ 
+     async setInsur({ commit }) {
 
-     vuexContext.commit("setSelected", data); 
-
+      if (!this.insurRaisesFetched)
+      {
+        await this.$axios.get('/raises?type=Insurtech')
+              .then(res => {
+                commit("setInsur", res.data);
+            })
+      }
+      else
+      {
+        commit("setInsurNoFetch");
+      } 
     },
+
+      async setBlock({ commit }) {
+
+       if (!this.blockRaisesFetched)
+       {
+              await this.$axios.get('/posts?grouping=Blockchain')
+              .then(res => {
+                commit("setBlock", res.data);
+            })
+       }
+       else
+      {
+        commit("setBlockNoFetch");
+      } 
+    },
+
+       async setPay({ commit }) {
+
+      if (!this.payRaisesFetched)
+      {
+              await this.$axios.get('/raises?type=Payments')
+              .then(res => {
+            commit("setPay", res.data);
+        })
+      } 
+      else  
+      {
+        commit("setPayNoFtech");
+      } 
+       
+       },
+
+       async setLend({ commit }) {
+
+       if (!this.lendRaisesFetched)
+       {  
+              await this.$axios.get('/raises?type=Lending')
+                .then(res => {
+            commit("setLend", res.data);
+             })
+      }
+       else
+       {
+        commit("setLendNoFetch");
+       }
+       
+       }
+
+
+
   }
   export const getters = {
 
@@ -63,25 +172,28 @@ export const mutations = {
         return state.raise.firstRaiseLoad == true;
       },
 
-      
-      insurtech() {
-      
-        var first = state.raise.allRaises.filter(a => a.group1 == 'insurtech');
-        },
-      
-      payments()   {
-      
-        return  state.raise.allRaises.filter(a => a.group1 == 'payments');
-      },
-      
-      lending() {
-      
-         return  state.raise.allRaises.filter(a => a.group1 == 'lending' || a.group2 == 'Lending');
+      payRaisesFetched() {
+    
+        return state.raise.payments.length > 0 ;
+    
       },
 
-      blockchain() {
+      blockRaisesFetched() {
+    
+        return state.raise.blockchain.length > 0 ;
+    },
+    
+  
+    insurRaisesFetched() {
+     
+     return state.raise.insurtech.length > 0; 
+    
+    },
+    
+    lendRaisesFetched()  {
+  
+    return state.raise.lending.length > 0;
+    
+    },    
       
-        return  state.raise.allRaises.filter(a => a.group1 == 'blockchain' || a.group2== 'Blockchain'); 
-      
-      },
- }
+ },

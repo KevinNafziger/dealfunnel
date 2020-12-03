@@ -101,19 +101,19 @@ export default {
 
       case 'Insurtech':
          this.$store.dispatch("raise/setActiveTab", "Insurtech");
-         this.$store.dispatch("raise/setRaiseInfo", this.insurtech); 
+         this.$store.dispatch("raise/setInsur"); 
          break;
       case 'Blockchain':
          this.$store.dispatch("raise/setActiveTab", "Blockchain");
-         this.$store.dispatch("raise/setRaiseInfo", this.blockchain); 
+         this.$store.dispatch("raise/setBlock"); 
          break;
       case 'Lending':
          this.$store.dispatch("raise/setActiveTab", "Lending");
-         this.$store.dispatch("raise/setRaiseInfo", this.lending); 
+         this.$store.dispatch("raise/setLend"); 
          break;  
       case 'Payments':
          this.$store.dispatch("raise/setActiveTab", "Payments");
-         this.$store.dispatch("raise/setRaiseInfo", this.payments); 
+         this.$store.dispatch("raise/setPay"); 
          break;
       case 'All':
          this.$store.dispatch("raise/setActiveTab", "All");
@@ -140,29 +140,7 @@ computed: {
           return this.activeTab;
         }
     },
-    insurtech() {
-
-        this.$store.getters.insurtech;
     
-    },
-    
-    blockchain() {
-    
-        this.$store.getters.blockchain;
-    
-    },
-
-    payments() {
-    
-        this.$store.getters.payments;
-    
-    },
-
-    lending() {
-    
-        this.$store.getters.lending;
-    }
-
   },
   created() {
          this.$nuxt.$on("getCategory", (category) => this.getbyCategory(category));
