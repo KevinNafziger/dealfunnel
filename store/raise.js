@@ -84,69 +84,81 @@ export const mutations = {
 
      nuxtServerInit(vuexContext, data) {
     
-            return this.$axios.$get("/raises")
-              .then(data => {
-                vuexContext.commit("setAll", data);
-             })
-      }, 
+        return this.$axios.$get("/raises")
+          .then(data => {
+            vuexContext.commit("setAll", data);
+         })
+     }, 
 
-   setAllRaises(vuexContext, data) {
-     
-      vuexContext.commit("setAll", data);
+    setAll(vueContext, data ) {
+
+        vuexContext.commit("setAll", data);
     },
+
 
     setActiveTab( vuexContext, tab) {
 
      vuexContext.commit("setTab", tab);
 
     },
-
  
-     async setInsur({ commit }, data) {
+     async setInsur({ commit }) {
 
-      if (!this.insurRaisesFetched)
-      {
+      if (!this.insurRaisesFetched) {
+
+        await this.$axios.get('/raises?report=lending')
+                .then(res => {  
         
-        commit("setInsur", data);
-          
+        commit("setInsur", res.data);
+        })    
       }
       else
       {
         commit("setInsurNoFetch");
       } 
+
     },
 
-      async setBlock({ commit }, data) {
+     async setBlock({ commit }) {
 
       if (!this.blockRaisesFetched) {
-      
-          commit("setBlock", data);
+         
+        await this.$axios.get('/raises?report=blockchain')
+                .then(res => {      
+          commit("setBlock", res.data);
+          })    
        }
        else
       {
         commit("setBlockNoFetch");
-      } 
-    },
+      }
 
-       async setPay({ commit }, data) {
+     },
 
-      if (!this.payRaisesFetched)
-      {
-  
-            commit("setPay", data);
-      } 
-      else  
-      {
-        commit("setPayNoFtech");
-      } 
+     async setPay({ commit }) {
+
+       if (!this.payRaisesFetched) {
+
+         await this.$axios.get('/raises?report=payments')
+                .then(res => {      
+          commit("setPay", res.data);
+          })  
+       } 
+       else  
+       {
+          commit("setPayNoFtech");
+       } 
        
-       },
+     },
 
-       async setLend({ commit }, data) {
+      async setLend({ commit }, data) {
 
-       if (!this.lendRaisesFetched)
-       {  
-            commit("setLend", data);
+       if (!this.lendRaisesFetched) {  
+          
+          await this.$axios.get('/raises?report=lending')
+                .then(res => {      
+          commit("setPay", res.data);
+          })  
         }
        else
        {
@@ -158,39 +170,34 @@ export const mutations = {
 
   export const getters = {
 
-      firstRaiseFetched() {
+    firstRaiseFetched() {
   
         return state.raise.firstRaiseLoad == true;
+
       },
 
-      payRaisesFetched() {
+    payRaisesFetched() {
     
         return state.raise.payments.length > 0 ;
     
-      },
+    },
 
-      blockRaisesFetched() {
+    blockRaisesFetched() {
     
         return state.raise.blockchain.length > 0 ;
-       },
+    },
     
   
     insurRaisesFetched() {
      
-     return state.raise.insurtech.length > 0; 
+      return state.raise.insurtech.length > 0; 
     
     },
     
     lendRaisesFetched()  {
   
-    return state.raise.lending.length > 0;
+      return state.raise.lending.length > 0;
     
     },  
-
-    itemsforCategory: (state) => (category) => {
-
-      return state.allRaises.filter(a => a.group1.toLowerCase()==category || a.group2.toLowerCase() == category);
-    
-    }
       
  }
