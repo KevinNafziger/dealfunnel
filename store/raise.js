@@ -146,7 +146,7 @@ export const mutations = {
 
        if (!this.lendRaisesFetched)
        {  
-            commit("setLend", .data);
+            commit("setLend", data);
         }
        else
        {
