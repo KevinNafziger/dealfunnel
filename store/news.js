@@ -158,19 +158,7 @@ export const mutations = {
 		state.firstNewsLoad =false;
 
 	 },
-	 nuxtServerInit(vuexContext, context) {
-		  if (!this.firstNewsFetched)
-		  {
-            return this.$axios.$get("/links?custom=AI")
-              .then(data => {
-                vuexContext.commit("set", data);
-             })
-		  }
-		  else
-		  {
-			vuexContext.commit("set");
-		  }
-	 },  
+	 
 
  }
 
@@ -289,8 +277,8 @@ export const mutations = {
 		   
 		   if (!this.firstNewsFetched) { 
 
-              return this.$axios.$get("/links?custom=AI")
-              .then(res.data => {
+              return this.$axios.$get("/links?page=1")
+              .then(data => {
                 vuexContext.commit("set", data);
               })
 		   }
