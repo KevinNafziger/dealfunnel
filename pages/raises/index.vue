@@ -148,7 +148,7 @@ computed: {
     
     blockchain() {
 
-         this.$store.getters["raise/itemsforCategory"}("blockchain");
+         this.$store.getters["raise/itemsforCategory"]("blockchain");
     },
     
     payments() {
