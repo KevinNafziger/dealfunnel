@@ -1,7 +1,5 @@
 <template>
  <div>
-  <div class="search-bar-div">
-    </div>
     <div class="tag-search-div">
       <a href="#" v-on:click="changePage('Last')" class="tagbtn">All</a>
       <a href="#" v-on:click="showGrouping('Payments')" class="tagbtn">payments</a>
@@ -9,8 +7,8 @@
       <a href="#" v-on:click="showGrouping('Lending')"   class="tagbtn">lending</a>
       <a href="#" v-on:click="showGrouping('Banking')"   class="tagbtn">banking</a>
       <a href="#" v-on:click="showGrouping('Blockchain')" class="tagbtn">blockchain</a>
-      <a href="#" v-show="showPreviousBtn" class="tagbtn" v-on:click="changePage('Previous')">Prev</a>
-      <a href="#" v-show="showNextBtn" class="tagbtn" v-on:click="changePage('Next')" >Next</a>
+      <a href="#" v-show="showPreviousBtn" class="tagbtn"  v-on:click="changePage('Previous')">Prev</a>
+      <a href="#" v-show="showNextBtn" class="tagbtn" v-on:click="changePage('Next')">Next</a>
     </div>
   </div>
 </template>
