@@ -289,7 +289,7 @@ export const mutations = {
 		   
 		   if (!this.firstNewsFetched) { 
 
-              return this.$axios.$get("/links?page=1")
+              return this.$axios.$get("/links?custom=AI'")
               .then(data => {
                 vuexContext.commit("set", data);
               })
