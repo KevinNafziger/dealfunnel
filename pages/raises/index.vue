@@ -147,7 +147,7 @@ computed: {
      raises() {
   
         if (this.firstRaiseLoad) {
-          return this.allRaises;
+          return this.raises;
         }
         else
         {
@@ -170,7 +170,7 @@ computed: {
     return context.app.$axios.$get('/raises')
       .then(data => {
         return {
-          allRaises: data
+          raises: data
         }
       })
       .catch(e => context.error(e))
