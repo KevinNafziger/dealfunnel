@@ -113,21 +113,12 @@ methods: {
       }
     },
 
-   companies() 
-
-   {
-      if (this.firstLoad == true)
-      {
-        return this.starter
-      }
-      else
-      {
-        return this.activeTab;
-      }
-
-    },
-    
+   companies() {
+  
+        return this.activeInfo;
+    }    
   },
+
   created() {
 
      this.$nuxt.$on("getCategory", (category) => this.getbyCategory(category));
@@ -137,10 +128,13 @@ methods: {
   async fetch({store}) {
 
     await store.dispatch("company/nuxtServerInit");
+
   },
 
 };
+
 </script>
+
 <style  scoped>
 tr:nth-child(odd) {background: #4f81bd14 !important}
 .title {
