@@ -210,9 +210,9 @@ export const mutations = {
 				  vuexContext.commit("set");
 			     
 			     }
-	        }  
+	        },  
 	      
-	 },  
+	 }
 
 	export const getters = {
       
