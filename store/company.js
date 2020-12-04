@@ -194,23 +194,23 @@ export const mutations = {
   		 
   		  },
 
-  		  async nuxtServerInit(vuexContext) {
+  		  nuxtServerInit(vuexContext, context) {
 		   
 		   if (this.firstTime) { 
 
-              await return this.$axios.$get("/companies?country=US")
+              return this.$axios.$get("/companies?country=US")
               .then(data => {
                 vuexContext.commit("set", data);             
               })
-		   }
-		   else {
+		    }
+		    else {
 			
 			  vuexContext.commit("set");
 		   }
 
-	      },   
+	      }   
 	      
-	 }  
+	 },  
 
 	export const getters = {
       
@@ -249,9 +249,9 @@ export const mutations = {
 		return state.company.lending.length > 0;
 	  },
 	  
-	  firstTime(state) {
+	  firstTime() {
 	
-		return state.firstLoad == true;
+		return state.company.firstLoad == true;
 
 	  },
 
