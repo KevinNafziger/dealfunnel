@@ -10,7 +10,7 @@
        <div class="left-side">
          <h2> Report Content </h2>
          <br>
-              <div class="heading-col-main">
+            <div class="heading-col-main">
             <h2 style="inline-block"> Articles <i style="font-size: 13px; text-align:right">{{ filterMessage }}</i></h2>
             </div>
            <Board id="board-2">
@@ -28,18 +28,18 @@
 
             <h2> Your Report </h2>
 
-            <div class="builder-btns" >
+           <div class="builder-btns" >
             <button v-show="this.showModal" v-on:click="toggleModal()" class="gardient-button b-lr-s">
               <span class="mdi mdi-file-eye"></span>
             Close View
             </button> 
-          <br><br><br></div>
+          <br><br><br>
+          </div>
         
           <postsys :posts="items" :board="this.myboard" v-show="this.showModal">
           </postsys>
 
           <Board v-show="!this.showModal" :posts="posts" id="board-right" >
-            
             <div class="builder-btns">
               <button v-on:click="toggleModal()" class="gardient-button b-lr-s">
               <span class="mdi mdi-file-eye"></span>
@@ -50,7 +50,6 @@
               PDF
               </button>
             </div>
-
              <card v-for="myboard in myboards" :id="myboard.id" :key="myboard.id" draggable="true" class="list-group-item">
                 <h3>  {{ myboard.title }} </h3>
                 <p>  {{myboard.created_date}} {{myboard.author.name }} </p>
@@ -120,7 +119,7 @@ export default {
     
     },
 
-   posts() {
+    posts() {
       if (this.firstBuildLoad == true)
       {
         return this.starterPosts
@@ -137,10 +136,12 @@ export default {
 
           return this.starterPosts
         }
+
         else if (this.myboardArry.length == 0) {
           
           return this.activeBuilderInfo;
         }
+
         else {
 
           return this.activeBuilderInfo.concat(this.myboards);
@@ -156,6 +157,7 @@ export default {
      this.$nuxt.$on("submitSearch", (topic) => this.submitSearch(topic));
    
    },
+
   methods: {
 
     getbyCategory: function(category) {
@@ -171,18 +173,22 @@ export default {
             this.$store.commit("posts/setView", "Builder"); 
             this.$store.dispatch("posts/setBlock");
             break;
+
         case 'Lending':
             this.$store.commit("posts/setView", "Builder");  
             this.$store.dispatch("posts/setLend");
             break;
+
         case 'Payments':
             this.$store.commit("posts/setView", "Builder");
             this.$store.dispatch("posts/setPay");
             break;
+
         case 'Banking':
             this.$store.commit("posts/setView", "Builder");
             this.$store.dispatch("posts/setBank");
             break;
+
         }
 
     },
@@ -192,21 +198,18 @@ export default {
        switch(direction) {
 
          case 'Previous':
-            var page = this.numActivePage;
-            page-- ;
+           
             this.$store.commit("posts/setView", "Builder"); 
-            this.$store.dispatch("posts/goPrevious", page);
+            this.$store.dispatch("posts/goPrevious");
             break;
 
           case 'Next':
             var page = this.numActivePage;
-            page++ ;
             this.$store.commit("posts/setView", "Builder"); 
             this.$store.dispatch("posts/goNext", page);
             break;
 
           case 'Last':
-            var page = this.numActivePage;
             this.$store.commit("posts/setView", "Builder"); 
             this.$store.dispatch("posts/goLast", page);
             break;
@@ -223,25 +226,28 @@ export default {
       {
         this.$store.dispatch("boards/updateBoard",index);
       }
-    },
 
-     submitSearch: function (topic) {
+     },
+
+    submitSearch: function (topic) {
       
         this.$store.commit("posts/setView", "Builder"); 
         this.$store.dispatch("posts/submitSearch", topic);
         this.$store.dispatch("posts/setSearchTab", topic);
      },
 
-     addtoBoardArry: function(item) {
+    addtoBoardArry: function(item) {
+
         var item = this.articleFilter(item);
         this.$store.dispatch("boards/updateBoardArry", item);
-      },
-      generateReport: function() {
+    },
+
+    generateReport: function() {
 
         window.open('https://fintechhorizonsmedia.com/showreports/view.pdf?idlist=' + this.myboard.toString() );
-      },
+    },
 
-      toggleModal() {
+    toggleModal() {
       
         this.$store.dispatch("boards/toggle")
      },
@@ -250,7 +256,8 @@ export default {
   
        return this.posts.find(post => post.id == card_id);
      },
-    idlists:  function(post_id) {
+
+     idlists: function(post_id) {
       
        for (var i = 0; i < this.myboard.length; i++) {
         
@@ -260,6 +267,7 @@ export default {
         return 0 ;
         }
     },
+
      postFilter: function(posts) {
 
        return this.posts.filter(post => post.id==this.idlists(post.id));
