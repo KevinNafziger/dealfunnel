@@ -3,7 +3,6 @@
     <div v-if="building" class="company__descript_indicator" :style="indicatorStyle">
       <svg viewBox="0 0 96 72" version="1" xmlns="http://www.w3.org/2000/svg">
        {{ company.name }}
-       {{company.description}}
       </svg>
       {{ progress }}%
     </div>
@@ -25,7 +24,7 @@ export default {
 
   computed: {
     ...mapState({
-          starting: state => state.company.us
+          starting: state => state.company.US
           activeInfo: state =>  state.company.activeInfo,
           firstLoad: state => state.company.firstLoad,
    }),
@@ -56,7 +55,6 @@ export default {
           return this.activeInfo;
         
         }
-
      },
 
     company() {
