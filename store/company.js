@@ -195,14 +195,12 @@ export const mutations = {
   		 
   		  },
 
-  		  nuxtServerInit(vuexContext, context) {
-		   
-	              return this.$axios.get('/companies?country=US')
-	              .then(res => {
-	               vuexContext.commit("set", res.data);             
-	             
-	              })
-		  },
+
+  		 async setInitial({ commit }, data ) {
+
+  		 		commit("set" data );
+
+  		 },
 
 
 	} 

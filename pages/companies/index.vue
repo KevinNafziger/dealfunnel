@@ -94,7 +94,6 @@ methods: {
 
   computed: {
   ...mapState({
-      starter: state => state.company.US,
       firstLoad: state => state.company.firstLoad,
       activeInfo: state => state.company.activeInfo,
       activeTab: state => state.company.activeTab,
@@ -116,7 +115,7 @@ methods: {
 
       if (this.firstLoad == true) {
 
-        return this.starter;
+        return this.mycompanies;
       }
 
       else {
@@ -126,18 +125,27 @@ methods: {
     }    
   
   },
+  mounted() {
+
+         this.$store.dispatch("company/setInitial")
+  }
 
   created() {
 
      this.$nuxt.$on("getCategory", (category) => this.getbyCategory(category));
 
    },
-
-  async fetch({store}) {
-
-    await store.dispatch("company/nuxtServerInit");
-
+  syncData(context) {
+    return context.app.$axios.$get('/companies?country=US')
+      .then(item => {
+        return {
+          mycompanies: item
+        }
+      })
+      .catch(e => context.error(e))
   },
+  head: {
+
 
 };
 
