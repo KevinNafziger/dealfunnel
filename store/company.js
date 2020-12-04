@@ -108,6 +108,7 @@ export const mutations = {
 		state.firstLoad = false;
 	 
 	 },
+
 	 
  }
 
@@ -201,13 +202,15 @@ export const mutations = {
 	              return this.$axios.$get("/companies?country=US")
 	              .then(data => {
 	                vuexContext.commit("set", data);             
+	             
 	              })
 			    }
 			    else {
 				
 				  vuexContext.commit("set");
+			     
 			     }
-	        },   
+	        }  
 	      
 	 },  
 
