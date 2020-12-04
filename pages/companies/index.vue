@@ -63,6 +63,7 @@
   </div>
 </template>
 <script>
+import {mapState} from 'vuex';
 import CompanyTempSearch from '@/components/Company/CompanyTempSearch';
 export default {
   layout: 'raises',
