@@ -77,7 +77,7 @@ export const mutations = {
   	setAI(state, data) {
 
 
-  	 state.AI = data;
+  	 state.ai = data;
      state.activeNewsInfo = data;
   	 state.activeNewsTab = 'AI';	
   	 state.firstNewsLoad =false;
@@ -204,7 +204,7 @@ export const mutations = {
 	setAINoFetch(state) {
 
 
-		state.activeNewsInfo = state.AI;
+		state.activeNewsInfo = state.ai;
 		state.activeNewsTab ='AI';	
 		state.firstNewsLoad =false;
 
