@@ -55,28 +55,37 @@ export default {
           return this.activeArticlesInfo;
         
         }
-
     }, 
     post() {
+    
         return this.posts.find(p => p.id == this.$route.params.id)
-    },
+    }
  },
+
     methods:  {
     firsthalf(item) {
+
       var added_string = this.secondhalf(item).indexOf('/p>');
       return item.blog_entry.slice(0, (item.blog_entry.length /2) + added_string + 3 );
+
     },
+
     secondhalf(tree) {
+
       return tree.blog_entry.slice(tree.blog_entry.length /2,tree.blog_entry.length); 
+
     },
+
     partofsecond(tree) {
+
       var added_string = this.secondhalf(tree).indexOf('/p>');
       return tree.blog_entry.slice(tree.blog_entry.length /2 + added_string + 4,tree.blog_entry.length);  
+
     }
 
   },
 
-}
+};
 </script> 
 
 <style scoped>
