@@ -386,21 +386,9 @@ export const mutations = {
 	     }
 
 	 },
-	 nuxtServerInit(vuexContext, context) {
-		  if (!this.firstPostFetched)
-		  {
-            return this.$axios.$get("/posts?page=1")
-              .then(data => {
-                vuexContext.commit("set", data);
-             })
-		  }
-		  else
-		  {
-			vuexContext.commit("set");
-		  }
-	 },  
+	 
 
- }
+ },
 
  export const actions = {
 
