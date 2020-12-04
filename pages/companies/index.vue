@@ -135,8 +135,9 @@ methods: {
      this.$nuxt.$on("getCategory", (category) => this.getbyCategory(category));
 
    },
-  syncData(context) {
-    return context.app.$axios.$get('/companies?country=US')
+
+  async syncData(context) {
+    await return context.app.$axios.get('/companies?country=US')
       .then(item => {
         return {
           mycompanies: item
@@ -144,7 +145,6 @@ methods: {
       })
       .catch(e => context.error(e))
   },
-
 
 };
 
