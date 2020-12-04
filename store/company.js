@@ -252,7 +252,7 @@ export const mutations = {
 		return state.company.lending.length > 0;
 	  },
 	  
-	  firsFetched() {
+	  firstFetched() {
 	
 		return state.company.US.length > 0;
 	  },
