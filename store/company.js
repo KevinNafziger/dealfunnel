@@ -104,7 +104,7 @@ export const mutations = {
 
 		state.activeInfo = data;
 		state.US = data;
-		state.activeTab ='Fishie';	
+		state.activeTab ='US';	
 		state.firstLoad = false;
 	 
 	 },
