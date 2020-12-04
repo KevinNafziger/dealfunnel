@@ -35,8 +35,7 @@
         </thead>
       <tr style="margin-top:20px;" v-for="company in companies">
         <td>
-            <nuxt-link id="myArticleLinkTag" :to="'/companies/' + company.id " class="mdi mdi-book-open mdi-18px" > {{company.name}}    </nuxt-link>
-          </div>
+            <nuxt-link :to="'/companies/' + company.id " class="mdi mdi-book-open mdi-18px" > {{company.name}}  </nuxt-link>
         </td>
         <td colspan="2" >
           {{company.description}}
