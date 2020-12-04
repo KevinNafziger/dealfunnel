@@ -1,12 +1,10 @@
 <template>
-  <transition appear>
-    <div v-if="building" class="company__descript_indicator" :style="indicatorStyle">
-      <svg viewBox="0 0 96 72" version="1" xmlns="http://www.w3.org/2000/svg">
+    <div v-if="building" class="company_descript" :style="indicatorStyle">
+      
        {{ company.name }}
-      </svg>
+      
       {{ progress }}%
     </div>
-  </transition>
 </template>
 
 <script>
@@ -45,16 +43,7 @@ export default {
    
     companies() {
 
-        if (this.firstLoad == true) {
-
-          return this.starting
-        }
-
-        else {
-
           return this.activeInfo;
-        
-        }
      },
 
     company() {
@@ -68,7 +57,7 @@ export default {
 </script>
 
 <style scoped>
-.company__descript_indicator {
+.company_descript {
   box-sizing: border-box;
   position: fixed;
   font-family: monospace;
@@ -89,14 +78,7 @@ export default {
   opacity: 0;
   transform: translateY(20px);
 }
-svg {
-  display: inline-block;
-  vertical-align: baseline;
-  width: 1.1em;
-  height: 0.825em;
-  position: relative;
-  top: 1px;
-}
+
 </style>
 
 
