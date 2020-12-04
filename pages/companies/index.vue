@@ -127,8 +127,8 @@ methods: {
   },
   mounted() {
 
-         this.$store.dispatch("company/setInitial")
-  }
+         this.$store.dispatch("company/setInitial", this.mycompanies)
+  },
 
   created() {
 
