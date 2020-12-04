@@ -12,6 +12,7 @@
 
 <script>
 import {mapState} from 'vuex';
+
 export default {
   name: 'Company',
   data () {
@@ -23,10 +24,8 @@ export default {
   },
 
   computed: {
-
-    .mapState({
-    
-          startingCompanies: state => state.company.us
+    ...mapState({
+          starting: state => state.company.us
           activeInfo: state =>  state.company.activeInfo,
           firstLoad: state => state.company.firstLoad,
    }),
@@ -44,12 +43,12 @@ export default {
       }
 
     },
-
+   
     companies() {
 
         if (this.firstLoad == true) {
 
-          return this.startingCompanies
+          return this.starting
         }
 
         else {
@@ -101,3 +100,6 @@ svg {
   top: 1px;
 }
 </style>
+
+
+<script>

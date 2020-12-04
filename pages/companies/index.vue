@@ -1,6 +1,9 @@
 <template>
 <div>
-  <div data-v-69296181="" id="top" ><div data-v-69296181="" class="title"><div data-v-69296181="" class="content"><br data-v-69296181=""> <h2 data-v-69296181="">Companies</h2></div></div></div>
+  <div data-v-69296181="" id="top" ><div data-v-69296181="" class="title"><div data-v-69296181="" class="content"><br data-v-69296181=""> <h2 data-v-69296181="">Companies
+<i style="font-size: 13px; text-align:right; margin-left:3px;">{{ filterMessage}} </i>
+  </h2></div></div></div>
+<CompanyTempSearch></CompanyTempSearch>
 <div class="draft-div">
     <table class="table-striped" width="100%">
         <thead class="fixed-head">
@@ -33,7 +36,7 @@
       <tr style="margin-top:20px;" v-for="company in companies">
         <td>
           <div id="myCompanyTag" >
-          {{company.name}}
+         <nuxt-link id="myArticleLinkTag" :to="'/companies/' + company.id " class="mdi mdi-book-open mdi-18px"  > {{company.name}}</nuxt-link>
           </div>
         </td>
         <td colspan="2" >
@@ -60,22 +63,84 @@
   </div>
 </template>
 <script>
+import CompanyTempSearch from '@/components/Companies/CompanyTempSearch';
 export default {
   layout: 'raises',
-  asyncData(context) {
-    return context.app.$axios.$get('/companies?country=US')
-      .then(item => {
-        return {
-          companies: item
-        }
-      })
-      .catch(e => context.error(e))
-  },
   head: {
     title: 'Companies'
   }
 
-};
+methods: {
+
+    getbyCategory: function(category) {
+
+      switch(category) {
+
+        case 'Insurtech':
+           this.$store.dispatch("company/setInsur");
+           break;
+        case 'Blockchain':
+            this.$store.dispatch("company/setBlock");
+            break;
+        case 'Lending':
+            this.$store.dispatch("company/setLend");
+            break;
+        case 'Payments':
+            this.$store.dispatch("company/setPay");
+            break;
+        }
+    },
+
+ },
+
+  computed: {
+  ...mapState({
+      starter: state => state.company.US,
+      firstLoad: state => state.company.firstLoad,
+      activeInfo: state => state.company.activeInfo,
+      activeTab: state => state.company.activeTab,
+   }),
+
+   filterMessage() {
+
+      if (this.firstLoad == true)
+      {
+        return ''
+      }
+      else
+      {
+        return this.activeTab;
+      }
+    },
+
+   companies() 
+
+   {
+      if (this.firstLoad == true)
+      {
+        return this.starter
+      }
+      else
+      {
+        return this.activeTab;
+      }
+
+    },
+    
+  },
+  created()  {
+
+     this.$nuxt.$on("getCategory", (category) => this.getbyCategory(category));
+
+   },
+
+  async fetch({store}) 
+  {
+  
+    await store.dispatch("company/nuxtServerInit");
+  },
+
+},
 </script>
 <style  scoped>
 tr:nth-child(odd) {background: #4f81bd14 !important}
