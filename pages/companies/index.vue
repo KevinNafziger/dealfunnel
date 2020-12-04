@@ -144,7 +144,6 @@ methods: {
       })
       .catch(e => context.error(e))
   },
-  head: {
 
 
 };
