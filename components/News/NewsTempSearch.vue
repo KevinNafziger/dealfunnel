@@ -7,6 +7,10 @@
       <a href="#" v-on:click="showGrouping('Lending')"   class="tagbtn">lending</a>
       <a href="#" v-on:click="showGrouping('Banking')"   class="tagbtn">banking</a>
       <a href="#" v-on:click="showGrouping('Blockchain')" class="tagbtn">blockchain</a>
+      <a href="#" v-on:click="showGrouping('AI')" class="tagbtn">AI</a>
+      <a href="#" v-on:click="showGrouping('M&A')" class="tagbtn">M&A</a>
+      <a href="#" v-on:click="showGrouping('Valuation')" class="tagbtn">Valuation</a>
+
       <a href="#" v-show="showPreviousBtn" class="tagbtn"  v-on:click="changePage('Previous')">Prev</a>
       <a href="#" v-show="showNextBtn" class="tagbtn" v-on:click="changePage('Next')">Next</a>
     </div>

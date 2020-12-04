@@ -64,8 +64,16 @@ export default {
         case 'Payments':
             this.$store.dispatch("news/setPay");
             break;
+        case 'M&A':
+            this.$store.dispatch("news/setMergers");
+            break;
+        case 'Valuation':
+            this.$store.dispatch("raise/setVal"); 
+            break;
+        case 'AI':
+            this.$store.dispatch("raise/setAI"); 
+            break;
         }
-
     },
 
     setPage: function(direction) {
