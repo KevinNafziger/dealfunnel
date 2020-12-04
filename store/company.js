@@ -104,7 +104,7 @@ export const mutations = {
 
 		state.activeInfo = data;
 		state.US = data;
-		state.activeTab ='US';	
+		state.activeTab ='Fishie';	
 		state.firstLoad = false;
 	 
 	 },
@@ -196,7 +196,7 @@ export const mutations = {
 
   		  nuxtServerInit(vuexContext, context) {
 		   
-		   if (this.firstFetch) { 
+		   if (!this.firstCompaniesFetched) { 
 
               return this.$axios.$get("/companies?country=US")
               .then(data => {
@@ -254,6 +254,12 @@ export const mutations = {
 	  firstFetch(state) {
 	
 		return state.firstLoad == true;
+
+	  },
+
+	  firstCompaniesFetched() {
+	
+		return state.company.US.length > 0;
 
 	  },
       
