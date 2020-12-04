@@ -65,6 +65,37 @@ export const mutations = {
 
   	},
 
+  	setMergers(state, data) {
+
+  	 state.mergers = data;
+     state.activeNewsInfo = data;
+  	 state.activeNewsTab = 'M&A';	
+  	 state.firstNewsLoad =false;
+
+  	},
+
+  	setAI(state, data) {
+
+
+  	 state.AI = data;
+     state.activeNewsInfo = data;
+  	 state.activeNewsTab = 'AI';	
+  	 state.firstNewsLoad =false;
+
+  	},
+
+    setVal(state, data) {
+
+
+  	 state.valuation = data;
+     state.activeNewsInfo = data;
+  	 state.activeNewsTab = 'Valuation';	
+  	 state.firstNewsLoad =false;
+
+  	},
+
+
+
 
     setPrevious(state) {
 
@@ -160,8 +191,33 @@ export const mutations = {
 		state.firstNewsLoad =false;
 
 	 },
-	 
 
+	setMergersNoFetch(state) {
+
+
+		state.activeNewsInfo = state.mergers;
+		state.activeNewsTab ='M&A';	
+		state.firstNewsLoad =false;
+
+	 },
+
+	setAINoFetch(state) {
+
+
+		state.activeNewsInfo = state.AI;
+		state.activeNewsTab ='AI';	
+		state.firstNewsLoad =false;
+
+	 },
+
+	 setValNoFetch(state) {
+
+		state.activeNewsInfo = state.valuation;
+		state.activeNewsTab ='Valuation';	
+		state.firstNewsLoad =false;
+
+	 },
+	 
  }
 
  export const actions = {
@@ -225,6 +281,54 @@ export const mutations = {
 		   else
 		   {
 				commit("setLendNoFetch");
+		   }
+  		 
+  		 },
+
+  		 async setMergers({ commit }) {
+
+		   if (!this.mergerNewsFetched)
+		   {	
+  	       		await this.$axios.get('/links?id=M&A')
+           			.then(res => {
+					  commit("setMergers", res.data);
+		         })
+			}
+		   else
+		   {
+				commit("setMergersNoFetch");
+		   }
+  		 
+  		 },
+
+  		 async setAI({ commit }) {
+
+		   if (!this.aiNewsFetched)
+		   {	
+  	       		await this.$axios.get('/links?folder=AI')
+           			.then(res => {
+					  commit("setAI", res.data);
+		         })
+			}
+		   else
+		   {
+				commit("setAINoFetch");
+		   }
+  		 
+  		 },
+
+  		 async setVal({ commit }) {
+
+		   if (!this.valNewsFetched)
+		   {	
+  	       		await this.$axios.get('/links?id=Valuation')
+           			.then(res => {
+					  commit("setVal", res.data);
+		         })
+			}
+		   else
+		   {
+				commit("setValNoFetch");
 		   }
   		 
   		 },
@@ -338,6 +442,25 @@ export const mutations = {
 	
 		return state.news.pages[0].length > 0;
 	  },
+
+	  mergerNewsFetched () {
+	
+		return state.news.mergers.length > 0;
+
+	  },
+
+	  aiNewsFetched () {
+	
+		return state.news.AI.length > 0;
+		
+	  },
+
+	  valNewsFetched () {
+	
+		return state.news.valuation.length > 0;
+	
+	  },
+
       
       firstpage() {
 	
