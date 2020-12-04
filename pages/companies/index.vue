@@ -63,7 +63,7 @@
   </div>
 </template>
 <script>
-import CompanyTempSearch from '@/components/Companies/CompanyTempSearch';
+import CompanyTempSearch from '@/components/Company/CompanyTempSearch';
 export default {
   layout: 'raises',
   head: {
