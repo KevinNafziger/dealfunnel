@@ -9,7 +9,7 @@ export const state = () => ({
   byCity: [],
   byRegion: [],
   byYear: [],
-  US [],
+  US: [],
   activeInfo: [],
   activeTab: 'US',
   activeSegment: 'Country',
