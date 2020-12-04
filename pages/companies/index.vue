@@ -137,7 +137,7 @@ methods: {
    },
 
   async syncData(context) {
-    await return context.app.$axios.get('/companies?country=US')
+    await context.app.$axios.get('/companies?country=US')
       .then(item => {
         return {
           mycompanies: item
