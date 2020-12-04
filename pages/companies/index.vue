@@ -68,7 +68,7 @@ export default {
   layout: 'raises',
   head: {
     title: 'Companies'
-  }
+  },
 
 methods: {
 
@@ -128,19 +128,18 @@ methods: {
     },
     
   },
-  created()  {
+  created() {
 
      this.$nuxt.$on("getCategory", (category) => this.getbyCategory(category));
 
    },
 
-  async fetch({store}) 
-  {
-  
+  async fetch({store}) {
+
     await store.dispatch("company/nuxtServerInit");
   },
 
-},
+};
 </script>
 <style  scoped>
 tr:nth-child(odd) {background: #4f81bd14 !important}
