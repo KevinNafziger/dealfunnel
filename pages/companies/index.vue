@@ -35,7 +35,7 @@
         </thead>
       <tr style="margin-top:20px;" v-for="company in companies">
         <td>
-            <nuxt-link :to="'/companies/' + company.id " class="mdi mdi-book-open mdi-18px" > {{company.name}}  </nuxt-link>
+            <nuxt-link :to="'/companies/' + company.id class="gardient-button" > {{company.name}}  </nuxt-link>
         </td>
         <td colspan="2" >
           {{company.description}}
@@ -359,4 +359,39 @@ ol, ul, dl {
     margin-bottom: 1rem !important;
     display: inherit !important;
 }
+
+.gardient-button {
+   background-image: linear-gradient(200deg, #ffffff 10%, #ffffff 39%, #ffffff 80%);
+   background-size: 400% 400% !important;
+   -webkit-animation: gradient 15s ease infinite !important;
+   animation: gradient 15s ease infinite !important;
+   width: -webkit-fit-content !important;
+   width: -moz-fit-content !important;
+   width: fit-content !important;
+   margin-left: auto !important;
+   margin-right: auto !important;
+   margin-bottom: 20px !important;
+   border-radius: 10px !important;
+   border: none !important;
+   padding: 10px 20px !important;
+   font-family: poppins !important;
+   color: #4f81bd !important;
+   font-size: 12px !important;
+ }
+ .gardient-button:hover {
+   box-shadow: 0px 0px 10px -5px gray;
+ }
+ .center-btn{
+   text-align: -webkit-center;
+   display: flex;
+ }
+ a {
+   color:#4f81bd;
+   font-weight: bold;
+   text-decoration: none;
+ }
+  #myWebLinkTag {
+    display: table !important;
+    margin-top:10px;
+  }
 </style>
