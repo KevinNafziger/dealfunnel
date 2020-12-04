@@ -251,10 +251,10 @@ export const mutations = {
 		return state.company.lending.length > 0;
 	  },
 	  
-	  firstFetch() {
+	  firstFetch(state) {
 	
 		return state.firstLoad == true;
-		
+
 	  },
       
       firstPage() {
