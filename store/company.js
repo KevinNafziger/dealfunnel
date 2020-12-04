@@ -199,7 +199,7 @@ export const mutations = {
 		   
 			   if (this.firstTime) { 
 
-	              return this.$axios.$get("/companies?country=US")
+	              return this.$axios.get('/companies?country=US')
 	              .then(data => {
 	                vuexContext.commit("set", data);             
 	             
