@@ -1,5 +1,4 @@
 export const state = () => ({
-
   insurtech: [],
   blockchain: [],
   payments:[],
@@ -197,7 +196,7 @@ export const mutations = {
 
   		  nuxtServerInit(vuexContext, context) {
 		   
-		   if (!this.firstFetched) { 
+		   if (this.firstFetch) { 
 
               return this.$axios.$get("/companies?country=US")
               .then(data => {
@@ -252,11 +251,11 @@ export const mutations = {
 		return state.company.lending.length > 0;
 	  },
 	  
-	  firstFetched() {
+	  firstFetch() {
 	
-		return state.company.US.length > 0;
+		return state.firstLoad == true;
+		
 	  },
-
       
       firstPage() {
 	
