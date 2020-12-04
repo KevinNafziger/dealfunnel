@@ -68,10 +68,10 @@ export default {
             this.$store.dispatch("news/setMergers");
             break;
         case 'Valuation':
-            this.$store.dispatch("raise/setVal"); 
+            this.$store.dispatch("news/setVal"); 
             break;
         case 'AI':
-            this.$store.dispatch("raise/setAI"); 
+            this.$store.dispatch("news/setAI"); 
             break;
         }
     },
