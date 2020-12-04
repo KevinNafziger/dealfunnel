@@ -196,19 +196,18 @@ export const mutations = {
 
   		  nuxtServerInit(vuexContext, context) {
 		   
-		   if (this.firstTime) { 
+			   if (this.firstTime) { 
 
-              return this.$axios.$get("/companies?country=US")
-              .then(data => {
-                vuexContext.commit("set", data);             
-              })
-		    }
-		    else {
-			
-			  vuexContext.commit("set");
-		   }
-
-	      }   
+	              return this.$axios.$get("/companies?country=US")
+	              .then(data => {
+	                vuexContext.commit("set", data);             
+	              })
+			    }
+			    else {
+				
+				  vuexContext.commit("set");
+			     }
+	        },   
 	      
 	 },  
 
@@ -283,4 +282,4 @@ export const mutations = {
 	 
 	  },	
 
-	}
+}
