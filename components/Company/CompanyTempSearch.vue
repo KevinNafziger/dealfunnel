@@ -18,7 +18,9 @@ export default {
 
   methods: {
    showGrouping: function(category) {
+
       $nuxt.$emit("getCategory", category);
+   }
    },
 };
 </script>
