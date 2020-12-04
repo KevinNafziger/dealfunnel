@@ -198,7 +198,7 @@ export const mutations = {
 
   		 async setInitial({ commit }, data ) {
 
-  		 		commit("set" data );
+  		 		commit("set", data );
 
   		 },
 
