@@ -102,16 +102,27 @@ export const mutations = {
 
 	 set(state, data) {
 
-		state.activeInfo = data;
-		state.US = data;
-		state.activeTab ='US';	
-		state.firstLoad = false;
+	  state.activeInfo = data;
+	  state.US = data;
+	  state.activeTab ='US';	
+	  state.firstLoad = false;
 	 
 	 },
 
-	 
- }
+	 submitSearch(state, data) {
 
+  	   state.activeInfo = data;
+  	   state.firstLoad = false;  		
+
+      },
+
+      setSearchTab(state, topic) {
+
+    	state.activeTab = topic ;
+
+      },
+
+  }
  export const actions = {
 
        	 async setInsur({ commit }) {
@@ -196,22 +207,37 @@ export const mutations = {
   		  },
 
 
-  		 async setInitial({ commit }, data ) {
+           async setInitial({ commit }) {
 
-  		 		commit("set", data );
+	   		 await this.$axios.get('/companies?country=US')
+	      		.then(item => {
+	        		commit("set", item.data);
+	      		})
+ 		    },
 
-  		 },
+  		    async setSearchTab( {commit}, topic) {
 
+          		commit("setSearchTab", topic);
+      	 
+      	    },
 
+  		    async submitSearch( {commit}, topic) {
+			
+			  await this.$axios.get('/companies?term=' + topic)
+              .then( res => {
+          		commit("submitSearch", res.data)
+      	
+      	 	   })
+  		    },	
+	   	
 	} 
 	      
-
 
 	export const getters = {
       
       loadedCompanies(state) {
         
-        return state.company.US;
+        return state.US;
 	  
 	  },
 
@@ -223,7 +249,7 @@ export const mutations = {
 
 	  blockFetched() {
 		
-		return this.state.company.blockchain.length > 0 ;
+		return state.company.blockchain.length > 0 ;
 	  
 	  },
 	  
@@ -233,9 +259,9 @@ export const mutations = {
 	 
 	  },
 
-	  insurFetched() {
+	  insurFetched(state) {
 		 
-		 return state.company.insurtech.length > 0; 
+		 return state.insurtech.length > 0; 
 	  
 	  },
 	  

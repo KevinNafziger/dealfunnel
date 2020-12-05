@@ -1,9 +1,7 @@
 <template>
-    <div v-if="building" class="company_descript" :style="indicatorStyle">
-      
-       {{ company.name }}
-      
-      {{ progress }}%
+    <div  class="company_descript" :style="indicatorStyle">
+      Fish Tree Fish Tree
+      {{ progress }}%   {{company.name }}
     </div>
 </template>
 
@@ -12,48 +10,32 @@ import {mapState} from 'vuex';
 
 export default {
   name: 'Company',
-  data () {
-    return {
+  validate (data) {
 
-      building: true,
-      progress: 0,
-    }
-  },
+      console.log(data)
+      return true
+  }
+
+  data() {
+ return {
+   id: this.$route.params.id,
+  }
+},
 
   computed: {
     ...mapState({
-          starting: state => state.company.US
-          activeInfo: state =>  state.company.activeInfo,
+          activeInfo: state => state.company.activeInfo
           firstLoad: state => state.company.firstLoad,
    }),
 
-    options: () => 
-    ({"position":"bottom-right","backgroundColor":"#2E495E","color":"#00C48D"}),
+   company() {
 
-    indicatorStyle () {
-      const [d1, d2] = this.options.position.split('-')
-      return {
-        [d1]: '20px',
-        [d2]: '20px',
-        'background-color': 'white',
-        color: 'black'
-      }
-
-    },
-   
-    companies() {
-
-          return this.activeInfo;
-     },
-
-    company() {
-
-        return this.companies.find(c => c.id == this.$route.params.id)
-    },
+        return this.activeInfo.find(c => c.id == this.id)
+    }
 
   },
     
-}
+};
 </script>
 
 <style scoped>
@@ -64,7 +46,7 @@ export default {
   padding: 5px 10px;
   border-radius: 5px;
   box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.2);
-  width: 88px;
+  width: 135px;
   z-index: 2147483647;
   font-size: 16px;
   line-height: 1.2rem;

@@ -35,7 +35,7 @@
         </thead>
       <tr style="margin-top:20px;" v-for="company in companies">
         <td>
-            <nuxt-link :to="'/companies/' + company.id " class="gardient-button" > {{company.name}}  </nuxt-link>
+            <nuxt-link :to="'/companies/' + company.id "  > {{company.name}}  </nuxt-link>
         </td>
         <td colspan="2" >
           {{company.description}}
@@ -64,7 +64,6 @@
 import {mapState} from 'vuex';
 import CompanyTempSearch from '@/components/Company/CompanyTempSearch';
 export default {
-  layout: 'raises',
   head: {
     title: 'Companies'
   },
@@ -90,6 +89,13 @@ methods: {
         }
     },
 
+    submitSearch(topic) {
+
+      this.$store.dispatch("company/submitSearch", topic);
+      this.$store.dispatch("/setSearchTab", topic);
+   
+    },
+
  },
 
   computed: {
@@ -101,49 +107,40 @@ methods: {
 
    filterMessage() {
 
-      if (this.firstLoad == true)
-      {
-        return ''
-      }
-      else
-      {
         return this.activeTab;
-      }
     },
 
-   companies() {
+    companies() {
 
-      if (this.firstLoad == true) {
+        return this.activeInfo
+    },
+},
 
-        return this.mycompanies;
+  watch: {
+
+    companies: function () {
+
+      if (this.firstLoad) {
+
+         this.$store.dispatch("company/setInitial");
       }
 
-      else {
-  
-        return this.activeInfo;
-      }
-    }    
-  
-  },
-  mounted() {
+      },
 
-         this.$store.dispatch("company/setInitial", this.mycompanies)
-  },
+    },    
 
   created() {
 
      this.$nuxt.$on("getCategory", (category) => this.getbyCategory(category));
+     this.$nuxt.$on("submitSearch", (topic) => this.submitSearch(topic));
 
    },
 
-  async syncData(context) {
-    return context.app.$axios.$get('/companies?country=US')
-      .then(item => {
-        return {
-          mycompanies: item
-        }
-      })
-      .catch(e => context.error(e))
+   fetch({store}) 
+  {
+
+     store.dispatch("company/setInitial")
+  
   },
 
 };

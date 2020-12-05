@@ -1,13 +1,21 @@
-<template>
+ <template>
  <div>
+  <div class="search-bar-div">
+    <div class="search-div">
+      <input type="text"  name="term" id="term"  v-model="searchMessage" style="margin-right: 10px" width="100%" class="text-field w-input w-col w-col-6" placeholder="search  content">
+        <button class="gardient-button" id="section-10" v-on:click="submitSearch(searchMessage)"  style="margin-left:1px;margin-top:5px;margin-bottom:10px" >
+        <i class="glyphicon glyphicon-search">Search</i>
+      </button>
+    </div>
     <div class="tag-search-div">
       <a href="#" v-on:click="showGrouping('Payments')" class="tagbtn">payments</a>
       <a href="#" v-on:click="showGrouping('Insurtech')"  class="tagbtn">insurtech</a>
       <a href="#" v-on:click="showGrouping('Lending')"   class="tagbtn">lending</a>
       <a href="#" v-on:click="showGrouping('Banking')"   class="tagbtn">banking</a>
       <a href="#" v-on:click="showGrouping('Blockchain')" class="tagbtn">blockchain</a>
+      </div>
     </div>
-  </div>
+</div> 
 </template>
 
 <script>
@@ -15,13 +23,24 @@ import 'vuetify/dist/vuetify.min.css';
 import Vuetify from 'vuetify';
 export default {
   name: 'CompanyTempSearch',
-
+   data () {
+    return {
+      searchMessage: "",
+    }
+  },
   methods: {
    showGrouping: function(category) {
 
       $nuxt.$emit("getCategory", category);
-   }
-   },
+  },
+
+   submitSearch: function(topic) {
+
+      $nuxt.$emit("submitSearch", topic);
+      this.searchMessage = '';
+    }
+  },
+
 };
 </script>
 
