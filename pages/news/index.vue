@@ -21,7 +21,8 @@
                         <em>
                           <span style="margin-right:15px">
                              <a :href="link.url"  target="_blank" style="color:#4286ff">  {{link.publication}} </a>
-                          </span>
+                          </span><br><br>
+                          <div id="myCompanyTag" v-if="link.company_id!= null" class=" mdi mdi-domain mdi-24px plain"><nuxt-link :to="'/companies/' + link.company " style="color:#4286ff" > {{ link.company }}</nuxt-link></div>
                         </em>
                       </div>
                       <br>
@@ -305,3 +306,4 @@ ul {
   width: 100% !important;
 }
 </style>
+

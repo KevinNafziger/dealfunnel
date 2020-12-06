@@ -6,6 +6,12 @@ export const state = () => ({
   payments:[],
   lending: [],
   banking:[],
+  AI: [],
+  regtech: [],
+  healthtech: [],
+  capitalmarkets: [],
+  wealthtech: [],
+  realestate: [],
 
   activeArtInfo: [],
   activeBuildInfo: [],
@@ -52,6 +58,69 @@ export const mutations = {
     }
 
   },
+   
+
+   setCapital(state, data) {
+
+    state.capitalmarkets = data; 
+
+
+    if (state.activeView =='Builder') 
+    {
+   		state.activeBuildInfo = data;
+   		state.activeBuildTab ='Capital Markets';	
+    	state.firstBuildLoad = false;
+    }
+    else if (state.activeView =='Articles')
+    {
+    	state.activeArtInfo = data;
+    	state.activeArtTab ='Capital Markets';	
+    	state.firstArtLoad = false;
+    }
+
+  },
+
+   setWealth(state, data) {
+
+    state.wealthtech = data; 
+
+
+    if (state.activeView =='Builder') 
+    {
+   		state.activeBuildInfo = data;
+   		state.activeBuildTab ='WealthTech';	
+    	state.firstBuildLoad = false;
+    }
+    else if (state.activeView =='Articles')
+    {
+    	state.activeArtInfo = data;
+    	state.activeArtTab ='WealthTech';	
+    	state.firstArtLoad = false;
+    }
+
+  },
+ 
+
+   setReal(state, data) {
+
+    state.realestate = data; 
+
+
+    if (state.activeView =='Builder') 
+    {
+   		state.activeBuildInfo = data;
+   		state.activeBuildTab ='RealEstate';	
+    	state.firstBuildLoad = false;
+    }
+    else if (state.activeView =='Articles')
+    {
+    	state.activeArtInfo = data;
+    	state.activeArtTab ='RealEstate';	
+    	state.firstArtLoad = false;
+    }
+
+  },
+
 
   setBlock(state, data){
 
@@ -92,6 +161,49 @@ export const mutations = {
      }
 
    },
+
+    setReg(state, data){
+
+   	 state.regtech = data;
+
+     if (state.activeView =='Builder')
+     {
+        state.activeBuildInfo = data;
+  	    state.activeBuildTab = 'RegTech';	
+  	    state.firstBuildLoad =false;
+  	 }
+
+  	 else if (state.activeView =='Articles')
+     {
+    	state.activeArtInfo = data;
+    	state.activeArtTab ='RegTech';	
+    	state.firstArtLoad = false;
+     }
+
+   },
+
+
+   setAI(state, data){
+
+   	 state.AI = data;
+
+     if (state.activeView =='Builder')
+     {
+        state.activeBuildInfo = data;
+  	    state.activeBuildTab = 'AI';	
+  	    state.firstBuildLoad =false;
+  	 }
+
+  	 else if (state.activeView =='Articles')
+     {
+    	state.activeArtInfo = data;
+    	state.activeArtTab ='AI';	
+    	state.firstArtLoad = false;
+     }
+
+   },
+
+
 
    setLend(state, data){
 
@@ -224,7 +336,7 @@ export const mutations = {
 	   		state.numBuildPage = 1;	 
 	   		break;
 
-	   	  case "Article":
+	   	  case "Articles":
 	   	    state.activArtInfo = state.pages[0];
    	   		state.activeArtTab = 'Page';
 	   		state.firstArtLoad = false; 
@@ -234,6 +346,7 @@ export const mutations = {
 	   }
 
    },
+
    submitSearch(state, data) {
 
    	   switch(state.activeView) {
@@ -270,7 +383,7 @@ export const mutations = {
 
  	set(state, posts) {
 
-		if (!this.firstPostFetched) {
+		if (!state.pages.lenth > 0) {
 
 			state.pages.push(posts);
 		}
@@ -310,6 +423,106 @@ export const mutations = {
 
 		  }
 	 },
+
+	 setRegNoFetch(state){
+
+		switch(state.activeView) {
+
+   	   	  case "Builder":
+		     state.activeBuildInfo = state.regtech;
+		     state.activeBuildTab = 'RegTech';	
+		     state.firstBuildLoad = false;
+		     break;	
+
+		   case "Articles":
+		     state.activeArtInfo = state.regtech;
+		     state.activeArtTab = 'RegTech';	
+		     state.firstArtLoad = false;
+		     break;	
+
+		  }
+	 },
+
+
+
+	 setCapitalNoFetch(state){
+
+		switch(state.activeView) {
+
+   	   	  case "Builder":
+		     state.activeBuildInfo = state.capitalmarkets;
+		     state.activeBuildTab = 'Capital Markets';	
+		     state.firstBuildLoad = false;
+		     break;	
+
+		   case "Articles":
+		     state.activeArtInfo = state.capitalmarkets;
+		     state.activeArtTab = 'Capital Markets';	
+		     state.firstArtLoad = false;
+		     break;	
+
+		  }
+	 },
+
+
+	 setWealthNoFetch(state){
+
+		switch(state.activeView) {
+
+   	   	  case "Builder":
+		     state.activeBuildInfo = state.wealthtech;
+		     state.activeBuildTab = 'WealthTech';	
+		     state.firstBuildLoad = false;
+		     break;	
+
+		   case "Articles":
+		     state.activeArtInfo = state.wealthtech;
+		     state.activeArtTab = 'WealthTech';	
+		     state.firstArtLoad = false;
+		     break;	
+
+		  }
+	 },
+
+
+	 setRealNoFetch(state){
+
+		switch(state.activeView) {
+
+   	   	  case "Builder":
+		     state.activeBuildInfo = state.realestate;
+		     state.activeBuildTab = 'Real Estate';	
+		     state.firstBuildLoad = false;
+		     break;	
+
+		   case "Articles":
+		     state.activeArtInfo = state.realestate;
+		     state.activeArtTab = 'Real Estate';	
+		     state.firstArtLoad = false;
+		     break;	
+
+		  }
+	 },
+
+	setAINoFetch(state){
+
+		switch(state.activeView) {
+
+   	   	  case "Builder":
+		     state.activeBuildInfo = state.AI;
+		     state.activeBuildTab = 'Artificial Intelligence';	
+		     state.firstBuildLoad = false;
+		     break;	
+
+		   case "Articles":
+		     state.activeArtInfo = state.AI;
+		     state.activeArtTab = 'Artificial Intelligence';	
+		     state.firstArtLoad = false;
+		     break;	
+
+		  }
+	 },
+
 
 	setBlockNoFetch(state) {
 
@@ -365,6 +578,24 @@ export const mutations = {
 			  break;
 	   }
 	},
+
+	setHealthNoFetch(state) {
+
+		switch(state.activeView) {
+
+   	   	    case "Builder":
+			  state.activeBuildInfo = state.healthtech;
+		      state.activeBuildTab = 'HealthTech';	
+		      state.firstBuildLoad = false;
+		      break;
+		    case "Articles":
+		   	  state.activeArtInfo = state.healthtech;
+			  state.activeArtTab = 'HealthTech';	
+			  state.firstArtLoad =false;
+			  break;
+	   }
+	},
+
 
 
 	setBankNoFetch(state) {
@@ -456,6 +687,22 @@ export const mutations = {
   		 
   		 },
 
+  		  async setReg({ commit }) {
+
+		   if (!this.regPostsFetched)
+		   {	
+  	       		await this.$axios.get('/posts?grouping=RegTech')
+           			.then(res => {
+					  commit("setReg", res.data);
+		         })
+			}
+		   else
+		   {
+				commit("setRegNoFetch");
+		   }
+  		 
+  		 },
+
 
   		 async setBank({ commit }) {
 		    
@@ -473,6 +720,94 @@ export const mutations = {
   		 
   		  },
 
+
+  		  async setAI({ commit }) {
+		    
+		    if (!this.AIPostsFetched)
+		   	{	
+  	    		await this.$axios.get('/posts?grouping=AI')
+           			.then(res => {
+          			commit("setAI", res.data);
+			 	})
+		   	} 
+		   	else {
+				
+				commit("setAINoFetch" );
+		    }
+  		 
+  		  },
+
+
+  		  async setHealth({ commit }) {
+		    
+		    if (!this.healthPostsFetched)
+		   	{	
+  	    		await this.$axios.get('/posts?grouping=HealthTech')
+           			.then(res => {
+          			commit("setHealth", res.data);
+			 	})
+		   	} 
+		   	else {
+				
+				commit("setHealthNoFetch" );
+		    }
+  		 
+  		  },
+
+
+  		  async setCapital({ commit }) {
+		    
+		    if (!this.capitalPostsFetched)
+		   	{	
+  	    		await this.$axios.get('/posts?grouping=CapitalMarkets')
+           			.then(res => {
+          			commit("setCapital", res.data);
+			 	})
+		   	} 
+		   	else {
+				
+				commit("setCapitalNoFetch" );
+		    }
+  		 
+  		  },
+
+
+
+  		  async setWealth({ commit }) {
+		    
+		    if (!this.wealthPostsFetched)
+		   	{	
+  	    		await this.$axios.get('/posts?grouping=WealthTech')
+           			.then(res => {
+          			commit("setWealth", res.data);
+			 	})
+		   	} 
+		   	else {
+				
+				commit("setWealthNoFetch" );
+		    }
+  		 
+  		  },
+
+
+
+  		  async setReal({ commit }) {
+		    
+		    if (!this.realPostsFetched)
+		   	{	
+  	    		await this.$axios.get('/posts?grouping=RealEstate')
+           			.then(res => {
+          			commit("setReal", res.data);
+			 	})
+		   	} 
+		   	else {
+				
+				commit("setRealNoFetch" );
+		    }
+  		 
+  		  },
+
+
   		 
   		 async goPrevious({ commit }, pageVal ) {
 	
@@ -482,14 +817,15 @@ export const mutations = {
 
   		 async goNext( {commit}, pageVal) {
 
-			if (this.pageArryLength > pageVal) {
+			if (this.pageArryLength >= pageVal) {
 
 			  commit("setNextNoFetch");
 			}	
 
 			else {
 			  
-			  await this.$axios.get('/posts?page=' + pageVal)
+			  var items = pageVal + 1;
+			  await this.$axios.get('/posts?page=' + items)
                 .then( res => {
 					commit("setNextAndFetch", res.data)	  
 			   })               
@@ -571,6 +907,14 @@ export const mutations = {
 	 
 	  },
 
+
+	  AIPostsFetched() {
+
+	  	return state.posts.AI.length > 0 ;
+	 
+	  },
+
+
 	  insurPostsFetched() {
 		 
 		 return state.posts.insurtech.length > 0; 
@@ -583,10 +927,38 @@ export const mutations = {
 		return state.posts.lending.length > 0;
 	  },
 	  
+
+	  regPostsFetched()  {
+	
+		return state.posts.regtech.length > 0;
+	  },
+
+	  healthPostsFetched()  {
+	
+		return state.posts.healthtech.length > 0;
+	  },
+
 	  firstPostFetched() {
 	
 		return state.posts.pages[0].length > 0;
 	  },
+
+	  wealthPostFetched() {
+	
+		return state.posts.wealthtech.length > 0;
+	  },
+
+
+	  capitalPostFetched() {
+	
+		return state.posts.capitalmarkets.length > 0;
+	  },
+
+	  realPostFetched() {
+	
+		return state.posts.realestate.length > 0;
+	  },
+      
       
       firstpage() {
 	

@@ -36,9 +36,8 @@ methods: {
              this.$store.dispatch("posts/goNext", page); 
              break;
           case 'Last':
-            var page = this.numPage;
             this.$store.dispatch("posts/setView", "Articles");
-            this.$store.dispatch("posts/goLast", page); 
+            this.$store.dispatch("posts/goLast"); 
            break;
        }
     
@@ -76,9 +75,39 @@ methods: {
          break;
 
       case 'Banking':
-        this.$store.dispatch("posts/setView", "Articles");
+         this.$store.dispatch("posts/setView", "Articles");
          this.$store.dispatch("posts/setBank");
          break;
+      case 'AI':
+         this.$store.dispatch("posts/setView", "Articles");
+         this.$store.dispatch("posts/setAI");
+         break;
+
+      case 'RegTech':
+         this.$store.dispatch("posts/setView", "Articles");
+         this.$store.dispatch("posts/setReg");
+         break;
+
+      case 'HealthTech':
+         this.$store.dispatch("posts/setView", "Articles");
+         this.$store.dispatch("posts/setHealth");
+         break;
+
+      case 'CapitalMarkets':
+         this.$store.dispatch("posts/setView", "Articles");
+         this.$store.dispatch("posts/setCapital");
+         break;
+
+      case 'RealEstate':
+         this.$store.dispatch("posts/setView", "Articles");
+         this.$store.dispatch("posts/setReal");
+         break;
+
+      case 'WealthTech':
+         this.$store.dispatch("posts/setView", "Articles");
+         this.$store.dispatch("posts/setWealth");
+         break;
+
       }  
    }, 
 
@@ -112,7 +141,6 @@ computed: {
       },
 
      loadedPosts() {
-    
 
           return this.activeArtInfo;
       }
@@ -126,12 +154,12 @@ computed: {
    },
 
 async fetch({store}) 
-  {
 
-    if (this.first) {
+  {
+       if (this.first) {
        store.dispatch("posts/setView", "Articles"); 
-       await store.dispatch("posts/nuxtServerInit")
-    }   
+       await store.dispatch("posts/nuxtServerInit");  
+       }
   },
 
 } 

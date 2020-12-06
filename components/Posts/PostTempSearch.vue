@@ -15,8 +15,14 @@
       <a href="#" v-on:click="showGrouping('Lending')"   class="tagbtn">lending</a>
       <a href="#" v-on:click="showGrouping('Banking')"   class="tagbtn">banking</a>
       <a href="#" v-on:click="showGrouping('Blockchain')" class="tagbtn">blockchain</a>
+      <a href="#" v-on:click="showGrouping('AI')" class="tagbtn">AI</a>
       <a href="#" v-show="showPreviousBtn" class="tagbtn" v-on:click="changePage('Previous')">Prev</a>
-      <a href="#" v-show="showNextBtn" class="tagbtn" v-on:click="changePage('Next')" >Next</a>
+      <a href="#" v-show="showNextBtn" class="tagbtn" v-on:click="changePage('Next')" >Next</a><br>
+      <a href="#" v-on:click="showGrouping('RegTech')" class="tagbtn">regtech</a>
+      <a href="#" v-on:click="showGrouping('HealthTech')" class="tagbtn">healthtech</a>
+      <a href="#" v-on:click="showGrouping('CapitalMarkets')" class="tagbtn">capitalmarkets</a>
+      <a href="#" v-on:click="showGrouping('WealthTech')" class="tagbtn">wealthtech</a>
+      <a href="#" v-on:click="showGrouping('RealEstate')" class="tagbtn">realestate</a>
     </div>
   </div>
   </client-only>
