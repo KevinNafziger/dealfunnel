@@ -1,10 +1,10 @@
 <template>
 
-<div style="tab-interval:.5in;word-wrap:break-word" class="WordSection1">
+<div style="tab-interval:.5in;word-wrap:break-word; class="WordSection1">
   <div id="kplstl">
     <div class="comp-show-container w-col w-col-12 w-col-medium-12">
       <div style="background-color:white" class="card">
-         <div style="margin-left:10%; margin-top:10%;" class="w-col-5">
+         <div style="margin-left:10%; margin-top:10%; background-color:#E5E5E5;" class="w-col-5">
                 <div class="col-sm-5">
                  <img class="nuxt__build_indicator2" :src="item.logo_item">
                 </div> 
@@ -40,7 +40,7 @@
 <script>
 import {mapState} from 'vuex';
   export default {
-  
+
     methods: {
 
         openItem: function (website) {
