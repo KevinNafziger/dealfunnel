@@ -277,6 +277,7 @@ h4 {
   font-size: 24px;
   line-height: 1.2rem;
   font-style: calibri;
+  background-color: white !important;
 }
 
 
@@ -292,6 +293,7 @@ h4 {
   font-size: 20px;
   line-height: 1.2rem;
   font-style: calibri;
+  background-color: white !important;
 }
 
 
@@ -299,13 +301,14 @@ h4 {
   .nuxt__build_indicator3 {
   box-sizing: border-box;
   font-family: calibri;
- margin: 15px 15px;
+  margin: 15px 15px;
   border-radius: 1px;
   box-shadow: 1px 1px 2px 2px rgba(0,0,0,0.2);
   width: 420px;
   z-index: 3;
   font-size: 19px;
   font-style: calibri;
+    background-color: white !important;
 }
 
 </style>
