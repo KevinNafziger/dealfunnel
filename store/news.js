@@ -95,8 +95,6 @@ export const mutations = {
   	},
 
 
-
-
     setPrevious(state) {
 
 	   if (state.numNewsPage >1)
@@ -152,9 +150,11 @@ export const mutations = {
 		 state.firstNewsLoad = false; 
 		  
 	 },
+
+
 	setInsurNoFetch(state){
 
-		 state.activeNewsrInfo = state.insurtech;
+		 state.activeNewsInfo = state.insurtech;
 		 state.activeNewsTab = 'Insurtech';	
 		 state.firstNewsload = false;	
 
@@ -184,7 +184,6 @@ export const mutations = {
 	},
 
 	setBankNoFetch(state) {
-
 
 		state.activeNewsInfo = state.banking;
 		state.activeNewsTab ='Banking';	
@@ -319,15 +318,14 @@ export const mutations = {
 
   		 async setVal({ commit }) {
 
-		   if (!this.valNewsFetched)
-		   {	
-  	       		await this.$axios.get('/links?id=Valuation')
-           			.then(res => {
-					  commit("setVal", res.data);
-		         })
-			}
-		   else
-		   {
+		   if (!this.valNewsFetched) {
+
+	       	 await this.$axios.get('/links?id=Valuation')
+       		    .then(res => {
+				  commit("setVal", res.data);
+	         })
+		   }
+		   else {
 				commit("setValNoFetch");
 		   }
   		 
@@ -350,7 +348,6 @@ export const mutations = {
   		 
   		  },
 
-  		 
   		 async goPrevious({ commit }, pageVal ) {
 	
 		   commit("setPrevious");
@@ -363,7 +360,6 @@ export const mutations = {
 
 			  commit("setNextNoFetch");
 			}	
-
 			else {
 			  
 			  await this.$axios.get('/links?page=' + pageVal)
@@ -391,7 +387,8 @@ export const mutations = {
 		   else {
 			  vuexContext.commit("set");
 		   }
-	    },   
+
+	      },   
 	      
 	}  
 
