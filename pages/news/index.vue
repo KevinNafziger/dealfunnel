@@ -81,18 +81,17 @@ export default {
        switch(direction) {
 
          case 'Previous':
-            var page = this.numActivePage;
-            page-- ;
+            var page = this.numPage;
             this.$store.dispatch("news/goPrevious", page);
             break;
 
           case 'Next':
-            var page = this.numActivePage;
-            page++ ;
+            var page = this.numPage;
             this.$store.dispatch("news/goNext", page);
             break;
 
           case 'Last':
+            var page = this.numPage;
             this.$store.dispatch("news/goLast", page);
             break;
          }
@@ -101,22 +100,22 @@ export default {
   computed: {
 
   ...mapState({
-      starterNews: state => state.news.pages[0],
-      firstLoad: state => state.news.firstNewsLoad,
+      starter: state => state.news.pages[0],
+      first: state => state.news.firstNewsLoad,
       activeNewsInfo: state => state.news.activeNewsInfo,
       activeTab: state => state.news.activeNewsTab,
-      numActivePage: state => state.news.numNewsPage,
+      numPage: state => state.news.numNewsPage,
    }),
 
    filterMessage() {
 
-      if (this.firstLoad == true)
+      if (this.first == true)
       {
         return ''
       }
       if (this.activeTab == 'Page')
       {
-        return this.activeTab + ' ' + this.numActivePage;
+        return this.activeTab + ' ' + this.numPage;
       }
       else
       {
@@ -128,7 +127,7 @@ export default {
    links() {
       if (this.firstNewsLoad == true)
       {
-        return this.starterNews
+        return this.starter;
       }
       else
       {

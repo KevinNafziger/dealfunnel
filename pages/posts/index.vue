@@ -13,6 +13,7 @@
 </template>
 
 <script>
+
 import PostTempSearch from '@/components/Posts/PostTempSearch';
 import PostList  from  '@/components/Posts/PostList';
 import {mapState} from 'vuex';

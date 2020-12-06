@@ -3,9 +3,9 @@
 <div>
 <div class="WordSection1">
 
-<p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-margin-left:.5pt;text-indent:-.5pt;line-height:109%'><span style='font-size:
-22.0pt;line-height:109%'></span></p>
+    <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+    margin-left:.5pt;text-indent:-.5pt;line-height:109%'><span style='font-size:
+    22.0pt;line-height:109%'></span></p>
 
 </div>
 
@@ -26,6 +26,7 @@ margin-left:5%;line-height:109%;">
    </span>
    <span style="display:inline-block;width:45%; text-align:center;float:right; margin:1%;">  
     <div v-html="partofsecond(post)" ></div>
+
     <p v-if="!(post.logo_url==null)" class=MsoNormal style='margin-bottom:0in; margin-top:01in;'><img width=261 height=154
         id="Picture 389" :src="post.logo_url"></p>
    </span>
@@ -74,11 +75,6 @@ export default {
     }
 
   },
- // async fetch({store}) 
- // {
- // await store.dispatch("posts/getChosenPost", this.$route.params.id)
-  
- // },
 
 
 };

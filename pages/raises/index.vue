@@ -105,7 +105,7 @@ export default {
          break;
       case 'Blockchain':
          this.$store.dispatch("raise/setBlock");
-          this.$store.dispatch("raise/setActiveTab", "Blockchain"); 
+         this.$store.dispatch("raise/setActiveTab", "Blockchain"); 
          break;
       case 'Lending':
          this.$store.dispatch("raise/setLend");
@@ -121,7 +121,6 @@ export default {
          break;
       }  
    }
-
 },
 
 computed: {
@@ -131,6 +130,7 @@ computed: {
           raises: state =>  state.raise.activeRaiseInfo, 
           firstRaiseLoad: state => state.raise.firstRaiseLoad,
    }),
+
     filterMessage() {
       
         if (this.firstRaiseLoad) {
@@ -143,16 +143,16 @@ computed: {
 
     
   },
+  
   created() {
 
-         this.$nuxt.$on("getCategory", (category) => this.getbyCategory(category));
+      this.$nuxt.$on("getCategory", (category) => this.getbyCategory(category));
 
   },  
 
-  async fetch({store}) 
-  {
-  await store.dispatch("raise/nuxtServerInit")
-  
+  async fetch({store}) {
+
+      await store.dispatch("raise/nuxtServerInit")
   },
 
 };

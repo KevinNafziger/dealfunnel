@@ -15,8 +15,6 @@
   </a>
 
 
-
-
 <div class="draft-div">
 
     <table class="table-striped" width="100%">

@@ -6,7 +6,7 @@
       <div style="background-color:white" class="card">
          <div style="margin-left:10%; margin-top:10%;" class="w-col-5">
                 <div class="col-sm-5">
-                 <img  class="nuxt__build_indicator2" :src="item.logo_item">
+                 <img class="nuxt__build_indicator2" :src="item.logo_item">
                 </div> 
                 <div class="col-sm-5">
                    <div class="section-title nuxt__build_indicator">
@@ -15,11 +15,11 @@
                 </div>
                 <div class="col-sm-4">
                     <div class="nuxt__build_indicator3">
-                          <div>{{ item.city }}
+                          <div><b>HQ: </b>{{ item.city }}
                             {{ item.state }} {{item.country}} <br>
                           </div>
-                          <div>Phone:  {{item.phone}}</div>
-                          <div>Website: {{item.website}}</div> 
+                          <div><b>Phone: </b> {{item.phone}}</div>
+                          <div><b>Website: </b><a href="#" v-on:click="openItem( item.website)" > {{item.website}}</a></div> 
                         <div>Founders: 
                          {{ item.founders }}
                         </div>    
@@ -40,6 +40,15 @@
 <script>
 import {mapState} from 'vuex';
   export default {
+  
+    methods: {
+
+        openItem: function (website) {
+
+                window.open(website);
+         }
+    },
+
     computed: {
   ...mapState({
           starter: state => state.company.lending,
