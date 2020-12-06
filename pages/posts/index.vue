@@ -30,11 +30,13 @@ methods: {
             this.$store.dispatch("posts/setView", "Articles");
              this.$store.dispatch("posts/goPrevious", page); 
              break; 
+
           case 'Next':        
              var page = this.numPage;
             this.$store.dispatch("posts/setView", "Articles");
              this.$store.dispatch("posts/goNext", page); 
              break;
+
           case 'Last':
             this.$store.dispatch("posts/setView", "Articles");
             this.$store.dispatch("posts/goLast"); 
@@ -50,7 +52,9 @@ methods: {
       this.$store.dispatch("posts/setSearchTab", topic);
   
    },
-    getbyCategory(category) {
+
+
+   getbyCategory(category) {
 
     switch(category) {
 
@@ -106,6 +110,31 @@ methods: {
       case 'WealthTech':
          this.$store.dispatch("posts/setView", "Articles");
          this.$store.dispatch("posts/setWealth");
+         break;
+
+      case 'Mergers':
+         this.$store.dispatch("posts/setView", "Articles");
+         this.$store.dispatch("posts/setMergers");
+         break;
+
+      case 'Val':
+         this.$store.dispatch("posts/setView", "Articles");
+         this.$store.dispatch("posts/setVal");
+         break;
+
+      case 'Spin':
+         this.$store.dispatch("posts/setView", "Articles");
+         this.$store.dispatch("posts/setSpin");
+         break;
+
+      case 'Boot':
+         this.$store.dispatch("posts/setView", "Articles");
+         this.$store.dispatch("posts/setBoot");
+         break;
+
+      case 'Growth':
+         this.$store.dispatch("posts/setView", "Articles");
+         this.$store.dispatch("posts/setGrowth");
          break;
 
       }  

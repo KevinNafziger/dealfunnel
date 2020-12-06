@@ -22,7 +22,13 @@
       <a href="#" v-on:click="showGrouping('HealthTech')" class="tagbtn">healthtech</a>
       <a href="#" v-on:click="showGrouping('CapitalMarkets')" class="tagbtn">capitalmarkets</a>
       <a href="#" v-on:click="showGrouping('WealthTech')" class="tagbtn">wealthtech</a>
-      <a href="#" v-on:click="showGrouping('RealEstate')" class="tagbtn">realestate</a>
+      <a href="#" v-on:click="showGrouping('RealEstate')" class="tagbtn">realestate</a><br>
+      <a href="#" v-on:click="showGrouping('Growth')" class="tagbtn">growth equity</a>
+      <a href="#" v-on:click="showGrouping('Mergers')" class="tagbtn">M&A</a>
+      <a href="#" v-on:click="showGrouping('Spin')" class="tagbtn">spin- offs</a>
+      <a href="#" v-on:click="showGrouping('Val')" class="tagbtn">valuation</a>
+      <a href="#" v-on:click="showGrouping('Boot')" class="tagbtn">bootstrapped</a>
+
     </div>
   </div>
   </client-only>

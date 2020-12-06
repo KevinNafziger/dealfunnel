@@ -12,6 +12,11 @@ export const state = () => ({
   capitalmarkets: [],
   wealthtech: [],
   realestate: [],
+  bootstrapped: [],
+  valuation: [],
+  growthequity: [],
+  spinoffs: [],
+  mergers: [],
 
   activeArtInfo: [],
   activeBuildInfo: [],
@@ -99,27 +104,131 @@ export const mutations = {
     }
 
   },
+
+
+     setGrowth(state, data) {
+
+    	state.growthequity = data; 
+
+
+	    if (state.activeView =='Builder') 
+	    {
+	   		state.activeBuildInfo = data;
+	   		state.activeBuildTab ='Growth Equity';	
+	    	state.firstBuildLoad = false;
+	    }
+	    else if (state.activeView =='Articles')
+	    {
+	    	state.activeArtInfo = data;
+	    	state.activeArtTab ='Growth Equity';	
+	    	state.firstArtLoad = false;
+	    }
+
+ 	 },
+
+
+ 	  setVal(state, data) {
+
+    	state.valuation = data; 
+
+
+	    if (state.activeView =='Builder') 
+	    {
+	   		state.activeBuildInfo = data;
+	   		state.activeBuildTab ='Valuation';	
+	    	state.firstBuildLoad = false;
+	    }
+	    else if (state.activeView =='Articles')
+	    {
+	    	state.activeArtInfo = data;
+	    	state.activeArtTab ='Valuation';	
+	    	state.firstArtLoad = false;
+	    }
+
+ 	  },
+
+
+ 	 setMergers(state, data) {
+
+    	state.mergers = data; 
+
+
+	    if (state.activeView =='Builder') 
+	    {
+	   		state.activeBuildInfo = data;
+	   		state.activeBuildTab ='M&A';	
+	    	state.firstBuildLoad = false;
+	    }
+	    else if (state.activeView =='Articles')
+	    {
+	    	state.activeArtInfo = data;
+	    	state.activeArtTab ='M&A';	
+	    	state.firstArtLoad = false;
+	    }
+
+ 	 },
  
 
-   setReal(state, data) {
+ 	 setSpin(state, data) {
 
-    state.realestate = data; 
+    	state.spinoffs = data; 
 
 
-    if (state.activeView =='Builder') 
-    {
-   		state.activeBuildInfo = data;
-   		state.activeBuildTab ='RealEstate';	
-    	state.firstBuildLoad = false;
-    }
-    else if (state.activeView =='Articles')
-    {
-    	state.activeArtInfo = data;
-    	state.activeArtTab ='RealEstate';	
-    	state.firstArtLoad = false;
-    }
+	    if (state.activeView =='Builder') 
+	    {
+	   		state.activeBuildInfo = data;
+	   		state.activeBuildTab ='Spin-offs';	
+	    	state.firstBuildLoad = false;
+	    }
+	    else if (state.activeView =='Articles')
+	    {
+	    	state.activeArtInfo = data;
+	    	state.activeArtTab ='Spin-offs';	
+	    	state.firstArtLoad = false;
+	    }
 
-  },
+ 	 },
+
+
+ 	 setVal(state, data) {
+
+    	state.growthequity = data; 
+
+
+	    if (state.activeView =='Builder') 
+	    {
+	   		state.activeBuildInfo = data;
+	   		state.activeBuildTab ='Growth Equity';	
+	    	state.firstBuildLoad = false;
+	    }
+	    else if (state.activeView =='Articles')
+	    {
+	    	state.activeArtInfo = data;
+	    	state.activeArtTab ='Growth EQuity';	
+	    	state.firstArtLoad = false;
+	    }
+
+ 	 },
+
+	 setReal(state, data) {
+
+	    state.realestate = data; 
+
+
+	    if (state.activeView =='Builder') 
+	    {
+	   		state.activeBuildInfo = data;
+	   		state.activeBuildTab ='RealEstate';	
+	    	state.firstBuildLoad = false;
+	    }
+	    else if (state.activeView =='Articles')
+	    {
+	    	state.activeArtInfo = data;
+	    	state.activeArtTab ='RealEstate';	
+	    	state.firstArtLoad = false;
+	    }
+
+	  },
 
 
   setBlock(state, data){
@@ -445,6 +554,106 @@ export const mutations = {
 
 
 
+	 setValNoFetch(state){
+
+		switch(state.activeView) {
+
+   	   	  case "Builder":
+		     state.activeBuildInfo = state.valuation;
+		     state.activeBuildTab = 'Valuation';	
+		     state.firstBuildLoad = false;
+		     break;	
+
+		   case "Articles":
+		     state.activeArtInfo = state.regtech;
+		     state.activeArtTab = 'Valuation';	
+		     state.firstArtLoad = false;
+		     break;	
+
+		  }
+	 },
+
+
+	 setMergersNoFetch(state){
+
+		switch(state.activeView) {
+
+   	   	  case "Builder":
+		     state.activeBuildInfo = state.mergers;
+		     state.activeBuildTab = 'M&A';	
+		     state.firstBuildLoad = false;
+		     break;	
+
+		   case "Articles":
+		     state.activeArtInfo = state.mergers;
+		     state.activeArtTab = 'M&A';	
+		     state.firstArtLoad = false;
+		     break;	
+
+		  }
+	 },
+
+
+	 setBootNoFetch(state){
+
+		switch(state.activeView) {
+
+   	   	  case "Builder":
+		     state.activeBuildInfo = state.bootstrapped;
+		     state.activeBuildTab = 'Bootstrapped';	
+		     state.firstBuildLoad = false;
+		     break;	
+
+		   case "Articles":
+		     state.activeArtInfo = state.bootstrapped;
+		     state.activeArtTab = 'Bootstrapped';	
+		     state.firstArtLoad = false;
+		     break;	
+
+		  }
+	 },
+
+
+	 setSpinNoFetch(state){
+
+		switch(state.activeView) {
+
+   	   	  case "Builder":
+		     state.activeBuildInfo = state.spinoffs;
+		     state.activeBuildTab = 'Spin-offs';	
+		     state.firstBuildLoad = false;
+		     break;	
+
+		   case "Articles":
+		     state.activeArtInfo = state.spinoffs;
+		     state.activeArtTab = 'Spin-offs';	
+		     state.firstArtLoad = false;
+		     break;	
+
+		  }
+	 },
+
+
+	 setGrowthnoFetch(state){
+
+		switch(state.activeView) {
+
+   	   	  case "Builder":
+		     state.activeBuildInfo = state.growthequity;
+		     state.activeBuildTab = 'Growth Equity';	
+		     state.firstBuildLoad = false;
+		     break;	
+
+		  case "Articles":
+		     state.activeArtInfo = state.growthequity;
+		     state.activeArtTab = 'Growth Equity';	
+		     state.firstArtLoad = false;
+		     break;	
+
+		  }
+	 },
+
+
 	 setCapitalNoFetch(state){
 
 		switch(state.activeView) {
@@ -703,6 +912,88 @@ export const mutations = {
   		 
   		 },
 
+  		  async setVal({ commit }) {
+
+			   if (!this.valPostsFetched)
+			   {	
+	  	       		await this.$axios.get('/posts?tag=Valuation')
+	           			.then(res => {
+						  commit("setVal", res.data);
+			         })
+				}
+			   else
+			   {
+					commit("setValNoFetch");
+			   }
+  		 
+  		   },
+
+  		   async setSpin({ commit }) {
+
+			   if (!this.spinPostsFetched)
+			   {	
+	  	       		await this.$axios.get('posts?tag=Spin-Out')
+	           			.then(res => {
+						  commit("setSpin", res.data);
+			         })
+				}
+			   else
+			   {
+					commit("setSpinNoFetch");
+			   }
+  		 
+  		   },
+
+  		   async setBoot({ commit }) {
+
+			   if (!this.bootPostsFetched)
+			   {	
+	  	       		await this.$axios.get('posts?tag=Bootstrapped')
+	           			.then(res => {
+						  commit("setBoot", res.data);
+			         })
+				}
+			   else
+			   {
+					commit("setBootNoFetch");
+			   }
+  		 
+  		   },
+
+
+  		   async setMergers({ commit }) {
+
+			   if (!this.mergerPostsFetched)
+			   {	
+	  	       		await this.$axios.get('posts?tag=M%26A')
+	           			.then(res => {
+						  commit("setMergers", res.data);
+			         })
+				}
+			   else
+			   {
+					commit("setMergersnoFetch");
+			   }
+  		 
+  		   },
+
+
+  		  async setGrowth({ commit }) {
+
+			   if (!this.growthPostsFetched)
+			   {	
+	  	       		await this.$axios.get('/posts?next_round=Growth+Capital')
+	           			.then(res => {
+						  commit("setGrowth", res.data);
+			         })
+				}
+			   else
+			   {
+					commit("setGrowthnoFetch");
+			   }
+  		 
+  		   },
+
 
   		 async setBank({ commit }) {
 		    
@@ -958,6 +1249,35 @@ export const mutations = {
 	
 		return state.posts.realestate.length > 0;
 	  },
+
+	  valPostFetched() {
+	
+		return state.posts.valuation.length > 0;
+	  },
+
+	  mergerPostFetched() {
+	
+		return state.posts.mergers.length > 0;
+	  },
+      
+
+      spinPostFetched() {
+	
+		return state.posts.spinoffs.length > 0;
+	  },
+
+
+	  bootPostFetched() {
+	
+		return state.posts.bootstrapped.length > 0;
+	  },
+
+
+	  growthPostFetched() {
+	
+		return state.posts.growthequity.length > 0;
+	  },
+      
       
       
       firstpage() {

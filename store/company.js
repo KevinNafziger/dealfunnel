@@ -1,4 +1,5 @@
 export const state = () => ({
+	
   insurtech: [],
   blockchain: [],
   payments:[],
@@ -27,7 +28,7 @@ export const mutations = {
 
   	state.activeCompany = item; 
 
-  },
+    },
 
 
    setInsur(state, data) {
@@ -37,7 +38,8 @@ export const mutations = {
    	state.activeTab = 'Insurtech';
     state.firstLoad = false;
    
-   },
+    },
+
 
    setBlock(state, data){
 
@@ -46,7 +48,8 @@ export const mutations = {
     state.activeTab = 'Blockchain';
     state.firstLoad =false;
     
-   },
+    },
+
 
    setPay(state, data){
 
@@ -57,6 +60,7 @@ export const mutations = {
 
   	},
 
+
    setLend(state, data){
 
   	 state.lending = data;
@@ -64,7 +68,8 @@ export const mutations = {
      state.activTab = 'Lending';	
      state.firstLoad =false;
   	 
-   },
+    },
+
 
    setBank(state, data) {
 
@@ -74,6 +79,7 @@ export const mutations = {
   	 state.firstLoad =false;
 
   	},
+
 	
 	setInsurNoFetch(state){
 
@@ -83,26 +89,30 @@ export const mutations = {
 	
 	 },
 
+
 	setBlockNoFetch(state) {
 
 	 state.activeInfo = state.blockchain;
 	 state.activeTab = 'Blockchain';	
-	 state.firstLoad =false;		
-	},
+	 state.firstLoad =false;	
+
+	 },
 
 	setPayNoFetch(state){
 		
 	  state.activeInfo = state.payments;
 	  state.activeTab = 'Payments';	
 	  state.firstLoad = false;
-	},
+
+	 },
 
 	setLendNoFetch(state) {
 
 	  state.activeInfo = state.lending;
       state.activeTab = 'Lending';	
 	  state.firstLoad = false;
-	},
+
+	 },
 
 	setBankNoFetch(state) {
 
@@ -145,7 +155,9 @@ export const mutations = {
 	  state.US2 = data;
 	  state.activeTab ='US Page 2';	
 	  state.firstLoad = false;
+
 	 },
+
 
 	 setUS3(state, data) {
 
@@ -171,7 +183,8 @@ export const mutations = {
 	  state.activeInfo =  state.US2
 	  state.activeTab ='US Page 2';	
 	  state.firstLoad = false;
-	 },
+
+	  },
 
 	 setUS3NoFetch(state) {
 
@@ -195,104 +208,112 @@ export const mutations = {
       },
 
   }
+
  export const actions = {
 
        	 async setInsur({ commit }) {
 
-			if (!this.insurFetched)
-			{
+			if (!this.insurFetched) {
+
 				await this.$axios.get('/companies?category=insurtech')
            		.then(res => {
           			commit("setInsur", res.data);
          		})
 			}
 
-			else
-			{
+			else {
+
 				commit("setInsurNoFetch");
 			}	
+
 		},
+
 
   		 async setBlock({ commit }) {
 
-		   if (!this.blockFetched)
-		   {
+		   if (!this.blockFetched){
+
   	       		await this.$axios.get('/companies?category=blockchain')
            		.then(res => {
           			commit("setBlock", res.data);
          		})
 		   }
-		   else
-			{
+
+		   else {
+
 				commit("setBlockNoFetch");
 			}	
-		},
+		
+		  },
 
-  		 async setPay({ commit }) {
+  		  async setPay({ commit }) {
 
-			if (!this.payFetched)
-			{
+			if (!this.payFetched) {
+
   	       		await this.$axios.get('/companies?category=payments')
            		.then(res => {
 					  commit("setPay", res.data);
 				})
 			}	
 			
-			else	
-			{
+			else {
+
 				commit("setPayNoFetch");
 			}	
   		 
-  		 },
+  		   },
 
-  		 async setLend({ commit }) {
+  		   async setLend({ commit }) {
 
-		   if (!this.lendFetched)
-		   {	
-  	       		await this.$axios.get('/companies?category=lending')
-           			.then(res => {
-					  commit("setLend", res.data);
-		         })
-			}
-		   else
+			   if (!this.lendFetched){
 
-		   {
-				commit("setLendNoFetch");
-		   }
+	  	       		await this.$axios.get('/companies?category=lending')
+	           			.then(res => {
+						  commit("setLend", res.data);
+			         })
+				}
+			    
+			    else {
+
+					commit("setLendNoFetch");
+			    }
   		 
-  		 },
+  		    },
 
-  		 async setBank({ commit }) {
-		    
-		    if (!this.bankFetched)
-		   	{	
-  	    		await this.$axios.get('/companies?category=openbanking')
-           			.then(res => {
-          			commit("setBank", res.data);
-			 	})
-		   	} 
-		   	else {
-				
-				commit("setBankNoFetch" );
-		    }
+
+  		   async setBank({ commit }) {
+			    
+			    if (!this.bankFetched) {
+
+	  	    		await this.$axios.get('/companies?category=openbanking')
+	           			.then(res => {
+	          			commit("setBank", res.data);
+				 	})
+			   	} 
+			   	
+			   	else {
+					
+					commit("setBankNoFetch" );
+			    
+			    }
   		 
-  		  },
+  		    },
 
 
   		    async setInitial({ commit }) {
 
-           	 if (!this.USFetched) {
+	           	 if (!this.USFetched) {
 
-		   		 await this.$axios.get('/companies?country=US')
-		      		.then(item => {
-		        		commit("set", item.data);
-		      		})
-		      }
+			   		 await this.$axios.get('/companies?country=US')
+			      		.then(item => {
+			        		commit("set", item.data);
+			      		})
+			      }
 
-		      else {
-				
-				commit("setInitial1NoFetch" );
-		       }
+			      else {
+					
+					commit("setInitial1NoFetch" );
+			       }
 
  		    },
 
@@ -314,6 +335,7 @@ export const mutations = {
 
  		    },
 
+
  		    async setUS2({ commit }) {
 
 
@@ -330,6 +352,7 @@ export const mutations = {
 				commit("setUS2NoFetch" );
 		       }
  		    },
+
 
  		    async setUS3({ commit }) {
 
@@ -349,6 +372,7 @@ export const mutations = {
  		    },
 
 
+
  		   async asyncData({context}, id ) {
 
 	   		 await context.$axios.$get('/companies?item' + id)
@@ -357,11 +381,13 @@ export const mutations = {
 	      		})
  		    },
 
+
   		    async setSearchTab( {commit}, topic) {
 
           		commit("setSearchTab", topic);
       	 
       	    },
+
 
   		    async submitSearch( {commit}, topic) {
 			
@@ -379,11 +405,14 @@ export const mutations = {
               .then(res => {
                 vuexContext.commit("setUS1", res);
               })
-	       },
+	       
+	         },
+
 	 } 
 
 
 	export const getters = {
+
       
       loadedCompanies(state) {
         
@@ -391,17 +420,20 @@ export const mutations = {
 	  
 	  },
 
+
 	  payFetched() {
 		
 		return state.company.payments.length > 0 ;
 	  
 	  },
 
+
 	  blockFetched() {
 		
 		return state.company.blockchain.length > 0 ;
 	  
 	  },
+
 	  
 	  bankFetched() {
 
@@ -409,16 +441,19 @@ export const mutations = {
 	 
 	  },
 
+
 	  insurFetched(state) {
 		 
 		 return state.insurtech.length > 0; 
 	  
 	  },
+
 	  
 	  lendFetched()  {
 	
 		return state.company.lending.length > 0;
 	  },
+
 	  
 	  firstTime() {
 	
@@ -426,27 +461,32 @@ export const mutations = {
 
 	  },
 
+
 	  firstCompaniesFetched() {
 	
 		return state.company.US.length > 0;
 
 	  },
+
       
       firstPage() {
 	
 		return state.company.US ;
 	
 	  },
+
 	 
 	  insurtech() {
 	
 		return state.company.insurtech;
 	  },
+
 	 
 	  lending() {
 	
 		 return state.company.lending;
 	  },
+
 	  
 	  banking() {
 	
@@ -454,11 +494,13 @@ export const mutations = {
 	 
 	  },
 
+
 	  currCompany: (state, id ) => {
 
 	  	  return state.activeInfo.find(c => c.id == id);
 
 	  },	
+
 
 	  US1Fetched() {
 
@@ -466,10 +508,12 @@ export const mutations = {
 
 	  },
 
+
 	  US2Fetched() {
 
 	  	 return state.company.US2.length > 0; 	
 	  },
+
 
 
 	  US3Fetched() {
@@ -477,9 +521,11 @@ export const mutations = {
 	  	 return state.company.US3.length > 0; 	
 	  },
 
+
 	  USFetched() {
 
 	  	 return state.company.US.length > 0; 	
 	  },
+
 
 }
