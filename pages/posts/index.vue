@@ -25,19 +25,17 @@ methods: {
        switch(direction) {
        
           case 'Previous':
-             var page = this.numForPage;
-             page-- ; 
+             var page = this.numPage;
             this.$store.dispatch("posts/setView", "Articles");
              this.$store.dispatch("posts/goPrevious", page); 
              break; 
           case 'Next':        
-             var page = this.numForPage;
-             page++ ;
+             var page = this.numPage;
             this.$store.dispatch("posts/setView", "Articles");
              this.$store.dispatch("posts/goNext", page); 
              break;
           case 'Last':
-            var page = this.numForPage;
+            var page = this.numPage;
             this.$store.dispatch("posts/setView", "Articles");
             this.$store.dispatch("posts/goLast", page); 
            break;
@@ -87,23 +85,23 @@ methods: {
 computed: {
 
   ...mapState({
-          starterPosts: state => state.posts.pages[0],
-          activeTab: state => state.posts.activeArticleTab,
+          starter: state => state.posts.pages[0],
+          activeTab: state => state.posts.activeArtTab,
           myboard:   state => state.boards.myboard,
-          activeArticlesInfo: state =>  state.posts.activeArticlesInfo,
-          numForPage: state => state.posts.numArticlePage,
-          firstArticleLoad: state => state.posts.firstArticleLoad,
+          activeArtInfo: state =>  state.posts.activeArtInfo,
+          numPage: state => state.posts.numArtPage,
+          first: state => state.posts.firstArtLoad,
    }),
 
       filterMessage() {
       
-        if (this.firstArticleLoad == true) {
+        if (this.first == true) {
 
           return ''
         }
         if (this.activeTab == 'Page') {
           
-          return this.activeTab + ' ' + this.numForPage;
+          return this.activeTab + ' ' + this.numPage;
         }
         else {
 
@@ -114,17 +112,8 @@ computed: {
 
      loadedPosts() {
     
-        if (this.firstArticleLoad == true) {
 
-          return this.starterPosts
-        }
-
-        else {
-
-          return this.activeArticlesInfo;
-        
-        }
-
+          return this.activeArtInfo;
       }
   },     
   
@@ -137,8 +126,11 @@ computed: {
 
 async fetch({store}) 
   {
-  await store.dispatch("posts/nuxtServerInit")
-  
+
+    if (this.first) {
+       store.dispatch("posts/setView", "Articles"); 
+       await store.dispatch("posts/nuxtServerInit")
+    }   
   },
 
 } 

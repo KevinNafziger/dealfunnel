@@ -8,15 +8,27 @@ export const state = () => ({
   byCity: [],
   byRegion: [],
   byYear: [],
+  US1: [],
+  US2: [],
+  US3: [],
   US: [],
+  activeCompany: [],
   activeInfo: [],
-  activeTab: 'US',
+  activeTab: 'Lending',
   activeSegment: 'Country',
   firstLoad: true,
 
 })
 
 export const mutations = {
+
+
+   setCompany(state, item) {
+
+  	state.activeCompany = item; 
+
+  },
+
 
    setInsur(state, data) {
 
@@ -104,7 +116,67 @@ export const mutations = {
 
 	  state.activeInfo = data;
 	  state.US = data;
-	  state.activeTab ='US';	
+	  state.activeTab ='US ';	
+	  state.firstLoad = false;
+	 
+	 },
+
+	 setNoFetch(state) {
+
+	  state.activeInfo = state.US;
+	  state.activeTab ='US ';	
+	  state.firstLoad = false;
+
+	 },
+
+	 setUS1(state, data) {
+
+	  state.activeInfo = data;
+	  state.US1 = data;
+	  state.activeTab ='US Page 1';	
+	  state.firstLoad = false;
+	 
+	 },
+
+
+	 setUS2(state, data) {
+
+	  state.activeInfo = data;
+	  state.US2 = data;
+	  state.activeTab ='US Page 2';	
+	  state.firstLoad = false;
+	 },
+
+	 setUS3(state, data) {
+
+	  state.activeInfo = data;
+	  state.US3 = data;
+	  state.activeTab ='US Page 3';	
+	  state.firstLoad = false;
+	 
+	 },
+
+
+	 setUS1NoFetch(state) {
+
+	  state.activeInfo =  state.US1 ;
+	  state.activeTab ='US Page 1';	
+	  state.firstLoad = false;
+	 
+	 },
+
+
+	 setUS2NoFetch(state) {
+
+	  state.activeInfo =  state.US2
+	  state.activeTab ='US Page 2';	
+	  state.firstLoad = false;
+	 },
+
+	 setUS3NoFetch(state) {
+
+	  state.activeInfo = state.US3
+	  state.activeTab ='US Page 3';	
 	  state.firstLoad = false;
 	 
 	 },
@@ -207,11 +279,81 @@ export const mutations = {
   		  },
 
 
-           async setInitial({ commit }) {
+  		    async setInitial({ commit }) {
 
-	   		 await this.$axios.get('/companies?country=US')
+           	 if (!this.USFetched) {
+
+		   		 await this.$axios.get('/companies?country=US')
+		      		.then(item => {
+		        		commit("set", item.data);
+		      		})
+		      }
+
+		      else {
+				
+				commit("setInitial1NoFetch" );
+		       }
+
+ 		    },
+
+
+           async setUS1({ commit }) {
+
+           	 if (!this.US1Fetched) {
+
+		   		 await this.$axios.get('/companies?US=1')
+		      		.then(item => {
+		        		commit("setUS1", item.data);
+		      		})
+		      }
+
+		      else {
+				
+				commit("setUS1NoFetch" );
+		       }
+
+ 		    },
+
+ 		    async setUS2({ commit }) {
+
+
+           	 if (!this.US2Fetched) {	
+
+	   		 await this.$axios.get('/companies?US=2')
 	      		.then(item => {
-	        		commit("set", item.data);
+	        		commit("setUS2", item.data);
+	      		})
+	      	 }
+
+	      	 else {
+				
+				commit("setUS2NoFetch" );
+		       }
+ 		    },
+
+ 		    async setUS3({ commit }) {
+
+
+           	 if (!this.US2Fetched) {
+
+	   		 await this.$axios.get('/companies?US=3')
+	      		.then(item => {
+	        		commit("setUS3", item.data);
+	      		})
+ 		     }
+
+ 		     else {
+				
+				commit("setUS3NoFetch" );
+		       }
+ 		    },
+
+
+ 		   async asyncData({context}, id ) {
+
+	   		 await context.$axios.$get('/companies?item' + id)
+	      		.then(item => {
+	        		commit("set", item);
 	      		})
  		    },
 
@@ -229,9 +371,17 @@ export const mutations = {
       	
       	 	   })
   		    },	
-	   	
-	} 
-	      
+
+
+  		    nuxtServerInit(vuexContext, context) {
+		   
+               return this.$axios.$get("/companies?US=1")
+              .then(res => {
+                vuexContext.commit("setUS1", res);
+              })
+	       },
+	 } 
+
 
 	export const getters = {
       
@@ -302,6 +452,34 @@ export const mutations = {
 	
 		return state.company.banking;
 	 
+	  },
+
+	  currCompany: (state, id ) => {
+
+	  	  return state.activeInfo.find(c => c.id == id);
+
 	  },	
+
+	  US1Fetched() {
+
+	  	 return state.company.US1.length > 0; 	
+
+	  },
+
+	  US2Fetched() {
+
+	  	 return state.company.US2.length > 0; 	
+	  },
+
+
+	  US3Fetched() {
+
+	  	 return state.company.US3.length > 0; 	
+	  },
+
+	  USFetched() {
+
+	  	 return state.company.US.length > 0; 	
+	  },
 
 }

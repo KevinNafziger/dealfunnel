@@ -49,11 +49,11 @@ export default {
    },
    computed: {
   ...mapState({
-      numActivePage: state => state.posts.numBuildPage,
+      numPage: state => state.posts.numBuildPage,
       activeTab: state => state.posts.activeBuildTab,
    }),
     showPreviousBtn() {
-        if (this.numActivePage >= 2 && (this.activeTab == 'Page' || this.activeTab =='All'))
+        if (this.numPage >= 2 && (this.activeTab == 'Page' || this.activeTab =='All'))
         {
            return true;
         }

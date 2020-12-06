@@ -19,7 +19,7 @@ margin-left:5%;line-height:109%;">
 
 
   <p  class='MsoNormal' style='margin-top:70px;margin-bottom:60px; text-indent:-.1pt;
-  line-height:109%;'><b><span  " style='line-height:109%; margin-left: 3%; font-size:16pt;'>{{post.title }}</span></b></p>
+  line-height:109%;'><b><span style='line-height:109%; margin-left: 3%; font-size:16pt;'>{{post.title }}</span></b></p>
 
    <span style="display:inline-block;width:45%;text-align:center;float:left; margin:1%;">  
     <div v-html="firsthalf(post)" ></div>
@@ -39,29 +39,19 @@ import {mapState} from 'vuex';
 export default {
   computed: {
   ...mapState({
-          starterposts: state => state.posts.pages[0],
-          activeArticlesInfo: state =>  state.posts.activeArticlesInfo,
-          firstArticleLoad: state => state.posts.firstArticleLoad,
+  
+          activeArtInfo: state =>  state.posts.activeArtInfo,
    }),
     posts() {
 
-        if (this.firstArticleLoad == true) {
-
-          return this.starterPosts
-        }
-
-        else {
-
-          return this.activeArticlesInfo;
-        
-        }
+          return this.activeArtInfo;
     }, 
     post() {
     
         return this.posts.find(p => p.id == this.$route.params.id)
     }
  },
-
+ 
     methods:  {
     firsthalf(item) {
 
@@ -84,6 +74,12 @@ export default {
     }
 
   },
+ // async fetch({store}) 
+ // {
+ // await store.dispatch("posts/getChosenPost", this.$route.params.id)
+  
+ // },
+
 
 };
 </script> 

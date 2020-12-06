@@ -48,11 +48,11 @@ export default {
    },
    computed: {
   ...mapState({
-      numActivePage: state => state.posts.numArticlePage,
-      activeTab: state => state.posts.activeArticleTab,
+      numPage: state => state.posts.numArtPage,
+      activeTab: state => state.posts.activeArtTab,
    }),
     showPreviousBtn() {
-        if (this.numActivePage >= 2 && (this.activeTab == 'Page' || this.activeTab =='All'))
+        if (this.numPage >= 2 && (this.activeTab == 'Page' || this.activeTab =='All'))
         {
            return true;
         }

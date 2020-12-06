@@ -1,63 +1,64 @@
 <template>
 <div>
-  <div data-v-69296181="" id="top" ><div data-v-69296181="" class="title"><div data-v-69296181="" class="content"><br data-v-69296181=""> <h2 data-v-69296181="">Companies
-<i style="font-size: 13px; text-align:right; margin-left:3px;">{{ filterMessage}} </i>
-  </h2></div></div></div>
-<CompanyTempSearch></CompanyTempSearch>
-<div class="draft-div">
-    <table class="table-striped" width="100%">
-        <thead class="fixed-head">
-            <th>
-          <strong><span class="mdi mdi-calendar"></span>
-            <h3>Company</h3></strong>
-          </th>
-          <th colspan="2" class="participating-td">
-            <strong><h3>About</h3></strong>
-          </th>
-          <th>
-          <strong><span class="mdi mdi-cash-usd-outline"></span>
-            <h3>Website</h3></strong>
-          </th>
-          <th>
-            <strong><span class="mdi mdi-account-star"></span>
-              <h3>City</h3></strong>
-          </th>
-          <th>
-            <strong><span class="mdi mdi-account-multiple-plus"></span>
-              <h3>Category</h3></strong>
-          </th>
-          <th>
-            <strong><span class="mdi mdi-earth"></span><h3>Country</h3></strong>
-          </th>
-          <th>
-            <strong><span class="mdi mdi-earth"></span><h3>Founded</h3></strong>
-          </th>
-        </thead>
-      <tr style="margin-top:20px;" v-for="company in companies">
-        <td>
-            <nuxt-link :to="'/companies/' + company.id "  > {{company.name}}  </nuxt-link>
-        </td>
-        <td colspan="2" >
-          {{company.description}}
-        </td>
-        <td>
-           <a :href="company.website"  target="_blank" style="color:#4286ff">  {{company.website}} </a>
-        </td>
-        <td>
-           {{company.city}}
-        </td>
-        <td>
-            {{company.category}}
-        </td>
-        <td>
-          {{company.country}}
-        </td>
-        <td>
-          {{company.founding_yr}}
-        </td>
-      </tr>
-  </table>
-  </div>
+        <div data-v-69296181="" id="top" ><div data-v-69296181="" class="title"><div data-v-69296181="" class="content"><br data-v-69296181=""> <h2 data-v-69296181="">Companies
+      <i style="font-size: 13px; text-align:right; margin-left:3px;">{{ filterMessage}} </i>
+        </h2></div></div></div>
+      <CompanyTempSearch></CompanyTempSearch>
+      <div class="draft-div">
+          <table class="table-striped" width="100%">
+              <thead class="fixed-head">
+                  <th>
+                <strong><span class="mdi mdi-calendar"></span>
+                  <h3>Company</h3></strong>
+                </th>
+                <th colspan="2"><strong><span class="mdi mdi-earth"></span>
+                  <h3>About</h3></strong>
+                </th>
+                <th>
+                <strong><span class="mdi mdi-cash-usd-outline"></span>
+                  <h3>Website</h3></strong>
+                </th>
+                <th>
+                  <strong><span class="mdi mdi-account-star"></span>
+                    <h3>City</h3></strong>
+                </th>
+                <th>
+                  <strong><span class="mdi mdi-account-multiple-plus"></span>
+                    <h3>Category</h3></strong>
+                </th>
+                <th>
+                  <strong><span class="mdi mdi-earth"></span><h3>Country</h3></strong>
+                </th>
+                <th>
+                  <strong><span class="mdi mdi-earth"></span><h3>Founded</h3></strong>
+                </th>
+              </thead>
+            <tr style="margin-top:20px;" v-for="company in companies">
+              <td>
+                  <nuxt-link :to="'/companies/' + company.name " > {{company.name}}  </nuxt-link>
+              </td>
+              <td colspan="2" >
+                {{company.description}}
+              </td>
+              <td>
+                 <a :href="company.website"  target="_blank" style="color:#4286ff">  {{company.website}} </a>
+              </td>
+              <td>
+                 {{company.city}}
+              </td>
+              <td>
+                  {{company.category}}
+              </td>
+              <td>
+                {{company.country}}
+              </td>
+              <td>
+                {{company.founding_yr}}
+              </td>
+            </tr>
+        </table>
+        </div>
+    
   </div>
 </template>
 <script>
@@ -89,6 +90,31 @@ methods: {
         }
     },
 
+
+   changePage: function(direction) {
+
+       switch(direction) {
+       
+          case 'Previous':
+             if (this.activeTab == 'US Page 2')  {
+                this.$store.dispatch("company/setUS1"); 
+             }
+            else {
+                this.$store.dispatch("company/setUS2"); 
+              }
+              break; 
+           case 'Next':        
+             if (this.activeTab == 'US Page 1' || this.activeTab == 'US '  ) {
+                this.$store.dispatch("company/setUS2")
+             } 
+            else {
+                this.$store.dispatch("company/setUS3"); 
+             }
+             break;
+       }
+    
+    }, 
+
     submitSearch(topic) {
 
       this.$store.dispatch("company/submitSearch", topic);
@@ -96,12 +122,19 @@ methods: {
    
     },
 
+    filteredCompany(id)
+     {
+        this.showMain = false;
+        this.showProfile = true;
+        return this.commpanies.find(c => c.id == id);
+     },
+
  },
 
   computed: {
   ...mapState({
       firstLoad: state => state.company.firstLoad,
-      activeInfo: state => state.company.activeInfo,
+      companies: state => state.company.activeInfo,
       activeTab: state => state.company.activeTab,
    }),
 
@@ -109,40 +142,34 @@ methods: {
 
         return this.activeTab;
     },
-
-    companies() {
-
-        return this.activeInfo
-    },
 },
 
-  watch: {
+  //watch: {
 
-    companies: function () {
+  // companies: function () {
 
-      if (this.firstLoad) {
+    // if (this.firstLoad) {
 
-         this.$store.dispatch("company/setInitial");
-      }
+    //    this.$store.dispatch("company/setUS1");
+   // }
 
-      },
+   //  },
 
-    },    
+  // },    
 
   created() {
 
      this.$nuxt.$on("getCategory", (category) => this.getbyCategory(category));
      this.$nuxt.$on("submitSearch", (topic) => this.submitSearch(topic));
+     this.$nuxt.$on("changePage", (direction) => this.changePage(direction));
 
    },
 
-   fetch({store}) 
-  {
-
-     store.dispatch("company/setInitial")
+   async fetch({store}) {
   
-  },
+   await store.dispatch("company/setLend");
 
+   },
 };
 
 </script>

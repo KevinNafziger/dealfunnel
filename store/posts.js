@@ -7,19 +7,19 @@ export const state = () => ({
   lending: [],
   banking:[],
 
-  activeArticlesInfo: [],
-  activeBuilderInfo: [],
+  activeArtInfo: [],
+  activeBuildInfo: [],
   
-  activeArticleTab: 'All',
+  activeArtTab: 'All',
   activeBuildTab:  'All',
 
-  activeView: '',
+  activeView: 'Articles',
   
   numBuildPage: 1,
-  numArticlePage: 1,
+  numArtPage: 1,
 
   firstBuildLoad: true,
-  firstArticleLoad: true,
+  firstArtLoad: true,
 
 })
 
@@ -40,15 +40,15 @@ export const mutations = {
 
     if (state.activeView =='Builder') 
     {
-   		state.activeBuilderInfo = data;
+   		state.activeBuildInfo = data;
    		state.activeBuildTab ='Insurtech';	
     	state.firstBuildLoad = false;
     }
     else if (state.activeView =='Articles')
     {
-    	state.activeArticlesInfo = data;
-    	state.activeArticleTab ='Insurtech';	
-    	state.firstArticleLoad = false;
+    	state.activeArtInfo = data;
+    	state.activeArtTab ='Insurtech';	
+    	state.firstArtLoad = false;
     }
 
   },
@@ -59,16 +59,16 @@ export const mutations = {
 
   	if (state.activeView =='Builder')
     {
-  		state.activeBuilderInfo = data;
+  		state.activeBuildInfo = data;
        	state.activeBuildTab = 'Blockchain';
        	state.firstBuildLoad =false;
     }
 
     else if (state.activeView =='Articles')
     {
-    	state.activeArticlesInfo = data;
-    	state.activeArticleTab ='Blockchain';	
-    	state.firstArticleLoad = false;
+    	state.activeArtInfo = data;
+    	state.activeArtTab ='Blockchain';	
+    	state.firstArtLoad = false;
     }
 
    },
@@ -79,16 +79,16 @@ export const mutations = {
 
      if (state.activeView =='Builder')
      {
-        state.activeBuilderInfo = data;
+        state.activeBuildInfo = data;
   	    state.activeBuildTab = 'Payments';	
   	    state.firstBuildLoad =false;
   	 }
 
   	 else if (state.activeView =='Articles')
      {
-    	state.activeArticlesInfo = data;
-    	state.activeArticleTab ='Payments';	
-    	state.firstArticleLoad = false;
+    	state.activeArtInfo = data;
+    	state.activeArtTab ='Payments';	
+    	state.firstArtLoad = false;
      }
 
    },
@@ -99,16 +99,16 @@ export const mutations = {
 
   	 if (state.activeView =='Builder')
      {
-        state.activeBuilderInfo = data;
+        state.activeBuildInfo = data;
   	    state.activeBuildTab = 'Lending';	
   	    state.firstBuildLoad =false;
   	 }
 
   	 else if (state.activeView =='Articles')
      {
-    	state.activeArticlesInfo = data;
-    	state.activeArticleTab ='Lending';	
-    	state.firstArticleLoad = false;
+    	state.activeArtInfo = data;
+    	state.activeArtTab ='Lending';	
+    	state.firstArtLoad = false;
      }
 
    },
@@ -119,16 +119,16 @@ export const mutations = {
 
    	 if (state.activeView =='Builder')
      {
-        state.activeBuilderInfo = data;
+        state.activeBuildInfo = data;
   	    state.activeBuildTab = 'Banking';	
   	    state.firstBuildLoad =false;
   	 }
 
   	 else if (state.activeView =='Articles')
      {
-    	state.activeArticlesInfo = data;
-    	state.activeArticleTab ='Banking';	
-    	state.firstArticleLoad = false;
+    	state.activeArtInfo = data;
+    	state.activeArtTab ='Banking';	
+    	state.firstArtLoad = false;
      }
    	 	
    },
@@ -146,23 +146,23 @@ export const mutations = {
 			{
 			   state.numBuildPage = 1;
 			}
-   	   		state.activeBuilderInfo = state.pages[state.numBuildPage];
+   	   		state.activeBuildInfo = state.pages[state.numBuildPage];
    	   		state.activeBuildTab = 'Page';
   	   		state.firstBuildLoad =false;
   	   		break;
 
      	case "Articles":
-     		if (state.numArticlePage >1)
+     		if (state.numArtPage >1)
 	 	    { 
-	 	      state.numArticlePage--;
+	 	      state.numArtPage--;
 	        }
 			else
 			{
-			   state.numArticlePage = 1;
+			   state.numArtPage = 1;
 			}
-   	   		state.activeArticlesInfo = state.pages[state.numArticlePage];
-   	   		state.activeArticleTab = 'Page';
-  	   		state.firstArticleLoad =false;
+   	   		state.activeArtInfo = state.pages[state.numArtPage];
+   	   		state.activeArtTab = 'Page';
+  	   		state.firstArtLoad =false;
   	   		break;
   	   	 }
  
@@ -175,17 +175,17 @@ export const mutations = {
       	case "Builder":
    	  		state.numBuildPage++ ;
    	   		state.pages[state.pages.length]= data;
-   	   		state.activeBuilderInfo = data;
+   	   		state.activeBuildInfo = data;
    	   		state.activeBuildTab = 'Page';
   	   		state.firstBuildLoad =false;  
   	   		break;
 
   	    case "Articles":
-  	    	state.numArticlePage++ ;
+  	    	state.numArtPage++ ;
    	   		state.pages[state.pages.length]=data;
-   	   		state.activeArticlesInfo = data;
-   	   		state.activeArticleTab = 'Page';
-  	   		state.firstArticleLoad =false;  
+   	   		state.activeArtInfo = data;
+   	   		state.activeArtTab = 'Page';
+  	   		state.firstArtLoad =false;  
   	   		break;
   	   }  
    
@@ -197,16 +197,16 @@ export const mutations = {
 
    	   	  case "Builder":
 	  		state.numBuildPage++ ;	
-	  		state.activeBuilderInfo = state.pages[state.numBuildPage];
+	  		state.activeBuildInfo = state.pages[state.numBuildPage];
 	  		state.activeBuildTab = 'Page';
      	    state.firstBuildLoad =false;
      	    break;
 
    		  case "Articles":
-   		    state.numArticlePage++ ;	
-	  		state.activeArticlesInfo = state.pages[state.numArticlePage];
-	  		state.activeArticleTab = 'Page';
-     	    state.firstArticleLoad =false;
+   		    state.numArtPage++ ;	
+	  		state.activeArtInfo = state.pages[state.numArtPage];
+	  		state.activeArtTab = 'Page';
+     	    state.firstArtLoad =false;
      	    break;
      	}
 
@@ -218,17 +218,17 @@ export const mutations = {
    	  switch(state.activeView) {
 
    	   	  case "Builder":
-   	   		state.activeBuilderInfo = state.pages[0];
+   	   		state.activeBuildInfo = state.pages[0];
    	   		state.activeBuildTab = 'Page';
 	   		state.firstBuildLoad = false; 
 	   		state.numBuildPage = 1;	 
 	   		break;
 
 	   	  case "Article":
-	   	    state.activArticlesInfo = state.pages[0];
-   	   		state.activeArticleTab = 'Page';
-	   		state.firstArticleLoad = false; 
-	   		state.numArticlePage = 1;	 
+	   	    state.activArtInfo = state.pages[0];
+   	   		state.activeArtTab = 'Page';
+	   		state.firstArtLoad = false; 
+	   		state.numArtPage = 1;	 
 	   		break;
 
 	   }
@@ -239,31 +239,31 @@ export const mutations = {
    	   switch(state.activeView) {
 
    	   	  case "Builder":
-   	   		state.activeBuilderInfo = data;
+   	   		state.activeBuildInfo = data;
   	   		state.firstBuildLoad = false;  		
-  	   		state.activeBuilderTab = topic;
+  	   		state.activeBuildTab = topic;
   	   		break;
 
   	   	   case "Articles":
-  	   	    state.activeArticlesInfo = data;
-  	   		state.firstArticleLoad = false;  		
-  	   		state.activeArticleTab = topic;
+  	   	    state.activeArtInfo = data;
+  	   		state.firstArtLoad = false;  		
+  	   		state.activeArtTab = topic;
   	   		break;
   	    }
 
     },
 
-    setSearchTab(state) {
+    setSearchTab(state, topic) {
 
 
     	if (state.activeView == 'Builder') {
 
-    		state.activeBuilderTab = topic ;
+    		state.activeBuildTab = topic ;
     	}
 
     	else if (state.activeView == 'Articles') {
 
-    		state.activeArticleTab = topic ;
+    		state.activeArtTab = topic ;
     	}
 
     },
@@ -278,15 +278,15 @@ export const mutations = {
 		switch(state.activeView) {
 
    	   	  case "Builder":
-		  	state.activeBuilderInfo = state.pages[0];
+		  	state.activeBuildInfo = state.pages[0];
 		  	state.numBuildPage = 1;
 		  	state.firstBuildLoad = false; 
 		  	break;
 
 		  case "Articles":
-		    state.activeArticlesInfo = state.pages[0];
-		  	state.numArticlePage = 1;
-		  	state.firstArticleLoad = false; 
+		    state.activeArtInfo = state.pages[0];
+		  	state.numArtPage = 1;
+		  	state.firstArtLoad = false; 
 		  	break;
 
 		}     
@@ -297,15 +297,15 @@ export const mutations = {
 		switch(state.activeView) {
 
    	   	  case "Builder":
-		     state.activeBuilderInfo = state.insurtech;
+		     state.activeBuildInfo = state.insurtech;
 		     state.activeBuildTab = 'Insurtech';	
 		     state.firstBuildLoad = false;
 		     break;	
 
 		   case "Articles":
-		     state.activeArticlesInfo = state.insurtech;
-		     state.activeArticleTab = 'Insurtech';	
-		     state.firstArticleLoad = false;
+		     state.activeArtInfo = state.insurtech;
+		     state.activeArtTab = 'Insurtech';	
+		     state.firstArtLoad = false;
 		     break;	
 
 		  }
@@ -316,15 +316,15 @@ export const mutations = {
 		switch(state.activeView) {
 
    	   	  case "Builder":
-			state.activeBuilderInfo = state.blockchain;
+			state.activeBuildInfo = state.blockchain;
 			state.activeBuildTab = 'Blockchain';	
 			state.firstBuildLoad =false;
 			break;
 
 		  case "Articles":	
-		  	state.activeArticlesInfo = state.blockchain;
-			state.activeArticleTab = 'Blockchain';	
-			state.firstArticleLoad =false;
+		  	state.activeArtInfo = state.blockchain;
+			state.activeArtTab = 'Blockchain';	
+			state.firstArtLoad =false;
 			break;
 	 	 
 	 	 }
@@ -335,15 +335,15 @@ export const mutations = {
 		switch(state.activeView) {
 
    	   	  case "Builder":
-		     state.activeBuilderInfo = state.payments;
+		     state.activeBuildInfo = state.payments;
 		     state.activeBuildTab = 'Payments';	
 		     state.firstBuildLoad = false;
 		     break;	
 
 		   case "Articles":
-		   	  state.activeArticlesInfo = state.payments;
-			  state.activeArticleTab = 'Payments';	
-			  state.firstArticleLoad =false;
+		   	  state.activeArtInfo = state.payments;
+			  state.activeArtTab = 'Payments';	
+			  state.firstArtLoad =false;
 			  break;
 		 }
 
@@ -354,14 +354,14 @@ export const mutations = {
 		switch(state.activeView) {
 
    	   	    case "Builder":
-			  state.activeBuilderInfo = state.lending;
+			  state.activeBuildInfo = state.lending;
 		      state.activeBuildTab = 'Lending';	
 		      state.firstBuildLoad = false;
 		      break;
 		    case "Articles":
-		   	  state.activeArticlesInfo = state.lending;
-			  state.activeArticleTab = 'Lending';	
-			  state.firstArticleLoad =false;
+		   	  state.activeArtInfo = state.lending;
+			  state.activeArtTab = 'Lending';	
+			  state.firstArtLoad =false;
 			  break;
 	   }
 	},
@@ -372,15 +372,15 @@ export const mutations = {
 		switch(state.activeView) {
 
 			  case "Builder":
-				state.activeBuilderInfo = state.banking;
-				state.activeBuilderTab ='Banking';	
+				state.activeBuildInfo = state.banking;
+				state.activeBuildTab ='Banking';	
 				state.firstBuildLoad =false;
 				break;
 
 			  case "Articles":
-		   	  	state.activeArticlesInfo = state.lending;
-			  	state.activeArticleTab = 'Banking';	
-			  	state.firstArticleLoad =false;
+		   	  	state.activeArtInfo = state.lending;
+			  	state.activeArtTab = 'Banking';	
+			  	state.firstArtLoad =false;
 			  	break;
 
 	     }
@@ -577,6 +577,7 @@ export const mutations = {
 	  
 	  },
 	  
+
 	  lendPostsFetched()  {
 	
 		return state.posts.lending.length > 0;
@@ -613,11 +614,11 @@ export const mutations = {
 		return state.posts.pages[item];	
 	 },
 	
-	 activeArticlePage() {
+	 activeArtPage() {
 		
-		 return state.posts.numArticlePage;
+		 return state.posts.numArtPage;
 	 },
-	 activeBuilderPage() {
+	 activeBuildPage() {
 
 	 	 return state.posts.numBuildPage;
 	 },
@@ -631,7 +632,7 @@ export const mutations = {
 	 prevArryVal() {
 
 	 	if (this.activeView == "Articles") {
-	 		var val = this.activeArticlePage();
+	 		var val = this.activeArtPage();
 	 	}
 	 	else {
 

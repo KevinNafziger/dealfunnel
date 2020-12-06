@@ -1,5 +1,6 @@
  <template>
  <div>
+
   <div class="search-bar-div">
     <div class="search-div">
       <input type="text"  name="term" id="term"  v-model="searchMessage" style="margin-right: 10px" width="100%" class="text-field w-input w-col w-col-6" placeholder="search  content">
@@ -13,12 +14,16 @@
       <a href="#" v-on:click="showGrouping('Lending')"   class="tagbtn">lending</a>
       <a href="#" v-on:click="showGrouping('Banking')"   class="tagbtn">banking</a>
       <a href="#" v-on:click="showGrouping('Blockchain')" class="tagbtn">blockchain</a>
+      <a href="#" v-show="showPreviousBtn" class="tagbtn" v-on:click="changePage('Previous')">Prev (US)</a>
+      <a href="#" v-show="showNextBtn" class="tagbtn" v-on:click="changePage('Next')" >Next (US)</a>
       </div>
     </div>
+
 </div> 
 </template>
 
 <script>
+import {mapState} from 'vuex';
 import 'vuetify/dist/vuetify.min.css';
 import Vuetify from 'vuetify';
 export default {
@@ -33,6 +38,9 @@ export default {
 
       $nuxt.$emit("getCategory", category);
   },
+    changePage: function(direction) {
+      $nuxt.$emit("changePage", direction);
+    },
 
    submitSearch: function(topic) {
 
@@ -40,7 +48,32 @@ export default {
       this.searchMessage = '';
     }
   },
+  computed: {
+  ...mapState({
+      activeTab: state => state.company.activeTab,
+   }),
+    showPreviousBtn() {
+        if (this.activeTab == 'US Page 2' || this.activeTab =='US Page 3')
+        {
+           return true;
+        }
+        else
+        {
+           return false;
+        }
+     },
+     showNextBtn() {
 
+        if (this.activeTab == 'US' || this.activeTab == 'US Page 1'  || this.activeTab == 'US Page 2')
+        {
+           return true;
+        }
+        else
+        {
+           return false;
+        }
+     }
+   },
 };
 </script>
 

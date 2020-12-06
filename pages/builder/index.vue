@@ -90,27 +90,27 @@ export default {
  computed: {
 
   ...mapState({
-      starterPosts: state => state.posts.pages[0],
+      starter: state => state.posts.pages[0],
       myboard: state => state.boards.myboard,
       showModal: state => state.boards.showModal,
-      firstBuildLoad: state => state.posts.firstBuildLoad,
-      activeBuilderInfo: state => state.posts.activeBuilderInfo,
+      first: state => state.posts.firstBuildLoad,
+      activeBuildInfo: state => state.posts.activeBuildInfo,
       myboardArry: state => state.boards.myboardArry,
       myboards: state => state.boards.myboardArry,
       activeTab: state => state.posts.activeBuildTab,
       activeView:  state => state.posts.activeView,
-      numActivePage: state => state.posts.numBuildPage,
+      numPage: state => state.posts.numBuildPage,
    }),
 
    filterMessage() {
 
-      if (this.firstLoad == true)
+      if (this.first)
       {
         return ''
       }
       if (this.activeTab == 'Page')
       {
-        return this.activeTab + ' ' + this.numActivePage;
+        return this.activeTab + ' ' + this.numPage;
       }
       else
       {
@@ -120,31 +120,31 @@ export default {
     },
 
     posts() {
-      if (this.firstBuildLoad == true)
+      if (this.first == true)
       {
-        return this.starterPosts
+        return this.starter
       }
       else
       {
-        return this.activeBuilderInfo;
+        return this.activeBuildInfo;
       }
     },
     
     items()  {
 
-        if (this.firstBuildLoad == true) {
+        if (this.first == true) {
 
-          return this.starterPosts
+          return this.starter
         }
 
         else if (this.myboardArry.length == 0) {
           
-          return this.activeBuilderInfo;
+          return this.activeBuildInfo;
         }
 
         else {
 
-          return this.activeBuilderInfo.concat(this.myboards);
+          return this.activeBuildInfo.concat(this.myboards);
         }
       }
   },
@@ -204,7 +204,7 @@ export default {
             break;
 
           case 'Next':
-            var page = this.numActivePage;
+            var page = this.numPage;
             this.$store.commit("posts/setView", "Builder"); 
             this.$store.dispatch("posts/goNext", page);
             break;
@@ -276,6 +276,8 @@ export default {
 
   async fetch({store}) {
 
+      
+    store.dispatch("posts/setView", "Builder"); 
     await store.dispatch("posts/nuxtServerInit")
   
   },
