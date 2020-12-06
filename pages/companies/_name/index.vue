@@ -18,12 +18,12 @@
                           <div><b>HQ: </b>{{ item.city }}
                             {{ item.state }} {{item.country}} <br>
                           </div>
-                          <div><b>Phone: </b> {{item.phone}}</div>
-                          <div><b>Website: </b><a href="#" v-on:click="openItem( item.website)" > {{item.website}}</a></div> 
-                        <div>Founders: 
+                          <div v-if="item.phone"><b>Phone: </b> {{item.phone}}</div>
+                          <div v-if="item.website"><b>Website: </b><a href="#" v-on:click="openItem( item.website)" > {{item.website}}</a></div> 
+                        <div v-if="item.founders">Founders: 
                          {{ item.founders }}
                         </div>    
-                         <div>Founded: 
+                         <div v-if="item.founding_yr" >Founded: 
                                     {{ item.founding_yr }}
                         </div>
                         <div class="personal-sm">
