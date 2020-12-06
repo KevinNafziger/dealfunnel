@@ -65,7 +65,7 @@ export default {
         case 'Payments':
             this.$store.dispatch("news/setPay");
             break;
-        case 'M&A':
+        case 'Mergers':
             this.$store.dispatch("news/setMergers");
             break;
         case 'Valuation':

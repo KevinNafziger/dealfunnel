@@ -10,7 +10,9 @@
       <a href="#" v-on:click="showGrouping('Valuation')" class="tagbtn">Valuation</a>
 
       <a href="#" v-show="showPreviousBtn" class="tagbtn"  v-on:click="changePage('Previous')">Prev</a>
-      <a href="#" v-show="showNextBtn" class="tagbtn" v-on:click="changePage('Next')">Next</a>
+      <a href="#" v-show="showNextBtn" class="tagbtn" v-on:click="changePage('Next')">Next</a><br>
+        <a href="#" v-on:click="showGrouping('Mergers')" class="tagbtn">M&A</a>
+
     </div>
   </div>
 </template>
