@@ -354,13 +354,13 @@ export const mutations = {
    	   	  case "Builder":
    	   		state.activeBuildInfo = data;
   	   		state.firstBuildLoad = false;  		
-  	   		state.activeBuildTab = topic;
+  	   		state.activeBuildTab = data;
   	   		break;
 
   	   	   case "Articles":
   	   	    state.activeArtInfo = data;
   	   		state.firstArtLoad = false;  		
-  	   		state.activeArtTab = topic;
+  	   		state.activeArtTab = data;
   	   		break;
   	    }
 
