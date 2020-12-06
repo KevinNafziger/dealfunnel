@@ -106,7 +106,7 @@ export const mutations = {
   },
 
 
-     setGrowth(state, data) {
+    setGrowth(state, data) {
 
     	state.growthequity = data; 
 
@@ -190,21 +190,21 @@ export const mutations = {
  	 },
 
 
- 	 setVal(state, data) {
+ 	 setBoot(state, data) {
 
-    	state.growthequity = data; 
+    	state.bootstrapped = data; 
 
 
 	    if (state.activeView =='Builder') 
 	    {
 	   		state.activeBuildInfo = data;
-	   		state.activeBuildTab ='Growth Equity';	
+	   		state.activeBuildTab ='Bootstrapped';	
 	    	state.firstBuildLoad = false;
 	    }
 	    else if (state.activeView =='Articles')
 	    {
 	    	state.activeArtInfo = data;
-	    	state.activeArtTab ='Growth EQuity';	
+	    	state.activeArtTab ='Bootstrapped';	
 	    	state.firstArtLoad = false;
 	    }
 
@@ -565,7 +565,7 @@ export const mutations = {
 		     break;	
 
 		   case "Articles":
-		     state.activeArtInfo = state.regtech;
+		     state.activeArtInfo = state.valuation;
 		     state.activeArtTab = 'Valuation';	
 		     state.firstArtLoad = false;
 		     break;	
