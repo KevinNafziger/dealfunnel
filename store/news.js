@@ -289,7 +289,7 @@ export const mutations = {
 
 		   if (!this.mergerNewsFetched)
 		   {	
-  	       		await this.$axios.get('/links?id=M&A')
+  	       		await this.$axios.get('links?id=M%26A')
            			.then(res => {
 					  commit("setMergers", res.data);
 		         })
