@@ -86,9 +86,8 @@
                              <span v-if="!(item.whitepaper ==='')">
                                 <a :href="item.whitepaper" class="btn btn-link" target="_blank" ><i class="fa fa-copy"></i></a>
                             </span>
-                            <span v-if="!(item.email ==='')">
-                               email: <span class="btn btn-link fa fa-envelope about-info-title" >{{item.email }}</span>
-                            </span>
+                            <div v-if="!(item.email ==='')">
+                            email: <span class="btn btn-link fa fa-envelope about-info-title" >{{item.email }}</span></div>
                         </div>  
                       </div>
                   </div>        
