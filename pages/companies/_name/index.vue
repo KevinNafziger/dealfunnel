@@ -21,10 +21,10 @@
                           <div v-if="item.phone"><b>Phone: </b> {{item.phone}}</div>
                           <div v-if="item.website"><b>Website: </b><a href="#" v-on:click="openItem( item.website)" > {{item.website}}</a></div> 
                         <div v-if="item.founders">Founders: 
-                         {{ item.founders }}
+                         {{item.founders}}
                         </div>    
                          <div v-if="item.founding_yr" >Founded: 
-                                    {{ item.founding_yr }}
+                                    {{item.founding_yr}}
                         </div>
                         <div class="personal-sm">
                       
@@ -69,7 +69,7 @@
                              <a :href="item.telegram" class="btn btn-link" target="_blank" ><i class="fa fa-telegram"></i></a>
                             </span>
                             <span v-if="!(item.wechat ==='')" >
-                             <a :href "item.wechat" class="btn btn-link" target="_blank" ><i class="fa fa-wechat"></i></a>
+                             <a :href="item.wechat" class="btn btn-link" target="_blank" ><i class="fa fa-wechat"></i></a>
                             </span>
                             <span v-if="!(item.tumblr ==='')" >
                               <a :href="item.tumblr" class="btn btn-link" target="_blank" ><i class="fa fa-tumblr"></i></a>
