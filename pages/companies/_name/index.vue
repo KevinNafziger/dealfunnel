@@ -77,7 +77,7 @@
                             <span v-if="!(item.chat ==='')">
                               <a :href="item.chat" class="btn btn-link" target="_blank" ><i class="fa fa-comment"></i></a>
                             </span>
-                            <span v-if="!(item.discord"==='')>
+                            <span v-if="!(item.discord"==='')">
                             <a :href= "item.discord" class="btn btn-link" target="_blank" ><i class="fa fa-discord"></i></a>
                             </span>
                             <span v-if="!(item.wikipedia ==='')">
@@ -87,7 +87,7 @@
                                 <a :href="item.whitepaper" class="btn btn-link target="_blank" ><i class="fa fa-copy"></i></a>
                             </span>
                             <span v-if="!(item.email ==='')">
-                              <span class="btn btn-link fa fa-envelope about-info-title"> email: {{ item.email }}</span>
+                               email: <span class="btn btn-link fa fa-envelope about-info-title">{{item.email }}</span>
                             </span>
                         </div>  
                       </div>
