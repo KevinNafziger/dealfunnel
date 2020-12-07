@@ -32,7 +32,7 @@
                        
                        <div class="sumary"> {{post.summary}} </div>
                       <br><br>
-                       <div v-if="activeTab=="Advisors">
+                       <div v-if="activeTab=='Advisors'" >
                        <b>Advisors:</b> {{post.advisors}}
                       <br><br>
                        </div>
