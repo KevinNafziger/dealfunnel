@@ -18,7 +18,7 @@
                           <div><b>HQ: </b>{{ item.city }}
                             {{ item.state }} {{item.country}} <br>
                           </div>
-                          <div v-if="!(item.phone ===''"><b>Phone: </b> {{item.phone}}</div>
+                          <div v-if="!(item.phone ==='')"><b>Phone: </b> {{item.phone}}</div>
                           <div v-if="!(item.website ==='')"><b>Website: </b><a href="#" v-on:click="openItem(item.website)" > {{item.website}}</a></div> 
                         <div v-if="!(item.founders ==='')">Founders: 
                          {{item.founders}}
@@ -140,7 +140,7 @@ import {mapState} from 'vuex';
     }
  },
 
-  }
+  };
 </script>
 <style scoped>
  @font-face
@@ -164,7 +164,6 @@ import {mapState} from 'vuex';
   mso-generic-font-family:roman;
   mso-font-pitch:variable;
   mso-font-signature:647 0 0 0 159 0;}
- /* Style Definitions */
  p.MsoNormal, li.MsoNormal, div.MsoNormal
   {mso-style-unhide:no;
   mso-style-qformat:yes;
@@ -197,7 +196,7 @@ span.SpellE
   {mso-style-type:export-only;
   margin-bottom:8.0pt;
   line-height:107%;}
-@page WordSection1
+ .WordSection1
   {size:11.0in 8.5in;
   mso-page-orientation:landscape;
   margin:70.5pt 1.0in 70.0pt 1.0in;
@@ -206,7 +205,6 @@ span.SpellE
   mso-paper-source:0;}
 div.WordSection1
   {page:WordSection1;}
- /* Style Definitions */
  table.MsoNormalTable
   {mso-style-name:"Table Normal";
   mso-tstyle-rowband-size:0;
@@ -239,15 +237,15 @@ div.WordSection1
   .w-nav-link {
     padding: 20px;
   }
-    #dropitem22 {
+  #dropitem22 {
       margin-top: 0px;
     }
 
-    .nav-link-3 {
+.nav-link-3 {
    text-align: center !important;
  }
 
-    .w-col-10 {
+.w-col-10 {
       width: 50%;
      }
   .card {
