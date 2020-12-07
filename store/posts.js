@@ -17,6 +17,7 @@ export const state = () => ({
   growthequity: [],
   spinoffs: [],
   mergers: [],
+  advisors: [],
 
   activeArtInfo: [],
   activeBuildInfo: [],
@@ -334,6 +335,27 @@ export const mutations = {
 
    },
 
+   setAdvisors(state, data){
+
+  	 state.advisors = data;
+
+  	 if (state.activeView =='Builder')
+     {
+        state.activeBuildInfo = data;
+  	    state.activeBuildTab = 'Advisors';	
+  	    state.firstBuildLoad =false;
+  	 }
+
+  	 else if (state.activeView =='Articles')
+     {
+    	state.activeArtInfo = data;
+    	state.activeArtTab ='Advisors';	
+    	state.firstArtLoad = false;
+     }
+
+   },
+
+
    setBank(state, data) {
 
    	 state.banking = data;
@@ -572,6 +594,26 @@ export const mutations = {
 	 },
 
 
+	 setAdvisorsNoFetch(state){
+
+		switch(state.activeView) {
+
+   	   	  case "Builder":
+		     state.activeBuildInfo = state.advisors;
+		     state.activeBuildTab = 'Advisors';	
+		     state.firstBuildLoad = false;
+		     break;	
+
+		   case "Articles":
+		     state.activeArtInfo = state.advisors;
+		     state.activeArtTab = 'Advisors';	
+		     state.firstArtLoad = false;
+		     break;	
+
+		  }
+	 },
+
+
 	 setMergersNoFetch(state){
 
 		switch(state.activeView) {
@@ -632,7 +674,7 @@ export const mutations = {
 	 },
 
 
-	 setGrowthnoFetch(state){
+	 setGrowthNoFetch(state){
 
 		switch(state.activeView) {
 
@@ -831,7 +873,6 @@ export const mutations = {
  export const actions = {
 
 
-    
        	 async setInsur({ commit }) {
 
 			if (!this.insurPostsFetched)
@@ -987,7 +1028,23 @@ export const mutations = {
 				}
 			   else
 			   {
-					commit("setGrowthnoFetch");
+					commit("setGrowthNoFetch");
+			   }
+  		 
+  		   },
+
+  		   async setAdvisors({ commit }) {
+
+			   if (!this.advisorPostsFetched)
+			   {	
+	  	       		await this.$axios.get('posts?advisors=Advisory')
+	           			.then(res => {
+						  commit("setAdvisors", res.data);
+			         })
+				}
+			   else
+			   {
+					commit("setAdvisorsNoFetch");
 			   }
   		 
   		   },
@@ -1077,7 +1134,6 @@ export const mutations = {
 		    }
   		 
   		  },
-
 
 
   		  async setReal({ commit }) {
@@ -1227,55 +1283,58 @@ export const mutations = {
 		return state.posts.healthtech.length > 0;
 	  },
 
-	  firstPostFetched() {
+	  firstPostsFetched() {
 	
 		return state.posts.pages[0].length > 0;
 	  },
 
-	  wealthPostFetched() {
+	  wealthPostsFetched() {
 	
 		return state.posts.wealthtech.length > 0;
 	  },
 
+	  advisorPostsFetched() {
 
-	  capitalPostFetched() {
+	    return state.posts.advisors.length > 0;
+	  },
+
+	  capitalPostsFetched() {
 	
 		return state.posts.capitalmarkets.length > 0;
 	  },
 
-	  realPostFetched() {
+	  realPostsFetched() {
 	
 		return state.posts.realestate.length > 0;
 	  },
 
-	  valPostFetched() {
+	  valPostsFetched() {
 	
 		return state.posts.valuation.length > 0;
 	  },
 
-	  mergerPostFetched() {
+	  mergerPostsFetched() {
 	
 		return state.posts.mergers.length > 0;
 	  },
       
 
-      spinPostFetched() {
+      spinPostsFetched() {
 	
 		return state.posts.spinoffs.length > 0;
 	  },
 
 
-	  bootPostFetched() {
+	  bootPostsFetched() {
 	
 		return state.posts.bootstrapped.length > 0;
 	  },
 
 
-	  growthPostFetched() {
+	  growthPostsFetched() {
 	
 		return state.posts.growthequity.length > 0;
 	  },
-      
       
       
       firstpage() {

@@ -137,6 +137,10 @@ methods: {
          this.$store.dispatch("posts/setGrowth");
          break;
 
+      case 'Advisors':
+         this.$store.dispatch("posts/setView", "Articles");
+         this.$store.dispatch("posts/setAdvisors");
+         break;
       }  
    }, 
 

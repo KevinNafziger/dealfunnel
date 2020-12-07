@@ -32,6 +32,10 @@
                        
                        <div class="sumary"> {{post.summary}} </div>
                       <br><br>
+                       <div v-if="activeTab=="Advisors">
+                       <b>Advisors:</b> {{post.advisors}}
+                      <br><br>
+                       </div>
                         <br><br>
                         <div class="center-btn">
                           <nuxt-link class="gardient-button" :to="'/posts/' + post.id " > Read More</nuxt-link>
@@ -54,11 +58,15 @@
 </template>
 
 <script>
-
-
+import {mapState} from 'vuex';
  export default {
   name: 'PostList',
   props: ["posts", "board"],
+  computed: {
+  ...mapState({
+      activeTab: state => state.posts.activeArtTab,
+   })
+  },
   methods: {
 
     idlists:  function(post_id) {
