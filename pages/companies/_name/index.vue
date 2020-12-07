@@ -143,8 +143,6 @@ import {mapState} from 'vuex';
   }
 </script>
 <style scoped>
-<!--
- /* Font Definitions */
  @font-face
   {font-family:"Cambria Math";
   panose-1:2 4 5 3 5 4 6 3 2 4;
