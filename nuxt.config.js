@@ -36,6 +36,7 @@ export default {
     'bootstrap-vue/nuxt',
     '@nuxtjs/axios',
     '@nuxtjs/vuetify',
+    '@nuxtjs/fontawesome', 
     ],
     axios: {
     baseURL: process.env.BASE_URL || 'https://fintechhorizonsmedia.com/api/v1'

@@ -26,65 +26,65 @@
                          <div v-if="!(item.founding_yr ==='')" >Founded: 
                                     {{item.founding_yr}}
                         </div>
-                        <div class="personal-sm">
+                        <div class="personal">
                       
                             <span v-if="!(item.facebook ==='')" >
                               <a :href="item.facebook" class="btn btn-link" target="_blank" >
-                              <i class="fa fa-facebook"></i></a>
+                              <i class="fa-facebook">F</i></a>
                             </span>
                             <span v-if="!(item.twitter ==='')" >
-                              <a :href="item.twitter" class="btn btn-link" target="_blank" ><i class="fa fa-twitter"></i></a>
+                              <a :href="item.twitter" class="btn btn-link" target="_blank" ><i class="fa fa-twitter">T</i></a>
                             </span>
                             <span v-if="!(item.linkedin ==='')" >
-                               <a :href="item.linkedin" class="btn btn-link" target="_blank" ><i class="fa fa-linkedin"></i></a>
+                               <a :href="item.linkedin" class="btn btn-link" target="_blank" ><i class="fa fa-linkedin">L</i></a>
                             </span>
                             <span v-if="!(item.medium ==='')">
-                                <a :href="item.medium" class="btn btn-link" target="_blank" ><i class="fa fa-medium"></i></a>
+                                <a :href="item.medium" class="btn btn-link" target="_blank" ><i class="fa fa-medium">M</i></a>
                             </span>   
                             <span v-if="!(item.github ==='')">
-                                <a :href="item.github" class="btn btn-link" target="_blank" ><i class="fa fa-github"></i></a>
+                                <a :href="item.github" class="btn btn-link" target="_blank" ><i class="fa fa-github">G</i></a>
                             </span>
                             <span v-if="!(item.youtube ==='')">
-                                <a :href="item.youtube" class="btn btn-link" target="_blank" ><i class="fa fa-youtube"></i></a>
+                                <a :href="item.youtube" class="btn btn-link" target="_blank" ><i class="fa fa-youtube">Y</i></a>
                             </span>        
                             <span v-if="!(item.pinterest ==='')">
-                               <a :href="item.pinterest" class="btn btn-link" target="_blank" ><i class="fa fa-pinterest"></i></a>
+                               <a :href="item.pinterest" class="btn btn-link" target="_blank" ><i class="fa fa-pinterest">P</i></a>
                             </span>
                             <span v-if="!(item.slack ==='')">
-                                <a :href="item.slack" class="btn btn-link" target="_blank" ><i class="fa fa-slack"></i></a>
+                                <a :href="item.slack" class="btn btn-link" target="_blank" ><i class="fa fa-slack">S</i></a>
                             </span>
                             <span v-if="!(item.googleplus ==='')">
-                              <a :href="item.googleplus" class="btn btn-link" target="_blank" ><i class="fa fa-google-plus-official"></i></a>
+                              <a :href="item.googleplus" class="btn btn-link" target="_blank" ><i class="fa fa-google-plus-official">P</i></a>
                             </span>
                             <span v-if="!(item.reddit ==='')">
-                              <a :href="item.reddit" class="btn btn-link" target="_blank" ><i class="fa fa-reddit"></i></a>
+                              <a :href="item.reddit" class="btn btn-link" target="_blank" ><i class="fa fa-reddit">R</i></a>
                             </span>
                             <span v-if="!(item.angellist ==='')">
-                               <a :href="item.angellist" class="btn btn-link" target="_blank" ><i class="fa fa-angellist"></i></a>
+                               <a :href="item.angellist" class="btn btn-link" target="_blank" ><i class="fa fa-angellist">A</i></a>
                             </span>
                             <span v-if="!(item.skype ==='')" >
-                                <a :href="item.skype" class="btn btn-link" target="_blank" ><i class="fa fa-skype"></i></a>
+                                <a :href="item.skype" class="btn btn-link" target="_blank" ><i class="fa fa-skype">S</i></a>
                             </span>
                             <span v-if="!(item.telegram ==='')">
-                             <a :href="item.telegram" class="btn btn-link" target="_blank" ><i class="fa fa-telegram"></i></a>
+                             <a :href="item.telegram" class="btn btn-link" target="_blank" ><i class="fa fa-telegram">T</i></a>
                             </span>
                             <span v-if="!(item.wechat ==='')" >
-                             <a :href="item.wechat" class="btn btn-link" target="_blank" ><i class="fa fa-wechat"></i></a>
+                             <a :href="item.wechat" class="btn btn-link" target="_blank" ><i class="fa fa-wechat">W</i></a>
                             </span>
                             <span v-if="!(item.tumblr ==='')" >
-                              <a :href="item.tumblr" class="btn btn-link" target="_blank" ><i class="fa fa-tumblr"></i></a>
+                              <a :href="item.tumblr" class="btn btn-link" target="_blank" ><i class="fa fa-tumblr">Tbr</i></a>
                             </span>
                             <span v-if="!(item.chat ==='')">
-                              <a :href="item.chat" class="btn btn-link" target="_blank" ><i class="fa fa-comment"></i></a>
+                              <a :href="item.chat" class="btn btn-link" target="_blank" ><i class="fa fa-comment">C</i></a>
                             </span>
                             <span v-if="!(item.discord ==='')">
-                            <a :href="item.discord" class="btn btn-link" target="_blank" ><i class="fa fa-discord"></i></a>
+                            <a :href="item.discord" class="btn btn-link" target="_blank" ><i class="fa fa-discord">D</i></a>
                             </span>
                             <span v-if="!(item.wikipedia ==='')">
-                              <a :href="item.wikipedia" class="btn btn-link" target="_blank" ><i class="fa fa-wikipedia-w"></i></a>
+                              <a :href="item.wikipedia" class="btn btn-link" target="_blank" ><i class="fa fa-wikipedia-w">W</i></a>
                             </span>
                              <span v-if="!(item.whitepaper ==='')">
-                                <a :href="item.whitepaper" class="btn btn-link" target="_blank" ><i class="fa fa-copy"></i></a>
+                                <a :href="item.whitepaper" class="btn btn-link" target="_blank" ><i class="fa fa-copy">P</i></a>
                             </span>
                             <div v-if="!(item.email ==='')">
                             email: <span class="btn btn-link fa fa-envelope about-info-title" >{{item.email }}</span></div>
@@ -319,6 +319,9 @@ h4 {
  #kpl2 p {
    padding:20px;
  }
+ #i {
+display:block; color:black;
+ }
  .card:hover {
     box-shadow: 0px 0px 5px -2px !important;
     transition: none !important;
@@ -368,5 +371,6 @@ h4 {
   font-style: calibri;
     background-color: white !important;
 }
-
+i { color:dark-grey !important; display:block; }
+.span { color:dark-grey !important; display:block;}
 </style>
