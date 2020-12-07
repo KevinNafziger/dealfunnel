@@ -69,25 +69,25 @@
                              <a :href="item.telegram" class="btn btn-link" target="_blank" ><i class="fa fa-telegram"></i></a>
                             </span>
                             <span v-if="!(item.wechat ==='')" >
-                             <a :href= "item.wechat" class="btn btn-link" target="_blank" ><i class="fa fa-wechat"></i></a>
+                             <a :href "item.wechat" class="btn btn-link" target="_blank" ><i class="fa fa-wechat"></i></a>
                             </span>
                             <span v-if="!(item.tumblr ==='')" >
-                              <a :href= "item.tumblr" class="btn btn-link" target="_blank" ><i class="fa fa-tumblr"></i></a>
+                              <a :href="item.tumblr" class="btn btn-link" target="_blank" ><i class="fa fa-tumblr"></i></a>
                             </span>
                             <span v-if="!(item.chat ==='')">
                               <a :href="item.chat" class="btn btn-link" target="_blank" ><i class="fa fa-comment"></i></a>
                             </span>
                             <span v-if="!(item.discord"==='')">
-                            <a :href= "item.discord" class="btn btn-link" target="_blank" ><i class="fa fa-discord"></i></a>
+                            <a :href="item.discord" class="btn btn-link" target="_blank" ><i class="fa fa-discord"></i></a>
                             </span>
                             <span v-if="!(item.wikipedia ==='')">
                               <a :href="item.wikipedia" class="btn btn-link" target="_blank" ><i class="fa fa-wikipedia-w"></i></a>
                             </span>
-                             <span  v-if="!(item.whitepaper ==='')">
-                                <a :href="item.whitepaper" class="btn btn-link target="_blank" ><i class="fa fa-copy"></i></a>
+                             <span v-if="!(item.whitepaper ==='')">
+                                <a :href="item.whitepaper" class="btn btn-link" target="_blank" ><i class="fa fa-copy"></i></a>
                             </span>
                             <span v-if="!(item.email ==='')">
-                               email: <span class="btn btn-link fa fa-envelope about-info-title">{{item.email }}</span>
+                               email: <span class="btn btn-link fa fa-envelope about-info-title" >{{item.email }}</span>
                             </span>
                         </div>  
                       </div>
