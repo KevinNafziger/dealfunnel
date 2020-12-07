@@ -32,46 +32,46 @@
                               <a :href="item.facebook" class="btn btn-link" target="_blank" >
                               <i class="fa fa-facebook"></i></a>
                             </span>
-                            <span v-if="!(item.twitter==='')" >
+                            <span v-if="!(item.twitter ==='')" >
                               <a :href="item.twitter" class="btn btn-link" target="_blank" ><i class="fa fa-twitter"></i></a>
                             </span>
-                            <span v-if="!(item.linkedin==='')" >
+                            <span v-if="!(item.linkedin ==='')" >
                                <a :href="item.linkedin" class="btn btn-link" target="_blank" ><i class="fa fa-linkedin"></i></a>
                             </span>
-                            <span v-if="!(item.medium==='')">
+                            <span v-if="!(item.medium ==='')">
                                 <a :href="item.medium" class="btn btn-link" target="_blank" ><i class="fa fa-medium"></i></a>
                             </span>   
-                            <span v-if="!(item.github==='')">
+                            <span v-if="!(item.github ==='')">
                                 <a :href="item.github" class="btn btn-link" target="_blank" ><i class="fa fa-github"></i></a>
                             </span>
-                            <span v-if="!(item.youtube==='')">
+                            <span v-if="!(item.youtube ==='')">
                                 <a :href="item.youtube" class="btn btn-link" target="_blank" ><i class="fa fa-youtube"></i></a>
                             </span>        
-                            <span v-if="!(item.pinterest==='')">
+                            <span v-if="!(item.pinterest ==='')">
                                <a :href="item.pinterest" class="btn btn-link" target="_blank" ><i class="fa fa-pinterest"></i></a>
                             </span>
-                            <span v-if="!(item.slack==='')">
+                            <span v-if="!(item.slack ==='')">
                                 <a :href="item.slack" class="btn btn-link" target="_blank" ><i class="fa fa-slack"></i></a>
                             </span>
-                            <span v-if="!(item.googleplus==='')">
+                            <span v-if="!(item.googleplus ==='')">
                               <a :href="item.googleplus" class="btn btn-link" target="_blank" ><i class="fa fa-google-plus-official"></i></a>
                             </span>
-                            <span v-if="!(item.reddit==='')">
+                            <span v-if="!(item.reddit ==='')">
                               <a :href="item.reddit" class="btn btn-link" target="_blank" ><i class="fa fa-reddit"></i></a>
                             </span>
-                            <span v-if="!(item.angellist==='')">
+                            <span v-if="!(item.angellist ==='')">
                                <a :href="item.angellist" class="btn btn-link" target="_blank" ><i class="fa fa-angellist"></i></a>
                             </span>
-                            <span v-if="!(item.skype==='')" >
+                            <span v-if="!(item.skype ==='')" >
                                 <a :href="item.skype" class="btn btn-link" target="_blank" ><i class="fa fa-skype"></i></a>
                             </span>
                             <span v-if="!(item.telegram ==='')">
                              <a :href="item.telegram" class="btn btn-link" target="_blank" ><i class="fa fa-telegram"></i></a>
                             </span>
-                            <span v-if="!(item.wechat==='')" >
+                            <span v-if="!(item.wechat ==='')" >
                              <a :href= "item.wechat" class="btn btn-link" target="_blank" ><i class="fa fa-wechat"></i></a>
                             </span>
-                            <span v-if="!(item.tumblr===''" >
+                            <span v-if="!(item.tumblr ==='')" >
                               <a :href= "item.tumblr" class="btn btn-link" target="_blank" ><i class="fa fa-tumblr"></i></a>
                             </span>
                             <span v-if="!(item.chat ==='')">
