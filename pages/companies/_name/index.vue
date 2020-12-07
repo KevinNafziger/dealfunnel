@@ -19,7 +19,7 @@
                             {{ item.state }} {{item.country}} <br>
                           </div>
                           <div v-if="item.phone"><b>Phone: </b> {{item.phone}}</div>
-                          <div v-if="item.website"><b>Website: </b><a href="#" v-on:click="openItem( item.website)" > {{item.website}}</a></div> 
+                          <div v-if="item.website"><b>Website: </b><a href="#" v-on:click="openItem(item.website)" > {{item.website}}</a></div> 
                         <div v-if="item.founders">Founders: 
                          {{item.founders}}
                         </div>    
@@ -77,7 +77,7 @@
                             <span v-if="!(item.chat ==='')">
                               <a :href="item.chat" class="btn btn-link" target="_blank" ><i class="fa fa-comment"></i></a>
                             </span>
-                            <span v-if="!(item.discord"==='')">
+                            <span v-if="!(item.discord==='')">
                             <a :href="item.discord" class="btn btn-link" target="_blank" ><i class="fa fa-discord"></i></a>
                             </span>
                             <span v-if="!(item.wikipedia ==='')">
