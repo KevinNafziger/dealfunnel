@@ -31,12 +31,12 @@
                        <b>Most Recent Coverage:</b><br><b><nuxt-link id="myArticleLinkTag" :to="'/posts/' + post.id " class="mdi mdi-book-open mdi-18px"  >{{post.teaser }}</nuxt-link></b>,
                        
                        <div class="sumary"> {{post.summary}} </div>
-                      <br><br>
+                      <br>
                        <div v-if="activeTab=='Advisors'" >
                        <b>Advisors:</b> {{post.advisors}}
                       <br><br>
                        </div>
-                        <br><br>
+                        <br><br><br>
                         <div class="center-btn">
                           <nuxt-link class="gardient-button" :to="'/posts/' + post.id " > Read More</nuxt-link>
                         </div>
