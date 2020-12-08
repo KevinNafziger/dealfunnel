@@ -22,7 +22,6 @@
                           <span style="margin-right:15px">
                              <a :href="link.url"  target="_blank" style="color:#4286ff">  {{link.publication}} </a>
                           </span><br><br>
-                          <div id="myCompanyTag" v-if="link.company_id!= null" class=" mdi mdi-domain mdi-24px plain"><nuxt-link :to="'/companies/' + link.company " style="color:#4286ff" > {{ link.company }}</nuxt-link></div>
                         </em>
                       </div>
                       <br>
@@ -30,10 +29,28 @@
                         {{link.description}}
                       </p>
                       <div class="w-row">
-                        <div class="w-col w-col-6">
-                          <div>
+                      <em>
+                          <div class="w-col w-col-6">
+                            <div>
+    
+                                <a href="#" v-if="link.sector" v-on:click="getbyCategory(link.sector)" class="tagbtn" >
+                                  {{ link.sector.toLowerCase() }}
+                                </a>
+                                <a href="#"  v-if="link.sector2"  v-on:click="getbyCategory(link.sector2)"  class="tagbtn" >
+                                  link.sector2.toLowerCase() }}
+                                </a>
+                                <a href="#" v-if='link.sector3'  v-on:click="getbyCategory(link.sector3)"  class="tagbtn" >
+                                  {{ link.sector3.toLowerCase() }}
+                                </a>
+                                <a href="#"  v-if="link.folder"  v-on:click="getbyCategory(link.folder)"  class="tagbtn">
+                                  {{ link.folder.toLowerCase() }}
+                                </a>
+                              <a href="#"  v-if="link.restype"  v-on:click="getbyCategory(link.restype)"  class="tagbtn" >
+                                  {{ link.restype.toLowerCase() }}
+                              </a>
+                            </div>
                           </div>
-                        </div>
+                        </em>
                       </div>
                     </li>
                </ul>
@@ -54,26 +71,78 @@ export default {
       switch(category) {
 
         case 'Insurtech':
+        case 'insurtech':
            this.$store.dispatch("news/setInsur");
            break;
         case 'Blockchain':
+        case 'blockchain':
             this.$store.dispatch("news/setBlock");
             break;
         case 'Lending':
+        case 'lending':
             this.$store.dispatch("news/setLend");
             break;
         case 'Payments':
+        case 'payments':
             this.$store.dispatch("news/setPay");
             break;
         case 'Mergers':
+        case 'M&A':
             this.$store.dispatch("news/setMergers");
             break;
         case 'Valuation':
+        case 'valuation':
             this.$store.dispatch("news/setVal"); 
             break;
         case 'AI':
+        case 'ai':
             this.$store.dispatch("news/setAI"); 
             break;
+        case 'OpenBanking':
+        case 'openbanking':
+            this.$store.dispatch("news/setOpen"); 
+            break;
+        case 'PersonalFinance':
+        case 'personalfinance':
+            this.$store.dispatch("news/setPer"); 
+            break;
+        case 'CapitalMarkets':
+        case 'capitalmarkets':
+            this.$store.dispatch("news/setCapital"); 
+            break;
+        case 'WealthTech':
+        case 'wealthtech':
+            this.$store.dispatch("news/setWealth"); 
+            break;
+        case 'General':
+        case 'general':
+            this.$store.dispatch("news/setGeneral"); 
+            break;
+        case 'healthtech':
+        case 'HealthTech':
+            this.$store.dispatch("news/setHealth"); 
+            break;    
+        case 'RealEstate':
+        case 'realestate':
+            this.$store.dispatch("news/setReal"); 
+            break;
+        case 'Regtech':
+        case 'regtech':
+            this.$store.dispatch("news/setReg"); 
+            break;
+        case 'CyberIdentity':
+        case 'cyberidentity':
+            this.$store.dispatch("news/setCyber"); 
+            break;
+        case 'Neobank':
+        case 'neobank':
+            this.$store.dispatch("news/setNeo"); 
+            break;   
+        case 'Remittance':
+        case 'remittance':
+            this.$store.dispatch("news/setRemit"); 
+            break;   
+
         }
     },
 
@@ -305,5 +374,12 @@ export default {
 ul {
   width: 100% !important;
 }
+.tagbtn {
+    margin-top:3px !important;
+    margin-right:3px !important;
+    color:#4286ff;
+    cursor: pointer;
+  }
+ 
 </style>
 

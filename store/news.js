@@ -9,6 +9,17 @@ export const state = () => ({
   valuation: [],
   mergers: [],
   ai: [],
+  openbanking: [],
+  wealthtech: [],
+  healthtech: [],
+  remittance: [],
+  general: [],
+  capitalmarkets: [],
+  cyberidentity: [],
+  realestate: [],
+  neobank: [],
+  regtech: [],
+
   activeNewsInfo: [],
   activeNewsTab: 'All',
   numNewsPage: 1,
@@ -83,6 +94,119 @@ export const mutations = {
   	 state.firstNewsLoad =false;
 
   	},
+
+  	setCyber(state, data) {
+
+
+  	 state.cyberidentity = data;
+     state.activeNewsInfo = data;
+  	 state.activeNewsTab = 'CyberIdentity';	
+  	 state.firstNewsLoad =false;
+
+  	},
+
+  	setCapital(state, data) {
+
+
+  	 state.capitalmarkets = data;
+     state.activeNewsInfo = data;
+  	 state.activeNewsTab = 'CapitalMarkets';	
+  	 state.firstNewsLoad =false;
+
+  	},
+
+  	setHealth(state, data) {
+
+
+  	 state.healthtech = data;
+     state.activeNewsInfo = data;
+  	 state.activeNewsTab = 'HealthTech';	
+  	 state.firstNewsLoad =false;
+
+  	},
+
+
+  	setWealth(state, data) {
+
+
+  	 state.wealthtech = data;
+     state.activeNewsInfo = data;
+  	 state.activeNewsTab = 'WealthTech';	
+  	 state.firstNewsLoad =false;
+
+  	},
+
+  	setReal(state, data) {
+
+
+  	 state.realestate = data;
+     state.activeNewsInfo = data;
+  	 state.activeNewsTab = 'RealEstate';	
+  	 state.firstNewsLoad =false;
+
+  	},
+
+
+  	setOpen(state, data) {
+
+
+  	 state.openbanking = data;
+     state.activeNewsInfo = data;
+  	 state.activeNewsTab = 'OpenBanking';	
+  	 state.firstNewsLoad =false;
+
+  	},
+
+  	setNeo(state, data) {
+
+
+  	 state.neobank = data;
+     state.activeNewsInfo = data;
+  	 state.activeNewsTab = 'Neobank';	
+  	 state.firstNewsLoad =false;
+
+  	},
+
+  	setPer(state, data) {
+
+
+  	 state.personalfinance = data;
+     state.activeNewsInfo = data;
+  	 state.activeNewsTab = 'PersonalFinance';	
+  	 state.firstNewsLoad =false;
+
+  	},
+
+  	setRemit(state, data) {
+
+
+  	 state.remittance = data;
+     state.activeNewsInfo = data;
+  	 state.activeNewsTab = 'Remittance';	
+  	 state.firstNewsLoad =false;
+
+  	},
+
+  	setGeneral(state, data) {
+
+
+  	 state.general = data;
+     state.activeNewsInfo = data;
+  	 state.activeNewsTab = 'General';	
+  	 state.firstNewsLoad =false;
+
+  	},
+
+  	setReg(state, data) {
+
+
+  	 state.regtech = data;
+     state.activeNewsInfo = data;
+  	 state.activeNewsTab = 'RegTech';	
+  	 state.firstNewsLoad =false;
+
+  	},
+
 
     setVal(state, data) {
 
@@ -209,6 +333,107 @@ export const mutations = {
 
 	 },
 
+	 setCyberNoFetch(state) {
+
+
+		state.activeNewsInfo = state.cyberidentity;
+		state.activeNewsTab ='CyberIdentity';	
+		state.firstNewsLoad =false;
+
+	 },
+
+	 
+	 setRegNoFetch(state) {
+
+
+		state.activeNewsInfo = state.regtech;
+		state.activeNewsTab ='RegTech';	
+		state.firstNewsLoad =false;
+
+	 },
+
+
+	 setRemitNoFetch(state) {
+
+
+		state.activeNewsInfo = state.remittance;
+		state.activeNewsTab ='Remittance';	
+		state.firstNewsLoad =false;
+
+	 },
+
+	 setCapitalNoFetch(state) {
+
+
+		state.activeNewsInfo = state.capitalmarkets;
+		state.activeNewsTab ='CapitalMarkets';	
+		state.firstNewsLoad =false;
+
+	 },
+
+	 setRealNoFetch(state) {
+
+
+		state.activeNewsInfo = state.realestate
+		state.activeNewsTab ='RealEstate';	
+		state.firstNewsLoad =false;
+
+	 },
+
+	 setWealthNoFetch(state) {
+
+
+		state.activeNewsInfo = state.wealthtech;
+		state.activeNewsTab ='WealthTech';	
+		state.firstNewsLoad =false;
+
+	 },
+
+	 setHealthNoFetch(state) {
+
+
+		state.activeNewsInfo = state.healthtech;
+		state.activeNewsTab ='HealthTech';	
+		state.firstNewsLoad =false;
+
+	 },
+
+	 setOpenNoFetch(state) {
+
+
+		state.activeNewsInfo = state.openbanking;
+		state.activeNewsTab ='OpenBanking';	
+		state.firstNewsLoad =false;
+
+	 },
+
+	 setNeoNoFetch(state) {
+
+
+		state.activeNewsInfo = state.neobank;
+		state.activeNewsTab ='Neobank';	
+		state.firstNewsLoad =false;
+
+	 },
+
+	 setGeneralNoFetch(state) {
+
+
+		state.activeNewsInfo = state.general;
+		state.activeNewsTab ='General';	
+		state.firstNewsLoad =false;
+
+	 },
+
+	 setPerNoFetch(state) {
+
+
+		state.activeNewsInfo = state.personalfinance;
+		state.activeNewsTab ='PersonalFinance';	
+		state.firstNewsLoad =false;
+
+	 },
+
 	 setValNoFetch(state) {
 
 		state.activeNewsInfo = state.valuation;
@@ -288,7 +513,7 @@ export const mutations = {
 
 		   if (!this.mergerNewsFetched)
 		   {	
-  	       		await this.$axios.get('links?id=M%26A')
+  	       		await this.$axios.get('/links?id=M%26A')
            			.then(res => {
 					  commit("setMergers", res.data);
 		         })
@@ -296,6 +521,207 @@ export const mutations = {
 		   else
 		   {
 				commit("setMergersNoFetch");
+		   }
+  		 
+  		 },
+
+
+  		  async setOpen({ commit }) {
+
+		   if (!this.openNewsFetched)
+		   {	
+  	       		await this.$axios.get('/links?folder=openbanking')
+           			.then(res => {
+					  commit("setOpen", res.data);
+		         })
+			}
+		   else
+		   {
+				commit("setOpenNoFetch");
+		   }
+  		 
+  		 },
+
+  		  async setPer({ commit }) {
+
+		   if (!this.perNewsFetched)
+		   {	
+  	       		await this.$axios.get('/links?folder=personalfinance')
+           			.then(res => {
+					  commit("setPer", res.data);
+		         })
+			}
+		   else
+		   {
+				commit("setPerNoFetch");
+		   }
+  		 
+  		 },
+
+  		  async setWealth({ commit }) {
+
+		   if (!this.wealthNewsFetched)
+		   {	
+  	       		await this.$axios.get('/links?folder=wealthtech')
+           			.then(res => {
+					  commit("setWealth", res.data);
+		         })
+			}
+		   else
+		   {
+				commit("setWealthNoFetch");
+		   }
+  		 
+  		 },
+
+  		  async setRemit({ commit }) {
+
+		   if (!this.remitNewsFetched)
+		   {	
+  	       		await this.$axios.get('/links?folder=remittance')
+           			.then(res => {
+					  commit("setRemit", res.data);
+		         })
+			}
+		   else
+		   {
+				commit("setRemitNoFetch");
+		   }
+  		 
+  		 },
+
+  		  async setCapital({ commit }) {
+
+		   if (!this.capitalNewsFetched)
+		   {	
+  	       		await this.$axios.get('/links?folder=CapitalMarkets')
+           			.then(res => {
+					  commit("setCapital", res.data);
+		         })
+			}
+		   else
+		   {
+				commit("setCapitalNoFetch");
+		   }
+  		 
+  		 },
+
+
+  		  async setCyber({ commit }) {
+
+		   if (!this.cyberNewsFetched)
+		   {	
+  	       		await this.$axios.get('/links?folder=cyberidentity')
+           			.then(res => {
+					  commit("setCyber", res.data);
+		         })
+			}
+		   else
+		   {
+				commit("setCyberNoFetch");
+		   }
+  		 
+  		 },
+
+
+  		  async setReal({ commit }) {
+
+		   if (!this.realNewsFetched)
+		   {	
+  	       		await this.$axios.get('/links?folder=RealEstate')
+           			.then(res => {
+					  commit("setReal", res.data);
+		         })
+			}
+		   else
+		   {
+				commit("setRealNoFetch");
+		   }
+  		 
+  		 },
+
+
+  		  async setReg({ commit }) {
+
+		   if (!this.regNewsFetched)
+		   {	
+  	       		await this.$axios.get('/links?folder=regtech')
+           			.then(res => {
+					  commit("setReg", res.data);
+		         })
+			}
+		   else
+		   {
+				commit("setRegNoFetch");
+		   }
+  		 
+  		 },
+
+
+  		  async setHealth({ commit }) {
+
+		   if (!this.healthNewsFetched)
+		   {	
+  	       		await this.$axios.get('/links?folder=healthtech')
+           			.then(res => {
+					  commit("setHealth", res.data);
+		         })
+			}
+		   else
+		   {
+				commit("setHealthNoFetch");
+		   }
+  		 
+  		 },
+
+
+  		  async setWealth({ commit }) {
+
+		   if (!this.wealthNewsFetched)
+		   {	
+  	       		await this.$axios.get('links?folder=wealthtech')
+           			.then(res => {
+					  commit("setWealth", res.data);
+		         })
+			}
+		   else
+		   {
+				commit("setWealthNoFetch");
+		   }
+  		 
+  		 },
+
+
+  		  async setGeneral({ commit }) {
+
+		   if (!this.generalNewsFetched)
+		   {	
+  	       		await this.$axios.get('/links?folder=General')
+           			.then(res => {
+					  commit("setGeneral", res.data);
+		         })
+			}
+		   else
+		   {
+				commit("setGeneralNoFetch");
+		   }
+  		 
+  		 },
+
+
+
+  		  async setNeo({ commit }) {
+
+		   if (!this.neoNewsFetched)
+		   {	
+  	       		await this.$axios.get('links?folder=neobank')
+           			.then(res => {
+					  commit("setNeo", res.data);
+		         })
+			}
+		   else
+		   {
+				commit("setNeoNoFetch");
 		   }
   		 
   		 },
@@ -394,7 +820,7 @@ export const mutations = {
 
 	export const getters = {
       
-      loadedNews(state) {
+      loadedNews() {
         
         return state.news.pages[0];
 	  
@@ -429,16 +855,19 @@ export const mutations = {
 		 return state.news.insurtech.length > 0; 
 	  
 	  },
+
 	  
 	  lendNewsFetched()  {
 	
 		return state.news.lending.length > 0;
 	  },
+
 	  
 	  firstNewsFetched() {
 	
 		return state.news.pages[0].length > 0;
 	  },
+
 
 	  mergerNewsFetched () {
 	
@@ -446,11 +875,87 @@ export const mutations = {
 
 	  },
 
+
 	  aiNewsFetched () {
 	
 		return state.news.AI.length > 0;
 		
 	  },
+
+
+	  healthNewsFetched () {
+
+	     return state.news.healthtech.length > 0;
+
+	  },
+
+
+	  perNewsFetched () {
+
+	     return state.news.personalfinance.length > 0;
+
+	  },
+
+	  capitalNewsFetched () {
+
+	     return state.news.capitalmarkets.length > 0;
+
+	  },
+
+  	  realNewsFetched () {
+
+	     return state.news.realestate.length > 0;
+
+	  },
+
+	  regNewsFetched () {
+
+	     return state.news.regtech.length > 0;
+
+	  },
+
+
+	 cyberNewsFetched () {
+
+	     return state.news.cyberidentity.length > 0;
+
+	  },
+
+
+	  generalNewsFetched () {
+
+	     return state.news.general.length > 0;
+
+	  },
+
+
+ 	  wealthNewsFetched () {
+
+	     return state.news.wealthtech.length > 0;
+
+	  },
+
+
+  	  openNewsFetched () {
+
+	     return state.news.openbanking.length > 0;
+
+	  },
+
+
+  	  remitNewsFetched () {
+
+	     return state.news.remittance.length > 0;
+
+	  },
+
+
+	  neoNewsFetched () {
+
+	     return state.news.neobank.length > 0;
+
+	  },
+
 
 	  valNewsFetched () {
 	
