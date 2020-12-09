@@ -95,6 +95,7 @@ export default {
   margin-left: 3px;
     margin-right: 3px;
 }
+
 </style>
 
 <style scoped>
@@ -110,8 +111,8 @@ export default {
 .w-col-8 {
     width: 80% !important;
 }
-.button#section-10 {
-      width: 50% ;
+button#section-10 {
+      width: 20% ;
 }
 
 }
@@ -178,7 +179,7 @@ i.glyphicon {
 }
   #section-10 {
     background-image: linear-gradient(92deg, rgba(20, 160, 253, .82), rgba(20, 160, 253, 0.82));
-width: 80px;
+width: 20% !important;
 color: white;
   }
   button#section-10 {
@@ -189,6 +190,7 @@ color: white;
     border-radius: 3px;
     height: fit-content;
     position: inherit;
+    width: 20% !important;
   }
 input {
       background: rgba(105,105,105,0.07059);
