@@ -86,6 +86,15 @@ export default {
   display: grid;
 }
 }
+.tagbtn {
+  padding: 3px 5px !important;
+  border-radius: 3px !important;
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+  display: inline-flex;
+  margin-left: 3px;
+    margin-right: 3px;
+}
 </style>
 
 <style scoped>
@@ -156,6 +165,8 @@ export default {
   margin-top: 10px !important;
   margin-bottom: 10px !important;
   display: inline-flex;
+  margin-left: 3px;
+    margin-right: 3px;
 }
 .gardient-button {
   margin-top:10px;
