@@ -151,9 +151,7 @@ button#section-10 {
   .w-col-8 {
     width: 100% !important;
   }
-  #section-10{
-    width: 100% !important;
-  }
+
 }
 .tag-search-div {
   width: 90% ;
