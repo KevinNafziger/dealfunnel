@@ -239,17 +239,30 @@ h2 {
 <style>
 .search-bar-div {
       text-align: center;
-          text-align-last: center;
+      text-align-last: center;
+}
+@media screen and (max-width: 1300px){
+  .tag-search-div {
+      display: contents !important;
+  }
+  .search-div {
+    display: table-row ;
+  }
 }
 .tag-search-div {
   place-content: center;
-  display: flex !important;
+  display: flex  ;
 }
 .search-div {
-      text-align: -webkit-center!important;
+  text-align: -webkit-center!important;
+
 }
 .text-field {
   text-align: -webkit-center !important;
-      text-align-last: center;
+  text-align-last: center;
 }
+#button {
+  width: 16% !important;
+}
+
 </style>

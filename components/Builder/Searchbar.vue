@@ -77,18 +77,32 @@ export default {
    }
 };
 </script>
-
+<style>
+@media screen and (min-width:1600px) {
+.tag-search-div {
+    display: flex !important ;
+}
+.search-div {
+  display: grid;
+}
+}
+</style>
 
 <style scoped>
 .text-field {
   text-align-last: center;
 }
-@media screen and (min-width:1600px) {
-.search-div {
-    display: inherit;
+.tag-search-div {
+    display: flex !important;
 }
+
+@media screen and (min-width:1600px) {
+
 .w-col-8 {
     width: 80% !important;
+}
+.button#section-10 {
+      width: 50% ;
 }
 
 }
@@ -121,6 +135,7 @@ export default {
   .w-col-8 {
     width: 70% !important;
   }
+
 }
 @media screen and (max-width:900px) {
   .w-col-8 {
@@ -134,7 +149,6 @@ export default {
   width: 90% ;
   margin-left: auto;
   margin-right: auto;
-  display: inline-block;
 }
 .tagbtn {
   padding: 3px 5px !important;
