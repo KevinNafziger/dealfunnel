@@ -32,7 +32,7 @@
                       <em>
                           <div class="w-col w-col-6">
                             <div>
-    
+
                                 <a href="#" v-if="link.sector" v-on:click="getbyCategory(link.sector)" class="tagbtn" >
                                   {{ link.sector.toLowerCase() }}
                                 </a>
@@ -92,56 +92,56 @@ export default {
             break;
         case 'Valuation':
         case 'valuation':
-            this.$store.dispatch("news/setVal"); 
+            this.$store.dispatch("news/setVal");
             break;
         case 'AI':
         case 'ai':
-            this.$store.dispatch("news/setAI"); 
+            this.$store.dispatch("news/setAI");
             break;
         case 'OpenBanking':
         case 'openbanking':
-            this.$store.dispatch("news/setOpen"); 
+            this.$store.dispatch("news/setOpen");
             break;
         case 'PersonalFinance':
         case 'personalfinance':
-            this.$store.dispatch("news/setPer"); 
+            this.$store.dispatch("news/setPer");
             break;
         case 'CapitalMarkets':
         case 'capitalmarkets':
-            this.$store.dispatch("news/setCapital"); 
+            this.$store.dispatch("news/setCapital");
             break;
         case 'WealthTech':
         case 'wealthtech':
-            this.$store.dispatch("news/setWealth"); 
+            this.$store.dispatch("news/setWealth");
             break;
         case 'General':
         case 'general':
-            this.$store.dispatch("news/setGeneral"); 
+            this.$store.dispatch("news/setGeneral");
             break;
         case 'healthtech':
         case 'HealthTech':
-            this.$store.dispatch("news/setHealth"); 
-            break;    
+            this.$store.dispatch("news/setHealth");
+            break;
         case 'RealEstate':
         case 'realestate':
-            this.$store.dispatch("news/setReal"); 
+            this.$store.dispatch("news/setReal");
             break;
         case 'Regtech':
         case 'regtech':
-            this.$store.dispatch("news/setReg"); 
+            this.$store.dispatch("news/setReg");
             break;
         case 'CyberIdentity':
         case 'cyberidentity':
-            this.$store.dispatch("news/setCyber"); 
+            this.$store.dispatch("news/setCyber");
             break;
         case 'Neobank':
         case 'neobank':
-            this.$store.dispatch("news/setNeo"); 
-            break;   
+            this.$store.dispatch("news/setNeo");
+            break;
         case 'Remittance':
         case 'remittance':
-            this.$store.dispatch("news/setRemit"); 
-            break;   
+            this.$store.dispatch("news/setRemit");
+            break;
 
         }
     },
@@ -191,7 +191,7 @@ export default {
       {
         return this.activeTab;
       }
-    
+
     },
 
    links() {
@@ -204,15 +204,15 @@ export default {
         return this.activeNewsInfo;
       }
     },
-    
+
   },
   created()  {
 
      this.$nuxt.$on("getCategory", (category) => this.getbyCategory(category));
      this.$nuxt.$on("changePage", (direction) => this.setPage(direction));
-   
+
    },
-   async fetch({store}) 
+   async fetch({store})
   {
   await store.dispatch("news/nuxtServerInit");
   },
@@ -222,10 +222,19 @@ export default {
   },
 
 };
-   
+
 </script>
 
  <style scoped>
+ .search-bar-div {
+       text-align: center;
+ }
+ .tag-search-div {
+   place-content: center;
+ }
+ .text-field {
+   text-align: -webkit-center;
+ }
  .title {
     text-align: -webkit-center;
     margin-top: 20px;
@@ -380,6 +389,5 @@ ul {
     color:#4286ff;
     cursor: pointer;
   }
- 
-</style>
 
+</style>

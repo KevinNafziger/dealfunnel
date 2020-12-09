@@ -20,37 +20,37 @@ import {mapState} from 'vuex';
 export default {
 
 methods: {
-   
+
    changePage: function(direction) {
 
        switch(direction) {
-       
+
           case 'Previous':
              var page = this.numPage;
             this.$store.dispatch("posts/setView", "Articles");
-             this.$store.dispatch("posts/goPrevious", page); 
-             break; 
+             this.$store.dispatch("posts/goPrevious", page);
+             break;
 
-          case 'Next':        
+          case 'Next':
              var page = this.numPage;
             this.$store.dispatch("posts/setView", "Articles");
-             this.$store.dispatch("posts/goNext", page); 
+             this.$store.dispatch("posts/goNext", page);
              break;
 
           case 'Last':
             this.$store.dispatch("posts/setView", "Articles");
-            this.$store.dispatch("posts/goLast"); 
+            this.$store.dispatch("posts/goLast");
            break;
        }
-    
-    }, 
+
+    },
 
     submitSearch(topic) {
 
       this.$store.dispatch("posts/setView", "Articles");
       this.$store.dispatch("posts/submitSearch", topic);
       this.$store.dispatch("posts/setSearchTab", topic);
-  
+
    },
 
 
@@ -60,7 +60,7 @@ methods: {
 
       case 'Insurtech':
          this.$store.dispatch("posts/setView", "Articles");
-         this.$store.dispatch("posts/setInsur");       
+         this.$store.dispatch("posts/setInsur");
          break;
 
       case 'Blockchain':
@@ -141,8 +141,8 @@ methods: {
          this.$store.dispatch("posts/setView", "Articles");
          this.$store.dispatch("posts/setAdvisors");
          break;
-      }  
-   }, 
+      }
+   },
 
 },
 computed: {
@@ -157,13 +157,13 @@ computed: {
    }),
 
       filterMessage() {
-      
+
         if (this.first == true) {
 
           return ''
         }
         if (this.activeTab == 'Page') {
-          
+
           return this.activeTab + ' ' + this.numPage;
         }
         else {
@@ -177,8 +177,8 @@ computed: {
 
           return this.activeArtInfo;
       }
-  },     
-  
+  },
+
   created() {
 
      this.$nuxt.$on("getCategory", (category) => this.getbyCategory(category));
@@ -186,16 +186,16 @@ computed: {
      this.$nuxt.$on("submitSearch", (topic) => this.submitSearch(topic));
    },
 
-async fetch({store}) 
+async fetch({store})
 
   {
        if (this.first) {
-       store.dispatch("posts/setView", "Articles"); 
-       await store.dispatch("posts/nuxtServerInit");  
+       store.dispatch("posts/setView", "Articles");
+       await store.dispatch("posts/nuxtServerInit");
        }
   },
 
-} 
+}
 
 </script>
 
@@ -233,5 +233,23 @@ h2 {
 }
 .content:hover {
   box-shadow: 0px 0px 8px -4px;
+}
+
+</style>
+<style>
+.search-bar-div {
+      text-align: center;
+          text-align-last: center;
+}
+.tag-search-div {
+  place-content: center;
+  display: flex !important;
+}
+.search-div {
+      text-align: -webkit-center!important;
+}
+.text-field {
+  text-align: -webkit-center !important;
+      text-align-last: center;
 }
 </style>

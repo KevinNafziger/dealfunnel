@@ -6,7 +6,7 @@
         <div class="content">
           <br>
            <h2>Raises</h2> <i style="font-size: 13px; text-align:right; margin-left:3px;">{{ filterMessage}} </i></h2></div></div></div></center>
-      
+
 <RaiseTempSearch></RaiseTempSearch> <br>
 
 
@@ -92,7 +92,7 @@ import RaiseTempSearch from '@/components/Raises/RaiseTempSearch';
 import {mapState} from 'vuex';
 export default {
   layout: 'raises',
-    
+
     methods: {
 
     getbyCategory(category) {
@@ -101,25 +101,25 @@ export default {
 
       case 'Insurtech':
          this.$store.dispatch("raise/setInsur");
-         this.$store.dispatch("raise/setActiveTab", "Insurtech"); 
+         this.$store.dispatch("raise/setActiveTab", "Insurtech");
          break;
       case 'Blockchain':
          this.$store.dispatch("raise/setBlock");
-         this.$store.dispatch("raise/setActiveTab", "Blockchain"); 
+         this.$store.dispatch("raise/setActiveTab", "Blockchain");
          break;
       case 'Lending':
          this.$store.dispatch("raise/setLend");
-         this.$store.dispatch("raise/setActiveTab", "Lending"); 
-         break;  
+         this.$store.dispatch("raise/setActiveTab", "Lending");
+         break;
       case 'Payments':
          this.$store.dispatch("raise/setPay");
-         this.$store.dispatch("raise/setActiveTab", "Payments"); 
+         this.$store.dispatch("raise/setActiveTab", "Payments");
          break;
       case 'All':
          this.$store.dispatch("raise/setActiveTab", "All");
-         this.$store.dispatch("raise/setRaiseInfo", this.allRaises); 
+         this.$store.dispatch("raise/setRaiseInfo", this.allRaises);
          break;
-      }  
+      }
    }
 },
 
@@ -127,12 +127,12 @@ computed: {
   ...mapState({
           activeTab: state => state.raise.activeTab,
           allRaises:  state => state.raise.allRaises,
-          raises: state =>  state.raise.activeRaiseInfo, 
+          raises: state =>  state.raise.activeRaiseInfo,
           firstRaiseLoad: state => state.raise.firstRaiseLoad,
    }),
 
     filterMessage() {
-      
+
         if (this.firstRaiseLoad) {
           return 'All';
         }
@@ -141,14 +141,14 @@ computed: {
         }
     },
 
-    
+
   },
-  
+
   created() {
 
       this.$nuxt.$on("getCategory", (category) => this.getbyCategory(category));
 
-  },  
+  },
 
   async fetch({store}) {
 
@@ -160,6 +160,8 @@ computed: {
 
 
  <style scoped>
+
+
  tr:nth-child(odd) {background: #4f81bd14 !important}
  h2, .ptitle{
    color: #4f81bd !important;
