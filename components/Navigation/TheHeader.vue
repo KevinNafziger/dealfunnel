@@ -2,12 +2,10 @@
 <div class="header-container">
   <header class="the-header">
     <TheSideNavToggle @toggle="$emit('sidenavToggle')" />
-    <div class="logo">
-      <nuxt-link to="/">Home</nuxt-link>
-    </div>
     <div class="spacer"></div>
     <div class="navigation-items">
       <ul class="nav-list">
+        <li class="nav-item"><nuxt-link to="/">Home</nuxt-link></li>
         <li class="nav-item"><nuxt-link to="/posts">Articles</nuxt-link></li>
         <li class="nav-item"><nuxt-link to="/news">News</nuxt-link></li>
         <li class="nav-item"><nuxt-link to="/reports">Reports</nuxt-link></li>
@@ -32,9 +30,14 @@ export default {
   }
 };
 </script>
-
+<style>
+.nav-list {
+  justify-content: center;
+}
+</style>
 
 <style scoped>
+
 .header-container {
   height: 60px;
   box-shadow: 0 1px 3px 0 #a5a5a5 !important;
@@ -61,6 +64,7 @@ export default {
 .logo a {
   text-decoration: none;
   color: white;
+  margin-left: 100px;
 }
 
 .spacer {
