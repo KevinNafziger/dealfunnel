@@ -6,7 +6,9 @@
         <button class="gardient-button" id="section-10" v-on:click="submitSearch(searchMessage)"  style="margin-left:1px;margin-top:5px;margin-bottom:10px" >
         <span class="mdi mdi-file-search"></span>
       </button>
+      <br><br>
     </div>
+
     <div class="tag-search-div">
       <a href="#" v-on:click="changePage('Last')" class="tagbtn">all</a>
       <a href="#" v-on:click="showGrouping('Payments')" class="tagbtn">payments</a>
