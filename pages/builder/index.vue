@@ -53,7 +53,7 @@
             </div>
              <card v-for="myboard in myboards" :id="myboard.id" :key="myboard.id" draggable="true" class="list-group-item">
                 <h3>  {{ myboard.title }} </h3>
-                <p>  {{myboard.created_date}} {{myboard.author.name }} </p>
+                <p>  <span class="date-tag"> {{ myboard.created_date}} </span> {{myboard.author.name }} </p>
             </card>
           </Board>
       </div>
