@@ -202,6 +202,9 @@ async fetch({store})
 a {
   box-shadow: none !important;
 }
+.search-div {
+margin-bottom: 20px;
+}
 </style>
 
 <style scoped>
