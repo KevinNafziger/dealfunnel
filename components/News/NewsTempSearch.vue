@@ -69,6 +69,16 @@ h2 {
 }
 .tag-search-div {
   display: inline-block;
+  margin-top: -20px !important;
+  margin-bottom: 20px !important;
+}
+.tagbtn {
+  box-shadow: 0px 0px 10px -7px gray !important;
+  background: #4f81bd;
+  color: #ffffff !important;
+}
+.w-row{
+      margin-top: -7px;
 }
 </style>
 
