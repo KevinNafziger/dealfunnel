@@ -160,7 +160,9 @@ computed: {
 
 
  <style scoped>
-
+a {
+  box-shadow:none;
+}
 
  tr:nth-child(odd) {background: #4f81bd14 !important}
  h2, .ptitle{
