@@ -133,6 +133,7 @@ async fetch({store}) {
 
 <style scoped>
 a {
+  box-shadow: none;
   color:#ffffff;
   text-decoration: none !important;
 }
