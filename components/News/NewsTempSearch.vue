@@ -31,7 +31,7 @@ export default {
    changePage: function(direction) {
       $nuxt.$emit("changePage", direction);
     },
-  
+
    },
    computed: {
   ...mapState({
@@ -63,7 +63,14 @@ export default {
    }
 };
 </script>
-
+<style>
+h2 {
+  text-align:center;
+}
+.tag-search-div {
+  display: inline-block;
+}
+</style>
 
 <style scoped>
 .text-field {
@@ -76,6 +83,7 @@ export default {
 .w-col-8 {
     width: 80% !important;
 }
+
 
 }
 .search-div {
