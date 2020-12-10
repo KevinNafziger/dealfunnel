@@ -112,7 +112,7 @@ export default {
     width: 80% !important;
 }
 button#section-10 {
-      width: 20% ;
+      width: 15% ;
 }
 
 }
@@ -188,7 +188,7 @@ color: white;
     border-radius: 3px;
     height: fit-content;
     position: inherit;
-    width: 20% !important;
+    width: 15% !important;
   }
 input {
       background: rgba(105,105,105,0.07059);
