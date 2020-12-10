@@ -333,6 +333,10 @@
 
 
   <style scoped>
+  a {
+    height: 100px;
+    box-shadow: none;
+  }
     h2 {
     margin-top: 0px;
       color: #4f81bd !important;
