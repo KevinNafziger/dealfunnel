@@ -65,7 +65,7 @@ export default {
 </script>
 <style>
 a {
-  color: #4f81bd !important;
+  color: #4f81bd ;
     font-weight: 500;
     text-decoration: none !important;
     box-shadow: 0px 0px 10px -5px gray;
