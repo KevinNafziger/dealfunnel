@@ -64,6 +64,20 @@ export default {
 };
 </script>
 <style>
+a {
+  color: #4f81bd !important;
+    font-weight: 500;
+    text-decoration: none !important;
+    box-shadow: 0px 0px 10px -5px gray;
+    border-radius: 3px;
+    padding: 10px;
+    background-color:  #5887c005;
+    transition: 1s;
+}
+a:hover {
+  box-shadow: 0px 0px 10px -3px  #4f81bd;
+  color: #4f81bd !important;
+}
 h2 {
   text-align:center;
 }
