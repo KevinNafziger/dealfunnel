@@ -2,7 +2,6 @@
 <div class="header-container">
   <header class="the-header">
     <TheSideNavToggle @toggle="$emit('sidenavToggle')" />
-    <div class="spacer"></div>
     <div class="navigation-items">
       <ul class="nav-list">
         <li class="nav-item"><nuxt-link to="/"><span class="mdi mdi-home"></span></nuxt-link></li>
