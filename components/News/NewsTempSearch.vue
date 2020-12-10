@@ -76,7 +76,6 @@ a {
 }
 a:hover {
   box-shadow: 0px 0px 10px -3px  #4f81bd;
-  color: #ffffff !important;
 }
 h2 {
   text-align:center;
