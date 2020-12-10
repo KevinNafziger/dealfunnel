@@ -5,7 +5,7 @@
     <div class="spacer"></div>
     <div class="navigation-items">
       <ul class="nav-list">
-        <li class="nav-item"><nuxt-link to="/">Home</nuxt-link></li>
+        <li class="nav-item"><nuxt-link to="/"><span class="mdi mdi-home"></span></nuxt-link></li>
         <li class="nav-item"><nuxt-link to="/posts">Articles</nuxt-link></li>
         <li class="nav-item"><nuxt-link to="/news">News</nuxt-link></li>
         <li class="nav-item"><nuxt-link to="/reports">Reports</nuxt-link></li>
