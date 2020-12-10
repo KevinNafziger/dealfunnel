@@ -196,10 +196,11 @@ box-shadow: 0 10px 20px gray;
 }
 .testimonials .card .content .details h2{
 font-size:15px;
-color:#fff;
+color:#fff !important;
+margin-top:20px;
 }
 .testimonials .card .content .details h2 span{
-color:#03a9f4;
+color:#ffffff;
 font-size:12px;
 transtion:0.5s;
 }
