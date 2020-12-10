@@ -296,7 +296,9 @@ export default {
   font-weight: bold;
   font-size: 14px;
 }
-
+.builder-btns {
+    align-self: center !important;
+}
 h3, h2 {
   color: #4f81bd !important;
 }

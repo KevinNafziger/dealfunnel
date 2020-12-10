@@ -199,9 +199,7 @@ font-size:15px;
 color:#fff !important;
 margin-top:20px;
 }
-.builder-btns {
-    align-self: center;
-}
+
 .testimonials .card .content .details h2 span{
 color:#ffffff;
 font-size:12px;
