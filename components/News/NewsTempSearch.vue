@@ -76,7 +76,7 @@ a {
 }
 a:hover {
   box-shadow: 0px 0px 10px -3px  #4f81bd;
-  color: #4f81bd !important;
+  color: #ffffff !important;
 }
 h2 {
   text-align:center;
