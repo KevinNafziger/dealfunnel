@@ -198,8 +198,14 @@ async fetch({store})
 }
 
 </script>
+<style>
+a {
+  box-shadow: none !important;
+}
+</style>
 
 <style scoped>
+
 .title {
     text-align: -webkit-center;
     margin-top: 20px;
