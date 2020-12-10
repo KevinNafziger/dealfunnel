@@ -2,11 +2,12 @@
 <template>
 
 <div>
-    <div data-v-50f93fd9="" class="title"><div data-v-50f93fd9="" class="content"><br data-v-50f93fd9=""> <h2 data-v-50f93fd9="">Builder</h2></div></div>
+  <br>
+    <div data-v-50f93fd9="" ><div data-v-50f93fd9="" class="content"><br data-v-50f93fd9=""> <h2 data-v-50f93fd9="">Builder</h2></div></div>
     <br><br>
-   
+
     <main class="flexbox">
-       
+
        <div class="left-side">
          <h2> Report Content </h2>
          <br>
@@ -15,12 +16,12 @@
             </div>
            <Board id="board-2">
              <Searchbar/>
-             
+
              <card v-for="post in posts" :id="post.id" :key="post.id" draggable="true" class="list-group-item">
                     <h3>  {{ post.title }} </h3>
                     <p>  {{ post.created_date}} {{post.author.name }} </p>
              </card>
-            
+
             </Board>
         </div>
 
@@ -32,10 +33,10 @@
             <button v-show="this.showModal" v-on:click="toggleModal()" class="gardient-button b-lr-s">
               <span class="mdi mdi-file-eye"></span>
             Close View
-            </button> 
+            </button>
           <br><br><br>
           </div>
-        
+
           <postsys :posts="items" :board="this.myboard" v-show="this.showModal">
           </postsys>
 
@@ -116,7 +117,7 @@ export default {
       {
         return this.activeTab;
       }
-    
+
     },
 
     posts() {
@@ -129,7 +130,7 @@ export default {
         return this.activeBuildInfo;
       }
     },
-    
+
     items()  {
 
         if (this.first == true) {
@@ -138,7 +139,7 @@ export default {
         }
 
         else if (this.myboardArry.length == 0) {
-          
+
           return this.activeBuildInfo;
         }
 
@@ -155,7 +156,7 @@ export default {
      this.$nuxt.$on("addRightArry", (item) => this.addtoBoardArry(item));
      this.$nuxt.$on("changePage", (direction) => this.setPage(direction));
      this.$nuxt.$on("submitSearch", (topic) => this.submitSearch(topic));
-   
+
    },
 
   methods: {
@@ -165,17 +166,17 @@ export default {
       switch(category) {
 
         case 'Insurtech':
-           this.$store.commit("posts/setView", "Builder"); 
+           this.$store.commit("posts/setView", "Builder");
            this.$store.dispatch("posts/setInsur");
            break;
 
         case 'Blockchain':
-            this.$store.commit("posts/setView", "Builder"); 
+            this.$store.commit("posts/setView", "Builder");
             this.$store.dispatch("posts/setBlock");
             break;
 
         case 'Lending':
-            this.$store.commit("posts/setView", "Builder");  
+            this.$store.commit("posts/setView", "Builder");
             this.$store.dispatch("posts/setLend");
             break;
 
@@ -198,19 +199,19 @@ export default {
        switch(direction) {
 
          case 'Previous':
-           
-            this.$store.commit("posts/setView", "Builder"); 
+
+            this.$store.commit("posts/setView", "Builder");
             this.$store.dispatch("posts/goPrevious");
             break;
 
           case 'Next':
             var page = this.numPage;
-            this.$store.commit("posts/setView", "Builder"); 
+            this.$store.commit("posts/setView", "Builder");
             this.$store.dispatch("posts/goNext", page);
             break;
 
           case 'Last':
-            this.$store.commit("posts/setView", "Builder"); 
+            this.$store.commit("posts/setView", "Builder");
             this.$store.dispatch("posts/goLast", page);
             break;
        }
@@ -230,8 +231,8 @@ export default {
      },
 
     submitSearch: function (topic) {
-      
-        this.$store.commit("posts/setView", "Builder"); 
+
+        this.$store.commit("posts/setView", "Builder");
         this.$store.dispatch("posts/submitSearch", topic);
         this.$store.dispatch("posts/setSearchTab", topic);
      },
@@ -248,19 +249,19 @@ export default {
     },
 
     toggleModal() {
-      
+
         this.$store.dispatch("boards/toggle")
      },
 
     articleFilter(card_id) {
-  
+
        return this.posts.find(post => post.id == card_id);
      },
 
      idlists: function(post_id) {
-      
+
        for (var i = 0; i < this.myboard.length; i++) {
-        
+
         if(this.myboard[i] == post_id) {
           return post_id;
         }
@@ -276,10 +277,10 @@ export default {
 
   async fetch({store}) {
 
-      
-    store.dispatch("posts/setView", "Builder"); 
+
+    store.dispatch("posts/setView", "Builder");
     await store.dispatch("posts/nuxtServerInit")
-  
+
   },
 }
 </script>
