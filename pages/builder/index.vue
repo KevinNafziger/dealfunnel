@@ -19,7 +19,7 @@
 
              <card v-for="post in posts" :id="post.id" :key="post.id" draggable="true" class="list-group-item">
                     <h3>  {{ post.title }} </h3>
-                    <p>  {{ post.created_date}} {{post.author.name }} </p>
+                    <p> <span class="date-tag"> {{ post.created_date}} </span> {{post.author.name }} </p>
              </card>
 
             </Board>
@@ -286,6 +286,16 @@ export default {
 </script>
 
 <style scoped>
+
+.date-tag {
+  background: #69737b3d;
+  border-radius: 3px;
+  color: #4f81bd;
+  margin-right:20px;
+  padding:3px;
+  font-weight: bold;
+  font-size: 14px;
+}
 
 h3, h2 {
   color: #4f81bd !important;
