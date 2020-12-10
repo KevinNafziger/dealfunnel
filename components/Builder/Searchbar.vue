@@ -153,6 +153,10 @@ button#section-10 {
   }
 
 }
+.tag-search-div[data-v-02b26ee8] {
+    display: block !important;
+}
+
 .tag-search-div {
   width: 90% ;
   margin-left: auto;
