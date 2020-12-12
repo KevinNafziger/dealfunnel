@@ -1,10 +1,10 @@
 <template>
 <div>
-  <div data-v-69296181="" id="top" ><div data-v-69296181="" class="title"><div data-v-69296181="" class="content"><br data-v-69296181=""> <h2 data-v-69296181="">Article Data</h2></div></div></div>
+  <div data-v-69296181="" id="top" ><div data-v-69296181="" class="title"><div data-v-69296181="" class="content"><br data-v-69296181=""> <h2 data-v-69296181="">Article Data<i style="font-size: 13px; text-align:right; margin-left:3px;">{{ filterMessage }}</i></h2></div></div></div>
   <text class="headcomname">
     Article Data
   </text>
-
+<DataTempSearch/>
   <a href="https://fintechhorizonsmedia.com/fintechraises.xlsx"
    style="color:dimgray" id="myExcelIcoTag"><div class="excel-ico"></div></a>
 
@@ -93,13 +93,116 @@
 
 <script>
 import {mapState} from 'vuex';
+import DataTempSearch from '@/components/Data/DataTempSearch';
 export default {
 computed: {
   ...mapState({
-          posts: state => state.posts.pages[0],
-          firstTimeLoaded: state => state.poara.firstTimeLoaded,
+          starter: state => state.posts.pages[0],
+          firstDataLoad: state => state.posts.firstDataLoad,
+          activeDataInfo:  state => state.posts.activeDataInfo,
+          activeDataTab:  state => state.posts.activeDataTab,
    }),
+
+   posts() {
+
+     if (this.firstDataLoad)
+     {
+
+       return this.starter;
+     }
+     else {
+
+        return this.activeDataInfo;
+
+     }
+
+   },
+
+   filterMessage() {
+
+        if (this.firstDataLoad) {
+
+          return ''
+        }
+        else {
+
+          return this.activeDataTab;
+        }
+
+      }
+ },
+
+ methods: { 
+   getbyCategory(category) {
+
+    switch(category) {
+
+      case 'Q320':
+         this.$store.dispatch("posts/setView", "Data");
+         this.$store.dispatch("posts/setQ320");
+         break;
+
+      case 'Q420':
+         this.$store.dispatch("posts/setView", "Data");
+         this.$store.dispatch("posts/setQ420");
+         break;
+
+      case 'Q121':
+        this.$store.dispatch("posts/setView", "Data");
+         this.$store.dispatch("posts/setQ121");
+         break;
+
+      case 'Q221':
+         this.$store.dispatch("posts/setView", "Data");
+         this.$store.dispatch("posts/setQ221");
+         break;
+
+      case 'Q321':
+         this.$store.dispatch("posts/setView", "Data");
+         this.$store.dispatch("posts/setQ321");
+         break;
+
+      case 'Q421':
+         this.$store.dispatch("posts/setView", "Data");
+         this.$store.dispatch("posts/setQ421");
+         break;
+
+      case 'zerotoone':
+         this.$store.dispatch("posts/setView", "Data");
+         this.$store.dispatch("posts/set0to1");
+         break;
+
+      case 'onetoten':
+         this.$store.dispatch("posts/setView", "Data");
+         this.$store.dispatch("posts/set1to10");
+         break;
+
+      case 'tentotwenty':
+         this.$store.dispatch("posts/setView", "Data");
+         this.$store.dispatch("posts/set10to20");
+         break;
+
+      case 'twentytofifty':
+         this.$store.dispatch("posts/setView", "Data");
+         this.$store.dispatch("posts/set20to50");
+         break;
+
+      case 'fiftytohundred':
+         this.$store.dispatch("posts/setView", "Data");
+         this.$store.dispatch("posts/set50to100");
+         break;
+
+      case 'hundredplus':
+         this.$store.dispatch("posts/setView", "Data");
+         this.$store.dispatch("posts/set100plus");
+         break;
+      }
+   }
+
 },
+ created() {
+     this.$nuxt.$on("getCategory", (category) => this.getbyCategory(category));
+   },
 async fetch({store}) {
   await store.dispatch("posts/nuxtServerInit")
 },

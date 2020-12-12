@@ -21,7 +21,24 @@ export const state = () => ({
 
   activeArtInfo: [],
   activeBuildInfo: [],
-  
+  activeDataInfo: [],
+
+  Q320: [],
+  Q420: [],
+  Q121: [],
+  Q221: [],
+  Q321: [],
+  Q421: [],
+
+  zerotoone: [],
+  onetoten: [],
+  tentotwenty: [],
+  twentytofifty: [],
+  fiftytohundred: [],
+  hundredplus: [],
+
+
+  activeDataTab: 'All',
   activeArtTab: 'All',
   activeBuildTab:  'All',
 
@@ -29,9 +46,11 @@ export const state = () => ({
   
   numBuildPage: 1,
   numArtPage: 1,
+  numDataPage: 1,
 
   firstBuildLoad: true,
   firstArtLoad: true,
+  firstDataLoad: true,
 
 })
 
@@ -49,7 +68,6 @@ export const mutations = {
 
     state.insurtech = data; 
 
-
     if (state.activeView =='Builder') 
     {
    		state.activeBuildInfo = data;
@@ -66,10 +84,9 @@ export const mutations = {
   },
    
 
-   setCapital(state, data) {
+ setCapital(state, data) {
 
     state.capitalmarkets = data; 
-
 
     if (state.activeView =='Builder') 
     {
@@ -86,7 +103,7 @@ export const mutations = {
 
   },
 
-   setWealth(state, data) {
+ setWealth(state, data) {
 
     state.wealthtech = data; 
 
@@ -107,129 +124,281 @@ export const mutations = {
   },
 
 
-    setGrowth(state, data) {
+ setGrowth(state, data) {
 
-    	state.growthequity = data; 
+	state.growthequity = data; 
 
+    if (state.activeView =='Builder') 
+    {
+   		state.activeBuildInfo = data;
+   		state.activeBuildTab ='Growth Equity';	
+    	state.firstBuildLoad = false;
+    }
+    else if (state.activeView =='Articles')
+    {
+    	state.activeArtInfo = data;
+    	state.activeArtTab ='Growth Equity';	
+    	state.firstArtLoad = false;
+    }
 
-	    if (state.activeView =='Builder') 
-	    {
-	   		state.activeBuildInfo = data;
-	   		state.activeBuildTab ='Growth Equity';	
-	    	state.firstBuildLoad = false;
-	    }
-	    else if (state.activeView =='Articles')
-	    {
-	    	state.activeArtInfo = data;
-	    	state.activeArtTab ='Growth Equity';	
-	    	state.firstArtLoad = false;
-	    }
-
- 	 },
-
-
- 	  setVal(state, data) {
-
-    	state.valuation = data; 
+  },
 
 
-	    if (state.activeView =='Builder') 
-	    {
-	   		state.activeBuildInfo = data;
-	   		state.activeBuildTab ='Valuation';	
-	    	state.firstBuildLoad = false;
-	    }
-	    else if (state.activeView =='Articles')
-	    {
-	    	state.activeArtInfo = data;
-	    	state.activeArtTab ='Valuation';	
-	    	state.firstArtLoad = false;
-	    }
+  setVal(state, data) {
 
- 	  },
+    state.valuation = data; 
 
+    if (state.activeView =='Builder') 
+    {
+   		state.activeBuildInfo = data;
+   		state.activeBuildTab ='Valuation';	
+    	state.firstBuildLoad = false;
+    }
+    else if (state.activeView =='Articles')
+    {
+    	state.activeArtInfo = data;
+    	state.activeArtTab ='Valuation';	
+    	state.firstArtLoad = false;
+    }
 
- 	 setMergers(state, data) {
-
-    	state.mergers = data; 
-
-
-	    if (state.activeView =='Builder') 
-	    {
-	   		state.activeBuildInfo = data;
-	   		state.activeBuildTab ='M&A';	
-	    	state.firstBuildLoad = false;
-	    }
-	    else if (state.activeView =='Articles')
-	    {
-	    	state.activeArtInfo = data;
-	    	state.activeArtTab ='M&A';	
-	    	state.firstArtLoad = false;
-	    }
-
- 	 },
- 
-
- 	 setSpin(state, data) {
-
-    	state.spinoffs = data; 
+  },
 
 
-	    if (state.activeView =='Builder') 
-	    {
-	   		state.activeBuildInfo = data;
-	   		state.activeBuildTab ='Spin-offs';	
-	    	state.firstBuildLoad = false;
-	    }
-	    else if (state.activeView =='Articles')
-	    {
-	    	state.activeArtInfo = data;
-	    	state.activeArtTab ='Spin-offs';	
-	    	state.firstArtLoad = false;
-	    }
+ setMergers(state, data) {
 
- 	 },
+	state.mergers = data; 
 
 
- 	 setBoot(state, data) {
+	if (state.activeView =='Builder') 
+	{
+			state.activeBuildInfo = data;
+			state.activeBuildTab ='M&A';	
+		state.firstBuildLoad = false;
+	}
+	else if (state.activeView =='Articles')
+	{
+		state.activeArtInfo = data;
+		state.activeArtTab ='M&A';	
+		state.firstArtLoad = false;
+	}
 
-    	state.bootstrapped = data; 
-
-
-	    if (state.activeView =='Builder') 
-	    {
-	   		state.activeBuildInfo = data;
-	   		state.activeBuildTab ='Bootstrapped';	
-	    	state.firstBuildLoad = false;
-	    }
-	    else if (state.activeView =='Articles')
-	    {
-	    	state.activeArtInfo = data;
-	    	state.activeArtTab ='Bootstrapped';	
-	    	state.firstArtLoad = false;
-	    }
-
- 	 },
-
-	 setReal(state, data) {
-
-	    state.realestate = data; 
+ },
 
 
-	    if (state.activeView =='Builder') 
-	    {
-	   		state.activeBuildInfo = data;
-	   		state.activeBuildTab ='RealEstate';	
-	    	state.firstBuildLoad = false;
-	    }
-	    else if (state.activeView =='Articles')
-	    {
-	    	state.activeArtInfo = data;
-	    	state.activeArtTab ='RealEstate';	
-	    	state.firstArtLoad = false;
-	    }
+ setSpin(state, data) {
 
-	  },
+	state.spinoffs = data; 
+
+	if (state.activeView =='Builder') 
+	{
+			state.activeBuildInfo = data;
+			state.activeBuildTab ='Spin-offs';	
+		state.firstBuildLoad = false;
+	}
+	else if (state.activeView =='Articles')
+	{
+		state.activeArtInfo = data;
+		state.activeArtTab ='Spin-offs';	
+		state.firstArtLoad = false;
+	}
+
+ },
+
+
+ setBoot(state, data) {
+
+	state.bootstrapped = data; 
+
+	if (state.activeView =='Builder') 
+	{
+			state.activeBuildInfo = data;
+			state.activeBuildTab ='Bootstrapped';	
+		state.firstBuildLoad = false;
+	}
+	else if (state.activeView =='Articles')
+	{
+		state.activeArtInfo = data;
+		state.activeArtTab ='Bootstrapped';	
+		state.firstArtLoad = false;
+	}
+
+ },
+
+ setReal(state, data) {
+
+    state.realestate = data; 
+
+
+    if (state.activeView =='Builder') 
+    {
+   		state.activeBuildInfo = data;
+   		state.activeBuildTab ='RealEstate';	
+    	state.firstBuildLoad = false;
+    }
+    else if (state.activeView =='Articles')
+    {
+    	state.activeArtInfo = data;
+    	state.activeArtTab ='RealEstate';	
+    	state.firstArtLoad = false;
+    }
+
+  },
+
+
+  setQ320(state, data) {
+
+    state.Q320 = data; 
+
+    if (state.activeView =='Data') 
+    {
+   		state.activeDataInfo = data;
+   		state.activeDataTab ='Next Raise: Q320';	
+    	state.firstDataLoad = false;
+    }
+
+  },
+
+  setQ420(state, data) {
+
+    state.Q420 = data; 
+
+    if (state.activeView =='Data') 
+    {
+   		state.activeDataInfo = data;
+   		state.activeDataTab ='Next Raise: Q420';	
+    	state.firstDataLoad = false;
+    }
+    
+  },
+
+  setQ121(state, data) {
+
+    state.Q121 = data; 
+    if (state.activeView =='Data') 
+    {
+   		state.activeDataInfo = data;
+   		state.activeDataTab ='Next Raise: Q121';	
+    	state.firstDataLoad = false;
+    }
+  },
+
+  setQ221(state, data) {
+
+    state.Q221 = data; 
+    if (state.activeView =='Data') 
+    {
+   		state.activeDataInfo = data;
+   		state.activeDataTab ='Next Raise: Q221';	
+    	state.firstDataLoad = false;
+    }
+
+  },
+
+  setQ321(state, data) {
+
+    state.Q321 = data; 
+
+    if (state.activeView =='Data') 
+    {
+   		state.activeDataInfo = data;
+   		state.activeDataTab ='Next Raise: Q321';	
+    	state.firstDataLoad = false;
+    }
+
+  },
+
+  setQ421(state, data) {
+
+    state.Q421 = data; 
+
+
+    if (state.activeView =='Data') 
+    {
+   		state.activeDataInfo = data;
+   		state.activeDataTab ='Next Raise: Q421';	
+    	state.firstDataLoad = false;
+    }
+
+  },
+
+  set0to1(state, data) {
+
+    state.zerotoone = data; 
+
+    if (state.activeView =='Data') 
+    {
+   		state.activeDataInfo = data;
+   		state.activeDataTab ='Next Raise: $0 to $1m';	
+    	state.firstDataLoad = false;
+    }
+
+  },
+
+  set1to10(state, data) {
+
+    state.onetoten = data; 
+
+    if (state.activeView =='Data') 
+    {
+   		state.activeDataInfo = data;
+   		state.activeDataTab ='Next Raise: $1m to $10m';	
+    	state.firstDataLoad = false;
+    }
+
+  },
+
+  set10to20(state, data) {
+
+    state.tentotwenty = data; 
+
+    if (state.activeView =='Data') 
+    {
+   		state.activeDataInfo = data;
+   		state.activeDataTab ='Next Raise: $10m to $20m';	
+    	state.firstDataLoad = false;
+    }
+
+   },
+
+  set20to50(state, data) {
+
+    state.twentytofifty = data; 
+
+    if (state.activeView =='Data') 
+    {
+   		state.activeDataInfo = data;
+   		state.activeDataTab = 'Next Raise: $20m to $50m';	
+    	state.firstDataLoad = false;
+    }
+
+  },
+
+  set50to100(state, data) {
+
+    state.fiftytohundred = data; 
+
+
+    if (state.activeView =='Data') 
+    {
+   		state.activeDataInfo = data;
+   		state.activeDataTab = 'Next Raise: $50m to $100m';	
+    	state.firstDataLoad = false;
+    }
+
+   },
+
+   set100plus(state, data) {
+
+    state.hundredplus = data; 
+
+    if (state.activeView =='Data') 
+    {
+   		state.activeDataInfo = data;
+   		state.activeDataTab = 'Next Raise: $100m plus';	
+    	state.firstDataLoad = false;
+    }
+
+   },
 
 
   setBlock(state, data){
@@ -753,6 +922,162 @@ export const mutations = {
 		  }
 	 },
 
+
+
+	 setQ320NoFetch(state){
+
+		switch(state.activeView) {
+
+   	   	  case "Data":
+		     state.activeDataInfo = state.Q320;
+		     state.activeDataTab = 'Next Raise: Q320';	
+		     state.firstDataLoad = false;
+		     break;		
+		  }
+	 },
+
+
+	 setQ420NoFetch(state){
+
+		switch(state.activeView) {
+
+   	   	  case "Data":
+		     state.activeDataInfo = state.Q420;
+		     state.activeDataTab = 'Next Raise: Q420';	
+		     state.firstDataLoad = false;
+		     break;	
+
+		  }
+	 },
+
+
+	 setQ121NoFetch(state){
+
+		switch(state.activeView) {
+
+   	   	  case "Data":
+		     state.activeDataInfo = state.Q121;
+		     state.activeDataTab = 'Next Raise: Q121';	
+		     state.firstDataLoad = false;
+		     break;	
+		  }
+	 },
+
+
+	 setQ221NoFetch(state){
+
+		switch(state.activeView) {
+
+   	   	  case "Data":
+		     state.activeDataInfo = state.Q221;
+		     state.activeDataTab = 'Next Raise: Q221';	
+		     state.DataLoad = false;
+		     break;	
+
+		  }
+	 },
+
+
+	 setQ321NoFetch(state){
+
+		switch(state.activeView) {
+
+   	   	  case "Data":
+		     state.activeDataInfo = state.Q321;
+		     state.activeDataTab = 'Next Raise: Q321';	
+		     state.firstDataLoad = false;
+		     break;	
+
+
+		  }
+	 },
+
+
+	 setQ421NoFetch(state){
+
+		switch(state.activeView) {
+
+   	   	  case "Data":
+		     state.activeDataInfo = state.Q421;
+		     state.activeDataTab = 'Q421';	
+		     state.firstLoad = false;
+		     break;	
+		  }
+	 },
+
+
+	 set0to1NoFetch(state){
+
+		switch(state.activeView) {
+
+   	   	  case "Data":
+		     state.activeDataInfo = state.zerotoone;
+		     state.activeDataTab = 'Next Raise: $0m to $1m';	
+		     state.firstLoad = false;
+		     break;	
+		  }
+	 },
+
+	 set1to10NoFetch(state){
+
+		switch(state.activeView) {
+
+   	   	  case "Data":
+		     state.activeDataInfo = state.onetoten;
+		     state.activeDataTab = 'Next Raise: $1m to $10m';	
+		     state.firstDataLoad = false;
+		     break;	
+		  }
+	 },
+
+	 set10to20NoFetch(state){
+
+		switch(state.activeView) {
+
+   	   	  case "Data":
+		     state.activeDataInfo = state.tentotwenty;
+		     state.activeDataTab = 'Next Raise: $10m to $20m';	
+		     state.firstDataLoad = false;
+		     break;	
+		  }
+	 },
+
+	 set20to50NoFetch(state){
+
+		switch(state.activeView) {
+
+   	   	  case "Data":
+		     state.activeDataInfo = state.twentytofifty;
+		     state.activeDataTab = 'Next Raise: $20m to $50m';	
+		     state.firstDataLoad = false;
+		     break;	
+		  }
+	 },
+
+	 set50to100NoFetch(state){
+
+		switch(state.activeView) {
+
+   	   	  case "Data":
+		     state.activeDataInfo = state.fiftytohundred;
+		     state.activeDataTab = 'Next Raise $50m to $100m';	
+		     state.firstDataLoad = false;
+		     break;	
+		  }
+	 },
+
+	 set100plusNoFetch(state){
+
+		switch(state.activeView) {
+
+   	   	  case "Data":
+		     state.activeDataInfo = state.hundredplus;
+		     state.activeDataTab = 'Next Raise: $100m plus';	
+		     state.firstDataLoad = false;
+		     break;	
+		  }
+	 },
+
 	setAINoFetch(state){
 
 		switch(state.activeView) {
@@ -1148,6 +1473,231 @@ export const mutations = {
 		   	else {
 				
 				commit("setRealNoFetch" );
+		    }  
+  		 
+  		  },
+
+
+
+  		  async setQ121({ commit }) {
+		    
+		    if (!this.Q121PostsFetched)
+		   	{	
+  	    		await this.$axios.get('/posts?quarter=Q121')
+           			.then(res => {
+          			commit("setQ121", res.data);
+			 	})
+		   	} 
+		   	else {
+				
+				commit("setQ121NoFetch" );
+		    }
+  		 
+  		  },
+
+
+
+  		  async setQ221({ commit }) {
+		    
+		    if (!this.Q221PostsFetched)
+		   	{	
+  	    		await this.$axios.get('/posts?quarter=Q221')
+           			.then(res => {
+          			commit("setQ221", res.data);
+			 	})
+		   	} 
+		   	else {
+				
+				commit("setQ221NoFetch" );
+		    }
+  		 
+  		  },
+
+
+
+  		  async setQ321({ commit }) {
+		    
+		    if (!this.Q321PostsFetched)
+		   	{	
+  	    		await this.$axios.get('/posts?quarter=Q321')
+           			.then(res => {
+          			commit("setQ321", res.data);
+			 	})
+		   	} 
+		   	else {
+				
+				commit("setQ321NoFetch" );
+		    }
+  		 
+  		  },
+
+
+
+  		  async setQ421({ commit }) {
+		    
+		    if (!this.Q421PostsFetched)
+		   	{	
+  	    		await this.$axios.get('/posts?quarter=Q421')
+           			.then(res => {
+          			commit("setQ421", res.data);
+			 	})
+		   	} 
+		   	else {
+				
+				commit("setQ421NoFetch" );
+		    }
+  		 
+  		  },
+
+
+  		  async setQ420({ commit }) {
+		    
+		    if (!this.Q420PostsFetched)
+		   	{	
+  	    		await this.$axios.get('/posts?quarter=Q420')
+           			.then(res => {
+          			commit("setQ420", res.data);
+			 	})
+		   	} 
+		   	else {
+				
+				commit("setQ420NoFetch" );
+		    }
+  		 
+  		  },
+
+
+  		  async setQ320({ commit }) {
+		    
+		    if (!this.Q320PostsFetched)
+		   	{	
+  	    		await this.$axios.get('/posts?quarter=Q320')
+           			.then(res => {
+          			commit("setQ320", res.data);
+			 	})
+		   	} 
+		   	else {
+				
+				commit("setQ320NoFetch" );
+		    }
+  		 
+  		  },
+
+
+
+  		  async setQ320({ commit }) {
+		    
+		    if (!this.Q320PostsFetched)
+		   	{	
+  	    		await this.$axios.get('/posts?quarter=Q320')
+           			.then(res => {
+          			commit("setQ320", res.data);
+			 	})
+		   	} 
+		   	else {
+				
+				commit("setQ320NoFetch" );
+		    }
+  		 
+  		  },
+
+
+  		  async set0to1({ commit }) {
+		    
+		    if (!this.zerotoonePostsFetched)
+		   	{	
+  	    		await this.$axios.get('/posts?amount=%240+to+%241+million')
+           			.then(res => {
+          			commit("set0to1", res.data);
+			 	})
+		   	} 
+		   	else {
+				
+				commit("set0to1NoFetch" );
+		    }
+  		 
+  		  },
+
+
+  		  async set1to10({ commit }) {
+		    
+		    if (!this.onetotenPostsFetched)
+		   	{	
+  	    		await this.$axios.get('/posts?amount=%241+million+to+%245+million')
+           			.then(res => {
+          			commit("set1to10", res.data);
+			 	})
+		   	} 
+		   	else {
+				
+				commit("set1to10NoFetch" );
+		    }
+  		 
+  		  },
+
+
+  		  async set10to20({ commit }) {
+		    
+		    if (!this.tentotwentyPostsFetched)
+		   	{	
+  	    		await this.$axios.get('/posts?amount=%2410+million+to+%2420+million')
+           			.then(res => {
+          			commit("set10to20", res.data);
+			 	})
+		   	} 
+		   	else {
+				
+				commit("set10to20NoFetch" );
+		    }
+  		 
+  		  },
+
+
+  		  async set20to50({ commit }) {
+		    
+		    if (!this.twentytofiftyPostsFetched)
+		   	{	
+  	    		await this.$axios.get('/posts?amount=%2420+million+to+%2450+million')
+           			.then(res => {
+          			commit("set20to50", res.data);
+			 	})
+		   	} 
+		   	else {
+				
+				commit("set20to50NoFetch" );
+		    }
+  		 
+  		  },
+
+  		  async set50to100({ commit }) {
+		    
+		    if (!this.fiftytohundedPostsFetched)
+		   	{	
+  	    		await this.$axios.get('/posts?amount=%2450+million+to+%24100+million')
+           			.then(res => {
+          			commit("set50to100", res.data);
+			 	})
+		   	} 
+		   	else {
+				
+				commit("set50to100NoFetch" );
+		    }
+  		 
+  		  },
+
+
+  		  async set100plus({ commit }) {
+		    
+		    if (!this.hundedplusPostsFetched)
+		   	{	
+  	    		await this.$axios.get('/posts?amount=%24100+million+plus')
+           			.then(res => {
+          			commit("set100plus", res.data);
+			 	})
+		   	} 
+		   	else {
+				
+				commit("set100plusNoFetch" );
 		    }
   		 
   		  },
@@ -1377,6 +1927,73 @@ export const mutations = {
 	 	 return state.posts.activeView;
 
 	 },
+
+	 Q320PostsFetched() {
+
+	 	return state.posts.Q320.length > 0;
+	 },
+
+	 Q420PostsFetched() {
+
+	 	return state.posts.Q420.length > 0;
+	 },
+	 
+	  Q121PostsFetched() {
+
+	 	return state.posts.Q121.length > 0;
+	 },
+	 
+	  Q221PostsFetched() {
+
+	 	return state.posts.Q221.length > 0;
+	 },
+	 
+	  Q321PostsFetched() {
+
+	 	return state.posts.Q321.length > 0;
+	 },
+	 
+	 Q421PostsFetched() {
+
+	 	return state.posts.Q421.length > 0;
+	 },
+
+	 zerotoonePostsFetched() {
+
+	 	return state.posts.zerotoone.length > 0;
+
+	 },
+
+	 onetotenPostsFetched() {
+
+	 	return state.posts.onetoten.length > 0;
+
+	 },
+
+	 tentotwentyPostsFetched() {
+
+	 	return state.posts.tentotwenty.length > 0;
+
+	 },
+
+	 twentytofiftyPostsFetched() {
+
+	 	return state.posts.twentytofifty.length > 0;
+
+	 },
+
+	 fiftytohundredPostsFetched() {
+
+	 	return state.posts.fiftytohundred.length > 0;
+
+	 },
+
+	 hundredplusPostsFetched() {
+
+	 	return state.posts.hundredplus.length > 0;
+
+	 },
+	 
 	
 	 prevArryVal() {
 
