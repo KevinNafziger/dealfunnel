@@ -35,7 +35,7 @@
               </thead>
             <tr style="margin-top:20px;" v-for="company in companies">
               <td>
-                  <nuxt-link :to="'/companies/' + company.name " > {{company.name}}  </nuxt-link>
+                  <nuxt-link :to="'/companies/' + company.id " > {{company.name}}  </nuxt-link>
               </td>
               <td colspan="2" >
                 {{company.description}}

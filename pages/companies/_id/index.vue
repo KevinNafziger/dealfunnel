@@ -10,7 +10,7 @@
                 </div> 
                 <div class="col-sm-5">
                    <div class="section-title nuxt__build_indicator">
-                      {{ item.description }}
+                      {{ item.description }} 
                    </div>
                 </div>
                 <div class="col-sm-4">
@@ -88,9 +88,70 @@
                             </span>
                             <div v-if="!(item.email ==='')">
                             email: <span class="btn btn-link fa fa-envelope about-info-title" >{{item.email }}</span></div>
-                        </div>  
+                        </div> 
                       </div>
-                  </div>        
+                  </div>    
+                       <div class="col-sm-4" v-if="executives.length" v-for="executive in executives">
+                          <img class="nuxt__build_indicator2" :src="executive.pic_item">
+                          <div class="nuxt__build_indicator3">
+                          {{executive.title }} {{executive.first}} {{executive.last}}
+                          {{ executive.email}}
+                        <span v-if="!(executive.facebook === '' )">    
+                        <i class="fa fa-facebook">F</i>
+                        <a :href="executive.facebook" class="btn btn-link" target="_blank" >Facebook</a></i>
+                        </span>
+                        <span v-if="!(executive.twitterurl === '' )">
+                        <i class="fa fa-twitter"></i>
+                        <a :href= "executive.twitterurl" class="btn btn-link" target="_blank" >Twitter</a></i>
+                        </span>
+                        <span v-if="!(executive.linkedIn === '' )">
+                        <i class="fa fa-linkedin">
+                        <a :href="executive.linkedIn" class="btn btn-link" target="_blank" >LinkedIn</a></i>
+                        </span>
+                        <span v-if="!(executive.discord === '' )" >
+                        <a :href="executive.discord" class="btn btn-link", target="_blank" ><i>Discord</i></a>
+                        </span>
+                        <span v-if="!(executive.tumblr === '' )">
+                        <a :href= "executive.tumblr" class="btn btn-link" target="_blank" >Tumblr<i class="fa fa-tumblr"></i>T</a>
+                        </span>
+                        <span v-if="!(executive.medium === '' )">
+                        <a :href="executive.medium" class="btn btn-link" target="_blank" ><i class="fa fa-medium"></i>M</a>
+                        </span>
+                        <span v-if="!(executive.github === '' )">
+                        <a :href="executive.github" class="btn btn-link" target="_blank" ><i class="fa fa-github">G</i></a>
+                        </span>
+                        <span v-if="!(executive.pinterest === '' )">
+                        <a :href= "executive.pinterest" class="btn btn-link" target="_blank" ><i class="fa fa-pinterest"></i></a>
+                        </span>
+                        <span v-if="!(executive.googleplus ==='' )">
+                        <a :href="executive.googleplus" class="btn btn-link" target="_blank" ><i class="fa fa-google-plus-official"></i>G+</a>
+                        </span>
+                        <span v-if="!(executive.instagram === '' )">
+                        <a :href="executive.instagram" class="btn btn-link" target="_blank" ><i class="fa fa-instagram">I</i></a>
+                        </span>
+                        <span v-if="!(executive.reddit === '' )">
+                        <a :href="executive.reddit" class="btn btn-link" target="_blank" ><i class="fa fa-reddit">R</i></a>
+                        </span>
+                        <span v-if="!(executive.snapchat === '' )">
+                          <a :href="executive.snapchat" class="btn btn-link" target="_blank" ><i class="fab fa-snapchat">S</i></a>
+                        </span>
+                        <span v-if="!(executive.youtube ==='' )">
+                         <a :href="executive.youtube" class="btn btn-link" target="_blank" ><i class="fa fa-youtube"></i>Y</a>
+                        </span>
+                         <span v-if="!(executive.telegram === '')">
+                          <a :href="executive.telegram" class="btn btn-link" target="_blank" ><i class="fa fa-telegram">T</i></a>
+                        </span>
+                         <span v-if="!(executive.wechat === '' )">
+                          <a :href="executive.wechat" class="btn btn-link" target="_blank" ><i class="fa fa-wechat"></i>W</a>
+                         </span>
+                        <span v-if="!(executive.angellist === '' )">
+                             <a :href="executive.angellist" class="btn btn-link" target="_blank" ><i class="fa fa-angellist">A</i></a>
+                        </span>
+                        <span v-if="!(executive.skype === '' )">
+                          <a :href="executive.skype" class="btn btn-link" target="_blank" ><i class="fa fa-skype">S</i></a>
+                        </span>
+                        </div>
+                        </div>    
             </div>
         
       </div> 
@@ -133,10 +194,22 @@ import {mapState} from 'vuex';
         }
     }, 
 
+   id() {
+      
+        return this.item.id
+   } ,  
+
+
     item() {
     
-        return this.items.find(p => p.name == this.$route.params.name)
+        return this.items.find(p => p.id == this.$route.params.id)
     }
+ },
+ async asyncData({params, $axios })
+ {
+    let response = await $axios.get('executives?cid=' + params.id)
+    return {executives:response.data}
+
  },
 
   };
