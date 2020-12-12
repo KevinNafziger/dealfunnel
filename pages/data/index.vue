@@ -59,7 +59,7 @@
          {{post.created_date}}
         </td>
         <td >
-           {{post.title}}
+        <nuxt-link id="myArticleLinkTag" :to="'/posts/' + post.id "  >{{post.title}}</nuxt-link>
 
         </td>
         <td>
