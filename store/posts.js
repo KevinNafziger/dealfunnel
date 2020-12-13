@@ -46,7 +46,7 @@ export const state = () => ({
   
   numBuildPage: 1,
   numArtPage: 1,
-  numDataPage: 1,
+  dataPage: 1,
 
   firstBuildLoad: true,
   firstArtLoad: true,
@@ -564,19 +564,37 @@ export const mutations = {
   	   		break;
 
      	case "Articles":
-     		if (state.numArtPage >1)
-	 	    { 
+     		if (state.numArtPage >1) {
+
 	 	      state.numArtPage--;
-	        }
-			else
-			{
+	      }
+			 else {
+
 			   state.numArtPage = 1;
-			}
+			  
+        }
    	   		state.activeArtInfo = state.pages[state.numArtPage];
    	   		state.activeArtTab = 'Page';
   	   		state.firstArtLoad =false;
   	   		break;
-  	   	 }
+
+      case "Data":
+
+        if (state.dataPage >1) {
+
+          state.dataPage--;
+        }
+       else {
+
+         state.dataPage = 1;
+        
+        }
+          state.activeDataInfo = state.pages[state.dataPage];
+          state.activeDataTab = 'Page';
+          state.firstDataLoad =false;
+          break;
+  	   	 
+      }
  
     },
 
@@ -591,15 +609,24 @@ export const mutations = {
    	   		state.activeBuildTab = 'Page';
   	   		state.firstBuildLoad =false;  
   	   		break;
+  	   
+        case "Articles":
+          state.numArtPage++ ;
+          state.pages[state.pages.length]=data;
+          state.activeArtInfo = data;
+          state.activeArtTab = 'Page';
+          state.firstArtLoad =false;  
+          break;
 
-  	    case "Articles":
-  	    	state.numArtPage++ ;
-   	   		state.pages[state.pages.length]=data;
-   	   		state.activeArtInfo = data;
-   	   		state.activeArtTab = 'Page';
-  	   		state.firstArtLoad =false;  
-  	   		break;
-  	   }  
+        case "Data":
+          state.dataPage++ ;
+          state.pages[state.pages.length]=data;
+          state.activeDataInfo = data;
+          state.activeDataTab = 'Page';
+          state.firstDataLoad =false;  
+          break;
+
+       }  
    
    },
 
@@ -607,19 +634,27 @@ export const mutations = {
 
    	   switch(state.activeView) {
 
-   	   	  case "Builder":
-	  		state.numBuildPage++ ;	
-	  		state.activeBuildInfo = state.pages[state.numBuildPage];
-	  		state.activeBuildTab = 'Page';
+   	   	case "Builder":
+	  		  state.numBuildPage++ ;	
+	  		  state.activeBuildInfo = state.pages[state.numBuildPage];
+	  		  state.activeBuildTab = 'Page';
      	    state.firstBuildLoad =false;
      	    break;
 
    		  case "Articles":
-   		    state.numArtPage++ ;	
-	  		state.activeArtInfo = state.pages[state.numArtPage];
-	  		state.activeArtTab = 'Page';
-     	    state.firstArtLoad =false;
-     	    break;
+   		   state.numArtPage++ ;	
+	  		 state.activeArtInfo = state.pages[state.numArtPage];
+	  		 state.activeArtTab = 'Page';
+     	   state.firstArtLoad =false;
+     	   break;
+
+        case "Articles":
+         state.dataPage++ ; 
+         state.activeDataInfo = state.pages[state.dataPage];
+         state.activeDataTab = 'Page';
+         state.firstDataLoad =false;
+         break;
+
      	}
 
    },
@@ -629,19 +664,26 @@ export const mutations = {
 
    	  switch(state.activeView) {
 
-   	   	  case "Builder":
+   	   	case "Builder":
    	   		state.activeBuildInfo = state.pages[0];
    	   		state.activeBuildTab = 'Page';
-	   		state.firstBuildLoad = false; 
-	   		state.numBuildPage = 1;	 
-	   		break;
+	   		  state.firstBuildLoad = false; 
+	   		  state.numBuildPage = 1;	 
+	   		  break;
 
 	   	  case "Articles":
 	   	    state.activArtInfo = state.pages[0];
    	   		state.activeArtTab = 'Page';
-	   		state.firstArtLoad = false; 
-	   		state.numArtPage = 1;	 
-	   		break;
+	   		  state.firstArtLoad = false; 
+	   		  state.numArtPage = 1;	 
+	   		  break;
+
+        case "Data":
+          state.activDataInfo = state.pages[0];
+          state.activeDataTab = 'Page';
+          state.firstDataLoad = false; 
+          state.dataPage = 1;  
+          break;
 
 	   }
 
@@ -923,7 +965,6 @@ export const mutations = {
 	 },
 
 
-
 	 setQ320NoFetch(state){
 
 		switch(state.activeView) {
@@ -1140,16 +1181,16 @@ export const mutations = {
 
 		switch(state.activeView) {
 
-   	   	    case "Builder":
-			  state.activeBuildInfo = state.lending;
+   	   	case "Builder":
+			    state.activeBuildInfo = state.lending;
 		      state.activeBuildTab = 'Lending';	
 		      state.firstBuildLoad = false;
 		      break;
 		    case "Articles":
 		   	  state.activeArtInfo = state.lending;
-			  state.activeArtTab = 'Lending';	
-			  state.firstArtLoad =false;
-			  break;
+			    state.activeArtTab = 'Lending';	
+			    state.firstArtLoad =false;
+			    break;
 	   }
 	},
 
@@ -1157,7 +1198,7 @@ export const mutations = {
 
 		switch(state.activeView) {
 
-   	   	    case "Builder":
+   	   case "Builder":
 			  state.activeBuildInfo = state.healthtech;
 		      state.activeBuildTab = 'HealthTech';	
 		      state.firstBuildLoad = false;

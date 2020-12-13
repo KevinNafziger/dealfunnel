@@ -100,7 +100,8 @@ computed: {
           starter: state => state.posts.pages[0],
           firstDataLoad: state => state.posts.firstDataLoad,
           activeDataInfo:  state => state.posts.activeDataInfo,
-          activeDataTab:  state => state.posts.activeDataTab,
+          activeTab:  state => state.posts.activeDataTab,
+          page: state => state.posts.dataPage,
    }),
 
    posts() {
@@ -122,17 +123,22 @@ computed: {
 
         if (this.firstDataLoad) {
 
-          return ''
+          return 'All'
+        }
+       if (this.activeTab == 'Page') {
+
+          return this.activeTab + ' ' + this.page;
         }
         else {
 
-          return this.activeDataTab;
+          return this.activeTab;
         }
 
       }
  },
 
  methods: { 
+
    getbyCategory(category) {
 
     switch(category) {
@@ -197,11 +203,40 @@ computed: {
          this.$store.dispatch("posts/set100plus");
          break;
       }
-   }
+   },
+
+
+   changePage: function(direction) {
+
+       switch(direction) {
+
+          case 'Previous':
+            var page = this.page;
+            this.$store.dispatch("posts/setView", "Data");
+             this.$store.dispatch("posts/goPrevious", page);
+             break;
+
+          case 'Next':
+             var page = this.page;
+            this.$store.dispatch("posts/setView", "Data");
+             this.$store.dispatch("posts/goNext", page);
+             break;
+
+          case 'Last':
+            this.$store.dispatch("posts/setView", "Data");
+            this.$store.dispatch("posts/goLast");
+           break;
+       }
+
+    },
+
 
 },
  created() {
+    
      this.$nuxt.$on("getCategory", (category) => this.getbyCategory(category));
+     this.$nuxt.$on("changePage", (direction) => this.changePage(direction));
+  
    },
 async fetch({store}) {
   await store.dispatch("posts/nuxtServerInit")

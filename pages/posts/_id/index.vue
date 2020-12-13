@@ -42,10 +42,20 @@ export default {
   ...mapState({
   
           activeArtInfo: state =>  state.posts.activeArtInfo,
+          activeView:  state => state.posts.activeView,
+          activeDataInfo: state => state.posts.activeDataInfo,
    }),
     posts() {
 
-          return this.activeArtInfo;
+         if (this.activeView == "Data") {
+         
+             return this.activeDataInfo;
+         }
+         else {
+
+             return this.activeArtInfo;
+         }
+
     }, 
     post() {
     

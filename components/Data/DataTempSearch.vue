@@ -1,13 +1,17 @@
  <template>
  <div>
   <div class="search-bar-div">
-    <div class="tag-search-div">
+    <a href="#" v-on:click="showGrouping('All')" class="tagbtn">All</a>
       <a href="#" v-on:click="showGrouping('Q320')" class="tagbtn">Q320</a>
       <a href="#" v-on:click="showGrouping('Q420')"  class="tagbtn">Q420</a>
       <a href="#" v-on:click="showGrouping('Q121')"   class="tagbtn">Q121</a>
       <a href="#" v-on:click="showGrouping('Q221')"   class="tagbtn">Q221</a>
       <a href="#" v-on:click="showGrouping('Q321')" class="tagbtn">Q321</a>
-      <a href="#" v-on:click="showGrouping('Q421')" class="tagbtn">Q421</a><br>
+      <a href="#" v-on:click="showGrouping('Q421')" class="tagbtn">Q421</a>
+      <a href="#" v-show="showPreviousBtn" class="tagbtn" v-on:click="changePage('Previous')">Prev</a>
+      <a href="#" v-show="showNextBtn" class="tagbtn" v-on:click="changePage('Next')" >Next</a>
+      </div>
+      <br>
       <a href="#" v-on:click="showGrouping('zerotoone')" class="tagbtn">$0 to $1m</a>
       <a href="#" v-on:click="showGrouping('onetofive')"  class="tagbtn">$1m to $5m</a>
       <a href="#" v-on:click="showGrouping('fivetoten')"   class="tagbtn">$5m to $10m</a>
@@ -27,10 +31,45 @@ import {mapState} from 'vuex';
 export default {
   name: 'DataTempSearch',
   methods: {
+
    showGrouping: function(category) {
+
       $nuxt.$emit("getCategory", category);
-  }
+   },
+
+  changePage: function(direction) {
+
+      $nuxt.$emit("changePage", direction);
+   }
+
   },
+computed: {
+  ...mapState({
+      activeTab: state => state.posts.activeDataTab,
+   }),
+    showPreviousBtn() {
+        if (this.activeTab == 'Page')
+        {
+           return true;
+        }
+        else
+        {
+           return false;
+        }
+     },
+
+     showNextBtn() {
+
+        if (this.activeTab == 'Page' || (this.activeTab =='All'))
+        {
+           return true;
+        }
+        else
+        {
+           return false;
+        }
+     }
+   },
 };
 </script>
 
