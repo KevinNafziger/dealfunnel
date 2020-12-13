@@ -178,9 +178,14 @@ computed: {
          this.$store.dispatch("posts/set0to1");
          break;
 
-      case 'onetoten':
+      case 'onetofive':
          this.$store.dispatch("posts/setView", "Data");
-         this.$store.dispatch("posts/set1to10");
+         this.$store.dispatch("posts/set1to5");
+         break;
+
+      case 'fivetoten:'
+        this.$store.dispatch("posts/setView", "Data");
+        this.$store.dispatch("posts/set5to10");
          break;
 
       case 'tentotwenty':

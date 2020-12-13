@@ -31,7 +31,8 @@ export const state = () => ({
   Q421: [],
 
   zerotoone: [],
-  onetoten: [],
+  onetofive: [],
+  fivetoten: [],
   tentotwenty: [],
   twentytofifty: [],
   fiftytohundred: [],
@@ -356,18 +357,33 @@ export const mutations = {
 
   },
 
-  set1to10(state, data) {
+  set1to5(state, data) {
 
-    state.onetoten = data; 
+    state.onetofive = data; 
 
     if (state.activeView =='Data') 
     {
    		state.activeDataInfo = data;
-   		state.activeDataTab ='Next Raise: $1m to $10m';	
+   		state.activeDataTab ='Next Raise: $1m to $5m';	
     	state.firstDataLoad = false;
     }
 
   },
+
+
+  set5to10(state, data) {
+
+    state.fivetoten = data; 
+
+    if (state.activeView =='Data') 
+    {
+      state.activeDataInfo = data;
+      state.activeDataTab ='Next Raise: $5m to $10m';  
+      state.firstDataLoad = false;
+    }
+
+  },
+
 
   set10to20(state, data) {
 
@@ -1353,17 +1369,29 @@ export const mutations = {
 		  }
 	 },
 
-	 set1to10NoFetch(state){
+	 set1to5NoFetch(state){
 
 		switch(state.activeView) {
 
    	   	  case "Data":
-		     state.activeDataInfo = state.onetoten;
-		     state.activeDataTab = 'Next Raise: $1m to $10m';	
+		     state.activeDataInfo = state.onetofive;
+		     state.activeDataTab = 'Next Raise: $1m to $5m';	
 		     state.firstDataLoad = false;
 		     break;	
 		  }
 	 },
+
+  set5to10NoFetch(state){
+
+    switch(state.activeView) {
+
+          case "Data":
+         state.activeDataInfo = state.fivetoten;
+         state.activeDataTab = 'Next Raise: $5m to $10m';  
+         state.firstDataLoad = false;
+         break; 
+      }
+   },
 
 	 set10to20NoFetch(state){
 
@@ -2185,21 +2213,37 @@ export const mutations = {
   		  },
 
 
-  		  async set1to10({ commit }) {
+  		  async set1to5({ commit }) {
 		    
-  		    if (!this.onetotenPostsFetched)
+  		    if (!this.onetofivePostsFetched)
   		   	{	
     	    		await this.$axios.get('/posts?amount=%241+million+to+%245+million')
              			.then(res => {
-            			commit("set1to10", res.data);
+            			commit("set1to5", res.data);
   			 	})
   		   	} 
   		   	else {
   				
-  				commit("set1to10NoFetch" );
+  				commit("set1to5NoFetch" );
   		    }
     		 
   		  },
+
+        async set5to10({ commit }) {
+        
+          if (!this.fivetotenPostsFetched)
+          { 
+              await this.$axios.get('/posts?amount=%245+million+to+%2410+million')
+                  .then(res => {
+                  commit("set5to10", res.data);
+          })
+          } 
+          else {
+          
+          commit("set5to10NoFetch" );
+          }
+         
+        },
 
 
   		  async set10to20({ commit }) {
@@ -2841,11 +2885,17 @@ export const mutations = {
 
 	 },
 
-	 onetotenPostsFetched() {
+	 onetofivePostsFetched() {
 
-	 	return state.posts.onetoten.length > 0;
+	 	return state.posts.onetofive.length > 0;
 
 	 },
+
+  fivetotenPostsFetched() {
+
+    return state.posts.fivetoten.length > 0;
+
+   },
 
 	 tentotwentyPostsFetched() {
 
