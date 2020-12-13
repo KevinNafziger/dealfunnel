@@ -183,7 +183,7 @@ computed: {
          this.$store.dispatch("posts/set1to5");
          break;
 
-      case 'fivetoten:'
+      case 'fivetoten':
         this.$store.dispatch("posts/setView", "Data");
         this.$store.dispatch("posts/set5to10");
          break;
