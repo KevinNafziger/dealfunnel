@@ -1,7 +1,7 @@
  <template>
  <div>
   <div class="search-bar-div">
-    <a href="#" v-on:click="showGrouping('All')" class="tagbtn">All</a>
+    <a href="#" v-on:click="changePage('Last')" class="tagbtn">All</a>
       <a href="#" v-on:click="showGrouping('Q320')" class="tagbtn">Q320</a>
       <a href="#" v-on:click="showGrouping('Q420')"  class="tagbtn">Q420</a>
       <a href="#" v-on:click="showGrouping('Q121')"   class="tagbtn">Q121</a>
