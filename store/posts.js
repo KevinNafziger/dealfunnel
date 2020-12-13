@@ -692,8 +692,6 @@ export const mutations = {
 
 
 
-
-
   setBlock(state, data){
 
   	state.blockchain = data;
