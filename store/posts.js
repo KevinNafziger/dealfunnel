@@ -1765,53 +1765,53 @@ export const mutations = {
  export const actions = {
 
 
-       	 async setInsur({ commit }) {
+      async setInsur({ commit }) {
 
-			if (!this.insurPostsFetched)
-			{
-				await this.$axios.get('/posts?grouping=Insurtech')
-           		.then(res => {
-          			commit("setInsur", res.data);
-         		})
-			}
-			else
-			{
-				commit("setInsurNoFetch");
-			}	
-		},
+    			if (!this.insurPostsFetched)
+    			{
+    				await this.$axios.get('/posts?grouping=Insurtech')
+               		.then(res => {
+              			commit("setInsur", res.data);
+             		})
+    			}
+    			else
+    			{
+    				commit("setInsurNoFetch");
+    			}	
+  		},
 
   		async setBlock({ commit }) {
 
-		   if (!this.blockPostsFetched)
-		   {
-  	       		await this.$axios.get('/posts?grouping=Blockchain')
-           		.then(res => {
-          			commit("setBlock", res.data);
-         		})
-		   }
-		   else
-			{
-				commit("setBlockNoFetch");
-			}	
+  		   if (!this.blockPostsFetched)
+  		   {
+    	       		await this.$axios.get('/posts?grouping=Blockchain')
+             		.then(res => {
+            			commit("setBlock", res.data);
+           		})
+  		   }
+  		   else
+  			{
+  				commit("setBlockNoFetch");
+  			}	
 		},
 
-  		 async setPay({ commit }) {
+  	async setPay({ commit }) {
 
-			if (!this.payPostsFetched)
-			{
-  	       		await this.$axios.get('/posts?grouping=Payments')
-           		.then(res => {
-					  commit("setPay", res.data);
-				})
-			}	
-			else	
-			{
-				commit("setPostsNoFetch");
-			}	
+  			if (!this.payPostsFetched) {
+
+    	       await this.$axios.get('/posts?grouping=Payments')
+             		.then(res => {
+  					  commit("setPay", res.data);
+  				})
+  			}	
+  			else {
+
+  				commit("setPostsNoFetch");
+  			}	
   		 
-  		 },
+  	},
 
-  		 async setLend({ commit }) {
+  	async setLend({ commit }) {
 
 		   if (!this.lendPostsFetched)
 		   {	
@@ -1825,9 +1825,10 @@ export const mutations = {
 				commit("setLendNoFetch");
 		   }
   		 
-  		 },
+  	},
 
-  		  async setReg({ commit }) {
+  	
+    async setReg({ commit }) {
 
 		   if (!this.regPostsFetched)
 		   {	
@@ -1841,9 +1842,10 @@ export const mutations = {
 				commit("setRegNoFetch");
 		   }
   		 
-  		 },
+  	},
 
-  		  async setVal({ commit }) {
+
+  	async setVal({ commit }) {
 
 			   if (!this.valPostsFetched)
 			   {	
@@ -1857,9 +1859,10 @@ export const mutations = {
 					commit("setValNoFetch");
 			   }
   		 
-  		   },
+  	},
 
-  		   async setSpin({ commit }) {
+  		
+    async setSpin({ commit }) {
 
 			   if (!this.spinPostsFetched)
 			   {	
@@ -1867,32 +1870,33 @@ export const mutations = {
 	           			.then(res => {
 						  commit("setSpin", res.data);
 			         })
-				}
+				 }
 			   else
 			   {
 					commit("setSpinNoFetch");
 			   }
   		 
-  		   },
+  	},
 
-  		   async setBoot({ commit }) {
 
-			   if (!this.bootPostsFetched)
-			   {	
-	  	       		await this.$axios.get('posts?tag=Bootstrapped')
-	           			.then(res => {
+  	async setBoot({ commit }) {
+
+			  if (!this.bootPostsFetched) {	
+
+	  	    await this.$axios.get('posts?tag=Bootstrapped')
+	         .then(res => {
 						  commit("setBoot", res.data);
-			         })
-				}
-			   else
-			   {
+			     })
+				 }
+			   else {
+
 					commit("setBootNoFetch");
 			   }
   		 
-  		   },
+  	},
 
 
-  		   async setMergers({ commit }) {
+  	async setMergers({ commit }) {
 
 			   if (!this.mergerPostsFetched)
 			   {	
@@ -1906,247 +1910,242 @@ export const mutations = {
 					commit("setMergersnoFetch");
 			   }
   		 
-  		   },
+  	 },
 
 
-  		  async setGrowth({ commit }) {
+  	 async setGrowth({ commit }) {
 
-			   if (!this.growthPostsFetched)
-			   {	
-	  	       		await this.$axios.get('/posts?next_round=Growth+Capital')
-	           			.then(res => {
-						  commit("setGrowth", res.data);
-			         })
-				}
-			   else
-			   {
-					commit("setGrowthNoFetch");
-			   }
+  			   if (!this.growthPostsFetched)
+  			   {	
+  	  	       		await this.$axios.get('/posts?next_round=Growth+Capital')
+  	           			.then(res => {
+  						  commit("setGrowth", res.data);
+  			         })
+  				 }
+  			   else
+  			   {
+  					commit("setGrowthNoFetch");
+  			   }
   		 
-  		   },
+  		},
 
-  		   async setAdvisors({ commit }) {
+  		async setAdvisors({ commit }) {
 
-			   if (!this.advisorPostsFetched)
-			   {	
-	  	       		await this.$axios.get('posts?advisors=Advisory')
-	           			.then(res => {
-						  commit("setAdvisors", res.data);
-			         })
-				}
-			   else
-			   {
-					commit("setAdvisorsNoFetch");
-			   }
+  			   if (!this.advisorPostsFetched)
+  			   {	
+  	  	       		await this.$axios.get('posts?advisors=Advisory')
+  	           			.then(res => {
+  						  commit("setAdvisors", res.data);
+  			         })
+  				 }
+  			   else
+  			   {
+  					commit("setAdvisorsNoFetch");
+  			   }
   		 
-  		   },
+  		},
 
 
   		 async setBank({ commit }) {
-		    
-		    if (!this.bankPostsFetched)
-		   	{	
-  	    		await this.$axios.get('/posts?grouping=Banking')
-           			.then(res => {
-          			commit("setBank", res.data);
-			 	})
-		   	} 
-		   	else {
-				
-				commit("setBankNoFetch" );
-		    }
+  		    
+  		    if (!this.bankPostsFetched)
+  		   	{	
+    	    		await this.$axios.get('/posts?grouping=Banking')
+             			.then(res => {
+            			commit("setBank", res.data);
+  			 	})
+  		   	} 
+  		   	else {
+  				
+  				commit("setBankNoFetch" );
+  		    }
   		 
   		  },
 
 
   		  async setAI({ commit }) {
 		    
-		    if (!this.AIPostsFetched)
-		   	{	
-  	    		await this.$axios.get('/posts?grouping=AI')
-           			.then(res => {
-          			commit("setAI", res.data);
-			 	})
-		   	} 
-		   	else {
-				
-				commit("setAINoFetch" );
-		    }
+  		    if (!this.AIPostsFetched)
+  		   	{	
+    	    		await this.$axios.get('/posts?grouping=AI')
+             			.then(res => {
+            			commit("setAI", res.data);
+  			 	})
+  		   	} 
+  		   	else {
+  				
+  				commit("setAINoFetch" );
+  		    }
   		 
   		  },
 
 
   		  async setHealth({ commit }) {
 		    
-		    if (!this.healthPostsFetched)
-		   	{	
-  	    		await this.$axios.get('/posts?grouping=HealthTech')
-           			.then(res => {
-          			commit("setHealth", res.data);
-			 	})
-		   	} 
-		   	else {
-				
-				commit("setHealthNoFetch" );
-		    }
-  		 
+  		    if (!this.healthPostsFetched)
+  		   	{	
+    	    		await this.$axios.get('/posts?grouping=HealthTech')
+             			.then(res => {
+            			commit("setHealth", res.data);
+  			 	})
+  		   	} 
+  		   	else {
+  				
+  				commit("setHealthNoFetch" );
+  		    }
+    		 
   		  },
 
 
   		  async setCapital({ commit }) {
 		    
-		    if (!this.capitalPostsFetched)
-		   	{	
-  	    		await this.$axios.get('/posts?grouping=CapitalMarkets')
-           			.then(res => {
-          			commit("setCapital", res.data);
-			 	})
-		   	} 
-		   	else {
-				
-				commit("setCapitalNoFetch" );
-		    }
+  		    if (!this.capitalPostsFetched)
+  		   	{	
+    	    		await this.$axios.get('/posts?grouping=CapitalMarkets')
+             			.then(res => {
+            			commit("setCapital", res.data);
+  			 	})
+  		   	} 
+  		   	else {
+  				
+  				commit("setCapitalNoFetch" );
+  		    }
   		 
   		  },
 
 
-
   		  async setWealth({ commit }) {
 		    
-		    if (!this.wealthPostsFetched)
-		   	{	
-  	    		await this.$axios.get('/posts?grouping=WealthTech')
-           			.then(res => {
-          			commit("setWealth", res.data);
-			 	})
-		   	} 
-		   	else {
-				
-				commit("setWealthNoFetch" );
-		    }
-  		 
+  		    if (!this.wealthPostsFetched)
+  		   	{	
+    	    		await this.$axios.get('/posts?grouping=WealthTech')
+             			.then(res => {
+            			commit("setWealth", res.data);
+  			 	})
+  		   	} 
+  		   	else {
+  				
+  				commit("setWealthNoFetch" );
+  		    }
+    		 
   		  },
 
 
   		  async setReal({ commit }) {
 		    
-		    if (!this.realPostsFetched)
-		   	{	
-  	    		await this.$axios.get('/posts?grouping=RealEstate')
-           			.then(res => {
-          			commit("setReal", res.data);
-			 	})
-		   	} 
-		   	else {
-				
-				commit("setRealNoFetch" );
-		    }  
+  		    if (!this.realPostsFetched)
+  		   	{	
+    	    		await this.$axios.get('/posts?grouping=RealEstate')
+             			.then(res => {
+            			commit("setReal", res.data);
+  			 	})
+  		   	} 
+  		   	else {
+  				
+  				commit("setRealNoFetch" );
+  		    }  
   		 
   		  },
-
 
 
   		  async setQ121({ commit }) {
 		    
-		    if (!this.Q121PostsFetched)
-		   	{	
-  	    		await this.$axios.get('/posts?quarter=Q121')
-           			.then(res => {
-          			commit("setQ121", res.data);
-			 	})
-		   	} 
-		   	else {
-				
-				commit("setQ121NoFetch" );
-		    }
+  		    if (!this.Q121PostsFetched)
+  		   	{	
+    	    		await this.$axios.get('/posts?quarter=Q121')
+             			.then(res => {
+            			commit("setQ121", res.data);
+  			 	})
+  		   	} 
+  		   	else {
+  				
+  				commit("setQ121NoFetch" );
+  		    }
   		 
   		  },
-
 
 
   		  async setQ221({ commit }) {
 		    
-		    if (!this.Q221PostsFetched)
-		   	{	
-  	    		await this.$axios.get('/posts?quarter=Q221')
-           			.then(res => {
-          			commit("setQ221", res.data);
-			 	})
-		   	} 
-		   	else {
-				
-				commit("setQ221NoFetch" );
-		    }
+  		    if (!this.Q221PostsFetched)
+  		   	{	
+    	    		await this.$axios.get('/posts?quarter=Q221')
+             			.then(res => {
+            			commit("setQ221", res.data);
+  			 	})
+  		   	} 
+  		   	else {
+  				
+  				commit("setQ221NoFetch" );
+  		    }
   		 
   		  },
-
 
 
   		  async setQ321({ commit }) {
 		    
-		    if (!this.Q321PostsFetched)
-		   	{	
-  	    		await this.$axios.get('/posts?quarter=Q321')
-           			.then(res => {
-          			commit("setQ321", res.data);
-			 	})
-		   	} 
-		   	else {
-				
-				commit("setQ321NoFetch" );
-		    }
+  		    if (!this.Q321PostsFetched)
+  		   	{	
+    	    		await this.$axios.get('/posts?quarter=Q321')
+             			.then(res => {
+            			commit("setQ321", res.data);
+  			 	})
+  		   	} 
+  		   	else {
+  				
+  				commit("setQ321NoFetch" );
+  		    }
   		 
   		  },
 
 
-
   		  async setQ421({ commit }) {
 		    
-		    if (!this.Q421PostsFetched)
-		   	{	
-  	    		await this.$axios.get('/posts?quarter=Q421')
-           			.then(res => {
-          			commit("setQ421", res.data);
-			 	})
-		   	} 
-		   	else {
-				
-				commit("setQ421NoFetch" );
-		    }
+  		    if (!this.Q421PostsFetched)
+  		   	{	
+    	    		await this.$axios.get('/posts?quarter=Q421')
+             			.then(res => {
+            			commit("setQ421", res.data);
+  			 	})
+  		   	} 
+  		   	else {
+  				
+  				commit("setQ421NoFetch" );
+  		    }
   		 
   		  },
 
 
   		  async setQ420({ commit }) {
 		    
-		    if (!this.Q420PostsFetched)
-		   	{	
-  	    		await this.$axios.get('/posts?quarter=Q420')
-           			.then(res => {
-          			commit("setQ420", res.data);
-			 	})
-		   	} 
-		   	else {
-				
-				commit("setQ420NoFetch" );
-		    }
+  		    if (!this.Q420PostsFetched)
+  		   	{	
+    	    		await this.$axios.get('/posts?quarter=Q420')
+             			.then(res => {
+            			commit("setQ420", res.data);
+  			 	})
+  		   	} 
+  		   	else {
+  				
+  				commit("setQ420NoFetch" );
+  		    }
   		 
   		  },
 
 
   		  async setQ320({ commit }) {
 		    
-		    if (!this.Q320PostsFetched)
-		   	{	
-  	    		await this.$axios.get('/posts?quarter=Q320')
-           			.then(res => {
-          			commit("setQ320", res.data);
-			 	})
-		   	} 
-		   	else {
-				
-				commit("setQ320NoFetch" );
-		    }
+  		    if (!this.Q320PostsFetched)
+  		   	{	
+    	    		await this.$axios.get('/posts?quarter=Q320')
+             			.then(res => {
+            			commit("setQ320", res.data);
+  			 	})
+  		   	} 
+  		   	else {
+  				
+  				commit("setQ320NoFetch" );
+  		    }
   		 
   		  },
 
@@ -2154,361 +2153,361 @@ export const mutations = {
 
   		  async setQ320({ commit }) {
 		    
-		    if (!this.Q320PostsFetched)
-		   	{	
-  	    		await this.$axios.get('/posts?quarter=Q320')
-           			.then(res => {
-          			commit("setQ320", res.data);
-			 	})
-		   	} 
-		   	else {
-				
-				commit("setQ320NoFetch" );
-		    }
+  		    if (!this.Q320PostsFetched)
+  		   	{	
+    	    		await this.$axios.get('/posts?quarter=Q320')
+             			.then(res => {
+            			commit("setQ320", res.data);
+  			 	})
+  		   	} 
+  		   	else {
+  				
+  				commit("setQ320NoFetch" );
+  		    }
   		 
   		  },
 
 
   		  async set0to1({ commit }) {
 		    
-		    if (!this.zerotoonePostsFetched)
-		   	{	
-  	    		await this.$axios.get('/posts?amount=%240+to+%241+million')
-           			.then(res => {
-          			commit("set0to1", res.data);
-			 	})
-		   	} 
-		   	else {
-				
-				commit("set0to1NoFetch" );
-		    }
+  		    if (!this.zerotoonePostsFetched)
+  		   	{	
+    	    		await this.$axios.get('/posts?amount=%240+to+%241+million')
+             			.then(res => {
+            			commit("set0to1", res.data);
+  			 	})
+  		   	} 
+  		   	else {
+  				
+  				commit("set0to1NoFetch" );
+  		    }
   		 
   		  },
 
 
   		  async set1to10({ commit }) {
 		    
-		    if (!this.onetotenPostsFetched)
-		   	{	
-  	    		await this.$axios.get('/posts?amount=%241+million+to+%245+million')
-           			.then(res => {
-          			commit("set1to10", res.data);
-			 	})
-		   	} 
-		   	else {
-				
-				commit("set1to10NoFetch" );
-		    }
-  		 
+  		    if (!this.onetotenPostsFetched)
+  		   	{	
+    	    		await this.$axios.get('/posts?amount=%241+million+to+%245+million')
+             			.then(res => {
+            			commit("set1to10", res.data);
+  			 	})
+  		   	} 
+  		   	else {
+  				
+  				commit("set1to10NoFetch" );
+  		    }
+    		 
   		  },
 
 
   		  async set10to20({ commit }) {
 		    
-		    if (!this.tentotwentyPostsFetched)
-		   	{	
-  	    		await this.$axios.get('/posts?amount=%2410+million+to+%2420+million')
-           			.then(res => {
-          			commit("set10to20", res.data);
-			 	})
-		   	} 
-		   	else {
-				
-				commit("set10to20NoFetch" );
-		    }
-  		 
+  		    if (!this.tentotwentyPostsFetched)
+  		   	{	
+    	    		await this.$axios.get('/posts?amount=%2410+million+to+%2420+million')
+             			.then(res => {
+            			commit("set10to20", res.data);
+  			 	})
+  		   	} 
+  		   	else {
+  				
+  				commit("set10to20NoFetch" );
+  		    }
+    		 
   		  },
 
 
   		  async set20to50({ commit }) {
 		    
-		    if (!this.twentytofiftyPostsFetched)
-		   	{	
-  	    		await this.$axios.get('/posts?amount=%2420+million+to+%2450+million')
-           			.then(res => {
-          			commit("set20to50", res.data);
-			 	})
-		   	} 
-		   	else {
-				
-				commit("set20to50NoFetch" );
-		    }
-  		 
+  		    if (!this.twentytofiftyPostsFetched)
+  		   	{	
+    	    		await this.$axios.get('/posts?amount=%2420+million+to+%2450+million')
+             			.then(res => {
+            			commit("set20to50", res.data);
+  			 	})
+  		   	} 
+  		   	else {
+  				
+  				commit("set20to50NoFetch" );
+  		    }
+    		 
   		  },
 
   		  async set50to100({ commit }) {
 		    
-		    if (!this.fiftytohundedPostsFetched)
-		   	{	
-  	    		await this.$axios.get('/posts?amount=%2450+million+to+%24100+million')
-           			.then(res => {
-          			commit("set50to100", res.data);
-			 	})
-		   	} 
-		   	else {
-				
-				commit("set50to100NoFetch" );
-		    }
+  		    if (!this.fiftytohundedPostsFetched)
+  		   	{	
+    	    		await this.$axios.get('/posts?amount=%2450+million+to+%24100+million')
+             			.then(res => {
+            			commit("set50to100", res.data);
+  			 	})
+  		   	} 
+  		   	else {
+  				
+  				commit("set50to100NoFetch" );
+  		    }
   		 
   		  },
 
 
   		  async set100plus({ commit }) {
 		    
-		    if (!this.hundedplusPostsFetched)
-		   	{	
-  	    		await this.$axios.get('/posts?amount=%24100+million+plus')
-           			.then(res => {
-          			commit("set100plus", res.data);
-			 	})
-		   	} 
-		   	else {
-				
-				commit("set100plusNoFetch" );
-		    }
-  		 
+  		    if (!this.hundedplusPostsFetched)
+  		   	{	
+    	    		await this.$axios.get('/posts?amount=%24100+million+plus')
+             			.then(res => {
+            			commit("set100plus", res.data);
+  			 	})
+  		   	} 
+  		   	else {
+  				
+  				commit("set100plusNoFetch" );
+  		    }
+    		 
   		  },
 
         async setLatin({ commit }) {
         
-        if (!this.latinPostsFetched)
-        { 
-            await this.$axios.get('/posts?region=LatinAmerica')
-                .then(res => {
-                commit("setLatin", res.data);
-        })
-        } 
-        else {
-        
-        commit("setLatinNoFetch" );
-        }
+          if (!this.latinPostsFetched)
+          { 
+              await this.$axios.get('/posts?region=LatinAmerica')
+                  .then(res => {
+                  commit("setLatin", res.data);
+          })
+          } 
+          else {
+          
+          commit("setLatinNoFetch" );
+          }
        
         },
 
 
         async setCanada({ commit }) {
         
-        if (!this.canadaPostsFetched)
-        { 
-            await this.$axios.get('/posts?region=Canada')
-                .then(res => {
-                commit("setCanada", res.data);
-        })
-        } 
-        else {
-        
-        commit("setCanadaNoFetch" );
-        }
+          if (!this.canadaPostsFetched)
+          { 
+              await this.$axios.get('/posts?region=Canada')
+                  .then(res => {
+                  commit("setCanada", res.data);
+          })
+          } 
+          else {
+          
+          commit("setCanadaNoFetch" );
+          }
        
         },
 
 
         async setSouth({ commit }) {
         
-        if (!this.southPostsFetched)
-        { 
-            await this.$axios.get('/posts?region=South')
-                .then(res => {
-                commit("setSouth", res.data);
-        })
-        } 
-        else {
-        
-        commit("setSouthNoFetch" );
-        }
+          if (!this.southPostsFetched)
+          { 
+              await this.$axios.get('/posts?region=South')
+                  .then(res => {
+                  commit("setSouth", res.data);
+          })
+          } 
+          else {
+          
+          commit("setSouthNoFetch" );
+          }
        
         },
 
         async setNewEngland({ commit }) {
         
-        if (!this.newenglandPostsFetched)
-        { 
-            await this.$axios.get('/posts?region=NewEngland')
-                .then(res => {
-                commit("setNewEngland", res.data);
-        })
-        } 
-        else {
-        
-        commit("setNewEnglandNoFetch" );
-        }
-       
+          if (!this.newenglandPostsFetched)
+          { 
+              await this.$axios.get('/posts?region=NewEngland')
+                  .then(res => {
+                  commit("setNewEngland", res.data);
+          })
+          } 
+          else {
+          
+          commit("setNewEnglandNoFetch" );
+          }
+         
         },
 
         async setSoutheast({ commit }) {
         
-        if (!this.southeastPostsFetched)
-        { 
-            await this.$axios.get('/posts?region=SouthEast')
-                .then(res => {
-                commit("setSoutheast", res.data);
-        })
-        } 
-        else {
-        
-        commit("setSoutheastNoFetch" );
-        }
+          if (!this.southeastPostsFetched)
+          { 
+              await this.$axios.get('/posts?region=SouthEast')
+                  .then(res => {
+                  commit("setSoutheast", res.data);
+          })
+          } 
+          else {
+          
+          commit("setSoutheastNoFetch" );
+          }
        
         },
 
         async setSocal({ commit }) {
         
-        if (!this.socalPostsFetched)
-        { 
-            await this.$axios.get('/posts?region=SoCal')
-                .then(res => {
-                commit("setSocal", res.data);
-        })
-        } 
-        else {
-        
-        commit("setSocalNoFetch" );
-        }
+          if (!this.socalPostsFetched)
+          { 
+              await this.$axios.get('/posts?region=SoCal')
+                  .then(res => {
+                  commit("setSocal", res.data);
+          })
+          } 
+          else {
+          
+          commit("setSocalNoFetch" );
+          }
        
         },
 
         async setSilicon({ commit }) {
         
-        if (!this.siliconPostsFetched)
-        { 
-            await this.$axios.get('/posts?region=SiliconValley')
-                .then(res => {
-                commit("setSilicon", res.data);
-        })
-        } 
-        else {
-        
-        commit("setSiliconNoFetch" );
-        }
+          if (!this.siliconPostsFetched)
+          { 
+              await this.$axios.get('/posts?region=SiliconValley')
+                  .then(res => {
+                  commit("setSilicon", res.data);
+          })
+          } 
+          else {
+          
+          commit("setSiliconNoFetch" );
+          }
        
         },
 
         async setMidwest({ commit }) {
         
-        if (!this.midwestPostsFetched)
-        { 
-            await this.$axios.get('/posts?region=MidWest')
-                .then(res => {
-                commit("setMidwest", res.data);
-        })
-        } 
-        else {
-        
-        commit("setMidwestNoFetch" );
-        }
+          if (!this.midwestPostsFetched)
+          { 
+              await this.$axios.get('/posts?region=MidWest')
+                  .then(res => {
+                  commit("setMidwest", res.data);
+          })
+          } 
+          else {
+          
+          commit("setMidwestNoFetch" );
+          }
        
         },
 
         async setMidatlantic({ commit }) {
         
-        if (!this.midatlanticPostsFetched)
-        { 
-            await this.$axios.get('/posts?region=MidAtlantic')
-                .then(res => {
-                commit("setMidatlantic", res.data);
-        })
-        } 
-        else {
-        
-        commit("setMidatlanticNoFetch" );
-        }
+          if (!this.midatlanticPostsFetched)
+          { 
+              await this.$axios.get('/posts?region=MidAtlantic')
+                  .then(res => {
+                  commit("setMidatlantic", res.data);
+          })
+          } 
+          else {
+          
+          commit("setMidatlanticNoFetch" );
+          }
        
         },
 
         async setRocky({ commit }) {
         
-        if (!this.rockyPostsFetched)
-        { 
-            await this.$axios.get('/posts?region=RockyMountains')
-                .then(res => {
-                commit("setRocky", res.data);
-        })
-        } 
-        else {
-        
-        commit("setRockyNoFetch" );
-        }
+          if (!this.rockyPostsFetched)
+          { 
+              await this.$axios.get('/posts?region=RockyMountains')
+                  .then(res => {
+                  commit("setRocky", res.data);
+          })
+          } 
+          else {
+          
+          commit("setRockyNoFetch" );
+          }
        
         },
 
         async setPacific({ commit }) {
         
-        if (!this.pacificPostsFetched)
-        { 
-            await this.$axios.get('/posts?region=PacNorthWest')
-                .then(res => {
-                commit("setPacific", res.data);
-        })
-        } 
-        else {
-        
-        commit("setPacificNoFetch" );
+          if (!this.pacificPostsFetched)
+          { 
+              await this.$axios.get('/posts?region=PacNorthWest')
+                  .then(res => {
+                  commit("setPacific", res.data);
+          })
+          } 
+          else {
+          
+          commit("setPacificNoFetch" );
         }
         },
 
         async setSouthwest({ commit }) {
         
-        if (!this.southwestPostsFetched)
-        { 
-            await this.$axios.get('/posts?region=Southwest')
-                .then(res => {
-                commit("setSouthwest", res.data);
-        })
-        }
-        else {
-        
-        commit("setSouthwestNoFetch" );
-        }
+          if (!this.southwestPostsFetched)
+          { 
+              await this.$axios.get('/posts?region=Southwest')
+                  .then(res => {
+                  commit("setSouthwest", res.data);
+          })
+          }
+          else {
+          
+          commit("setSouthwestNoFetch" );
+          }
        
         },
 
 
         async setNYC({ commit }) {
         
-        if (!this.nycPostsFetched)
-        { 
-            await this.$axios.get('/posts?region=SiliconAlleyNYC')
-                .then(res => {
-                commit("setNYC", res.data);
-        })
-        } 
-        else {
-        
-        commit("setNYCNoFetch" );
-        }
+          if (!this.nycPostsFetched)
+          { 
+              await this.$axios.get('/posts?region=SiliconAlleyNYC')
+                  .then(res => {
+                  commit("setNYC", res.data);
+          })
+          } 
+          else {
+          
+          commit("setNYCNoFetch" );
+          }
        
         },
 
         async setME({ commit }) {
         
-        if (!this.mePostsFetched)
-        { 
-            await this.$axios.get('/posts?region=MiddleEast')
-                .then(res => {
-                commit("setME", res.data);
-        })
-        } 
-        else {
-        
-        commit("setMENoFetch" );
-        }
+          if (!this.mePostsFetched)
+          { 
+              await this.$axios.get('/posts?region=MiddleEast')
+                  .then(res => {
+                  commit("setME", res.data);
+          })
+          } 
+          else {
+          
+          commit("setMENoFetch" );
+          }
        
         },
 
   		  
         async setOceania({ commit }) {
         
-        if (!this.oceaniaPostsFetched)
-        { 
-            await this.$axios.get('/posts??region=Oceania')
-                .then(res => {
-                commit("setOceania", res.data);
-        })
-        } 
-        else {
-        
-        commit("setOceaniaNoFetch" );
-        }
+          if (!this.oceaniaPostsFetched)
+          { 
+              await this.$axios.get('/posts?region=Oceania')
+                  .then(res => {
+                  commit("setOceania", res.data);
+          })
+          } 
+          else {
+          
+          commit("setOceaniaNoFetch" );
+          }
        
         },
 
@@ -2517,7 +2516,7 @@ export const mutations = {
         
         if (!this.carribeanPostsFetched)
         { 
-            await this.$axios.get('/posts??region=Caribbean')
+            await this.$axios.get('/posts?region=Caribbean')
                 .then(res => {
                 commit("setCarribean", res.data);
         })
@@ -2532,50 +2531,51 @@ export const mutations = {
 
         async setAsia({ commit }) {
         
-        if (!this.asiaPostsFetched)
-        { 
-            await this.$axios.get('/posts?region=Asia')
-                .then(res => {
-                commit("setAsia", res.data);
-        })
-        } 
-        else {
-        
-        commit("setAsiaNoFetch" );
-        }
-       
+          if (!this.asiaPostsFetched)
+          { 
+              await this.$axios.get('/posts?region=Asia')
+                  .then(res => {
+                  commit("setAsia", res.data);
+          })
+          } 
+          else {
+          
+          commit("setAsiaNoFetch" );
+          }
+         
         },
+
 
         async setEurope({ commit }) {
         
-        if (!this.europePostsFetched)
-        { 
-            await this.$axios.get('/posts?region=Europe')
-                .then(res => {
-                commit("setEurope", res.data);
-        })
-        } 
-        else {
-        
-        commit("setEuropeNoFetch" );
-        }
-       
+          if (!this.europePostsFetched)
+          { 
+              await this.$axios.get('/posts?region=Europe')
+                  .then(res => {
+                  commit("setEurope", res.data);
+          })
+          } 
+          else {
+          
+          commit("setEuropeNoFetch" );
+          }
+         
         },
 
 
         async setAfrica({ commit }) {
         
-        if (!this.africaPostsFetched)
-        { 
-            await this.$axios.get('/posts??region=Africa')
-                .then(res => {
-                commit("setAfrica", res.data);
-        })
-        } 
-        else {
-        
-        commit("setAfricaNoFetch" );
-        }
+          if (!this.africaPostsFetched)
+          { 
+              await this.$axios.get('/posts?region=Africa')
+                  .then(res => {
+                  commit("setAfrica", res.data);
+          })
+          } 
+          else {
+          
+          commit("setAfricaNoFetch" );
+          }
        
         },
 
@@ -2587,19 +2587,19 @@ export const mutations = {
 
   		 async goNext( {commit}, pageVal) {
 
-			if (this.pageArryLength >= pageVal) {
+    			if (this.pageArryLength >= pageVal) {
 
-			  commit("setNextNoFetch");
-			}	
+    			  commit("setNextNoFetch");
+    			}	
 
-			else {
-			  
-			  var items = pageVal + 1;
-			  await this.$axios.get('/posts?page=' + items)
-                .then( res => {
-					commit("setNextAndFetch", res.data)	  
-			   })               
-			}	 
+    			else {
+    			  
+    			  var items = pageVal + 1;
+    			  await this.$axios.get('/posts?page=' + items)
+                    .then( res => {
+    					commit("setNextAndFetch", res.data)	  
+    			   })               
+    			}	 
   		 
   		  },
 
@@ -2612,10 +2612,10 @@ export const mutations = {
 
   		 async submitSearch( {commit}, topic) {
 			
-			await this.$axios.get('/posts?term=' + topic)
-           .then( res => {
-          		commit("submitSearch", res.data)
-      	 	})
+  			await this.$axios.get('/posts?term=' + topic)
+             .then( res => {
+            		commit("submitSearch", res.data)
+        	 	})
 
   		 },	
 
@@ -2626,18 +2626,19 @@ export const mutations = {
 
   		 nuxtServerInit(vuexContext, context) {
 		   
-		   if (!this.firstPostFetched) { 
+  		   if (!this.firstPostFetched) { 
 
-              return this.$axios.$get("/posts?page=1")
-              .then(data => {
-                vuexContext.commit("set", data);
-              })
-		   }
-		   else {
-			  vuexContext.commit("set");
-		   }
+                return this.$axios.$get("/posts?page=1")
+                .then(data => {
+                  vuexContext.commit("set", data);
+                })
+  		   }
+  		   else {
+  			  vuexContext.commit("set");
+  		   }
 	    },   
-	      setView({commit}, view) {
+
+	     setView({commit}, view) {
 
 	      		commit("setView", view);
 	    },
@@ -2762,21 +2763,22 @@ export const mutations = {
 	  },
       
       
-      firstpage() {
+    firstpage() {
 	
-		return state.posts.pages[0] ;
+		  return state.posts.pages[0] ;
 	
 	  },
 	 
 	  insurPosts() {
 	
-		return state.posts.insurtech;
+		  return state.posts.insurtech;
 	  },
 	 
 	  lendPosts() {
 	
 		 return state.posts.lending;
-	  },
+	  
+    },
 	  
 	  bankPosts() {
 	
