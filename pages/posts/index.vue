@@ -53,7 +53,6 @@ methods: {
 
    },
 
-
    getbyCategory(category) {
 
     switch(category) {
