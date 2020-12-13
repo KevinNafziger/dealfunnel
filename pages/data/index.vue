@@ -202,6 +202,103 @@ computed: {
          this.$store.dispatch("posts/setView", "Data");
          this.$store.dispatch("posts/set100plus");
          break;
+
+      case 'latin':
+         this.$store.dispatch("posts/setView", "Data");
+         this.$store.dispatch("posts/setLatin");
+         break;
+
+      case 'canada':
+         this.$store.dispatch("posts/setView", "Data");
+         this.$store.dispatch("posts/setCanada");
+         break;  
+
+      case 'south':
+         this.$store.dispatch("posts/setView", "Data");
+         this.$store.dispatch("posts/setSouth");
+         break;  
+
+      case 'newengland':
+         this.$store.dispatch("posts/setView", "Data");
+         this.$store.dispatch("posts/setNewEngland");
+         break; 
+
+      case 'southeast':
+         this.$store.dispatch("posts/setView", "Data");
+         this.$store.dispatch("posts/setSoutheast");
+         break; 
+
+      case 'socal':
+         this.$store.dispatch("posts/setView", "Data");
+         this.$store.dispatch("posts/setSocal");
+         break; 
+
+      case 'silicon':
+         this.$store.dispatch("posts/setView", "Data");
+         this.$store.dispatch("posts/setSilicon");
+         break; 
+
+      case 'midwest':
+         this.$store.dispatch("posts/setView", "Data");
+         this.$store.dispatch("posts/setMidwest");
+         break; 
+
+      case 'midatlantic':
+         this.$store.dispatch("posts/setView", "Data");
+         this.$store.dispatch("posts/setMidatlantic");
+         break; 
+
+      case 'rocky':
+         this.$store.dispatch("posts/setView", "Data");
+         this.$store.dispatch("posts/setRocky");
+         break; 
+
+      case 'pacific':
+         this.$store.dispatch("posts/setView", "Data");
+         this.$store.dispatch("posts/setPacific");
+         break; 
+
+      case 'southwest':
+         this.$store.dispatch("posts/setView", "Data");
+         this.$store.dispatch("posts/setSouthwest");
+         break; 
+
+      case 'nyc':
+         this.$store.dispatch("posts/setView", "Data");
+         this.$store.dispatch("posts/setNYC");
+         break; 
+
+      case 'me':
+         this.$store.dispatch("posts/setView", "Data");
+         this.$store.dispatch("posts/setME");
+         break; 
+
+      case 'oceania':
+         this.$store.dispatch("posts/setView", "Data");
+         this.$store.dispatch("posts/setOceania");
+         break; 
+
+      case 'carribean':
+         this.$store.dispatch("posts/setView", "Data");
+         this.$store.dispatch("posts/setCarribean");
+         break;  
+
+      case 'asia':
+         this.$store.dispatch("posts/setView", "Data");
+         this.$store.dispatch("posts/setAsia");
+         break; 
+
+      case 'europe':
+         this.$store.dispatch("posts/setView", "Data");
+         this.$store.dispatch("posts/setEurope");
+         break;
+
+      case 'africa':
+         this.$store.dispatch("posts/setView", "Data");
+         this.$store.dispatch("posts/setAfrica");
+         break;
+
+
       }
    },
 
@@ -495,3 +592,4 @@ display: table;
    margin-bottom: 20px;
 }
 </style>
+

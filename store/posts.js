@@ -37,6 +37,28 @@ export const state = () => ({
   fiftytohundred: [],
   hundredplus: [],
 
+  canada: [],
+  south: [],
+  southwest: [],
+  southeast: [],
+  midwest: [],
+  mideast: [],
+  newengland: [],
+  midatlantic: [],
+  carribean: [],
+  latin: [],
+  asia: [],
+  europe: [],
+  africa:[],
+  pacific: [],
+  socal: [],
+  silicon: [],
+  nyc: [],
+  oceania: [],
+  rocky: [],
+
+
+
 
   activeDataTab: 'All',
   activeArtTab: 'All',
@@ -401,6 +423,277 @@ export const mutations = {
    },
 
 
+   setCanada(state, data) {
+
+    state.canada = data; 
+
+    if (state.activeView =='Data') 
+    {
+      state.activeDataInfo = data;
+      state.activeDataTab ='Canada';  
+      state.firstDataLoad = false;
+    }
+
+   },
+
+   setLatin(state, data) {
+
+    state.latin = data; 
+
+    if (state.activeView =='Data') 
+    {
+      state.activeDataInfo = data;
+      state.activeDataTab ='Latin America';  
+      state.firstDataLoad = false;
+    }
+
+   },
+
+   setNewEngland(state, data) {
+
+    state.newengland = data; 
+
+    if (state.activeView =='Data') 
+    {
+      state.activeDataInfo = data;
+      state.activeDataTab ='New England';  
+      state.firstDataLoad = false;
+    }
+
+   },
+
+
+   setSouth(state, data) {
+
+    state.south = data; 
+
+    if (state.activeView =='Data') 
+    {
+      state.activeDataInfo = data;
+      state.activeDataTab ='South';  
+      state.firstDataLoad = false;
+    }
+
+   },
+
+   setSoutheast(state, data) {
+
+    state.southeast = data; 
+
+    if (state.activeView =='Data') 
+    {
+      state.activeDataInfo = data;
+      state.activeDataTab ='Southeast';  
+      state.firstDataLoad = false;
+    }
+
+   },
+
+   setSouthwest(state, data) {
+
+    state.southwest = data; 
+
+    if (state.activeView =='Data') 
+    {
+      state.activeDataInfo = data;
+      state.activeDataTab ='Southwest';  
+      state.firstDataLoad = false;
+    }
+
+   },
+
+
+
+
+   setNYC(state, data) {
+
+    state.nyc = data; 
+
+    if (state.activeView =='Data') 
+    {
+      state.activeDataInfo = data;
+      state.activeDataTab ='New York City';  
+      state.firstDataLoad = false;
+    }
+
+   },
+
+  setOceania(state, data) {
+
+    state.oceania = data; 
+
+    if (state.activeView =='Data') 
+    {
+      state.activeDataInfo = data;
+      state.activeDataTab ='Oceania';  
+      state.firstDataLoad = false;
+    }
+
+   },
+
+   setCarribean(state, data) {
+
+    state.carribean = data; 
+
+    if (state.activeView =='Data') 
+    {
+      state.activeDataInfo = data;
+      state.activeDataTab ='Carribean';  
+      state.firstDataLoad = false;
+    }
+
+   },
+
+  setMidatlantic(state, data) {
+
+    state.midatlantic = data; 
+
+    if (state.activeView =='Data') 
+    {
+      state.activeDataInfo = data;
+      state.activeDataTab ='MidAtlantic';  
+      state.firstDataLoad = false;
+    }
+
+  },
+
+
+  setSilicon(state, data) {
+
+    state.silicon = data; 
+
+    if (state.activeView =='Data') 
+    {
+      state.activeDataInfo = data;
+      state.activeDataTab ='Silicon Valley';  
+      state.firstDataLoad = false;
+    }
+
+  },
+
+  setSocal(state, data) {
+
+    state.socal = data; 
+
+    if (state.activeView =='Data') 
+    {
+      state.activeDataInfo = data;
+      state.activeDataTab ='SoCal';  
+      state.firstDataLoad = false;
+    }
+
+  },
+
+
+  setPacific(state, data) {
+
+    state.pacific = data; 
+
+    if (state.activeView =='Data') 
+    {
+      state.activeDataInfo = data;
+      state.activeDataTab ='Pacific Northwest';  
+      state.firstDataLoad = false;
+    }
+
+  },
+
+  setMidwest(state, data) {
+
+    state.midwest = data; 
+
+    if (state.activeView =='Data') 
+    {
+      state.activeDataInfo = data;
+      state.activeDataTab ='MidWest';  
+      state.firstDataLoad = false;
+    }
+
+  },
+
+
+  setME(state, data) {
+
+    state.mideast = data; 
+
+    if (state.activeView =='Data') 
+    {
+      state.activeDataInfo = data;
+      state.activeDataTab ='Middle East';  
+      state.firstDataLoad = false;
+    }
+
+  },
+
+  setEurope(state, data) {
+
+    state.europe = data; 
+
+    if (state.activeView =='Data') 
+    {
+      state.activeDataInfo = data;
+      state.activeDataTab ='Europe';  
+      state.firstDataLoad = false;
+    }
+
+  },
+
+  setAfrica(state, data) {
+
+    state.africa = data; 
+
+    if (state.activeView =='Data') 
+    {
+      state.activeDataInfo = data;
+      state.activeDataTab ='Africa';  
+      state.firstDataLoad = false;
+    }
+
+  },
+
+  setAsia(state, data) {
+
+    state.asia = data; 
+
+    if (state.activeView =='Data') 
+    {
+      state.activeDataInfo = data;
+      state.activeDataTab ='Asia';  
+      state.firstDataLoad = false;
+    }
+
+  },
+
+  setRocky(state, data) {
+
+    state.rocky = data; 
+
+    if (state.activeView =='Data') 
+    {
+      state.activeDataInfo = data;
+      state.activeDataTab ='Rocky Mountains';  
+      state.firstDataLoad = false;
+    }
+
+  },
+
+  setNewEngland(state, data) {
+
+    state.newengland = data; 
+
+    if (state.activeView =='Data') 
+    {
+      state.activeDataInfo = data;
+      state.activeDataTab ='New England';  
+      state.firstDataLoad = false;
+    }
+
+  },
+
+
+
+
+
   setBlock(state, data){
 
   	state.blockchain = data;
@@ -529,15 +822,15 @@ export const mutations = {
 
    	 state.banking = data;
 
-   	 if (state.activeView =='Builder')
-     {
+   	 if (state.activeView =='Builder') {
+
         state.activeBuildInfo = data;
   	    state.activeBuildTab = 'Banking';	
   	    state.firstBuildLoad =false;
   	 }
 
-  	 else if (state.activeView =='Articles')
-     {
+  	 else if (state.activeView =='Articles') {
+
     	state.activeArtInfo = data;
     	state.activeArtTab ='Banking';	
     	state.firstArtLoad = false;
@@ -554,7 +847,8 @@ export const mutations = {
 	 	    { 
 	 	      state.numBuildPage--;
 	        }
-			else
+			
+      else
 			{
 			   state.numBuildPage = 1;
 			}
@@ -568,7 +862,8 @@ export const mutations = {
 
 	 	      state.numArtPage--;
 	      }
-			 else {
+			 
+        else {
 
 			   state.numArtPage = 1;
 			  
@@ -584,7 +879,8 @@ export const mutations = {
 
           state.dataPage--;
         }
-       else {
+        
+        else {
 
          state.dataPage = 1;
         
@@ -648,7 +944,7 @@ export const mutations = {
      	   state.firstArtLoad =false;
      	   break;
 
-        case "Articles":
+        case "Data":
          state.dataPage++ ; 
          state.activeDataInfo = state.pages[state.dataPage];
          state.activeDataTab = 'Page';
@@ -730,7 +1026,7 @@ export const mutations = {
 
 		switch(state.activeView) {
 
-   	   	  case "Builder":
+   	   case "Builder":
 		  	state.activeBuildInfo = state.pages[0];
 		  	state.numBuildPage = 1;
 		  	state.firstBuildLoad = false; 
@@ -749,7 +1045,7 @@ export const mutations = {
 
 		switch(state.activeView) {
 
-   	   	  case "Builder":
+   	   case "Builder":
 		     state.activeBuildInfo = state.insurtech;
 		     state.activeBuildTab = 'Insurtech';	
 		     state.firstBuildLoad = false;
@@ -768,7 +1064,7 @@ export const mutations = {
 
 		switch(state.activeView) {
 
-   	   	  case "Builder":
+   	   case "Builder":
 		     state.activeBuildInfo = state.regtech;
 		     state.activeBuildTab = 'RegTech';	
 		     state.firstBuildLoad = false;
@@ -789,7 +1085,7 @@ export const mutations = {
 
 		switch(state.activeView) {
 
-   	   	  case "Builder":
+   	   case "Builder":
 		     state.activeBuildInfo = state.valuation;
 		     state.activeBuildTab = 'Valuation';	
 		     state.firstBuildLoad = false;
@@ -809,7 +1105,7 @@ export const mutations = {
 
 		switch(state.activeView) {
 
-   	   	  case "Builder":
+   	   case "Builder":
 		     state.activeBuildInfo = state.advisors;
 		     state.activeBuildTab = 'Advisors';	
 		     state.firstBuildLoad = false;
@@ -829,7 +1125,7 @@ export const mutations = {
 
 		switch(state.activeView) {
 
-   	   	  case "Builder":
+   	   case "Builder":
 		     state.activeBuildInfo = state.mergers;
 		     state.activeBuildTab = 'M&A';	
 		     state.firstBuildLoad = false;
@@ -1118,6 +1414,238 @@ export const mutations = {
 		     break;	
 		  }
 	 },
+
+
+    setCanadaNoFetch(state){
+
+    switch(state.activeView) {
+
+          case "Data":
+         state.activeDataInfo = state.canada;
+         state.activeDataTab = 'Canada';  
+         state.firstDataLoad = false;
+         break; 
+      }
+   },
+
+    setLatinNoFetch(state){
+
+    switch(state.activeView) {
+
+          case "Data":
+         state.activeDataInfo = state.latin;
+         state.activeDataTab = 'Latin AMerica';  
+         state.firstDataLoad = false;
+         break; 
+      }
+   },
+
+  setCarribeanNoFetch(state){
+
+    switch(state.activeView) {
+
+          case "Data":
+         state.activeDataInfo = state.carribean;
+         state.activeDataTab = 'Carribean';  
+         state.firstDataLoad = false;
+         break; 
+      }
+   },
+
+  setEuropeNoFetch(state){
+
+    switch(state.activeView) {
+
+          case "Data":
+         state.activeDataInfo = state.europe;
+         state.activeDataTab = 'Europe';  
+         state.firstDataLoad = false;
+         break; 
+      }
+   },
+
+   setAsiaNoFetch(state){
+
+    switch(state.activeView) {
+
+          case "Data":
+         state.activeDataInfo = state.asia;
+         state.activeDataTab = 'Asia';  
+         state.firstDataLoad = false;
+         break; 
+      }
+   },
+
+   setOceaniaNoFetch(state){
+
+    switch(state.activeView) {
+
+          case "Data":
+         state.activeDataInfo = state.oceania;
+         state.activeDataTab = 'Oceania';  
+         state.firstDataLoad = false;
+         break; 
+      }
+   },
+
+  setMidwestNoFetch(state){
+
+    switch(state.activeView) {
+
+          case "Data":
+         state.activeDataInfo = state.midwest;
+         state.activeDataTab = 'MidWest';  
+         state.firstDataLoad = false;
+         break; 
+      }
+   },
+
+  setNYCNoFetch(state){
+
+    switch(state.activeView) {
+
+          case "Data":
+         state.activeDataInfo = state.nyc;
+         state.activeDataTab = 'New York City';  
+         state.firstDataLoad = false;
+         break; 
+      }
+   },
+
+  setMidatlanticNoFetch(state){
+
+    switch(state.activeView) {
+
+          case "Data":
+         state.activeDataInfo = state.midatlantic;
+         state.activeDataTab = 'MidAtlantic';  
+         state.firstDataLoad = false;
+         break; 
+      }
+   },
+
+  setNewenglandNoFetch(state){
+
+    switch(state.activeView) {
+
+      case "Data":
+         state.activeDataInfo = state.newengland;
+         state.activeDataTab = 'New England';  
+         state.firstDataLoad = false;
+         break; 
+      }
+   },
+
+  setRockyNoFetch(state){
+
+    switch(state.activeView) {
+
+       case "Data":
+         state.activeDataInfo = state.rocky;
+         state.activeDataTab = 'Rocky Mountains';  
+         state.firstDataLoad = false;
+         break; 
+      }
+   },
+
+  setAfricaNoFetch(state){
+
+    switch(state.activeView) {
+
+      case "Data":
+         state.activeDataInfo = state.africa;
+         state.activeDataTab = 'Africa';  
+         state.firstDataLoad = false;
+         break; 
+      }
+   },
+
+  setMENoFetch(state){
+
+    switch(state.activeView) {
+
+      case "Data":
+         state.activeDataInfo = state.mideast;
+         state.activeDataTab = 'Middle East';  
+         state.firstDataLoad = false;
+         break; 
+      }
+   },
+
+   setSouthNoFetch(state){
+
+    switch(state.activeView) {
+
+      case "Data":
+         state.activeDataInfo = state.south;
+         state.activeDataTab = 'South';  
+         state.firstDataLoad = false;
+         break; 
+      }
+   },
+
+  setSouthwestNoFetch(state){
+
+    switch(state.activeView) {
+
+      case "Data":
+         state.activeDataInfo = state.southwest;
+         state.activeDataTab = 'Southwest';  
+         state.firstDataLoad = false;
+         break; 
+      }
+   },
+
+
+  setSoutheastNoFetch(state){
+
+    switch(state.activeView) {
+
+      case "Data":
+         state.activeDataInfo = state.southeast;
+         state.activeDataTab = 'southeast';  
+         state.firstDataLoad = false;
+         break; 
+      }
+   },
+
+
+  setSiliconNoFetch(state){
+
+    switch(state.activeView) {
+
+       case "Data":
+         state.activeDataInfo = state.silicon;
+         state.activeDataTab = 'Silicon Valley';  
+         state.firstDataLoad = false;
+         break; 
+      }
+   },
+
+  setPacificNoFetch(state){
+
+    switch(state.activeView) {
+
+          case "Data":
+         state.activeDataInfo = state.pacific;
+         state.activeDataTab = 'Pacific Northwest';  
+         state.firstDataLoad = false;
+         break; 
+      }
+   },
+
+  setSocalNoFetch(state){
+
+    switch(state.activeView) {
+
+          case "Data":
+         state.activeDataInfo = state.socal;
+         state.activeDataTab = 'SoCal';  
+         state.firstDataLoad = false;
+         break; 
+      }
+   },
+
 
 	setAINoFetch(state){
 
@@ -1743,8 +2271,316 @@ export const mutations = {
   		 
   		  },
 
+        async setLatin({ commit }) {
+        
+        if (!this.latinPostsFetched)
+        { 
+            await this.$axios.get('/posts?region=LatinAmerica')
+                .then(res => {
+                commit("setLatin", res.data);
+        })
+        } 
+        else {
+        
+        commit("setLatinNoFetch" );
+        }
+       
+        },
 
-  		 
+
+        async setCanada({ commit }) {
+        
+        if (!this.canadaPostsFetched)
+        { 
+            await this.$axios.get('/posts?region=Canada')
+                .then(res => {
+                commit("setCanada", res.data);
+        })
+        } 
+        else {
+        
+        commit("setCanadaNoFetch" );
+        }
+       
+        },
+
+
+        async setSouth({ commit }) {
+        
+        if (!this.southPostsFetched)
+        { 
+            await this.$axios.get('/posts?region=South')
+                .then(res => {
+                commit("setSouth", res.data);
+        })
+        } 
+        else {
+        
+        commit("setSouthNoFetch" );
+        }
+       
+        },
+
+        async setNewEngland({ commit }) {
+        
+        if (!this.newenglandPostsFetched)
+        { 
+            await this.$axios.get('/posts?region=NewEngland')
+                .then(res => {
+                commit("setNewEngland", res.data);
+        })
+        } 
+        else {
+        
+        commit("setNewEnglandNoFetch" );
+        }
+       
+        },
+
+        async setSoutheast({ commit }) {
+        
+        if (!this.southeastPostsFetched)
+        { 
+            await this.$axios.get('/posts?region=SouthEast')
+                .then(res => {
+                commit("setSoutheast", res.data);
+        })
+        } 
+        else {
+        
+        commit("setSoutheastNoFetch" );
+        }
+       
+        },
+
+        async setSocal({ commit }) {
+        
+        if (!this.socalPostsFetched)
+        { 
+            await this.$axios.get('/posts?region=SoCal')
+                .then(res => {
+                commit("setSocal", res.data);
+        })
+        } 
+        else {
+        
+        commit("setSocalNoFetch" );
+        }
+       
+        },
+
+        async setSilicon({ commit }) {
+        
+        if (!this.siliconPostsFetched)
+        { 
+            await this.$axios.get('/posts?region=SiliconValley')
+                .then(res => {
+                commit("setSilicon", res.data);
+        })
+        } 
+        else {
+        
+        commit("setSiliconNoFetch" );
+        }
+       
+        },
+
+        async setMidwest({ commit }) {
+        
+        if (!this.midwestPostsFetched)
+        { 
+            await this.$axios.get('/posts?region=MidWest')
+                .then(res => {
+                commit("setMidwest", res.data);
+        })
+        } 
+        else {
+        
+        commit("setMidwestNoFetch" );
+        }
+       
+        },
+
+        async setMidatlantic({ commit }) {
+        
+        if (!this.midatlanticPostsFetched)
+        { 
+            await this.$axios.get('/posts?region=MidAtlantic')
+                .then(res => {
+                commit("setMidatlantic", res.data);
+        })
+        } 
+        else {
+        
+        commit("setMidatlanticNoFetch" );
+        }
+       
+        },
+
+        async setRocky({ commit }) {
+        
+        if (!this.rockyPostsFetched)
+        { 
+            await this.$axios.get('/posts?region=RockyMountains')
+                .then(res => {
+                commit("setRocky", res.data);
+        })
+        } 
+        else {
+        
+        commit("setRockyNoFetch" );
+        }
+       
+        },
+
+        async setPacific({ commit }) {
+        
+        if (!this.pacificPostsFetched)
+        { 
+            await this.$axios.get('/posts?region=PacNorthWest')
+                .then(res => {
+                commit("setPacific", res.data);
+        })
+        } 
+        else {
+        
+        commit("setPacificNoFetch" );
+        }
+        },
+
+        async setSouthwest({ commit }) {
+        
+        if (!this.southwestPostsFetched)
+        { 
+            await this.$axios.get('/posts?region=Southwest')
+                .then(res => {
+                commit("setSouthwest", res.data);
+        })
+        }
+        else {
+        
+        commit("setSouthwestNoFetch" );
+        }
+       
+        },
+
+
+        async setNYC({ commit }) {
+        
+        if (!this.nycPostsFetched)
+        { 
+            await this.$axios.get('/posts?region=SiliconAlleyNYC')
+                .then(res => {
+                commit("setNYC", res.data);
+        })
+        } 
+        else {
+        
+        commit("setNYCNoFetch" );
+        }
+       
+        },
+
+        async setME({ commit }) {
+        
+        if (!this.mePostsFetched)
+        { 
+            await this.$axios.get('/posts?region=MiddleEast')
+                .then(res => {
+                commit("setME", res.data);
+        })
+        } 
+        else {
+        
+        commit("setMENoFetch" );
+        }
+       
+        },
+
+  		  
+        async setOceania({ commit }) {
+        
+        if (!this.oceaniaPostsFetched)
+        { 
+            await this.$axios.get('/posts??region=Oceania')
+                .then(res => {
+                commit("setOceania", res.data);
+        })
+        } 
+        else {
+        
+        commit("setOceaniaNoFetch" );
+        }
+       
+        },
+
+
+        async setCarribean({ commit }) {
+        
+        if (!this.carribeanPostsFetched)
+        { 
+            await this.$axios.get('/posts??region=Caribbean')
+                .then(res => {
+                commit("setCarribean", res.data);
+        })
+        } 
+        else {
+        
+        commit("setCarribeanNoFetch" );
+        }
+       
+        },
+
+
+        async setAsia({ commit }) {
+        
+        if (!this.asiaPostsFetched)
+        { 
+            await this.$axios.get('/posts?region=Asia')
+                .then(res => {
+                commit("setAsia", res.data);
+        })
+        } 
+        else {
+        
+        commit("setAsiaNoFetch" );
+        }
+       
+        },
+
+        async setEurope({ commit }) {
+        
+        if (!this.europePostsFetched)
+        { 
+            await this.$axios.get('/posts?region=Europe')
+                .then(res => {
+                commit("setEurope", res.data);
+        })
+        } 
+        else {
+        
+        commit("setEuropeNoFetch" );
+        }
+       
+        },
+
+
+        async setAfrica({ commit }) {
+        
+        if (!this.africaPostsFetched)
+        { 
+            await this.$axios.get('/posts??region=Africa')
+                .then(res => {
+                commit("setAfrica", res.data);
+        })
+        } 
+        else {
+        
+        commit("setAfricaNoFetch" );
+        }
+       
+        },
+
   		 async goPrevious({ commit }, pageVal ) {
 	
 		   commit("setPrevious");
@@ -2034,17 +2870,142 @@ export const mutations = {
 	 	return state.posts.hundredplus.length > 0;
 
 	 },
-	 
+
+
+   latinPostsFetched() {
+
+    return state.posts.latin.length > 0;
+   
+   },
+
+   europePostsFetched() {
+
+    return state.posts.europe.length > 0;
+   
+   },
+
+   canadaPostsFetched() {
+
+     return state.posts.canada.length > 0;
+
+   },
+
+  nycPostsFetched() {
+
+     return state.posts.nyc.length > 0;
+
+   },
+
+   southPostsFetched () {
+
+    return state.posts.south.length > 0;
+
+   },
+
+   southwestPostsFetched () {
+
+    return state.posts.southwest.length > 0;
+
+   },
+
+   southeastPostsFetched () {
+
+     return state.posts.southeast.length > 0;
+
+   },
+
+   midwestPostsFetched () {
+
+    return state.posts.MidWest.length > 0;
+
+
+   },
+
+   carribeanPostsFetched () {
+
+    return state.posts.carribean.length > 0;
+
+   },
+
+   africaPostsFetched () {
+
+    return state.posts.africa.length > 0;
+
+   },
+
+   midwestPostsFetched () {
+
+    return state.posts.midwest.length > 0;
+
+   },
+
+   asiaPostsFetched () {
+
+    return state.posts.asia.length > 0;
+
+   },
+   oceaniaPostsFetched () {
+
+     return state.posts.oceania.length > 0;
+
+   },
+   mePostsFetched () {
+
+    return state.posts.mideast.length > 0;
+
+   },
+
+   rockyPostsFetched () {
+
+    return state.posts.rocky.length > 0;
+
+   },
+
+   pacificPostsFetched() {
+
+    return state.posts.pacific.length > 0;
+
+   },
+
+  socalPostsFetched() {
+
+    return state.posts.socal.length > 0;
+
+   },
+
+  siliconPostsFetched() {
+
+    return state.posts.silicon.length > 0;
+
+   },
+
+  newenglandPostsFetched() {
+
+    return state.posts.newengland.length > 0;
+
+   },
+
+  midatlanticPostsFetched() {
+
+    return state.posts.midatlantic.length > 0;
+
+   },
+ 
 	
 	 prevArryVal() {
 
 	 	if (this.activeView == "Articles") {
 	 		var val = this.activeArtPage();
 	 	}
-	 	else {
+	 	else if (this.activeView == "Builder") {
 
 	 		var val = this.activeBuildPage();
 	 	}
+    else{
+
+      var val = this.dataPage();
+
+    }
 	
 		val--;
 		if (val>= 0)
