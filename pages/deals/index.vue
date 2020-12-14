@@ -34,7 +34,7 @@
           </th>
           <th>
             <strong><span class="mdi mdi-account-star"></span>
-              <h3>Category</h3></strong>
+              <h3>Price</h3></strong>
           </th>
           <th>
             <strong><span class="mdi mdi-account-multiple-plus"></span>
@@ -54,7 +54,7 @@
         <td >
 
         <div id="myCompanyTag" >
-        <a :href="deal.sellurl">
+        <a :href="deal.sellurl" target="_blank">
         {{deal.sellname }}</a>
         </div>
         </td>
