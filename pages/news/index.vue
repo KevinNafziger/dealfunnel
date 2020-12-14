@@ -37,7 +37,7 @@
                                   {{ link.sector.toLowerCase() }}
                                 </a>
                                 <a href="#"  v-if="link.sector2"  v-on:click="getbyCategory(link.sector2)"  class="tagbtn" >
-                                  link.sector2.toLowerCase() }}
+                                 {{ link.sector2.toLowerCase() }}
                                 </a>
                                 <a href="#" v-if='link.sector3'  v-on:click="getbyCategory(link.sector3)"  class="tagbtn" >
                                   {{ link.sector3.toLowerCase() }}

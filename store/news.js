@@ -143,10 +143,9 @@ export const mutations = {
      state.firstNewsLoad = false;
      state.activeNewsTab = 'Payments';
 
-	    if (temp == 2) {
-	   		 state.pay2 =  data;
+	  if (temp == 2) {
+	   		 state.pay2 =data;
 	     }
-
 	 	else if (temp == 3)	{
 	   	   	 state.pay3 =  data;
 	    }

@@ -53,6 +53,63 @@ methods: {
 
    },
 
+   changeBank: function(direction) {
+
+       switch(direction) {
+
+         case 'Previous':
+            var page = this.bnkPage;
+              this.$store.dispatch("posts/setView", "Articles");
+            this.$store.dispatch("posts/setBankPrevious", page);
+            break;
+
+          case 'Next':
+            var page = this.bnkPage;
+            this.$store.dispatch("posts/setView", "Articles");
+            this.$store.dispatch("posts/setBankNext", page);
+            break;
+
+         }
+     },
+      
+    changeInsur: function(direction) {
+
+       switch(direction) {
+
+         case 'Previous':
+            var page = this.insPage;
+            this.$store.dispatch("posts/setView", "Articles");
+            this.$store.dispatch("posts/setInsurPrevious", page);
+            break;
+
+          case 'Next':
+            var page = this.insPage;
+            this.$store.dispatch("posts/setView", "Articles");
+            this.$store.dispatch("posts/setInsurNext", page);
+            break;
+
+         }
+     },
+ 
+     changeBlock: function(direction) {
+
+       switch(direction) {
+
+         case 'Previous':
+            var page = this.blkPage;
+            this.$store.dispatch("posts/setView", "Articles");
+            this.$store.dispatch("posts/setBlockPrevious", page);
+            break;
+
+          case 'Next':
+            var page = this.blkPage;
+            this.$store.dispatch("posts/setView", "Articles");
+            this.$store.dispatch("posts/setBlockNext", page);
+            break;
+
+        }
+     },
+
    getbyCategory(category) {
 
     switch(category) {
@@ -153,24 +210,38 @@ computed: {
           activeArtInfo: state =>  state.posts.activeArtInfo,
           numPage: state => state.posts.numArtPage,
           first: state => state.posts.firstArtLoad,
+          blkPage:  state => state.posts.blkArtPage,
+          bnkPage:  state => state.posts.bnkArtPage,
+          insPage:  state => state.posts.insArtPage,
    }),
 
-      filterMessage() {
+   filterMessage() {
 
-        if (this.first == true) {
+       if (this.activeTab == 'Page') {
+        return this.activeTab + ' ' +  this.numPage;
+      }
+      else if (this.activeTab == 'Blockchain') {
+        return this.activeTab + ' ' + 'page' + ' ' + this.blkPage;
+      }
+      else if (this.activeTab == 'Banking') {
 
-          return ''
-        }
-        if (this.activeTab == 'Page') {
+        return this.activeTab + ' ' + 'page' + ' ' + this.bnkPage;
 
-          return this.activeTab + ' ' + this.numPage;
-        }
-        else {
+      }
+      else if (this.activeTab == 'Insurtech') {
 
-          return this.activeTab;
-        }
+        return this.activeTab + ' ' + 'page' + ' ' + this.insPage;
 
-      },
+      }
+
+      else {
+
+        return this.activeTab;
+      }
+
+    },
+
+
 
      loadedPosts() {
 
@@ -183,6 +254,10 @@ computed: {
      this.$nuxt.$on("getCategory", (category) => this.getbyCategory(category));
      this.$nuxt.$on("changePage", (direction) => this.changePage(direction));
      this.$nuxt.$on("submitSearch", (topic) => this.submitSearch(topic));
+   
+     this.$nuxt.$on("changeInsur", (direction) => this.changeInsur(direction));
+     this.$nuxt.$on("changeBlock", (direction) => this.changeBlock(direction));
+     this.$nuxt.$on("changeBank", (direction) => this.changeBank(direction));
    },
 
 async fetch({store})

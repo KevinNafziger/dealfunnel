@@ -101,20 +101,32 @@ export default {
       activeTab: state => state.posts.activeBuildTab,
       activeView:  state => state.posts.activeView,
       numPage: state => state.posts.numBuildPage,
+      blkPage:  state => state.posts.blkBuildPage,
+      bnkPage:  state => state.posts.bnkBuildPage,
+      insPage:  state => state.posts.insBuildPage,
    }),
 
-   filterMessage() {
+  filterMessage() {
 
-      if (this.first)
-      {
-        return ''
+       if (this.activeTab == 'Page') {
+        return this.activeTab + ' ' +  this.numPage;
       }
-      if (this.activeTab == 'Page')
-      {
-        return this.activeTab + ' ' + this.numPage;
+      else if (this.activeTab == 'Blockchain') {
+        return this.activeTab + ' ' + 'page' + ' ' + this.blkPage;
       }
-      else
-      {
+      else if (this.activeTab == 'Banking') {
+
+        return this.activeTab + ' ' + 'page' + ' ' + this.bnkPage;
+
+      }
+      else if (this.activeTab == 'Insurtech') {
+
+        return this.activeTab + ' ' + 'page' + ' ' + this.insPage;
+
+      }
+
+      else {
+
         return this.activeTab;
       }
 
@@ -157,6 +169,10 @@ export default {
      this.$nuxt.$on("changePage", (direction) => this.setPage(direction));
      this.$nuxt.$on("submitSearch", (topic) => this.submitSearch(topic));
 
+      this.$nuxt.$on("changeInsur", (direction) => this.changeInsur(direction));
+     this.$nuxt.$on("changeBlock", (direction) => this.changeBlock(direction));
+     this.$nuxt.$on("changeBank", (direction) => this.changeBank(direction));
+
    },
 
   methods: {
@@ -193,6 +209,63 @@ export default {
         }
 
     },
+
+    changeBank: function(direction) {
+
+       switch(direction) {
+
+         case 'Previous':
+            var page = this.bnkPage;
+             this.$store.dispatch("posts/setView", "Builder");
+            this.$store.dispatch("posts/setBankPrevious", page);
+            break;
+
+          case 'Next':
+            var page = this.bnkPage;
+            this.$store.dispatch("posts/setView", "Builder");
+            this.$store.dispatch("posts/setBankNext", page);
+            break;
+
+         }
+     },
+      
+    changeInsur: function(direction) {
+
+       switch(direction) {
+
+         case 'Previous':
+            var page = this.insPage;
+            this.$store.dispatch("posts/setView", "Builder");
+            this.$store.dispatch("posts/setInsurPrevious", page);
+            break;
+
+          case 'Next':
+            var page = this.insPage;
+            this.$store.dispatch("posts/setView", "Builder");
+            this.$store.dispatch("posts/setInsurNext", page);
+            break;
+
+         }
+     },
+ 
+     changeBlock: function(direction) {
+
+       switch(direction) {
+
+         case 'Previous':
+            var page = this.blkPage;
+            this.$store.dispatch("posts/setView", "Builder");
+            this.$store.dispatch("posts/setBlockPrevious", page);
+            break;
+
+          case 'Next':
+            var page = this.blkPage;
+            this.$store.dispatch("posts/setView", "Builder");
+            this.$store.dispatch("posts/setBlockNext", page);
+            break;
+
+        }
+     },
 
     setPage: function(direction) {
 

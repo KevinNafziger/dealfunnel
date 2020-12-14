@@ -59,7 +59,29 @@ export const state = () => ({
   rocky: [],
 
 
+  insur1: [],
+  insur2: [],
+  insur3: [],
+  insur4: [],
+  insur5: [],
 
+
+  block1:  [],
+  block2:  [],
+  block3:  [],
+  block4:  [],
+
+  bank1: [],
+  bank2: [],
+  bank3: [],
+  bank4: [],
+
+  bnkArtPage: 1,
+  insArtPage: 1,
+  blkArtPage: 1,
+  bnkBuildPage: 1,
+  insBuildPage: 1,
+  blkBuildPage: 1,
 
   activeDataTab: 'All',
   activeArtTab: 'All',
@@ -89,7 +111,7 @@ export const mutations = {
 
   setInsur(state, data) {
 
-    state.insurtech = data; 
+    state.insur1 = data; 
 
     if (state.activeView =='Builder') 
     {
@@ -106,6 +128,293 @@ export const mutations = {
 
   },
    
+
+
+   setInsurNext(state, data) {
+
+    if (state.activeView =='Articles') {
+
+    var temp = state.insArtPage;
+     temp++;
+     state.insArtPage++ ;
+     state.activeArtInfo = data;
+     state.activeArtTab = 'Insurtech';
+     state.firstArtLoad = false;
+    }
+    else if (state.activeView =='Builder') {
+
+    var temp = state.insBuildPage;
+     temp++;
+     state.insBuildPage++ ;
+     state.activeBuildInfo = data;
+     state.activeBuildTab = 'Insurtech';
+     state.firstBuildLoad = false;
+    }
+  
+      if (temp == 2) {
+         state.insur2 =  data;
+       }
+      else if (temp == 3) {
+           state.insur3 =  data;
+      }
+      else if (temp == 4) {
+           state.insur4 =  data;  
+      }
+      else if (temp == 5) {
+           state.insur5= data;  
+      }
+     
+   },
+
+
+   setBlockNext(state, data) {
+
+    if (state.activeView =='Articles') {
+
+       var temp = state.blkArtPage;
+        temp++;     
+       state.blkArtPage++ ;
+       state.activeArtInfo = data;
+       state.activeArtTab = 'Blockchain';
+       state.firstArtLoad = false;
+    }
+
+    else if (state.activeView =='Builder') {
+
+       var temp = state.blkBuildPage;
+        temp++;     
+       state.blkBuildPage++ ;
+       state.activeBuildInfo = data;
+       state.activeBuildTab = 'Blockchain';
+       state.firstBuildLoad = false;
+    }
+
+    if (temp == 2) {
+       state.block2 =  data;
+     }
+    else if (temp == 3)  {
+         state.block3 =  data;
+     }
+     else if (temp == 4) {
+         state.block4 =  data;  
+     }
+     else if (temp ==5) {
+         state.block5= data;  
+     }
+    
+   },
+
+   setBankNext(state, data) {
+    if (state.activeView =='Articles')  {
+
+       var temp = state.bnkArtPage;
+       temp++ ;
+       state.bnkArtPage++ ;
+       state.activeArtInfo = data;
+       state.firstArtLoad = false;
+       state.activeArtTab = 'Banking';
+    }
+   else if (state.activeView =='Builder')  {
+
+       var temp = state.bnkBuildPage;
+       temp++ ;
+       state.bnkBuildPage++ ;
+       state.activeBuildInfo = data;
+       state.firstBuildLoad = false;
+       state.activeBuildTab = 'Banking';
+    }
+
+    if (temp == 2) {
+         state.bank2 =data;
+       }
+    else if (temp == 3) {
+           state.bank3 =  data;
+      }
+    else if (temp == 4) {
+           state.bank4 =  data;  
+      }
+    else if (temp ==5) {
+           state.bank5= data;  
+      }
+
+   },
+
+
+
+   setInsurPrevious(state) {
+
+    if (state.activeView =='Articles') {
+
+       var temp = state.insArtPage;
+       temp-- ;
+       state.insArtPage-- ;
+       state.activeArtTab = 'Insurtech';
+       state.firstArtLoad = false;
+
+      if (temp == 1) {
+
+         state.activeArtInfo = state.insur1;
+       }
+      else if (temp == 2) {
+           
+           state.activeArtInfo = state.insur2;
+      }
+      else if (temp == 3) {
+
+        state.activeArtInfo = state.insur3;
+      }
+      else if (temp ==4) {
+           
+           state.activeArtInfo = state.insur4; 
+      }
+   }
+
+   else if (state.activeView =='Builder') {
+
+     var temp = state.insBuildePage;
+     temp-- ;
+     state.insBuildPage-- ;
+     state.activeBuildTab = 'Insurtech';
+     state.firstBuildLoad = false;
+
+     if (temp == 1) {
+
+         state.activeBuildInfo = state.insur1;
+       }
+     else if (temp == 2) {
+           
+           state.activeBuildInfo = state.insur2;
+      }
+      else if (temp == 3) {
+
+        state.activeBuildInfo = state.insur3;
+      }
+      else if (temp ==4) {
+           
+           state.activeBuildInfo = state.insur4; 
+      }
+   }
+
+   },
+
+
+   setBlockPrevious(state) {
+
+    if (state.activeView =='Articles') { 
+
+     var temp = state.blkArtPage;
+     temp--;
+     state.blkArtPage-- ;
+     state.activeArtTab = 'Blockchain';
+     state.firstArtLoad = false;
+
+       if (temp == 1) {
+
+        state.activeArtInfo = state.block1;
+       }
+       else if (temp == 2) {
+        
+        state.activeArtInfo = state.block2;
+       }
+       else if (temp == 3)  {
+          
+          state.activeArtInfo = state.block3;
+       }
+       else if (temp == 4) {
+          
+          state.activeArtInfo = state.block4;
+       }
+       else if (temp == 5) {
+          
+          state.activeArtInfo = state.block5;  
+       }
+       
+    }
+
+    else if (state.activeView =='Builder') { 
+
+     var temp = state.blkBuildPage;
+     temp--;
+     state.blkBuildPage-- ;
+     state.activeBuildTab = 'Blockchain';
+     state.firstBuildLoad = false;
+
+     if (temp == 1) {
+
+      state.activeBuildInfo = state.block1;
+     }
+     else if (temp == 2) {
+      
+      state.activeBuildInfo = state.block2;
+     }
+     else if (temp == 3)  {
+        
+      state.activeBuildInfo = state.block3;
+     }
+     else if (temp == 4) {
+        
+        state.activeBuildInfo = state.block4;
+     }
+     else if (temp == 5) {
+        
+        state.activeBuildInfo = state.block5;  
+     }
+     
+  }
+
+
+},
+
+   setBankPrevious(state) {
+     if (state.activeView =='Articles') { 
+
+      var temp = state.bnkArtPage;
+      temp--;
+       state.bnkArtPage-- ;
+       state.firstArtLoad = false;
+       state.activeArtTab = 'Banking';
+
+        if (temp == 1) {
+       
+          state.activeArtInfo = state.bank1;
+        }
+        else if (temp == 2) {
+    
+          state.activeArtInfo = state.bank2;
+        }
+
+        else if (temp == 3) {
+
+          state.activeArtInfo = state.bank3;
+        }
+
+    }
+    else if (state.activeView =='Builder') { 
+
+      var temp = state.bnkBuildPage;
+      temp--;
+       state.bnkBuildPage-- ;
+       state.firstBuildLoad = false;
+       state.activeBuildTab = 'Banking';
+
+        if (temp == 1) {
+         
+         state.activeBuildInfo = state.bank1;
+        }
+        else if (temp == 2) {
+      
+          state.activeBuildInfo = state.bank2;
+        }
+
+        else if (temp == 3) {
+
+          state.activeBuildInfo = state.bank3;
+       }
+
+    }
+
+   },
+
 
  setCapital(state, data) {
 
@@ -710,7 +1019,7 @@ export const mutations = {
 
   setBlock(state, data){
 
-  	state.blockchain = data;
+  	state.block1 = data;
 
   	if (state.activeView =='Builder')
     {
@@ -834,7 +1143,7 @@ export const mutations = {
 
    setBank(state, data) {
 
-   	 state.banking = data;
+   	 state.bank1 = data;
 
    	 if (state.activeView =='Builder') {
 
@@ -1795,33 +2104,22 @@ export const mutations = {
 
       async setInsur({ commit }) {
 
-    			if (!this.insurPostsFetched)
-    			{
-    				await this.$axios.get('/posts?grouping=Insurtech')
+    		await this.$axios.get('/posts?ins=1')
                		.then(res => {
               			commit("setInsur", res.data);
              		})
-    			}
-    			else
-    			{
-    				commit("setInsurNoFetch");
-    			}	
-  		},
+    	},
+    			
+  
 
   		async setBlock({ commit }) {
 
-  		   if (!this.blockPostsFetched)
-  		   {
-    	       		await this.$axios.get('/posts?grouping=Blockchain')
+  		await this.$axios.get('/posts?blk=1')
              		.then(res => {
             			commit("setBlock", res.data);
            		})
-  		   }
-  		   else
-  			{
-  				commit("setBlockNoFetch");
-  			}	
-		},
+  		},
+  	
 
   	async setPay({ commit }) {
 
@@ -1976,17 +2274,10 @@ export const mutations = {
 
   		 async setBank({ commit }) {
   		    
-  		    if (!this.bankPostsFetched)
-  		   	{	
-    	    		await this.$axios.get('/posts?grouping=Banking')
+  	   	await this.$axios.get('/posts?bnk=1')
              			.then(res => {
             			commit("setBank", res.data);
-  			 	})
-  		   	} 
-  		   	else {
-  				
-  				commit("setBankNoFetch" );
-  		    }
+  			 	}) 
   		 
   		  },
 
@@ -2687,6 +2978,60 @@ export const mutations = {
 	      		commit("setView", view);
 	    },
 
+
+       async setBlockPrevious({ commit }, page ) {
+  
+       commit("setBlockPrevious");
+       
+       },
+
+       async setBlockNext( {commit}, page) {
+
+       var temp = page;
+       temp++ ;
+
+        await this.$axios.get('/posts?blk=' + temp)
+                .then( res => {
+          commit("setBlockNext", res.data)    
+         })               
+     },  
+       
+
+       async setBankPrevious({ commit }, page ) {
+  
+       commit("setBankPrevious");
+       
+       },
+
+       async setBankNext( {commit}, page) {
+
+        var temp = page;
+        temp++ ;
+    
+        await this.$axios.get('/posts?bnk=' + temp)
+                .then( res => {
+          commit("setBankNext", res.data)    
+         })               
+       
+        },
+
+       async setInsurPrevious({ commit }, page ) {
+  
+       commit("setInsurPrevious");
+       
+       },
+
+       async setInsurNext( {commit}, page) {
+
+      var temp = page;
+      temp++ ;
+        
+      await this.$axios.get('/posts?ins=' + temp)
+                .then( res => {
+          commit("setInsurNext", res.data)    
+         })               
+      },   
+       
 
 	}  
 

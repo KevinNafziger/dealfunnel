@@ -16,8 +16,26 @@
       <a href="#" v-on:click="showGrouping('Banking')"   class="tagbtn">banking</a>
       <a href="#" v-on:click="showGrouping('Blockchain')" class="tagbtn">blockchain</a>
       <a href="#" v-on:click="showGrouping('AI')" class="tagbtn">AI</a>
-      <a href="#" v-show="showPreviousBtn" class="tagbtn" v-on:click="changePage('Previous')">Prev</a>
-      <a href="#" v-show="showNextBtn" class="tagbtn" v-on:click="changePage('Next')" >Next</a><br>
+      <a href="#" v-show="showPreviousBtn" class="tagbtn" 
+
+      v-on:click="changePage('Previous')">Prev</a>
+      <a href="#" v-show="showNextBtn" class="tagbtn" v-on:click="changePage('Next')" >Next</a>
+
+
+      <a href="#" v-show="showPrevInsBtn" class="tagbtn"  v-on:click="changeInsur('Previous')">Prev</a>
+      <a href="#" v-show="showNextInsBtn" class="tagbtn" v-on:click="changeInsur('Next')">Next</a>
+
+      
+      <a href="#" v-show="showPrevBnkBtn" class="tagbtn"  v-on:click="changeBank('Previous')">Prev</a>
+      <a href="#" v-show="showNextBnkBtn" class="tagbtn" v-on:click="changeBank('Next')">Next</a>
+
+
+      <a href="#" v-show="showPrevBlkBtn" class="tagbtn"  v-on:click="changeBlock('Previous')">Prev</a>
+      <a href="#" v-show="showNextBlkBtn" class="tagbtn" v-on:click="changeBlock('Next')">Next</a>
+
+
+
+      <br>
       <a href="#" v-on:click="showGrouping('RegTech')" class="tagbtn">regtech</a>
       <a href="#" v-on:click="showGrouping('HealthTech')" class="tagbtn">healthtech</a>
       <a href="#" v-on:click="showGrouping('CapitalMarkets')" class="tagbtn">capitalmarkets</a>
@@ -57,11 +75,26 @@ export default {
       $nuxt.$emit("submitSearch", topic);
       this.searchMessage = '';
     },
+    changeInsur: function(direction) {
+      $nuxt.$emit("changeInsur", direction);
+    },
+
+   changeBank: function(direction) {
+      $nuxt.$emit("changeBank", direction);
+    },
+
+   changeBlock: function(direction) {
+      $nuxt.$emit("changeBlock", direction);
+    },
+
    },
    computed: {
   ...mapState({
       numPage: state => state.posts.numArtPage,
       activeTab: state => state.posts.activeArtTab,
+      bnkPage: state => state.posts.bnkArtPage,
+      blkPage: state => state.posts.blkArtPage,
+      insPage: state => state.posts.insArtPage,
    }),
     showPreviousBtn() {
         if (this.numPage >= 2 && (this.activeTab == 'Page' || this.activeTab =='All'))
@@ -85,7 +118,72 @@ export default {
         }
      },
 
-   }
+     showPrevInsBtn() {
+        if (this.insPage >= 2 && (this.activeTab == 'Insurtech'))
+        {
+           return true;
+        }
+        else
+        {
+           return false;
+        }
+     },
+     showNextInsBtn() {
+
+        if (this.insPage <5  && (this.activeTab == 'Insurtech'))
+        {
+           return true;
+        }
+        else
+        {
+           return false;
+        }
+     },
+
+     showPrevBnkBtn() {
+        if (this.bnkPage >= 2 && (this.activeTab == 'Banking'))
+        {
+           return true;
+        }
+        else
+        {
+           return false;
+        }
+     },
+     showNextBnkBtn() {
+
+        if (this.bnkPage < 3  && (this.activeTab == 'Banking'))
+        {
+           return true;
+        }
+        else
+        {
+           return false;
+        }
+     },
+
+     showPrevBlkBtn() {
+        if (this.blkPage >= 2 && (this.activeTab == 'Blockchain'))
+        {
+           return true;
+        }
+        else
+        {
+           return false;
+        }
+     },
+     showNextBlkBtn() {
+
+        if (this.blkPage <=5 &&  (this.activeTab == 'Blockchain'))
+        {
+           return true;
+        }
+        else
+        {
+           return false;
+        }
+     }
+   },
 };
 </script>
 
