@@ -60,6 +60,18 @@ export const state = () => ({
 export const mutations = {
 
  
+   setSector(state, data) {
+
+     state.activeNewsInfo = data;
+     state.firstNewsLoad = false;
+    },
+
+   setTabForSector (state, sector) {
+
+    state.activeNewsTab = sector;
+   
+   },
+
    setInsurNext(state, data) {
 
    	var temp = state.insNewsPage;
@@ -133,6 +145,9 @@ export const mutations = {
    	  }
 
    },
+
+
+
 
    setPayNext(state, data) {
 
@@ -1076,7 +1091,7 @@ export const mutations = {
   		 async setPayNext( {commit}, page) {
 
   		 	 var temp = page;
-			 temp++ ;
+			   temp++ ;
 		
 			  await this.$axios.get('/links?pay=' + temp)
                 .then( res => {
@@ -1084,6 +1099,30 @@ export const mutations = {
 			   })               
   		 
   		  },
+
+        async setSector( {commit}, sector) {
+
+        await this.$axios.get('/links?sector=' + sector)
+                .then( res => {
+          commit("setSector", res.data)    
+         })               
+       
+        },
+
+        async setbyID( {commit}, sector) {
+
+        await this.$axios.get('/links?id=' + sector)
+                .then( res => {
+          commit("setSector", res.data)    
+         })               
+       
+        },
+
+       setSectorTab( {commit}, sector) {
+
+          commit("setTabForSector", sector)    
+           
+        },
 
   		 async setInsurPrevious({ commit }, page ) {
 	

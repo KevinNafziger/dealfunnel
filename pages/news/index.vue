@@ -42,10 +42,10 @@
                                 <a href="#" v-if='link.sector3'  v-on:click="getbyCategory(link.sector3)"  class="tagbtn" >
                                   {{ link.sector3.toLowerCase() }}
                                 </a>
-                                <a href="#"  v-if="link.folder"  v-on:click="getbyCategory(link.folder)"  class="tagbtn">
+                                <a href="#"  v-if="link.folder && (link.folder!='general') && (link.folder!='report')"  v-on:click="getbyCategory(link.folder)"  class="tagbtn">
                                   {{ link.folder.toLowerCase() }}
                                 </a>
-                              <a href="#"  v-if="link.restype"  v-on:click="getbyCategory(link.restype)"  class="tagbtn" >
+                              <a href="#"  v-if="link.restype && (link.restype!='General' ) && (link.restype!='report')"  v-on:click="getbyCategory(link.restype)"  class="tagbtn" >
                                   {{ link.restype.toLowerCase() }}
                               </a>
                             </div>
@@ -142,6 +142,61 @@ export default {
         case 'remittance':
             this.$store.dispatch("news/setRemit");
             break;
+        case 'Currency':
+        case 'currency':
+        case 'Funds':
+        case 'funds':
+        case 'OnDemand':
+        case 'ondemand':
+        case 'Marketplace':
+        case 'marketplace':
+        case 'Transport':
+        case 'transport':
+        case 'Auto':
+        case 'auto':
+        case 'claims':
+        case 'Claims':
+        case 'Comparison':
+        case 'compairson':
+        case 'rental':
+        case 'Rental':
+        case 'wallet':
+        case 'Wallet':
+        case 'Exchange':
+        case 'exchange':
+        case 'Supplychain':
+        case 'supplychain':
+        case 'Banking':
+        case 'banking':
+        case 'Identity':
+        case 'identity':
+        case 'Platform':
+        case 'Scaling':
+        case 'scaling':
+        case 'Education':
+        case 'Developer':
+        case 'News':
+        case 'Credit':
+        case 'credit':
+        case 'news':
+        case 'Cyber':
+        case 'cyber':
+        case 'Employee Benefits':
+        case 'employee benefits':
+        case 'Government':
+        case 'HR':
+            this.$store.dispatch("news/setSectorTab", category );
+             this.$store.dispatch("news/setSector", category );
+             break;
+        case 'Lists':
+        case 'Regulatory':
+        case 'Human Interest':
+        case 'Libra':
+              this.$store.dispatch("news/setSectorTab", category );
+             this.$store.dispatch("news/setbyID", category ); 
+             break;
+
+
 
         }
     },
