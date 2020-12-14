@@ -10,7 +10,21 @@
       <a href="#" v-on:click="showGrouping('Valuation')" class="tagbtn">Valuation</a>
 
       <a href="#" v-show="showPreviousBtn" class="tagbtn"  v-on:click="changePage('Previous')">Prev</a>
-      <a href="#" v-show="showNextBtn" class="tagbtn" v-on:click="changePage('Next')">Next</a><br>
+      <a href="#" v-show="showNextBtn" class="tagbtn" v-on:click="changePage('Next')">Next</a>
+
+      <a href="#" v-show="showPrevInsBtn" class="tagbtn"  v-on:click="changeInsur('Previous')">Prev</a>
+      <a href="#" v-show="showNextInsBtn" class="tagbtn" v-on:click="changeInsur('Next')">Next</a>
+
+      
+      <a href="#" v-show="showPrevPayBtn" class="tagbtn"  v-on:click="changePay('Previous')">Prev</a>
+      <a href="#" v-show="showNextPayBtn" class="tagbtn" v-on:click="changePay('Next')">Next</a>
+
+
+      <a href="#" v-show="showPrevBlkBtn" class="tagbtn"  v-on:click="changeBlock('Previous')">Prev</a>
+      <a href="#" v-show="showNextBlkBtn" class="tagbtn" v-on:click="changeBlock('Next')">Next</a>
+
+
+      <br>
         <a href="#" v-on:click="showGrouping('Mergers')" class="tagbtn">M&A</a>
 
     </div>
@@ -32,11 +46,26 @@ export default {
       $nuxt.$emit("changePage", direction);
     },
 
+   changeInsur: function(direction) {
+      $nuxt.$emit("changeInsur", direction);
+    },
+
+   changePay: function(direction) {
+      $nuxt.$emit("changePay", direction);
+    },
+
+   changeBlock: function(direction) {
+      $nuxt.$emit("changeBlock", direction);
+    },
+
    },
    computed: {
   ...mapState({
       numActivePage: state => state.news.numNewsPage,
       activeTab: state => state.news.activeNewsTab,
+      payPage: state => state.news.payNewsPage,
+      blkPage: state => state.news.blkNewsPage,
+      insPage: state => state.news.insNewsPage,
    }),
     showPreviousBtn() {
         if (this.numActivePage >= 2 && (this.activeTab == 'Page' || this.activeTab =='All'))
@@ -60,7 +89,74 @@ export default {
         }
      },
 
-   }
+     showPrevInsBtn() {
+        if (this.insPage >= 2 && (this.activeTab == 'Insurtech'))
+        {
+           return true;
+        }
+        else
+        {
+           return false;
+        }
+     },
+     showNextInsBtn() {
+
+        if (this.activeTab == 'Insurtech')
+        {
+           return true;
+        }
+        else
+        {
+           return false;
+        }
+     },
+
+    showPrevBlkBtn() {
+        if (this.blkPage >= 2 && (this.activeTab == 'Blockchain'))
+        {
+           return true;
+        }
+        else
+        {
+           return false;
+        }
+     },
+     showNextBlkBtn() {
+
+        if (this.activeTab == 'Blockchain')
+        {
+           return true;
+        }
+        else
+        {
+           return false;
+        }
+     },
+
+    showPrevPayBtn() {
+        if (this.payPage >= 2 && (this.activeTab == 'Payments'))
+        {
+           return true;
+        }
+        else
+        {
+           return false;
+        }
+     },
+
+     showNextPayBtn() {
+
+        if (this.activeTab == 'Payments')
+        {
+           return true;
+        }
+        else
+        {
+           return false;
+        }
+     }
+
+   },
 };
 </script>
 <style>

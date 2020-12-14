@@ -165,8 +165,61 @@ export default {
             this.$store.dispatch("news/goLast", page);
             break;
          }
+     },
+
+     changePay: function(direction) {
+
+       switch(direction) {
+
+         case 'Previous':
+            var page = this.payPage;
+            this.$store.dispatch("news/setPayPrevious", page);
+            break;
+
+          case 'Next':
+            var page = this.payPage;
+            this.$store.dispatch("news/setPayNext", page);
+            break;
+
+         }
+     },
+      
+    changeInsur: function(direction) {
+
+       switch(direction) {
+
+         case 'Previous':
+            var page = this.insPage;
+            this.$store.dispatch("news/setInsurPrevious", page);
+            break;
+
+          case 'Next':
+            var page = this.insPage;
+            this.$store.dispatch("news/setInsurNext", page);
+            break;
+
+         }
+     },
+ 
+     changeBlock: function(direction) {
+
+       switch(direction) {
+
+         case 'Previous':
+            var page = this.blkPage;
+            this.$store.dispatch("news/setBlockPrevious", page);
+            break;
+
+          case 'Next':
+            var page = this.blkPage;
+            this.$store.dispatch("news/setBlockNext", page);
+            break;
+
+        }
      }
  },
+
+
   computed: {
 
   ...mapState({
@@ -175,20 +228,32 @@ export default {
       activeNewsInfo: state => state.news.activeNewsInfo,
       activeTab: state => state.news.activeNewsTab,
       numPage: state => state.news.numNewsPage,
+      blkPage:  state => state.news.blkNewsPage,
+      payPage:  state => state.news.payNewsPage,
+      insPage:  state => state.news.insNewsPage,
+
    }),
 
    filterMessage() {
+  
+      if (this.activeTab == 'Page') {
+        return this.activeTab + ' ' +  this.numPage;
+      }
+      else if (this.activeTab == 'Blockchain') {
+        return this.activeTab + ' ' + 'page' + ' ' + this.blkPage;
+      }
+      else if (this.activeTab == 'Payments') {
 
-      if (this.first == true)
-      {
-        return ''
+        return this.activeTab + ' ' + 'page' + ' ' + this.payPage;
+
       }
-      if (this.activeTab == 'Page')
-      {
-        return this.activeTab + ' ' + this.numPage;
+      else if (this.activeTab == 'Insurtech') {
+
+        return this.activeTab + ' ' + 'page' + ' ' + this.insPage;
+
       }
-      else
-      {
+      else {
+
         return this.activeTab;
       }
 
@@ -210,7 +275,9 @@ export default {
 
      this.$nuxt.$on("getCategory", (category) => this.getbyCategory(category));
      this.$nuxt.$on("changePage", (direction) => this.setPage(direction));
-
+     this.$nuxt.$on("changePay", (direction) => this.changePay(direction));
+     this.$nuxt.$on("changeInsur", (direction) => this.changeInsur(direction));
+     this.$nuxt.$on("changeBlock", (direction) => this.changeBlock(direction));
    },
    async fetch({store})
   {

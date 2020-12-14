@@ -25,24 +25,266 @@ export const state = () => ({
   numNewsPage: 1,
   firstNewsLoad: true,
 
+  insur1: [],
+  insur2: [],
+  insur3: [],
+  insur4: [],
+  insur5: [],
+  insNewsPage: 1,
+
+  block1:  [],
+  block2:  [],
+  block3:  [],
+  block4:  [],
+  block5:  [],
+  block6:  [],
+  block7:  [],
+  block8:  [],
+  block9:  [],
+  block10: [],
+  block11: [],
+  block12: [],
+  block13: [],
+  blkNewsPage: 1,
+
+  pay1: [],
+  pay2: [],
+  pay3: [],
+  pay4: [],
+  pay5: [],
+  payNewsPage: 1,
+
+
 })
 
 export const mutations = {
 
  
+   setInsurNext(state, data) {
 
-  setInsur(state, data) {
+   	var temp = state.insNewsPage;
+   	 temp++;
+   	 state.insNewsPage++ ;
+   	 state.activeNewsInfo = data;
+   	 state.activeNewsTab = 'Insurtech';
+     state.firstNewsLoad = false;
+	
+	    if (temp == 2) {
+	   		 state.insur2 =  data;
+	     }
+	 	else if (temp == 3)	{
+	   	   	 state.insur3 =  data;
+	    }
+	   	else if (temp == 4) {
+	   	   	 state.insur4 =  data;	
+	    }
+	    else if (temp == 5) {
+	   	   	 state.insur5= data;	
+	   	}
+   	 
 
-    state.insurtech = data; 
-   	state.activeNewsInfo = data;
-    state.firstNewsdLoad = false;
-   
    },
+
+
+   setBlockNext(state, data) {
+
+     var temp = state.blkNewsPage;
+      temp++;   	
+   	 state.blkNewsPage++ ;
+   	 state.activeNewsInfo = data;
+   	 state.activeNewsTab = 'Blockchain';
+     state.firstNewsLoad = false;
+
+    if (temp == 2) {
+   		 state.block2 =  data;
+     }
+ 	 else if (temp == 3)	{
+   	   	 state.block3 =  data;
+     }
+   	 else if (temp == 4) {
+   	   	 state.block4 =  data;	
+     }
+     else if (temp ==5) {
+   	   	 state.block5= data;	
+   	 }
+   	 else if (temp ==6) {
+   	   	 state.block6 =  data;	
+   	 }
+   	 else if (temp== 7) {
+   	   	 state.block7 =  data;	
+   	 }
+   	else if (temp ==8) {
+   	   	 state.block8 =  data;	
+   	}
+    else if (temp == 9) {
+   	   	 state.block9 =  data;	
+   	}
+   	else if (temp == 10) {	  
+   	   	 state.block10 = data;	
+   	}
+   	else if (temp == 11) {
+   	   	 state.block11 = data;	
+   	}
+   	else if (temp == 12) {
+   	   	 state.block12= data;	
+   	}
+   	else if (temp == 13) {
+   	   	 state.block13 = data;	
+   	  }
+
+   },
+
+   setPayNext(state, data) {
+
+   	 var temp = state.payNewsPage;
+   	 temp++ ;
+   	 state.payNewsPage++ ;
+   	 state.activeNewsInfo = data;
+     state.firstNewsLoad = false;
+     state.activeNewsTab = 'Payments';
+
+	    if (temp == 2) {
+	   		 state.pay2 =  data;
+	     }
+
+	 	else if (temp == 3)	{
+	   	   	 state.pay3 =  data;
+	    }
+	   	else if (temp == 4) {
+	   	   	 state.pay4 =  data;	
+	    }
+	    else if (temp ==5) {
+	   	   	 state.pay5= data;	
+	   	}
+
+   },
+
+
+
+   setInsurPrevious(state) {
+
+   	 var temp = state.insNewsPage;
+   	 temp--	;
+   	 state.insNewsPage-- ;
+   	 state.activeNewsTab = 'Insurtech';
+     state.firstNewsLoad = false;
+
+		if (temp == 1) {
+
+	   		 state.activeNewsInfo = state.insur1;
+	     }
+	 	else if (temp == 2)	{
+	   	   	 
+	   	   	 state.activeNewsInfo = state.insur2;
+	    }
+	   	else if (temp == 3) {
+
+	   		state.activeNewsInfo = state.insur3;
+	    }
+	    else if (temp ==4) {
+	   	   	 
+	   	   	 state.activeNewsInfo = state.insur4;	
+	   	}
+
+   },
+
+
+   setBlockPrevious(state) {
+
+   	 var temp = state.blkNewsPage;
+   	 temp--;
+   	 state.blkNewsPage-- ;
+   	 state.activeNewsTab = 'Blockchain';
+     state.firstNewsLoad = false;
+
+     if (temp == 1) {
+
+     	state.activeNewsInfo = state.block1;
+     }
+     else if (temp == 2) {
+   		
+   		state.activeNewsInfo = state.block2;
+     }
+ 	 else if (temp == 3)	{
+   	   	
+   	   	state.activeNewsInfo = state.block3;
+     }
+   	 else if (temp == 4) {
+   	  	
+   	  	state.activeNewsInfo = state.block4;
+     }
+     else if (temp == 5) {
+   	   	
+   	   	state.activeNewsInfo = state.block5;	
+   	 }
+   	 else if (temp ==6) {
+   	   	
+   	   	state.activeNewsInfo = state.block6;
+   	 }
+   	 else if (temp == 7) {
+   	   	
+   	   	 state.activeNewsInfo = state.block7;	
+   	 }
+   	 else if (temp ==8) {
+   	   	
+   	   	state.activeNewsInfo = state.block8; 	
+   	}
+    else if (temp == 9) {
+   	   	
+   	   	state.activeNewsInfo = state.block9; 	
+   	}
+   	else if (temp == 10) {	  
+   	   	
+   	   	state.activeNewsInfo = state.block10; 	
+   	}
+   	else if (temp == 11) {
+   	   	
+   	   	state.activeNewsInfo = state.block11; 	
+   	}
+   	else if (temp ==12) {
+   	   	
+   	   	state.activeNewsInfo = state.block12;
+   	 }
+   	else if (temp ==13) {
+   	   	
+   	   	state.activeNewsInfo = state.block13; 
+   	  }
+   	 
+   },
+
+   setPayPrevious(state) {
+
+   	var temp = state.payNewsPage;
+   	temp--;
+   	 state.payNewsPage-- ;
+     state.firstNewsLoad = false;
+     state.activeNewsTab = 'Payments';
+
+   	  if (temp == 1) {
+	  	 
+	   	 state.activeNewsInfo = state.pay1;
+	  }
+	  else if (temp == 2)	{
+	  
+	   	  state.activeNewsInfo = state.pay2;
+	   }
+
+	  else if (temp == 3) {
+
+	   	  state.activeNewsInfo = state.pay3;
+	   }
+	  else if (temp ==4) {
+	   	   
+	   	  state.activeNewsInfo = state.pay4;	
+	   }
+
+   },
+
 
 
   setBlock(state, data){
 
-  	state.blockchain = data;
+  	state.block1 = data;
   	state.activeNewsInfo = data;
     state.activeNewsTab = 'Blockchain';
     state.firstNewsLoad =false;
@@ -51,10 +293,20 @@ export const mutations = {
 
    setPay(state, data){
 
-   	 state.payments = data;
+   	 state.pay1 = data;
      state.activeNewsInfo = data;
   	 state.activeNewsTab = 'Payments';	
-  	 state.firstNewsLoad =false;
+  	 state.firstNewsLoad = false;
+
+  	},
+
+
+   setInsur(state, data){
+
+   	 state.insur1 = data;
+     state.activeNewsInfo = data;
+  	 state.activeNewsTab = 'Insurtech';	
+  	 state.firstNewsLoad = false;
 
   	},
 
@@ -451,7 +703,7 @@ export const mutations = {
 
 			if (!this.insurNewsFetched)
 			{
-				await this.$axios.get('/links?folder=insurtech')
+				await this.$axios.get('/links?ins=1')
            		.then(res => {
           			commit("setInsur", res.data);
          		})
@@ -464,24 +716,26 @@ export const mutations = {
 
   		async setBlock({ commit }) {
 
-		   if (!this.blockNewsFetched)
-		   {
-  	       		await this.$axios.get('/links?folder=blockchain')
+		   if (!this.blockNewsFetched) {
+
+  	       		await this.$axios.get('/links?blk=1')
            		.then(res => {
           			commit("setBlock", res.data);
          		})
 		   }
-		   else
-			{
+
+		   else {
+
 				commit("setBlockNoFetch");
 			}	
 		},
+
 
   		 async setPay({ commit }) {
 
 			if (!this.payNewsFetched)
 			{
-  	       		await this.$axios.get('/links?folder=payments')
+  	       		await this.$axios.get('/links?pay=1')
            		.then(res => {
 					  commit("setPay", res.data);
 				})
@@ -796,6 +1050,59 @@ export const mutations = {
   		 
   		  },
 
+  		 async setBlockPrevious({ commit }, page ) {
+	
+		   commit("setBlockPrevious");
+  		 
+  		 },
+
+  		 async setBlockNext( {commit}, page) {
+
+			 var temp = page;
+			 temp++ ;
+
+			  await this.$axios.get('/links?blk=' + temp)
+                .then( res => {
+					commit("setBlockNext", res.data)	  
+			   })               
+		 },	 
+  		 
+
+  		 async setPayPrevious({ commit }, page ) {
+	
+		   commit("setPayPrevious");
+  		 
+  		 },
+
+  		 async setPayNext( {commit}, page) {
+
+  		 	 var temp = page;
+			 temp++ ;
+		
+			  await this.$axios.get('/links?pay=' + temp)
+                .then( res => {
+					commit("setPayNext", res.data)	  
+			   })               
+  		 
+  		  },
+
+  		 async setInsurPrevious({ commit }, page ) {
+	
+		   commit("setInsurPrevious");
+  		 
+  		 },
+
+  		 async setInsurNext( {commit}, page) {
+
+			var temp = page;
+			temp++ ;
+			  
+			await this.$axios.get('/links?ins=' + temp)
+                .then( res => {
+					commit("setInsurNext", res.data)	  
+			   })               
+		  },	 
+  		 
   		 async goLast( {commit}) {
           		
           		commit("setLast");
