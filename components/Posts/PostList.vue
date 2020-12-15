@@ -133,6 +133,12 @@ import {mapState} from 'vuex';
       overflow:auto;
     }
   }
+
+  @media screen and (max-width:800px) {
+    .article-card {
+      min-height: 1000px !important ;
+    }
+  }
   .art-rows {
     display: inline-flex;
     width: 50%;
@@ -287,6 +293,7 @@ ol, ul, tr, td {
     /*------ Media Width 640 ( iphone 6 ) ------ */
   @media only screen and (min-device-width: 601px) {
   .content {width: 100% !important;}
+
   }
 
 
