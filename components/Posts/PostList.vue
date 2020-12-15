@@ -136,7 +136,7 @@ import {mapState} from 'vuex';
 
   @media screen and (max-width:800px) {
     .article-card {
-      min-height: 1000px !important ;
+      min-height: 900px !important ;
     }
   }
   .art-rows {
