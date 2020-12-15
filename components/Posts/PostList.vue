@@ -12,10 +12,10 @@
     <div class="post-content">
             <br><br>
     <div class="post-info">
-       
+
        <div v-if="!(post.created_date==null)" class="post-info" style="float:left;"><a class="datetag">{{post.created_date}}</a>
         </div>
-        
+
         <div class="w-row">
           <div v-if="!(post.logo_url==null)" class="flex-img">
               <div class="centering-imgs w-col w-col-6 w-col-medium-6 w6-hide-tiny">
@@ -29,7 +29,7 @@
               <div>
                 <span style="text-transform:none !important;"  class="post-main-text">
                        <b>Most Recent Coverage:</b><br><b><nuxt-link id="myArticleLinkTag" :to="'/posts/' + post.id " class="mdi mdi-book-open mdi-18px"  >{{post.teaser }}</nuxt-link></b>,
-                       
+
                        <div class="sumary"> {{post.summary}} </div>
                       <br>
                        <div v-if="activeTab=='Advisors'" >
@@ -234,11 +234,10 @@ img.in-your-face {
     padding: 10px;
     height: auto;
     width: 100%;
-    max-width: 600px;
+    min-height: 675px;
     margin-left: auto !important;
     margin-right: auto !important;
     margin-bottom: 50px !important;
-    min-height: 600px;
     background-color:#dedede;
 }
 .article-card:hover {
