@@ -91,6 +91,14 @@
                         </div> 
                       </div>
                   </div>    
+                        <div class="col-sm-4" v-if="raises.length" v-for="raise in raises"> 
+                         <div class="nuxt__build_indicator3">
+
+                          {{raise.item_date }}  <a :href="raise.url" class="btn btn-link" target="_blank" > {{raise.raise_type}} {{raise.other}}</a><br> {{raise.amount}}
+                           
+                            <br>Investors:{{raise.lead}} {{raise.partcipating}}
+                         </div>
+
                        <div class="col-sm-4" v-if="executives.length" v-for="executive in executives">
                           <img class="nuxt__build_indicator2" :src="executive.pic_item">
                           <div class="nuxt__build_indicator3">
@@ -150,8 +158,16 @@
                         <span v-if="!(executive.skype === '' )">
                           <a :href="executive.skype" class="btn btn-link" target="_blank" ><i class="fa fa-skype">S</i></a>
                         </span>
+
+
+
                         </div>
-                        </div>    
+                       
+
+                        </div>
+
+
+                  </div>    
             </div>
         
       </div> 
@@ -178,6 +194,7 @@ import {mapState} from 'vuex';
           starter: state => state.company.lending,
           active: state =>  state.company.activeInfo,
           first: state => state.company.firstLoad,
+
    }),
 
     items() {
@@ -197,7 +214,9 @@ import {mapState} from 'vuex';
    id() {
       
         return this.item.id
-   } ,  
+   } , 
+
+ 
 
 
     item() {
@@ -208,9 +227,18 @@ import {mapState} from 'vuex';
  async asyncData({params, $axios })
  {
     let response = await $axios.get('executives?cid=' + params.id)
-    return {executives:response.data}
+    
+    let result = await $axios.get('raises?cid=' + params.id)
+
+    return {
+
+      executives:response.data,
+      raises: result.data,
+
+    }
 
  },
+
 
   };
 </script>
