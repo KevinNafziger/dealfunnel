@@ -1,7 +1,7 @@
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: 'bfrog',
+    title: 'DealFunnel',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -10,17 +10,20 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'link', type: 'stylesheet', href: 'https://cdn.materialdesignicons.com/5.5.55/css/materialdesignicons.min.css' },
-      { rel: 'link', type: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/vuetify/2.3.17/vuetify.css'}
-
+      { rel: 'link', type: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/vuetify/2.3.17/vuetify.css'},
+      { rel: 'link', type: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons' } ,
+      { rel: 'link', type: 'stylesheet', href: 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' } 
     ]
   },
 
+
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
+    { src: 'vue-material/dist/vue-material.min.css', lang: 'css' },
   ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: [
+  plugins: [ '@plugins/firebase',  '@plugins/vue-material',
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -36,15 +39,15 @@ export default {
     'bootstrap-vue/nuxt',
     '@nuxtjs/axios',
     '@nuxtjs/vuetify',
-    '@nuxtjs/fontawesome',
     'nuxtjs-mdi-font',
+
     ],
     axios: {
-    baseURL: process.env.BASE_URL || 'https://fintechhorizonsmedia.com/api/v1'
+    baseURL: process.env.BASE_URL || 'https://fintechhorizonsmedia.com/api/v1',
     },
 
-      http: {
-     baseURL: process.env.BASE_URL || 'https://fintechhorizonsmedia.com/api/v1'
+    env: {
+      fbAPIKey: process.env.FB_KEY || 'AIzaSyBzUEYv2IKnQURUERVEH4g_-3OO4XSfWSY'
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)

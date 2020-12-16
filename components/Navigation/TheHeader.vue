@@ -4,6 +4,7 @@
     <TheSideNavToggle @toggle="$emit('sidenavToggle')" />
     <div class="navigation-items">
       <ul class="nav-list">
+        <li v-if="showLogOutBtn" class="nav-item"><nuxt-link to="/logout">Logout</nuxt-link></li>  
         <li class="nav-item"><nuxt-link to="/"><span class="mdi mdi-home"></span></nuxt-link></li>
         <li class="nav-item"><nuxt-link to="/posts">Articles</nuxt-link></li>
         <li class="nav-item"><nuxt-link to="/news">News</nuxt-link></li>
@@ -12,7 +13,13 @@
         <li class="nav-item"><nuxt-link to="/raises">Raises</nuxt-link></li>
         <li class="nav-item"><nuxt-link to="/companies">Companies</nuxt-link></li>
         <li class="nav-item"><nuxt-link to="/data">Data</nuxt-link></li>
-         <li class="nav-item"><nuxt-link to="/deals">Deals</nuxt-link></li>
+        <li class="nav-item"><nuxt-link to="/deals">Deals</nuxt-link></li>
+        <li v-if="!(this.loggedIn)" class="nav-item"><nuxt-link to="/login">Login</nuxt-link></li>
+        <li v-if="!(this.loggedIn)" class="nav-item"><nuxt-link to="/register">Register</nuxt-link></li>
+         <li  v-if="this.loggedIn">
+             <i style="color:white">signed in:<b>{{email}}</b></i>
+         </li>
+
       </ul>
     </div>
   </header>
@@ -20,13 +27,52 @@
 </template>
 
 <script>
+import {mapState} from 'vuex';
 import TheSideNavToggle from "@/components/Navigation/TheSideNavToggle";
 
 export default {
   name: "TheHeader",
   components: {
     TheSideNavToggle
-  }
+  },
+  computed: {
+
+  ...mapState({
+          loggedIn: state => state.auth.loggedIn,
+          userEmail: state => state.auth.email,
+   }),
+
+  showLogOutBtn() {
+
+      if (this.loggedIn) {
+
+           return true;
+      }
+
+      else {
+
+          return false;      
+      }
+
+  },
+
+  email() {
+
+      if (!this.loggedIn) {
+        return '';
+      }
+
+      else {
+
+         return this.userEmail;
+      }
+
+    }
+
+  },  
+ 
+      
+    
 };
 </script>
 <style>

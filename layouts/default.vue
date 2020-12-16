@@ -13,12 +13,10 @@ export default {
   
   components: {
   TheHeader
+ 
   },
  
-
 }
-
-
 
 </script>
 

@@ -1,64 +1,83 @@
 <template>
 <div width="100%" class="w-container-2">
-<div data-v-69296181="" id="top" class="sectionix"><div data-v-69296181="" class="title"><div data-v-69296181="" class="content"><br data-v-69296181=""> <h2 data-v-69296181="">News <i style="font-size: 13px; text-align:right; margin-left:3px;">{{ filterMessage }}</i></h2></div></div></div>
 
-<NewsTempSearch></NewsTempSearch>
+  <div data-v-69296181="" id="top" class="sectionix"><div data-v-69296181="" class="title"><div data-v-69296181="" class="content"><br data-v-69296181="">
+
+    <h2 data-v-69296181="">News <i style="font-size: 13px; text-align:right; margin-left:3px;">{{ filterMessage }}</i></h2>
+
+  </div></div></div>
+
+  </NewsTempSearch>
+
     <div class="section-15">
       <div class="row-15 w-row">
-          <div class="w-col w-col-9">
-                <ul class="w-list-unstyled">
+        <div class="w-col w-col-9">
+        
+          <ul class="w-list-unstyled">
+            
+            <li v-for="link in links" id="examples" style="text-align: center; margin-bottom: 20px;" class="list-item-9 featuredsidemenu">
 
-                    <li v-for="link in links" id="examples" style="text-align: center; margin-bottom: 20px;" class="list-item-9 featuredsidemenu">
-                      <span class="datetag tl-c" style="margin-right:15px">
-                       {{link.published_on}}
-                      </span>
-                      <br>
-                      <h3  class="heading-24 example">
-                        {{link.header}}
-                      </h3>
-                      <br>
-                      <div class="text-block-13">
-                        <em>
-                          <span style="margin-right:15px">
-                             <a :href="link.url"  target="_blank" style="color:#4286ff">  {{link.publication}} </a>
-                          </span><br><br>
-                        </em>
-                      </div>
-                      <br>
-                      <p class="paragraph-19">
-                        {{link.description}}
-                      </p>
-                      <div class="w-row">
-                      <em>
-                          <div class="w-col w-col-6">
-                            <div>
+              <span class="datetag tl-c" style="margin-right:15px">
+                {{link.published_on}}
+              </span><br>
+              <h3  class="heading-24 example">
+                {{link.header}}
+              </h3><br>
+              
+              <div class="text-block-13">
+                <em>
+                <span style="margin-right:15px">
+                   <a :href="link.url"  target="_blank" style="color:#4286ff">  {{link.publication}} </a>
+                </span><br><br>
+                </em>
+              </div><br>
 
-                                <a href="#" v-if="link.sector" v-on:click="getbyCategory(link.sector)" class="tagbtn" >
-                                  {{ link.sector.toLowerCase() }}
-                                </a>
-                                <a href="#"  v-if="link.sector2"  v-on:click="getbyCategory(link.sector2)"  class="tagbtn" >
-                                 {{ link.sector2.toLowerCase() }}
-                                </a>
-                                <a href="#" v-if='link.sector3'  v-on:click="getbyCategory(link.sector3)"  class="tagbtn" >
-                                  {{ link.sector3.toLowerCase() }}
-                                </a>
-                                <a href="#"  v-if="link.folder && (link.folder!='general') && (link.folder!='report')"  v-on:click="getbyCategory(link.folder)"  class="tagbtn">
-                                  {{ link.folder.toLowerCase() }}
-                                </a>
-                              <a href="#"  v-if="link.restype && (link.restype!='General' ) && (link.restype!='report')"  v-on:click="getbyCategory(link.restype)"  class="tagbtn" >
-                                  {{ link.restype.toLowerCase() }}
-                              </a>
-                            </div>
-                          </div>
-                        </em>
-                      </div>
-                    </li>
-               </ul>
-          </div>
+              <p class="paragraph-19">
+                {{link.description}}
+              </p>
+              
+              <div class="w-row">
+                <em>
+                <div class="w-col w-col-6">
+                  <div>
+
+                  <a href="#" v-if="link.sector" v-on:click="getbyCategory(link.sector)" class="tagbtn" >
+                    {{ link.sector.toLowerCase() }}
+                  </a>
+                  
+                  <a href="#"  v-if="link.sector2"  v-on:click="getbyCategory(link.sector2)"  class="tagbtn">
+                    {{ link.sector2.toLowerCase() }}
+                  </a>
+                  
+                  <a href="#" v-if='link.sector3'  v-on:click="getbyCategory(link.sector3)"  class="tagbtn" >
+                    {{ link.sector3.toLowerCase() }}
+                  </a>
+
+                  <a href="#"  v-if="link.folder && (link.folder!='general') && (link.folder!='report')"  v-on:click="getbyCategory(link.folder)"  class="tagbtn">
+                      {{ link.folder.toLowerCase() }}
+                  </a>
+                  
+                  <a href="#"  v-if="link.restype && (link.restype!='General' ) && (link.restype!='report')"  v-on:click="getbyCategory(link.restype)"  class="tagbtn" >
+                    {{ link.restype.toLowerCase() }}
+                   </a>
+
+                  </div>
+                </div>
+                </em>
+              </div>
+            
+            </li>
+
+          </ul>
+
+        </div>
       </div>
     </div>
+
 </div>
 </template>
+
+
 <script>
 import {mapState} from 'vuex';
 import NewsTempSearch from '@/components/News/NewsTempSearch';
@@ -74,6 +93,7 @@ export default {
         case 'insurtech':
            this.$store.dispatch("news/setInsur");
            break;
+
         case 'Blockchain':
         case 'blockchain':
             this.$store.dispatch("news/setBlock");
@@ -86,62 +106,77 @@ export default {
         case 'payments':
             this.$store.dispatch("news/setPay");
             break;
+
         case 'Mergers':
         case 'M&A':
             this.$store.dispatch("news/setMergers");
             break;
+
         case 'Valuation':
         case 'valuation':
             this.$store.dispatch("news/setVal");
             break;
+
         case 'AI':
         case 'ai':
             this.$store.dispatch("news/setAI");
             break;
+
         case 'OpenBanking':
         case 'openbanking':
             this.$store.dispatch("news/setOpen");
             break;
+
         case 'PersonalFinance':
         case 'personalfinance':
             this.$store.dispatch("news/setPer");
             break;
+
         case 'CapitalMarkets':
         case 'capitalmarkets':
             this.$store.dispatch("news/setCapital");
             break;
+
         case 'WealthTech':
         case 'wealthtech':
             this.$store.dispatch("news/setWealth");
             break;
+
         case 'General':
         case 'general':
             this.$store.dispatch("news/setGeneral");
             break;
+
         case 'healthtech':
         case 'HealthTech':
             this.$store.dispatch("news/setHealth");
             break;
+
         case 'RealEstate':
         case 'realestate':
             this.$store.dispatch("news/setReal");
             break;
+
         case 'Regtech':
         case 'regtech':
             this.$store.dispatch("news/setReg");
             break;
+
         case 'CyberIdentity':
         case 'cyberidentity':
             this.$store.dispatch("news/setCyber");
             break;
+
         case 'Neobank':
         case 'neobank':
             this.$store.dispatch("news/setNeo");
             break;
+
         case 'Remittance':
         case 'remittance':
             this.$store.dispatch("news/setRemit");
             break;
+
         case 'Currency':
         case 'currency':
         case 'Funds':
@@ -181,6 +216,10 @@ export default {
         case 'news':
         case 'Cyber':
         case 'cyber':
+        case 'Predictions':
+        case 'predictions':
+        case 'p2p':
+        case 'P2p':
         case 'Employee Benefits':
         case 'employee benefits':
         case 'Government':
@@ -188,15 +227,15 @@ export default {
             this.$store.dispatch("news/setSectorTab", category );
              this.$store.dispatch("news/setSector", category );
              break;
+
         case 'Lists':
         case 'Regulatory':
         case 'Human Interest':
         case 'Libra':
-              this.$store.dispatch("news/setSectorTab", category );
-             this.$store.dispatch("news/setbyID", category ); 
+            this.$store.dispatch("news/setSectorTab", category );
+             
+            this.$store.dispatch("news/setbyID", category ); 
              break;
-
-
 
         }
     },
@@ -261,23 +300,25 @@ export default {
        switch(direction) {
 
          case 'Previous':
+            
             var page = this.blkPage;
+
             this.$store.dispatch("news/setBlockPrevious", page);
             break;
 
           case 'Next':
+            
             var page = this.blkPage;
+            
             this.$store.dispatch("news/setBlockNext", page);
             break;
-
         }
      }
- },
-
+  },
 
   computed: {
 
-  ...mapState({
+    ...mapState({
       starter: state => state.news.pages[0],
       first: state => state.news.firstNewsLoad,
       activeNewsInfo: state => state.news.activeNewsInfo,
@@ -287,26 +328,29 @@ export default {
       payPage:  state => state.news.payNewsPage,
       insPage:  state => state.news.insNewsPage,
 
-   }),
+    }),
 
-   filterMessage() {
+    filterMessage() {
   
       if (this.activeTab == 'Page') {
         return this.activeTab + ' ' +  this.numPage;
       }
+
       else if (this.activeTab == 'Blockchain') {
         return this.activeTab + ' ' + 'page' + ' ' + this.blkPage;
       }
+
       else if (this.activeTab == 'Payments') {
 
         return this.activeTab + ' ' + 'page' + ' ' + this.payPage;
-
       }
+
       else if (this.activeTab == 'Insurtech') {
 
         return this.activeTab + ' ' + 'page' + ' ' + this.insPage;
 
       }
+
       else {
 
         return this.activeTab;
@@ -314,29 +358,36 @@ export default {
 
     },
 
-   links() {
+    links() {
+     
       if (this.firstNewsLoad == true)
       {
         return this.starter;
       }
+     
       else
+     
       {
         return this.activeNewsInfo;
       }
+    
     },
 
   },
-  created()  {
+
+  created() {
 
      this.$nuxt.$on("getCategory", (category) => this.getbyCategory(category));
      this.$nuxt.$on("changePage", (direction) => this.setPage(direction));
      this.$nuxt.$on("changePay", (direction) => this.changePay(direction));
      this.$nuxt.$on("changeInsur", (direction) => this.changeInsur(direction));
      this.$nuxt.$on("changeBlock", (direction) => this.changeBlock(direction));
+   
    },
+  
    async fetch({store})
   {
-  await store.dispatch("news/nuxtServerInit");
+    await store.dispatch("news/nuxtServerInit");
   },
 
   head: {
@@ -344,10 +395,9 @@ export default {
   },
 
 };
-
 </script>
 
- <style scoped>
+<style scoped>
  .search-bar-div {
        text-align: center;
  }
@@ -511,5 +561,4 @@ ul {
     color:#4286ff;
     cursor: pointer;
   }
-
 </style>

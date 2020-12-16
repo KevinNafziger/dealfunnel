@@ -1,9 +1,15 @@
 <template>
 <div>
 
-  <center>  <div data-v-69296181="" id="top" class="sectionix"><div data-v-69296181="" class="title"><div data-v-69296181="" class="content"><br data-v-69296181=""> <h2 data-v-69296181="">Articles<i style="font-size: 13px; text-align:right; margin-left:3px;">{{ filterMessage }}</i></h2></div></div></div></center>
+  <center>
+    <div data-v-69296181="" id="top" class="sectionix"><div data-v-69296181="" class="title"><div data-v-69296181="" class="content"><br data-v-69296181="">
 
-    <PostTempSearch></PostTempSearch>
+      <h2 data-v-69296181="">Articles<i style="font-size: 13px; text-align:right; margin-left:3px;">{{ filterMessage }}</i></h2>
+
+    </div></div></div>
+  </center>
+ 
+  </PostTempSearch>
 
   <div class="posts-page">
        <PostList :posts="loadedPosts" :board="this.myboard" />
@@ -12,14 +18,15 @@
 </div>
 </template>
 
-<script>
 
+<script>
 import PostTempSearch from '@/components/Posts/PostTempSearch';
 import PostList  from  '@/components/Posts/PostList';
 import {mapState} from 'vuex';
+
 export default {
 
-methods: {
+  methods: {
 
    changePage: function(direction) {
 
@@ -198,11 +205,11 @@ methods: {
          this.$store.dispatch("posts/setAdvisors");
          break;
       }
-   },
+   }
 
-},
-computed: {
-
+  },
+  
+  computed: {
   ...mapState({
           starter: state => state.posts.pages[0],
           activeTab: state => state.posts.activeArtTab,
@@ -220,14 +227,17 @@ computed: {
        if (this.activeTab == 'Page') {
         return this.activeTab + ' ' +  this.numPage;
       }
+
       else if (this.activeTab == 'Blockchain') {
         return this.activeTab + ' ' + 'page' + ' ' + this.blkPage;
       }
+
       else if (this.activeTab == 'Banking') {
 
         return this.activeTab + ' ' + 'page' + ' ' + this.bnkPage;
 
       }
+
       else if (this.activeTab == 'Insurtech') {
 
         return this.activeTab + ' ' + 'page' + ' ' + this.insPage;
@@ -241,12 +251,11 @@ computed: {
 
     },
 
-
-
-     loadedPosts() {
+    loadedPosts() {
 
           return this.activeArtInfo;
-      }
+    }
+
   },
 
   created() {
@@ -258,21 +267,24 @@ computed: {
      this.$nuxt.$on("changeInsur", (direction) => this.changeInsur(direction));
      this.$nuxt.$on("changeBlock", (direction) => this.changeBlock(direction));
      this.$nuxt.$on("changeBank", (direction) => this.changeBank(direction));
-   },
+  },
 
-async fetch({store})
+  async fetch({store}) {
 
-  {
-       if (this.first) {
+    if (this.first) {
+
        store.dispatch("posts/setView", "Articles");
        await store.dispatch("posts/nuxtServerInit");
-       }
+    
+    }
   },
 
 }
-
 </script>
+
+
 <style>
+
 a {
   box-shadow: none !important;
 }

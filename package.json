@@ -13,18 +13,22 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@nuxt/http": "^0.6.0",
     "@nuxtjs/axios": "^5.12.2",
+    "@nuxtjs/firebase": "^7.1.2",
     "@nuxtjs/robots": "^2.4.2",
     "@nuxtjs/vuetify": "^1.11.2",
     "add": "^2.0.6",
     "bootstrap": "^4.5.2",
     "bootstrap-vue": "^2.17.3",
     "core-js": "^3.6.5",
+    "firebase": "^8.2.0",
     "install": "^0.13.0",
     "npm": "^6.14.9",
     "nuxt": "^2.14.9",
     "nuxtjs-mdi-font": "^1.0.2",
+    "vue-material": "^1.0.0-beta-15",
     "vue-resource": "^1.5.1",
-    "vuedraggable": "^2.24.3"
+    "vuedraggable": "^2.24.3",
+    "vuefire": "^2.2.5"
   },
   "devDependencies": {
     "@fortawesome/free-brands-svg-icons": "^5.15.1",
