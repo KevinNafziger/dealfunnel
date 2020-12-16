@@ -7,7 +7,7 @@
 
   </div></div></div>
 
-  </NewsTempSearch>
+  <NewsTempSearch></NewsTempSearch>
 
     <div class="section-15">
       <div class="row-15 w-row">
