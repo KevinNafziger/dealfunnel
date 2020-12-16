@@ -77,6 +77,19 @@ export const mutations = {
   
   },
 
+  submitSearch(state, data) {
+
+       state.activeRaiseInfo = data;
+       state.firstRaiseLoad = false;     
+
+   },
+
+   setSearchTab(state, topic) {
+
+      state.activeRaiseTab = topic ;
+
+   },
+
 }
 
 
@@ -90,17 +103,17 @@ export const mutations = {
          })
      }, 
 
-    setAll(vueContext, data ) {
+     setAll(vueContext, data ) {
 
         vuexContext.commit("setAll", data);
-    },
+     },
 
 
-    setActiveTab( vuexContext, tab) {
+     setActiveTab( vuexContext, tab) {
 
-     vuexContext.commit("setTab", tab);
+       vuexContext.commit("setTab", tab);
 
-    },
+     },
  
      async setInsur({ commit }) {
 
@@ -117,7 +130,7 @@ export const mutations = {
         commit("setInsurNoFetch");
       } 
 
-    },
+     },
 
      async setBlock({ commit }) {
 
@@ -151,6 +164,23 @@ export const mutations = {
        
      },
 
+     async setSearchTab( {commit}, topic) {
+
+              commit("setSearchTab", topic);
+         
+     },
+
+
+    async submitSearch( {commit}, topic) {
+      
+        await this.$axios.get('/raises?term=' + topic)
+              .then( res => {
+              commit("submitSearch", res.data)
+        
+             })
+    },
+
+
       async setLend({ commit }, data) {
 
        if (!this.lendRaisesFetched) {  
@@ -166,6 +196,8 @@ export const mutations = {
        }
        
        },
+
+
   }
 
   export const getters = {

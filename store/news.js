@@ -700,6 +700,20 @@ export const mutations = {
 
 	 },
 
+
+   submitSearch(state, data) {
+
+       state.activeNewsInfo = data;
+       state.firstNewsLoad = false;     
+
+    },
+
+    setSearchTab(state, topic) {
+
+      state.activeNewsTab = topic ;
+
+    },
+
 	 setValNoFetch(state) {
 
 		state.activeNewsInfo = state.valuation;
@@ -1140,6 +1154,23 @@ export const mutations = {
 					commit("setInsurNext", res.data)	  
 			   })               
 		  },	 
+
+      async setSearchTab( {commit}, topic) {
+
+              commit("setSearchTab", topic);
+         
+            },
+
+
+      async submitSearch( {commit}, topic) {
+      
+        await this.$axios.get('/links?term=' + topic)
+              .then( res => {
+              commit("submitSearch", res.data)
+        
+             })
+          },
+
   		 
   		 async goLast( {commit}) {
           		

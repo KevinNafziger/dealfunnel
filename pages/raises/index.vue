@@ -8,9 +8,10 @@
           
             <br>
             <h2>Raises
-                
+
                 <i style="font-size: 13px; text-align:right; margin-left:3px;">{{ filterMessage}}
                 </i>
+            
             </h2>
           
           </div>
@@ -18,7 +19,7 @@
     </div>
   </center>
 
-  </RaiseTempSearch> <br>
+  <RaiseTempSearch></RaiseTempSearch> <br>
 
   <a href="https://fintechhorizonsmedia.com/fintechraises.xlsx"
   class="" style="color:dimgray" id="myExcelIcoTag">
@@ -110,10 +111,11 @@
 
 <script>
 
-  import RaiseTempSearch from '@/components/Raises/RaiseTempSearch';
-  import {mapState} from 'vuex';
-  export default {
-  layout: 'raises',
+ import RaiseTempSearch from '@/components/Raises/RaiseTempSearch';
+ import {mapState} from 'vuex';
+ export default {
+  
+    layout: 'raises',
 
     methods: {
 
@@ -142,40 +144,42 @@
              this.$store.dispatch("raise/setRaiseInfo", this.allRaises);
              break;
           }
-      }
-  },
+      },
 
-  computed: {
+      submitSearch(topic) {
+
+        this.$store.dispatch("raise/setActiveTab", topic);
+         this.$store.dispatch("raise/submitSearch", topic);
+        
+      }
+  
+    },
+
+    computed: {
     
-    ...mapState({
+     ...mapState({
           activeTab: state => state.raise.activeTab,
           allRaises:  state => state.raise.allRaises,
           raises: state =>  state.raise.activeRaiseInfo,
           firstRaiseLoad: state => state.raise.firstRaiseLoad,
-    }),
-
-    filterMessage() {
-
-        if (this.firstRaiseLoad) {
-          return 'All';
-        }
-        else {
-          return this.activeTab;
-        }
+      }),
+      
+      filterMessage() {
+         return this.activeTab;
+       }
+    
     },
 
-  },
+    created() {
 
-  created() {
+       this.$nuxt.$on("getCategory", (category) => this.getbyCategory(category));
+       this.$nuxt.$on("submitSearch", (topic) => this.submitSearch(topic));
 
-      this.$nuxt.$on("getCategory", (category) => this.getbyCategory(category));
+    },
 
-  },
-
-  async fetch({store}) {
-
+    async fetch({store}) {
       await store.dispatch("raise/nuxtServerInit")
-  },
+    },
 
  }
 
@@ -197,6 +201,7 @@
   h2, .ptitle {
 
    color: #4f81bd !important;
+
   }
   
   #myCompanyTag {
@@ -210,6 +215,7 @@
   tr, td {
     padding: 10px !important;
   } 
+
   td {
   
     min-width: 80px !important;
@@ -261,7 +267,9 @@
      h3 {
       font-weight:bold !important;
      }
+
     }
+
 
    .excel-download-btn {
     
@@ -276,10 +284,10 @@
       z-index: 9 !important;
       width: 45px !important;
   
-   }
-  
-   .valuebtn {
    
+    }
+  
+    .valuebtn {
       width: 240px !important;
     }
     
@@ -289,71 +297,71 @@
       20%, #c755ff 340%) !important;
       border-radius: 1px !important;
       width: 130px !important;
+    
     }
 
-  td {
-  
+    td {
       padding: 3px !important;
-  }
+    }
 
-  .square2 .content {
+    .square2 .content {
       display: table !important;
-  }
+    }
   
-  .mdi {
-  color:white !important;
-  }
+   .mdi {
+      color:white !important;
+    }
 
-  .participating-td {
-    overflow:auto !important;
-    max-width: 500px !important;
-  }
+    .participating-td {
+      
+      overflow:auto !important;
+      max-width: 500px !important;
+     }
   
-  td {
+    td {
+    
     color: #627082 !important;
     font-family: poppins !important;
     box-shadow: 1px 1px 1px 0px rgb(38 63 80 / 6%) !important;
-  }
   
-  tr {
-    box-shadow: 0px 0px 1px 0px rgb(15 102 160 / 61%) !important;
-  }
+    }
   
-  .table-striped {
+    tr {
+      box-shadow: 0px 0px 1px 0px rgb(15 102 160 / 61%) !important;
+    }
+  
+    .table-striped {
 
-    max-width:1550px !important;
-    margin-left:auto !important;
-    margin-right: auto !important;
+      max-width:1550px !important;
+      margin-left:auto !important;
+      margin-right: auto !important;
 
-  }
+    }
 
-  table {
-  
-    box-shadow: 0px 0px 10px -9px black;
-  }
+     table {
+      box-shadow: 0px 0px 10px -9px black;
+    }
 
-  table .table-t tr{
+    table .table-t tr{
   
-    background: #2196f3 !important;
-    color: #ffffff;
+      background: #2196f3 !important;
+      color: #ffffff;
+    }
   
-  }
+    table .table-t tr h3 {
+      color: #ffffff !important;
+    }
   
-  table .table-t tr h3{
+    table .table-t tr:hover{
   
-    color: #ffffff !important;
-  }
-  
-  table .table-t tr:hover{
-  
-    background: #2196f3 !important;
-    color: #ffffff;
-  }
+      background: #2196f3 !important;
+      color: #ffffff;
+    }
 
-  table .table-t tr h3:hover{
+    table .table-t tr h3:hover{
 
-    color: #ffffff !important;
-  }
+      color: #ffffff !important;
+    }
 
   .datetag {
 
@@ -362,6 +370,7 @@
   }
 
   .table-t {
+  
     box-shadow: 0px 0px 15px -7px skyblue !important;
   }
 
@@ -392,7 +401,7 @@
 
   .postsssnavcomp, .w-dropdown-list, .Postcompdropmenu {
      border-radius: 10px !important;
-   }
+  }
 
   .column-29, .list-item-9 {
      border-color: rgba(164, 219, 255, 0.45) !important;
@@ -406,33 +415,33 @@
   
    }
 
-  h3 {
+   h3 {
   
     font-size: 18px !important;
     font-variant-caps: all-petite-caps !important;
-  }
+   }
   
-  h1 {
+   h1 {
     text-align:center !important; 
-  }
+   }
 
-  @media screen and (max-width:1400px) {
+   @media screen and (max-width:1400px) {
       
       #examples {
           width:49% !important;
       }      
    }
 
-  .paragraph-19 {
+   .paragraph-19 {
    
-    margin-top: 9px !important;
-    height: 250px !important;
-    color: #474747 !important;
-    overflow: auto !important;
+     margin-top: 9px !important;
+     height: 250px !important;
+     color: #474747 !important;
+     overflow: auto !important;
  
-  }
+   }
   
-  #examples {
+   #examples {
   
     display: inline-flex !important;
     background-color: white !important;
@@ -442,13 +451,14 @@
     height: 530px !important;
     background: linear-gradient(45deg, #f7f9fb, white) !important;
   
-  }
+   }
   
   .btn-link:hover, .btn-link:focus {
   
     color: #23527c !important;
     text-decoration: underline !important;
     background-color: #2fb7ff !important;
+  
   }
 
   .tl-c {

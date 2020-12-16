@@ -17,7 +17,7 @@
             
             <li v-for="link in links" id="examples" style="text-align: center; margin-bottom: 20px;" class="list-item-9 featuredsidemenu">
 
-              <span class="datetag tl-c" style="margin-right:15px">
+              <span class="datetag tl-c" style="margin-left:20px">
                 {{link.published_on}}
               </span><br>
               <h3  class="heading-24 example">
@@ -294,6 +294,13 @@ export default {
 
          }
      },
+
+     submitSearch(topic) {
+
+       this.$store.dispatch("news/setSearchTab", topic);
+       this.$store.dispatch("news/submitSearch", topic);
+
+     },
  
      changeBlock: function(direction) {
 
@@ -382,19 +389,20 @@ export default {
      this.$nuxt.$on("changePay", (direction) => this.changePay(direction));
      this.$nuxt.$on("changeInsur", (direction) => this.changeInsur(direction));
      this.$nuxt.$on("changeBlock", (direction) => this.changeBlock(direction));
+     this.$nuxt.$on("submitSearch", (topic) => this.submitSearch(topic));
+      
    
    },
   
-   async fetch({store})
-  {
+   async fetch({store}) {
     await store.dispatch("news/nuxtServerInit");
-  },
+   },
 
-  head: {
+   head: {
     title: 'News'
-  },
+   },
 
-};
+}
 </script>
 
 <style scoped>
@@ -561,4 +569,5 @@ ul {
     color:#4286ff;
     cursor: pointer;
   }
+
 </style>
