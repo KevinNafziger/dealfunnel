@@ -9,7 +9,7 @@
     </div></div></div>
   </center>
  
- </PostTempSearch> </PostTempSearch>
+ <PostTempSearch> </PostTempSearch>
 
   <div class="posts-page">
        <PostList :posts="loadedPosts" :board="this.myboard" />
