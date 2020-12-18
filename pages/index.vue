@@ -153,6 +153,7 @@ margin:200px auto 100px;
 display:grid;
 grid-template-columns: repeat(auto-fit,minmax(350px, 1fr));
 grid-gap:20px;
+padding-bottom: 200px;
 }
 .testimonials .card{
 position:relative;
