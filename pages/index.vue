@@ -1,4 +1,5 @@
 <template>
+
 <div class="home-page">
 
 <section style="margin-bottom:30px;">
@@ -112,7 +113,9 @@ DealFunnel datasets on Fintech capital raises, M&A, articles and companies can b
 
 </div>
 </template>
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
 <script>
+
 import {mapState, mapMutations} from 'vuex';
 export default {
 
@@ -133,6 +136,7 @@ async fetch({store}) {
 </script>
 
 <style scoped>
+
 a {
   box-shadow: none;
   color:#ffffff;

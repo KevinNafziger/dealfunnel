@@ -5,15 +5,15 @@
     <div class="sectionix" id="top">
        <div class="title">
           <div class="content">
-          
+
             <br>
             <h2>Raises
 
                 <i style="font-size: 13px; text-align:right; margin-left:3px;">{{ filterMessage}}
                 </i>
-            
+
             </h2>
-          
+
           </div>
         </div>
     </div>
@@ -22,46 +22,46 @@
   <RaiseTempSearch></RaiseTempSearch> <br>
 
   <a href="https://fintechhorizonsmedia.com/fintechraises.xlsx"
-  class="" style="color:dimgray" id="myExcelIcoTag">
-    <div class="excel-ico"></div>
+   >
+    <center><span id="oki" class="mdi mdi-file-excel" style="margin-bottom:20px;font-size: 24px;"></span></center>
   </a>
 
   <div class="draft-div">
     <table class="table-striped" width="100%">
       <thead class="fixed-head">
       <th>
-        <strong><span class="mdi mdi-calendar"></span>
+        <strong><span id="oki" class="mdi oki mdi-calendar"></span>
           <h3>Date</h3></strong>
       </th>
-          
+
       <th>
-        <strong><span class="mdi mdi-domain" ></span>
+        <strong><span id="oki" class="mdi  oki mdi-domain" ></span>
           <h3>Company</h3></strong>
       </th>
-          
+
       <th>
-        <strong><span class="mdi mdi-cash-usd-outline"></span>
+        <strong><span id="oki" class="mdi oki mdi-cash-usd-outline"></span>
           <h3>Amount</h3></strong>
       </th>
-          
+
       <th>
-        <strong><span class="mdi mdi-account-star"></span>
+        <strong><span id="oki" class="mdi oki mdi-account-star"></span>
           <h3>Lead</h3></strong>
       </th>
-          
+
       <th>
-        <strong><span class="mdi mdi-account-multiple-plus"></span>
+        <strong><span id="oki" class="mdi oki mdi-account-multiple-plus"></span>
           <h3>Particip..</h3></strong>
       </th>
-          
+
       <th>
-        <strong><span class="mdi mdi-city"></span>
+        <strong><span id="oki" class="mdi oki mdi-city"></span>
           <h3>City</h3>
         </strong>
       </th>
-          
+
       <th>
-        <strong><span class="mdi mdi-earth"></span>
+        <strong><span id="oki" class="mdi  oki mdi-earth"></span>
           <h3>Country</h3>
         </strong>
       </th>
@@ -100,7 +100,7 @@
         <td>
           {{raise.country}}
         </td>
-  
+
       </tr>
     </tbody>
   </table>
@@ -114,7 +114,7 @@
  import RaiseTempSearch from '@/components/Raises/RaiseTempSearch';
  import {mapState} from 'vuex';
  export default {
-  
+
     layout: 'raises',
 
     methods: {
@@ -150,24 +150,24 @@
 
         this.$store.dispatch("raise/setActiveTab", topic);
          this.$store.dispatch("raise/submitSearch", topic);
-        
+
       }
-  
+
     },
 
     computed: {
-    
+
      ...mapState({
           activeTab: state => state.raise.activeTab,
           allRaises:  state => state.raise.allRaises,
           raises: state =>  state.raise.activeRaiseInfo,
           firstRaiseLoad: state => state.raise.firstRaiseLoad,
       }),
-      
+
       filterMessage() {
          return this.activeTab;
        }
-    
+
     },
 
     created() {
@@ -187,60 +187,62 @@
 
 
 <style scoped>
-
+#oki {
+  color: dimgray !important;
+}
   a {
-  
+
     box-shadow:none;
   }
- 
+
   tr:nth-child(odd) {
 
     background: #4f81bd14 !important
   }
-  
+
   h2, .ptitle {
 
    color: #4f81bd !important;
 
   }
-  
+
   #myCompanyTag {
    width: 260px !important;
   }
-  
+
   thead {
     text-align: -webkit-center !important;
   }
 
   tr, td {
     padding: 10px !important;
-  } 
+  }
 
   td {
-  
+
     min-width: 80px !important;
     word-break: break-word !important;
   }
-  
+
   tbody td:hover {
-  
+
     box-shadow: 1px 1px 8px -5px grey !important;
     transition: 0.5s !important;
   }
-  
+
   tr {
-    
+
     background-color: #ffffff !important;
     text-align: center !important;
     vertical-align: text-top !important;
     text-align-last: center !important;
   }
-  
+
   tr:hover {
-  
+
      box-shadow: 1px 1px 8px -5px grey !important;
   }
-  
+
   tr a {
 
      color: dodgerblue !important;
@@ -250,20 +252,20 @@
 
      border-bottom: outset #2877da30 !important;
   }
-      
+
   tbody {
      border-radius: 10px !important;
    }
-   
+
    /* media screen queries */
    @media screen and (max-width: 1292px) {
-   
+
     .w-row {
-     
+
       width: min-content !important;
       display: contents !important;
      }
- 
+
      h3 {
       font-weight:bold !important;
      }
@@ -272,7 +274,7 @@
 
 
    .excel-download-btn {
-    
+
       color: dimgray !important;
       position: fixed !important;
       margin-top: -88px !important;
@@ -283,21 +285,21 @@
       box-shadow: 0px 0px 14px -7px grey !important;
       z-index: 9 !important;
       width: 45px !important;
-  
-   
+
+
     }
-  
+
     .valuebtn {
       width: 240px !important;
     }
-    
+
     .datetag {
-    
-      background: radial-gradient(circle, #3fb1fb 
+
+      background: radial-gradient(circle, #3fb1fb
       20%, #c755ff 340%) !important;
       border-radius: 1px !important;
       width: 130px !important;
-    
+
     }
 
     td {
@@ -307,29 +309,29 @@
     .square2 .content {
       display: table !important;
     }
-  
+
    .mdi {
       color:white !important;
     }
 
     .participating-td {
-      
+
       overflow:auto !important;
       max-width: 500px !important;
      }
-  
+
     td {
-    
+
     color: #627082 !important;
     font-family: poppins !important;
     box-shadow: 1px 1px 1px 0px rgb(38 63 80 / 6%) !important;
-  
+
     }
-  
+
     tr {
       box-shadow: 0px 0px 1px 0px rgb(15 102 160 / 61%) !important;
     }
-  
+
     .table-striped {
 
       max-width:1550px !important;
@@ -343,17 +345,17 @@
     }
 
     table .table-t tr{
-  
+
       background: #2196f3 !important;
       color: #ffffff;
     }
-  
+
     table .table-t tr h3 {
       color: #ffffff !important;
     }
-  
+
     table .table-t tr:hover{
-  
+
       background: #2196f3 !important;
       color: #ffffff;
     }
@@ -370,7 +372,7 @@
   }
 
   .table-t {
-  
+
     box-shadow: 0px 0px 15px -7px skyblue !important;
   }
 
@@ -379,7 +381,7 @@
   }
 
   .valuebtn {
-    font: message-box !important;  
+    font: message-box !important;
   }
 
  .w-col .w-col {
@@ -394,7 +396,7 @@
    a.link-10.hover.hover-3 {
     font-size: smaller !important;
   }
-  
+
    #megamenu3 {
      top:46px !important;
   }
@@ -408,41 +410,41 @@
    }
 
    .featuredsidemenu:hover {
-  
+
      box-shadow: 0 1px 5px 0 rgba(0, 89, 132, 0.16) !important;
      overflow: hidden !important;
      border-radius:10px !important;
-  
+
    }
 
    h3 {
-  
+
     font-size: 18px !important;
     font-variant-caps: all-petite-caps !important;
    }
-  
+
    h1 {
-    text-align:center !important; 
+    text-align:center !important;
    }
 
    @media screen and (max-width:1400px) {
-      
+
       #examples {
           width:49% !important;
-      }      
+      }
    }
 
    .paragraph-19 {
-   
+
      margin-top: 9px !important;
      height: 250px !important;
      color: #474747 !important;
      overflow: auto !important;
- 
+
    }
-  
+
    #examples {
-  
+
     display: inline-flex !important;
     background-color: white !important;
     opacity: 0.95 !important;
@@ -450,15 +452,15 @@
     width: 24% !important;
     height: 530px !important;
     background: linear-gradient(45deg, #f7f9fb, white) !important;
-  
+
    }
-  
+
   .btn-link:hover, .btn-link:focus {
-  
+
     color: #23527c !important;
     text-decoration: underline !important;
     background-color: #2fb7ff !important;
-  
+
   }
 
   .tl-c {
@@ -481,8 +483,8 @@
   #examples .example .hover {
 
     display: inline-grid !important;
-    margin-bottom: 20px !important; 
-  
+    margin-bottom: 20px !important;
+
   }
 
   #myCompanyTag {
@@ -490,7 +492,7 @@
   }
 
   .fixed-head {
-  
+
     padding: 20px !important;
     width: 100% !important;
   }
@@ -500,7 +502,7 @@
     margin-top: 0 !important;
     margin-bottom: 1rem !important;
     display: inherit !important;
-  
+
   }
 
   .excel-ico {
@@ -517,15 +519,15 @@
     height: fit-content !important;
     display: block !important;
     float: left;
-  
+
   }
-  
+
   .square2 .content {
-    display: table; 
+    display: table;
   }
 
   .content {
-  
+
     background: #ffffffc7;
     padding-bottom: 10px;
     border-radius: 10px;
@@ -536,13 +538,13 @@
     margin-right: auto;
 
   }
-  
+
   .title {
-  
+
     text-align: -webkit-center;
     margin-top: 20px;
     margin-bottom: 20px;
-  
+
   }
 
 </style>
