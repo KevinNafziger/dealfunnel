@@ -8,7 +8,7 @@
 
       <form @submit.prevent="registerUser">
         <md-card-header>
-          <h2>Register</h2>
+          <h3>Register</h3>
         </md-card-header>
         <md-card-content>
           <label style="color:red" v-show="!(errorMsg =='')">
