@@ -12,9 +12,9 @@
     <div class="section-15">
       <div class="row-15 w-row">
         <div class="w-col w-col-9">
-        
+
           <ul class="w-list-unstyled">
-            
+
             <li v-for="link in links" id="examples" style="text-align: center; margin-bottom: 20px;" class="list-item-9 featuredsidemenu">
 
               <span class="datetag tl-c" style="margin-left:20px">
@@ -23,7 +23,7 @@
               <h3  class="heading-24 example">
                 {{link.header}}
               </h3><br>
-              
+
               <div class="text-block-13">
                 <em>
                 <span style="margin-right:15px">
@@ -35,7 +35,7 @@
               <p class="paragraph-19">
                 {{link.description}}
               </p>
-              
+
               <div class="w-row">
                 <em>
                 <div class="w-col w-col-6">
@@ -44,11 +44,11 @@
                   <a href="#" v-if="link.sector" v-on:click="getbyCategory(link.sector)" class="tagbtn" >
                     {{ link.sector.toLowerCase() }}
                   </a>
-                  
+
                   <a href="#"  v-if="link.sector2"  v-on:click="getbyCategory(link.sector2)"  class="tagbtn">
                     {{ link.sector2.toLowerCase() }}
                   </a>
-                  
+
                   <a href="#" v-if='link.sector3'  v-on:click="getbyCategory(link.sector3)"  class="tagbtn" >
                     {{ link.sector3.toLowerCase() }}
                   </a>
@@ -56,7 +56,7 @@
                   <a href="#"  v-if="link.folder && (link.folder!='general') && (link.folder!='report')"  v-on:click="getbyCategory(link.folder)"  class="tagbtn">
                       {{ link.folder.toLowerCase() }}
                   </a>
-                  
+
                   <a href="#"  v-if="link.restype && (link.restype!='General' ) && (link.restype!='report')"  v-on:click="getbyCategory(link.restype)"  class="tagbtn" >
                     {{ link.restype.toLowerCase() }}
                    </a>
@@ -65,7 +65,7 @@
                 </div>
                 </em>
               </div>
-            
+
             </li>
 
           </ul>
@@ -233,8 +233,8 @@ export default {
         case 'Human Interest':
         case 'Libra':
             this.$store.dispatch("news/setSectorTab", category );
-             
-            this.$store.dispatch("news/setbyID", category ); 
+
+            this.$store.dispatch("news/setbyID", category );
              break;
 
         }
@@ -277,7 +277,7 @@ export default {
 
          }
      },
-      
+
     changeInsur: function(direction) {
 
        switch(direction) {
@@ -301,22 +301,22 @@ export default {
        this.$store.dispatch("news/submitSearch", topic);
 
      },
- 
+
      changeBlock: function(direction) {
 
        switch(direction) {
 
          case 'Previous':
-            
+
             var page = this.blkPage;
 
             this.$store.dispatch("news/setBlockPrevious", page);
             break;
 
           case 'Next':
-            
+
             var page = this.blkPage;
-            
+
             this.$store.dispatch("news/setBlockNext", page);
             break;
         }
@@ -338,7 +338,7 @@ export default {
     }),
 
     filterMessage() {
-  
+
       if (this.activeTab == 'Page') {
         return this.activeTab + ' ' +  this.numPage;
       }
@@ -366,18 +366,18 @@ export default {
     },
 
     links() {
-     
+
       if (this.firstNewsLoad == true)
       {
         return this.starter;
       }
-     
+
       else
-     
+
       {
         return this.activeNewsInfo;
       }
-    
+
     },
 
   },
@@ -390,10 +390,10 @@ export default {
      this.$nuxt.$on("changeInsur", (direction) => this.changeInsur(direction));
      this.$nuxt.$on("changeBlock", (direction) => this.changeBlock(direction));
      this.$nuxt.$on("submitSearch", (topic) => this.submitSearch(topic));
-      
-   
+
+
    },
-  
+
    async fetch({store}) {
     await store.dispatch("news/nuxtServerInit");
    },
@@ -566,8 +566,18 @@ ul {
 .tagbtn {
     margin-top:3px !important;
     margin-right:3px !important;
-    color:#4286ff;
+    color: #ffffff;
     cursor: pointer;
+    background: #4f81bd;
+    text-decoration: none !important;
+  }
+  .tagbtn:hover {
+    box-shadow: 0px 0px 10px -3px #4f81bd !important;
   }
 
+  .text-block-13 {
+    font-weight: bold;
+    text-align: center;
+    text-align-last: center;
+  }
 </style>

@@ -228,7 +228,7 @@ export default {
 
          }
      },
-      
+
     changeInsur: function(direction) {
 
        switch(direction) {
@@ -247,7 +247,7 @@ export default {
 
          }
      },
- 
+
      changeBlock: function(direction) {
 
        switch(direction) {
@@ -359,7 +359,9 @@ export default {
 </script>
 
 <style scoped>
-
+h2 {
+      text-align: -webkit-center;
+}
 .date-tag {
   background: #69737b3d;
   border-radius: 3px;

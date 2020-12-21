@@ -106,7 +106,7 @@ DealFunnel datasets on Fintech capital raises, M&A, articles and companies can b
 <div class="footer">
   <p ><br>
   To learn more about our services, or to receive a demo, click here or call
-  <span style="color:#000099"> 480-438-5302 </span> for more information. </p>
+  <span class="mdi mdi-phone"></span><span style="color:#000099"> 480-438-5302 </span> for more information. </p>
   </span>
 </div>
 
@@ -154,6 +154,7 @@ margin:200px auto 100px;
 display:grid;
 grid-template-columns: repeat(auto-fit,minmax(350px, 1fr));
 grid-gap:20px;
+padding-bottom: 200px;
 }
 .testimonials .card{
 position:relative;
