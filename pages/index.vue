@@ -124,7 +124,8 @@ computed: {
    }),
    },
 async fetch({store}) {
-  await store.dispatch("posts/nuxtServerInit")
+  store.dispatch("posts/nuxtServerInit")
+  store.dispatch("posts/setAllPosts")
 },
 
 }

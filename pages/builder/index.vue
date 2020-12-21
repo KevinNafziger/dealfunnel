@@ -351,7 +351,7 @@ export default {
   async fetch({store}) {
 
 
-    store.dispatch("posts/setView", "Builder");
+    await store.dispatch("posts/setView", "Builder");
     await store.dispatch("posts/nuxtServerInit")
 
   },
