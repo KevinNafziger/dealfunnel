@@ -22,27 +22,27 @@
 
           <thead class="fixed-head">
             <th>
-          <strong><span class="mdi mdi-calendar"></span>
+          <strong><span id="oki" class="mdi mdi-calendar"></span>
             <h3>Date</h3></strong>
           </th>
           <th>
-            <strong><span class="mdi mdi-domain" ></span>
+            <strong><span id="oki" class="mdi mdi-domain" ></span>
               <h3>Target</h3></strong>
           </th>
           <th>
-          <strong><span class="mdi mdi-cash-usd-outline"></span>
+          <strong><span id="oki" class="mdi mdi-cash-usd-outline"></span>
             <h3>Acquirer</h3></strong>
           </th>
           <th>
-            <strong><span class="mdi mdi-account-star"></span>
+            <strong><span id="oki" class="mdi mdi-account-star"></span>
               <h3>Price</h3></strong>
           </th>
           <th>
-            <strong><span class="mdi mdi-account-multiple-plus"></span>
+            <strong><span id="oki" class="mdi mdi-account-multiple-plus"></span>
               <h3>City</h3></strong>
           </th>
            <th>
-            <strong><span class="mdi mdi-earth"></span><h3>Country</h3></strong>
+            <strong><span id="oki"  class="mdi mdi-earth"></span><h3>Country</h3></strong>
           </th>
         </thead>
 

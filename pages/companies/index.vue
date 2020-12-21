@@ -8,29 +8,29 @@
           <table class="table-striped" width="100%">
               <thead class="fixed-head">
                   <th>
-                <strong><span class="mdi mdi-calendar"></span>
+                <strong><span id="oki" class="mdi mdi-calendar"></span>
                   <h3>Company</h3></strong>
                 </th>
-                <th colspan="2"><strong><span class="mdi mdi-earth"></span>
+                <th colspan="2"><strong><span id="oki" class="mdi mdi-earth"></span>
                   <h3>About</h3></strong>
                 </th>
                 <th>
-                <strong><span class="mdi mdi-cash-usd-outline"></span>
+                <strong><span id="oki" class="mdi mdi-cash-usd-outline"></span>
                   <h3>Website</h3></strong>
                 </th>
                 <th>
-                  <strong><span class="mdi mdi-account-star"></span>
+                  <strong><span id="oki" class="mdi mdi-account-star"></span>
                     <h3>City</h3></strong>
                 </th>
                 <th>
-                  <strong><span class="mdi mdi-account-multiple-plus"></span>
+                  <strong><span id="oki" class="mdi mdi-account-multiple-plus"></span>
                     <h3>Category</h3></strong>
                 </th>
                 <th>
-                  <strong><span class="mdi mdi-earth"></span><h3>Country</h3></strong>
+                  <strong><span id="oki" class="mdi mdi-earth"></span><h3>Country</h3></strong>
                 </th>
                 <th>
-                  <strong><span class="mdi mdi-earth"></span><h3>Founded</h3></strong>
+                  <strong><span id="oki" class="mdi mdi-earth"></span><h3>Founded</h3></strong>
                 </th>
               </thead>
             <tr style="margin-top:20px;" v-for="company in companies">
@@ -58,7 +58,7 @@
             </tr>
         </table>
         </div>
-    
+
   </div>
 </template>
 <script>
@@ -94,32 +94,32 @@ methods: {
    changePage: function(direction) {
 
        switch(direction) {
-       
+
           case 'Previous':
              if (this.activeTab == 'US Page 2')  {
-                this.$store.dispatch("company/setUS1"); 
+                this.$store.dispatch("company/setUS1");
              }
             else {
-                this.$store.dispatch("company/setUS2"); 
+                this.$store.dispatch("company/setUS2");
               }
-              break; 
-           case 'Next':        
+              break;
+           case 'Next':
              if (this.activeTab == 'US Page 1' || this.activeTab == 'US '  ) {
                 this.$store.dispatch("company/setUS2")
-             } 
+             }
             else {
-                this.$store.dispatch("company/setUS3"); 
+                this.$store.dispatch("company/setUS3");
              }
              break;
        }
-    
-    }, 
+
+    },
 
     submitSearch(topic) {
 
       this.$store.dispatch("company/submitSearch", topic);
       this.$store.dispatch("/setSearchTab", topic);
-   
+
     },
 
     filteredCompany(id)
@@ -155,7 +155,7 @@ methods: {
 
    //  },
 
-  // },    
+  // },
 
   created() {
 
@@ -166,7 +166,7 @@ methods: {
    },
 
    async fetch({store}) {
-  
+
    await store.dispatch("company/setLend");
 
    },
@@ -346,6 +346,10 @@ h3 {
     height: 250px !important;
     color: #474747 !important;
     overflow: auto !important;
+}
+#oki {
+  color: dimgray !important;
+  margin:20px;
 }
   #examples {
    display: inline-flex !important;
