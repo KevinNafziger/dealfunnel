@@ -23,7 +23,7 @@
 
   <a href="https://fintechhorizonsmedia.com/fintechraises.xlsx"
    >
-    <center><span id="oki" class="mdi mdi-file-excel" style="margin-bottom:20px;font-size: 24px;"></span></center>
+    <center><span id="oki" class="mdi mdi-file-excel" style="margin:20px;font-size: 34px;"></span></center><br>
   </a>
 
   <div class="draft-div">
