@@ -2,24 +2,25 @@
   <div class="md-layout md-alignment-center-center" style="height: 100vh;">
 
     <md-card class="md-layout-item md-size-50">
-      <md-card-header>
-        <div class="md-title">Register</div>
-      </md-card-header>
+
 
       <!-- Register Form -->
 
       <form @submit.prevent="registerUser">
+        <md-card-header>
+          <h2>Register</h2>
+        </md-card-header>
         <md-card-content>
-          <label style="color:red" v-show="!(errorMsg =='')">    
+          <label style="color:red" v-show="!(errorMsg =='')">
             {{errorMsg}} <br>
-          </label>  
+          </label>
           <md-field md-clearable>
-            <label for="email">Email</label>
+            <span class="mdi mdi-email"></span>
             <md-input type="email" name="email" id="email" autocomplete="email" v-model="email" />
           </md-field>
 
           <md-field>
-            <label for="password">Password</label>
+              <span class="mdi mdi-key"></span>
             <md-input type="password" name="password" id="password" autocomplete="password" v-model="password" />
           </md-field>
         </md-card-content>
@@ -30,7 +31,7 @@
         </md-card-actions>
       </form>
     </md-card>
-  
+
   </div>
 </template>
 
@@ -45,7 +46,7 @@ Vue.use(firestorePlugin)
 
 export default {
   data: () => ({
- 
+
       email: "",
       password: "",
       errorMsg: '',
@@ -75,3 +76,32 @@ export default {
 }
 
 </script>
+
+<style>
+form {
+  margin:auto;
+  max-width: 700px;
+  display: grid;
+}
+h3 {
+  text-align: center;
+  margin: 20px;
+}
+label, md-button {
+  margin-top:20px !important;
+  margin-bottom:20px !important;
+}
+.md-button {
+  background-color: blue;
+}
+button.btn.btn-large.btn-extended.grey.lighten-4.black-text {
+    box-shadow: 0px 0px 9px -5px grey;
+}
+.login {
+  display: grid;
+}
+.md-button {
+    background-color: #4f81bd;
+    color: #ffffff;
+}
+</style>
