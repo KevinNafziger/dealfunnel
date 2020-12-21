@@ -6,7 +6,9 @@
   </text>
 <DataTempSearch/>
   <a href="https://fintechhorizonsmedia.com/fintechraises.xlsx"
-   style="color:dimgray" id="myExcelIcoTag"><div class="excel-ico"></div></a>
+   style="color:dimgray" id="myExcelIcoTag"><br>
+   <center><span id="oki" class="mdi mdi-file-excel" style="margin:20px;font-size: 34px;"></span></center><br>
+ </a>
 
     <table class="table-striped" width="100%">
         <tbody class="table-t">
@@ -137,7 +139,7 @@ computed: {
       }
  },
 
- methods: { 
+ methods: {
 
    getbyCategory(category) {
 
@@ -216,82 +218,82 @@ computed: {
       case 'canada':
          this.$store.dispatch("posts/setView", "Data");
          this.$store.dispatch("posts/setCanada");
-         break;  
+         break;
 
       case 'south':
          this.$store.dispatch("posts/setView", "Data");
          this.$store.dispatch("posts/setSouth");
-         break;  
+         break;
 
       case 'newengland':
          this.$store.dispatch("posts/setView", "Data");
          this.$store.dispatch("posts/setNewEngland");
-         break; 
+         break;
 
       case 'southeast':
          this.$store.dispatch("posts/setView", "Data");
          this.$store.dispatch("posts/setSoutheast");
-         break; 
+         break;
 
       case 'socal':
          this.$store.dispatch("posts/setView", "Data");
          this.$store.dispatch("posts/setSocal");
-         break; 
+         break;
 
       case 'silicon':
          this.$store.dispatch("posts/setView", "Data");
          this.$store.dispatch("posts/setSilicon");
-         break; 
+         break;
 
       case 'midwest':
          this.$store.dispatch("posts/setView", "Data");
          this.$store.dispatch("posts/setMidwest");
-         break; 
+         break;
 
       case 'midatlantic':
          this.$store.dispatch("posts/setView", "Data");
          this.$store.dispatch("posts/setMidatlantic");
-         break; 
+         break;
 
       case 'rocky':
          this.$store.dispatch("posts/setView", "Data");
          this.$store.dispatch("posts/setRocky");
-         break; 
+         break;
 
       case 'pacific':
          this.$store.dispatch("posts/setView", "Data");
          this.$store.dispatch("posts/setPacific");
-         break; 
+         break;
 
       case 'southwest':
          this.$store.dispatch("posts/setView", "Data");
          this.$store.dispatch("posts/setSouthwest");
-         break; 
+         break;
 
       case 'nyc':
          this.$store.dispatch("posts/setView", "Data");
          this.$store.dispatch("posts/setNYC");
-         break; 
+         break;
 
       case 'me':
          this.$store.dispatch("posts/setView", "Data");
          this.$store.dispatch("posts/setME");
-         break; 
+         break;
 
       case 'oceania':
          this.$store.dispatch("posts/setView", "Data");
          this.$store.dispatch("posts/setOceania");
-         break; 
+         break;
 
       case 'carribean':
          this.$store.dispatch("posts/setView", "Data");
          this.$store.dispatch("posts/setCarribean");
-         break;  
+         break;
 
       case 'asia':
          this.$store.dispatch("posts/setView", "Data");
          this.$store.dispatch("posts/setAsia");
-         break; 
+         break;
 
       case 'europe':
          this.$store.dispatch("posts/setView", "Data");
@@ -335,10 +337,10 @@ computed: {
 
 },
  created() {
-    
+
      this.$nuxt.$on("getCategory", (category) => this.getbyCategory(category));
      this.$nuxt.$on("changePage", (direction) => this.changePage(direction));
-  
+
    },
 async fetch({store}) {
   await store.dispatch("posts/nuxtServerInit")
@@ -562,6 +564,10 @@ ol, ul, dl {
    display: inherit !important;
 }
 
+#oki {
+  color: dimgray !important;
+  margin:20px;
+}
 
 .excel-ico {
        background-image: url("https://filesforfintech.s3.amazonaws.com/images/web+design+graphics/pngbarn.png")  !important;
@@ -597,4 +603,3 @@ display: table;
    margin-bottom: 20px;
 }
 </style>
-
