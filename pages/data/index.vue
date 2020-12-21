@@ -13,44 +13,44 @@
     <table class="table-striped" width="100%">
         <tbody class="table-t">
           <th>
-          <strong><span class="mdi mdi-calendar"></span>
+          <strong><span id="oki" class="mdi mdi-calendar"></span>
             <h3>Date</h3></strong>
           </th>
           <th>
-            <strong><span class="mdi mdi-format-title"></span>
+            <strong><span id="oki" class="mdi mdi-format-title"></span>
               <h3>Title</h3></strong>
           </th>
           <th>
-          <strong><span class="mdi mdi-tag"></span>
+          <strong><span id="oki" class="mdi mdi-tag"></span>
             <h3>Next Raise</h3></strong>
           </th>
           <th>
-            <strong><span class="mdi mdi-cash-usd-outline"></span>
+            <strong><span id="oki" class="mdi mdi-cash-usd-outline"></span>
               <h3>Exp. Amount</h3></strong>
           </th>
           <th>
-            <strong><span class="mdi mdi-calendar-clock"></span>
+            <strong><span id="oki" class="mdi mdi-calendar-clock"></span>
               <h3>Exp. Timing</h3></strong>
           </th>
           <th colspan="2">
-            <strong><span class="mdi mdi-shape-outline"></span>
+            <strong><span id="oki" class="mdi mdi-shape-outline"></span>
               <h3>Categories</h3>
             </strong>
           </th>
           <th>
-            <strong><span class="mdi mdi-city"></span>
+            <strong><span id="oki" class="mdi mdi-city"></span>
               <h3>City</h3></strong>
           </th>
           <th>
-            <strong><span class="mdi mdi-earth"></span>
+            <strong><span id="oki" class="mdi mdi-earth"></span>
               <h3>Country</h3></strong>
           </th>
            <th>
-            <strong><span class="mdi mdi-earth-box"></span>
+            <strong><span id="oki" class="mdi mdi-earth-box"></span>
               <h3>Region</h3></strong>
           </th>
             <th>
-            <strong><span class="mdi mdi-account-voice"></span>
+            <strong><span id="oki" class="mdi mdi-account-voice"></span>
               <h3>Advisors</h3></strong>
           </th>
           </tbody>
