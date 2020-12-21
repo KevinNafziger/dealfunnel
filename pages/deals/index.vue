@@ -11,7 +11,8 @@
 
   <a href="https://fintechhorizonsmedia.com/fintechdeals.xlsx"
   class="" style="color:dimgray" id="myExcelIcoTag">
-  <div class="excel-ico">  </div>
+  <br>
+  <center><span id="oki" class="mdi mdi-file-excel" style="margin:20px;font-size: 34px;"></span></center><br>
   </a>
 
 
@@ -344,7 +345,10 @@ display: table;
     margin-left: auto;
     margin-right: auto;
 }
-
+#oki {
+  color: dimgray !important;
+  margin:20px;
+}
 .title {
     text-align: -webkit-center;
     margin-top: 20px;
