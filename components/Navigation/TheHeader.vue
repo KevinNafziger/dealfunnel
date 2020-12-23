@@ -167,7 +167,7 @@ export default {
    font-family: 'Lato'
  }
 
- @media screen and (min-width:900px) {
+ @media screen and (min-width:790px) {
    .burger {
      display:none !important;
    }
