@@ -1,10 +1,17 @@
 <template>
 <div class="header-container">
   <header class="the-header">
-    <TheSideNavToggle @toggle="$emit('sidenavToggle')" />
+    <Burger class="burger" />
+    <Sidebar>
+    <ul class="sidebar-panel-nav">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </Sidebar>
     <div class="navigation-items">
       <ul class="nav-list">
-        <li v-if="showLogOutBtn" class="nav-item"><nuxt-link to="/logout">Logout</nuxt-link></li>  
+        <li v-if="showLogOutBtn" class="nav-item"><nuxt-link to="/logout">Logout</nuxt-link></li>
         <li class="nav-item"><nuxt-link to="/"><span class="mdi mdi-home"></span></nuxt-link></li>
         <li class="nav-item"><nuxt-link to="/posts">Articles</nuxt-link></li>
         <li class="nav-item"><nuxt-link to="/news">News</nuxt-link></li>
@@ -28,12 +35,14 @@
 
 <script>
 import {mapState} from 'vuex';
-import TheSideNavToggle from "@/components/Navigation/TheSideNavToggle";
+import Burger from "@/components/Navigation/Burger";
+import Sidebar from '@/components/Navigation/Sidebar.vue';
 
 export default {
   name: "TheHeader",
   components: {
-    TheSideNavToggle
+    Burger,
+    Sidebar
   },
   computed: {
 
@@ -51,7 +60,7 @@ export default {
 
       else {
 
-          return false;      
+          return false;
       }
 
   },
@@ -69,10 +78,10 @@ export default {
 
     }
 
-  },  
- 
-      
-    
+  },
+
+
+
 };
 </script>
 <style>
@@ -149,4 +158,42 @@ export default {
     box-shadow: 0px 0px 5px 0px #ffffff;
     border-radius: 3px;
 }
+
+
+ .logo {
+   align-self: center;
+   color: #fff;
+   font-weight: bold;
+   font-family: 'Lato'
+ }
+
+ @media screen and (min-width:900px) {
+   .burger {
+     display:none !important;
+   }
+   .the-header {
+     place-content: center !important;
+   }
+ }
+ .the-header {
+   place-content: center !important;
+ }
+ .main-nav {
+   display: flex;
+   justify-content: space-between;
+   padding: 0.5rem 0.8rem;
+ }
+
+ ul.sidebar-panel-nav {
+   list-style-type: none;
+ }
+
+ ul.sidebar-panel-nav > li > a {
+   color: #fff;
+   text-decoration: none;
+   font-size: 1.5rem;
+   display: block;
+   padding-bottom: 0.5em;
+ }
+
 </style>
