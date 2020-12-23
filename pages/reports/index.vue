@@ -1750,7 +1750,7 @@
 
       <div class="col-report" id="myReportPdfButton">
     
-        <a href="UKcontent.pdf">
+        <a href="ukcontent.pdf">
           <span class="mdi mdi-pdf-box " ></span>
         </a>
       
@@ -1758,7 +1758,7 @@
       
       <div class="col-report" id="myViewReportLinkTag">
        
-        <a href="UK.pdf">
+        <a href="uk.pdf">
           <span class="mdi mdi-eye "></span>
         </a>
       
