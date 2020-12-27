@@ -75,6 +75,10 @@ methods: {
 
       switch(category) {
 
+       case 'All':
+           this.$store.dispatch("company/setAll");
+           break;
+
         case 'Insurtech':
            this.$store.dispatch("company/setInsur");
            break;
@@ -82,7 +86,7 @@ methods: {
             this.$store.dispatch("company/setBlock");
             break;
         case 'Lending':
-            this.$store.dispatch("company/setLend");
+            this.$store.dispatch("company/setLend", "notFromLoad" );
             break;
         case 'Payments':
             this.$store.dispatch("company/setPay");
@@ -96,22 +100,36 @@ methods: {
        switch(direction) {
 
           case 'Previous':
-             if (this.activeTab == 'US Page 2')  {
-                this.$store.dispatch("company/setUS1");
+             if (this.activeTab == 'All page 4')  {
+                this.$store.dispatch("company/setComp3");
              }
-            else {
-                this.$store.dispatch("company/setUS2");
-              }
-              break;
+            else if (this.activeTab == 'All page 3') {
+                this.$store.dispatch("company/setComp2");
+            }
+            else if (this.activeTab == 'All page 2') {
+                  this.$store.dispatch("company/setComp1");
+            }      
+            break;
+          
            case 'Next':
-             if (this.activeTab == 'US Page 1' || this.activeTab == 'US '  ) {
-                this.$store.dispatch("company/setUS2")
+             if (this.activeTab == 'All')
+             {
+                  this.$store.dispatch("company/setComp2");
+             }
+             else  if (this.activeTab == 'All page 1')
+             {
+                  this.$store.dispatch("company/setComp2");
+             }
+             else if (this.activeTab == 'All page 2') {  
+                  
+                  this.$store.dispatch("company/setComp3");
              }
             else {
-                this.$store.dispatch("company/setUS3");
-             }
+               
+               this.$store.dispatch("company/setComp4");
+            }
              break;
-       }
+            }
 
     },
 
@@ -166,8 +184,8 @@ methods: {
    },
 
    async fetch({store}) {
-
-   await store.dispatch("company/setLend");
+    
+      await store.dispatch("company/setLend", "fromLoad");
 
    },
 };

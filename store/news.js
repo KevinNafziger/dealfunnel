@@ -1196,179 +1196,305 @@ export const mutations = {
 
 	export const getters = {
       
-      loadedNews() {
+    loadedNews(state) {
         
-        return state.news.pages[0];
+      return state.pages[0];
 	  
 	  },
 
-	  payNewsFetched() {
+	  payNewsFetched(state) {
 		
-		return state.news.payments.length > 0 ;
+	    if (state.payments.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }
 	  
 	  },
 
-	  blockNewsFetched() {
+	  blockNewsFetched(state) {
 		
-		return this.state.news.blockchain.length > 0 ;
+      if (state.blockchain.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      } 
 	  
 	  },
 	  
-	  pageArryLength() {
+	  pageArryLength(state) {
 		
-		return state.news.pages.length;
+		return state.pages.length;
 	  
 	  },
 
-	  bankPostsFetched() {
+	  bankPostsFetched(state) {
 
-	  	return state.news.banking.length > 0 ;
+	    if (state.banking.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }
 	 
 	  },
 
-	  insurNewsFetched() {
+	  insurNewsFetched(state) {
 		 
-		 return state.news.insurtech.length > 0; 
+		  if (state.insurtech.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      } 
 	  
 	  },
 
 	  
-	  lendNewsFetched()  {
+	  lendNewsFetched(state)  {
 	
-		return state.news.lending.length > 0;
+		  if (state.lending.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }
 	  },
 
 	  
-	  firstNewsFetched() {
+	  firstNewsFetched(state) {
 	
-		return state.news.pages[0].length > 0;
+     if (state.pages[0].length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }  
+
 	  },
 
 
-	  mergerNewsFetched () {
-	
-		return state.news.mergers.length > 0;
+	  mergerNewsFetched (state) {
+
+      if (state.mergers.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }  
 
 	  },
 
 
-	  aiNewsFetched () {
+	  aiNewsFetched (state) {
 	
-		return state.news.AI.length > 0;
+      if (state.ai.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }  
 		
 	  },
 
 
-	  healthNewsFetched () {
+	  healthNewsFetched (state) {
 
-	     return state.news.healthtech.length > 0;
-
-	  },
-
-
-	  perNewsFetched () {
-
-	     return state.news.personalfinance.length > 0;
-
-	  },
-
-	  capitalNewsFetched () {
-
-	     return state.news.capitalmarkets.length > 0;
-
-	  },
-
-  	  realNewsFetched () {
-
-	     return state.news.realestate.length > 0;
-
-	  },
-
-	  regNewsFetched () {
-
-	     return state.news.regtech.length > 0;
+	    if (state.healthtech.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }  
 
 	  },
 
 
-	 cyberNewsFetched () {
+	  perNewsFetched (state) {
 
-	     return state.news.cyberidentity.length > 0;
+      if (state.personalfinance.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }    
+
+	  },
+
+	  capitalNewsFetched (state) {
+
+      if (state.capitalmarkets.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }    
+
+
+	  },
+
+  	  realNewsFetched (state) {
+
+
+      if (state.realestate.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }  
+
+	  },
+
+	   regNewsFetched (state) {
+
+      if (state.regtech.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      } 
 
 	  },
 
 
-	  generalNewsFetched () {
+	 cyberNewsFetched (state) {
 
-	     return state.news.general.length > 0;
-
-	  },
-
-
- 	  wealthNewsFetched () {
-
-	     return state.news.wealthtech.length > 0;
-
-	  },
-
-
-  	  openNewsFetched () {
-
-	     return state.news.openbanking.length > 0;
+	    if (state.cyberidentity.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }
 
 	  },
 
 
-  	  remitNewsFetched () {
+	  generalNewsFetched (state) {
 
-	     return state.news.remittance.length > 0;
+	    if (state.general.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }
 
 	  },
 
 
-	  neoNewsFetched () {
+ 	  wealthNewsFetched (state) {
 
-	     return state.news.neobank.length > 0;
+	    if (state.wealthtech.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }   
+
 
 	  },
 
 
-	  valNewsFetched () {
-	
-		return state.news.valuation.length > 0;
+  	openNewsFetched (state) {
+
+	    if (state.openbanking.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }
+
+
+	  },
+
+
+  	remitNewsFetched (state) {
+
+         if (state.remittance.length)
+         {
+         return true;
+         } 
+         else {
+          return false;
+         }
+
+	  },
+
+
+	  neoNewsFetched (state) {
+
+	    if (state.neobank.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }
+
+	  },
+
+
+	  valNewsFetched (state) {
+	 
+      if (state.valuation.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }
+
 	
 	  },
 
       
-      firstpage() {
+    firstpage(state) {
 	
-		return state.news.pages[0] ;
+		  return state.pages[0] ;
 	
 	  },
 	 
-	  insurNews() {
+	  insurNews(state) {
 	
-		return state.news.insurtech;
+		  return state.insurtech;
 	  },
 	 
-	  lendNews() {
+	  lendNews(state) {
 	
-		 return state.news.lending;
+		   return state.lending;
 	  },
 	  
-	  bankNews() {
+	  bankNews(state) {
 	
-		return state.news.banking;
+		   return state.banking;
 	  },	
 	  
-	  pagesArry(item) {
+	  pagesArry(state,item) {
 	
-		return state.news.pages[item];	
-	 },
+		  return state.pages[item];	
+	  },
 	
-	 activeNewsePage() {
+	 activeNewsePage(state) {
 		
-		 return state.news.numNewsPage;
+		 return state.numNewsPage;
 	 },
 	
 	 prevArryVal() {

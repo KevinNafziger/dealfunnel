@@ -1,4 +1,4 @@
-
+import allPosts from '~/static/data.json';
 export const state = () => ({
   pages: [],
   insurtech: [],
@@ -96,6 +96,7 @@ export const state = () => ({
   firstBuildLoad: true,
   firstArtLoad: true,
   firstDataLoad: true,
+  allPosts: [],
 
 })
 
@@ -435,6 +436,19 @@ export const mutations = {
 
   },
 
+   setHealth(state, data) {
+
+    state.healthtech = data; 
+
+    if (state.activeView =='Articles')
+    {
+      state.activeArtInfo = data;
+      state.activeArtTab ='HealthTech';  
+      state.firstArtLoad = false;
+    }
+
+  },
+
  setWealth(state, data) {
 
     state.wealthtech = data; 
@@ -505,13 +519,13 @@ export const mutations = {
 	{
 			state.activeBuildInfo = data;
 			state.activeBuildTab ='M&A';	
-		state.firstBuildLoad = false;
+		  state.firstBuildLoad = false;
 	}
 	else if (state.activeView =='Articles')
 	{
-		state.activeArtInfo = data;
-		state.activeArtTab ='M&A';	
-		state.firstArtLoad = false;
+		  state.activeArtInfo = data;
+		  state.activeArtTab ='M&A';	
+		  state.firstArtLoad = false;
 	}
 
  },
@@ -519,40 +533,40 @@ export const mutations = {
 
  setSpin(state, data) {
 
-	state.spinoffs = data; 
+  	state.spinoffs = data; 
 
-	if (state.activeView =='Builder') 
-	{
-			state.activeBuildInfo = data;
-			state.activeBuildTab ='Spin-offs';	
-		state.firstBuildLoad = false;
-	}
-	else if (state.activeView =='Articles')
-	{
-		state.activeArtInfo = data;
-		state.activeArtTab ='Spin-offs';	
-		state.firstArtLoad = false;
-	}
+  	if (state.activeView =='Builder') 
+  	{
+  			state.activeBuildInfo = data;
+  			state.activeBuildTab ='Spin-offs';	
+  		state.firstBuildLoad = false;
+  	}
+  	else if (state.activeView =='Articles')
+  	{
+  		state.activeArtInfo = data;
+  		state.activeArtTab ='Spin-offs';	
+  		state.firstArtLoad = false;
+  	}
 
  },
 
 
  setBoot(state, data) {
 
-	state.bootstrapped = data; 
+  	state.bootstrapped = data; 
 
-	if (state.activeView =='Builder') 
-	{
-			state.activeBuildInfo = data;
-			state.activeBuildTab ='Bootstrapped';	
-		state.firstBuildLoad = false;
-	}
-	else if (state.activeView =='Articles')
-	{
-		state.activeArtInfo = data;
-		state.activeArtTab ='Bootstrapped';	
-		state.firstArtLoad = false;
-	}
+  	if (state.activeView =='Builder') 
+  	{
+  			state.activeBuildInfo = data;
+  			state.activeBuildTab ='Bootstrapped';	
+  		state.firstBuildLoad = false;
+  	}
+  	else if (state.activeView =='Articles')
+  	{
+  		state.activeArtInfo = data;
+  		state.activeArtTab ='Bootstrapped';	
+  		state.firstArtLoad = false;
+  	}
 
  },
 
@@ -1317,10 +1331,17 @@ export const mutations = {
   	   		state.firstBuildLoad = false;  		
   	   		break;
 
-  	   	   case "Articles":
-  	   	    state.activeArtInfo = data;
+  	   	 case "Articles":
+  	   	  state.activeArtInfo = data;
   	   		state.firstArtLoad = false;  		
   	   		break;
+
+         case "Data":
+           state.activeDataInfo = data;
+           state.firstDataLoad = false;     
+           break;
+
+
   	    }
 
     },
@@ -1337,12 +1358,16 @@ export const mutations = {
 
     		state.activeArtTab = topic ;
     	}
+      else if (state.activeView  == 'Data') {
+
+        state.activeDataTab = topic ;
+      }
 
     },
 
  	set(state, posts) {
 
-		if (!state.pages.lenth > 0) {
+		if (!this.firstPostsFetched) {
 
 			state.pages.push(posts);
 		}
@@ -1360,6 +1385,12 @@ export const mutations = {
 		  	state.numArtPage = 1;
 		  	state.firstArtLoad = false; 
 		  	break;
+
+       case "Data":
+        state.activeDataInfo = state.pages[0];
+        state.DataPage = 1;
+        state.firstDataLoad = false; 
+        break;
 
 		}     
 	},
@@ -1682,7 +1713,7 @@ export const mutations = {
 
 		switch(state.activeView) {
 
-   	   	  case "Data":
+   	   case "Data":
 		     state.activeDataInfo = state.onetofive;
 		     state.activeDataTab = 'Next Raise: $1m to $5m';	
 		     state.firstDataLoad = false;
@@ -1694,7 +1725,7 @@ export const mutations = {
 
     switch(state.activeView) {
 
-          case "Data":
+      case "Data":
          state.activeDataInfo = state.fivetoten;
          state.activeDataTab = 'Next Raise: $5m to $10m';  
          state.firstDataLoad = false;
@@ -1706,7 +1737,7 @@ export const mutations = {
 
 		switch(state.activeView) {
 
-   	   	  case "Data":
+   	   case "Data":
 		     state.activeDataInfo = state.tentotwenty;
 		     state.activeDataTab = 'Next Raise: $10m to $20m';	
 		     state.firstDataLoad = false;
@@ -1718,7 +1749,7 @@ export const mutations = {
 
 		switch(state.activeView) {
 
-   	   	  case "Data":
+   	   case "Data":
 		     state.activeDataInfo = state.twentytofifty;
 		     state.activeDataTab = 'Next Raise: $20m to $50m';	
 		     state.firstDataLoad = false;
@@ -1859,7 +1890,7 @@ export const mutations = {
       }
    },
 
-  setNewenglandNoFetch(state){
+  setNewEnglandNoFetch(state){
 
     switch(state.activeView) {
 
@@ -2026,15 +2057,15 @@ export const mutations = {
 		switch(state.activeView) {
 
    	   	  case "Builder":
-		     state.activeBuildInfo = state.payments;
-		     state.activeBuildTab = 'Payments';	
-		     state.firstBuildLoad = false;
+		       state.activeBuildInfo = state.payments;
+		       state.activeBuildTab = 'Payments';	
+		       state.firstBuildLoad = false;
 		     break;	
 
 		   case "Articles":
 		   	  state.activeArtInfo = state.payments;
-			  state.activeArtTab = 'Payments';	
-			  state.firstArtLoad =false;
+			    state.activeArtTab = 'Payments';	
+			    state.firstArtLoad =false;
 			  break;
 		 }
 
@@ -2067,9 +2098,9 @@ export const mutations = {
 		      state.firstBuildLoad = false;
 		      break;
 		    case "Articles":
-		   	  state.activeArtInfo = state.healthtech;
-			  state.activeArtTab = 'HealthTech';	
-			  state.firstArtLoad =false;
+  		   	state.activeArtInfo = state.healthtech;
+  			  state.activeArtTab = 'HealthTech';	
+  			  state.firstArtLoad =false;
 			  break;
 	   }
 	},
@@ -2087,7 +2118,7 @@ export const mutations = {
 				break;
 
 			  case "Articles":
-		   	  	state.activeArtInfo = state.lending;
+		   	  state.activeArtInfo = state.lending;
 			  	state.activeArtTab = 'Banking';	
 			  	state.firstArtLoad =false;
 			  	break;
@@ -2095,8 +2126,12 @@ export const mutations = {
 	     }
 
 	 },
-	 
 
+   setAllPosts(state, posts) {
+
+      state.allPosts = posts;
+   }
+	 
  }
 
  export const actions = {
@@ -2123,13 +2158,17 @@ export const mutations = {
 
   	async setPay({ commit }) {
 
-  			if (!this.payPostsFetched) {
+  			if (!this.payPostsFetched || !this.allPostsLoaded) {
 
     	       await this.$axios.get('/posts?grouping=Payments')
              		.then(res => {
   					  commit("setPay", res.data);
   				})
   			}	
+        else if (this.allPostsLoaded) {
+
+              commit("setPay", this.postsbyGrouping('payments'));  
+        }
   			else {
 
   				commit("setPostsNoFetch");
@@ -2139,13 +2178,18 @@ export const mutations = {
 
   	async setLend({ commit }) {
 
-		   if (!this.lendPostsFetched)
+		   if (!this.lendPostsFetched || !this.allPostsLoaded)
 		   {	
   	       		await this.$axios.get('/posts?grouping=Lending')
            			.then(res => {
 					  commit("setLend", res.data);
 		         })
 			}
+      else if (this.allPostsLoaded) {
+
+              commit("setLend", this.postsbyGrouping('lending'));
+          
+      } 
 		   else
 		   {
 				commit("setLendNoFetch");
@@ -2156,13 +2200,18 @@ export const mutations = {
   	
     async setReg({ commit }) {
 
-		   if (!this.regPostsFetched)
+		   if (!this.regPostsFetched || !this.allPostsLoaded)
 		   {	
   	       		await this.$axios.get('/posts?grouping=RegTech')
            			.then(res => {
 					  commit("setReg", res.data);
 		         })
 			}
+      else if (this.allPostsLoaded) {
+
+              commit("setReg", this.postsbyGrouping('regtech'));
+          
+      } 
 		   else
 		   {
 				commit("setRegNoFetch");
@@ -2241,13 +2290,18 @@ export const mutations = {
 
   	 async setGrowth({ commit }) {
 
-  			   if (!this.growthPostsFetched)
+  			   if (!this.growthPostsFetched || !this.allPostsLoaded)
   			   {	
   	  	       		await this.$axios.get('/posts?next_round=Growth+Capital')
   	           			.then(res => {
   						  commit("setGrowth", res.data);
   			         })
   				 }
+          else if (this.allPostsLoaded) {
+
+              commit("setGrowth", this.postsbyNextRound('Growth Capital'));
+          
+          }  
   			   else
   			   {
   					commit("setGrowthNoFetch");
@@ -2284,13 +2338,18 @@ export const mutations = {
 
   		  async setAI({ commit }) {
 		    
-  		    if (!this.AIPostsFetched)
+  		    if (!this.AIPostsFetched || !this.allPostsLoaded)
   		   	{	
     	    		await this.$axios.get('/posts?grouping=AI')
              			.then(res => {
             			commit("setAI", res.data);
   			 	})
-  		   	} 
+  		   	}
+          else if (this.allPostsLoaded) {
+
+              commit("setAI", this.postsbyGrouping('ai'));
+          
+          }  
   		   	else {
   				
   				commit("setAINoFetch" );
@@ -2301,13 +2360,18 @@ export const mutations = {
 
   		  async setHealth({ commit }) {
 		    
-  		    if (!this.healthPostsFetched)
+  		    if (!this.healthPostsFetched || !this.allPostsLoaded)
   		   	{	
     	    		await this.$axios.get('/posts?grouping=HealthTech')
              			.then(res => {
             			commit("setHealth", res.data);
-  			 	})
-  		   	} 
+  			 	     });
+          }
+          else if (this.allPostsLoaded) {
+
+              commit("setHealth", this.postsbyGrouping('healthtech'));
+          
+          } 
   		   	else {
   				
   				commit("setHealthNoFetch" );
@@ -2318,14 +2382,19 @@ export const mutations = {
 
   		  async setCapital({ commit }) {
 		    
-  		    if (!this.capitalPostsFetched)
+  		    if (!this.capitalPostsFetched || !this.allPostsLoaded)
   		   	{	
     	    		await this.$axios.get('/posts?grouping=CapitalMarkets')
              			.then(res => {
             			commit("setCapital", res.data);
-  			 	})
-  		   	} 
-  		   	else {
+  			 	    });
+        }
+  		  else if (this.allPostsLoaded) {
+
+              commit("setCapital", this.postsbyGrouping('capitalmarkets'));
+          
+          } 
+  		  else {
   				
   				commit("setCapitalNoFetch" );
   		    }
@@ -2335,13 +2404,18 @@ export const mutations = {
 
   		  async setWealth({ commit }) {
 		    
-  		    if (!this.wealthPostsFetched)
+  		    if (!this.wealthPostsFetched || !this.allPostsLoaded)
   		   	{	
     	    		await this.$axios.get('/posts?grouping=WealthTech')
              			.then(res => {
             			commit("setWealth", res.data);
-  			 	})
+  			 	     });
   		   	} 
+          else if (this.allPostsLoaded) {
+
+              commit("setWealth", this.postsbyGrouping('wealthtech'));
+          
+          }
   		   	else {
   				
   				commit("setWealthNoFetch" );
@@ -2352,13 +2426,18 @@ export const mutations = {
 
   		  async setReal({ commit }) {
 		    
-  		    if (!this.realPostsFetched)
+  		    if (!this.realPostsFetched || !this.allPostsLoaded)
   		   	{	
     	    		await this.$axios.get('/posts?grouping=RealEstate')
              			.then(res => {
             			commit("setReal", res.data);
-  			 	})
-  		   	} 
+  			 	     });
+  		   	}
+          else if (this.allPostsLoaded) {
+
+              commit("setReal", this.postsbyGrouping('realestate'));
+          
+          }
   		   	else {
   				
   				commit("setRealNoFetch" );
@@ -2369,13 +2448,18 @@ export const mutations = {
 
   		  async setQ121({ commit }) {
 		    
-  		    if (!this.Q121PostsFetched)
+  		    if (!this.allPostsLoaded || !this.Q121PostsFetched)
   		   	{	
     	    		await this.$axios.get('/posts?quarter=Q121')
              			.then(res => {
             			commit("setQ121", res.data);
-  			 	})
-  		   	} 
+  			 	     });
+  		   	}
+          else if (this.allPostsLoaded) {
+
+              commit("setQ121", this.postsbyQuarter('Q121'));
+          
+          }
   		   	else {
   				
   				commit("setQ121NoFetch" );
@@ -2386,13 +2470,18 @@ export const mutations = {
 
   		  async setQ221({ commit }) {
 		    
-  		    if (!this.Q221PostsFetched)
+  		    if (!this.allPostsLoaded || !this.Q221PostsFetched)
   		   	{	
     	    		await this.$axios.get('/posts?quarter=Q221')
              			.then(res => {
             			commit("setQ221", res.data);
-  			 	})
-  		   	} 
+  			 	    });
+  		   	}
+          else if (this.allPostsLoaded) {
+
+              commit("setQ221", this.postsbyQuarter('Q221'));
+          
+          }
   		   	else {
   				
   				commit("setQ221NoFetch" );
@@ -2403,13 +2492,18 @@ export const mutations = {
 
   		  async setQ321({ commit }) {
 		    
-  		    if (!this.Q321PostsFetched)
+  		    if (!this.allPostsLoaded || !this.Q321PostsFetched)
   		   	{	
     	    		await this.$axios.get('/posts?quarter=Q321')
              			.then(res => {
             			commit("setQ321", res.data);
-  			 	})
-  		   	} 
+  			 	    });
+  		   	}
+          else if (this.allPostsLoaded) {
+
+              commit("setQ321", this.postsbyQuarter('Q321'));
+          
+          }
   		   	else {
   				
   				commit("setQ321NoFetch" );
@@ -2420,13 +2514,19 @@ export const mutations = {
 
   		  async setQ421({ commit }) {
 		    
-  		    if (!this.Q421PostsFetched)
+  		    if (!this.allPostsLoaded || !this.Q421PostsFetched)
   		   	{	
     	    		await this.$axios.get('/posts?quarter=Q421')
              			.then(res => {
             			commit("setQ421", res.data);
   			 	})
-  		   	} 
+  		   	}
+          else if (this.allPostsLoaded) {
+
+              commit("setQ421", this.postsbyQuarter('Q421'));
+          
+          }
+
   		   	else {
   				
   				commit("setQ421NoFetch" );
@@ -2437,13 +2537,20 @@ export const mutations = {
 
   		  async setQ420({ commit }) {
 		    
-  		    if (!this.Q420PostsFetched)
+  		    if (!this.allPostsLoaded || !this.Q420PostsFetched)
   		   	{	
     	    		await this.$axios.get('/posts?quarter=Q420')
              			.then(res => {
             			commit("setQ420", res.data);
   			 	})
-  		   	} 
+  		   	}
+
+          else if (this.allPostsLoaded) {
+
+              commit("setQ420", this.postsbyQuarter('Q420'));
+          
+          }
+
   		   	else {
   				
   				commit("setQ420NoFetch" );
@@ -2454,31 +2561,20 @@ export const mutations = {
 
   		  async setQ320({ commit }) {
 		    
-  		    if (!this.Q320PostsFetched)
+  		    if (!this.allPostsLoaded || !this.Q320PostsFetched)
   		   	{	
     	    		await this.$axios.get('/posts?quarter=Q320')
              			.then(res => {
             			commit("setQ320", res.data);
   			 	})
   		   	} 
-  		   	else {
-  				
-  				commit("setQ320NoFetch" );
-  		    }
-  		 
-  		  },
+          
+          else if (this.allPostsLoaded) {
 
+              commit("setQ320", this.postsbyQuarter('Q320'));
+          
+          }
 
-
-  		  async setQ320({ commit }) {
-		    
-  		    if (!this.Q320PostsFetched)
-  		   	{	
-    	    		await this.$axios.get('/posts?quarter=Q320')
-             			.then(res => {
-            			commit("setQ320", res.data);
-  			 	})
-  		   	} 
   		   	else {
   				
   				commit("setQ320NoFetch" );
@@ -2489,13 +2585,18 @@ export const mutations = {
 
   		  async set0to1({ commit }) {
 		    
-  		    if (!this.zerotoonePostsFetched)
+  		    if (!this.zerotoonePostsFetched || !this.allPostsLoaded )
   		   	{	
     	    		await this.$axios.get('/posts?amount=%240+to+%241+million')
              			.then(res => {
             			commit("set0to1", res.data);
   			 	})
   		   	} 
+          else if (this.allPostsLoaded) {
+
+              commit("set0to1", this.postsbyAmount('$0 to $1 million'));
+          
+          }
   		   	else {
   				
   				commit("set0to1NoFetch" );
@@ -2506,13 +2607,19 @@ export const mutations = {
 
   		  async set1to5({ commit }) {
 		    
-  		    if (!this.onetofivePostsFetched)
+  		    if (!this.onetofivePostsFetched || !this.allPostsLoaded)
   		   	{	
     	    		await this.$axios.get('/posts?amount=%241+million+to+%245+million')
              			.then(res => {
             			commit("set1to5", res.data);
   			 	})
-  		   	} 
+          }
+         else if (this.allPostsLoaded) {
+
+              commit("set1to5", this.postsbyAmount('$1 million to $5 million'));
+          
+          }
+  		   	
   		   	else {
   				
   				commit("set1to5NoFetch" );
@@ -2522,13 +2629,18 @@ export const mutations = {
 
         async set5to10({ commit }) {
         
-          if (!this.fivetotenPostsFetched)
+          if (!this.fivetotenPostsFetched || !this.allPostsLoaded)
           { 
               await this.$axios.get('/posts?amount=%245+million+to+%2410+million')
                   .then(res => {
                   commit("set5to10", res.data);
           })
           } 
+          else if (this.allPostsLoaded) {
+
+              commit("set5to10", this.postsbyAmount('$5 million to $10 million'));
+          
+          }
           else {
           
           commit("set5to10NoFetch" );
@@ -2539,13 +2651,18 @@ export const mutations = {
 
   		  async set10to20({ commit }) {
 		    
-  		    if (!this.tentotwentyPostsFetched)
+  		    if (!this.tentotwentyPostsFetched || !this.allPostsLoaded)
   		   	{	
     	    		await this.$axios.get('/posts?amount=%2410+million+to+%2420+million')
              			.then(res => {
             			commit("set10to20", res.data);
   			 	})
   		   	} 
+          else if (this.allPostsLoaded) {
+
+              commit("set10to20", this.postsbyAmount('$10 million to $20 million'));
+          
+          }
   		   	else {
   				
   				commit("set10to20NoFetch" );
@@ -2556,13 +2673,18 @@ export const mutations = {
 
   		  async set20to50({ commit }) {
 		    
-  		    if (!this.twentytofiftyPostsFetched)
+  		    if (!this.twentytofiftyPostsFetched || !this.allPostsLoaded)
   		   	{	
     	    		await this.$axios.get('/posts?amount=%2420+million+to+%2450+million')
              			.then(res => {
             			commit("set20to50", res.data);
   			 	})
   		   	} 
+          else if (this.allPostsLoaded) {
+
+              commit("set20to50", this.postsbyAmount('$20 million to $50 million'));
+          
+          }
   		   	else {
   				
   				commit("set20to50NoFetch" );
@@ -2572,13 +2694,18 @@ export const mutations = {
 
   		  async set50to100({ commit }) {
 		    
-  		    if (!this.fiftytohundedPostsFetched)
+  		    if (!this.fiftytohundedPostsFetched || !this.allPostsLoaded)
   		   	{	
     	    		await this.$axios.get('/posts?amount=%2450+million+to+%24100+million')
              			.then(res => {
             			commit("set50to100", res.data);
   			 	})
   		   	} 
+          else if (this.allPostsLoaded) {
+
+              commit("set50to100", this.postsbyAmount('$50 million to $100 million'));
+          
+          }
   		   	else {
   				
   				commit("set50to100NoFetch" );
@@ -2589,13 +2716,19 @@ export const mutations = {
 
   		  async set100plus({ commit }) {
 		    
-  		    if (!this.hundedplusPostsFetched)
+  		    if (!this.hundedplusPostsFetched || !this.allPostsLoaded)
   		   	{	
     	    		await this.$axios.get('/posts?amount=%24100+million+plus')
              			.then(res => {
             			commit("set100plus", res.data);
   			 	})
   		   	} 
+          else if (this.allPostsLoaded) {
+
+              commit("set100plus", this.postsbyAmount('$100 million plus'));
+          
+          }
+
   		   	else {
   				
   				commit("set100plusNoFetch" );
@@ -2605,12 +2738,17 @@ export const mutations = {
 
         async setLatin({ commit }) {
         
-          if (!this.latinPostsFetched)
+          if (!this.latinPostsFetched || !this.allPostsLoaded)
           { 
               await this.$axios.get('/posts?region=LatinAmerica')
                   .then(res => {
                   commit("setLatin", res.data);
           })
+          }
+         else if (this.allPostsLoaded) {
+
+              commit("setLatin", this.postsbyRegion('LatinAmerica'));
+          
           } 
           else {
           
@@ -2622,12 +2760,17 @@ export const mutations = {
 
         async setCanada({ commit }) {
         
-          if (!this.canadaPostsFetched)
+          if (!this.canadaPostsFetched || !this.allPostsLoaded)
           { 
               await this.$axios.get('/posts?region=Canada')
                   .then(res => {
                   commit("setCanada", res.data);
           })
+          } 
+          else if (this.allPostsLoaded) {
+
+              commit("setCanada", this.postsbyRegion('Canada'));
+          
           } 
           else {
           
@@ -2639,12 +2782,17 @@ export const mutations = {
 
         async setSouth({ commit }) {
         
-          if (!this.southPostsFetched)
+          if (!this.southPostsFetched || !this.allPostsLoaded)
           { 
               await this.$axios.get('/posts?region=South')
                   .then(res => {
                   commit("setSouth", res.data);
           })
+          } 
+         else if (this.allPostsLoaded) {
+
+              commit("setSouth", this.postsbyRegion('South'));
+          
           } 
           else {
           
@@ -2655,13 +2803,18 @@ export const mutations = {
 
         async setNewEngland({ commit }) {
         
-          if (!this.newenglandPostsFetched)
+          if (!this.newenglandPostsFetched || !this.allPostsLoaded)
           { 
               await this.$axios.get('/posts?region=NewEngland')
                   .then(res => {
                   commit("setNewEngland", res.data);
           })
-          } 
+          }
+          else if (this.allPostsLoaded) {
+
+              commit("setNewEngland", this.postsbyRegion('NewEngland'));
+          
+          }  
           else {
           
           commit("setNewEnglandNoFetch" );
@@ -2671,13 +2824,18 @@ export const mutations = {
 
         async setSoutheast({ commit }) {
         
-          if (!this.southeastPostsFetched)
+          if (!this.southeastPostsFetched || !this.allPostsLoaded)
           { 
               await this.$axios.get('/posts?region=SouthEast')
                   .then(res => {
                   commit("setSoutheast", res.data);
           })
           } 
+          else if (this.allPostsLoaded) {
+
+              commit("setSoutheast", this.postsbyRegion('SouthEast'));
+          
+          }  
           else {
           
           commit("setSoutheastNoFetch" );
@@ -2687,12 +2845,17 @@ export const mutations = {
 
         async setSocal({ commit }) {
         
-          if (!this.socalPostsFetched)
+          if (!this.socalPostsFetched || !this.allPostsLoaded)
           { 
               await this.$axios.get('/posts?region=SoCal')
                   .then(res => {
                   commit("setSocal", res.data);
           })
+          }
+          else if (this.allPostsLoaded) {
+
+              commit("setSocal", this.postsbyRegion('SoCal'));
+          
           } 
           else {
           
@@ -2703,13 +2866,18 @@ export const mutations = {
 
         async setSilicon({ commit }) {
         
-          if (!this.siliconPostsFetched)
+          if (!this.siliconPostsFetched || !this.allPostsLoaded)
           { 
               await this.$axios.get('/posts?region=SiliconValley')
                   .then(res => {
                   commit("setSilicon", res.data);
           })
-          } 
+          }
+          else if (this.allPostsLoaded) {
+
+              commit("setSilicon", this.postsbyRegion('SiliconValley'));
+          
+          }  
           else {
           
           commit("setSiliconNoFetch" );
@@ -2719,13 +2887,18 @@ export const mutations = {
 
         async setMidwest({ commit }) {
         
-          if (!this.midwestPostsFetched)
+          if (!this.midwestPostsFetched || !this.allPostsLoaded)
           { 
               await this.$axios.get('/posts?region=MidWest')
                   .then(res => {
                   commit("setMidwest", res.data);
           })
-          } 
+          }
+          else if (this.allPostsLoaded) {
+
+              commit("setMidwest", this.postsbyRegion('MidWest'));
+          
+          }   
           else {
           
           commit("setMidwestNoFetch" );
@@ -2735,12 +2908,17 @@ export const mutations = {
 
         async setMidatlantic({ commit }) {
         
-          if (!this.midatlanticPostsFetched)
+          if (!this.midatlanticPostsFetched || !this.allPostsLoaded)
           { 
               await this.$axios.get('/posts?region=MidAtlantic')
                   .then(res => {
                   commit("setMidatlantic", res.data);
           })
+          } 
+          else if (this.allPostsLoaded) {
+
+              commit("setMidatlantic", this.postsbyRegion('MidAtlantic'));
+          
           } 
           else {
           
@@ -2751,12 +2929,17 @@ export const mutations = {
 
         async setRocky({ commit }) {
         
-          if (!this.rockyPostsFetched)
+          if (!this.rockyPostsFetched || !this.allPostsLoaded)
           { 
               await this.$axios.get('/posts?region=RockyMountains')
                   .then(res => {
                   commit("setRocky", res.data);
           })
+          } 
+         else if (this.allPostsLoaded) {
+
+              commit("setRocky", this.postsbyRegion('RockyMountains'));
+          
           } 
           else {
           
@@ -2767,13 +2950,18 @@ export const mutations = {
 
         async setPacific({ commit }) {
         
-          if (!this.pacificPostsFetched)
+          if (!this.pacificPostsFetched || !this.allPostsLoaded)
           { 
               await this.$axios.get('/posts?region=PacNorthWest')
                   .then(res => {
                   commit("setPacific", res.data);
           })
           } 
+          else if (this.allPostsLoaded) {
+
+              commit("setPacific", this.postsbyRegion('PacNorthWest'));
+          
+          }
           else {
           
           commit("setPacificNoFetch" );
@@ -2782,12 +2970,17 @@ export const mutations = {
 
         async setSouthwest({ commit }) {
         
-          if (!this.southwestPostsFetched)
+          if (!this.southwestPostsFetched || !this.allPostsLoaded)
           { 
               await this.$axios.get('/posts?region=Southwest')
                   .then(res => {
                   commit("setSouthwest", res.data);
           })
+          }
+          else if (this.allPostsLoaded) {
+
+              commit("setSouthwest", this.postsbyRegion('Southwest'));
+          
           }
           else {
           
@@ -2799,13 +2992,18 @@ export const mutations = {
 
         async setNYC({ commit }) {
         
-          if (!this.nycPostsFetched)
+          if (!this.nycPostsFetched || !this.allPostsLoaded)
           { 
               await this.$axios.get('/posts?region=SiliconAlleyNYC')
                   .then(res => {
                   commit("setNYC", res.data);
           })
-          } 
+          }
+          else if (this.allPostsLoaded) {
+
+              commit("setNYC", this.postsbyRegion('SiliconAlleyNYC'));
+          
+          }
           else {
           
           commit("setNYCNoFetch" );
@@ -2815,13 +3013,18 @@ export const mutations = {
 
         async setME({ commit }) {
         
-          if (!this.mePostsFetched)
+          if (!this.mePostsFetched || !this.allPostsLoaded)
           { 
               await this.$axios.get('/posts?region=MiddleEast')
                   .then(res => {
                   commit("setME", res.data);
           })
-          } 
+          }
+          else if (this.allPostsLoaded) {
+
+              commit("setME", this.postsbyRegion('MiddleEast'));
+          
+          }
           else {
           
           commit("setMENoFetch" );
@@ -2832,13 +3035,18 @@ export const mutations = {
   		  
         async setOceania({ commit }) {
         
-          if (!this.oceaniaPostsFetched)
+          if (!this.oceaniaPostsFetched || !this.allPostsLoaded)
           { 
               await this.$axios.get('/posts?region=Oceania')
                   .then(res => {
                   commit("setOceania", res.data);
           })
           } 
+          else if (this.allPostsLoaded) {
+
+              commit("setOceania", this.postsbyRegion('Oceania'));
+          
+          }
           else {
           
           commit("setOceaniaNoFetch" );
@@ -2849,13 +3057,18 @@ export const mutations = {
 
         async setCarribean({ commit }) {
         
-        if (!this.carribeanPostsFetched)
+        if (!this.carribeanPostsFetched || !this.allPostsLoaded)
         { 
             await this.$axios.get('/posts?region=Caribbean')
                 .then(res => {
                 commit("setCarribean", res.data);
         })
         } 
+        else if (this.allPostsLoaded) {
+
+              commit("setCarribean", this.postsbyRegion('Caribbean'));
+          
+          }
         else {
         
         commit("setCarribeanNoFetch" );
@@ -2866,13 +3079,18 @@ export const mutations = {
 
         async setAsia({ commit }) {
         
-          if (!this.asiaPostsFetched)
+          if (!this.asiaPostsFetched || !this.allPostsLoaded)
           { 
               await this.$axios.get('/posts?region=Asia')
                   .then(res => {
                   commit("setAsia", res.data);
           })
           } 
+          else if (this.allPostsLoaded) {
+
+              commit("setAsia", this.postsbyRegion('Asia'));
+          
+          }
           else {
           
           commit("setAsiaNoFetch" );
@@ -2883,13 +3101,18 @@ export const mutations = {
 
         async setEurope({ commit }) {
         
-          if (!this.europePostsFetched)
+          if (!this.europePostsFetched || !this.allPostsLoaded)
           { 
               await this.$axios.get('/posts?region=Europe')
                   .then(res => {
                   commit("setEurope", res.data);
           })
           } 
+          else if (this.allPostsLoaded) {
+
+              commit("setEurope", this.postsbyRegion('Europe'));
+          
+          }
           else {
           
           commit("setEuropeNoFetch" );
@@ -2900,13 +3123,18 @@ export const mutations = {
 
         async setAfrica({ commit }) {
         
-          if (!this.africaPostsFetched)
+          if (!this.africaPostsFetched || !this.allPostsLoaded)
           { 
               await this.$axios.get('/posts?region=Africa')
                   .then(res => {
                   commit("setAfrica", res.data);
           })
-          } 
+          }
+          else if (this.allPostsLoaded) {
+
+              commit("setAfrica", this.postsbyRegion('Africa'));
+          
+          }
           else {
           
           commit("setAfricaNoFetch" );
@@ -2959,19 +3187,22 @@ export const mutations = {
           		commit("setLast");
   		 },	
 
-  		 nuxtServerInit(vuexContext, context) {
+  		 async nuxtServerInit(vuexContext, context) {
 		   
-  		   if (!this.firstPostFetched) { 
-
-                return this.$axios.$get("/posts?page=1")
+         if (!this.firstPostsFetched)
+         {
+             await this.$axios.$get("/posts?page=1")
                 .then(data => {
                   vuexContext.commit("set", data);
                 })
-  		   }
-  		   else {
-  			  vuexContext.commit("set");
-  		   }
-	    },   
+  		 
+          }
+        else {
+
+            vuexContext.commit("setLast");
+        }
+
+       },
 
 	     setView({commit}, view) {
 
@@ -2981,20 +3212,21 @@ export const mutations = {
 
        async setBlockPrevious({ commit }, page ) {
   
-       commit("setBlockPrevious");
+          commit("setBlockPrevious");
        
        },
 
        async setBlockNext( {commit}, page) {
 
-       var temp = page;
-       temp++ ;
+        var temp = page;
+        temp++ ;
 
         await this.$axios.get('/posts?blk=' + temp)
                 .then( res => {
           commit("setBlockNext", res.data)    
          })               
-     },  
+    
+       },  
        
 
        async setBankPrevious({ commit }, page ) {
@@ -3023,14 +3255,20 @@ export const mutations = {
 
        async setInsurNext( {commit}, page) {
 
-      var temp = page;
-      temp++ ;
-        
-      await this.$axios.get('/posts?ins=' + temp)
-                .then( res => {
-          commit("setInsurNext", res.data)    
-         })               
-      },   
+          var temp = page;
+          temp++ ;
+            
+          await this.$axios.get('/posts?ins=' + temp)
+                    .then( res => {
+              commit("setInsurNext", res.data)    
+             })               
+          },   
+
+        async setAllPosts ( {commit}) {
+
+           commit("setAllPosts", allPosts); 
+
+        }
        
 
 	}  
@@ -3039,353 +3277,754 @@ export const mutations = {
       
       loadedPosts(state) {
         
-        return state.posts.pages[0];
+        return state.pages[0];
 	  
 	  },
 
-	  payPostsFetched() {
+	  payPostsFetched(state) {
+
+		  if (state.payments.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }
 		
-		return state.posts.payments.length > 0 ;
 	  
 	  },
 
-	  blockPostsFetched() {
+	  blockPostsFetched(state) {
 		
-		return this.state.blockchain.length > 0 ;
+		  if (state.blockchain.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }
 	  
 	  },
 	  
-	  pageArryLength() {
-		
-		return state.posts.pages.length;
+	  pageArryLength(state) {
+	
+      if (state.pages.length)	
+		  {
+        return state.pages.length;
+      }
+      else
+      {
+        return 0;
+      }  
 	  
 	  },
 
-	  bankPostsFetched() {
+	  bankPostsFetched(state) {
 
-	  	return state.posts.banking.length > 0 ;
+      if (state.banking.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }
 	 
 	  },
 
 
-	  AIPostsFetched() {
+	  AIPostsFetched(state) {
 
-	  	return state.posts.AI.length > 0 ;
+	  	if (state.AI.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }
 	 
 	  },
 
 
-	  insurPostsFetched() {
+	  insurPostsFetched(state) {
 		 
-		 return state.posts.insurtech.length > 0; 
+      if (state.insurtech.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }
 	  
 	  },
 	  
 
-	  lendPostsFetched()  {
+	  lendPostsFetched(state)  {
 	
-		return state.posts.lending.length > 0;
+	    if (state.lending.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }
+
 	  },
 	  
 
-	  regPostsFetched()  {
+	  regPostsFetched(state)  {
 	
-		return state.posts.regtech.length > 0;
+      if (state.regtech.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }
+
 	  },
 
-	  healthPostsFetched()  {
+	  healthPostsFetched(state)  {
 	
-		return state.posts.healthtech.length > 0;
+     if (state.healthtech.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }
+
+
 	  },
 
-	  firstPostsFetched() {
+	  firstPostsFetched(state) {
+
+      if (state.pages[0].length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }
+
+    },
+
+	  wealthPostsFetched(state) {
 	
-		return state.posts.pages[0].length > 0;
+		  if (state.wealthtech.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }
+
 	  },
 
-	  wealthPostsFetched() {
+	  advisorPostsFetched(state) {
+
+	    if (state.advisors.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }
+
+	  },
+
+	  capitalPostsFetched(state) {
 	
-		return state.posts.wealthtech.length > 0;
+      if (state.capitalmarkets.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      } 
+
+
 	  },
 
-	  advisorPostsFetched() {
-
-	    return state.posts.advisors.length > 0;
-	  },
-
-	  capitalPostsFetched() {
+	  realPostsFetched(state) {
 	
-		return state.posts.capitalmarkets.length > 0;
+		  if (state.realestate.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }
+	  
+    },
+
+	  valPostsFetched(state) {
+	
+		  if (state.valuation.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }
 	  },
 
-	  realPostsFetched() {
+	  mergerPostsFetched(state) {
 	
-		return state.posts.realestate.length > 0;
-	  },
-
-	  valPostsFetched() {
-	
-		return state.posts.valuation.length > 0;
-	  },
-
-	  mergerPostsFetched() {
-	
-		return state.posts.mergers.length > 0;
-	  },
+		 if (state.mergers.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }
+	  
+    },
       
 
-      spinPostsFetched() {
+    spinPostsFetched(state) {
 	
-		return state.posts.spinoffs.length > 0;
+		  if (state.spinoffs.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }
+
+	  },
+
+     first(state) {
+  
+      if (state.firstArtLoad == true)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }
+
+    },
+
+
+	  bootPostsFetched(state) {
+	
+		return state.bootstrapped.length > 0;
 	  },
 
 
-	  bootPostsFetched() {
+	  growthPostsFetched(state) {
 	
-		return state.posts.bootstrapped.length > 0;
-	  },
+	    if (state.growthequity.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }
 
-
-	  growthPostsFetched() {
-	
-		return state.posts.growthequity.length > 0;
-	  },
+    },
       
       
-    firstpage() {
+    firstpage(state) {
 	
-		  return state.posts.pages[0] ;
+		  return state.pages[0] ;
 	
 	  },
 	 
-	  insurPosts() {
+	  insurPosts(state) {
 	
-		  return state.posts.insurtech;
+		  return state.insurtech;
 	  },
 	 
-	  lendPosts() {
+	  lendPosts(state) {
 	
-		 return state.posts.lending;
+		 return state.lending;
 	  
     },
 	  
-	  bankPosts() {
+	  bankPosts(state) {
 	
-		return state.posts.banking;
+		return state.banking;
 	  },	
 	  
-	  pagesArry(item) {
+	  pagesArry(state,item) {
 	
-		return state.posts.pages[item];	
+		return state.pages[item];	
 	 },
 	
-	 activeArtPage() {
+	 activeArtPage(state) {
 		
-		 return state.posts.numArtPage;
-	 },
-	 activeBuildPage() {
-
-	 	 return state.posts.numBuildPage;
+		 return state.numArtPage;
 	 },
 
-	 activeView() {
+	 activeBuildPage(state) {
 
-	 	 return state.posts.activeView;
+	 	 return state.numBuildPage;
+	 },
+
+	 activeView(state) {
+
+	 	 return state.activeView;
 
 	 },
 
-	 Q320PostsFetched() {
+	 Q320PostsFetched(state) {
 
-	 	return state.posts.Q320.length > 0;
+	 	 if (state.Q320.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }
 	 },
 
-	 Q420PostsFetched() {
+	 Q420PostsFetched(state) {
 
-	 	return state.posts.Q420.length > 0;
+      if (state.Q420.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }
+
 	 },
 	 
-	  Q121PostsFetched() {
+	  Q121PostsFetched(state) {
 
-	 	return state.posts.Q121.length > 0;
+	    if (state.Q121.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }
+
+
 	 },
 	 
-	  Q221PostsFetched() {
+	  Q221PostsFetched(state) {
 
-	 	return state.posts.Q221.length > 0;
+      if (state.Q221.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }
+	 	
 	 },
 	 
-	  Q321PostsFetched() {
+	 Q321PostsFetched(state) {
 
-	 	return state.posts.Q321.length > 0;
+	    if (state.Q321.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }
+
 	 },
 	 
-	 Q421PostsFetched() {
+	 Q421PostsFetched(state) {
 
-	 	return state.posts.Q421.length > 0;
+	 	  if (state.Q421.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }
 	 },
 
-	 zerotoonePostsFetched() {
+	 zerotoonePostsFetched(state) {
 
-	 	return state.posts.zerotoone.length > 0;
+	 	  if (state.zerotoone.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }
 
 	 },
 
-	 onetofivePostsFetched() {
+	 onetofivePostsFetched(state) {
 
-	 	return state.posts.onetofive.length > 0;
+	 	  if (state.onetofive.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }
 
 	 },
 
-  fivetotenPostsFetched() {
+  fivetotenPostsFetched(state) {
 
-    return state.posts.fivetoten.length > 0;
+      if (state.fivetoten.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }
 
    },
 
-	 tentotwentyPostsFetched() {
+	 tentotwentyPostsFetched(state) {
 
-	 	return state.posts.tentotwenty.length > 0;
-
-	 },
-
-	 twentytofiftyPostsFetched() {
-
-	 	return state.posts.twentytofifty.length > 0;
-
-	 },
-
-	 fiftytohundredPostsFetched() {
-
-	 	return state.posts.fiftytohundred.length > 0;
+      if (state.tentotwenty.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }
 
 	 },
 
-	 hundredplusPostsFetched() {
+	 twentytofiftyPostsFetched(state) {
 
-	 	return state.posts.hundredplus.length > 0;
+      if (state.twentytofifty.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }
+
+	 },
+
+	 fiftytohundredPostsFetched(state) {
+
+      if (state.fiftytohundred.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }
+
+	 },
+
+	 hundredplusPostsFetched(state) {
+
+	   if (state.hundredplus.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }
 
 	 },
 
 
-   latinPostsFetched() {
+   latinPostsFetched(state) {
 
-    return state.posts.latin.length > 0;
+      if (state.latin.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }
    
    },
 
-   europePostsFetched() {
+   europePostsFetched(state) {
 
-    return state.posts.europe.length > 0;
+      if (state.europe.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }
    
    },
 
-   canadaPostsFetched() {
+   canadaPostsFetched(state) {
 
-     return state.posts.canada.length > 0;
-
-   },
-
-  nycPostsFetched() {
-
-     return state.posts.nyc.length > 0;
-
-   },
-
-   southPostsFetched () {
-
-    return state.posts.south.length > 0;
-
-   },
-
-   southwestPostsFetched () {
-
-    return state.posts.southwest.length > 0;
-
-   },
-
-   southeastPostsFetched () {
-
-     return state.posts.southeast.length > 0;
-
-   },
-
-   midwestPostsFetched () {
-
-    return state.posts.MidWest.length > 0;
+     if (state.canada.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }
 
 
    },
 
-   carribeanPostsFetched () {
+  nycPostsFetched(state) {
 
-    return state.posts.carribean.length > 0;
-
-   },
-
-   africaPostsFetched () {
-
-    return state.posts.africa.length > 0;
-
-   },
-
-   midwestPostsFetched () {
-
-    return state.posts.midwest.length > 0;
+      if (state.nyc.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }
+     
 
    },
 
-   asiaPostsFetched () {
+   southPostsFetched (state) {
 
-    return state.posts.asia.length > 0;
-
-   },
-   oceaniaPostsFetched () {
-
-     return state.posts.oceania.length > 0;
-
-   },
-   mePostsFetched () {
-
-    return state.posts.mideast.length > 0;
+      if (state.south.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      } 
 
    },
 
-   rockyPostsFetched () {
+   southwestPostsFetched (state) {
 
-    return state.posts.rocky.length > 0;
-
-   },
-
-   pacificPostsFetched() {
-
-    return state.posts.pacific.length > 0;
-
-   },
-
-  socalPostsFetched() {
-
-    return state.posts.socal.length > 0;
+      if (state.southwest.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }
 
    },
 
-  siliconPostsFetched() {
+   southeastPostsFetched (state) {
 
-    return state.posts.silicon.length > 0;
+      if (state.southeast.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }
+
 
    },
 
-  newenglandPostsFetched() {
+   midwestPostsFetched (state) {
 
-    return state.posts.newengland.length > 0;
+     if (state.midwest.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }
+
 
    },
 
-  midatlanticPostsFetched() {
+   carribeanPostsFetched (state) {
 
-    return state.posts.midatlantic.length > 0;
+     if (state.carribean.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      } 
+
+   },
+
+   africaPostsFetched (state) {
+
+     if (state.africa.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }
+
+   },
+
+
+
+   asiaPostsFetched (state) {
+
+      if (state.asia.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }
+
+   },
+
+
+   oceaniaPostsFetched (state) {
+
+     if (state.oceania.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }
+
+   },
+
+   mePostsFetched (state) {
+
+      if (state.mideast.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }
+
+   },
+
+   rockyPostsFetched (state) {
+
+      if (state.rocky.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }
+
+   },
+
+   pacificPostsFetched(state) {
+
+    if (state.pacific.length)
+    {
+      return true;
+    } 
+    else {
+      return false;
+    }
+
+   },
+
+  socalPostsFetched(state) {
+
+    if (state.socal.length)
+    {
+      return true;
+    } 
+    else {
+      return false;
+    }
+
+
+   },
+
+  siliconPostsFetched(state) {
+
+    if (state.silicon.length)
+    {
+      return true;
+    } 
+    else {
+      return false;
+    }
+
+   },
+
+  newenglandPostsFetched(state) {
+
+    if (state.newengland.length)
+    {
+      return true;
+    } 
+    else {
+      return false;
+    }
+
+
+   },
+
+  midatlanticPostsFetched(state) {
+
+    if (state.midatlantic.length)
+    {
+      return true;
+    } 
+    else {
+      return false;
+    }
 
    },
  
+  allPostsLoaded(state) {
+
+    if (state.allPosts.length) {
+      return true;
+    }
+    else {
+      return false;
+    }
+  
+  },
+
+  totalAllPosts(state) {
+
+
+    if (this.allPostsLoaded) {
+      return state.allPosts.length;
+    }
+    else {
+      return 0;
+    }
+
+  },
+
+  postsbyQuarter: (state, quarter ) => {
+
+    return state.allPosts.filter(function(elem, quarter) {
+          return elem.quarter == quarter ;
+          });
+
+  },  
+
+  postsbyRegion: (state, region ) => {
+
+    return state.allPosts.filter(function(elem, region) {
+          return elem.region == region ;
+          });
+
+   },
+
+  postsbyAmount: (state, amount ) => {
+
+    return state.allPosts.filter(function(elem, amount) {
+          return elem.amount == amount ;
+          });
+
+   },
+
+   postsbyNextRound: (state, next_round ) => {
+
+    return state.allPosts.filter(function(elem, next_round) {
+          return elem.next_round == next_round ;
+          });
+
+   }, 
+
+  postsbyGrouping: (state, grouping ) => {
+
+    return state.allPosts.filter(function(elem, amount) {
+          return (elem.grouping1.toLowerCase() == grouping || elem.grouping2.toLowerCase() == grouping)
+          });
+
+   },    
+  
+
 	
 	 prevArryVal() {
 

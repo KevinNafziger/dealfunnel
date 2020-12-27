@@ -10,13 +10,14 @@
       <br><br>
     </div>
     <div class="tag-search-div">
+      <a href="#" v-show="showAllBtn" v-on:click="showGrouping('All')" class="tagbtn">all</a>  
       <a href="#" v-on:click="showGrouping('Payments')" class="tagbtn">payments</a>
       <a href="#" v-on:click="showGrouping('Insurtech')"  class="tagbtn">insurtech</a>
       <a href="#" v-on:click="showGrouping('Lending')"   class="tagbtn">lending</a>
       <a href="#" v-on:click="showGrouping('Banking')"   class="tagbtn">banking</a>
       <a href="#" v-on:click="showGrouping('Blockchain')" class="tagbtn">blockchain</a>
-      <a href="#" v-show="showPreviousBtn" class="tagbtn" v-on:click="changePage('Previous')">Prev (US)</a>
-      <a href="#" v-show="showNextBtn" class="tagbtn" v-on:click="changePage('Next')" >Next (US)</a>
+      <a href="#" v-show="showPreviousBtn" class="tagbtn" v-on:click="changePage('Previous')">Prev</a>
+      <a href="#" v-show="showNextBtn" class="tagbtn" v-on:click="changePage('Next')" >Next</a>
       </div>
     </div>
 
@@ -52,9 +53,10 @@ export default {
   computed: {
   ...mapState({
       activeTab: state => state.company.activeTab,
+      allCompanies: state => state.company.allCompanies,
    }),
     showPreviousBtn() {
-        if (this.activeTab == 'US Page 2' || this.activeTab =='US Page 3')
+        if (this.activeTab == 'All page 4' || this.activeTab =='All page 3' || this.activeTab =='All page 2')
         {
            return true;
         }
@@ -65,7 +67,7 @@ export default {
      },
      showNextBtn() {
 
-        if (this.activeTab == 'US' || this.activeTab == 'US Page 1'  || this.activeTab == 'US Page 2')
+        if (this.activeTab == 'All' || this.activeTab == 'All page 1'  || this.activeTab == 'All page 2' || this.activeTab == 'All page 3')
         {
            return true;
         }
@@ -73,6 +75,17 @@ export default {
         {
            return false;
         }
+     },
+
+     showAllBtn() { 
+
+        if (this.allCompanies.length) {
+          return true;
+        }
+        else {
+          return false;
+        }
+
      }
    },
 };

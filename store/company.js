@@ -1,3 +1,4 @@
+import allCompanies from '~/static/company.json';
 export const state = () => ({
 	
   insurtech: [],
@@ -13,15 +14,41 @@ export const state = () => ({
   US2: [],
   US3: [],
   US: [],
+  company1: [],
+  company2: [],
+  company3: [],
+  company4: [],
   activeCompany: [],
   activeInfo: [],
   activeTab: 'Lending',
   activeSegment: 'Country',
   firstLoad: true,
+  allCompanies: [],
+  activePage: 1,
 
 })
 
 export const mutations = {
+
+   setAllCompanies(state, items) {
+
+      state.allCompanies = items;
+   },
+
+   setAll(state) {
+
+    var lastItem =  state.allCompanies.length;
+    lastItem--;
+    state.company1 = state.allCompanies.slice(0, 500);
+    state.company2 = state.allCompanies.slice(500,1000);
+    state.company3 = state.allCompanies.slice(1000,1500);
+    state.company4 = state.allCompanies.slice(1500,lastItem);
+    state.activeInfo = state.allCompanies.slice(0, 500);  
+    state.activeTab = "All page 1";
+    state.firstLoad = false;
+    state.activePage = 1;
+
+   },
 
 
    setCompany(state, item) {
@@ -43,10 +70,10 @@ export const mutations = {
 
    setBlock(state, data){
 
-  	state.blockchain = data;
-  	state.activeInfo = data;
-    state.activeTab = 'Blockchain';
-    state.firstLoad =false;
+  	 state.blockchain = data;
+  	 state.activeInfo = data;
+     state.activeTab = 'Blockchain';
+     state.firstLoad =false;
     
     },
 
@@ -65,7 +92,7 @@ export const mutations = {
 
   	 state.lending = data;
      state.activeInfo = data;
-     state.activTab = 'Lending';	
+     state.activeTab = 'Lending';	
      state.firstLoad =false;
   	 
     },
@@ -138,6 +165,54 @@ export const mutations = {
 	  state.firstLoad = false;
 
 	 },
+
+	 setUS1(state, data) {
+
+	  state.activeInfo = data;
+	  state.US1 = data;
+	  state.activeTab ='US Page 1';	
+	  state.firstLoad = false;
+	 
+	 },
+
+	setComp2(state) {
+
+	  state.activeInfo = state.allCompanies.slice(500,1000);
+	  state.activeTab ='All page 2';
+	  state.activePage =2;	
+	  state.firstLoad = false;
+	 
+	 },
+
+	setComp3(state) {
+
+	  state.activeInfo = state.allCompanies.slice(1000, 1500);
+	  state.activeTab ='All page 3';
+	  state.activePage =3;	
+	  state.firstLoad = false;
+	 
+	 },
+
+	 setComp4(state) {
+
+	  var lastItem =  state.allCompanies.length;
+      lastItem--;	
+	  state.activeInfo = state.allCompanies.slice(1500, lastItem);
+	  state.activeTab ='All page 4';	
+	  state.firstLoad = false;
+	  state.activePage =4;	
+	 
+	 },
+
+	 setComp1(state) {
+
+	  state.activeInfo = state.allCompanies.slice(0, 500);
+	  state.activeTab ='All page 1';	
+	  state.firstLoad = false;
+	  state.activePage =1 ;	
+	 
+	 },
+
 
 	 setUS1(state, data) {
 
@@ -263,17 +338,16 @@ export const mutations = {
   		 
   		   },
 
-  		   async setLend({ commit }) {
+  		   async setLend({ commit }, origin) {
 
-			   if (!this.lendFetched){
+			   if (!this.pastInit) {
 
 	  	       		await this.$axios.get('/companies?category=lending')
 	           			.then(res => {
 						  commit("setLend", res.data);
 			         })
 				}
-			    
-			    else {
+			   else if (origin =="notFromLoad")  {	
 
 					commit("setLendNoFetch");
 			    }
@@ -316,6 +390,28 @@ export const mutations = {
 			       }
 
  		    },
+
+
+           async setComp2({ commit }) {
+
+				commit("setComp2" );
+		   },
+
+		   async setComp3({ commit }) {
+
+				commit("setComp3" );
+		   },
+
+	      async setComp4({ commit }) {
+
+				commit("setComp4" );
+		   },
+		   
+
+           async setComp1({ commit }) {
+
+				commit("setComp1" );
+		   },
 
 
            async setUS1({ commit }) {
@@ -388,6 +484,12 @@ export const mutations = {
       	 
       	    },
 
+      	   async setAllCompanies ( {commit}) {
+
+           		commit("setAllCompanies", allCompanies); 
+
+           },
+
 
   		    async submitSearch( {commit}, topic) {
 			
@@ -397,6 +499,13 @@ export const mutations = {
       	
       	 	   })
   		    },	
+
+  		    async setAll( {commit}) {
+			
+          		commit("setAll");
+
+  		    },	
+
 
 
   		    nuxtServerInit(vuexContext, context) {
@@ -421,76 +530,122 @@ export const mutations = {
 	  },
 
 
-	  payFetched() {
+	  payFetched(state) {
 		
-		return state.company.payments.length > 0 ;
-	  
+	    if (state.payments.length)
+        {
+         return true;
+        } 
+        else {
+        return false;
+        } 
 	  },
 
 
-	  blockFetched() {
+	  blockFetched(state) {
 		
-		return state.company.blockchain.length > 0 ;
-	  
+		  if (state.blockchain.length)
+	      {
+	        return true;
+	      } 
+	      else {
+	        return false;
+	      } 	
+
 	  },
 
 	  
-	  bankFetched() {
+	  bankFetched(state) {
 
-	  	return state.company.banking.length > 0 ;
+		  if (state.banking.length)
+	      {
+	        return true;
+	      } 
+	      else {
+	        return false;
+	      } 
 	 
 	  },
 
 
 	  insurFetched(state) {
 		 
-		 return state.insurtech.length > 0; 
+	  	if (state.insurtech.length)
+      	{
+        return true;
+      	} 
+      	else {
+        return false;
+      	} 
+
 	  
 	  },
 
 	  
-	  lendFetched()  {
+	  lendFetched(state)  {
 	
-		return state.company.lending.length > 0;
+	  	if (state.lending.length)
+      	{
+        	return true;
+      	} 
+      	else {
+        	return false;
+      	} 
+
+
 	  },
 
 	  
-	  firstTime() {
-	
-		return state.company.firstLoad == true;
+	  pastInit(state) {
+
+
+		  if (state.firstLoad)
+	      {
+	        return false;
+	      } 
+	      else {
+	        return true;
+	      } 
+
 
 	  },
 
 
-	  firstCompaniesFetched() {
+	  firstCompaniesFetched(state) {
 	
-		return state.company.US.length > 0;
+		   if (state.US.length)
+	      {
+	        return true;
+	      } 
+	      else {
+	        return false;
+	      } 
 
 	  },
 
       
-      firstPage() {
+      firstPage(state) {
 	
-		return state.company.US ;
+		return state.US ;
 	
 	  },
 
 	 
-	  insurtech() {
+	  insurtech(state) {
 	
-		return state.company.insurtech;
+		return state.insurtech;
 	  },
 
 	 
-	  lending() {
+	  lending(state) {
 	
-		 return state.company.lending;
+		 return state.lending;
 	  },
 
 	  
-	  banking() {
+	  banking(state) {
 	
-		return state.company.banking;
+		return state.banking;
 	 
 	  },
 
@@ -502,30 +657,79 @@ export const mutations = {
 	  },	
 
 
-	  US1Fetched() {
+	  US1Fetched(state) {
 
-	  	 return state.company.US1.length > 0; 	
+	  	 if (state.US1.length)
+	      {
+	        return true;
+	      } 
+	      else {
+	        return false;
+	 	 }	
 
 	  },
 
 
-	  US2Fetched() {
+	  US2Fetched(state) {
 
-	  	 return state.company.US2.length > 0; 	
+	  if (state.US2.length)
+	      {
+	        return true;
+	      } 
+	      else {
+	        return false;
+	 	 }
+
+
 	  },
 
 
 
-	  US3Fetched() {
+	  US3Fetched(state) {
 
-	  	 return state.company.US3.length > 0; 	
+	  	 if (state.US3.ength)
+	      {
+	        return true;
+	      } 
+	      else {
+	        return false;
+	 	 }
+	   	
 	  },
 
 
-	  USFetched() {
+	  USFetched(state) {
 
-	  	 return state.company.US.length > 0; 	
-	  },
+	 	 if (state.US.length)
+	      {
+	        return true;
+	      } 
+	      else {
+	        return false;
+	 	 }
+	 },
 
+   allCompaniesFetched(state) {
+
+    if (state.allCompanies.length) {
+      return true;
+    }
+    else {
+      return false;
+    }
+  
+  },
+
+  totalAllCompanies(state) {
+
+
+    if (this.allCompaniesFetched) {
+      return state.allCompanies.length;
+    }
+    else {
+      return 0;
+    }
+
+  }
 
 }

@@ -66,7 +66,7 @@ export default {
 
          case 'Previous':
             var page = this.bnkPage;
-              this.$store.dispatch("posts/setView", "Articles");
+            this.$store.dispatch("posts/setView", "Articles");
             this.$store.dispatch("posts/setBankPrevious", page);
             break;
 
@@ -271,12 +271,9 @@ export default {
 
   async fetch({store}) {
 
-    if (this.first) {
-
        store.dispatch("posts/setView", "Articles");
        await store.dispatch("posts/nuxtServerInit");
     
-    }
   },
 
 }

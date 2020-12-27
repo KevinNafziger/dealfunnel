@@ -4,11 +4,11 @@
      <div class="title">
         <div class="content">
           <br>
-           <h2>Deals</h2>
+           <h2>Deals   <i style="font-size: 13px; text-align:right; margin-left:3px;">{{ filterMessage}} </i></h2>
         </div>
      </div>
   </div>
-
+<DealTempSearch></DealTempSearch>
   <a href="https://fintechhorizonsmedia.com/fintechdeals.xlsx"
   class="" style="color:dimgray" id="myExcelIcoTag">
   <br>
@@ -35,11 +35,11 @@
           </th>
           <th>
             <strong><span id="oki" class="mdi mdi-account-star"></span>
-              <h3>Price</h3></strong>
+              <h3>Price<a  @click="sortPrice"><i class="fa fa-angle-down white-text">^</i></a></h3></strong>
           </th>
           <th>
             <strong><span id="oki" class="mdi mdi-account-multiple-plus"></span>
-              <h3>City</h3></strong>
+              <h3>Category</h3></strong>
           </th>
            <th>
             <strong><span id="oki"  class="mdi mdi-earth"></span><h3>Country</h3></strong>
@@ -47,32 +47,32 @@
         </thead>
 
 <tbody class="table-scroll">
-    <tr style="margin-top:20px;" v-for="deal in deals">
+    <tr style="margin-top:20px;" v-for="mydeal in mydeals">
 
         <td class="datetag">
-            {{deal.announce }}
+            {{mydeal.announce }}
         </td>
         <td >
 
         <div id="myCompanyTag" >
-        <a :href="deal.sellurl" target="_blank">
-        {{deal.sellname }}</a>
+        <a :href="mydeal.sellurl" target="_blank">
+        {{mydeal.sellname }}</a>
         </div>
         </td>
         <td>
-            <div class="valuebtn">{{deal.buyname }}</div>
+            <div class="valuebtn">{{mydeal.buyname }}</div>
         </td>
         <td>
-           {{ deal.price}}
+           {{ mydeal.price}}
         </td>
          <td class="participating-td">
-{{ deal.sellgroup1}}/{{ deal.sellgroup2}}
+{{ mydeal.sellgroup1}}/{{ mydeal.sellgroup2}}
         </td>
         <td>
-          {{ deal.city}}
+          {{ mydeal.city}}
         </td>
         <td>
-          {{ deal.sellcountry}}
+          {{ mydeal.sellcountry}}
         </td>
       </tr>
 
@@ -82,8 +82,146 @@
   </div>
 </template>
 <script>
+import {mapState} from 'vuex';
+import DealTempSearch from '@/components/Deals/DealTempSearch';
 export default {
   layout: 'raises',
+
+  data () {
+      return {
+      sortBy: "",
+     }
+    },
+
+  methods: {
+
+    getbyCategory: function(category) {
+
+      var filteredDeals = [];
+
+      if (this.first == true) {
+          this.$store.commit("deals/initDeals", this.deals);
+      }
+
+      switch(category) {
+
+        case 'Insurtech':
+           filteredDeals = this.deals.filter(function(elem) {
+              return (elem.sellgroup1.toLowerCase() == 
+                'insurtech' || elem.sellgroup2.toLowerCase() == 'Insurtech')
+                });
+
+           this.$store.dispatch("deals/setInsur", filteredDeals);
+           break;
+        case 'Blockchain':
+            filteredDeals = this.deals.filter(function(elem) {
+              return (elem.sellgroup1.toLowerCase() == 
+                'blockchain' || elem.sellgroup2.toLowerCase() == 'blockchain')
+                });
+
+            this.$store.dispatch("deals/setBlock", filteredDeals);
+            break;
+        case 'Lending':
+            filteredDeals = this.deals.filter(function(elem) {
+              return (elem.sellgroup1.toLowerCase()  == 
+                'lending' || elem.sellgroup2.toLowerCase()  == 'lending')
+              });
+
+            this.$store.dispatch("deals/setLend", filteredDeals);
+            break;
+        case 'Payments':
+            filteredDeals = this.deals.filter(function(elem) {
+                return (elem.sellgroup1.toLowerCase()  == 
+                  'payments' || elem.sellgroup2.toLowerCase()  == 'Payments')
+                });
+
+            this.$store.dispatch("deals/setPay", filteredDeals);
+            break;
+        case 'All':
+            this.$store.dispatch("deals/setAll");
+            break;
+
+        }
+    },
+
+    sortPrice() {
+
+        var newDeals = [];
+        
+
+         newDeals = this.mydeals.sort((a,b) => {
+           if(Math.round(b.inmillions*100) > Math.round(a.inmillions*100)) {
+             return 1;
+           }
+           else {
+             return -1 ;
+           }
+          }) ;
+
+         this.sortBy = "Price"; 
+         this.$store.dispatch("deals/setActiveTab", this.activeTab );
+         this.$store.dispatch("deals/reorderInfo", newDeals); 
+
+       },
+
+
+    submitSearch(topic) {
+
+     if (this.first == true) {
+          this.$store.commit("deals/initDeals", this.deals);
+      }
+
+
+      this.$store.dispatch("deals/setSearchTab", topic);
+      this.$store.dispatch("deals/submitSearch", topic);
+      
+    }
+
+  },
+   computed: {
+  ...mapState({
+      first: state => state.deals.first,
+      activeDeals: state => state.deals.activeInfo,
+      activeTab: state => state.deals.activeTab,
+   }),
+
+   filterMessage() {
+
+      if (this.sortBy=='') { 
+        return this.activeTab;
+      }
+      else {
+        return this.activeTab + " sorted by " + this.sortBy;
+      }  
+    },
+    
+    mydeals() {
+    
+       if (this.first) {
+
+        return this.deals;
+
+       }
+       else {
+
+        return this.activeDeals;
+
+       }
+
+
+     }
+
+
+},
+
+   created() {
+
+     this.$nuxt.$on("getCategory", (category) => this.getbyCategory(category));
+     this.$nuxt.$on("submitSearch", (topic) => this.submitSearch(topic));
+
+   },
+
+
   asyncData(context) {
     return context.app.$axios.$get('/deals')
       .then(item => {

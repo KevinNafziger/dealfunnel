@@ -19,6 +19,15 @@ export const mutations = {
     state.firstRaiseLoad = false;
 
   },
+
+
+  reorderInfo(state, items) {
+
+    state.activeRaiseInfo = items;
+    state.firstRaiseLoad = false;
+  },
+
+
   
   setTab(state, tab) {
 
@@ -84,12 +93,7 @@ export const mutations = {
 
    },
 
-   setSearchTab(state, topic) {
-
-      state.activeRaiseTab = topic ;
-
-   },
-
+  
 }
 
 
@@ -117,14 +121,20 @@ export const mutations = {
  
      async setInsur({ commit }) {
 
-      if (!this.insurRaisesFetched) {
+      if (!this.allRaisesFetched || !this.insurRaisesFetched) {
 
-        await this.$axios.get('/raises?report=insurtech')
+              await this.$axios.get('/raises?report=insurtech')
                 .then(res => {  
         
-        commit("setInsur", res.data);
-        })    
+              commit("setInsur", res.data);
+               })    
       }
+
+     else if (this.allRaisesFetched) {
+
+          commit("setInsur", this.raisesbyTopic('insurtech'));
+      }
+
       else
       {
         commit("setInsurNoFetch");
@@ -134,13 +144,19 @@ export const mutations = {
 
      async setBlock({ commit }) {
 
-      if (!this.blockRaisesFetched) {
+      if (!this.allRaisesFetched || !this.blockRaisesFetched) {
          
         await this.$axios.get('/raises?report=blockchain')
                 .then(res => {      
           commit("setBlock", res.data);
           })    
        }
+
+      else if (this.allRaisesFetched) {
+
+          commit("setBlock", this.raisesbyTopic('blockchain'));
+       }
+
        else
       {
         commit("setBlockNoFetch");
@@ -150,13 +166,19 @@ export const mutations = {
 
      async setPay({ commit }) {
 
-       if (!this.payRaisesFetched) {
+       if (!this.allRaisesFetched|| !this.payRaisesFetched) {
 
          await this.$axios.get('/raises?report=payments')
                 .then(res => {      
           commit("setPay", res.data);
           })  
        } 
+
+       else if (this.allRaisesFetched) {
+
+          commit("setPay", this.raisesbyTopic('payments'));
+       }
+
        else  
        {
           commit("setPayNoFtech");
@@ -180,16 +202,30 @@ export const mutations = {
              })
     },
 
+    async reorderInfo( {commit}, data) {
+      
+         commit("reorderInfo", data);
+        
+     },
+
+
 
       async setLend({ commit }, data) {
 
-       if (!this.lendRaisesFetched) {  
+       if (!this.allRaisesFetched || !this.lendRaisesFetched) {  
           
           await this.$axios.get('/raises?report=lending')
                 .then(res => {      
-          commit("setPay", res.data);
+          commit("setLend", res.data);
           })  
         }
+
+       else if(this.allRaisesFetched) {
+
+          commit("setLend", this.raisesbyTopic('lending'));
+
+       } 
+
        else
        {
         commit("setLendNoFetch");
@@ -202,34 +238,82 @@ export const mutations = {
 
   export const getters = {
 
-    firstRaiseFetched() {
+    firstRaiseFetched(state) {
   
         return state.raise.firstRaiseLoad == true;
 
       },
 
-    payRaisesFetched() {
+    payRaisesFetched(state) {
     
-        return state.raise.payments.length > 0 ;
+      if (state.payments.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }
+    },
+
+    blockRaisesFetched(state) {
+    
+      if (state.blockchain.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }
+
+
+    },
+    
+  
+    insurRaisesFetched(state) {
+     
+      if (state.insurtech.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      } 
+    
+    },
+    
+    lendRaisesFetched(state)  {
+  
+     if (state.lending.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }
     
     },
 
-    blockRaisesFetched() {
-    
-        return state.raise.blockchain.length > 0 ;
-    },
-    
+
+    allRaisesFetched(state)  {
   
-    insurRaisesFetched() {
-     
-      return state.raise.insurtech.length > 0; 
+     if (state.allRaises.length)
+      {
+        return true;
+      } 
+      else {
+        return false;
+      }
     
     },
-    
-    lendRaisesFetched()  {
+
+   raisesbyTopic: (state, topic ) => {
+
+          return state.allRaises.filter(function(elem,topic) {
+                return (elem.group1.toLowerCase()  == 
+                  topic || elem.group2.toLowerCase()  == topic)
+                });
+
+          }  
   
-      return state.raise.lending.length > 0;
-    
-    },  
       
- }
+    }

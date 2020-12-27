@@ -126,9 +126,11 @@ computed: {
 
    }),
    },
+   
 async fetch({store}) {
   store.dispatch("posts/nuxtServerInit")
   store.dispatch("posts/setAllPosts")
+  store.dispatch("company/setAllCompanies")
 },
 
 }

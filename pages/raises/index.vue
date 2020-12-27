@@ -41,7 +41,7 @@
 
       <th>
         <strong><span id="oki" class="mdi oki mdi-cash-usd-outline"></span>
-          <h3>Amount</h3></strong>
+          <h3><a  @click="sortPrice">Amount<i class="fa fa-angle-down white-text">^</i></a></h3></strong>
       </th>
 
       <th>
@@ -117,6 +117,12 @@
 
     layout: 'raises',
 
+     data () {
+      return {
+      sortBy: "",
+     }
+    },
+
     methods: {
 
       getbyCategory(category) {
@@ -124,27 +130,55 @@
         switch(category) {
 
           case 'Insurtech':
+             this.sortBy = ""; 
              this.$store.dispatch("raise/setInsur");
              this.$store.dispatch("raise/setActiveTab", "Insurtech");
              break;
           case 'Blockchain':
+             this.sortBy = ""; 
              this.$store.dispatch("raise/setBlock");
              this.$store.dispatch("raise/setActiveTab", "Blockchain");
              break;
           case 'Lending':
+             this.sortBy = ""; 
              this.$store.dispatch("raise/setLend");
              this.$store.dispatch("raise/setActiveTab", "Lending");
              break;
           case 'Payments':
+             this.sortBy = ""; 
              this.$store.dispatch("raise/setPay");
              this.$store.dispatch("raise/setActiveTab", "Payments");
              break;
           case 'All':
+             this.sortBy = ""; 
              this.$store.dispatch("raise/setActiveTab", "All");
              this.$store.dispatch("raise/setRaiseInfo", this.allRaises);
              break;
           }
       },
+
+    
+      sortPrice() {
+
+        var newRaises = [];
+        
+
+         newRaises = this.raises.sort((a,b) => {
+           if(Math.round(b.inmillions*100) > Math.round(a.inmillions*100)) {
+             return 1;
+           }
+           else {
+             return -1 ;
+           }
+          }) ;
+
+         this.sortBy = "highest Amount"; 
+         this.$store.dispatch("raise/setActiveTab", this.activeTab );
+         this.$store.dispatch("raise/reorderInfo", newRaises); 
+
+       },
+
+
 
       submitSearch(topic) {
 
@@ -165,7 +199,16 @@
       }),
 
       filterMessage() {
+
+         if (this.sortBy =='' ) {
+         
          return this.activeTab;
+         }
+         else {
+
+         return this.activeTab + ' sorted by ' + this.sortBy; 
+
+         }
        }
 
     },

@@ -97,6 +97,8 @@
 import {mapState} from 'vuex';
 import DataTempSearch from '@/components/Data/DataTempSearch';
 export default {
+
+ 
 computed: {
   ...mapState({
           starter: state => state.posts.pages[0],
@@ -122,26 +124,29 @@ computed: {
    },
 
    filterMessage() {
+     
 
-        if (this.firstDataLoad) {
+          if (this.firstDataLoad) {
 
-          return 'All'
-        }
-       if (this.activeTab == 'Page') {
+            return 'All'
+          }
+          else if (this.activeTab == 'Page') {
 
-          return this.activeTab + ' ' + this.page;
-        }
-        else {
+            return this.activeTab + ' ' + this.page;
+          }
+          else {
 
-          return this.activeTab;
-        }
-
+            return this.activeTab;
+          }
       }
- },
+    
+},
 
  methods: {
 
    getbyCategory(category) {
+
+    this.sortBy =='';
 
     switch(category) {
 
@@ -310,6 +315,16 @@ computed: {
    },
 
 
+    submitSearch(topic) {
+
+      this.$store.dispatch("posts/setView", "Data");
+      this.$store.dispatch("posts/submitSearch", topic);
+      this.$store.dispatch("posts/setSearchTab", topic);
+
+   },
+
+
+
    changePage: function(direction) {
 
        switch(direction) {
@@ -327,6 +342,7 @@ computed: {
              break;
 
           case 'Last':
+              this.$store.dispatch("posts/setSearchTab", 'All');
             this.$store.dispatch("posts/setView", "Data");
             this.$store.dispatch("posts/goLast");
            break;
@@ -340,6 +356,7 @@ computed: {
 
      this.$nuxt.$on("getCategory", (category) => this.getbyCategory(category));
      this.$nuxt.$on("changePage", (direction) => this.changePage(direction));
+      this.$nuxt.$on("submitSearch", (topic) => this.submitSearch(topic));
 
    },
 async fetch({store}) {
