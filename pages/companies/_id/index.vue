@@ -287,9 +287,17 @@ import {mapState} from 'vuex';
  
 
     item() {
+        if (this.allCompanies.length) {
 
-        return this.items.find(p => p.id == this.$route.params.id)
+           return this.allCompanies.find(p => p.id == this.$route.params.id)
         }
+        
+        else
+        {
+           return this.items.find(p => p.id == this.$route.params.id)
+
+        }
+    {}
  },
  async asyncData({params, $axios })
  {
