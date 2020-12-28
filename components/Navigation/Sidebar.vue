@@ -47,7 +47,7 @@
     }
 
     .sidebar-panel {
-        overflow-y: auto;
+        overflow-y: none;
         background-color: #4F81BD ;
         position: fixed;
         left: 0;

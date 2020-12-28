@@ -4,9 +4,15 @@
     <Burger class="burger" />
     <Sidebar>
     <ul class="sidebar-panel-nav">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li class="nav-item"><nuxt-link to="/"><span class="mdi mdi-home"></span></nuxt-link></li>
+      <li class="nav-item"><nuxt-link to="/posts">Articles</nuxt-link></li>
+      <li class="nav-item"><nuxt-link to="/news">News</nuxt-link></li>
+      <li class="nav-item"><nuxt-link to="/reports">Reports</nuxt-link></li>
+      <li class="nav-item"><nuxt-link to="/builder">Builder</nuxt-link></li>
+      <li class="nav-item"><nuxt-link to="/raises">Raises</nuxt-link></li>
+      <li class="nav-item"><nuxt-link to="/companies">Companies</nuxt-link></li>
+      <li class="nav-item"><nuxt-link to="/data">Data</nuxt-link></li>
+      <li class="nav-item"><nuxt-link to="/deals">Deals</nuxt-link></li>
     </ul>
   </Sidebar>
     <div class="navigation-items">
