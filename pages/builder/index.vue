@@ -30,23 +30,34 @@
             <h2> Your Report </h2>
 
            <div class="builder-btns" >
-            <button v-show="this.showModal" v-on:click="toggleModal()" class="gardient-button b-lr-s">
-              <span class="mdi mdi-file-eye"></span>
+             <tippy to="externalTrigger">
+         Click to close view
+     </tippy>
+            <button  v-show="this.showModal" v-on:click="toggleModal()" class="gardient-button b-lr-s">
+              <span name="externalTrigger" class="mdi mdi-file-eye"></span>
             Close View
             </button>
           <br><br><br>
-          </div>
+
+
+  </div>
 
           <postsys :posts="items" :board="this.myboard" v-show="this.showModal">
           </postsys>
 
           <Board v-show="!this.showModal" :posts="posts" id="board-right" >
             <div class="builder-btns">
-              <button v-on:click="toggleModal()" class="gardient-button b-lr-s">
+              <tippy to="Openview">
+              Open PDf Preview
+              </tippy>
+              <button name="Openview" v-on:click="toggleModal()" class="gardient-button b-lr-s">
               <span class="mdi mdi-file-eye"></span>
               View
               </button>
-              <button v-on:click="generateReport()" class="gardient-button b-lr-s">
+              <tippy to="getPdf">
+              Download pdf
+              </tippy>
+              <button name="getPdf" v-on:click="generateReport()" class="gardient-button b-lr-s">
               <span class="mdi mdi-pdf-box"></span>
               PDF
               </button>
@@ -69,12 +80,16 @@ import Card from '@/components/Draggable/Card';
 import postsys from '@/components/Builder/Postsys';
 import Searchbar from '@/components/Builder/Searchbar';
 import draggable from 'vuedraggable';
+import { tippy } from "vue-tippy";
 import Vuetify from 'vuetify';
+import VueTippy, { TippyComponent } from "vue-tippy";
 import {mapState, mapMutations} from 'vuex';
 Vue.component('Card', Card);
 Vue.component('Board', Board);
+Vue.component("tippy", TippyComponent);
 
 Vue.use(Vuetify);
+Vue.use(VueTippy);
 
 export default {
   name: 'app',
