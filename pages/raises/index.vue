@@ -134,26 +134,31 @@
              this.$store.dispatch("raise/setInsur");
              this.$store.dispatch("raise/setActiveTab", "Insurtech");
              break;
+
           case 'Blockchain':
              this.sortBy = ""; 
              this.$store.dispatch("raise/setBlock");
              this.$store.dispatch("raise/setActiveTab", "Blockchain");
              break;
+
           case 'Lending':
              this.sortBy = ""; 
              this.$store.dispatch("raise/setLend");
              this.$store.dispatch("raise/setActiveTab", "Lending");
              break;
+
           case 'Payments':
              this.sortBy = ""; 
              this.$store.dispatch("raise/setPay");
              this.$store.dispatch("raise/setActiveTab", "Payments");
              break;
+
           case 'All':
              this.sortBy = ""; 
              this.$store.dispatch("raise/setActiveTab", "All");
              this.$store.dispatch("raise/setRaiseInfo", this.allRaises);
              break;
+             
           }
       },
 

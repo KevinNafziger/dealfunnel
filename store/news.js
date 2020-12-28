@@ -716,11 +716,11 @@ export const mutations = {
 
 	 setValNoFetch(state) {
 
-		state.activeNewsInfo = state.valuation;
-		state.activeNewsTab ='Valuation';	
-		state.firstNewsLoad =false;
+  		state.activeNewsInfo = state.valuation;
+  		state.activeNewsTab ='Valuation';	
+  		state.firstNewsLoad = false;
 
-	 },
+	   },
 	 
  }
 
@@ -761,17 +761,17 @@ export const mutations = {
 
   		 async setPay({ commit }) {
 
-			if (!this.payNewsFetched)
-			{
-  	       		await this.$axios.get('/links?pay=1')
-           		.then(res => {
-					  commit("setPay", res.data);
-				})
-			}	
-			else	
-			{
-				commit("setPayNoFetch");
-			}	
+    			if (!this.payNewsFetched)
+    			{
+      	       		await this.$axios.get('/links?pay=1')
+               		.then(res => {
+    					  commit("setPay", res.data);
+    				})
+    			}	
+    			else	
+    			{
+    				commit("setPayNoFetch");
+    			}	
   		 
   		 },
 
