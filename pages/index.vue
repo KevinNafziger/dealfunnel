@@ -114,6 +114,15 @@ DealFunnel datasets on Fintech capital raises, M&A, articles and companies can b
 </div>
 </template>
 <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E4W12WNDD6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-E4W12WNDD6');
+</script>
 <script>
 
 import {mapState, mapMutations} from 'vuex';
@@ -126,7 +135,7 @@ computed: {
 
    }),
    },
-   
+
 async fetch({store}) {
   store.dispatch("posts/nuxtServerInit")
   store.dispatch("posts/setAllPosts")
