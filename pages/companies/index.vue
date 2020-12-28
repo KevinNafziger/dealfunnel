@@ -159,7 +159,8 @@ methods: {
    filterMessage() {
 
         return this.activeTab;
-    },
+    }
+
 },
 
   //watch: {

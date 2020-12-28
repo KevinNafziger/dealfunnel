@@ -687,7 +687,7 @@ export const mutations = {
 
 	  US3Fetched(state) {
 
-	  	 if (state.US3.ength)
+	  	 if (state.US3.length)
 	      {
 	        return true;
 	      } 
@@ -723,7 +723,7 @@ export const mutations = {
   totalAllCompanies(state) {
 
 
-    if (this.allCompaniesFetched) {
+    if (state.all.Companies.length) {
       return state.allCompanies.length;
     }
     else {
