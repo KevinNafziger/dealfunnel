@@ -2,8 +2,10 @@
  <div>
   <div class="search-bar-div">
     <div class="search-div">
-      <input type="text"  name="term" id="term"  v-model="searchMessage" style="margin-right: 10px" width="100%" class="text-field w-input w-col w-col-8" placeholder="search  content">
-        <button class="gardient-button" id="section-10" v-on:click="submitSearch(searchMessage)"  style="margin-left:1px;margin-top:5px;margin-bottom:10px" >
+      <input  content="Type your search text"
+  v-tippy="{ placement : 'bottom' }" type="text"  name="term" id="term"  v-model="searchMessage" style="margin-right: 10px" width="100%" class="text-field w-input w-col w-col-8" placeholder="search  content">
+        <button  content="Click to search!"
+    v-tippy="{ placement : 'bottom' }" class="gardient-button" id="section-10" v-on:click="submitSearch(searchMessage)"  style="margin-left:1px;margin-top:5px;margin-bottom:10px" >
         <span class="mdi mdi-file-search"></span>
       </button>
       <br><br>
@@ -16,7 +18,7 @@
       <a href="#" v-on:click="showGrouping('Lending')"   class="tagbtn">lending</a>
       <a href="#" v-on:click="showGrouping('Banking')"   class="tagbtn">banking</a>
       <a href="#" v-on:click="showGrouping('Blockchain')" class="tagbtn">blockchain</a>
-      <a href="#" v-show="showPreviousBtn" class="tagbtn" 
+      <a href="#" v-show="showPreviousBtn" class="tagbtn"
 
       v-on:click="changePage('Previous')">Prev</a>
       <a href="#" v-show="showNextBtn" class="tagbtn" v-on:click="changePage('Next')" >Next</a>
@@ -24,7 +26,7 @@
       <a href="#" v-show="showPrevInsBtn" class="tagbtn"  v-on:click="changeInsur('Previous')">Prev</a>
       <a href="#" v-show="showNextInsBtn" class="tagbtn" v-on:click="changeInsur('Next')">Next</a>
 
-      
+
       <a href="#" v-show="showPrevBnkBtn" class="tagbtn"  v-on:click="changeBank('Previous')">Prev</a>
       <a href="#" v-show="showNextBnkBtn" class="tagbtn" v-on:click="changeBank('Next')">Next</a>
 
@@ -45,6 +47,7 @@
 import {mapState} from 'vuex';
 import 'vuetify/dist/vuetify.min.css';
 import Vuetify from 'vuetify';
+import VueTippy, { TippyComponent } from "vue-tippy";
 export default {
   name: 'Searchbar',
   data () {
