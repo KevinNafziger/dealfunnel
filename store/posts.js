@@ -235,7 +235,7 @@ export const mutations = {
     else if (state.activeView =='Builder') {
 
        var temp = state.blkBuildPage;
-        temp++;     
+       temp++;     
        state.blkBuildPage++ ;
        state.activeBuildInfo = data;
        state.activeBuildTab = 'Blockchain';
@@ -293,16 +293,16 @@ export const mutations = {
        state.firstBuildLoad = false;
 
         if (temp == 2) {
-          state.activeBuildInfo= state.block2;
+          state.activeBuildInfo = state.block2;
         }
         else if (temp == 3)  {
-          state.activeBuildInfo= state.block3; 
+          state.activeBuildInfo = state.block3; 
         }
         else if (temp == 4) {
-          state.activeBuildInfo= state.block4;
+          state.activeBuildInfo = state.block4;
         }
         else if (temp ==5) {
-          state.activeBuildInfo= state.block5;  
+          state.activeBuildInfo = state.block5;  
         }
      }
     
@@ -322,19 +322,19 @@ export const mutations = {
         state.firstArtLoad = false;
       
         if (temp == 2) {
-            state.activeArtInfo= state.insur2;
+            state.activeArtInfo = state.insur2;
         }
 
         else if (temp == 3)  {
-            state.activeArtInfo= state.insur3;
+            state.activeArtInfo = state.insur3;
         }
 
         else if (temp == 4) {
-            state.activeArtInfo= state.insur4;  
+            state.activeArtInfo = state.insur4;  
         }
 
         else if (temp ==5) {
-           state.activeArtInfo= state.insur5;
+           state.activeArtInfo = state.insur5;
         }
     }
   
@@ -373,7 +373,8 @@ export const mutations = {
        state.firstArtLoad = false;
        state.activeArtTab = 'Banking';
     }
-   else if (state.activeView =='Builder')  {
+
+    else if (state.activeView =='Builder')  {
 
        var temp = state.bnkBuildPage;
        temp++ ;
@@ -381,22 +382,23 @@ export const mutations = {
        state.activeBuildInfo = data;
        state.firstBuildLoad = false;
        state.activeBuildTab = 'Banking';
-    }
+    
+     }
 
-    if (temp == 2) {
-         state.bank2 =data;
-       }
-    else if (temp == 3) {
-           state.bank3 =  data;
-      }
-    else if (temp == 4) {
-           state.bank4 =  data;  
-      }
-    else if (temp ==5) {
-           state.bank5= data;  
-      }
+      if (temp == 2) {
+           state.bank2 =data;
+         }
+      else if (temp == 3) {
+             state.bank3 =  data;
+        }
+      else if (temp == 4) {
+             state.bank4 =  data;  
+        }
+      else if (temp ==5) {
+             state.bank5= data;  
+        }
 
-   },
+    },
 
 
 
@@ -414,18 +416,19 @@ export const mutations = {
 
          state.activeArtInfo = state.insur1;
        }
-      else if (temp == 2) {
-           
+      
+      else if (temp == 2) { 
           state.activeArtInfo = state.insur2;
       }
+      
       else if (temp == 3) {
-
          state.activeArtInfo = state.insur3;
       }
-      else if (temp == 4) {
-           
+
+      else if (temp == 4) { 
           state.activeArtInfo = state.insur4; 
       }
+
    }
 
    else if (state.activeView =='Builder') {
@@ -436,23 +439,25 @@ export const mutations = {
        state.activeBuildTab = 'Insurtech';
        state.firstBuildLoad = false;
 
-       if (temp == 1) {
+         if (temp == 1) {
 
-           state.activeBuildInfo = state.insur1;
-         }
-       else if (temp == 2) {
-             
-             state.activeBuildInfo = state.insur2;
-        }
-        else if (temp == 3) {
+             state.activeBuildInfo = state.insur1;
+           }
+         else if (temp == 2) {
+               
+               state.activeBuildInfo = state.insur2;
+          }
 
-          state.activeBuildInfo = state.insur3;
-        }
-        else if (temp ==4) {
-             
-             state.activeBuildInfo = state.insur4; 
-        }
-   }
+          else if (temp == 3) {
+
+            state.activeBuildInfo = state.insur3;
+          }
+
+          else if (temp ==4) {
+               
+               state.activeBuildInfo = state.insur4; 
+          }
+      }
 
    },
 
@@ -461,69 +466,70 @@ export const mutations = {
 
       if (state.activeView =='Articles') { 
 
-       var temp = state.blkArtPage;
+         var temp = state.blkArtPage;
+         temp--;
+         state.blkArtPage-- ;
+         state.activeArtTab = 'Blockchain';
+         state.firstArtLoad = false;
+
+           if (temp == 1) {
+              state.activeArtInfo = state.block1;
+           }
+
+           else if (temp == 2) { 
+              state.activeArtInfo = state.block2;
+           }
+
+           else if (temp == 3)  {   
+              state.activeArtInfo = state.block3;
+           }
+
+           else if (temp == 4) {   
+              state.activeArtInfo = state.block4;
+           }
+
+           else if (temp == 5) {
+              
+              state.activeArtInfo = state.block5;  
+           }
+       
+      }
+
+      else if (state.activeView =='Builder') { 
+
+       var temp = state.blkBuildPage;
        temp--;
-       state.blkArtPage-- ;
-       state.activeArtTab = 'Blockchain';
-       state.firstArtLoad = false;
+       state.blkBuildPage-- ;
+       state.activeBuildTab = 'Blockchain';
+       state.firstBuildLoad = false;
 
        if (temp == 1) {
-          state.activeArtInfo = state.block1;
+          state.activeBuildInfo = state.block1;
        }
 
-       else if (temp == 2) { 
-          state.activeArtInfo = state.block2;
+       else if (temp == 2) {
+           state.activeBuildInfo = state.block2;
        }
 
-       else if (temp == 3)  {   
-          state.activeArtInfo = state.block3;
+       else if (temp == 3)  {  
+          state.activeBuildInfo = state.block3;
        }
 
-       else if (temp == 4) {   
-          state.activeArtInfo = state.block4;
+       else if (temp == 4) {
+          state.activeBuildInfo = state.block4;
        }
 
        else if (temp == 5) {
-          
-          state.activeArtInfo = state.block5;  
+          state.activeBuildInfo = state.block5;  
        }
        
     }
 
-    else if (state.activeView =='Builder') { 
 
-     var temp = state.blkBuildPage;
-     temp--;
-     state.blkBuildPage-- ;
-     state.activeBuildTab = 'Blockchain';
-     state.firstBuildLoad = false;
-
-     if (temp == 1) {
-        state.activeBuildInfo = state.block1;
-     }
-
-     else if (temp == 2) {
-         state.activeBuildInfo = state.block2;
-     }
-
-     else if (temp == 3)  {  
-        state.activeBuildInfo = state.block3;
-     }
-
-     else if (temp == 4) {
-        state.activeBuildInfo = state.block4;
-     }
-
-     else if (temp == 5) {
-        state.activeBuildInfo = state.block5;  
-     }
-     
-  }
-
-
-},
+   },
 
    setBankPrevious(state) {
+
      if (state.activeView =='Articles') { 
 
       var temp = state.bnkArtPage;
@@ -536,29 +542,30 @@ export const mutations = {
        
           state.activeArtInfo = state.bank1;
         }
+
         else if (temp == 2) {
-    
           state.activeArtInfo = state.bank2;
         }
 
         else if (temp == 3) {
-
           state.activeArtInfo = state.bank3;
         }
 
     }
+    
     else if (state.activeView =='Builder') { 
 
       var temp = state.bnkBuildPage;
       temp--;
-       state.bnkBuildPage-- ;
-       state.firstBuildLoad = false;
-       state.activeBuildTab = 'Banking';
+      state.bnkBuildPage-- ;
+      state.firstBuildLoad = false;
+      state.activeBuildTab = 'Banking';
 
-        if (temp == 1) {
+       if (temp == 1) {
          
          state.activeBuildInfo = state.bank1;
         }
+
         else if (temp == 2) {
       
           state.activeBuildInfo = state.bank2;
@@ -569,7 +576,7 @@ export const mutations = {
           state.activeBuildInfo = state.bank3;
        }
 
-    }
+     }
 
    },
 
@@ -617,8 +624,8 @@ export const mutations = {
    		state.activeBuildTab ='WealthTech';	
     	state.firstBuildLoad = false;
     }
-    else if (state.activeView =='Articles')
-    {
+    else if (state.activeView =='Articles') {
+
     	state.activeArtInfo = data;
     	state.activeArtTab ='WealthTech';	
     	state.firstArtLoad = false;
@@ -637,8 +644,9 @@ export const mutations = {
    		state.activeBuildTab ='Growth Equity';	
     	state.firstBuildLoad = false;
     }
-    else if (state.activeView =='Articles')
-    {
+
+    else if (state.activeView =='Articles') {
+
     	state.activeArtInfo = data;
     	state.activeArtTab ='Growth Equity';	
     	state.firstArtLoad = false;
@@ -672,14 +680,15 @@ export const mutations = {
 	state.mergers = data; 
 
 
-	if (state.activeView =='Builder') 
-	{
+	if (state.activeView =='Builder') {
+
 			state.activeBuildInfo = data;
 			state.activeBuildTab ='M&A';	
 		  state.firstBuildLoad = false;
 	}
-	else if (state.activeView =='Articles')
-	{
+
+	else if (state.activeView =='Articles') {
+
 		  state.activeArtInfo = data;
 		  state.activeArtTab ='M&A';	
 		  state.firstArtLoad = false;
@@ -687,19 +696,18 @@ export const mutations = {
 
  },
 
-
  setSpin(state, data) {
 
   	state.spinoffs = data; 
 
-  	if (state.activeView =='Builder') 
-  	{
+  	if (state.activeView =='Builder') {
+
   			state.activeBuildInfo = data;
   			state.activeBuildTab ='Spin-offs';	
-  		state.firstBuildLoad = false;
+  		  state.firstBuildLoad = false;
   	}
-  	else if (state.activeView =='Articles')
-  	{
+  	else if (state.activeView =='Articles') {
+
   		state.activeArtInfo = data;
   		state.activeArtTab ='Spin-offs';	
   		state.firstArtLoad = false;
@@ -712,18 +720,21 @@ export const mutations = {
 
   	state.bootstrapped = data; 
 
-  	if (state.activeView =='Builder') 
-  	{
-  			state.activeBuildInfo = data;
-  			state.activeBuildTab ='Bootstrapped';	
+  	if (state.activeView =='Builder') {
+
+  		state.activeBuildInfo = data;
+  		state.activeBuildTab ='Bootstrapped';	
   		state.firstBuildLoad = false;
-  	}
-  	else if (state.activeView =='Articles')
-  	{
+  	
+    }
+
+  	else if (state.activeView =='Articles') {
+
   		state.activeArtInfo = data;
   		state.activeArtTab ='Bootstrapped';	
   		state.firstArtLoad = false;
-  	}
+  	
+     }
 
  },
 
@@ -731,15 +742,15 @@ export const mutations = {
 
     state.realestate = data; 
 
+    if (state.activeView =='Builder') {
 
-    if (state.activeView =='Builder') 
-    {
    		state.activeBuildInfo = data;
    		state.activeBuildTab ='RealEstate';	
     	state.firstBuildLoad = false;
     }
-    else if (state.activeView =='Articles')
-    {
+
+    else if (state.activeView =='Articles') {
+      
     	state.activeArtInfo = data;
     	state.activeArtTab ='RealEstate';	
     	state.firstArtLoad = false;

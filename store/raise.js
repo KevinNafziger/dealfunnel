@@ -25,6 +25,7 @@ export const mutations = {
 
     state.activeRaiseInfo = items;
     state.firstRaiseLoad = false;
+  
   },
 
 

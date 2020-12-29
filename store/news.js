@@ -1,3 +1,4 @@
+import allNews from '~/static/news.json';
 
 export const state = () => ({
   pages: [],
@@ -19,7 +20,7 @@ export const state = () => ({
   realestate: [],
   neobank: [],
   regtech: [],
-
+  allNews: [],
   activeNewsInfo: [],
   activeNewsTab: 'All',
   numNewsPage: 1,
@@ -53,11 +54,16 @@ export const state = () => ({
   pay4: [],
   pay5: [],
   payNewsPage: 1,
-
-
+  allNews:[]
+,
 })
 
 export const mutations = {
+
+  setAllNews(state, items) {
+
+      state.allNews = items;
+   },
 
  
    setSector(state, data) {
@@ -147,8 +153,6 @@ export const mutations = {
    },
 
 
-
-
    setPayNext(state, data) {
 
    	 var temp = state.payNewsPage;
@@ -219,7 +223,7 @@ export const mutations = {
    		
    		state.activeNewsInfo = state.block2;
      }
- 	 else if (temp == 3)	{
+ 	  else if (temp == 3)	{
    	   	
    	   	state.activeNewsInfo = state.block3;
      }
@@ -274,11 +278,12 @@ export const mutations = {
      state.firstNewsLoad = false;
      state.activeNewsTab = 'Payments';
 
-   	  if (temp == 1) {
+   	if (temp == 1) {
 	  	 
 	   	 state.activeNewsInfo = state.pay1;
-	  }
-	  else if (temp == 2)	{
+	   }
+
+	 else if (temp == 2)	{
 	  
 	   	  state.activeNewsInfo = state.pay2;
 	   }
@@ -286,15 +291,14 @@ export const mutations = {
 	  else if (temp == 3) {
 
 	   	  state.activeNewsInfo = state.pay3;
-	   }
-	  else if (temp ==4) {
+	  }
+
+	  else if (temp == 4) {
 	   	   
 	   	  state.activeNewsInfo = state.pay4;	
 	   }
 
    },
-
-
 
   setBlock(state, data){
 
@@ -324,14 +328,14 @@ export const mutations = {
 
   	},
 
-   setLend(state, data){
+    setLend(state, data){
 
   	 state.lending = data;
      state.activeNewsInfo = data;
      state.activeNewsTab = 'Lending';	
      state.firstNewsLoad =false;
   	 
-   },
+    },
 
    setBank(state, data) {
 
@@ -353,7 +357,6 @@ export const mutations = {
 
   	setAI(state, data) {
 
-
   	 state.ai = data;
      state.activeNewsInfo = data;
   	 state.activeNewsTab = 'AI';	
@@ -362,7 +365,6 @@ export const mutations = {
   	},
 
   	setCyber(state, data) {
-
 
   	 state.cyberidentity = data;
      state.activeNewsInfo = data;
@@ -373,7 +375,6 @@ export const mutations = {
 
   	setCapital(state, data) {
 
-
   	 state.capitalmarkets = data;
      state.activeNewsInfo = data;
   	 state.activeNewsTab = 'CapitalMarkets';	
@@ -383,7 +384,6 @@ export const mutations = {
 
   	setHealth(state, data) {
 
-
   	 state.healthtech = data;
      state.activeNewsInfo = data;
   	 state.activeNewsTab = 'HealthTech';	
@@ -391,9 +391,7 @@ export const mutations = {
 
   	},
 
-
   	setWealth(state, data) {
-
 
   	 state.wealthtech = data;
      state.activeNewsInfo = data;
@@ -403,7 +401,6 @@ export const mutations = {
   	},
 
   	setReal(state, data) {
-
 
   	 state.realestate = data;
      state.activeNewsInfo = data;
@@ -415,7 +412,6 @@ export const mutations = {
 
   	setOpen(state, data) {
 
-
   	 state.openbanking = data;
      state.activeNewsInfo = data;
   	 state.activeNewsTab = 'OpenBanking';	
@@ -424,7 +420,6 @@ export const mutations = {
   	},
 
   	setNeo(state, data) {
-
 
   	 state.neobank = data;
      state.activeNewsInfo = data;
@@ -435,7 +430,6 @@ export const mutations = {
 
   	setPer(state, data) {
 
-
   	 state.personalfinance = data;
      state.activeNewsInfo = data;
   	 state.activeNewsTab = 'PersonalFinance';	
@@ -444,7 +438,6 @@ export const mutations = {
   	},
 
   	setRemit(state, data) {
-
 
   	 state.remittance = data;
      state.activeNewsInfo = data;
@@ -455,7 +448,6 @@ export const mutations = {
 
   	setGeneral(state, data) {
 
-
   	 state.general = data;
      state.activeNewsInfo = data;
   	 state.activeNewsTab = 'General';	
@@ -464,7 +456,6 @@ export const mutations = {
   	},
 
   	setReg(state, data) {
-
 
   	 state.regtech = data;
      state.activeNewsInfo = data;
@@ -476,7 +467,6 @@ export const mutations = {
 
     setVal(state, data) {
 
-
   	 state.valuation = data;
      state.activeNewsInfo = data;
   	 state.activeNewsTab = 'Valuation';	
@@ -484,114 +474,112 @@ export const mutations = {
 
   	},
 
-
     setPrevious(state) {
 
-	   if (state.numNewsPage >1)
- 	    { 
+	   if (state.numNewsPage >1) {
+
  	      state.numNewsPage--;
-        }
-		else
-		{
+     }
+		 
+     else {
 		   state.numNewsPage = 1;
-		}
-   		state.activeNewsInfo = state.pages[state.numNewsPage];
-   		state.activeNewsTab = 'Page';
-   		state.firstNewsLoad =false;
+		 }
+
+   	 state.activeNewsInfo = state.pages[state.numNewsPage];
+   	 state.activeNewsTab = 'Page';
+   	state.firstNewsLoad =false;
      	
     },
 
     setNextAndFetch(state, data) {
 
 		state.numNewsPage++ ;
-		state.pages[state.pages.length]= data;
+		state.pages[state.pages.length] = data;
 		state.activeNewsInfo = data;
 		state.activeNewsTab = 'Page';
-		state.firstNewsLoad =false;  
+		state.firstNewsLoad = false;  
 
     },
 
    setNextNoFetch(state){
 
-  		state.numNewsPage++ ;	
-  		state.activeNewsInfo = state.pages[state.numNewsPage];
-  		state.activeNewsTab = 'Page';
- 	    state.firstNewsLoad =false;
+    	 state.numNewsPage++ ;	
+    	 state.activeNewsInfo = state.pages[state.numNewsPage];
+    	 state.activeNewsTab = 'Page';
+   	   state.firstNewsLoad = false;
    },
 
    setLast(state) {
-		state.activeNewsInfo = state.pages[0];
-		state.activeNewsTab = 'Page';
+
+  		state.activeNewsInfo = state.pages[0];
+  		state.activeNewsTab = 'Page';
 	    state.firstNewsLoad = false; 
 	  	state.numNewsPage = 1;	 
+   
    },
 
 
- 	set(state, page) {
+ 	 set(state, page) {
 
 		if (!this.firstNewsFetched) {
 
-		 state.pages.push(page);
+		  state.pages.push(page);
 
-		}
+		 }
 
-		 state.activeNewsInfo = state.pages[0];
-		 state.numNewsPage = 1;
-		 state.firstNewsLoad = false; 
+  		 state.activeNewsInfo = state.pages[0];
+  		 state.numNewsPage = 1;
+  		 state.firstNewsLoad = false; 
 		  
-	 },
+	   },
 
 
-	setInsurNoFetch(state){
+	 setInsurNoFetch(state){
 
 		 state.activeNewsInfo = state.insurtech;
 		 state.activeNewsTab = 'Insurtech';	
 		 state.firstNewsload = false;	
 
-	 },
+	   },
 
-	setBlockNoFetch(state) {
+	 setBlockNoFetch(state) {
 
 		 state.activeNewsInfo = state.blockchain;
 		 state.activeNewsTab = 'Blockchain';	
-		 state.firstNewsLoad =false;
+		 state.firstNewsLoad = false;
 			
-	},
+	 },
 
-	setPayNoFetch(state){
-		
-		  state.activeNewsInfo = state.payments;
-		  state.activeNewsTab = 'Payments';	
-		  state.firstNewsLoad = false;
-
-	},
+  	setPayNoFetch(state) {
+  		
+  		  state.activeNewsInfo = state.payments;
+  		  state.activeNewsTab = 'Payments';	
+  		  state.firstNewsLoad = false;
+  	},
 
 	setLendNoFetch(state) {
 
-		  state.activeNewsInfo = state.lending;
-	      state.activeNewsTab = 'Lending';	
-		  state.firstNewsLoad = false;
-	},
+		   state.activeNewsInfo = state.lending;
+	     state.activeNewsTab = 'Lending';	
+		   state.firstNewsLoad = false;
+	 },
 
-	setBankNoFetch(state) {
+	 setBankNoFetch(state) {
 
-		state.activeNewsInfo = state.banking;
-		state.activeNewsTab ='Banking';	
-		state.firstNewsLoad =false;
+		  state.activeNewsInfo = state.banking;
+		  state.activeNewsTab ='Banking';	
+		  state.firstNewsLoad =false;
 
 	 },
 
 	setMergersNoFetch(state) {
 
-
-		state.activeNewsInfo = state.mergers;
-		state.activeNewsTab ='M&A';	
-		state.firstNewsLoad =false;
-
+		  state.activeNewsInfo = state.mergers;
+		  state.activeNewsTab ='M&A';	
+		  state.firstNewsLoad =false;
 	 },
 
 	setAINoFetch(state) {
-
 
 		state.activeNewsInfo = state.ai;
 		state.activeNewsTab ='AI';	
@@ -601,98 +589,88 @@ export const mutations = {
 
 	 setCyberNoFetch(state) {
 
-
 		state.activeNewsInfo = state.cyberidentity;
-		state.activeNewsTab ='CyberIdentity';	
-		state.firstNewsLoad =false;
+		state.activeNewsTab = 'CyberIdentity';	
+		state.firstNewsLoad = false;
 
 	 },
 
 	 
 	 setRegNoFetch(state) {
 
-
-		state.activeNewsInfo = state.regtech;
-		state.activeNewsTab ='RegTech';	
-		state.firstNewsLoad =false;
+  		state.activeNewsInfo = state.regtech;
+  		state.activeNewsTab ='RegTech';	
+  		state.firstNewsLoad = false;
 
 	 },
 
 
 	 setRemitNoFetch(state) {
 
-
-		state.activeNewsInfo = state.remittance;
-		state.activeNewsTab ='Remittance';	
-		state.firstNewsLoad =false;
+  		state.activeNewsInfo = state.remittance;
+  		state.activeNewsTab ='Remittance';	
+  		state.firstNewsLoad =false;
 
 	 },
 
 	 setCapitalNoFetch(state) {
 
-
-		state.activeNewsInfo = state.capitalmarkets;
-		state.activeNewsTab ='CapitalMarkets';	
-		state.firstNewsLoad =false;
+  		state.activeNewsInfo = state.capitalmarkets;
+  		state.activeNewsTab = 'CapitalMarkets';	
+  		state.firstNewsLoad = false;
 
 	 },
 
 	 setRealNoFetch(state) {
 
-
-		state.activeNewsInfo = state.realestate
-		state.activeNewsTab ='RealEstate';	
-		state.firstNewsLoad =false;
+		  state.activeNewsInfo = state.realestate
+		  state.activeNewsTab ='RealEstate';	
+		  state.firstNewsLoad =false;
 
 	 },
 
 	 setWealthNoFetch(state) {
 
-
-		state.activeNewsInfo = state.wealthtech;
-		state.activeNewsTab ='WealthTech';	
-		state.firstNewsLoad =false;
+  		state.activeNewsInfo = state.wealthtech;
+  		state.activeNewsTab ='WealthTech';	
+  		state.firstNewsLoad = false ;
 
 	 },
 
 	 setHealthNoFetch(state) {
 
-
-		state.activeNewsInfo = state.healthtech;
-		state.activeNewsTab ='HealthTech';	
-		state.firstNewsLoad =false;
+  		state.activeNewsInfo = state.healthtech;
+  		state.activeNewsTab ='HealthTech';	
+  		state.firstNewsLoad = false;
 
 	 },
 
 	 setOpenNoFetch(state) {
 
-
-		state.activeNewsInfo = state.openbanking;
-		state.activeNewsTab ='OpenBanking';	
-		state.firstNewsLoad =false;
+		  state.activeNewsInfo = state.openbanking;
+		  state.activeNewsTab ='OpenBanking';	
+		  state.firstNewsLoad =false;
 
 	 },
 
 	 setNeoNoFetch(state) {
 
-
-		state.activeNewsInfo = state.neobank;
-		state.activeNewsTab ='Neobank';	
-		state.firstNewsLoad =false;
+		  state.activeNewsInfo = state.neobank;
+		  state.activeNewsTab ='Neobank';	
+		  state.firstNewsLoad =false;
 
 	 },
 
 	 setGeneralNoFetch(state) {
 
 
-		state.activeNewsInfo = state.general;
-		state.activeNewsTab ='General';	
-		state.firstNewsLoad =false;
+		  state.activeNewsInfo = state.general;
+		  state.activeNewsTab ='General';	
+		  state.firstNewsLoad =false;
 
 	 },
 
 	 setPerNoFetch(state) {
-
 
 		state.activeNewsInfo = state.personalfinance;
 		state.activeNewsTab ='PersonalFinance';	
@@ -710,7 +688,7 @@ export const mutations = {
 
     setSearchTab(state, topic) {
 
-      state.activeNewsTab = topic ;
+       state.activeNewsTab = topic ;
 
     },
 
@@ -720,60 +698,61 @@ export const mutations = {
   		state.activeNewsTab ='Valuation';	
   		state.firstNewsLoad = false;
 
-	   },
+	  },
 	 
- }
+  }
 
  export const actions = {
-
     
-       	 async setInsur({ commit }) {
+     async setInsur({ commit }) {
 
-			if (!this.insurNewsFetched)
-			{
-				await this.$axios.get('/links?ins=1')
-           		.then(res => {
-          			commit("setInsur", res.data);
-         		})
-			}
-			else
-			{
-				commit("setInsurNoFetch");
-			}	
-		},
+  			if (!this.insurNewsFetched) {
+
+  				await this.$axios.get('/links?ins=1')
+             		.then(res => {
+            			commit("setInsur", res.data);
+           		})
+  			}
+			  
+        else {
+				  commit("setInsurNoFetch");
+			   }
+
+		  },
 
   		async setBlock({ commit }) {
 
-		   if (!this.blockNewsFetched) {
+		    if (!this.blockNewsFetched) {
 
   	       		await this.$axios.get('/links?blk=1')
            		.then(res => {
           			commit("setBlock", res.data);
          		})
-		   }
+		    }
 
 		   else {
 
-				commit("setBlockNoFetch");
-			}	
-		},
+				      commit("setBlockNoFetch");
+			  }	
+		
+
+      },
 
 
   		 async setPay({ commit }) {
 
-    			if (!this.payNewsFetched)
-    			{
-      	       		await this.$axios.get('/links?pay=1')
+    			if (!this.payNewsFetched){
+
+      	      await this.$axios.get('/links?pay=1')
                		.then(res => {
     					  commit("setPay", res.data);
-    				})
+    				   })
     			}	
-    			else	
-    			{
+    			else {
     				commit("setPayNoFetch");
     			}	
   		 
-  		 },
+  		  },
 
   		 async setLend({ commit }) {
 
@@ -906,18 +885,18 @@ export const mutations = {
   		 },
 
 
-  		  async setReal({ commit }) {
+  		async setReal({ commit }) {
 
-		   if (!this.realNewsFetched)
-		   {	
+		   if (!this.realNewsFetched) {
+
   	       		await this.$axios.get('/links?folder=RealEstate')
            			.then(res => {
 					  commit("setReal", res.data);
 		         })
-			}
-		   else
-		   {
-				commit("setRealNoFetch");
+			 }
+
+		   else {
+				    commit("setRealNoFetch");
 		   }
   		 
   		 },
@@ -1172,6 +1151,13 @@ export const mutations = {
           },
 
   		 
+      async setAllNews ( {commit}) {
+
+          commit("setAllNews", allNews); 
+
+      },
+
+
   		 async goLast( {commit}) {
           		
           		commit("setLast");
@@ -1216,15 +1202,16 @@ export const mutations = {
 
 	  blockNewsFetched(state) {
 		
-      if (state.blockchain.length)
-      {
+      if (state.blockchain.length) {
+
         return true;
       } 
+      
       else {
         return false;
       } 
 	  
-	  },
+	   },
 	  
 	  pageArryLength(state) {
 		
