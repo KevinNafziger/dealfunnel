@@ -110,14 +110,14 @@
                       <div class="col-sm-4" v-if="posts" v-for="post in posts"> 
                            <div class="nuxt__build_indicator3">
                           <span v-if="post.interest"> 
-                          <b>Interesting fact:</b>{{post.interest }}<br>
+                          <b>Interesting fact: </b> {{ post.interest }}<br>
                           </span>
                           <span v-if="post.funding">
                            total funding<br> {{post.funding}}
                           <br></span>
                           <span v-if="post.investors"  >Investors: {{post.investors }} 
                           </span>
-                          </span v-if="!post.advisors ===''">
+                          </span v-if="!post.advisors.length == undefined && !post.advisors ==='' ">
                            <b>Advisors</b>{{post.advisors }}<br>
                           </span>
                          </div>
@@ -291,14 +291,15 @@ import {mapState} from 'vuex';
 
            return this.allCompanies.find(p => p.id == this.$route.params.id)
         }
-        
+
         else
         {
            return this.items.find(p => p.id == this.$route.params.id)
 
         }
-    {}
+    }
  },
+
  async asyncData({params, $axios })
  {
     let response = await $axios.get('executives?cid=' + params.id)
@@ -315,7 +316,7 @@ import {mapState} from 'vuex';
  },
 
 
-  };
+}
 </script>
 <style scoped>
  @font-face
