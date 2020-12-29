@@ -9,8 +9,23 @@
                  <img class="nuxt__build_indicator2" :src="item.logo_item">
                 </div> 
                 <div class="col-sm-5">
+
                    <div class="section-title nuxt__build_indicator">
+                      <span>
                       {{ item.description }} 
+                      </span>
+                      <span v-if="posts.length==1" v-for="post in posts">
+                          <span v-if="!post.newdescript === '' && !post.summary ===''">
+                          <br><b>More:</b> {{item.name}}<br>
+                          </span>
+
+                          <span v-if="!post.newdescript ===''">
+                          {{post.newdescript}} <br></span>
+                      
+                            <span v-if="post.newdescript ==='' && post.summary !=''" >
+                            {{post.teaser }} {{post.summary}} <br>
+                            </span>
+                    </span>
                    </div>
                 </div>
                 <div class="col-sm-4">
@@ -20,6 +35,7 @@
                           </div>
                           <div v-if="!(item.phone ==='')"><b>Phone: </b> {{item.phone}}</div>
                           <div v-if="!(item.website ==='')"><b>Website: </b><a href="#" v-on:click="openItem(item.website)" > {{item.website}}</a></div> 
+                          <div v-if="item.website ==='' && posts.length==1" v-for="post in posts"><b>Website: </b><a href="#" v-on:click="openItem(post.website)" > {{post.website}}</a></div>
                         <div v-if="!(item.founders ==='')">Founders: 
                          {{item.founders}}
                         </div>    
@@ -91,13 +107,43 @@
                         </div> 
                       </div>
                   </div>    
-                        <div class="col-sm-4" v-if="raises.length" v-for="raise in raises"> 
-                         <div class="nuxt__build_indicator3">
+                      <div class="col-sm-4" v-if="posts" v-for="post in posts"> 
+                           <div class="nuxt__build_indicator3">
+                          <span v-if="post.interest"> 
+                          <b>Interesting fact:</b>{{post.interest }}<br>
+                          </span>
+                          <span v-if="post.funding">
+                           total funding<br> {{post.funding}}
+                          <br></span>
+                          <span v-if="post.investors"  >Investors: {{post.investors }} 
+                          </span>
+                          </span v-if="!post.advisors ===''">
+                           <b>Advisors</b>{{post.advisors }}<br>
+                          </span>
+                         </div>
+                      </div>
+
+                          <div v-if="raises" v-for="raise in raises" class="nuxt__build_indicator3">
 
                           {{raise.item_date }}  <a :href="raise.url" class="btn btn-link" target="_blank" > {{raise.raise_type}} {{raise.other}}</a><br> {{raise.amount}}
                            
-                            <br>Investors:{{raise.lead}} {{raise.partcipating}}
+                            <br>Investors:{{raise.lead}} {{raise.participating}}
                          </div>
+                      
+
+
+                       <div class="col-sm-4" v-if="!executives.length" v-for="post in posts">
+                          <img v-if="post.exec_url"class="nuxt__build_indicator2" :src="post.exec_url">
+                          <div class="nuxt__build_indicator3">
+                          {{post.execheader }} {{ post.execname}} 
+                          
+                        <span v-if="!(post.linkedIn === '' )">
+                        <i class="fa fa-linkedin">
+                        <a :href="post.linkedin" class="btn btn-link" target="_blank" >LinkedIn</a></i>
+                        </span>
+                       
+                        </div>
+
 
                        <div class="col-sm-4" v-if="executives.length" v-for="executive in executives">
                           <img class="nuxt__build_indicator2" :src="executive.pic_item">
@@ -191,17 +237,24 @@ import {mapState} from 'vuex';
 
     computed: {
   ...mapState({
+          allCompanies: state => state.company.allCompanies,
           starter: state => state.company.lending,
           active: state =>  state.company.activeInfo,
           first: state => state.company.firstLoad,
-
+          allPosts:  state => state.posts.allPosts,
    }),
 
     items() {
 
-        if (this.first == true) {
+        if (this.first == true && !(this.allCompanies.length) ) {
 
           return this.starter
+        }
+        else if (this.allCompanies.length)
+        {
+
+          return this.allCompanies
+
         }
 
         else {
@@ -213,16 +266,38 @@ import {mapState} from 'vuex';
 
    id() {
       
-        return this.item.id
+        return this.item.id;
    } , 
 
+   posts() {
+
+        if (this.allPosts.length)
+        {
+              return this.allPosts.filter(p =>p.company_id == this.$route.params.id)
+        }
+        
+        else {
+
+             return [];
+
+        }
+
+
+    },
  
 
-
     item() {
-    
-        return this.items.find(p => p.id == this.$route.params.id)
-    }
+        if (this.allCompanies.length) {
+
+           return this.allCompanies.find(p => p.id == this.$route.params.id)
+        }
+        
+        else
+        {
+           return this.items.find(p => p.id == this.$route.params.id)
+
+        }
+    {}
  },
  async asyncData({params, $axios })
  {
