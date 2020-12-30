@@ -527,7 +527,6 @@ export const mutations = {
 	      } 	
 	  },
 
-	  
 	  bankFetched(state) {
 
 		  if (state.banking.length) {

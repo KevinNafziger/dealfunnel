@@ -163,7 +163,7 @@ methods: {
 
         this.showMain = false;
         this.showProfile = true;
-        return this.commpanies.find(c => c.id == id);
+        return this.companies.find(c => c.id == id);
      }
 
   },
