@@ -257,6 +257,17 @@ export const mutations = {
     
    },
 
+   setNewsletters (state, data)
+   {
+      state.newsletters = data;
+
+   },
+
+   setNewslettersNoFtech (state)
+   {
+
+   },
+
    setBlockNextNoFetch(state) {
 
 
@@ -3442,7 +3453,7 @@ export const mutations = {
 
         if (!this.newslettersFetched) {
  
-            await this.$axios.get('/posts?storytype=Newsletter' + temp)
+            await this.$axios.get('/posts?storytype=Newsletter')
                     .then( res => {
               commit("setNewsletters", res.data)    
              })  
@@ -3451,8 +3462,7 @@ export const mutations = {
 
          else {
               
-              commit("setBlockNextNoFetch")  
-
+              commit("setNewslettersNoFetch")  
          }            
     
        },  
@@ -3676,6 +3686,18 @@ export const mutations = {
       }
 
 	  },
+
+     newslettersFetch(state) {
+  
+      if (state.newsletters.length) {
+        return true;
+      } 
+
+      else {
+        return false;
+      }
+
+    },
 
 	  advisorPostsFetched(state) {
 

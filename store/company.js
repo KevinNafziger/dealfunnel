@@ -236,7 +236,6 @@ export const mutations = {
 	 
 	 },
 
-
 	 setUS1NoFetch(state) {
 
 	  state.activeInfo =  state.US1 ;
@@ -338,8 +337,7 @@ export const mutations = {
 
 			   else if (origin =="notFromLoad")  {	
 					commit("setLendNoFetch");
-			    }
-  		 
+			    }  		 
   		    },
 
 

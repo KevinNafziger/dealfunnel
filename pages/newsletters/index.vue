@@ -1,0 +1,113 @@
+
+<template>
+<div>
+
+  <center>
+    <div data-v-69296181="" id="top" class="sectionix"><div data-v-69296181="" class="title"><div data-v-69296181="" class="content"><br data-v-69296181="">
+
+      <h2 data-v-69296181="">Articles<i style="font-size: 13px; text-align:right; margin-left:3px;">{{ filterMessage }}</i></h2>
+      
+    </div></div></div>
+  </center>
+ 
+
+  <div class="posts-page">
+       <PostList :posts="posts" :board="posts" />
+  </div>
+
+</div>
+</template>
+
+
+</template>
+<script>
+import {mapState} from 'vuex';
+import PostList  from  '@/components/Posts/PostList'
+export default {
+  computed: {
+  ...mapState({
+  
+          allLetters: state =>  state.posts.newsletters,
+    }),
+    posts() {
+             return this.allLetters;
+    }, 
+
+    post() {
+    
+        return this.posts.find(p => p.id == this.$route.params.id)
+    }
+ },
+ 
+ async fetch({store}) {
+
+       store.dispatch("posts/setView", "Newsletters");
+       await store.dispatch("posts/setNewsletters");
+    
+  },
+
+
+
+
+}
+</script> 
+
+<style scoped>
+
+ @font-face
+  {font-family:"Cambria Math";
+  panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+  {font-family:Calibri;
+  panose-1:2 15 5 2 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+  {margin-top:0in;
+  margin-right:0in;
+  margin-bottom:8.0pt;
+  margin-left:0in;
+  line-height:107%;
+  font-size:11.0pt;
+  font-family:"Calibri",sans-serif;
+  color:black;}
+.MsoChpDefault
+  {font-family:"Calibri",sans-serif;}
+.MsoPapDefault
+  {margin-bottom:8.0pt;
+  line-height:107%;}
+ .WordSection1
+  {size:8.5in 11.0in;
+  margin:1.0in 76.85pt 1.0in 1.0in;}
+div.WordSection1
+  {page:WordSection1;}
+@page WordSection2
+  {size:8.5in 11.0in;
+  margin:1.0in 76.85pt 1.0in 1.0in;}
+div.WordSection2
+  {page:WordSection2;}
+ .WordSection3
+  {size:8.5in 11.0in;
+  margin:1.0in 76.85pt 1.0in 1.0in;}
+div.WordSection3
+
+@page WordSection4
+  {size:8.5in 11.0in;
+  margin:1.0in 76.85pt 1.0in 1.0in;}
+div.WordSection4
+  {page:WordSection4;}
+@page WordSection5
+  {size:8.5in 11.0in;
+  margin:1.0in 76.85pt 1.0in 1.0in;}
+div.WordSection5
+  {page:WordSection5;}
+@page WordSection6
+  {size:8.5in 11.0in;
+  margin:75.5pt 74.65pt 73.05pt 1.0in;}
+div.WordSection6
+  {page:WordSection6;}
+@page WordSection7
+  {size:8.5in 11.0in;
+  margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection7
+  {page:WordSection7;}
+</style>

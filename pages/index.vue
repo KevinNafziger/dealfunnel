@@ -137,7 +137,7 @@ computed: {
    },
 
     async fetch({store}) {
-    
+
       store.dispatch("posts/nuxtServerInit")
       store.dispatch("posts/setAllPosts")
       store.dispatch("company/setAllCompanies")
@@ -299,6 +299,7 @@ body{
 }
 
 .rem-img {
+
   top: 350px;
   left: 8rem;
   position: absolute;
@@ -316,6 +317,7 @@ body{
     transition: 0.5s;
   }
 }
+
 .text-block-20 {
     background-color: #5082be !important;
     border-radius: 10px;
@@ -326,6 +328,7 @@ body{
     margin-top:50px;
     margin-bottom:50px;
 }
+
 .text-block-20:hover {
     background: #ff9140 !important;
     box-shadow: 0 0 6px -1px #43454659, inset 0 0 26px 0px #ffe844 !important;
@@ -345,6 +348,7 @@ body{
     text-align: center;
     box-shadow: 0 1px 3px 0 #a5a5a5 !important;
   }
+
 .footer{
   width:100%;
   height:50px;
@@ -355,6 +359,7 @@ body{
   text-align: center;
   z-index: 9;
 }
+
 .intro {
   position: relative;
   padding: 30px;
