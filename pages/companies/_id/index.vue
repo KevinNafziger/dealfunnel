@@ -8,10 +8,10 @@
 
     <div v-if="item.logo_item" class="col-sm-5">
         <img class="nuxt__build_indicator2" :src="item.logo_item">
-    </div> 
+    </div>
   <br>
 
-  <div class="info-box"> 
+  <div class="info-box">
       <p>
       {{ item.description }}
       </p>
@@ -32,60 +32,60 @@
           <li v-if="!(item.website ==='')"><b>Website:</b>
             <a href="#" v-on:click="openItem(item.website)" > {{item.website}}</a>
           </li>
-            
+
            <li v-if="item.founders">
             <b>Founders:</b>
             {{item.founders}}
            </li>
-          
-           <li v-if="item.founding_yr" >Founded:
+
+           <li v-if="item.founding_yr" ><b>Founded:</b>
             {{item.founding_yr}}
            </li>
 
-           <li>                      
-              <span class="mdi mdi-facebook" v-if="!(item.facebook ==='')" >                            
+           <li>
+              <span class="mdi mdi-facebook" v-if="!(item.facebook ==='')" >
                   <a :href="item.facebook" class="btn btn-link" target="_blank" ></a>
-              </span>      
+              </span>
 
-              <span class="mdi mdi-medium" v-if="!(item.medium ==='')">                              
-                 <a :href="item.medium" class="mdi mdi medium" target="_blank" ></a>                           
-              </span> 
+              <span class="mdi mdi-medium" v-if="!(item.medium ==='')">
+                 <a :href="item.medium" class="mdi mdi medium" target="_blank" ></a>
+              </span>
 
-              <span class="mdi mdi-github" v-if="!(item.github ==='')">                             
-              <a :href="item.github" class="mdi mdi github" target="_blank" </a>    
-                </span>  
+              <span class="mdi mdi-github" v-if="!(item.github ==='')">
+              <a :href="item.github" class="mdi mdi github" target="_blank" </a>
+                </span>
 
-            <span v-if="!(item.youtube ==='')" class="mdi mmdi-youtube">                            
-              <a :href="item.youtube" class="btn btn-link" target="_blank" ></a>                                  
+            <span v-if="!(item.youtube ==='')" class="mdi mmdi-youtube">
+              <a :href="item.youtube" class="btn btn-link" target="_blank" ></a>
             </span>
 
-           <span v-if="!(item.pinterest ==='')" class="mdi mdi-pinterest">                             
+           <span v-if="!(item.pinterest ==='')" class="mdi mdi-pinterest">
               <a :href="item.pinterest" class="btn btn-link" target="_blank" ></a>
             </span>
-        </li>  
+        </li>
 
         <li>
-          <span v-if="!(item.email ==='')"> Email: <span class="btn btn-link mdi mdi-envelope about-info-title" >{{item.email }}
+          <span v-if="!(item.email ==='')"> <b>Email:</b> <span class="btn btn-link mdi mdi-envelope about-info-title" >{{item.email }}
           </span></span>
         </li>
 
-      </ul> 
+      </ul>
   </div>
 </div>
 
  <div class="col-B">
 
 
-     <div class="key-management"  v-if="!executives.length"  v-for="post in posts">  
+     <div class="key-management"  v-if="!executives.length"  v-for="post in posts">
       <h3>key management</h3>
      <div class="exec-comp-div">
       <div  class="comp-exec-1">
           <div><img v-if="!(executive.pic_item=== undefined)" class="exec-image" >     {{executive.pic_item}}</img>
           </div>
-        
+
           <div><b>  {{post.execheader }} :</b><br>
              {{ post.execname}}
-          </div>  
+          </div>
 
           <div>
               <span class="mdi mdi-twitter"  v-if="!(post.linkedin === '' )">
@@ -94,22 +94,22 @@
           </div>
       </div>
 
-    <div class="key-management"  v-if="executives.length" v-for="executive in executives"> 
+    <div class="key-management"  v-if="executives.length" v-for="executive in executives">
       <h3>key management</h3>
       <div class="exec-comp-div">
              <div  class="comp-exec-1">
                   <div><img v-if="!(executive.pic_item=== undefined)" class="exec-image" >     {{executive.pic_item}}</img>
              </div>
-        
+
             <div><b>{{executive.title }}:</b><br>
                 {{executive.first}} {{executive.last}}
-            </div>  
+            </div>
 
             <div>
               <span class="mdi mdi-facebook" v-if="!(executive.facebook === '' )">
                  <a :href="executive.facebook" class="btn btn-link" target="_blank" ></a>
               </span>
-                  
+
               <span  class="mdi mdi-twitter" v-if="!(executive.twitterurl === '' )">
                     <a :href= "executive.twitterurl" class="btn btn-link" target="_blank" >Twitter</a>
               </span>
@@ -134,7 +134,7 @@
                <a :href="executive.github" class="btn btn-link" target="_blank" ></a>
             </span>
 
-            <span class="mdi mdi-pinterest" v-if="!(executive.pinterest === '' )">            
+            <span class="mdi mdi-pinterest" v-if="!(executive.pinterest === '' )">
                <a :href= "executive.pinterest" class="btn btn-link" target="_blank" ></a>
             </span>
 
@@ -178,8 +178,8 @@
   </div>
     <br>
 
-  <div v-if="!(post.funding === undefined)" class="description-box"> <b>funding to date:</b> 
-      {{post.funding}} 
+  <div v-if="!(post.funding === undefined)" class="description-box"> <b>funding to date:</b>
+      {{post.funding}}
   </div>
   <br>
 
@@ -187,7 +187,7 @@
         {{raise.item_date }}  <a :href="raise.url" class="btn btn-link" target="_blank" > {{raise.raise_type}} {{raise.other}}</a><br> {{raise.amount}}   <br>Investors:{{raise.lead}} {{raise.partcipating}}
     </div>
 
-    <span v-if="post.interest"> 
+    <span v-if="post.interest">
           <b>Interesting fact: </b> {{ post.interest }}<br>
     </span>
 
@@ -196,31 +196,31 @@
       <br>
     </span>
 
-    <span v-if="post.investors" >Investors: {{post.investors }} 
+    <span v-if="post.investors" >Investors: {{post.investors }}
       </span>
 
     <span v-if="!post.advisors.length == undefined && !post.advisors ==='' ">
               <b>Advisors</b>{{post.advisors }}<br>
     </span>
 
-    <span v-if="posts.length==1" v-for="post in posts">  
-           <span v-if="!post.newdescript === '' && !post.summary ===''"> 
-          <br><b>More:</b> {{item.name}}<br></span>  
-    </span> 
+    <span v-if="posts.length==1" v-for="post in posts">
+           <span v-if="!post.newdescript === '' && !post.summary ===''">
+          <br><b>More:</b> {{item.name}}<br></span>
+    </span>
 
-   <span v-if="!post.newdescript ===''"> 
+   <span v-if="!post.newdescript ===''">
         {{post.newdescript}} <br>
-   </span>  
+   </span>
 
-    <span v-if="post.newdescript ==='' && post.summary !=''" >  
-        {{post.teaser }} {{post.summary}} <br>  
+    <span v-if="post.newdescript ==='' && post.summary !=''" >
+        {{post.teaser }} {{post.summary}} <br>
     </span>
 
 
   </div>
   </div>
   </div>
-</div>     
+</div>
 </div>
 </template>
 <script>
@@ -232,7 +232,7 @@ import {mapState} from 'vuex';
       openItem: function (website) {
               window.open(website);
        }
-    
+
      },
 
     computed: {
@@ -257,18 +257,18 @@ import {mapState} from 'vuex';
         else {
           return this.active;
         }
-    }, 
+    },
 
      id() {
         return this.item.id;
-    } , 
+    } ,
 
    posts() {
         if (this.allPosts.length)
         {
               return this.allPosts.filter(p =>p.company_id == this.$route.params.id)
         }
-        
+
         else {
              return [];
         }
@@ -435,8 +435,8 @@ div.WordSection1
   background-color: #2fb7ff;
   color: white !important;
   padding: 1px 5px;
-  border-radius: 10px; 
- 
+  border-radius: 10px;
+
  }
 
  .readmore {
