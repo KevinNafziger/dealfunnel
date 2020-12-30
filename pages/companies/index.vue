@@ -1,37 +1,47 @@
 <template>
 <div>
         <div data-v-69296181="" id="top" ><div data-v-69296181="" class="title"><div data-v-69296181="" class="content"><br data-v-69296181=""> <h2 data-v-69296181="">Companies
-      <i style="font-size: 13px; text-align:right; margin-left:3px;">{{ filterMessage}} </i>
+      
+        <i style="font-size: 13px; text-align:right; margin-left:3px;">{{ filterMessage}} </i>
         </h2></div></div></div>
+
       <CompanyTempSearch></CompanyTempSearch>
+      
       <div class="draft-div">
           <table class="table-striped" width="100%">
               <thead class="fixed-head">
-                  <th>
-                <strong><span id="oki" class="mdi mdi-calendar"></span>
+                <th>
+                  <strong><span id="oki" class="mdi mdi-calendar"></span>
                   <h3>Company</h3></strong>
                 </th>
+
                 <th colspan="2"><strong><span id="oki" class="mdi mdi-earth"></span>
                   <h3>About</h3></strong>
                 </th>
+
                 <th>
                 <strong><span id="oki" class="mdi mdi-cash-usd-outline"></span>
                   <h3>Website</h3></strong>
                 </th>
+
                 <th>
                   <strong><span id="oki" class="mdi mdi-account-star"></span>
                     <h3>City</h3></strong>
                 </th>
+
                 <th>
                   <strong><span id="oki" class="mdi mdi-account-multiple-plus"></span>
                     <h3>Category</h3></strong>
                 </th>
+
                 <th>
                   <strong><span id="oki" class="mdi mdi-earth"></span><h3>Country</h3></strong>
                 </th>
+
                 <th>
                   <strong><span id="oki" class="mdi mdi-earth"></span><h3>Founded</h3></strong>
                 </th>
+
               </thead>
             <tr style="margin-top:20px;" v-for="company in companies">
               <td>
@@ -82,12 +92,15 @@ methods: {
         case 'Insurtech':
            this.$store.dispatch("company/setInsur");
            break;
+
         case 'Blockchain':
             this.$store.dispatch("company/setBlock");
             break;
+
         case 'Lending':
             this.$store.dispatch("company/setLend", "notFromLoad" );
             break;
+
         case 'Payments':
             this.$store.dispatch("company/setPay");
             break;
@@ -103,12 +116,15 @@ methods: {
              if (this.activeTab == 'All page 4')  {
                 this.$store.dispatch("company/setComp3");
              }
+
             else if (this.activeTab == 'All page 3') {
                 this.$store.dispatch("company/setComp2");
             }
+
             else if (this.activeTab == 'All page 2') {
                   this.$store.dispatch("company/setComp1");
             }      
+
             break;
           
            case 'Next':
@@ -116,14 +132,17 @@ methods: {
              {
                   this.$store.dispatch("company/setComp2");
              }
-             else  if (this.activeTab == 'All page 1')
-             {
+
+             else  if (this.activeTab == 'All page 1') {
+
                   this.$store.dispatch("company/setComp2");
              }
+
              else if (this.activeTab == 'All page 2') {  
                   
                   this.$store.dispatch("company/setComp3");
              }
+
             else {
                
                this.$store.dispatch("company/setComp4");
@@ -136,30 +155,30 @@ methods: {
     submitSearch(topic) {
 
       this.$store.dispatch("company/submitSearch", topic);
-      this.$store.dispatch("/setSearchTab", topic);
+      this.$store.dispatch("company/setSearchTab", topic);
 
     },
 
-    filteredCompany(id)
-     {
+    filteredCompany(id) {
+
         this.showMain = false;
         this.showProfile = true;
         return this.commpanies.find(c => c.id == id);
-     },
+     }
 
- },
+  },
 
   computed: {
   ...mapState({
       firstLoad: state => state.company.firstLoad,
       companies: state => state.company.activeInfo,
       activeTab: state => state.company.activeTab,
+
    }),
 
    filterMessage() {
-
         return this.activeTab;
-    }
+  }
 
 },
 
@@ -187,7 +206,6 @@ methods: {
    async fetch({store}) {
     
       await store.dispatch("company/setLend", "fromLoad");
-
    },
 };
 

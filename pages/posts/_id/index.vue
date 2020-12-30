@@ -2,11 +2,9 @@
 <template>
 <div>
 <div class="WordSection1">
-
     <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
     margin-left:.5pt;text-indent:-.5pt;line-height:109%'><span style='font-size:
     22.0pt;line-height:109%'></span></p>
-
 </div>
 
 <span style='font-size:22.0pt;line-height:109%;font-family:"Calibri",sans-serif;
@@ -51,6 +49,7 @@ export default {
          
              return this.activeDataInfo;
          }
+         
          else {
 
              return this.activeArtInfo;

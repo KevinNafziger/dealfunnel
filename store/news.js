@@ -272,8 +272,8 @@ export const mutations = {
 
    setPayPrevious(state) {
 
-   	var temp = state.payNewsPage;
-   	temp--;
+   	  var temp = state.payNewsPage;
+   	  temp--;
    	 state.payNewsPage-- ;
      state.firstNewsLoad = false;
      state.activeNewsTab = 'Payments';
@@ -284,9 +284,9 @@ export const mutations = {
 	   }
 
 	 else if (temp == 2)	{
-	  
+
 	   	  state.activeNewsInfo = state.pay2;
-	   }
+	  }
 
 	  else if (temp == 3) {
 
@@ -296,7 +296,7 @@ export const mutations = {
 	  else if (temp == 4) {
 	   	   
 	   	  state.activeNewsInfo = state.pay4;	
-	   }
+	  }
 
    },
 
@@ -409,7 +409,6 @@ export const mutations = {
 
   	},
 
-
   	setOpen(state, data) {
 
   	 state.openbanking = data;
@@ -482,22 +481,23 @@ export const mutations = {
      }
 		 
      else {
+
 		   state.numNewsPage = 1;
 		 }
 
    	 state.activeNewsInfo = state.pages[state.numNewsPage];
    	 state.activeNewsTab = 'Page';
-   	state.firstNewsLoad =false;
+   	 state.firstNewsLoad =false;
      	
     },
 
     setNextAndFetch(state, data) {
 
-		state.numNewsPage++ ;
-		state.pages[state.pages.length] = data;
-		state.activeNewsInfo = data;
-		state.activeNewsTab = 'Page';
-		state.firstNewsLoad = false;  
+  		state.numNewsPage++ ;
+  		state.pages[state.pages.length] = data;
+  		state.activeNewsInfo = data;
+  		state.activeNewsTab = 'Page';
+  		state.firstNewsLoad = false;  
 
     },
 
@@ -522,16 +522,14 @@ export const mutations = {
  	 set(state, page) {
 
 		if (!this.firstNewsFetched) {
-
 		  state.pages.push(page);
-
 		 }
 
-  		 state.activeNewsInfo = state.pages[0];
-  		 state.numNewsPage = 1;
-  		 state.firstNewsLoad = false; 
+		 state.activeNewsInfo = state.pages[0];
+		 state.numNewsPage = 1;
+		 state.firstNewsLoad = false; 
 		  
-	   },
+	 },
 
 
 	 setInsurNoFetch(state){
@@ -540,7 +538,7 @@ export const mutations = {
 		 state.activeNewsTab = 'Insurtech';	
 		 state.firstNewsload = false;	
 
-	   },
+	  },
 
 	 setBlockNoFetch(state) {
 
@@ -548,7 +546,7 @@ export const mutations = {
 		 state.activeNewsTab = 'Blockchain';	
 		 state.firstNewsLoad = false;
 			
-	 },
+	  },
 
   	setPayNoFetch(state) {
   		
@@ -595,7 +593,6 @@ export const mutations = {
 
 	 },
 
-	 
 	 setRegNoFetch(state) {
 
   		state.activeNewsInfo = state.regtech;
@@ -663,7 +660,6 @@ export const mutations = {
 
 	 setGeneralNoFetch(state) {
 
-
 		  state.activeNewsInfo = state.general;
 		  state.activeNewsTab ='General';	
 		  state.firstNewsLoad =false;
@@ -716,7 +712,7 @@ export const mutations = {
 			  
         else {
 				  commit("setInsurNoFetch");
-			   }
+			  }
 
 		  },
 
@@ -741,20 +737,21 @@ export const mutations = {
 
   		 async setPay({ commit }) {
 
-    			if (!this.payNewsFetched){
+    			if (!this.payNewsFetched) {
 
       	      await this.$axios.get('/links?pay=1')
                		.then(res => {
     					  commit("setPay", res.data);
     				   })
     			}	
+
     			else {
     				commit("setPayNoFetch");
     			}	
   		 
   		  },
 
-  		 async setLend({ commit }) {
+  	async setLend({ commit }) {
 
 		   if (!this.lendNewsFetched)
 		   {	
@@ -762,9 +759,9 @@ export const mutations = {
            			.then(res => {
 					  commit("setLend", res.data);
 		         })
-			}
-		   else
-		   {
+			 }
+
+		  else {
 				commit("setLendNoFetch");
 		   }
   		 
@@ -772,113 +769,112 @@ export const mutations = {
 
   		 async setMergers({ commit }) {
 
-		   if (!this.mergerNewsFetched)
-		   {	
-  	       		await this.$axios.get('/links?id=M%26A')
-           			.then(res => {
-					  commit("setMergers", res.data);
-		         })
-			}
-		   else
-		   {
-				commit("setMergersNoFetch");
-		   }
+  		   if (!this.mergerNewsFetched)
+  		   {	
+    	       		await this.$axios.get('/links?id=M%26A')
+             			.then(res => {
+  					  commit("setMergers", res.data);
+  		         })
+  			 }
+  		   else {
+  				commit("setMergersNoFetch");
+  		   }
   		 
   		 },
 
 
-  		  async setOpen({ commit }) {
+  		async setOpen({ commit }) {
 
-		   if (!this.openNewsFetched)
-		   {	
+  		   if (!this.openNewsFetched){
+
   	       		await this.$axios.get('/links?folder=openbanking')
            			.then(res => {
-					  commit("setOpen", res.data);
-		         })
-			}
-		   else
-		   {
-				commit("setOpenNoFetch");
-		   }
+  				  commit("setOpen", res.data);
+  	         })
+  		   }
+  		   else {
+  				commit("setOpenNoFetch");
+		      }
   		 
   		 },
 
-  		  async setPer({ commit }) {
+  		async setPer({ commit }) {
 
-		   if (!this.perNewsFetched)
-		   {	
+		   if (!this.perNewsFetched){
+
   	       		await this.$axios.get('/links?folder=personalfinance')
            			.then(res => {
 					  commit("setPer", res.data);
 		         })
-			}
-		   else
-		   {
+			 }
+
+		   else {
 				commit("setPerNoFetch");
 		   }
   		 
   		 },
 
-  		  async setWealth({ commit }) {
+  		async setWealth({ commit }) {
 
-		   if (!this.wealthNewsFetched)
-		   {	
-  	       		await this.$axios.get('/links?folder=wealthtech')
-           			.then(res => {
-					  commit("setWealth", res.data);
-		         })
-			}
-		   else
-		   {
-				commit("setWealthNoFetch");
-		   }
+  		    if (!this.wealthNewsFetched){
+
+    	       	await this.$axios.get('/links?folder=wealthtech')
+             			.then(res => {
+  					  commit("setWealth", res.data);
+  		         })
+  			  }
+
+		      else {
+				    commit("setWealthNoFetch");
+		       }
   		 
   		 },
 
   		  async setRemit({ commit }) {
 
-		   if (!this.remitNewsFetched)
-		   {	
-  	       		await this.$axios.get('/links?folder=remittance')
-           			.then(res => {
-					  commit("setRemit", res.data);
-		         })
-			}
-		   else
-		   {
-				commit("setRemitNoFetch");
-		   }
+      		   if (!this.remitNewsFetched) { 
+
+        	       await this.$axios.get('/links?folder=remittance')
+                 			.then(res => {
+      					  commit("setRemit", res.data);
+      		         })
+      			 }
+      		   else {
+      				commit("setRemitNoFetch");
+      		   }
+        		 
+        },
+
+  		async setCapital({ commit }) {
+
+  		   if (!this.capitalNewsFetched) {	
+
+    	       await this.$axios.get('/links?folder=CapitalMarkets')
+             			.then(res => {
+  					  commit("setCapital", res.data);
+  		         })
+  			 }
+
+  		   else {
+
+  				commit("setCapitalNoFetch");
+  		   }
   		 
   		 },
 
-  		  async setCapital({ commit }) {
 
-		   if (!this.capitalNewsFetched)
-		   {	
-  	       		await this.$axios.get('/links?folder=CapitalMarkets')
-           			.then(res => {
-					  commit("setCapital", res.data);
-		         })
-			}
-		   else
-		   {
-				commit("setCapitalNoFetch");
-		   }
-  		 
-  		 },
-
-
-  		  async setCyber({ commit }) {
+  		async setCyber({ commit }) {
 
 		   if (!this.cyberNewsFetched)
 		   {	
-  	       		await this.$axios.get('/links?folder=cyberidentity')
+  	     await this.$axios.get('/links?folder=cyberidentity')
            			.then(res => {
 					  commit("setCyber", res.data);
-		         })
-			}
-		   else
-		   {
+		      })
+			 }
+
+		   else {
+
 				commit("setCyberNoFetch");
 		   }
   		 
@@ -887,313 +883,291 @@ export const mutations = {
 
   		async setReal({ commit }) {
 
-		   if (!this.realNewsFetched) {
+    		   if (!this.realNewsFetched) {
 
-  	       		await this.$axios.get('/links?folder=RealEstate')
-           			.then(res => {
-					  commit("setReal", res.data);
-		         })
-			 }
+      	       		await this.$axios.get('/links?folder=RealEstate')
+               			.then(res => {
+    					  commit("setReal", res.data);
+    		         })
+    			 }
 
-		   else {
-				    commit("setRealNoFetch");
-		   }
+    		   else {
+    				    commit("setRealNoFetch");
+    		   }
   		 
   		 },
 
 
-  		  async setReg({ commit }) {
+  		async setReg({ commit }) {
 
-		   if (!this.regNewsFetched)
-		   {	
-  	       		await this.$axios.get('/links?folder=regtech')
-           			.then(res => {
-					  commit("setReg", res.data);
-		         })
-			}
-		   else
-		   {
-				commit("setRegNoFetch");
-		   }
+  		   if (!this.regNewsFetched) {
+
+    	    	await this.$axios.get('/links?folder=regtech')
+         			.then(res => {
+  					commit("setReg", res.data);
+  		         })
+  			 }
+
+  		   else {
+  				commit("setRegNoFetch");
+  		   }
   		 
   		 },
 
 
-  		  async setHealth({ commit }) {
+  		async setHealth({ commit }) {
 
-		   if (!this.healthNewsFetched)
-		   {	
-  	       		await this.$axios.get('/links?folder=healthtech')
-           			.then(res => {
-					  commit("setHealth", res.data);
-		         })
-			}
-		   else
-		   {
-				commit("setHealthNoFetch");
-		   }
-  		 
+  		   if (!this.healthNewsFetched) {
+    	       await this.$axios.get('/links?folder=healthtech')
+             			.then(res => {
+  					  commit("setHealth", res.data);
+  		         })
+  			 }
+
+		     else {
+				    commit("setHealthNoFetch");
+          }
   		 },
 
 
-  		  async setWealth({ commit }) {
+  		async setWealth({ commit }) {
 
-		   if (!this.wealthNewsFetched)
-		   {	
-  	       		await this.$axios.get('links?folder=wealthtech')
-           			.then(res => {
-					  commit("setWealth", res.data);
-		         })
-			}
-		   else
-		   {
-				commit("setWealthNoFetch");
-		   }
+  		   if (!this.wealthNewsFetched) {	
+
+    	     await this.$axios.get('links?folder=wealthtech')
+             			.then(res => {
+  				 commit("setWealth", res.data);
+  		     })
+  			 }
+
+  		   else {
+  				  commit("setWealthNoFetch");
+  		   }
   		 
   		 },
 
+  		async setGeneral({ commit }) {
 
-  		  async setGeneral({ commit }) {
+		      if (!this.generalNewsFetched) {
 
-		   if (!this.generalNewsFetched)
-		   {	
-  	       		await this.$axios.get('/links?folder=General')
+  	   		await this.$axios.get('/links?folder=General')
            			.then(res => {
 					  commit("setGeneral", res.data);
 		         })
-			}
-		   else
-		   {
-				commit("setGeneralNoFetch");
-		   }
-  		 
+			    }
+
+  		   else {
+  				 commit("setGeneralNoFetch");
+  		   }
+    		 
   		 },
 
+  		async setNeo({ commit }) {
 
+  		   if (!this.neoNewsFetched) {
 
-  		  async setNeo({ commit }) {
-
-		   if (!this.neoNewsFetched)
-		   {	
-  	       		await this.$axios.get('links?folder=neobank')
-           			.then(res => {
-					  commit("setNeo", res.data);
-		         })
-			}
-		   else
-		   {
-				commit("setNeoNoFetch");
-		   }
+    	     await this.$axios.get('links?folder=neobank')
+             			.then(res => {
+  					  commit("setNeo", res.data);
+  		     })
+  			 }
+		  
+        else {
+  				commit("setNeoNoFetch");
+  		   }
   		 
   		 },
 
   		 async setAI({ commit }) {
 
-		   if (!this.aiNewsFetched)
-		   {	
-  	       		await this.$axios.get('/links?folder=AI')
+		    if (!this.aiNewsFetched) {
+
+  	     await this.$axios.get('/links?folder=AI')
            			.then(res => {
 					  commit("setAI", res.data);
 		         })
-			}
-		   else
-		   {
-				commit("setAINoFetch");
-		   }
+			    }
+
+		    else {
+				  commit("setAINoFetch");
+		    }
   		 
   		 },
 
   		 async setVal({ commit }) {
 
-		   if (!this.valNewsFetched) {
+  		   if (!this.valNewsFetched) {
 
-	       	 await this.$axios.get('/links?id=Valuation')
-       		    .then(res => {
-				  commit("setVal", res.data);
-	         })
-		   }
-		   else {
-				commit("setValNoFetch");
-		   }
+  	       	await this.$axios.get('/links?id=Valuation')
+         		    .then(res => {
+  				  commit("setVal", res.data);
+  	         })
+  		   }
+
+  		   else {
+  				  commit("setValNoFetch");
+  		   }
   		 
   		 },
 
 
   		 async setBank({ commit }) {
 		    
-		    if (!this.bankNewsFetched)
-		   	{	
-  	    		await this.$axios.get('/links?folder=openbanking')
-           			.then(res => {
-          			commit("setBank", res.data);
-			 	})
-		   	} 
-		   	else {
-				
-				commit("setBankNoFetch" );
-		    }
-  		 
+		      if (!this.bankNewsFetched) {	
+
+    	    	 await this.$axios.get('/links?folder=openbanking')
+             			.then(res => {
+            			commit("setBank", res.data);
+  			 	     })
+		   	  } 
+
+		   	  else {
+				  commit("setBankNoFetch" );
+		      }
+  		    
   		  },
 
   		 async goPrevious({ commit }, pageVal ) {
-	
-		   commit("setPrevious");
-  		 
+		      commit("setPrevious");  		 
   		 },
 
   		 async goNext( {commit}, pageVal) {
 
-			if (this.pageArryLength >= pageVal) {
-
-			  commit("setNextNoFetch");
-			}	
-			else {
+			     if (this.pageArryLength >= pageVal) {
+			       commit("setNextNoFetch");
+			     }	
+			       
+          else {
 			  
-			  await this.$axios.get('/links?page=' + pageVal)
+			         await this.$axios.get('/links?page=' + pageVal)
                 .then( res => {
-					commit("setNextAndFetch", res.data)	  
-			   })               
-			}	 
+					       commit("setNextAndFetch", res.data)	  
+			         })               
+			     }	 
   		 
   		  },
 
   		 async setBlockPrevious({ commit }, page ) {
-	
-		   commit("setBlockPrevious");
-  		 
+		      commit("setBlockPrevious");
   		 },
 
   		 async setBlockNext( {commit}, page) {
 
-			 var temp = page;
-			 temp++ ;
+  			 var temp = page;
+  			 temp++ ;
 
-			  await this.$axios.get('/links?blk=' + temp)
-                .then( res => {
-					commit("setBlockNext", res.data)	  
-			   })               
-		 },	 
+  			  await this.$axios.get('/links?blk=' + temp)
+                  .then( res => {
+  					commit("setBlockNext", res.data)	  
+  			   })               
+		    },	 
   		 
+      	async setPayPrevious({ commit }, page ) {
+    	
+    		   commit("setPayPrevious");
+      		 
+      	},
 
-  		 async setPayPrevious({ commit }, page ) {
-	
-		   commit("setPayPrevious");
-  		 
-  		 },
-
-  		 async setPayNext( {commit}, page) {
+    async setPayNext( {commit}, page) {
 
   		 	 var temp = page;
 			   temp++ ;
-		
-			  await this.$axios.get('/links?pay=' + temp)
+			   await this.$axios.get('/links?pay=' + temp)
                 .then( res => {
 					commit("setPayNext", res.data)	  
 			   })               
-  		 
-  		  },
+  	},
 
-        async setSector( {commit}, sector) {
+    async setSector( {commit}, sector) {
 
         await this.$axios.get('/links?sector=' + sector)
                 .then( res => {
           commit("setSector", res.data)    
          })               
        
-        },
+     },
 
-        async setbyID( {commit}, sector) {
+    async setbyID( {commit}, sector) {
 
         await this.$axios.get('/links?id=' + sector)
                 .then( res => {
           commit("setSector", res.data)    
          })               
        
-        },
+     },
 
-       setSectorTab( {commit}, sector) {
+    setSectorTab( {commit}, sector) {
 
           commit("setTabForSector", sector)    
-           
-        },
+    },
 
-  		 async setInsurPrevious({ commit }, page ) {
+  	async setInsurPrevious({ commit }, page ) {
 	
 		   commit("setInsurPrevious");
   		 
-  		 },
+  	},
 
-  		 async setInsurNext( {commit}, page) {
+  	async setInsurNext( {commit}, page) {
 
-			var temp = page;
-			temp++ ;
-			  
-			await this.$axios.get('/links?ins=' + temp)
-                .then( res => {
-					commit("setInsurNext", res.data)	  
-			   })               
-		  },	 
+  			var temp = page;
+  			temp++ ;
+  			  
+  			await this.$axios.get('/links?ins=' + temp)
+                  .then( res => {
+  					commit("setInsurNext", res.data)	  
+  			 })               
+		 },	 
 
       async setSearchTab( {commit}, topic) {
-
-              commit("setSearchTab", topic);
-         
-            },
-
+          commit("setSearchTab", topic);    
+      },
 
       async submitSearch( {commit}, topic) {
-      
         await this.$axios.get('/links?term=' + topic)
               .then( res => {
               commit("submitSearch", res.data)
         
-             })
-          },
-
-  		 
-      async setAllNews ( {commit}) {
-
-          commit("setAllNews", allNews); 
-
+         })
       },
 
+      async setAllNews ( {commit}) {
+          commit("setAllNews", allNews); 
+      },
 
-  		 async goLast( {commit}) {
-          		
-          		commit("setLast");
-  		 },	
+  	 async goLast( {commit}) {
+          commit("setLast");
+  	 },	
 
-  		 nuxtServerInit(vuexContext, context) {
+  	nuxtServerInit(vuexContext, context) {
 		   
-		   if (!this.firstNewsFetched) { 
+  		   if (!this.firstNewsFetched) { 
 
               return this.$axios.$get("/links?page=1")
               .then(data => {
                 vuexContext.commit("set", data);
               })
-		   }
-		   else {
-			  vuexContext.commit("set");
-		   }
+  		    }
 
-	      },   
+		     else {
+			     vuexContext.commit("set");
+		      }
+
+	   },   
 	      
-	}  
+	  }  
 
 	export const getters = {
       
     loadedNews(state) {
-        
       return state.pages[0];
-	  
 	  },
 
 	  payNewsFetched(state) {
 		
-	    if (state.payments.length)
-      {
+	    if (state.payments.length) {
         return true;
       } 
+
       else {
         return false;
       }
@@ -1203,7 +1177,6 @@ export const mutations = {
 	  blockNewsFetched(state) {
 		
       if (state.blockchain.length) {
-
         return true;
       } 
       
@@ -1214,17 +1187,16 @@ export const mutations = {
 	   },
 	  
 	  pageArryLength(state) {
-		
-		return state.pages.length;
-	  
+
+		    return state.pages.length;
 	  },
 
 	  bankPostsFetched(state) {
 
-	    if (state.banking.length)
-      {
+	    if (state.banking.length) {
         return true;
       } 
+
       else {
         return false;
       }
@@ -1258,11 +1230,13 @@ export const mutations = {
 	  
 	  firstNewsFetched(state) {
 	
-     if (state.pages[0].length)
-      {
+     if (state.pages[0].length) {
+
         return true;
       } 
+
       else {
+
         return false;
       }  
 
@@ -1271,16 +1245,16 @@ export const mutations = {
 
 	  mergerNewsFetched (state) {
 
-      if (state.mergers.length)
-      {
+      if (state.mergers.length) {
         return true;
       } 
+
       else {
+
         return false;
       }  
 
 	  },
-
 
 	  aiNewsFetched (state) {
 	
@@ -1294,13 +1268,12 @@ export const mutations = {
 		
 	  },
 
-
 	  healthNewsFetched (state) {
 
-	    if (state.healthtech.length)
-      {
+	    if (state.healthtech.length) {
         return true;
       } 
+
       else {
         return false;
       }  
@@ -1310,10 +1283,11 @@ export const mutations = {
 
 	  perNewsFetched (state) {
 
-      if (state.personalfinance.length)
-      {
+      if (state.personalfinance.length) {
+
         return true;
       } 
+
       else {
         return false;
       }    
@@ -1322,49 +1296,47 @@ export const mutations = {
 
 	  capitalNewsFetched (state) {
 
-      if (state.capitalmarkets.length)
-      {
+      if (state.capitalmarkets.length) {
         return true;
       } 
+
       else {
         return false;
       }    
-
 
 	  },
 
   	  realNewsFetched (state) {
 
-
-      if (state.realestate.length)
-      {
+      if (state.realestate.length) {
         return true;
       } 
-      else {
-        return false;
-      }  
 
-	  },
+      else {
+          return false;
+        }  
+
+	   },
 
 	   regNewsFetched (state) {
 
-      if (state.regtech.length)
-      {
+      if (state.regtech.length) {
         return true;
       } 
+
       else {
         return false;
       } 
 
 	  },
 
-
-	 cyberNewsFetched (state) {
+	  cyberNewsFetched (state) {
 
 	    if (state.cyberidentity.length)
       {
         return true;
       } 
+
       else {
         return false;
       }
@@ -1374,89 +1346,82 @@ export const mutations = {
 
 	  generalNewsFetched (state) {
 
-	    if (state.general.length)
-      {
+	    if (state.general.length) {
         return true;
       } 
+
       else {
         return false;
       }
 
 	  },
 
-
  	  wealthNewsFetched (state) {
 
-	    if (state.wealthtech.length)
-      {
+	    if (state.wealthtech.length) {
         return true;
       } 
+
       else {
         return false;
       }   
-
 
 	  },
 
 
   	openNewsFetched (state) {
 
-	    if (state.openbanking.length)
-      {
+	    if (state.openbanking.length) {
         return true;
       } 
+
       else {
         return false;
       }
-
 
 	  },
 
 
   	remitNewsFetched (state) {
 
-         if (state.remittance.length)
-         {
-         return true;
-         } 
-         else {
-          return false;
-         }
+      if (state.remittance.length) {
+          return true;
+      } 
+
+      else {
+         return false;
+      }
 
 	  },
-
 
 	  neoNewsFetched (state) {
 
-	    if (state.neobank.length)
-      {
+	    if (state.neobank.length) {
         return true;
       } 
+
       else {
         return false;
       }
 
 	  },
 
-
 	  valNewsFetched (state) {
 	 
-      if (state.valuation.length)
-      {
+      if (state.valuation.length) {
         return true;
       } 
+
       else {
         return false;
       }
 
-	
 	  },
 
       
     firstpage(state) {
-	
+
 		  return state.pages[0] ;
-	
 	  },
 	 
 	  insurNews(state) {
@@ -1479,23 +1444,47 @@ export const mutations = {
 		  return state.pages[item];	
 	  },
 	
-	 activeNewsePage(state) {
+	 activeNewsPage(state) {
 		
 		 return state.numNewsPage;
 	 },
-	
-	 prevArryVal() {
 
-	 	var val = this.activeNewsPage();
-			val--;
-		if (val>= 0)
-		{
-			return val;
-		}
-		else
-		{
-			return 0;
-		}
+  allNewsLoaded(state) {
+
+    if (state.allNews.length) {
+      return true;
+    }
+
+    else {
+      return false;
+    }
+  
+  },
+
+  totalAllNews(state) {
+
+    if (this.allNewsLoaded) {
+      return state.allNews.length;
+    }
+
+    else {
+      return 0;
+    }
+
+  },
+
+	
+	 prevArryVal(state) {
+
+  	 	var val = state.numNewsPage();
+  			val--;
+  		if (val>= 0) {
+  			return val;
+  		}
+
+  		else {
+  			return 0;
+  		}
 	 
 	 },	 
 

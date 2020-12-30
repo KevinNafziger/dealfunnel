@@ -31,7 +31,6 @@ export const state = () => ({
 export const mutations = {
 
    setAllCompanies(state, items) {
-
       state.allCompanies = items;
    },
 
@@ -54,7 +53,6 @@ export const mutations = {
    setCompany(state, item) {
 
   	state.activeCompany = item; 
-
     },
 
 
@@ -68,7 +66,7 @@ export const mutations = {
     },
 
 
-   setBlock(state, data){
+   setBlock(state, data) {
 
   	 state.blockchain = data;
   	 state.activeInfo = data;
@@ -77,8 +75,7 @@ export const mutations = {
     
     },
 
-
-   setPay(state, data){
+   setPay(state, data) {
 
    	 state.payments = data;
      state.activeInfo = data;
@@ -86,7 +83,6 @@ export const mutations = {
   	 state.firstLoad =false;
 
   	},
-
 
    setLend(state, data){
 
@@ -107,7 +103,6 @@ export const mutations = {
 
   	},
 
-	
 	setInsurNoFetch(state){
 
 	 state.activeInfo = state.insurtech;
@@ -116,12 +111,11 @@ export const mutations = {
 	
 	 },
 
-
 	setBlockNoFetch(state) {
 
 	 state.activeInfo = state.blockchain;
 	 state.activeTab = 'Blockchain';	
-	 state.firstLoad =false;	
+	 state.firstLoad = false;	
 
 	 },
 
@@ -213,7 +207,6 @@ export const mutations = {
 	 
 	 },
 
-
 	 setUS1(state, data) {
 
 	  state.activeInfo = data;
@@ -252,13 +245,11 @@ export const mutations = {
 	 
 	 },
 
-
 	 setUS2NoFetch(state) {
 
 	  state.activeInfo =  state.US2
 	  state.activeTab ='US Page 2';	
 	  state.firstLoad = false;
-
 	  },
 
 	 setUS3NoFetch(state) {
@@ -266,7 +257,6 @@ export const mutations = {
 	  state.activeInfo = state.US3
 	  state.activeTab ='US Page 3';	
 	  state.firstLoad = false;
-	 
 	 },
 
 	 submitSearch(state, data) {
@@ -277,31 +267,29 @@ export const mutations = {
       },
 
       setSearchTab(state, topic) {
-
     	state.activeTab = topic ;
-
       },
 
   }
 
- export const actions = {
+  export const actions = {
 
        	 async setInsur({ commit }) {
 
 			if (!this.insurFetched) {
 
-				await this.$axios.get('/companies?category=insurtech')
-           		.then(res => {
+			  await this.$axios.get('/companies?category=insurtech')
+           		 .then(res => {
           			commit("setInsur", res.data);
-         		})
-			}
+         		 })
+			 }
 
-			else {
+			 else {
 
 				commit("setInsurNoFetch");
-			}	
+			 }	
 
-		},
+		 },
 
 
   		 async setBlock({ commit }) {
@@ -347,8 +335,8 @@ export const mutations = {
 						  commit("setLend", res.data);
 			         })
 				}
-			   else if (origin =="notFromLoad")  {	
 
+			   else if (origin =="notFromLoad")  {	
 					commit("setLendNoFetch");
 			    }
   		 
@@ -424,11 +412,9 @@ export const mutations = {
 		      		})
 		      }
 
-		      else {
-				
-				commit("setUS1NoFetch" );
-		       }
-
+			  else {
+					commit("setUS1NoFetch" );
+			    }
  		    },
 
 
@@ -450,73 +436,62 @@ export const mutations = {
  		    },
 
 
- 		    async setUS3({ commit }) {
+ 		 async setUS3({ commit }) {
 
+           	if (!this.US2Fetched) {
 
-           	 if (!this.US2Fetched) {
+		   		await this.$axios.get('/companies?US=3')
+		      		.then(item => {
+		        		commit("setUS3", item.data);
+		      		})
+	 		}
 
-	   		 await this.$axios.get('/companies?US=3')
-	      		.then(item => {
-	        		commit("setUS3", item.data);
-	      		})
- 		     }
+	 		else { 	
+					commit("setUS3NoFetch" );
+			 }
+		 	
+		  },	
 
- 		     else {
-				
-				commit("setUS3NoFetch" );
-		       }
- 		    },
+ 		  async asyncData({context}, id ) {
 
-
-
- 		   async asyncData({context}, id ) {
-
-	   		 await context.$axios.$get('/companies?item' + id)
+	   		await context.$axios.$get('/companies?item' + id)
 	      		.then(item => {
 	        		commit("set", item);
 	      		})
- 		    },
+	      },
+  		  
+  		  async setSearchTab( {commit}, topic) {
 
-
-  		    async setSearchTab( {commit}, topic) {
-
-          		commit("setSearchTab", topic);
+       		commit("setSearchTab", topic);
       	 
-      	    },
+      	  },
 
-      	   async setAllCompanies ( {commit}) {
+      	  async setAllCompanies ( {commit}) {
 
-           		commit("setAllCompanies", allCompanies); 
+             commit("setAllCompanies", allCompanies); 
 
            },
 
-
-  		    async submitSearch( {commit}, topic) {
+  		   async submitSearch( {commit}, topic) {
 			
-			  await this.$axios.get('/companies?term=' + topic)
-              .then( res => {
-          		commit("submitSearch", res.data)
-      	
-      	 	   })
+				await this.$axios.get('/companies?term=' + topic)
+	             .then( res => {
+	          		commit("submitSearch", res.data)
+	      	 	 })
   		    },	
 
   		    async setAll( {commit}) {
-			
           		commit("setAll");
-
   		    },	
-
-
 
   		    nuxtServerInit(vuexContext, context) {
 		   
                return this.$axios.$get("/companies?US=1")
               .then(res => {
                 vuexContext.commit("setUS1", res);
-              })
+                })
 	       
 	         },
-
 	 } 
 
 
@@ -529,94 +504,85 @@ export const mutations = {
 	  
 	  },
 
-
 	  payFetched(state) {
 		
-	    if (state.payments.length)
-        {
-         return true;
+	    if (state.payments.length) {
+         	return true;
         } 
+
         else {
-        return false;
+        	return false;
         } 
+	  
 	  },
 
 
 	  blockFetched(state) {
 		
-		  if (state.blockchain.length)
-	      {
+		  if (state.blockchain.length) {
 	        return true;
 	      } 
 	      else {
 	        return false;
 	      } 	
-
 	  },
 
 	  
 	  bankFetched(state) {
 
-		  if (state.banking.length)
-	      {
+		  if (state.banking.length) {
 	        return true;
 	      } 
+
 	      else {
 	        return false;
 	      } 
-	 
 	  },
 
 
 	  insurFetched(state) {
 		 
-	  	if (state.insurtech.length)
-      	{
-        return true;
+	  	if (state.insurtech.length) {
+        	return true;
       	} 
       	else {
-        return false;
+       		return false;
       	} 
-
 	  
 	  },
 
 	  
 	  lendFetched(state)  {
 	
-	  	if (state.lending.length)
-      	{
-        	return true;
-      	} 
-      	else {
-        	return false;
-      	} 
-
-
+		  if (state.lending.length) {
+	        	return true;
+	      } 
+	      else {
+	        
+	        	return false;
+	      } 
 	  },
 
 	  
 	  pastInit(state) {
 
+		  if (state.firstLoad) {
 
-		  if (state.firstLoad)
-	      {
 	        return false;
 	      } 
+
 	      else {
 	        return true;
 	      } 
 
-
 	  },
-
 
 	  firstCompaniesFetched(state) {
 	
-		   if (state.US.length)
-	      {
+		   if (state.US.length) {
 	        return true;
 	      } 
+
 	      else {
 	        return false;
 	      } 
@@ -649,87 +615,78 @@ export const mutations = {
 	 
 	  },
 
-
 	  currCompany: (state, id ) => {
 
 	  	  return state.activeInfo.find(c => c.id == id);
-
 	  },	
 
 
 	  US1Fetched(state) {
 
-	  	 if (state.US1.length)
-	      {
+	  	if (state.US1.length) {
 	        return true;
 	      } 
-	      else {
+
+	    else {
 	        return false;
 	 	 }	
 
 	  },
 
-
 	  US2Fetched(state) {
 
-	  if (state.US2.length)
-	      {
-	        return true;
-	      } 
-	      else {
-	        return false;
-	 	 }
-
-
-	  },
-
-
+		if (state.US2.length) {
+		     return true;
+		 } 
+		 
+		else  {
+		     return false;
+		  }
+	   },
 
 	  US3Fetched(state) {
 
-	  	 if (state.US3.length)
-	      {
+	  	if (state.US3.length) {
 	        return true;
 	      } 
-	      else {
+	    
+	    else {
 	        return false;
 	 	 }
-	   	
-	  },
-
+	   },
 
 	  USFetched(state) {
 
-	 	 if (state.US.length)
-	      {
-	        return true;
-	      } 
-	      else {
-	        return false;
-	 	 }
-	 },
+		  if (state.US.length) {
+		     return true;
+		  } 
 
-   allCompaniesFetched(state) {
+		  else {
+		     return false;
+		  }
+	  },
 
-    if (state.allCompanies.length) {
-      return true;
-    }
-    else {
-      return false;
-    }
-  
-  },
+     allCompaniesFetched(state) {
 
-  totalAllCompanies(state) {
+	    if (state.allCompanies.length) {
+	      return true;
+	    }
 
+	    else {
+	      return false;
+	    }
 
-    if (state.all.Companies.length) {
-      return state.allCompanies.length;
-    }
-    else {
-      return 0;
-    }
+ 	 },
 
-  }
+  	totalAllCompanies(state) {
+
+	    if (state.all.Companies.length) {
+	      return state.allCompanies.length;
+	    }
+
+	    else {
+	      return 0;
+	    }
+  	}
 
 }

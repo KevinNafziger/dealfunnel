@@ -8,10 +8,8 @@
 
             <br>
             <h2>Raises
-
                 <i style="font-size: 13px; text-align:right; margin-left:3px;">{{ filterMessage}}
                 </i>
-
             </h2>
 
           </div>
@@ -76,12 +74,13 @@
 
         <td>
           <div id="myCompanyTag" >
-            {{raise.company}}
+              <nuxt-link :to="'/companies/' + raise.company_id " > {{raise.company}}  </nuxt-link>
           </div>
         </td>
 
         <td>
-          <div class="valuebtn">          {{raise.amount}}
+          <div class="valuebtn">
+              {{raise.amount}}
           </div>
         </td>
 

@@ -129,19 +129,20 @@ import {mapState, mapMutations} from 'vuex';
 export default {
 
 computed: {
-  ...mapState({
+    ...mapState({
           loadedPosts: pages => state.pages.pages[0],
           //post:  state.posts.post
 
-   }),
+      }),
    },
 
-async fetch({store}) {
-  store.dispatch("posts/nuxtServerInit")
-  store.dispatch("posts/setAllPosts")
-  store.dispatch("company/setAllCompanies")
-  store.dispatch("news/setAllNews")
-},
+    async fetch({store}) {
+    
+      store.dispatch("posts/nuxtServerInit")
+      store.dispatch("posts/setAllPosts")
+      store.dispatch("company/setAllCompanies")
+      store.dispatch("news/setAllNews")
+    },
 
 }
 
@@ -154,90 +155,102 @@ a {
   color:#ffffff;
   text-decoration: none !important;
 }
+
 body{
-margin:0;
-padding:0;
-width:100%;
-height:100%;
-font-family:arial !important;
+
+  margin:0;
+  padding:0;
+  width:100%;
+  height:100%;
+  font-family:arial !important;
 }
 .header-container {
+
   box-shadow: 0 1px 3px 0 #a5a5a5 !important;
 }
-.testimonials{
-font-family:arial !important;
-margin:200px auto 100px;
-display:grid;
-grid-template-columns: repeat(auto-fit,minmax(350px, 1fr));
-grid-gap:20px;
-padding-bottom: 200px;
-}
-.testimonials .card{
-position:relative;
-width:350px;
-margin:0 auto;
-background:#0616217a;
-padding:20px;
-box-sizing: border-box;
-text-align:center;
-box-shadow:0 10px 40px gray;
-overflow: hidden;
-}
-.testimonials .card .layer{
-position: absolute;
-top: calc(100% - 3px);
-width:100%;
-height:100%;
-left:0;
-background:linear-gradient( #4f81B4, #4F81BD);
-z-index:1;
-transition:0.5s;
-}
-.testimonials .card:hover .layer{
-top:0;
-}
-.testimonials .card .content{
-position:relative;
-z-index:2;
-}
-.testimonials .card .content p{
-font-size:18px;
-line-height:24px;
-color:#FFF;
-}
-.testimonials .card .content .image{
-width:100px;
-height:100px;
-margin: 0 auto;
-border-radius:50%;
-overflow:hidden;
-box-shadow: 0 10px 20px gray;
-}
-.testimonials .card .content .details h2{
-font-size:15px;
-color:#fff !important;
-margin-top:20px;
-}
+  .testimonials {
 
-.testimonials .card .content .details h2 span{
-color:#ffffff;
-font-size:12px;
-transtion:0.5s;
-}
-.testimonials .card:hover .content .details h2 span{
-color:#fff;
-}
+    font-family:arial !important;
+    margin:200px auto 100px;
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(350px, 1fr));
+    grid-gap:20px;
+    padding-bottom: 200px;
+  }
 
-@media screen and (max-width:1550px) {
+  .testimonials .card{
+      position:relative;
+      width:350px;
+      margin:0 auto;
+      background:#0616217a;
+      padding:20px;
+      box-sizing: border-box;
+      text-align:center;
+      box-shadow:0 10px 40px gray;
+      overflow: hidden;
+    }
+
+    .testimonials .card .layer {
+    position: absolute;
+    top: calc(100% - 3px);
+      width:100%;
+      height:100%;
+      left:0;
+      background:linear-gradient( #4f81B4, #4F81BD);
+      z-index:1;
+      transition:0.5s;
+  }
+
+  .testimonials .card:hover .layer{
+  top:0;
+  }
+  .testimonials .card .content{
+  position:relative;
+  z-index:2;
+  }
+
+  .testimonials .card .content p {
+  font-size:18px;
+  line-height:24px;
+  color:#FFF;
+  }
+
+  .testimonials .card .content .image{
+  width:100px;
+  height:100px;
+  margin: 0 auto;
+  border-radius:50%;
+  overflow:hidden;
+  box-shadow: 0 10px 20px gray;
+  }
+
+ .testimonials .card .content .details h2 {
+ font-size:15px;
+ color:#fff !important;
+ margin-top:20px;
+ }
+
+ .testimonials .card .content .details h2 span{
+  color:#ffffff;
+  font-size:12px;
+  transtion:0.5s;
+ }
+.testimonials .card:hover .content .details h2 span { color:#fff;
+
+ }
+
+ @media screen and (max-width:1550px) {
   .img-G {
     display: none;
   }
 }
+
 .img-G {
   right: 140px;
   position: absolute;
   top: 290px;
 }
+
 .gardient-button {
     background-image: linear-gradient(200deg, #4F81BD 10%, #4F81BD 39%, #8ab4f8 80%);
     background-size: 400% 400% !important;
@@ -254,9 +267,11 @@ color:#fff;
     transition: 1s;
     margin-top: 50px;
 }
+
 .gardient-button:hover {
   box-shadow: 0px 1px 10px -3px dimgray;
-}
+  }
+
 .execspottittle {
     font-size: 40px;
     background: -webkit-linear-gradient(#6b69ca, rgba(20, 160, 253, 0.82));
@@ -264,7 +279,8 @@ color:#fff;
     -webkit-text-fill-color: transparent;
     color: rgba(20, 160, 253, 0.82);
     padding: 15px;
-}
+  }
+
 .featuredmenusection {
     padding: 10px;
     border-radius: 10px;
@@ -281,11 +297,13 @@ color:#fff;
 .featuredmenusection:hover {
   box-shadow: 0px 0px 10px -5px dimgray;
 }
+
 .rem-img {
   top: 350px;
   left: 8rem;
   position: absolute;
 }
+
 @media screen and (max-width:1550px) {
   .rem-img {
     top: 300px;

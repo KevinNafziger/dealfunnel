@@ -18,7 +18,7 @@ export const state = () => ({
   spinoffs: [],
   mergers: [],
   advisors: [],
-
+  newsletters: [],
   activeArtInfo: [],
   activeBuildInfo: [],
   activeDataInfo: [],
@@ -3437,6 +3437,29 @@ export const mutations = {
        
        },
 
+      async setNewsletters( {commit}, page) {
+
+
+        if (!this.newslettersFetched) {
+ 
+            await this.$axios.get('/posts?storytype=Newsletter' + temp)
+                    .then( res => {
+              commit("setNewsletters", res.data)    
+             })  
+
+         } 
+
+         else {
+              
+              commit("setBlockNextNoFetch")  
+
+         }            
+    
+       },  
+       
+
+
+
        async setBlockNext( {commit}, page) {
 
         if (!this.firstPostsFetched) {
@@ -3515,31 +3538,27 @@ export const mutations = {
 
 	export const getters = {
       
-      loadedPosts(state) {
-        
+    loadedPosts(state) {
         return state.pages[0];
-	  
-	  },
+	   },
 
-	  payPostsFetched(state) {
+	   payPostsFetched(state) {
 
-		  if (state.payments.length)
-      {
-        return true;
-      } 
-      else {
-        return false;
-      }
-		
-	  
+  		  if (state.payments.length){
+          return true;
+        } 
+
+        else {
+          return false;
+        }
 	  },
 
 	  blockPostsFetched(state) {
 		
-		  if (state.blockchain.length)
-      {
+		  if (state.blockchain.length) {
         return true;
       } 
+
       else {
         return false;
       }
@@ -3548,12 +3567,11 @@ export const mutations = {
 	  
 	  pageArryLength(state) {
 	
-      if (state.pages.length)	
-		  {
+      if (state.pages.length)	{
         return state.pages.length;
       }
-      else
-      {
+
+      else {
         return 0;
       }  
 	  
@@ -3561,23 +3579,23 @@ export const mutations = {
 
 	  bankPostsFetched(state) {
 
-      if (state.banking.length)
-      {
+      if (state.banking.length) {
+
         return true;
       } 
+
       else {
         return false;
       }
 	 
 	  },
 
-
 	  AIPostsFetched(state) {
 
-	  	if (state.AI.length)
-      {
+	  	if (state.AI.length) {
         return true;
       } 
+
       else {
         return false;
       }
@@ -3587,10 +3605,11 @@ export const mutations = {
 
 	  insurPostsFetched(state) {
 		 
-      if (state.insurtech.length)
-      {
+      if (state.insurtech.length) {
+
         return true;
       } 
+
       else {
         return false;
       }
@@ -3600,23 +3619,22 @@ export const mutations = {
 
 	  lendPostsFetched(state)  {
 	
-	    if (state.lending.length)
-      {
+	    if (state.lending.length) {
         return true;
       } 
+
       else {
         return false;
       }
 
 	  },
 	  
-
 	  regPostsFetched(state)  {
 	
-      if (state.regtech.length)
-      {
+      if (state.regtech.length) {
         return true;
       } 
+
       else {
         return false;
       }
@@ -3625,23 +3643,22 @@ export const mutations = {
 
 	  healthPostsFetched(state)  {
 	
-     if (state.healthtech.length)
-      {
+     if (state.healthtech.length) {
         return true;
       } 
+
       else {
         return false;
       }
-
 
 	  },
 
 	  firstPostsFetched(state) {
 
-      if (state.pages[0].length)
-      {
+      if (state.pages[0].length) {
         return true;
       } 
+
       else {
         return false;
       }
@@ -3650,10 +3667,10 @@ export const mutations = {
 
 	  wealthPostsFetched(state) {
 	
-		  if (state.wealthtech.length)
-      {
+		  if (state.wealthtech.length) {
         return true;
       } 
+
       else {
         return false;
       }
@@ -3662,10 +3679,10 @@ export const mutations = {
 
 	  advisorPostsFetched(state) {
 
-	    if (state.advisors.length)
-      {
+	    if (state.advisors.length) {
         return true;
       } 
+
       else {
         return false;
       }
@@ -3674,10 +3691,10 @@ export const mutations = {
 
 	  capitalPostsFetched(state) {
 	
-      if (state.capitalmarkets.length)
-      {
+      if (state.capitalmarkets.length) {
         return true;
       } 
+
       else {
         return false;
       } 
@@ -3687,10 +3704,10 @@ export const mutations = {
 
 	  realPostsFetched(state) {
 	
-		  if (state.realestate.length)
-      {
+		  if (state.realestate.length) {
         return true;
       } 
+
       else {
         return false;
       }
@@ -3699,34 +3716,34 @@ export const mutations = {
 
 	  valPostsFetched(state) {
 	
-		  if (state.valuation.length)
-      {
+		  if (state.valuation.length) {
         return true;
       } 
+
       else {
         return false;
       }
+
 	  },
 
 	  mergerPostsFetched(state) {
 	
-		 if (state.mergers.length)
-      {
+		 if (state.mergers.length){
         return true;
-      } 
+     } 
+
       else {
         return false;
       }
 	  
     },
       
-
     spinPostsFetched(state) {
 	
-		  if (state.spinoffs.length)
-      {
+		  if (state.spinoffs.length) {
         return true;
       } 
+
       else {
         return false;
       }
@@ -3735,10 +3752,10 @@ export const mutations = {
 
      first(state) {
   
-      if (state.firstArtLoad == true)
-      {
+      if (state.firstArtLoad == true){
         return true;
       } 
+
       else {
         return false;
       }
@@ -3747,121 +3764,106 @@ export const mutations = {
 
 
 	  bootPostsFetched(state) {
-	
-		return state.bootstrapped.length > 0;
+		  return state.bootstrapped.length > 0;
 	  },
 
-
 	  growthPostsFetched(state) {
-	
-	    if (state.growthequity.length)
-      {
+
+	    if (state.growthequity.length) {
         return true;
       } 
+
       else {
         return false;
       }
 
     },
       
-      
-    firstpage(state) {
-	
+    firstpage(state) {	
 		  return state.pages[0] ;
-	
 	  },
 	 
 	  insurPosts(state) {
-	
 		  return state.insurtech;
 	  },
 	 
 	  lendPosts(state) {
-	
-		 return state.lending;
-	  
+		  return state.lending;
     },
 	  
 	  bankPosts(state) {
-	
-		return state.banking;
+		  return state.banking;
 	  },	
 	  
 	  pagesArry(state,item) {
-	
-		return state.pages[item];	
-	 },
+		  return state.pages[item];	
+	  },
 	
 	 activeArtPage(state) {
-		
 		 return state.numArtPage;
 	 },
 
 	 activeBuildPage(state) {
-
 	 	 return state.numBuildPage;
 	 },
 
 	 activeView(state) {
-
 	 	 return state.activeView;
-
 	 },
 
 	 Q320PostsFetched(state) {
 
-	 	 if (state.Q320.length)
-      {
+	 	 if (state.Q320.length) {
         return true;
-      } 
-      else {
-        return false;
-      }
-	 },
+     } 
+
+     else {
+          return false;
+        }
+	  },
 
 	 Q420PostsFetched(state) {
 
-      if (state.Q420.length)
-      {
+      if (state.Q420.length) {
         return true;
       } 
+
       else {
         return false;
       }
 
 	 },
 	 
-	  Q121PostsFetched(state) {
+	 Q121PostsFetched(state) {
 
-	    if (state.Q121.length)
-      {
+	    if (state.Q121.length) {
         return true;
       } 
+
       else {
         return false;
       }
-
 
 	 },
 	 
 	  Q221PostsFetched(state) {
 
-      if (state.Q221.length)
-      {
+      if (state.Q221.length) {
         return true;
       } 
+      
       else {
         return false;
       }
 	 	
-	 },
+	  },
 	 
 	 Q321PostsFetched(state) {
 
-	    if (state.Q321.length)
-      {
+	    if (state.Q321.length){
         return true;
       } 
+
       else {
         return false;
       }
@@ -3870,10 +3872,10 @@ export const mutations = {
 	 
 	 Q421PostsFetched(state) {
 
-	 	  if (state.Q421.length)
-      {
+	 	  if (state.Q421.length) {
         return true;
       } 
+
       else {
         return false;
       }
@@ -3881,10 +3883,10 @@ export const mutations = {
 
 	 zerotoonePostsFetched(state) {
 
-	 	  if (state.zerotoone.length)
-      {
+	 	  if (state.zerotoone.length){
         return true;
       } 
+
       else {
         return false;
       }
@@ -3893,10 +3895,10 @@ export const mutations = {
 
 	 onetofivePostsFetched(state) {
 
-	 	  if (state.onetofive.length)
-      {
+	 	  if (state.onetofive.length) {
         return true;
-      } 
+      }
+
       else {
         return false;
       }
@@ -3905,13 +3907,13 @@ export const mutations = {
 
   fivetotenPostsFetched(state) {
 
-      if (state.fivetoten.length)
-      {
-        return true;
-      } 
-      else {
-        return false;
-      }
+    if (state.fivetoten.length) {
+      return true;
+    } 
+
+    else {
+      return false;
+    }
 
    },
 
@@ -3920,7 +3922,8 @@ export const mutations = {
       if (state.tentotwenty.length)
       {
         return true;
-      } 
+      }
+
       else {
         return false;
       }
@@ -3929,10 +3932,10 @@ export const mutations = {
 
 	 twentytofiftyPostsFetched(state) {
 
-      if (state.twentytofifty.length)
-      {
+      if (state.twentytofifty.length) {
         return true;
       } 
+
       else {
         return false;
       }
@@ -3941,10 +3944,10 @@ export const mutations = {
 
 	 fiftytohundredPostsFetched(state) {
 
-      if (state.fiftytohundred.length)
-      {
+      if (state.fiftytohundred.length){
         return true;
       } 
+
       else {
         return false;
       }
@@ -3953,23 +3956,23 @@ export const mutations = {
 
 	 hundredplusPostsFetched(state) {
 
-	   if (state.hundredplus.length)
-      {
+	   if (state.hundredplus.length) {
         return true;
       } 
-      else {
+
+     else {
         return false;
       }
 
-	 },
+	  },
 
 
    latinPostsFetched(state) {
 
-      if (state.latin.length)
-      {
+      if (state.latin.length) {
         return true;
       } 
+
       else {
         return false;
       }
@@ -3978,10 +3981,10 @@ export const mutations = {
 
    europePostsFetched(state) {
 
-      if (state.europe.length)
-      {
+      if (state.europe.length) {
         return true;
       } 
+
       else {
         return false;
       }
@@ -3990,36 +3993,35 @@ export const mutations = {
 
    canadaPostsFetched(state) {
 
-     if (state.canada.length)
-      {
+     if (state.canada.length){
         return true;
       } 
-      else {
+
+    else {
         return false;
       }
-
 
    },
 
   nycPostsFetched(state) {
 
-      if (state.nyc.length)
-      {
+      if (state.nyc.length){
+
         return true;
       } 
+
       else {
         return false;
       }
      
-
    },
 
    southPostsFetched (state) {
 
-      if (state.south.length)
-      {
+      if (state.south.length) {
         return true;
       } 
+
       else {
         return false;
       } 
@@ -4028,10 +4030,10 @@ export const mutations = {
 
    southwestPostsFetched (state) {
 
-      if (state.southwest.length)
-      {
+      if (state.southwest.length) {
         return true;
       } 
+
       else {
         return false;
       }
@@ -4040,75 +4042,72 @@ export const mutations = {
 
    southeastPostsFetched (state) {
 
-      if (state.southeast.length)
-      {
+      if (state.southeast.length) {
         return true;
       } 
+
       else {
         return false;
       }
-
 
    },
 
    midwestPostsFetched (state) {
 
-     if (state.midwest.length)
-      {
+     if (state.midwest.length){
+
         return true;
       } 
-      else {
+
+     else {
         return false;
       }
-
 
    },
 
    carribeanPostsFetched (state) {
 
-     if (state.carribean.length)
-      {
-        return true;
+      if (state.carribean.length) {
+          return true;
       } 
+
       else {
-        return false;
+          return false;
       } 
 
    },
 
    africaPostsFetched (state) {
 
-     if (state.africa.length)
-      {
+     if (state.africa.length) {
         return true;
       } 
+
       else {
         return false;
       }
 
    },
-
 
 
    asiaPostsFetched (state) {
 
-      if (state.asia.length)
-      {
+      if (state.asia.length) {
         return true;
       } 
+
       else {
         return false;
       }
 
    },
 
-
    oceaniaPostsFetched (state) {
 
-     if (state.oceania.length)
-      {
+     if (state.oceania.length) {
         return true;
       } 
+
       else {
         return false;
       }
@@ -4117,10 +4116,10 @@ export const mutations = {
 
    mePostsFetched (state) {
 
-      if (state.mideast.length)
-      {
+      if (state.mideast.length) {
         return true;
       } 
+
       else {
         return false;
       }
@@ -4129,10 +4128,11 @@ export const mutations = {
 
    rockyPostsFetched (state) {
 
-      if (state.rocky.length)
-      {
+      if (state.rocky.length){
+
         return true;
       } 
+
       else {
         return false;
       }
@@ -4141,10 +4141,10 @@ export const mutations = {
 
    pacificPostsFetched(state) {
 
-    if (state.pacific.length)
-    {
+    if (state.pacific.length) {
       return true;
     } 
+
     else {
       return false;
     }
@@ -4153,35 +4153,35 @@ export const mutations = {
 
   socalPostsFetched(state) {
 
-    if (state.socal.length)
-    {
-      return true;
-    } 
-    else {
-      return false;
-    }
+      if (state.socal.length) {
+        return true;
+      } 
 
+      else {
+        return false;
+      }
 
    },
 
   siliconPostsFetched(state) {
 
-    if (state.silicon.length)
-    {
-      return true;
-    } 
-    else {
-      return false;
-    }
+      if (state.silicon.length) {
+        return true;
+      } 
+
+      else {
+        return false;
+      }
 
    },
 
   newenglandPostsFetched(state) {
 
-    if (state.newengland.length)
-    {
+    if (state.newengland.length) {
+
       return true;
     } 
+
     else {
       return false;
     }
@@ -4191,10 +4191,10 @@ export const mutations = {
 
   midatlanticPostsFetched(state) {
 
-    if (state.midatlantic.length)
-    {
+    if (state.midatlantic.length) {
       return true;
     } 
+
     else {
       return false;
     }
@@ -4203,94 +4203,91 @@ export const mutations = {
  
   allPostsLoaded(state) {
 
-    if (state.allPosts.length) {
-      return true;
-    }
-    else {
-      return false;
-    }
+      if (state.allPosts.length) {
+        return true;
+      }
+
+      else {
+        return false;
+      }
   
-  },
+    },
 
-  totalAllPosts(state) {
+   totalAllPosts(state) {
 
+      if (this.allPostsLoaded) {
+        return state.allPosts.length;
+      }
 
-    if (this.allPostsLoaded) {
-      return state.allPosts.length;
-    }
-    else {
-      return 0;
-    }
+      else {
+        return 0;
+      }
 
-  },
+    },
 
-  postsbyQuarter: (state, quarter ) => {
+    postsbyQuarter: (state, quarter ) => {
 
-    return state.allPosts.filter(function(elem, quarter) {
-          return elem.quarter == quarter ;
-          });
+      return state.allPosts.filter(function(elem, quarter) {
+            return elem.quarter == quarter ;
+      });
+    },  
 
-  },  
+    postsbyRegion: (state, region ) => {
 
-  postsbyRegion: (state, region ) => {
+      return state.allPosts.filter(function(elem, region) {
+            return elem.region == region ;
+      });
 
-    return state.allPosts.filter(function(elem, region) {
-          return elem.region == region ;
-          });
+     },
 
-   },
+    postsbyAmount: (state, amount ) => {
 
-  postsbyAmount: (state, amount ) => {
+      return state.allPosts.filter(function(elem, amount) {
+            return elem.amount == amount ;
+      });
 
-    return state.allPosts.filter(function(elem, amount) {
-          return elem.amount == amount ;
-          });
+     },
 
-   },
+     postsbyNextRound: (state, next_round ) => {
 
-   postsbyNextRound: (state, next_round ) => {
+      return state.allPosts.filter(function(elem, next_round) {
+            return elem.next_round == next_round ;
+       });
+     }, 
 
-    return state.allPosts.filter(function(elem, next_round) {
-          return elem.next_round == next_round ;
-          });
+    postsbyGrouping: (state, grouping ) => {
 
-   }, 
-
-  postsbyGrouping: (state, grouping ) => {
-
-    return state.allPosts.filter(function(elem, amount) {
+      return state.allPosts.filter(function(elem, amount) {
           return (elem.grouping1.toLowerCase() == grouping || elem.grouping2.toLowerCase() == grouping)
-          });
+      });
 
-   },    
+     },    
   
 
-	
 	 prevArryVal() {
 
-	 	if (this.activeView == "Articles") {
-	 		var val = this.activeArtPage();
-	 	}
-	 	else if (this.activeView == "Builder") {
+  	if (this.activeView == "Articles") {
+  	 		var val = this.activeArtPage();
+  	}
 
-	 		var val = this.activeBuildPage();
-	 	}
-    else{
+  	 else if (this.activeView == "Builder") {
+  	 		var val = this.activeBuildPage();
+  	 }
 
-      var val = this.dataPage();
-
-    }
+    else {
+        var val = this.dataPage();
+      }
 	
-		val--;
-		if (val>= 0)
-		{
-			return val;
-		}
-		else
-		{
-			return 0;
-		}
-	 
-	 },	 
+  		val--;
 
-	}
+  		if (val>= 0) {
+  			return val;
+  		}
+		
+      else {
+			  return 0;
+		  }
+	 
+	   },	 
+
+	 }

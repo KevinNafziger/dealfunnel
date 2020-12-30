@@ -1,227 +1,227 @@
+
+
+
+
 <template>
+<div class="main-div">
+<div class="col-A">
 
-<div style="tab-interval:.5in;word-wrap:break-word;" class="WordSection1">
-  <div id="kplstl">
-    <div class="comp-show-container w-col w-col-12 w-col-medium-12">
-      <div style="background-color:#E5E5E5;" class="card">
-         <div style="margin-left:10%; margin-top:10%;" class="w-col-5">
-                <div class="col-sm-5">
-                 <img class="nuxt__build_indicator2" :src="item.logo_item">
-                </div> 
-                <div class="col-sm-5">
-
-                   <div class="section-title nuxt__build_indicator">
-                      <span>
-                      {{ item.description }} 
-                      </span>
-                      <span v-if="posts.length==1" v-for="post in posts">
-                          <span v-if="!post.newdescript === '' && !post.summary ===''">
-                          <br><b>More:</b> {{item.name}}<br>
-                          </span>
-
-                          <span v-if="!post.newdescript ===''">
-                          {{post.newdescript}} <br></span>
-                      
-                            <span v-if="post.newdescript ==='' && post.summary !=''" >
-                            {{post.teaser }} {{post.summary}} <br>
-                            </span>
-                    </span>
-                   </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="nuxt__build_indicator3">
-                          <div><b>HQ: </b>{{ item.city }}
-                            {{ item.state }} {{item.country}} <br>
-                          </div>
-                          <div v-if="!(item.phone ==='')"><b>Phone: </b> {{item.phone}}</div>
-                          <div v-if="!(item.website ==='')"><b>Website: </b><a href="#" v-on:click="openItem(item.website)" > {{item.website}}</a></div> 
-                          <div v-if="item.website ==='' && posts.length==1" v-for="post in posts"><b>Website: </b><a href="#" v-on:click="openItem(post.website)" > {{post.website}}</a></div>
-                        <div v-if="!(item.founders ==='')">Founders: 
-                         {{item.founders}}
-                        </div>    
-                         <div v-if="!(item.founding_yr ==='')" >Founded: 
-                                    {{item.founding_yr}}
-                        </div>
-                        <div class="personal">
-                      
-                            <span v-if="!(item.facebook ==='')" >
-                              <a :href="item.facebook" class="btn btn-link" target="_blank" >
-                              <i class="fa-facebook">F</i></a>
-                            </span>
-                            <span v-if="!(item.twitter ==='')" >
-                              <a :href="item.twitter" class="btn btn-link" target="_blank" ><i class="fa fa-twitter">T</i></a>
-                            </span>
-                            <span v-if="!(item.linkedin ==='')" >
-                               <a :href="item.linkedin" class="btn btn-link" target="_blank" ><i class="fa fa-linkedin">L</i></a>
-                            </span>
-                            <span v-if="!(item.medium ==='')">
-                                <a :href="item.medium" class="btn btn-link" target="_blank" ><i class="fa fa-medium">M</i></a>
-                            </span>   
-                            <span v-if="!(item.github ==='')">
-                                <a :href="item.github" class="btn btn-link" target="_blank" ><i class="fa fa-github">G</i></a>
-                            </span>
-                            <span v-if="!(item.youtube ==='')">
-                                <a :href="item.youtube" class="btn btn-link" target="_blank" ><i class="fa fa-youtube">Y</i></a>
-                            </span>        
-                            <span v-if="!(item.pinterest ==='')">
-                               <a :href="item.pinterest" class="btn btn-link" target="_blank" ><i class="fa fa-pinterest">P</i></a>
-                            </span>
-                            <span v-if="!(item.slack ==='')">
-                                <a :href="item.slack" class="btn btn-link" target="_blank" ><i class="fa fa-slack">S</i></a>
-                            </span>
-                            <span v-if="!(item.googleplus ==='')">
-                              <a :href="item.googleplus" class="btn btn-link" target="_blank" ><i class="fa fa-google-plus-official">P</i></a>
-                            </span>
-                            <span v-if="!(item.reddit ==='')">
-                              <a :href="item.reddit" class="btn btn-link" target="_blank" ><i class="fa fa-reddit">R</i></a>
-                            </span>
-                            <span v-if="!(item.angellist ==='')">
-                               <a :href="item.angellist" class="btn btn-link" target="_blank" ><i class="fa fa-angellist">A</i></a>
-                            </span>
-                            <span v-if="!(item.skype ==='')" >
-                                <a :href="item.skype" class="btn btn-link" target="_blank" ><i class="fa fa-skype">S</i></a>
-                            </span>
-                            <span v-if="!(item.telegram ==='')">
-                             <a :href="item.telegram" class="btn btn-link" target="_blank" ><i class="fa fa-telegram">T</i></a>
-                            </span>
-                            <span v-if="!(item.wechat ==='')" >
-                             <a :href="item.wechat" class="btn btn-link" target="_blank" ><i class="fa fa-wechat">W</i></a>
-                            </span>
-                            <span v-if="!(item.tumblr ==='')" >
-                              <a :href="item.tumblr" class="btn btn-link" target="_blank" ><i class="fa fa-tumblr">Tbr</i></a>
-                            </span>
-                            <span v-if="!(item.chat ==='')">
-                              <a :href="item.chat" class="btn btn-link" target="_blank" ><i class="fa fa-comment">C</i></a>
-                            </span>
-                            <span v-if="!(item.discord ==='')">
-                            <a :href="item.discord" class="btn btn-link" target="_blank" ><i class="fa fa-discord">D</i></a>
-                            </span>
-                            <span v-if="!(item.wikipedia ==='')">
-                              <a :href="item.wikipedia" class="btn btn-link" target="_blank" ><i class="fa fa-wikipedia-w">W</i></a>
-                            </span>
-                             <span v-if="!(item.whitepaper ==='')">
-                                <a :href="item.whitepaper" class="btn btn-link" target="_blank" ><i class="fa fa-copy">P</i></a>
-                            </span>
-                            <div v-if="!(item.email ==='')">
-                            email: <span class="btn btn-link fa fa-envelope about-info-title" >{{item.email }}</span></div>
-                        </div> 
-                      </div>
-                  </div>    
-                      <div class="col-sm-4" v-if="posts" v-for="post in posts"> 
-                           <div class="nuxt__build_indicator3">
-                          <span v-if="post.interest"> 
-                          <b>Interesting fact: </b> {{ post.interest }}<br>
-                          </span>
-                          <span v-if="post.funding">
-                           total funding<br> {{post.funding}}
-                          <br></span>
-                          <span v-if="post.investors"  >Investors: {{post.investors }} 
-                          </span>
-                          </span v-if="!post.advisors.length == undefined && !post.advisors ==='' ">
-                           <b>Advisors</b>{{post.advisors }}<br>
-                          </span>
-                         </div>
-                      </div>
-
-                          <div v-if="raises" v-for="raise in raises" class="nuxt__build_indicator3">
-
-                          {{raise.item_date }}  <a :href="raise.url" class="btn btn-link" target="_blank" > {{raise.raise_type}} {{raise.other}}</a><br> {{raise.amount}}
-                           
-                            <br>Investors:{{raise.lead}} {{raise.participating}}
-                         </div>
-                      
-
-
-                       <div class="col-sm-4" v-if="!executives.length" v-for="post in posts">
-                          <img v-if="post.exec_url"class="nuxt__build_indicator2" :src="post.exec_url">
-                          <div class="nuxt__build_indicator3">
-                          {{post.execheader }} {{ post.execname}} 
-                          
-                        <span v-if="!(post.linkedIn === '' )">
-                        <i class="fa fa-linkedin">
-                        <a :href="post.linkedin" class="btn btn-link" target="_blank" >LinkedIn</a></i>
-                        </span>
-                       
-                        </div>
-
-
-                       <div class="col-sm-4" v-if="executives.length" v-for="executive in executives">
-                          <img class="nuxt__build_indicator2" :src="executive.pic_item">
-                          <div class="nuxt__build_indicator3">
-                          {{executive.title }} {{executive.first}} {{executive.last}}
-                          {{ executive.email}}
-                        <span v-if="!(executive.facebook === '' )">    
-                        <i class="fa fa-facebook">F</i>
-                        <a :href="executive.facebook" class="btn btn-link" target="_blank" >Facebook</a></i>
-                        </span>
-                        <span v-if="!(executive.twitterurl === '' )">
-                        <i class="fa fa-twitter"></i>
-                        <a :href= "executive.twitterurl" class="btn btn-link" target="_blank" >Twitter</a></i>
-                        </span>
-                        <span v-if="!(executive.linkedIn === '' )">
-                        <i class="fa fa-linkedin">
-                        <a :href="executive.linkedIn" class="btn btn-link" target="_blank" >LinkedIn</a></i>
-                        </span>
-                        <span v-if="!(executive.discord === '' )" >
-                        <a :href="executive.discord" class="btn btn-link", target="_blank" ><i>Discord</i></a>
-                        </span>
-                        <span v-if="!(executive.tumblr === '' )">
-                        <a :href= "executive.tumblr" class="btn btn-link" target="_blank" >Tumblr<i class="fa fa-tumblr"></i>T</a>
-                        </span>
-                        <span v-if="!(executive.medium === '' )">
-                        <a :href="executive.medium" class="btn btn-link" target="_blank" ><i class="fa fa-medium"></i>M</a>
-                        </span>
-                        <span v-if="!(executive.github === '' )">
-                        <a :href="executive.github" class="btn btn-link" target="_blank" ><i class="fa fa-github">G</i></a>
-                        </span>
-                        <span v-if="!(executive.pinterest === '' )">
-                        <a :href= "executive.pinterest" class="btn btn-link" target="_blank" ><i class="fa fa-pinterest"></i></a>
-                        </span>
-                        <span v-if="!(executive.googleplus ==='' )">
-                        <a :href="executive.googleplus" class="btn btn-link" target="_blank" ><i class="fa fa-google-plus-official"></i>G+</a>
-                        </span>
-                        <span v-if="!(executive.instagram === '' )">
-                        <a :href="executive.instagram" class="btn btn-link" target="_blank" ><i class="fa fa-instagram">I</i></a>
-                        </span>
-                        <span v-if="!(executive.reddit === '' )">
-                        <a :href="executive.reddit" class="btn btn-link" target="_blank" ><i class="fa fa-reddit">R</i></a>
-                        </span>
-                        <span v-if="!(executive.snapchat === '' )">
-                          <a :href="executive.snapchat" class="btn btn-link" target="_blank" ><i class="fab fa-snapchat">S</i></a>
-                        </span>
-                        <span v-if="!(executive.youtube ==='' )">
-                         <a :href="executive.youtube" class="btn btn-link" target="_blank" ><i class="fa fa-youtube"></i>Y</a>
-                        </span>
-                         <span v-if="!(executive.telegram === '')">
-                          <a :href="executive.telegram" class="btn btn-link" target="_blank" ><i class="fa fa-telegram">T</i></a>
-                        </span>
-                         <span v-if="!(executive.wechat === '' )">
-                          <a :href="executive.wechat" class="btn btn-link" target="_blank" ><i class="fa fa-wechat"></i>W</a>
-                         </span>
-                        <span v-if="!(executive.angellist === '' )">
-                             <a :href="executive.angellist" class="btn btn-link" target="_blank" ><i class="fa fa-angellist">A</i></a>
-                        </span>
-                        <span v-if="!(executive.skype === '' )">
-                          <a :href="executive.skype" class="btn btn-link" target="_blank" ><i class="fa fa-skype">S</i></a>
-                        </span>
-
-
-
-                        </div>
-                       
-
-                        </div>
-
-
-                  </div>    
-            </div>
-        
-      </div> 
+    <div v-if="item.logo_item" class="col-sm-5">
+        <img class="nuxt__build_indicator2" :src="item.logo_item">
     </div> 
-   </div> 
+  <br>
+
+  <div class="info-box"> 
+      <p>
+      {{ item.description }}
+      </p>
+  </div>
+  <br>
+
+  <div class="info-box">
+       <ul>
+
+          <li><b>Location:</b>{{   item.city }}
+            {{ item.state }}  {{item.country}}
+          </li>
+
+          <li v-if="item.phone"><b>Phone:</b>
+              {{item.phone}}
+          </li>
+
+          <li v-if="!(item.website ==='')"><b>Website:</b>
+            <a href="#" v-on:click="openItem(item.website)" > {{item.website}}</a>
+          </li>
+            
+           <li v-if="item.founders">
+            <b>Founders:</b>
+            {{item.founders}}
+           </li>
+          
+           <li v-if="item.founding_yr" >Founded:
+            {{item.founding_yr}}
+           </li>
+
+           <li>                      
+              <span class="mdi mdi-facebook" v-if="!(item.facebook ==='')" >                            
+                  <a :href="item.facebook" class="btn btn-link" target="_blank" ></a>
+              </span>      
+
+              <span class="mdi mdi-medium" v-if="!(item.medium ==='')">                              
+                 <a :href="item.medium" class="mdi mdi medium" target="_blank" ></a>                           
+              </span> 
+
+              <span class="mdi mdi-github" v-if="!(item.github ==='')">                             
+              <a :href="item.github" class="mdi mdi github" target="_blank" </a>    
+                </span>  
+
+            <span v-if="!(item.youtube ==='')" class="mdi mmdi-youtube">                            
+              <a :href="item.youtube" class="btn btn-link" target="_blank" ></a>                                  
+            </span>
+
+           <span v-if="!(item.pinterest ==='')" class="mdi mdi-pinterest">                             
+              <a :href="item.pinterest" class="btn btn-link" target="_blank" ></a>
+            </span>
+        </li>  
+
+        <li>
+          <span v-if="!(item.email ==='')"> Email: <span class="btn btn-link mdi mdi-envelope about-info-title" >{{item.email }}
+          </span></span>
+        </li>
+
+      </ul> 
+  </div>
 </div>
 
+ <div class="col-B">
 
+
+     <div class="key-management"  v-if="!executives.length"  v-for="post in posts">  
+      <h3>key management</h3>
+     <div class="exec-comp-div">
+      <div  class="comp-exec-1">
+          <div><img v-if="!(executive.pic_item=== undefined)" class="exec-image" >     {{executive.pic_item}}</img>
+          </div>
+        
+          <div><b>  {{post.execheader }} :</b><br>
+             {{ post.execname}}
+          </div>  
+
+          <div>
+              <span class="mdi mdi-twitter"  v-if="!(post.linkedin === '' )">
+                <a :href="post.linkedin" class="btn btn-link" target="_blank" ></a>
+              </span>
+          </div>
+      </div>
+
+    <div class="key-management"  v-if="executives.length" v-for="executive in executives"> 
+      <h3>key management</h3>
+      <div class="exec-comp-div">
+             <div  class="comp-exec-1">
+                  <div><img v-if="!(executive.pic_item=== undefined)" class="exec-image" >     {{executive.pic_item}}</img>
+             </div>
+        
+            <div><b>{{executive.title }}:</b><br>
+                {{executive.first}} {{executive.last}}
+            </div>  
+
+            <div>
+              <span class="mdi mdi-facebook" v-if="!(executive.facebook === '' )">
+                 <a :href="executive.facebook" class="btn btn-link" target="_blank" ></a>
+              </span>
+                  
+              <span  class="mdi mdi-twitter" v-if="!(executive.twitterurl === '' )">
+                    <a :href= "executive.twitterurl" class="btn btn-link" target="_blank" >Twitter</a>
+              </span>
+
+              <span class="mdi mdi-twitter"  v-if="!(executive.linkedIn === '' )">
+                <a :href="executive.linkedIn" class="btn btn-link" target="_blank" ></a>
+              </span>
+
+              <span class="mdi mdi-discord" v-if="!(executive.discord === '' )" >
+                 <a :href="executive.discord" class="btn btn-link", target="_blank" ></a>
+              </span>
+
+             <span  class="mdi mdi-tumblr"  v-if="!(executive.tumblr === '' )">
+                 <a :href= "executive.tumblr" class="btn btn-link" target="_blank" ><i class="fa fa-tumblr"></i></a>
+             </span>
+
+             <span  class="mdi mdi-medium" v-if="!(executive.medium === '' )">
+                 <a :href="executive.medium" class="btn btn-link" target="_blank" ><i class="fa fa-medium"></i>M</a>
+             </span>
+
+            <span class="mdi mdi-github"  v-if="!(executive.github === '' )">
+               <a :href="executive.github" class="btn btn-link" target="_blank" ></a>
+            </span>
+
+            <span class="mdi mdi-pinterest" v-if="!(executive.pinterest === '' )">            
+               <a :href= "executive.pinterest" class="btn btn-link" target="_blank" ></a>
+            </span>
+
+            <span class="mdi mdi-googlepus"  v-if="!(executive.googleplus ==='' )">
+               <a :href="executive.googleplus" class="btn btn-link" target="_blank" ></a>
+            </span>
+
+            <span class="mdi mdi-instagram" v-if="!(executive.instagram === '' )">
+               <a :href="executive.instagram" class="btn btn-link" target="_blank" ></a>
+            </span>
+
+           <span class="mdi mdi-reddit" v-if="!(executive.reddit === '' )">
+               <a :href="executive.reddit" class="btn btn-link" target="_blank" ></a>
+           </span>
+
+           <span class="mdi mdi-snapchat" v-if="!(executive.snapchat === '' )">
+             <a :href="executive.snapchat" class="btn btn-link" target="_blank" ></a>
+          </span>
+
+          <span class="mdi mdi-youtube" v-if="!(executive.youtube ==='' )">
+                <a :href="executive.youtube" class="btn btn-link" target="_blank" ></a>
+          </span>
+
+          <span  class="mdi mdi-telegram"  v-if="!(executive.telegram === '')">
+                 <a :href="executive.telegram" class="btn btn-link" target="_blank" ></i></a>
+          </span>
+
+          <span class="mdi mdi-wechat"  v-if="!(executive.wechat === '' )">
+              <a :href="executive.wechat" class="btn btn-link" target="_blank" ></a>
+          </span>
+
+          <span class="mdi mdi-angellist" v-if="!(executive.angellist === '' )">
+              <a :href="executive.angellist" class="btn btn-link" target="_blank" ></a>
+          </span>
+
+          <span class="mdi mdi-skype"  v-if="!(executive.skype === '' )">
+                   <a :href="executive.skype" class="btn btn-link" target="_blank" ></a>
+          </span>
+        </div>
+    </div>
+  </div>
+    <br>
+
+  <div v-if="!(post.funding === undefined)" class="description-box"> <b>funding to date:</b> 
+      {{post.funding}} 
+  </div>
+  <br>
+
+    <div v-if="raises.length" v-for="raise in raises" class="info-box">
+        {{raise.item_date }}  <a :href="raise.url" class="btn btn-link" target="_blank" > {{raise.raise_type}} {{raise.other}}</a><br> {{raise.amount}}   <br>Investors:{{raise.lead}} {{raise.partcipating}}
+    </div>
+
+    <span v-if="post.interest"> 
+          <b>Interesting fact: </b> {{ post.interest }}<br>
+    </span>
+
+    <span v-if="!post.funding===undefined">
+      total funding<br> {{post.funding}}
+      <br>
+    </span>
+
+    <span v-if="post.investors" >Investors: {{post.investors }} 
+      </span>
+
+    <span v-if="!post.advisors.length == undefined && !post.advisors ==='' ">
+              <b>Advisors</b>{{post.advisors }}<br>
+    </span>
+
+    <span v-if="posts.length==1" v-for="post in posts">  
+           <span v-if="!post.newdescript === '' && !post.summary ===''"> 
+          <br><b>More:</b> {{item.name}}<br></span>  
+    </span> 
+
+   <span v-if="!post.newdescript ===''"> 
+        {{post.newdescript}} <br>
+   </span>  
+
+    <span v-if="post.newdescript ==='' && post.summary !=''" >  
+        {{post.teaser }} {{post.summary}} <br>  
+    </span>
+
+
+  </div>
+  </div>
+  </div>
+</div>     
+</div>
 </template>
 <script>
 import {mapState} from 'vuex';
@@ -229,95 +229,82 @@ import {mapState} from 'vuex';
 
     methods: {
 
-        openItem: function (website) {
-
-                window.open(website);
-         }
-    },
+      openItem: function (website) {
+              window.open(website);
+       }
+    
+     },
 
     computed: {
   ...mapState({
-          allCompanies: state => state.company.allCompanies,
-          starter: state => state.company.lending,
-          active: state =>  state.company.activeInfo,
-          first: state => state.company.firstLoad,
-          allPosts:  state => state.posts.allPosts,
-   }),
+        starter: state => state.company.lending,
+        active: state =>  state.company.activeInfo,
+        first: state => state.company.firstLoad,
+        allCompanies:  state => state.company.allCompanies,
+        allPosts: state => state.posts.allPosts,
+     }),
+
 
     items() {
 
         if (this.first == true && !(this.allCompanies.length) ) {
-
           return this.starter
         }
         else if (this.allCompanies.length)
         {
-
           return this.allCompanies
-
         }
-
         else {
-
           return this.active;
-        
         }
     }, 
 
-   id() {
-      
+     id() {
         return this.item.id;
-   } , 
+    } , 
 
    posts() {
-
         if (this.allPosts.length)
         {
               return this.allPosts.filter(p =>p.company_id == this.$route.params.id)
         }
         
         else {
-
              return [];
-
         }
-
-
     },
- 
 
     item() {
-        if (this.allCompanies.length) {
+
+        if (!this.allCompanies.length === undefined) {
 
            return this.allCompanies.find(p => p.id == this.$route.params.id)
         }
 
-        else
-        {
+        else {
            return this.items.find(p => p.id == this.$route.params.id)
-
         }
     }
- },
 
- async asyncData({params, $axios })
- {
-    let response = await $axios.get('executives?cid=' + params.id)
-    
-    let result = await $axios.get('raises?cid=' + params.id)
+    },
 
-    return {
 
-      executives:response.data,
-      raises: result.data,
+   async asyncData({params, $axios }) {
 
-    }
+      let response = await $axios.get('executives?cid=' + params.id)
 
- },
+      let result = await $axios.get('raises?cid=' + params.id)
 
+      return {
+        executives:response.data,
+        raises: result.data,
+       }
+    },
 
 }
 </script>
+
+
 <style scoped>
  @font-face
   {font-family:"Cambria Math";
@@ -437,56 +424,67 @@ div.WordSection1
     overflow: auto;
     text-align:center;
   }
+
   #kpl2 {
     margin-left: auto;
     margin-right: auto;
     width: 90%;
 }
 
-.tagbtn {
+ .tagbtn {
   background-color: #2fb7ff;
   color: white !important;
   padding: 1px 5px;
-  border-radius: 10px;
-}
+  border-radius: 10px; 
+ 
+ }
 
-  .readmore {
+ .readmore {
+
     border: solid #2fb7ff;
     iborder-radius: 3px;
   }
+
   .readmore:hover {
     background: rgba(20, 160, 253, .82) !important;
     color: white !important;
-}
+  }
 
-.section-title, .column-title, .col-sm-5, .card {
-  margin-top:50px;
-  margin-bottom:50px;
-}
-.comp-show-container {
-  width:50%;
-}
-.row {
+  .section-title, .column-title, .col-sm-5, .card {
+    margin-top:50px;
+    margin-bottom:50px;
+  }
+
+  .comp-show-container {
+    width:50%;
+  }
+
+  .row {
   width:100%;
-}
+  }
 
-@media screen and (max-width: 1300px) {
+  @media screen and (max-width: 1300px) {
   .row, .comp-show-container {
     width: 100% !important;
   }
+
   .card {
     height:auto;
   }
 }
+
 .news-h {
     margin-top: 50px !important;
 }
+
 .fixyFH {
   text-align:center;
  }
+
  h1, h2 {
    color:#4d5052 !important;
  }
+
 h4 {
   color: darkgray;
 }
@@ -518,7 +516,6 @@ display:block; color:black;
   background-color: white !important;
 }
 
-
   .nuxt__build_indicator2 {
   box-sizing: border-box;
   font-family: calibri;
@@ -534,8 +531,6 @@ display:block; color:black;
   background-color: white !important;
 }
 
-
-
   .nuxt__build_indicator3 {
   box-sizing: border-box;
   font-family: calibri;
@@ -547,7 +542,74 @@ display:block; color:black;
   font-size: 19px;
   font-style: calibri;
     background-color: white !important;
+
 }
+
 i { color:dark-grey !important; display:block; }
 .span { color:dark-grey !important; display:block;}
+
+.main-div {
+  background: #f2f2f2;
+  display: -webkit-box;
+  font-family: Roboto, 'Segoe UI', Tahoma, sans-serif;
+}
+.col-A, .col-B {
+  width: 50%;
+}
+
+.top-banner {
+  height: 120px;
+  background: #ffffff;
+  margin:20px;
+}
+
+.description-box {
+  background: #ffffff;
+  margin:20px;
+  padding: 20px;
+  font-size:16px;
+}
+
+.exec-image {
+  width: 100px;
+}
+
+.info-box {
+  background: #ffffff;
+  margin:20px;
+  padding: 20px;
+  font-size:14px;
+}
+
+li {
+  appearance: auto;
+  margin:10px;
+}
+
+ul {
+  display: inline;
+ }
+
+.key-management {
+  height: 335px;
+  background: #ffffff;
+  margin:20px;
+  font-size: 16px;
+ }
+
+.comp-exec-1, .comp-exec-2 {
+  width: 50%;
+}
+
+.exec-comp-div {
+  display: -webkit-box;
+  text-align: -webkit-center;
+}
+
+h3 {
+  font-size:18px;
+  text-align:center;
+  padding:10px;
+
+}
 </style>
