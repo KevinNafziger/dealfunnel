@@ -137,6 +137,9 @@ export default {
   }
 }
 @media screen and (max-width:900px) {
+  .text-field {
+      width: 100%;
+  }
   .w-col-8 {
     width: 100% !important;
   }

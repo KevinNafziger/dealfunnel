@@ -156,6 +156,9 @@ computed: {
   }
 }
 @media screen and (max-width:900px) {
+  .text-field {
+      width: 100%;
+  }
   .w-col-8 {
     width: 100% !important;
   }
@@ -204,4 +207,5 @@ input {
 h3, h2 {
   color: #4f81bd !important;
 }
+
 </style>

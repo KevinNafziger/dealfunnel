@@ -9,7 +9,8 @@
      </div>
   </div>
 <DealTempSearch></DealTempSearch>
-  <a href="https://fintechhorizonsmedia.com/fintechdeals.xlsx"
+  <a content="download excel report"
+v-tippy="{ placement : 'bottom' }" href="https://fintechhorizonsmedia.com/fintechdeals.xlsx"
   class="" style="color:dimgray" id="myExcelIcoTag">
   <br>
   <center><span id="oki" class="mdi mdi-file-excel" style="margin:20px;font-size: 34px;"></span></center><br>
@@ -107,7 +108,7 @@ export default {
 
         case 'Insurtech':
            filteredDeals = this.deals.filter(function(elem) {
-              return (elem.sellgroup1.toLowerCase() == 
+              return (elem.sellgroup1.toLowerCase() ==
                 'insurtech' || elem.sellgroup2.toLowerCase() == 'Insurtech')
                 });
 
@@ -115,7 +116,7 @@ export default {
            break;
         case 'Blockchain':
             filteredDeals = this.deals.filter(function(elem) {
-              return (elem.sellgroup1.toLowerCase() == 
+              return (elem.sellgroup1.toLowerCase() ==
                 'blockchain' || elem.sellgroup2.toLowerCase() == 'blockchain')
                 });
 
@@ -123,7 +124,7 @@ export default {
             break;
         case 'Lending':
             filteredDeals = this.deals.filter(function(elem) {
-              return (elem.sellgroup1.toLowerCase()  == 
+              return (elem.sellgroup1.toLowerCase()  ==
                 'lending' || elem.sellgroup2.toLowerCase()  == 'lending')
               });
 
@@ -131,7 +132,7 @@ export default {
             break;
         case 'Payments':
             filteredDeals = this.deals.filter(function(elem) {
-                return (elem.sellgroup1.toLowerCase()  == 
+                return (elem.sellgroup1.toLowerCase()  ==
                   'payments' || elem.sellgroup2.toLowerCase()  == 'Payments')
                 });
 
@@ -147,7 +148,7 @@ export default {
     sortPrice() {
 
         var newDeals = [];
-        
+
 
          newDeals = this.mydeals.sort((a,b) => {
            if(Math.round(b.inmillions*100) > Math.round(a.inmillions*100)) {
@@ -158,9 +159,9 @@ export default {
            }
           }) ;
 
-         this.sortBy = "Price"; 
+         this.sortBy = "Price";
          this.$store.dispatch("deals/setActiveTab", this.activeTab );
-         this.$store.dispatch("deals/reorderInfo", newDeals); 
+         this.$store.dispatch("deals/reorderInfo", newDeals);
 
        },
 
@@ -174,7 +175,7 @@ export default {
 
       this.$store.dispatch("deals/setSearchTab", topic);
       this.$store.dispatch("deals/submitSearch", topic);
-      
+
     }
 
   },
@@ -187,16 +188,16 @@ export default {
 
    filterMessage() {
 
-      if (this.sortBy=='') { 
+      if (this.sortBy=='') {
         return this.activeTab;
       }
       else {
         return this.activeTab + " sorted by " + this.sortBy;
-      }  
+      }
     },
-    
+
     mydeals() {
-    
+
        if (this.first) {
 
         return this.deals;

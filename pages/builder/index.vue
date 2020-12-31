@@ -537,6 +537,9 @@ h2 {
      .exespotbody{
         display: table;
  }
+ .tag-search-div {
+    display: block !important;
+}
 }
 
 .header{
