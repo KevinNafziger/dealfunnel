@@ -69,7 +69,7 @@
           </Board>
       </div>
   </main>
-  <p class="alpha">DealFunnel 2020</p>
+  <p class="alpha">DealFunnel 2021</p>
   </div>
 </template>
 
