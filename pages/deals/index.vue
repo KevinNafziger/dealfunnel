@@ -9,11 +9,11 @@
      </div>
   </div>
 <DealTempSearch></DealTempSearch>
-  <a content="download excel report"
-v-tippy="{ placement : 'bottom' }" href="https://fintechhorizonsmedia.com/fintechdeals.xlsx"
+  <a href="https://fintechhorizonsmedia.com/fintechdeals.xlsx"
   class="" style="color:dimgray" id="myExcelIcoTag">
   <br>
-  <center><span id="oki" class="mdi mdi-file-excel" style="margin:20px;font-size: 34px;"></span></center><br>
+  <center><span content="download excel report"
+v-tippy="{ placement : 'bottom' }"  id="oki" class="mdi mdi-file-excel" style="margin:20px;font-size: 34px;"></span></center><br>
   </a>
 
 
