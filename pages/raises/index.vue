@@ -21,7 +21,8 @@
 
   <a href="https://fintechhorizonsmedia.com/fintechraises.xlsx"
    >
-    <center><span id="oki" class="mdi mdi-file-excel" style="margin:20px;font-size: 34px;"></span></center><br>
+    <center><span content="download excel report"
+  v-tippy="{ placement : 'bottom' }" id="oki" class="mdi mdi-file-excel" style="margin:20px;font-size: 34px;"></span></center><br>
   </a>
 
   <div class="draft-div">
@@ -129,43 +130,43 @@
         switch(category) {
 
           case 'Insurtech':
-             this.sortBy = ""; 
+             this.sortBy = "";
              this.$store.dispatch("raise/setInsur");
              this.$store.dispatch("raise/setActiveTab", "Insurtech");
              break;
 
           case 'Blockchain':
-             this.sortBy = ""; 
+             this.sortBy = "";
              this.$store.dispatch("raise/setBlock");
              this.$store.dispatch("raise/setActiveTab", "Blockchain");
              break;
 
           case 'Lending':
-             this.sortBy = ""; 
+             this.sortBy = "";
              this.$store.dispatch("raise/setLend");
              this.$store.dispatch("raise/setActiveTab", "Lending");
              break;
 
           case 'Payments':
-             this.sortBy = ""; 
+             this.sortBy = "";
              this.$store.dispatch("raise/setPay");
              this.$store.dispatch("raise/setActiveTab", "Payments");
              break;
 
           case 'All':
-             this.sortBy = ""; 
+             this.sortBy = "";
              this.$store.dispatch("raise/setActiveTab", "All");
              this.$store.dispatch("raise/setRaiseInfo", this.allRaises);
              break;
-             
+
           }
       },
 
-    
+
       sortPrice() {
 
         var newRaises = [];
-        
+
 
          newRaises = this.raises.sort((a,b) => {
            if(Math.round(b.inmillions*100) > Math.round(a.inmillions*100)) {
@@ -176,9 +177,9 @@
            }
           }) ;
 
-         this.sortBy = "highest Amount"; 
+         this.sortBy = "highest Amount";
          this.$store.dispatch("raise/setActiveTab", this.activeTab );
-         this.$store.dispatch("raise/reorderInfo", newRaises); 
+         this.$store.dispatch("raise/reorderInfo", newRaises);
 
        },
 
@@ -205,12 +206,12 @@
       filterMessage() {
 
          if (this.sortBy =='' ) {
-         
+
          return this.activeTab;
          }
          else {
 
-         return this.activeTab + ' sorted by ' + this.sortBy; 
+         return this.activeTab + ' sorted by ' + this.sortBy;
 
          }
        }
