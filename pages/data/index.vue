@@ -7,7 +7,8 @@
 <DataTempSearch/>
   <a href="https://fintechhorizonsmedia.com/fintechraises.xlsx"
    style="color:dimgray" id="myExcelIcoTag"><br>
-   <center><span id="oki" class="mdi mdi-file-excel" style="margin:20px;font-size: 34px;"></span></center><br>
+   <center><span content="download excel report"
+ v-tippy="{ placement : 'bottom' }" id="oki" class="mdi mdi-file-excel" style="margin:20px;font-size: 34px;"></span></center><br>
  </a>
 
     <table class="table-striped" width="100%">
@@ -98,7 +99,7 @@ import {mapState} from 'vuex';
 import DataTempSearch from '@/components/Data/DataTempSearch';
 export default {
 
- 
+
 computed: {
   ...mapState({
           starter: state => state.posts.pages[0],
@@ -124,7 +125,7 @@ computed: {
    },
 
    filterMessage() {
-     
+
 
           if (this.firstDataLoad) {
 
@@ -139,7 +140,7 @@ computed: {
             return this.activeTab;
           }
       }
-    
+
 },
 
  methods: {
