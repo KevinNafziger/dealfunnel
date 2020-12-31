@@ -31,11 +31,11 @@ v-tippy="{ placement : 'bottom' }"  id="oki" class="mdi mdi-file-excel" style="m
               <h3>Target</h3></strong>
           </th>
           <th>
-          <strong><span id="oki" class="mdi mdi-cash-usd-outline"></span>
+          <strong><span id="oki" class="mdi mdi-domain"></span>
             <h3>Acquirer</h3></strong>
           </th>
           <th>
-            <strong><span id="oki" class="mdi mdi-account-star"></span>
+            <strong><span id="oki" class="mdi mdi-cash-usd"></span>
               <h3>Price<a  @click="sortPrice"><i class="fa fa-angle-down white-text">^</i></a></h3></strong>
           </th>
           <th>
