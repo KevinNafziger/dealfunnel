@@ -55,17 +55,17 @@
               <a :href="item.github" class="mdi mdi github" target="_blank" </a>
                 </span>
 
-            <span v-if="!(item.youtube ==='')" class="mdi mmdi-youtube">
+            <span v-if="!(item.youtube ==='')" class="mdi mdi-youtube">
               <a :href="item.youtube" class="btn btn-link" target="_blank" ></a>
             </span>
 
            <span v-if="!(item.pinterest ==='')" class="mdi mdi-pinterest">
-              <a :href="item.pinterest" class="btn btn-link" target="_blank" ></a>
+              <a :href="item.pinterest"  target="_blank" ></a>
             </span>
         </li>
 
         <li>
-          <span v-if="!(item.email ==='')"> <b>Email:</b> <span class="btn btn-link mdi mdi-envelope about-info-title" >{{item.email }}
+          <span v-if="!(item.email ==='')"> <b>Email:</b> <span class=" mdi mdi-envelope " >{{item.email }}
           </span></span>
         </li>
 
