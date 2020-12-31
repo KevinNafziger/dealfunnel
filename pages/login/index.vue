@@ -88,6 +88,8 @@ label, md-button {
 }
 .md-button {
   background-color: blue;
+  color: #ffffff !important;
+  text-decoration: none !important;
 }
 button.btn.btn-large.btn-extended.grey.lighten-4.black-text {
     box-shadow: 0px 0px 9px -5px grey;

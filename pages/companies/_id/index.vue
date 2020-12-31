@@ -44,7 +44,7 @@
 
            <li>
               <span class="mdi mdi-facebook" v-if="!(item.facebook ==='')" >
-                  <a :href="item.facebook" class="btn btn-link" target="_blank" ></a>
+                  <a :href="item.facebook"  target="_blank" ></a>
               </span>
 
               <span class="mdi mdi-medium" v-if="!(item.medium ==='')">
