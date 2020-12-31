@@ -39,7 +39,7 @@ v-tippy="{ placement : 'bottom' }"  id="oki" class="mdi mdi-file-excel" style="m
               <h3>Price<a  @click="sortPrice"><i class="fa fa-angle-down white-text">^</i></a></h3></strong>
           </th>
           <th>
-            <strong><span id="oki" class="mdi mdi-account-multiple-plus"></span>
+            <strong><span id="oki" class="mdi mdi-shape"></span>
               <h3>Category</h3></strong>
           </th>
            <th>
