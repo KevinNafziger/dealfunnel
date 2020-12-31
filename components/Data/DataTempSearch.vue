@@ -2,8 +2,10 @@
  <div>
   <div class="search-bar-div">
     <div class="search-div">
-      <input type="text"  name="term" id="term"  v-model="searchMessage" style="margin-right: 10px" width="100%" class="text-field w-input w-col w-col-6" placeholder="search  content">
-        <button class="gardient-button" id="section-10" v-on:click="submitSearch(searchMessage)"  style="margin-left:1px;margin-top:5px;margin-bottom:10px" >
+      <input content="Type your search text"
+  v-tippy="{ placement : 'bottom' }" type="text"  name="term" id="term"  v-model="searchMessage" style="margin-right: 10px" width="100%" class="text-field w-input w-col w-col-6" placeholder="search  content">
+        <button content="Click to search"
+    v-tippy="{ placement : 'bottom' }" class="gardient-button" id="section-10" v-on:click="submitSearch(searchMessage)"  style="margin-left:1px;margin-top:5px;margin-bottom:10px" >
         <i class="glyphicon glyphicon-search"><span class="mdi mdi-file-search"></span></i>
       </button>
     </div>
@@ -77,7 +79,7 @@ export default {
   submitSearch: function(topic) {
         $nuxt.$emit("submitSearch", topic);
          this.searchMessage = '';
-  }  
+  }
 
   },
 computed: {
