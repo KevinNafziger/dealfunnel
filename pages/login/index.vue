@@ -6,7 +6,7 @@
         <div class="login card-panel green white-text center">
 
           <form action="index.html">
-            <h3>Login</h3>
+            <h3>Login</h3><br>
             <div v-if="!(errorMsg == '')" >
               <label class="red-text">{{errorMsg}}
               </label>
@@ -15,12 +15,12 @@
               <span class="mdi mdi-email"></span>
               <input type="email" id="email" v-model="email"><br>
 
-            </div><br>
+            </div><br><br>
             <div class="input-field">
               <span class="mdi mdi-key"></span>
               <input type="password" id="password" v-model="password"><br>
 
-            </div><br>
+            </div><br><br>
             <button  v-on:click="login" class="btn btn-large btn-extended grey lighten-4 black-text">Login</button>
           </form>
         </div>
@@ -71,6 +71,7 @@ export default {
 }
 input {
   width: 95%;
+  height: 40px !important;
 }
 form {
   margin:auto;
