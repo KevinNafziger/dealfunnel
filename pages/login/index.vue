@@ -13,14 +13,14 @@
              </div>
             <div class="input-field">
               <span class="mdi mdi-email"></span>
-              <input type="email" id="email" v-model="email">
-              <label class="white-text" for="email">Email Address</label>
-            </div>
+              <input type="email" id="email" v-model="email"><br>
+
+            </div><br>
             <div class="input-field">
               <span class="mdi mdi-key"></span>
-              <input type="password" id="password" v-model="password">
-              <label class="white-text" for="password">Password</label>
-            </div>
+              <input type="password" id="password" v-model="password"><br>
+
+            </div><br>
             <button  v-on:click="login" class="btn btn-large btn-extended grey lighten-4 black-text">Login</button>
           </form>
         </div>
@@ -69,9 +69,12 @@ export default {
   background: #4f81bd;
   color: #ffffff;
 }
+input {
+  width: 95%;
+}
 form {
   margin:auto;
-  max-width: 700px;
+  width: 100%;
   display: grid;
 }
 h3 {
