@@ -36,17 +36,18 @@
       </div>
       <div class="info-box">
         <span class="mdi mdi-facebook" v-if="!(item.facebook ==='')" >
-                    <a :href="item.facebook" class="btn btn-link" target="_blank" ></a>
+                    <a :href="item.facebook" class="mdi mdi-facebook" target="_blank" ></a>
         </span>
-        <span class="mdi mdi-medium" v-if="!(item.medium ==='')">
-                 <a :href="item.medium" class="mdi mdi-medium" target="_blank" ></a>
-        </span>
+     
 
         <span class="mdi mdi-github" v-if="!(item.github ==='')">
-              <a :href="item.github" class="mdi mdi github" target="_blank" </a>
-        </span>
+                 <a :href="item.github" class="mdi mdi-github" target="_blank" ></a>
+         </span>        
 
-        <span v-if="!(item.youtube ==='')" class="mdi mmdi-youtube">
+              <span class="mdi mdi-medium" v-if="!(item.medium ==='')">
+                 <a :href="item.medium" class="mdi mdi medium" target="_blank" ></a>
+              </span>
+          <span v-if="!(item.youtube ==='')" class="mdi mdi-youtube">
               <a :href="item.youtube" class="btn btn-link" target="_blank" ></a>
         </span>
 
@@ -58,10 +59,12 @@
           </a></span>
       </div>
     </div>  
-<div class="col-B">
-     
-  <div class="key-management"  v-if="!executives.length"  v-for="post in posts">
-    <h3>key management</h3>
+
+ <div class="col-B">
+
+
+     <div class="key-management"  v-if="!executives.length"  v-for="post in posts">
+      <h3>key management</h3>
      <div class="exec-comp-div">
        <div  class="comp-exec-1">
          <img v-if="!(post.pic_item=== undefined)" class="exec-image" :src="post.pic_item"></img>

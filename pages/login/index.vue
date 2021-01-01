@@ -6,22 +6,22 @@
         <div class="login card-panel green white-text center">
 
           <form action="index.html">
-            <h3>Login</h3>
+            <h3>Login</h3><br>
             <div v-if="!(errorMsg == '')" >
               <label class="red-text">{{errorMsg}}
               </label>
              </div>
             <div class="input-field">
               <span class="mdi mdi-email"></span>
-              <input type="email" id="email" v-model="email">
-              <label class="white-text" for="email">Email Address</label>
-            </div>
+              <input type="email" id="email" v-model="email"><br>
+
+            </div><br><br>
             <div class="input-field">
               <span class="mdi mdi-key"></span>
-              <input type="password" id="password" v-model="password">
-              <label class="white-text" for="password">Password</label>
-            </div>
-            <button v-on:click="login" class="btn btn-large btn-extended grey lighten-4 black-text">Login</button>
+              <input type="password" id="password" v-model="password"><br>
+
+            </div><br><br>
+            <button  v-on:click="login" class="btn btn-large btn-extended grey lighten-4 black-text">Login</button>
           </form>
         </div>
       </div>
@@ -65,9 +65,17 @@ export default {
 };
 </script>
 <style>
+.btn {
+  background: #4f81bd;
+  color: #ffffff;
+}
+input {
+  width: 95%;
+  height: 40px !important;
+}
 form {
   margin:auto;
-  max-width: 700px;
+  width: 100%;
   display: grid;
 }
 h3 {
@@ -80,6 +88,8 @@ label, md-button {
 }
 .md-button {
   background-color: blue;
+  color: #ffffff !important;
+  text-decoration: none !important;
 }
 button.btn.btn-large.btn-extended.grey.lighten-4.black-text {
     box-shadow: 0px 0px 9px -5px grey;

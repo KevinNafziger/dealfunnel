@@ -202,10 +202,13 @@ export default {
   text-align-last: center;
 }
 .tag-search-div {
-    display: flex !important;
+    display: flex ;
 }
 
 @media screen and (min-width:1600px) {
+  .tag-search-div {
+      display: block !important;
+  }
 
 .w-col-8 {
     width: 80% !important;
@@ -252,7 +255,7 @@ button#section-10 {
   }
 
 }
-.tag-search-div[data-v-02b26ee8] {
+.tag-search-div{
     display: block !important;
 }
 

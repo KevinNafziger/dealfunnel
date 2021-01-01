@@ -1,41 +1,43 @@
 <template>
  <div>
     <div class="search-bar-div">
-       
+
        <div class="search-div">
-         
-         <input type="text"  name="term" id="term"  v-model="searchMessage" style="margin-right: 10px" width="100%" class="text-field w-input w-col w-col-6" placeholder="search  content">
-        
-         <button class="gardient-button" id="section-10" v-on:click="submitSearch(searchMessage)"  style="margin-left:1px;margin-top:5px;margin-bottom:10px" >
+
+         <input content="Type your search text"
+     v-tippy="{ placement : 'bottom' }" type="text"  name="term" id="term"  v-model="searchMessage" style="margin-right: 10px" width="100%" class="text-field w-input w-col w-col-6" placeholder="search  content">
+
+         <button content="Click to search"
+     v-tippy="{ placement : 'bottom' }" class="gardient-button" id="section-10" v-on:click="submitSearch(searchMessage)"  style="margin-left:1px;margin-top:5px;margin-bottom:10px" >
         <span class="mdi mdi-file-search"></span>
         </button>
         <br>
 
-       </div> 
-      
+       </div>
+
        <div class="tag-search-div">
-      
+
           <a href="#" v-on:click="changePage('Last')"  class="tagbtn">All</a>
-          
+
           <a href="#" v-on:click="showGrouping('Payments')" class="tagbtn">payments</a>
-        
+
           <a href="#" v-on:click="showGrouping('Insurtech')"  class="tagbtn">insurtech</a>
-        
+
           <a href="#" v-on:click="showGrouping('Lending')"   class="tagbtn">lending</a>
-        
+
           <a href="#" v-on:click="showGrouping('Blockchain')" class="tagbtn">blockchain</a>
-        
+
           <a href="#" v-on:click="showGrouping('AI')" class="tagbtn">AI</a>
-        
+
 
           <a href="#" v-show="showPreviousBtn" class="tagbtn"  v-on:click="changePage('Previous')">Prev</a>
-        
+
           <a href="#" v-show="showNextBtn" class="tagbtn" v-on:click="changePage('Next')">Next</a>
 
           <a href="#" v-show="showPrevInsBtn" class="tagbtn"  v-on:click="changeInsur('Previous')">Prev</a>
           <a href="#" v-show="showNextInsBtn" class="tagbtn" v-on:click="changeInsur('Next')">Next</a>
 
-        
+
          <a href="#" v-show="showPrevPayBtn" class="tagbtn"  v-on:click="changePay('Previous')">Prev</a>
          <a href="#" v-show="showNextPayBtn" class="tagbtn" v-on:click="changePay('Next')">Next</a>
 
@@ -45,19 +47,19 @@
 
 
          <br>
-         
+
          <a href="#" v-on:click="showGrouping('Mergers')" class="tagbtn">M&A</a>
 
          <a href="#" v-on:click="showGrouping('Valuation')" class="tagbtn">Valuation</a>
       </div>
 
-   </div>   
+   </div>
 
 </div>
 </template>
 
 <script>
-  
+
   import {mapState} from 'vuex';
   import 'vuetify/dist/vuetify.min.css';
   import Vuetify from 'vuetify';
@@ -65,20 +67,20 @@
   name: 'NewsTempSearch',
 
   data () {
-    
+
       return {
       searchMessage: "",
-     
+
       }
-   
+
   },
 
   methods: {
-    
+
     showGrouping: function(category) {
       $nuxt.$emit("getCategory", category);
     },
-   
+
     changePage: function(direction) {
       $nuxt.$emit("changePage", direction);
     },
@@ -99,25 +101,25 @@
 
        $nuxt.$emit("submitSearch", topic);
        this.searchMessage = '';
-      
+
     }
 
   },
-  
+
   computed: {
-     
+
      ...mapState({
-       
+
         numActivePage: state => state.news.numNewsPage,
         activeTab: state => state.news.activeNewsTab,
         payPage: state => state.news.payNewsPage,
         blkPage: state => state.news.blkNewsPage,
         insPage: state => state.news.insNewsPage,
      }),
-    
+
     showPreviousBtn() {
-    
-        if (this.numActivePage >= 2 && (this.activeTab == 'Page' || this.activeTab =='All')) {   
+
+        if (this.numActivePage >= 2 && (this.activeTab == 'Page' || this.activeTab =='All')) {
            return true;
         }
         else {
@@ -139,19 +141,19 @@
      },
 
      showPrevInsBtn() {
-      
+
         if (this.insPage >= 2 && (this.activeTab == 'Insurtech'))
         {
            return true;
         }
-      
+
         else
         {
            return false;
         }
-     
+
      },
-     
+
      showNextInsBtn() {
 
         if (this.activeTab == 'Insurtech')
@@ -165,18 +167,18 @@
      },
 
      showPrevBlkBtn() {
-     
+
         if (this.blkPage >= 2 && (this.activeTab == 'Blockchain'))
         {
            return true;
         }
-     
+
         else
         {
            return false;
         }
      },
-     
+
      showNextBlkBtn() {
 
         if (this.activeTab == 'Blockchain')
@@ -187,11 +189,11 @@
         {
            return false;
         }
-     
+
      },
 
       showPrevPayBtn() {
-      
+
         if (this.payPage >= 2 && (this.activeTab == 'Payments'))
         {
            return true;
@@ -212,11 +214,11 @@
         {
            return false;
         }
-      
+
       }
 
-   }, 
-   
+   },
+
   }
 </script>
 
@@ -264,6 +266,9 @@
   }
 }
 @media screen and (max-width:900px) {
+  .text-field {
+      width: 100%;
+  }
   .w-col-8 {
     width: 100% !important;
   }
