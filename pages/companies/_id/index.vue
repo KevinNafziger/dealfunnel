@@ -4,224 +4,121 @@
 
 <template>
 <div class="main-div">
-<div class="col-A">
-
-    <div v-if="item.logo_item" class="col-sm-5">
-        <img class="nuxt__build_indicator2" :src="item.logo_item">
+  <div class="col-A">
+    <div class="col-sm-5">
+        <img  v-if="!(item.logo_item === undefined)" class="nuxt__build_indicator2" :src="item.logo_item">
     </div>
-  <br>
+    <br>
+    <div class="info-box">
+        {{ item.description }}
+    </div><br>
 
-  <div class="info-box">
-      <p>
-      {{ item.description }}
-      </p>
-  </div>
-  <br>
-
-  <div class="info-box">
-       <ul>
-
-          <li><b>Location:</b>{{   item.city }}
+    <div class="info-box">
+        <ul>
+          <li><b>Location:</b>{{item.city }}
             {{ item.state }}  {{item.country}}
           </li>
-
           <li v-if="item.phone"><b>Phone:</b>
               {{item.phone}}
           </li>
-
-          <li v-if="!(item.website ==='')"><b>Website:</b>
+          <li v-if="!(item.website ==='')">
+            <b>Website:</b>
             <a href="#" v-on:click="openItem(item.website)" > {{item.website}}</a>
           </li>
-
            <li v-if="item.founders">
             <b>Founders:</b>
             {{item.founders}}
            </li>
-
            <li v-if="item.founding_yr" ><b>Founded:</b>
             {{item.founding_yr}}
            </li>
-
-           <li>
-              <span class="mdi mdi-facebook" v-if="!(item.facebook ==='')" >
-                  <a :href="item.facebook" class="btn btn-link" target="_blank" ></a>
-              </span>
-
-              <span class="mdi mdi-medium" v-if="!(item.medium ==='')">
-                 <a :href="item.medium" class="mdi mdi medium" target="_blank" ></a>
-              </span>
-
-              <span class="mdi mdi-github" v-if="!(item.github ==='')">
-              <a :href="item.github" class="mdi mdi github" target="_blank" </a>
-                </span>
-
-            <span v-if="!(item.youtube ==='')" class="mdi mmdi-youtube">
-              <a :href="item.youtube" class="btn btn-link" target="_blank" ></a>
-            </span>
-
-           <span v-if="!(item.pinterest ==='')" class="mdi mdi-pinterest">
-              <a :href="item.pinterest" class="btn btn-link" target="_blank" ></a>
-            </span>
-        </li>
-
-        <li>
-          <span v-if="!(item.email ==='')"> <b>Email:</b> <span class="btn btn-link mdi mdi-envelope about-info-title" >{{item.email }}
-          </span></span>
-        </li>
-
-      </ul>
-  </div>
-</div>
-
- <div class="col-B">
-
-
-     <div class="key-management"  v-if="!executives.length"  v-for="post in posts">
-      <h3>key management</h3>
-     <div class="exec-comp-div">
-      <div  class="comp-exec-1">
-          <div><img v-if="!(executive.pic_item=== undefined)" class="exec-image" >     {{executive.pic_item}}</img>
-          </div>
-
-          <div><b>  {{post.execheader }} :</b><br>
-             {{ post.execname}}
-          </div>
-
-          <div>
-              <span class="mdi mdi-twitter"  v-if="!(post.linkedin === '' )">
-                <a :href="post.linkedin" class="btn btn-link" target="_blank" ></a>
-              </span>
-          </div>
+        </ul>
       </div>
+      <div class="info-box">
+        <span class="mdi mdi-facebook" v-if="!(item.facebook ==='')" >
+                    <a :href="item.facebook" class="btn btn-link" target="_blank" ></a>
+        </span>
+        <span class="mdi mdi-medium" v-if="!(item.medium ==='')">
+                 <a :href="item.medium" class="mdi mdi-medium" target="_blank" ></a>
+        </span>
 
+        <span class="mdi mdi-github" v-if="!(item.github ==='')">
+              <a :href="item.github" class="mdi mdi github" target="_blank" </a>
+        </span>
+
+        <span v-if="!(item.youtube ==='')" class="mdi mmdi-youtube">
+              <a :href="item.youtube" class="btn btn-link" target="_blank" ></a>
+        </span>
+
+        <span v-if="!(item.pinterest ==='')" class="mdi mdi-pinterest">
+              <a :href="item.pinterest" class="btn btn-link" target="_blank" ></a>
+        </span>
+          
+        <span v-if="!(item.email =='')"> <b>Email:</b> <a class="btn btn-link mdi mdi-envelope about-info-title" >{{item.email }}
+          </a></span>
+      </div>
+    </div>  
+<div class="col-B">
+     
+  <div class="key-management"  v-if="!executives.length"  v-for="post in posts">
+    <h3>key management</h3>
+     <div class="exec-comp-div">
+       <div  class="comp-exec-1">
+         <img v-if="!(post.pic_item=== undefined)" class="exec-image" :src="post.pic_item"></img>
+            <b> {{post.execheader }} :</b><br>
+               {{ post.execname}}
+          <span class="mdi mdi-linkedin"  v-if="!(post.linkedin === '' )">
+             <a :href="post.linkedin" class="mdi mdi-linkedin" target="_blank" ></a>
+          </span>
+          <span v-if="!post.funding === undefined" class="description-box"> <b>funding to date:</b>
+            {{post.funding}}
+          </span>
+        <br>
+
+        </div>
+      </div>
+  </div>
     <div class="key-management"  v-if="executives.length" v-for="executive in executives">
-      <h3>key management</h3>
-      <div class="exec-comp-div">
-             <div  class="comp-exec-1">
-                  <div><img v-if="!(executive.pic_item=== undefined)" class="exec-image" >     {{executive.pic_item}}</img>
-             </div>
-
-            <div><b>{{executive.title }}:</b><br>
+        <h3>key management</h3>
+          <div class="exec-comp-div">
+            <div  class="comp-exec-1">
+                <img v-if="!(executive.pic_item=== undefined)" class="exec-image" :src="executive.pic_item"></img>
+                <b>{{executive.title }}:</b><br>
                 {{executive.first}} {{executive.last}}
             </div>
-
-            <div>
-              <span class="mdi mdi-facebook" v-if="!(executive.facebook === '' )">
-                 <a :href="executive.facebook" class="btn btn-link" target="_blank" ></a>
-              </span>
-
-              <span  class="mdi mdi-twitter" v-if="!(executive.twitterurl === '' )">
-                    <a :href= "executive.twitterurl" class="btn btn-link" target="_blank" >Twitter</a>
-              </span>
-
-              <span class="mdi mdi-twitter"  v-if="!(executive.linkedIn === '' )">
-                <a :href="executive.linkedIn" class="btn btn-link" target="_blank" ></a>
-              </span>
-
-              <span class="mdi mdi-discord" v-if="!(executive.discord === '' )" >
-                 <a :href="executive.discord" class="btn btn-link", target="_blank" ></a>
-              </span>
-
-             <span  class="mdi mdi-tumblr"  v-if="!(executive.tumblr === '' )">
-                 <a :href= "executive.tumblr" class="btn btn-link" target="_blank" ><i class="fa fa-tumblr"></i></a>
-             </span>
-
-             <span  class="mdi mdi-medium" v-if="!(executive.medium === '' )">
-                 <a :href="executive.medium" class="btn btn-link" target="_blank" ><i class="fa fa-medium"></i>M</a>
-             </span>
-
-            <span class="mdi mdi-github"  v-if="!(executive.github === '' )">
-               <a :href="executive.github" class="btn btn-link" target="_blank" ></a>
-            </span>
-
-            <span class="mdi mdi-pinterest" v-if="!(executive.pinterest === '' )">
-               <a :href= "executive.pinterest" class="btn btn-link" target="_blank" ></a>
-            </span>
-
-            <span class="mdi mdi-googlepus"  v-if="!(executive.googleplus ==='' )">
-               <a :href="executive.googleplus" class="btn btn-link" target="_blank" ></a>
-            </span>
-
-            <span class="mdi mdi-instagram" v-if="!(executive.instagram === '' )">
-               <a :href="executive.instagram" class="btn btn-link" target="_blank" ></a>
-            </span>
-
-           <span class="mdi mdi-reddit" v-if="!(executive.reddit === '' )">
-               <a :href="executive.reddit" class="btn btn-link" target="_blank" ></a>
-           </span>
-
-           <span class="mdi mdi-snapchat" v-if="!(executive.snapchat === '' )">
-             <a :href="executive.snapchat" class="btn btn-link" target="_blank" ></a>
-          </span>
-
-          <span class="mdi mdi-youtube" v-if="!(executive.youtube ==='' )">
-                <a :href="executive.youtube" class="btn btn-link" target="_blank" ></a>
-          </span>
-
-          <span  class="mdi mdi-telegram"  v-if="!(executive.telegram === '')">
-                 <a :href="executive.telegram" class="btn btn-link" target="_blank" ></i></a>
-          </span>
-
-          <span class="mdi mdi-wechat"  v-if="!(executive.wechat === '' )">
-              <a :href="executive.wechat" class="btn btn-link" target="_blank" ></a>
-          </span>
-
-          <span class="mdi mdi-angellist" v-if="!(executive.angellist === '' )">
-              <a :href="executive.angellist" class="btn btn-link" target="_blank" ></a>
-          </span>
-
-          <span class="mdi mdi-skype"  v-if="!(executive.skype === '' )">
-                   <a :href="executive.skype" class="btn btn-link" target="_blank" ></a>
-          </span>
-        </div>
+          </div>
     </div>
-  </div>
-    <br>
-
-  <div v-if="!(post.funding === undefined)" class="description-box"> <b>funding to date:</b>
-      {{post.funding}}
-  </div>
-  <br>
-
+        <br>
+      
     <div v-if="raises.length" v-for="raise in raises" class="info-box">
-        {{raise.item_date }}  <a :href="raise.url" class="btn btn-link" target="_blank" > {{raise.raise_type}} {{raise.other}}</a><br> {{raise.amount}}   <br>Investors:{{raise.lead}} {{raise.partcipating}}
-    </div>
+        {{raise.item_date }}  <a :href="raise.url" class="btn btn-link" target="_blank" > {{raise.raise_type}} {{raise.other}}</a> 
 
-    <span v-if="post.interest">
-          <b>Interesting fact: </b> {{ post.interest }}<br>
-    </span>
-
-    <span v-if="!post.funding===undefined">
-      total funding<br> {{post.funding}}
-      <br>
-    </span>
-
-    <span v-if="post.investors" >Investors: {{post.investors }}
+        <br> {{raise.amount}}  <br>
+            Investors:{{raise.lead}} {{raise.partcipating}}
+    </div>   
+    <div v-if="!posts ===undefined" v-for="post in posts">
+      <span v-if="!post.interest === undefined">
+            <b>Interesting fact: </b> {{ post.interest }}<br>
       </span>
-
-    <span v-if="!post.advisors.length == undefined && !post.advisors ==='' ">
-              <b>Advisors</b>{{post.advisors }}<br>
+      <span v-if="!post.funding===undefined">
+            total funding<br> {{post.funding}}
+           <br>
     </span>
-
-    <span v-if="posts.length==1" v-for="post in posts">
-           <span v-if="!post.newdescript === '' && !post.summary ===''">
-          <br><b>More:</b> {{item.name}}<br></span>
-    </span>
-
-   <span v-if="!post.newdescript ===''">
-        {{post.newdescript}} <br>
-   </span>
-
-    <span v-if="post.newdescript ==='' && post.summary !=''" >
-        {{post.teaser }} {{post.summary}} <br>
-    </span>
-
-
+    <span v-if="!post.investors === undefined" >  Investors: {{post.investors }}
+     </span>
+      <span v-if="!post.advisors.length == undefined && !post.advisors ==='' ">
+          <b>Advisors</b>{{post.advisors }}<br>
+      </span>
+      <span v-if="!post.newdescript ===''">
+              {{post.newdescript}} <br>
+      </span>
+      <span v-if="post.newdescript ==='' && post.summary !=''" >
+              {{post.teaser }} {{post.summary}} <br>
+      </span>
+        </div>
+      </div>
   </div>
   </div>
-  </div>
-</div>
-</div>
 </template>
 <script>
 import {mapState} from 'vuex';
@@ -244,7 +141,6 @@ import {mapState} from 'vuex';
         allPosts: state => state.posts.allPosts,
      }),
 
-
     items() {
 
         if (this.first == true && !(this.allCompanies.length) ) {
@@ -261,7 +157,18 @@ import {mapState} from 'vuex';
 
      id() {
         return this.item.id;
-    } ,
+    },
+
+    //showSocialDiv(current) {
+        
+      //  if ((!current.facebook ==='') || (!current.medium ==='') || //(!current.github ==='') || !(!current.youtube ==='') || //(!current.pinterest ==='') || (!current.email ===''))
+        // {
+          //  return true;
+        // }
+        //else {
+          //  return false;
+        //}
+    //},
 
    posts() {
         if (this.allPosts.length)
@@ -288,7 +195,6 @@ import {mapState} from 'vuex';
 
     },
 
-
    async asyncData({params, $axios }) {
 
       let response = await $axios.get('executives?cid=' + params.id)
@@ -300,7 +206,6 @@ import {mapState} from 'vuex';
         raises: result.data,
        }
     },
-
 }
 </script>
 

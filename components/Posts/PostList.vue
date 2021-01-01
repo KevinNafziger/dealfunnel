@@ -19,10 +19,10 @@
         <div class="w-row">
           <div v-if="!(post.logo_url==null)" class="flex-img">
               <div class="centering-imgs w-col w-col-6 w-col-medium-6 w6-hide-tiny">
-                    <a class="blog-image w-inline-block" >
-                        <img :src="post.logo_url" width="180" style="max-width: 180px ;max-height:130; overflow:none;"
-                       >
-                    </a>
+                  <a class="blog-image w-inline-block" >
+                      <img :src="post.logo_url" width="180" style="max-width: 180px ;max-height:130; overflow:none;"
+                     >
+                  </a>
                </div>
            </div>
            <div class="w-col w-col-12 w-col-medium-12 w12-hide-tiny">

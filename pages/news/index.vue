@@ -373,7 +373,7 @@ export default {
 
     links() {
 
-      if (this.firstNewsLoad == true)
+      if (this.first == true)
       {
         return this.starter;
       }

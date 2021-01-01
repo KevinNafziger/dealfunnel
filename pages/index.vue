@@ -20,7 +20,7 @@
 </p>
 
 <p class=MsoNormal><span class="intro-p" style='font-size:
-20.0pt;mso-bidi-font-size:11.0pt'><b>Drag and Drop Reports </b><span class=SpellE> DealFunnel</span> reports make it easy to scout for opportunities because they aggregate all intel for that topic, geography or time period. The drag and drop Reports Builder also lets dealmakers design their own reports, with only the information relevant to the firm and its clients.<span style='mso-spacerun:yes'></span></span></p>
+20.0pt;mso-bidi-font-size:11.0pt'><b>Drag & Drop Reports </b><span class=SpellE> DealFunnel</span> reports make it easy to scout for opportunities because they aggregate all intel for that topic, geography or time period. The drag and drop Reports Builder also lets dealmakers design their own reports, with only the information relevant to the firm and its clients.<span style='mso-spacerun:yes'></span></span></p>
 </p>
 
 <p class=MsoNormal><span class="intro-p" style='font-size:

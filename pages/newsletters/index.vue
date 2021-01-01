@@ -19,7 +19,6 @@
 </template>
 
 
-</template>
 <script>
 import {mapState} from 'vuex';
 import PostList  from  '@/components/Posts/PostList'
@@ -42,8 +41,7 @@ export default {
  async fetch({store}) {
 
        store.dispatch("posts/setView", "Newsletters");
-       await store.dispatch("posts/setNewsletters");
-    
+       await store.dispatch("posts/setNewsletters");   
   },
 
 

@@ -23,21 +23,17 @@
                 <strong><span id="oki" class="mdi mdi-cash-usd-outline"></span>
                   <h3>Website</h3></strong>
                 </th>
-
                 <th>
                   <strong><span id="oki" class="mdi mdi-account-star"></span>
                     <h3>City</h3></strong>
                 </th>
-
                 <th>
                   <strong><span id="oki" class="mdi mdi-account-multiple-plus"></span>
                     <h3>Category</h3></strong>
                 </th>
-
                 <th>
                   <strong><span id="oki" class="mdi mdi-earth"></span><h3>Country</h3></strong>
                 </th>
-
                 <th>
                   <strong><span id="oki" class="mdi mdi-earth"></span><h3>Founded</h3></strong>
                 </th>
@@ -60,7 +56,7 @@
                   {{company.category}}
               </td>
               <td>
-                {{company.country}}
+                {{company.name}}
               </td>
               <td>
                 {{company.founding_yr}}

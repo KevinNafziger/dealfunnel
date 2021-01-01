@@ -109,7 +109,6 @@ export const mutations = {
 
   },
  
-
   initBlock(state, data) {
 
     var blockLength = data.length;
@@ -269,7 +268,6 @@ export const mutations = {
    },
 
    setBlockNextNoFetch(state) {
-
 
     if (state.activeView =='Articles') {
 
@@ -472,7 +470,6 @@ export const mutations = {
 
    },
 
-
    setBlockPrevious(state) {
 
       if (state.activeView =='Articles') { 
@@ -602,8 +599,9 @@ export const mutations = {
    		state.activeBuildTab ='Capital Markets';	
     	state.firstBuildLoad = false;
     }
-    else if (state.activeView =='Articles')
-    {
+
+    else if (state.activeView =='Articles') { 
+
     	state.activeArtInfo = data;
     	state.activeArtTab ='Capital Markets';	
     	state.firstArtLoad = false;
@@ -611,49 +609,50 @@ export const mutations = {
 
   },
 
-   setHealth(state, data) {
+ setHealth(state, data) {
 
-    state.healthtech = data; 
+  state.healthtech = data; 
 
-    if (state.activeView =='Articles')
-    {
+    if (state.activeView =='Articles') {
+
       state.activeArtInfo = data;
       state.activeArtTab ='HealthTech';  
       state.firstArtLoad = false;
     }
 
-  },
+   },
 
- setWealth(state, data) {
+  setWealth(state, data) {
 
     state.wealthtech = data; 
 
+    if (state.activeView =='Builder') {
 
-    if (state.activeView =='Builder') 
-    {
    		state.activeBuildInfo = data;
    		state.activeBuildTab ='WealthTech';	
     	state.firstBuildLoad = false;
-    }
-    else if (state.activeView =='Articles') {
+     
+     }
+
+     else if (state.activeView =='Articles') {
 
     	state.activeArtInfo = data;
     	state.activeArtTab ='WealthTech';	
     	state.firstArtLoad = false;
-    }
-
+     }
   },
 
 
  setGrowth(state, data) {
 
-	state.growthequity = data; 
+   state.growthequity = data; 
 
-    if (state.activeView =='Builder') 
-    {
+   if (state.activeView =='Builder') {
+
    		state.activeBuildInfo = data;
    		state.activeBuildTab ='Growth Equity';	
     	state.firstBuildLoad = false;
+
     }
 
     else if (state.activeView =='Articles') {
@@ -662,28 +661,29 @@ export const mutations = {
     	state.activeArtTab ='Growth Equity';	
     	state.firstArtLoad = false;
     }
+ },
 
-  },
 
-
-  setVal(state, data) {
+ setVal(state, data) {
 
     state.valuation = data; 
 
-    if (state.activeView =='Builder') 
-    {
-   		state.activeBuildInfo = data;
-   		state.activeBuildTab ='Valuation';	
-    	state.firstBuildLoad = false;
-    }
-    else if (state.activeView =='Articles')
-    {
+      if (state.activeView =='Builder') {
+
+   		  state.activeBuildInfo = data;
+   		  state.activeBuildTab ='Valuation';	
+    	  state.firstBuildLoad = false;
+      }
+
+      else if (state.activeView =='Articles') {
+
     	state.activeArtInfo = data;
     	state.activeArtTab ='Valuation';	
     	state.firstArtLoad = false;
-    }
+      
+      }
 
-  },
+   },
 
 
  setMergers(state, data) {
@@ -836,9 +836,8 @@ export const mutations = {
 
     state.Q421 = data; 
 
+    if (state.activeView =='Data') {
 
-    if (state.activeView =='Data') 
-    {
    		state.activeDataInfo = data;
    		state.activeDataTab ='Next Raise: Q421';	
     	state.firstDataLoad = false;
@@ -1333,7 +1332,6 @@ export const mutations = {
 
    },
 
-
    setBank(state, data) {
 
    	 state.bank1 = data;
@@ -1537,6 +1535,7 @@ export const mutations = {
 
     		state.activeArtTab = topic ;
     	}
+
       else if (state.activeView  == 'Data') {
 
         state.activeDataTab = topic ;
@@ -1611,8 +1610,6 @@ export const mutations = {
 
 		  }
 	 },
-
-
 
 	 setValNoFetch(state){
 
@@ -1819,7 +1816,6 @@ export const mutations = {
 
 		  }
 	 },
-
 
 	 setQ121NoFetch(state){
 
@@ -2037,7 +2033,7 @@ export const mutations = {
 
     switch(state.activeView) {
 
-          case "Data":
+      case "Data":
          state.activeDataInfo = state.midwest;
          state.activeDataTab = 'MidWest';  
          state.firstDataLoad = false;
@@ -2216,7 +2212,7 @@ export const mutations = {
 
 		switch(state.activeView) {
 
-   	   	  case "Builder":
+   	  case "Builder":
 			state.activeBuildInfo = state.blockchain;
 			state.activeBuildTab = 'Blockchain';	
 			state.firstBuildLoad =false;
@@ -2326,16 +2322,14 @@ export const mutations = {
              		})
     
       	}
-        else {
-
-          commit("initInsur", this.postsbyGrouping('insurtech'));  
         
+        else {
+          commit("initInsur", this.postsbyGrouping('insurtech'));  
         }
     
       },
     			
   
-
   		async setBlock({ commit }) {
 
         if (!this.allPostsLoaded) {
@@ -2360,10 +2354,11 @@ export const mutations = {
     					  commit("setPay", res.data);
     				})
     			}	
-          else if (this.allPostsLoaded) {
 
+          else if (this.allPostsLoaded) {
                 commit("setPay", this.postsbyGrouping('payments'));  
           }
+
     			else {
 
     				commit("setPostsNoFetch");
@@ -2373,21 +2368,19 @@ export const mutations = {
 
   	 async setLend({ commit }) {
 
-		   if (!this.lendPostsFetched || !this.allPostsLoaded)
-		   {	
-  	       		await this.$axios.get('/posts?grouping=Lending')
+		   if (!this.lendPostsFetched || !this.allPostsLoaded) {
+
+  	     await this.$axios.get('/posts?grouping=Lending')
            			.then(res => {
 					  commit("setLend", res.data);
 		         })
 			}
       else if (this.allPostsLoaded) {
-
-              commit("setLend", this.postsbyGrouping('lending'));
-          
+          commit("setLend", this.postsbyGrouping('lending'));
       } 
-		  else
-		   {
-				      commit("setLendNoFetch");
+		  
+      else {
+				   commit("setLendNoFetch");
 		   }
   		 
   	 },
@@ -2442,12 +2435,11 @@ export const mutations = {
 			         })
 				 }
 
-			   else
-			   {
+			   else {
 					commit("setSpinNoFetch");
 			   }
   		 
-  	},
+  	 },
 
 
   	async setBoot({ commit }) {
@@ -2461,7 +2453,6 @@ export const mutations = {
 				 }
 
 			   else {
-
 					commit("setBootNoFetch");
 			   }
   		 
@@ -2476,10 +2467,9 @@ export const mutations = {
 	           			.then(res => {
 						  commit("setMergers", res.data);
 			         })
-				}
+				 }
 
-			   else
-			   {
+			   else {
 					commit("setMergersnoFetch");
 			   }
   		 
@@ -2576,7 +2566,7 @@ export const mutations = {
   		   	
           else {
   				
-  				commit("setHealthNoFetch" );
+  				    commit("setHealthNoFetch" );
   		    }
     		 
   		  },
@@ -3004,7 +2994,6 @@ export const mutations = {
        
         },
 
-
         async setSouth({ commit }) {
         
           if (!this.southPostsFetched || !this.allPostsLoaded)
@@ -3045,8 +3034,7 @@ export const mutations = {
           }
 
           else {
-          
-          commit("setNewEnglandNoFetch" );
+              commit("setNewEnglandNoFetch" );
           }
          
         },
@@ -3058,7 +3046,7 @@ export const mutations = {
               await this.$axios.get('/posts?region=SouthEast')
                   .then(res => {
                   commit("setSoutheast", res.data);
-          })
+              })
           } 
 
           else if (this.allPostsLoaded) {
@@ -3166,11 +3154,11 @@ export const mutations = {
                   commit("setRocky", res.data);
           })
           } 
-         else if (this.allPostsLoaded) {
 
+         else if (this.allPostsLoaded) {
               commit("setRocky", this.postsbyRegion('RockyMountains'));
-          
           } 
+
           else {
           
           commit("setRockyNoFetch" );
@@ -4272,12 +4260,12 @@ export const mutations = {
 
      postsbyNextRound: (state, next_round ) => {
 
-      return state.allPosts.filter(function(elem, next_round) {
+        return state.allPosts.filter(function(elem, next_round) {
             return elem.next_round == next_round ;
-       });
+        });
      }, 
 
-    postsbyGrouping: (state, grouping ) => {
+     postsbyGrouping: (state, grouping ) => {
 
       return state.allPosts.filter(function(elem, amount) {
           return (elem.grouping1.toLowerCase() == grouping || elem.grouping2.toLowerCase() == grouping)
@@ -4286,17 +4274,17 @@ export const mutations = {
      },    
   
 
-	 prevArryVal() {
+	   prevArryVal() {
 
-  	if (this.activeView == "Articles") {
+  	 if (this.activeView == "Articles") {
   	 		var val = this.activeArtPage();
-  	}
+  	 }
 
   	 else if (this.activeView == "Builder") {
   	 		var val = this.activeBuildPage();
   	 }
 
-    else {
+     else {
         var val = this.dataPage();
       }
 	
