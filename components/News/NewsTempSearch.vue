@@ -233,7 +233,9 @@
 .w-col-8 {
     width: 80% !important;
 }
-
+a {
+  text-decoration: none !important;
+}
 }
 .text-field {
     -moz-text-align-last: center;

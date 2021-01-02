@@ -183,6 +183,9 @@ computed: {
   margin-top:10px;
   background: #4f81bd !important;
 }
+a {
+  text-decoration: none !important;
+}
 i.glyphicon {
   color: #ffffff !important;
   heigth: 50px !important;

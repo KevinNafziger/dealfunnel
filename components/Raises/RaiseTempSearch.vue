@@ -67,6 +67,9 @@
 
 
   <style scoped>
+  a {
+    text-decoration: none !important;
+  }
   .text-field {
     text-align-last: center;
   }

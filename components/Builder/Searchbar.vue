@@ -222,6 +222,9 @@ button#section-10 {
     max-width: 600px;
 }
 }
+a {
+  text-decoration: none !important;
+}
 .search-div {
   position: sticky;
     display: contents;

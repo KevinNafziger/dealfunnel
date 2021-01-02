@@ -192,6 +192,9 @@ export default {
 
 
 <style scoped>
+a {
+  text-decoration: none !important;
+}
 .search-div {
   position: sticky;
     display: block;

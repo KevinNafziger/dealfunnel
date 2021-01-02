@@ -120,6 +120,9 @@
       width: 100% !important;
     }
   }
+  a {
+    text-decoration: none !important;
+  }
   .tag-search-div {
     width: 90% ;
     margin-left: auto;
