@@ -109,42 +109,35 @@ methods: {
        switch(direction) {
 
           case 'Previous':
-             if (this.activeTab == 'All page 4')  {
+             if (this.page == 4)  {
                 this.$store.dispatch("company/setComp3");
              }
 
-            else if (this.activeTab == 'All page 3') {
+            else if (this.page == 3) {
                 this.$store.dispatch("company/setComp2");
             }
-
-            else if (this.activeTab == 'All page 2') {
+            else if (this.activeTab == 2) {
                   this.$store.dispatch("company/setComp1");
             }      
-
             break;
           
            case 'Next':
-             if (this.activeTab == 'All')
+             if (this.activeTab == 1)
              {
                   this.$store.dispatch("company/setComp2");
+              
              }
 
-             else  if (this.activeTab == 'All page 1') {
-
-                  this.$store.dispatch("company/setComp2");
-             }
-
-             else if (this.activeTab == 'All page 2') {  
-                  
+             else if (this.activeTab == 2) {  
                   this.$store.dispatch("company/setComp3");
              }
 
-            else {
-               
+             else {
                this.$store.dispatch("company/setComp4");
-            }
+             }
+             
              break;
-            }
+             }
 
     },
 
@@ -169,6 +162,7 @@ methods: {
       firstLoad: state => state.company.firstLoad,
       companies: state => state.company.activeInfo,
       activeTab: state => state.company.activeTab,
+      page: state => state.posts.activePage,
 
    }),
 

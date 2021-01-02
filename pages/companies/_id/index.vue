@@ -32,9 +32,7 @@
            <li v-if="item.founding_yr" ><b>Founded:</b>
             {{item.founding_yr}}
            </li>
-        </ul>
-      </div>
-      <div class="info-box">
+        <li>
         <span class="mdi mdi-facebook" v-if="!(item.facebook ==='')" >
             <a :href="item.facebook" target="_blank" ></a>
         </span>
@@ -56,11 +54,12 @@
           
         <span v-if="!(item.email==='' || item.email == undefined)"> <b>Email:</b> <a class="mdi mdi-envelope about-info-title" >{{item.email }}
           </a></span>
+        </li>
+        </ul>
       </div>
     </div>  
 
  <div class="col-B">
-
 
      <div class="key-management"  v-if="!executives.length"  v-for="post in posts">
       <h3>key management</h3>
@@ -72,7 +71,7 @@
           <span class="mdi mdi-linkedin" v-if="!(post.linkedin ==='' )">
              <a :href="post.linkedin" target="_blank" ></a>
           </span>
-          <span v-if="!post.funding === undefined" class="description-box"> <b>funding to date:</b>
+          <span v-if="post.funding" class="description-box"> <b>funding to date:</b>
             {{post.funding}}
           </span>
         <br>
@@ -150,17 +149,17 @@
         <br> {{raise.amount}}  <br>
             Investors: {{raise.lead}} {{raise.partcipating}}
     </div>   
-    <div v-if="!(posts.length===undefined)" v-for="post in posts">
-        <span v-if="!post.interest === undefined">
+    <div v-if="posts" v-for="post in posts">
+        <span v-if="!(post.interest === undefined)">
               <b>Interesting fact: </b> {{ post.interest }}<br>
         </span>
-        <span v-if="!post.funding===undefined">
+        <span v-if="!(post.funding==undefined)">
               total funding<br> {{post.funding}}
              <br>
-      </span>
-      <span v-if="!post.investors === undefined" >  Investors: {{post.investors }}
+          </span>
+      <span v-if="!(post.investors == undefined)" >Investors: {{post.investors }}
        </span>
-        <span v-if="!post.advisors.length == undefined && !post.advisors ===''">
+        <span v-if="!(post.advisors.length == undefined && !post.advisors ==='')">
             <b>Advisors</b>{{post.advisors }}<br>
         </span>
         <span v-if="!post.newdescript ===''">
@@ -499,7 +498,7 @@ display:block; color:black;
   z-index: 3;
   font-size: 19px;
   font-style: calibri;
-    background-color: white !important;
+  background-color: white !important;
 
 }
 
