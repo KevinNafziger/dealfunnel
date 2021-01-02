@@ -81,7 +81,7 @@ export default {
 
      showAllBtn() {
 
-        if (!this.allCompanies.length === undefined) {
+        if (this.allCompanies) {
           return true;
         }
         else {

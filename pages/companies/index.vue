@@ -103,7 +103,6 @@ methods: {
         }
     },
 
-
    changePage: function(direction) {
 
        switch(direction) {
@@ -116,24 +115,25 @@ methods: {
             else if (this.page == 3) {
                 this.$store.dispatch("company/setComp2");
             }
-            else if (this.activeTab == 2) {
+            else if (this.page == 2) {
                   this.$store.dispatch("company/setComp1");
             }      
             break;
           
            case 'Next':
-             if (this.activeTab == 1)
+             if (this.page == 1)
              {
                   this.$store.dispatch("company/setComp2");
-              
              }
-
-             else if (this.activeTab == 2) {  
+             else if (this.page == 2) {  
                   this.$store.dispatch("company/setComp3");
              }
 
-             else {
+             else if (this.page == 3) {
                this.$store.dispatch("company/setComp4");
+             }
+             else {
+                this.$store.dispatch("company/setComp2");
              }
              
              break;

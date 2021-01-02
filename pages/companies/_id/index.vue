@@ -60,7 +60,6 @@
     </div>  
 
  <div class="col-B">
-
      <div class="key-management"  v-if="!executives.length"  v-for="post in posts">
       <h3>key management</h3>
      <div class="exec-comp-div">
@@ -143,26 +142,26 @@
         </div>
         <br>
       
-    <div v-if="!(raises.length == undefined)" v-for="raise in raises" class="info-box">
+    <div v-if="raises" v-for="raise in raises" class="info-box">
         {{raise.item_date }}  <a :href="raise.url" class="btn btn-link" target="_blank" > {{raise.raise_type}} {{raise.other}}</a> 
 
         <br> {{raise.amount}}  <br>
             Investors: {{raise.lead}} {{raise.partcipating}}
     </div>   
     <div v-if="posts" v-for="post in posts">
-        <span v-if="!(post.interest === undefined)">
-              <b>Interesting fact: </b> {{ post.interest }}<br>
+        <span v-if="post.interest">
+              <b>Interesting fact: </b> {{post.interest }}<br>
         </span>
-        <span v-if="!(post.funding==undefined)">
+        <span v-if="post.funding">
               total funding<br> {{post.funding}}
              <br>
           </span>
       <span v-if="!(post.investors == undefined)" >Investors: {{post.investors }}
        </span>
-        <span v-if="!(post.advisors.length == undefined && !post.advisors ==='')">
+        <span v-if="!(post.advisors.length == undefined || post.advisors ==='')">
             <b>Advisors</b>{{post.advisors }}<br>
         </span>
-        <span v-if="!post.newdescript ===''">
+        <span v-if="!(post.newdescript ==='')">
                 {{post.newdescript}} <br>
         </span>
         <span v-if="post.newdescript ==='' && post.summary !=''" >

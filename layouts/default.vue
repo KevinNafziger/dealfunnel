@@ -10,6 +10,9 @@
 import TheHeader from '@/components/Navigation/TheHeader'
 
 export default {
+
+  middleware: 'load-initial-data',
+
   
   components: {
   TheHeader,
