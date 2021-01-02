@@ -216,7 +216,11 @@ export default {
 button#section-10 {
       width: 15% ;
 }
-
+.text-field {
+    -moz-text-align-last: center;
+    text-align-last: center;
+    max-width: 600px;
+}
 }
 .search-div {
   position: sticky;

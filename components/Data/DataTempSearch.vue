@@ -192,6 +192,11 @@ i.glyphicon {
 width: 80px;
 color: white;
   }
+  .text-field {
+      -moz-text-align-last: center;
+      text-align-last: center;
+      max-width: 600px;
+  }
   button#section-10 {
     margin-left: 1px;
     margin-top: 0px !important;

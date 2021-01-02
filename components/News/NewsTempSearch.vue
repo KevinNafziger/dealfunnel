@@ -235,6 +235,11 @@
 }
 
 }
+.text-field {
+    -moz-text-align-last: center;
+    text-align-last: center;
+    max-width: 600px;
+}
 .search-div {
   position: sticky;
     display: contents;

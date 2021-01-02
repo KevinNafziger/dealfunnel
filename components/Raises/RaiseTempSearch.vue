@@ -158,6 +158,11 @@
   input {
         background: rgba(105,105,105,0.07059);
   }
+  .text-field {
+      -moz-text-align-last: center;
+      text-align-last: center;
+      max-width: 600px;
+  }
   h3, h2 {
     color: #4f81bd !important;
   }

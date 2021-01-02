@@ -168,6 +168,11 @@ i.glyphicon {
   color: #ffffff !important;
   heigth: 50px !important;
 }
+.text-field {
+    -moz-text-align-last: center;
+    text-align-last: center;
+    max-width: 600px;
+}
   #section-10 {
     background-image: linear-gradient(92deg, rgba(20, 160, 253, .82), rgba(20, 160, 253, 0.82));
 width: 80px;
