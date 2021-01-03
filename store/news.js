@@ -61,8 +61,7 @@ export const state = () => ({
 export const mutations = {
 
  
-  initInsur(state, data) {
-
+   initInsur(state, data) {
 
       var insurLength = data.length;
       insurLength--;
@@ -75,10 +74,9 @@ export const mutations = {
       state.activeNewsInfo = data.slice(0, 200);
       state.activeNewsTab = 'Insurtech';
       state.firstNewsLoad =false;
+   },
 
-  },
-
-  initBlock(state, data) {
+   initBlock(state, data) {
 
      var blockLength = data.length;
       blockLength--;
@@ -99,11 +97,9 @@ export const mutations = {
       state.activeNewsInfo = data.slice(0, 200);
       state.activeNewsTab = 'Blockchain';
       state.firstNewsLoad =false;
+    },   
 
-
-  },   
-
-  initPay(state, data) {
+    initPay(state, data) {
 
       var payLength = data.length;
       payLength--;
@@ -117,14 +113,13 @@ export const mutations = {
       state.activeNewsTab = 'Payments';
       state.firstNewsLoad =false;
   
-  },
+    },
 
-  setAllNews(state, items) {
+    setAllNews(state, items) {
 
       state.allNews = items;
-   },
+    },
 
- 
    setSector(state, data) {
 
      state.activeNewsInfo = data;
