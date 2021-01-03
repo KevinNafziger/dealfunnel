@@ -83,7 +83,6 @@
 </div>
 </template>
 
-
 <script>
 import {mapState} from 'vuex';
 import NewsTempSearch from '@/components/News/NewsTempSearch';

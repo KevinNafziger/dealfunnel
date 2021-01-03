@@ -5,14 +5,13 @@
   <center>
     <div data-v-69296181="" id="top" class="sectionix"><div data-v-69296181="" class="title"><div data-v-69296181="" class="content"><br data-v-69296181="">
 
-      <h2 data-v-69296181="">Articles<i style="font-size: 13px; text-align:right; margin-left:3px;">{{ filterMessage }}</i></h2>
+      <h2 data-v-69296181="">Newsletters</h2>
       
     </div></div></div>
   </center>
  
-
   <div class="posts-page">
-       <PostList :posts="posts" :board="posts" />
+       <LettersList :letters="letters" :board="letters" />
   </div>
 
 </div>
@@ -21,31 +20,27 @@
 
 <script>
 import {mapState} from 'vuex';
-import PostList  from  '@/components/Posts/PostList'
+import LettersList  from  '@/components/Letters/LettersList'
 export default {
   computed: {
   ...mapState({
-  
           allLetters: state =>  state.posts.newsletters,
     }),
-    posts() {
-             return this.allLetters;
+
+    letters() {
+          return this.allLetters;
     }, 
 
-    post() {
+    letter() {
     
-        return this.posts.find(p => p.id == this.$route.params.id)
+        return this.letters.find(l => l.id == this.$route.params.id)
     }
  },
  
  async fetch({store}) {
-
        store.dispatch("posts/setView", "Newsletters");
        await store.dispatch("posts/setNewsletters");   
   },
-
-
-
 
 }
 </script> 

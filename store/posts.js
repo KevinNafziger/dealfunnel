@@ -22,6 +22,7 @@ export const state = () => ({
   activeArtInfo: [],
   activeBuildInfo: [],
   activeDataInfo: [],
+  activeLetterInfo: [],
 
   Q320: [],
   Q420: [],
@@ -259,12 +260,12 @@ export const mutations = {
    setNewsletters (state, data)
    {
       state.newsletters = data;
-
+      state.activeLetterInfo = data;
    },
 
    setNewslettersNoFtech (state)
    {
-
+      state.activeLetterInfo = state.newsletters;
    },
 
    setBlockNextNoFetch(state) {

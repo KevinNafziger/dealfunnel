@@ -15,18 +15,10 @@ color:black'><br clear=all style='page-break-before:auto'>
  style="margin-right:5%;margin-bottom:15%;
 margin-left:5%;line-height:109%;">
 
-
-  <p  class='MsoNormal' style='margin-top:70px;margin-bottom:60px; text-indent:-.1pt;
-  line-height:109%;'><b><span v-if="!(post.title === undefined)" style='line-height:109%; margin-left: 3%; font-size:16pt;'>{{post.title }}</span></b></p>
-
-   <span style="display:inline-block;width:45%;text-align:center;float:left; margin:1%;">  
-    <div v-html="firsthalf(post)" ></div>
-   </span>
-   <span style="display:inline-block;width:45%; text-align:center;float:right; margin:1%;">  
-    <div v-html="partofsecond(post)" ></div>
-
-    <p v-if="!(post.logo_url==null)" class=MsoNormal style='margin-bottom:0in; margin-top:01in;'><img width=261 height=154
-        id="Picture 389" :src="post.logo_url"></p>
+   <span style="display:inline-block;width:90%; text-align:center;float:left; margin:1%;">  
+    <div v-html="letter.blog_entry" ></div>
+      <p v-if="!(letter.logo_url==null)" class=MsoNormal style='margin-bottom:0in; margin-top:01in;'><img width=261 height=154
+        id="Picture 389" :src="letter.logo_url"></p>
    </span>
  </div>
 <section style="margin-bottom:100px;"></section>
@@ -39,54 +31,23 @@ export default {
   computed: {
   ...mapState({
   
-          activeArtInfo: state =>  state.posts.activeArtInfo,
+          activeLetterInfo: state =>  state.letters.activeLetterInfo,
           activeView:  state => state.posts.activeView,
-          activeDataInfo: state => state.posts.activeDataInfo,
+          activeLetterInfo: state => state.posts.activeLetterInfo,
    }),
-    posts() {
+    letters() {
 
-         if (this.activeView == "Data") {
-         
-             return this.activeDataInfo;
-         }
-         
-         else {
-
-             return this.activeArtInfo;
-         }
-
+         if (this.activeView == "Newsletters") {
+             return this.activeLetterInfo;
+         }  
     }, 
-    post() {
+    letter() {
     
-        return this.posts.find(p => p.id == this.$route.params.id)
+        return this.letters.find(l => l.id == this.$route.params.id)
     }
  },
  
-    methods:  {
-    firsthalf(item) {
-
-      var added_string = this.secondhalf(item).indexOf('/p>');
-      return item.blog_entry.slice(0, (item.blog_entry.length /2) + added_string + 3 );
-
-    },
-
-    secondhalf(tree) {
-
-      return tree.blog_entry.slice(tree.blog_entry.length /2,tree.blog_entry.length); 
-
-    },
-
-    partofsecond(tree) {
-
-      var added_string = this.secondhalf(tree).indexOf('/p>');
-      return tree.blog_entry.slice(tree.blog_entry.length /2 + added_string + 4,tree.blog_entry.length);  
-
-    }
-
-  },
-
-
-};
+}
 </script> 
 
 <style scoped>

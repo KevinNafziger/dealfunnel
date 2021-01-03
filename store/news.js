@@ -1156,7 +1156,7 @@ export const mutations = {
 
   		 async goNext( {commit}, pageVal) {
 
-			     if (this.pageArryLength >= pageVal && !this.allNewsFetched) {
+			     if (this.pageArryLength >= pageVal && this.allNewsFetched) {
 			       commit("setNextNoFetch");
 			     }	
 			       

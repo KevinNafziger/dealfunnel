@@ -173,7 +173,7 @@ export const mutations = {
 
 	  state.activeInfo = state.allCompanies.slice(500,1000);
 	  state.activeTab ='All page 2';
-	  state.activePage =2;	
+	  state.activePage = 2;	
 	  state.firstLoad = false;
 	 
 	 },
@@ -182,7 +182,7 @@ export const mutations = {
 
 	  state.activeInfo = state.allCompanies.slice(1000, 1500);
 	  state.activeTab ='All page 3';
-	  state.activePage =3;	
+	  state.activePage = 3;	
 	  state.firstLoad = false;
 	 
 	 },
@@ -194,7 +194,7 @@ export const mutations = {
 	  state.activeInfo = state.allCompanies.slice(1500, lastItem);
 	  state.activeTab ='All page 4';	
 	  state.firstLoad = false;
-	  state.activePage =4;	
+	  state.activePage = 4;	
 	 
 	 },
 

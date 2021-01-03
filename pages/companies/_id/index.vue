@@ -6,7 +6,7 @@
 <div class="main-div">
   <div class="col-A">
     <div class="col-sm-5">
-        <img  v-if="!(item.logo_item === undefined)" class="nuxt__build_indicator2" :src="item.logo_item">
+        <img  v-if="item.logo_item" class="nuxt__build_indicator2" :src="item.logo_item">
     </div>
     <br>
     <div class="info-box">
