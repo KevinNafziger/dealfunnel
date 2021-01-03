@@ -31,19 +31,25 @@ export default {
   computed: {
   ...mapState({
   
-          activeLetterInfo: state =>  state.letters.activeLetterInfo,
+          activeLetterInfo: state =>  state.posts.activeLetterInfo,
           activeView:  state => state.posts.activeView,
-          activeLetterInfo: state => state.posts.activeLetterInfo,
+          newsletters: state => state.posts.newsletters,
    }),
-    letters() {
 
-         if (this.activeView == "Newsletters") {
-             return this.activeLetterInfo;
-         }  
+   letters() {
+
+         if ((this.activeView == "Newsletters" ) && 
+            !(this.activeLetterInfo== undefined)) {
+               return this.activeLetterInfo;
+         } 
+         else {
+              return this.newsletters
+         }
     }, 
+
     letter() {
     
-        return this.letters.find(l => l.id == this.$route.params.id)
+        return this.letters.find(p => p.id == this.$route.params.id)
     }
  },
  

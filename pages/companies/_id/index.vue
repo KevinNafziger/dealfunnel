@@ -9,6 +9,7 @@
         <img  v-if="item.logo_item" class="nuxt__build_indicator2" :src="item.logo_item">
     </div>
     <br>
+
     <div class="info-box">
         {{ item.description }}
     </div><br>
@@ -33,144 +34,166 @@
             {{item.founding_yr}}
            </li>
         <li>
-        <span class="mdi mdi-facebook" v-if="!(item.facebook ==='')" >
-            <a :href="item.facebook" target="_blank" ></a>
-        </span>
+          <span v-if="!(item.email==='' || item.email == undefined)"><br><b>Email:</b> <a class="mdi mdi-envelope about-info-title" >{{item.email }}
+          </a><br></span>
 
-        <span class="mdi mdi-github" v-if="!(item.github ==='')">
-              <a :href="item.github"  target="_blank" ></a>
-         </span>        
-
-          <span class="mdi mdi-medium" v-if="!(item.medium ==='')">
-              <a :href="item.medium" target="_blank" ></a>
+          <span v-if="!(item.facebook ==='')" >
+              <a :href="item.facebook" target="_blank" mdi mdi-facebook ></a>
           </span>
-          <span v-if="!(item.youtube ==='')" class="mdi mdi-youtube">
-              <a :href="item.youtube" target="_blank" ></a>
-        </span>
 
-        <span v-if="!(item.pinterest ==='')" class="mdi mdi-pinterest">
-              <a :href="item.pinterest" target="_blank" ></a>
-        </span>
+          <span v-if="!(item.github ==='')">
+              <a :href="item.github"  target="_blank" class="mdi mdi-github" ></a>
+          </span>        
+
+          <span v-if="!(item.medium ==='')">
+              <a :href="item.medium" target="_blank" class="mdi mdi-medium"  ></a>
+          </span>
           
-        <span v-if="!(item.email==='' || item.email == undefined)"> <b>Email:</b> <a class="mdi mdi-envelope about-info-title" >{{item.email }}
-          </a></span>
+          <span v-if="!(item.youtube ==='')">
+              <a :href="item.youtube" target="_blank" class="mdi mdi-youtube" ></a>
+          </span>
+
+          <span v-if="!(item.pinterest ==='')" >
+              <a :href="item.pinterest" target="_blank" class="mdi mdi-pinterest" ></a>
+          </span>
+          
         </li>
         </ul>
-      </div>
-    </div>  
+     </div>
+  </div>  
 
  <div class="col-B">
-     <div class="key-management"  v-if="!executives.length"  v-for="post in posts">
+   <div class="key-management"  v-if="!executives.length"  v-for="post in posts">
       <h3>key management</h3>
      <div class="exec-comp-div">
        <div class="comp-exec-1">
-         <img v-if="!(post.pic_item=== undefined)" class="exec-image" :src="post.pic_item"></img>
+          
+          <img v-if="!(post.pic_item=== undefined)" class="exec-image" :src="post.pic_item"></img>
             <b> {{post.execheader }} :</b><br>
                {{ post.execname}}
-          <span class="mdi mdi-linkedin" v-if="!(post.linkedin ==='' )">
-             <a :href="post.linkedin" target="_blank" ></a>
+          
+          <span v-if="!(post.linkedin ==='' )">
+             <a :href="post.linkedin" target="_blank" class="
+             mdi mdi-linkedin" ></a>
           </span>
+          
           <span v-if="post.funding" class="description-box"> <b>funding to date:</b>
             {{post.funding}}
           </span>
-        <br>
+          <br>
 
         </div>
       </div>
-  </div>
-    <div class="key-management"  v-if="executives.length" v-for="executive in executives">
-        <h3>key management</h3>
-          <div class="exec-comp-div">
-            <div class="comp-exec-1">
-                <img v-if="!(executive.pic_item=== undefined)" class="exec-image" :src="executive.pic_item"></img>
+    </div>
+    <div class="key-management"  v-if="!(executives.length == undefined)" v-for="executive in executives">
+      <h3>key management</h3>
+        <div class="exec-comp-div">
+          <div class="comp-exec-1">
+                <img v-if="!(executive.pic_item === undefined)" class="exec-image" :src="executive.pic_item">
+                </img>
+                
                 <b>{{executive.title }}:</b><br>
                 {{executive.first}} {{executive.last}}
                 <br>
 
-                <span v-if="!(executive.facebook ==='')" class="mdi mdi-facebook">
-                    <a :href="executive.facebook" target="_blank" ></a>
-                </span>
-
-                <span class="mdi mdi-linkedin" v-if="!(executive.linkedIn ==='')" >
-                   <a :href="executive.linkedIn"  target="_blank" ></a>
-                </span>
-
-                <span class="mdi mdi-twitter" v-if="!(executive.twitterurl === '')" >
-                    <a :href="executive.twitterurl" target="_blank" ></a>
-                </span>
-              
-               <span class="mdi mdi-github" v-if="!(executive.github ==='')">
-                    <a :href="executive.github" target="_blank" ></a>
-               </span>       
-              
-                <span v-if="!(executive.instagram ==='')" class="mdi mdi-instagram" >
-                  <a :href="executive.instagram" target="_blank" ></a>
-                </span>
-              
-                 <span v-if="!(executive.youtube ==='')" class="mdi mdi-youtube">
-                  <a :href="executive.youtube" target="_blank" ></a>
-                 </span>
-
-                  <span v-if="!(executive.pinterest ==='')" class="mdi mdi-pinterest">
-                  <a :href="executive.pinterest" target="_blank" ></a>
-                  </span>
+               <ul>
+                 <li>
                 
-                  <span v-if="!(executive.googleplus =='')" class="mdi mdi-googleplus">
-                      <a :href="executive.googleplus" target="_blank" ></a>
+
+                  <span v-if="!(executive.email =='')"> <b>Email:</b> <a class="mdi mdi-envelope about-info-title" > {{executive.email }}</a><br>
+                  </span>
+
+
+
+                  <span v-if="!(executive.linkedIn ==='')" >
+                     <a :href="executive.linkedIn"  target="_blank" class="mdi mdi-linkedin" ></a>
+                  </span>
+
+                  <span  v-if="!(executive.twitterurl === '')" >
+                     <a :href="executive.twitterurl" target="_blank" class="mdi mdi-twitter" ></a>
+                  </span>
+              
+                  <span v-if="!(executive.facebook ==='')" >
+                    <a :href="executive.facebook" target="_blank" class="mdi mdi-facebook"></a>
+                   </span>
+                  
+                  <span v-if="!(executive.github ==='')">
+                      <a :href="executive.github" target="_blank"  class="mdi mdi-github" ></a>
+                  </span>       
+              
+                   <span v-if="!(executive.instagram ==='')"  >
+                    <a :href="executive.instagram" target="_blank" class="mdi mdi-instagram"></a>
+                   </span>
+                
+                   <span v-if="!(executive.youtube ==='')" >
+                    <a :href="executive.youtube" target="_blank" class="mdi mdi-youtube" ></a>
+                   </span>
+
+                    <span v-if="!(executive.pinterest ==='')" >
+                    <a :href="executive.pinterest" target="_blank" class="mdi mdi-pinterest" ></a>
+                    </span>
+                
+                    <span v-if="!(executive.googleplus =='')" >
+                        <a :href="executive.googleplus" target="_blank" class="mdi mdi-googleplus" ></a>
+                    </span> 
+                
+                   <span v-if="!(executive.discord =='')" >
+                    <a :href="executive.discord" target="_blank" class="mdi mdi-discord" ></a>
                   </span> 
                 
-                 <span v-if="!(executive.discord =='')" class="mdi mdi-discord">
-                  <a :href="executive.discord" target="_blank" ></a>
-                </span> 
+                  <span v-if="!(executive.snapchat =='')" >
+                    <a :href="executive.snapchat" target="_blank" class="mdi mdi-snapchat"></a>
+                  </span> 
+                  
+                  <span v-if="!(executive.telegram =='')" >
+                    <a :href="executive.telegram" target="_blank" class="mdi mdi-telegram"></a>
+                  </span> 
                 
-                <span v-if="!(executive.snapchat =='')" class="mdi mdi-snapchat">
-                  <a :href="executive.snapchat" target="_blank" ></a>
-                </span> 
-                
-                <span v-if="!(executive.telegram =='')" class="mdi mdi-telegram">
-                  <a :href="executive.telegram" target="_blank" ></a>
-                </span> 
-                
-                <span v-if="!(executive.angellist =='')" class="mdi mdi-angellist">
-                  <a :href="executive.angellist" target="_blank" ></a>
+                <span v-if="!(executive.angellist =='')" >
+                  <a :href="executive.angellist" target="_blank" class="mdi mdi-angellist" ></a>
                 </span>    
 
-                <span v-if="!(executive.email =='')"> <b>Email:</b> <a class="mdi mdi-envelope about-info-title" > {{executive.email }}</a>
-                </span>
-              </div>
+                </li>
+                </ul>
+          </div>
         </div>
-        </div>
-        <br>
-      
-    <div v-if="raises" v-for="raise in raises" class="info-box">
-        {{raise.item_date }}  <a :href="raise.url" class="btn btn-link" target="_blank" > {{raise.raise_type}} {{raise.other}}</a> 
+     </div>
+    <br>
+  
+    <div class="info-box" v-show="!(raises.length == undefined)" v-for="raise in raises">  
+  
+            {{raise.item_date }}
+             <a v-if="!(raise.url == undefined)" :href="raise.url"  target="_blank" > {{raise.raise_type}} {{raise.other}}</a> 
 
-        <br> {{raise.amount}}  <br>
-            Investors: {{raise.lead}} {{raise.partcipating}}
-    </div>   
-    <div v-if="posts" v-for="post in posts">
-        <span v-if="post.interest">
-              <b>Interesting fact: </b> {{post.interest }}<br>
-        </span>
-        <span v-if="post.funding">
-              total funding<br> {{post.funding}}
-             <br>
-          </span>
-      <span v-if="!(post.investors == undefined)" >Investors: {{post.investors }}
-       </span>
-        <span v-if="!(post.advisors.length == undefined || post.advisors ==='')">
-            <b>Advisors</b>{{post.advisors }}<br>
-        </span>
-        <span v-if="!(post.newdescript ==='')">
-                {{post.newdescript}} <br>
-        </span>
-        <span v-if="post.newdescript ==='' && post.summary !=''" >
-                {{post.teaser }} {{post.summary}} <br>
-        </span>
-        </div>
+            <br> {{raise.amount}}  <br>
+                Investors: {{raise.lead}} {{raise.partcipating}} 
+    
+      </div>         
+      <div class="info-box" v-show="!(posts.length == undefined)"   
+          v-for="post in posts">
+              
+           <span v-if="!(post.funding ==''|| post.funding == undefined)">
+                total funding<br> {{post.funding}}
+                <br>
+            </span>
+              
+            <span v-if="!(post.investors == '')" > Investors: {{post.investors}}
+            </span>
+             
+            <span v-if="!(post.advisors.length == undefined || post.advisors ==='')">
+              <b>Advisors</b>{{post.advisors }}<br>
+            </span>
+
+             <span v-if="post.interest">
+               <b>Article Snippit: </b> {{post.interest }}<br>
+            </span>
+         </div>
+         </div>
       </div>
+    </div>
+    </div>
   </div>
-  </div>
+
 </template>
 <script>
 import {mapState} from 'vuex';
@@ -190,6 +213,7 @@ import {mapState} from 'vuex';
         active: state =>  state.company.activeInfo,
         first: state => state.company.firstLoad,
         allCompanies:  state => state.company.allCompanies,
+        allPosts: state => state.allPosts
      }),
 
     items() {
@@ -221,16 +245,7 @@ import {mapState} from 'vuex';
         //}
     //},
 
-   posts() {
-        if (this.allPosts)
-        {
-              return this.allPosts.filter(p =>p.company_id == this.$route.params.id)
-        }
-
-        else {
-             return [];
-        }
-    },
+  
 
     item() {
 
@@ -252,9 +267,12 @@ import {mapState} from 'vuex';
 
       let result = await $axios.get('raises?cid=' + params.id)
 
+      let retval = await $axios.get('posts?compid=' + params.id)
+
       return {
         executives:response.data,
         raises: result.data,
+        posts:  retval.data,
        }
     },
 }

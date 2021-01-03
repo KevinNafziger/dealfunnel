@@ -87,7 +87,6 @@ export const state = () => ({
   activeDataTab: 'All',
   activeArtTab: 'All',
   activeBuildTab:  'All',
-
   activeView: 'Articles',
   
   numBuildPage: 1,
@@ -261,11 +260,13 @@ export const mutations = {
    {
       state.newsletters = data;
       state.activeLetterInfo = data;
+      state.activeView = "Newsletters"
    },
 
    setNewslettersNoFtech (state)
    {
       state.activeLetterInfo = state.newsletters;
+      state.activeView = "Newsletters";
    },
 
    setBlockNextNoFetch(state) {
