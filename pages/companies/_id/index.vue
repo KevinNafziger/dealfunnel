@@ -163,7 +163,7 @@
     <div class="info-box" v-show="!(raises.length == undefined)" v-for="raise in raises">  
   
             {{raise.item_date }}
-             <a v-if="!(raise.url == undefined)" :href="raise.url"  target="_blank" > {{raise.raise_type}} {{raise.other}}</a> 
+             <a v-if="!(raise.url == undefined)" :href="raise.url" class="btn btn link"  target="_blank" > {{raise.raise_type}} {{raise.other}}</a> 
 
             <br> {{raise.amount}}  <br>
                 Investors: {{raise.lead}} {{raise.partcipating}} 

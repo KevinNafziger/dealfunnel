@@ -118,93 +118,104 @@ export const mutations = {
     setAllNews(state, items) {
 
       state.allNews = items;
+      state.activeLetterInfo = items;
+     
     },
 
-   setSector(state, data) {
-
+    setSector(state, data) {
+    
      state.activeNewsInfo = data;
      state.firstNewsLoad = false;
+    
     },
 
    setTabForSector (state, sector) {
-
-    state.activeNewsTab = sector;
-   
+     state.activeNewsTab = sector;
    },
 
    setInsurNext(state, data) {
 
-   	var temp = state.insNewsPage;
+   	 var temp = state.insNewsPage;
    	 temp++;
    	 state.insNewsPage++ ;
    	 state.activeNewsInfo = data;
    	 state.activeNewsTab = 'Insurtech';
      state.firstNewsLoad = false;
 	
-	    if (temp == 2) {
-	   		 state.insur2 =  data;
-	     }
+	   if (temp == 2) {
+	     state.insur2 =  data;
+	   }
 	 
-    	else if (temp == 3)	{
-	   	   	 state.insur3 =  data;
-	    }
+     else if (temp == 3)	{
+	   	  state.insur3 =  data;
+	   }
 
 	   	else if (temp == 4) {
-	   	   	 state.insur4 =  data;	
+	   	   state.insur4 =  data;	
 	    }
 
 	    else if (temp == 5) {
-	   	   	 state.insur5= data;	
+	   	   state.insur5= data;	
 	   	}
    	 
    },
 
-
    setBlockNext(state, data) {
 
      var temp = state.blkNewsPage;
-      temp++;   	
+     temp++; 
+
    	 state.blkNewsPage++ ;
    	 state.activeNewsInfo = data;
    	 state.activeNewsTab = 'Blockchain';
      state.firstNewsLoad = false;
 
-    if (temp == 2) {
-   		 state.block2 =  data;
-     }
- 	 else if (temp == 3)	{
-   	   	 state.block3 =  data;
-     }
-   	 else if (temp == 4) {
-   	   	 state.block4 =  data;	
-     }
-     else if (temp ==5) {
-   	   	 state.block5= data;	
-   	 }
-   	 else if (temp ==6) {
-   	   	 state.block6 =  data;	
-   	 }
-   	 else if (temp== 7) {
-   	   	 state.block7 =  data;	
-   	 }
-   	else if (temp ==8) {
-   	   	 state.block8 =  data;	
-   	}
-    else if (temp == 9) {
-   	   	 state.block9 =  data;	
-   	}
-   	else if (temp == 10) {	  
-   	   	 state.block10 = data;	
-   	}
-   	else if (temp == 11) {
-   	   	 state.block11 = data;	
-   	}
-   	else if (temp == 12) {
-   	   	 state.block12= data;	
-   	}
-   	else if (temp == 13) {
-   	   	 state.block13 = data;	
-   	  }
+       if (temp == 2) {
+     		 state.block2 =  data;
+       }
+
+   	   else if (temp == 3)	{
+     	   	 state.block3 =  data;
+       }
+
+     	 else if (temp == 4) {
+     	   	 state.block4 =  data;	
+       }
+
+       else if (temp ==5) {
+     	   	 state.block5= data;	
+     	 }
+
+     	 else if (temp ==6) {
+     	   	 state.block6 =  data;	
+     	 }
+
+     	 else if (temp== 7) {
+     	   	 state.block7 =  data;	
+     	 }
+     	
+       else if (temp ==8) {
+     	   	 state.block8 =  data;	
+     	 }
+
+       else if (temp == 9) {
+     	   	 state.block9 =  data;	
+     	}
+     	else if (temp == 10) {	  
+     	   	 state.block10 = data;	
+     	}
+
+     	else if (temp == 11) {
+     	   	 state.block11 = data;	
+     	}
+
+     	else if (temp == 12) {
+     	   	 state.block12= data;	
+     	}
+
+     	else if (temp == 13) {
+     	   	 state.block13 = data;	
+     	}
 
    },
 
@@ -609,7 +620,7 @@ export const mutations = {
   		  state.firstNewsLoad = false;
   	},
 
-	setLendNoFetch(state) {
+	 setLendNoFetch(state) {
 
 		   state.activeNewsInfo = state.lending;
 	     state.activeNewsTab = 'Lending';	
@@ -654,7 +665,6 @@ export const mutations = {
   		state.firstNewsLoad = false;
 
 	 },
-
 
 	 setRemitNoFetch(state) {
 
@@ -1149,44 +1159,44 @@ export const mutations = {
 		      commit("setPrevious");  		 
   		 },
 
-  		 async goNext( {commit}, pageVal) {
+      async goNext( {commit}, pageVal) {
 
-			     if (this.pageArryLength >= pageVal && this.allNewsFetched) {
+			 if (this.pageArryLength >= pageVal && this.allNewsFetched) {
 			       commit("setNextNoFetch");
-			     }	
+			 }	
 			       
-          else {
-			  
-			         await this.$axios.get('/links?page=' + pageVal)
+      else {
+		 
+		      await this.$axios.get('/links?page=' + pageVal)
                 .then( res => {
-					       commit("setNextAndFetch", res.data)	  
-			         })               
-			     }	 
+				       commit("setNextAndFetch", res.data)	  
+		       })               
+		   }	 
   		 
-  		  },
+  	  },
 
-  		 async setBlockPrevious({ commit }, page ) {
-		      commit("setBlockPrevious");
-  		 },
+  	  async setBlockPrevious({ commit }, page ) {
+		    commit("setBlockPrevious");
+  	  },
 
-  		 async setBlockNext( {commit}, page) {
+  	  async setBlockNext( {commit}, page) {
 
   			 var temp = page;
   			 temp++ ;
 
-  			  await this.$axios.get('/links?blk=' + temp)
-                  .then( res => {
-  					commit("setBlockNext", res.data)	  
-  			   })               
-		    },	 
+  			 await this.$axios.get('/links?blk=' + temp)
+             .then( res => {
+  				 commit("setBlockNext", res.data)	  
+  			 })               
+		  },	 
   		 
-      	async setPayPrevious({ commit }, page ) {
+     async setPayPrevious({ commit }, page ) {
     	
-    		   commit("setPayPrevious");
+      commit("setPayPrevious");
       		 
-      	},
+     },
 
-    async setPayNext( {commit}, page) {
+     async setPayNext( {commit}, page) {
 
   		 	 var temp = page;
 			   temp++ ;
@@ -1194,15 +1204,15 @@ export const mutations = {
                 .then( res => {
 					commit("setPayNext", res.data)	  
 			   })               
-  	},
+  	 },
 
-    async setSector( {commit}, sector) {
+     async setSector( {commit}, sector) {
 
         await this.$axios.get('/links?sector=' + sector)
                 .then( res => {
           commit("setSector", res.data)    
          })               
-       
+    
      },
 
     async setbyID( {commit}, sector) {
@@ -1210,13 +1220,12 @@ export const mutations = {
         await this.$axios.get('/links?id=' + sector)
                 .then( res => {
           commit("setSector", res.data)    
-         })               
-       
+         })                 
      },
 
     setSectorTab( {commit}, sector) {
 
-          commit("setTabForSector", sector)    
+      commit("setTabForSector", sector)    
     },
 
   	async setInsurPrevious({ commit }, page ) {
@@ -1236,11 +1245,12 @@ export const mutations = {
   			 })               
 		 },	 
 
-      async setSearchTab( {commit}, topic) {
+     
+     async setSearchTab( {commit}, topic) {
           commit("setSearchTab", topic);    
       },
 
-      async submitSearch( {commit}, topic) {
+     async submitSearch( {commit}, topic) {
         await this.$axios.get('/links?term=' + topic)
               .then( res => {
               commit("submitSearch", res.data)
@@ -1248,13 +1258,13 @@ export const mutations = {
          })
       },
 
-      async setAllNews ( {commit}) {
+     async setAllNews ( {commit}) {
           commit("setAllNews", allNews); 
       },
 
-  	 async goLast( {commit}) {
+  	  async goLast( {commit}) {
           commit("setLast");
-  	 },	
+  	  },	
 
   	 nuxtServerInit(vuexContext, context) {
 		   
