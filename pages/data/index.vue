@@ -11,7 +11,7 @@
    <center><span content="download excel report"
  v-tippy="{ placement : 'bottom' }" id="oki" class="mdi mdi-file-excel" style="margin:20px;font-size: 34px;"></span></center><br>
  </a>
-<Dropdown/>
+<Sidebar/>
     <table class="table-striped" width="100%">
         <tbody class="table-t">
           <th>
@@ -97,15 +97,15 @@
 
 <script>
 import Vue from 'vue';
-import Dropdown from '@/components/Dropdown/Dropdown';
-Vue.component('Dropdown', Dropdown);
+import Sidebar from '@/components/Sidebar/Sidebar';
+Vue.component('Sidebar', Sidebar);
 import {mapState} from 'vuex';
 import DataTempSearch from '@/components/Data/DataTempSearch';
 
 export default {
 
 components: {
-  Dropdown,
+  Sidebar,
 },
 
 computed: {
