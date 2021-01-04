@@ -35,7 +35,7 @@
             {{item.founding_yr}}
            </li>
         <li v-if="!(item.email==='') || !(item.facebook ==='') || !(item.github ==='') || !(item.medium ==='') || !(item.youtube ==='') || !(item.pinterest ==='')" >
-          <span v-if="!(item.email==='' || item.email == undefined)"><br><b>Email:</b> <a class="mdi mdi-envelope about-info-title" >{{item.email }}
+          <span v-if="!(item.email==='' || item.email == undefined)"><br><b>Email:</b> <a :href="`mailto:${item.email}`" class="mdi mdi-envelope about-info-title" >{{item.email }}
           </a><br></span>
 
           <span v-if="!(item.facebook ==='')" >
@@ -44,12 +44,12 @@
 
           <span v-if="!(item.github ==='')">
               <a :href="item.github"  target="_blank" class="mdi mdi-github" ></a>
-          </span>        
+          </span>
 
           <span v-if="!(item.medium ==='')">
               <a :href="item.medium" target="_blank" class="mdi mdi-medium"  ></a>
           </span>
-          
+
           <span v-if="!(item.youtube ==='')">
               <a :href="item.youtube" target="_blank" class="mdi mdi-youtube" ></a>
           </span>
@@ -60,23 +60,23 @@
         </li>
         </ul>
      </div>
-  </div>  
+  </div>
 
  <div class="col-B">
    <div class="key-management"  v-if="!executives.length"  v-for="post in posts">
       <h3>key management</h3>
      <div class="exec-comp-div">
        <div class="comp-exec-1">
-          
+
           <img v-if="!(post.pic_item=== undefined)" class="exec-image" :src="post.pic_item"></img>
             <b> {{post.execheader }} :</b><br>
                {{ post.execname}}
-          
+
           <span v-if="!(post.linkedin ==='' )">
              <a :href="post.linkedin" target="_blank" class="
              mdi mdi-linkedin" ></a>
           </span>
-          
+
           <span v-if="post.funding" class="description-box"> <b>funding to date:</b>
             {{post.funding}}
           </span>
@@ -96,7 +96,7 @@
                 <b>{{executive.title }}:</b><br>
                 {{executive.first}} {{executive.last}}
                 <br>
-              </li>  
+              </li>
               <li v-if="!(executive.email =='') ||!(executive.linkedIn ==='') || !(executive.twitterurl === '')|| !(executive.facebook ==='') || !(executive.github ==='') || !(executive.instagram ==='') || !(executive.youtube ==='') || !(executive.pinterest ==='') || !(executive.googleplus =='') || !(executive.discord =='') || !(executive.snapchat =='') || !(executive.telegram =='') || !(executive.angellist =='')"
                   <span v-if="!(executive.email =='')"> <b>Email:</b> <a class="mdi mdi-envelope about-info-title" > {{executive.email }}</a><br>
                   </span>
@@ -108,19 +108,19 @@
                   <span  v-if="!(executive.twitterurl === '')" >
                      <a :href="executive.twitterurl" target="_blank" class="mdi mdi-twitter" ></a>
                   </span>
-              
+
                   <span v-if="!(executive.facebook ==='')" >
                     <a :href="executive.facebook" target="_blank" class="mdi mdi-facebook"></a>
                    </span>
-                  
+
                   <span v-if="!(executive.github ==='')">
                       <a :href="executive.github" target="_blank"  class="mdi mdi-github" ></a>
-                  </span>       
-              
+                  </span>
+
                   <span v-if="!(executive.instagram ==='')" >
                     <a :href="executive.instagram" target="_blank" class="mdi mdi-instagram"></a>
                    </span>
-                
+
                    <span v-if="!(executive.youtube ==='')" >
                     <a :href="executive.youtube" target="_blank" class="mdi mdi-youtube" ></a>
                    </span>
@@ -128,68 +128,68 @@
                     <span v-if="!(executive.pinterest ==='')" >
                     <a :href="executive.pinterest" target="_blank" class="mdi mdi-pinterest" ></a>
                     </span>
-                
+
                     <span v-if="!(executive.googleplus =='')" >
                         <a :href="executive.googleplus" target="_blank" class="mdi mdi-googleplus" ></a>
-                    </span> 
-                
+                    </span>
+
                     <span v-if="!(executive.discord =='')" >
                     <a :href="executive.discord" target="_blank" class="mdi mdi-discord" ></a>
-                    </span> 
-                
+                    </span>
+
                    <span v-if="!(executive.snapchat =='')" >
                     <a :href="executive.snapchat" target="_blank" class="mdi mdi-snapchat"></a>
-                   </span> 
-                  
+                   </span>
+
                    <span v-if="!(executive.telegram =='')" >
                     <a :href="executive.telegram" target="_blank" class="mdi mdi-telegram"></a>
-                   </span> 
-                
+                   </span>
+
                    <span v-if="!(executive.angellist =='')" >
                    <a :href="executive.angellist" target="_blank" class="mdi mdi-angellist" ></a>
-                   </span>    
+                   </span>
                 </li>
               </ul>
           </div>
         </div>
      </div>
     <br>
-  
-      <div class="info-box" v-show="!(raises.length == undefined)" v-for="raise in raises">  
-  
+
+      <div class="info-box" v-show="!(raises.length == undefined)" v-for="raise in raises">
+
             {{raise.item_date }}
-             <a v-if="!(raise.url == undefined)" :href="raise.url" class="btn btn link"  target="_blank" > {{raise.raise_type}} {{raise.other}}</a> 
+             <a v-if="!(raise.url == undefined)" :href="raise.url" class="btn btn link"  target="_blank" > {{raise.raise_type}} {{raise.other}}</a>
 
             <br> {{raise.amount}}  <br>
-                Investors: {{raise.lead}} {{raise.partcipating}} 
-    
-      </div>         
-      
-      <div v-show="!(posts.length == undefined)"   
+                Investors: {{raise.lead}} {{raise.partcipating}}
+
+      </div>
+
+      <div v-show="!(posts.length == undefined)"
           v-for="post in posts">
 
-            <div v-if="!(post.funding ==''|| post.funding == undefined)|| !(post.advisors.length == undefined || post.advisors ==='')"  class="info-box">   
+            <div v-if="!(post.funding ==''|| post.funding == undefined)|| !(post.advisors.length == undefined || post.advisors ==='')"  class="info-box">
               <span v-if="!(post.funding ==''|| post.funding == undefined)">
                   <b>Total funding</b><br> {{post.funding}}
                   <br>
               </span>
-              
+
               <span v-if="!(post.investors == '')" > <b>Investors:</b>{{post.investors}}
               </span>
-             
+
               <span v-if="!(post.advisors.length == undefined || post.advisors ==='')">
                 <b>Advisors</b>{{post.advisors }}<br>
               </span>
             </div>
-            
-            <div class="info-box">  
+
+            <div class="info-box">
 
               <span v-if="post.interest">
                  <br><b>Article Snippit: </b><br><br> {{post.interest }}<br>
                  <br>
                   <nuxt-link class="gardient-button" :to="'/posts/' + post.id " > See Article </nuxt-link>
               </span>
-            </div>  
+            </div>
       </div>
     </div>
   </div>
@@ -234,7 +234,7 @@ import {mapState} from 'vuex';
     },
 
     //showSocialDiv(current) {
-        
+
       //  if ((!current.facebook ==='') || (!current.medium ==='') || //(!current.github ==='') || !(!current.youtube ==='') || //(!current.pinterest ==='') || (!current.email ===''))
         // {
           //  return true;
@@ -244,7 +244,7 @@ import {mapState} from 'vuex';
         //}
     //},
 
-  
+
     item() {
 
         if (this.allCompanies) {
