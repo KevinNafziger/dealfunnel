@@ -1,5 +1,6 @@
 <template>
 <div>
+
   <div data-v-69296181="" id="top" ><div data-v-69296181="" class="title"><div data-v-69296181="" class="content"><br data-v-69296181=""> <h2 data-v-69296181="">Article Data<i style="font-size: 13px; text-align:right; margin-left:3px;">{{ filterMessage }}</i></h2></div></div></div>
   <text class="headcomname">
     Article Data
@@ -10,7 +11,7 @@
    <center><span content="download excel report"
  v-tippy="{ placement : 'bottom' }" id="oki" class="mdi mdi-file-excel" style="margin:20px;font-size: 34px;"></span></center><br>
  </a>
-
+<Dropdown/>
     <table class="table-striped" width="100%">
         <tbody class="table-t">
           <th>
@@ -95,10 +96,17 @@
 </template>
 
 <script>
+import Vue from 'vue';
+import Dropdown from '@/components/Dropdown/Dropdown';
+Vue.component('Dropdown', Dropdown);
 import {mapState} from 'vuex';
 import DataTempSearch from '@/components/Data/DataTempSearch';
+
 export default {
 
+components: {
+  Dropdown,
+},
 
 computed: {
   ...mapState({
