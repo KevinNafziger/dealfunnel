@@ -6,10 +6,10 @@
     <div data-v-69296181="" id="top" class="sectionix"><div data-v-69296181="" class="title"><div data-v-69296181="" class="content"><br data-v-69296181="">
 
       <h2 data-v-69296181="">Newsletters</h2>
-      
+
     </div></div></div>
   </center>
- 
+
   <div class="posts-page">
        <LettersList :letters="letters" :board="letters" />
   </div>
@@ -29,24 +29,26 @@ export default {
 
     letters() {
           return this.allLetters;
-    }, 
+    },
 
     letter() {
-    
+
         return this.letters.find(l => l.id == this.$route.params.id)
     }
  },
- 
+
  async fetch({store}) {
        store.dispatch("posts/setView", "Newsletters");
-       await store.dispatch("posts/setNewsletters");   
+       await store.dispatch("posts/setNewsletters");
   },
 
 }
-</script> 
+</script>
 
 <style scoped>
-
+.art-rows {
+  display: contents !important;
+}
  @font-face
   {font-family:"Cambria Math";
   panose-1:2 4 5 3 5 4 6 3 2 4;}

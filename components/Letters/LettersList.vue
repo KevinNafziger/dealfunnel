@@ -5,22 +5,21 @@
 <ul class="art-rows" v-for="letter in letters">
   <div class="w-dyn-list" >
     <div class="article-card" style="margin:10px;">
-    <div style="height:1px;margin-left:auto;margin-right:auto;margin-top:20px;" class="coolbar"> </div>
     <div class="w-dyn-items">
     <div class="w-dyn-item">
     <div class="post-wrapper">
     <div class="post-content">
-            <br><br>
+
     <div class="post-info">
 
-       <div v-if="!(letter.created_date==null)" class="post-info" style="float:left;"><a class="datetag">{{letter.created_date}}</a>
+       <div v-if="!(letter.created_date==null)" class="post-info" style="float:left;z-index:9;"><a class="datetag">{{letter.created_date}}</a>
         </div>
 
         <div class="w-row">
           <div v-if="!(letter.logo_url==null)" class="flex-img">
               <div class="centering-imgs w-col w-col-6 w-col-medium-6 w6-hide-tiny">
                   <a class="blog-image w-inline-block" >
-                      <img :src="letter.logo_url" width="180" style="max-width: 180px ;max-height:130; overflow:none;"
+                      <img :src="letter.logo_url" width="50" style="max-width: 180px ;max-height:130; overflow:none;"
                      >
                   </a>
                </div>
@@ -32,13 +31,13 @@
 
                        <div class="sumary"> {{letter.summary}} </div>
                       <br>
-                        <br><br><br>
-                        <div class="center-btn">
-                          <nuxt-link class="gardient-button" :to="'/newsletters/' + letter.id " > Read More</nuxt-link>
-                        </div>
-                        <br>
+
+
                   </span>
                   </div>
+              </div>
+              <div class="center-btn">
+                <nuxt-link class="gardient-button" :to="'/newsletters/' + letter.id " > Read More</nuxt-link>
               </div>
           </div>
         </div>
@@ -60,7 +59,7 @@ import {mapState} from 'vuex';
   props: ["letters", "board"],
   computed: {
   ...mapState({
-   
+
    })
   },
   methods: {
@@ -83,12 +82,14 @@ import {mapState} from 'vuex';
 
 </script>
  <style scoped>
+
  .sumamry {
    overflow: auto;
    height: 100px;
  }
  .w-dyn-list {
    width: 100% !important;
+   display: inline-table;
  }
  .gardient-button {
    background-image: linear-gradient(200deg, #ffffff 10%, #ffffff 39%, #ffffff 80%);
@@ -113,7 +114,7 @@ import {mapState} from 'vuex';
  }
  .center-btn{
    text-align: -webkit-center;
-   display: flex;
+   display: contents;
  }
  a {
    color:#4f81bd;
@@ -135,8 +136,11 @@ import {mapState} from 'vuex';
       min-height: 900px !important ;
     }
   }
+  .w-row{
+    display: flex;
+  }
   .art-rows {
-    display: inline-flex;
+    display: contents;
     width: 50%;
     padding: 10px;
     place-content: center;
@@ -146,11 +150,11 @@ import {mapState} from 'vuex';
   }
   .post-main-text {
     height: auto;
-    display: inline-block;
-    border-bottom-style: groove;
-    border-bottom-color: #d2e8ff1f;
-    overflow:auto;
-    width: 100%;
+      display: -webkit-inline-box;
+      border-bottom-style: groove;
+      border-bottom-color: rgba(210,232,255,0.12157);
+      overflow: auto;
+      width: 400px;
   }
   table {
     width: 100%;
@@ -162,8 +166,8 @@ import {mapState} from 'vuex';
     margin-top:20px !important;
   }
   .flex-img {
-    width:100%;
-    display:flex;
+    display: table-cell;
+        width: 200px;
   }
   .centering-imgs {
     text-align:center !important;
@@ -236,15 +240,14 @@ img.in-your-face {
     padding: 10px;
     height: auto;
     width: 100%;
-    min-height: 675px;
+
     margin-left: auto !important;
     margin-right: auto !important;
-    margin-bottom: 50px !important;
+    margin-bottom: 32px !important;
     background-color:#dedede;
 }
 .article-card:hover {
     box-shadow: 0 1px 5px 0 rgba(0, 89, 132, 0.16);
-    overflow: hidden;
 }
 
 .article-card .w-col-9 {
@@ -353,14 +356,11 @@ img {
 
 .datetag {
        position: relative !important;
-width: auto;
-margin-top: -50px;
-display: block;
-padding: 3px;
-border-radius: 3px;
-background: #ffffff80;
-  }
-  .flex-img {
-    min-height: 250px;
+       width: auto;
+       margin-top: -5px;
+       display: block;
+       padding: 3px;
+       border-radius: 3px;
+       background: #ffffff80;
   }
 </style>
