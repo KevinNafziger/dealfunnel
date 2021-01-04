@@ -5,13 +5,16 @@
   <text class="headcomname">
     Article Data
   </text>
+  <div class="top-menus">
+  <Sidebar/>
 <DataTempSearch/>
+</div>
   <a href="https://fintechhorizonsmedia.com/fintechraises.xlsx"
    style="color:dimgray" id="myExcelIcoTag"><br>
    <center><span content="download excel report"
  v-tippy="{ placement : 'bottom' }" id="oki" class="mdi mdi-file-excel" style="margin:20px;font-size: 34px;"></span></center><br>
  </a>
-<Sidebar/>
+
     <table class="table-striped" width="100%">
         <tbody class="table-t">
           <th>
@@ -622,7 +625,9 @@ display: table;
    margin-left: auto;
    margin-right: auto;
 }
-
+.top-menus {
+      display: -webkit-box;
+}
 .title {
    text-align: -webkit-center;
    margin-top: 20px;
