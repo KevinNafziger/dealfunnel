@@ -14,9 +14,10 @@
         {{ item.description }}
     </div><br>
 
-    <div class="info-box">
-        <ul>
-          <li><b>Location:</b>{{item.city }}
+    <div class=
+    "info-box" v-if="(item.state) || (item.phone) || (item.country) || (!item.website ==='') || (!item.email==='') || (!item.facebook ==='') || (!item.github ==='') || (!item.medium ==='') || (!item.youtube ==='') || (!item.pinterest ==='')" >
+         <ul>
+          <li v-if="item.state"><b>Location:</b>{{item.city }}
             {{ item.state }}  {{item.country}}
           </li>
           <li v-if="item.phone"><b>Phone:</b>
@@ -33,7 +34,7 @@
            <li v-if="item.founding_yr" ><b>Founded:</b>
             {{item.founding_yr}}
            </li>
-        <li>
+        <li v-if="!(item.email==='') || !(item.facebook ==='') || !(item.github ==='') || !(item.medium ==='') || !(item.youtube ==='') || !(item.pinterest ==='')" >
           <span v-if="!(item.email==='' || item.email == undefined)"><br><b>Email:</b> <a class="mdi mdi-envelope about-info-title" >{{item.email }}
           </a><br></span>
 
@@ -56,7 +57,6 @@
           <span v-if="!(item.pinterest ==='')" >
               <a :href="item.pinterest" target="_blank" class="mdi mdi-pinterest" ></a>
           </span>
-          
         </li>
         </ul>
      </div>
@@ -91,17 +91,15 @@
           <div class="comp-exec-1">
                 <img v-if="!(executive.pic_item === undefined)" class="exec-image" :src="executive.pic_item">
                 </img>
-                
+            <ul>
+              <li>
                 <b>{{executive.title }}:</b><br>
                 {{executive.first}} {{executive.last}}
                 <br>
-
-               <ul>
-                 <li>
-                
+              </li>  
+              <li v-if="!(executive.email =='') ||!(executive.linkedIn ==='') || !(executive.twitterurl === '')|| !(executive.facebook ==='') || !(executive.github ==='') || !(executive.instagram ==='') || !(executive.youtube ==='') || !(executive.pinterest ==='') || !(executive.googleplus =='') || !(executive.discord =='') || !(executive.snapchat =='') || !(executive.telegram =='') || !(executive.angellist =='')"
                   <span v-if="!(executive.email =='')"> <b>Email:</b> <a class="mdi mdi-envelope about-info-title" > {{executive.email }}</a><br>
                   </span>
-
 
                   <span v-if="!(executive.linkedIn ==='')" >
                      <a :href="executive.linkedIn"  target="_blank" class="mdi mdi-linkedin" ></a>
@@ -119,7 +117,7 @@
                       <a :href="executive.github" target="_blank"  class="mdi mdi-github" ></a>
                   </span>       
               
-                   <span v-if="!(executive.instagram ==='')"  >
+                  <span v-if="!(executive.instagram ==='')" >
                     <a :href="executive.instagram" target="_blank" class="mdi mdi-instagram"></a>
                    </span>
                 
@@ -147,12 +145,11 @@
                     <a :href="executive.telegram" target="_blank" class="mdi mdi-telegram"></a>
                    </span> 
                 
-                  <span v-if="!(executive.angellist =='')" >
+                   <span v-if="!(executive.angellist =='')" >
                    <a :href="executive.angellist" target="_blank" class="mdi mdi-angellist" ></a>
-                  </span>    
-
+                   </span>    
                 </li>
-                </ul>
+              </ul>
           </div>
         </div>
      </div>
