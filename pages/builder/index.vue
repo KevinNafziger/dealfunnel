@@ -374,6 +374,9 @@ export default {
 </script>
 
 <style scoped>
+img {
+  width: auto !important;
+}
 h2 {
       text-align: -webkit-center;
 }
@@ -794,9 +797,11 @@ flex: 1 1 200px;
   min-height: 600px;
 }
 
-
+ul {
+  width: auto;
+  min-width:400px !important;
+}
 .admin-menu {
-
   background: linear-gradient(-35deg, #14a0fd, #02d0ff, #14a0fd, #14a0fdd1);
 background-size: 400% 400%;
 animation: gradient 5s ease infinite;
