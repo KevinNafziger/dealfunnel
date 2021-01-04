@@ -42,16 +42,19 @@ export default {
           activeArtInfo: state =>  state.posts.activeArtInfo,
           activeView:  state => state.posts.activeView,
           activeDataInfo: state => state.posts.activeDataInfo,
+          allPosts: state => state.posts.allPosts,
    }),
     posts() {
 
-         if (this.activeView == "Data") {
-         
-             return this.activeDataInfo;
-         }
-         
-         else {
+        if (this.allPosts) {
+            return this.allPosts
+        }
 
+        else if (this.activeView == "Data") {
+             return this.activeDataInfo;
+        }
+        
+        else {
              return this.activeArtInfo;
          }
 

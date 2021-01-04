@@ -99,10 +99,8 @@
                <ul>
                  <li>
                 
-
                   <span v-if="!(executive.email =='')"> <b>Email:</b> <a class="mdi mdi-envelope about-info-title" > {{executive.email }}</a><br>
                   </span>
-
 
 
                   <span v-if="!(executive.linkedIn ==='')" >
@@ -137,21 +135,21 @@
                         <a :href="executive.googleplus" target="_blank" class="mdi mdi-googleplus" ></a>
                     </span> 
                 
-                   <span v-if="!(executive.discord =='')" >
+                    <span v-if="!(executive.discord =='')" >
                     <a :href="executive.discord" target="_blank" class="mdi mdi-discord" ></a>
-                  </span> 
+                    </span> 
                 
-                  <span v-if="!(executive.snapchat =='')" >
+                   <span v-if="!(executive.snapchat =='')" >
                     <a :href="executive.snapchat" target="_blank" class="mdi mdi-snapchat"></a>
-                  </span> 
+                   </span> 
                   
-                  <span v-if="!(executive.telegram =='')" >
+                   <span v-if="!(executive.telegram =='')" >
                     <a :href="executive.telegram" target="_blank" class="mdi mdi-telegram"></a>
-                  </span> 
+                   </span> 
                 
-                <span v-if="!(executive.angellist =='')" >
-                  <a :href="executive.angellist" target="_blank" class="mdi mdi-angellist" ></a>
-                </span>    
+                  <span v-if="!(executive.angellist =='')" >
+                   <a :href="executive.angellist" target="_blank" class="mdi mdi-angellist" ></a>
+                  </span>    
 
                 </li>
                 </ul>
@@ -160,7 +158,7 @@
      </div>
     <br>
   
-    <div class="info-box" v-show="!(raises.length == undefined)" v-for="raise in raises">  
+      <div class="info-box" v-show="!(raises.length == undefined)" v-for="raise in raises">  
   
             {{raise.item_date }}
              <a v-if="!(raise.url == undefined)" :href="raise.url" class="btn btn link"  target="_blank" > {{raise.raise_type}} {{raise.other}}</a> 
@@ -169,27 +167,35 @@
                 Investors: {{raise.lead}} {{raise.partcipating}} 
     
       </div>         
-      <div class="info-box" v-show="!(posts.length == undefined)"   
+      
+      <div v-show="!(posts.length == undefined)"   
           v-for="post in posts">
-              
-           <span v-if="!(post.funding ==''|| post.funding == undefined)">
-                total funding<br> {{post.funding}}
-                <br>
-            </span>
-              
-            <span v-if="!(post.investors == '')" > Investors: {{post.investors}}
-            </span>
-             
-            <span v-if="!(post.advisors.length == undefined || post.advisors ==='')">
-              <b>Advisors</b>{{post.advisors }}<br>
-            </span>
 
-             <span v-if="post.interest">
-               <b>Article Snippit: </b> {{post.interest }}<br>
-            </span>
-         </div>
-         </div>
+            <div v-if="!(post.funding ==''|| post.funding == undefined)|| !(post.advisors.length == undefined || post.advisors ==='')"  class="info-box">   
+              <span v-if="!(post.funding ==''|| post.funding == undefined)">
+                  <b>Total funding</b><br> {{post.funding}}
+                  <br>
+              </span>
+              
+              <span v-if="!(post.investors == '')" > <b>Investors:</b>{{post.investors}}
+              </span>
+             
+              <span v-if="!(post.advisors.length == undefined || post.advisors ==='')">
+                <b>Advisors</b>{{post.advisors }}<br>
+              </span>
+            </div>
+            
+            <div class="info-box">  
+
+              <span v-if="post.interest">
+                 <br><b>Article Snippit: </b><br><br> {{post.interest }}<br>
+                 <br>
+                  <nuxt-link class="gardient-button" :to="'/posts/' + post.id " > See Article </nuxt-link>
+              </span>
+            </div>  
       </div>
+    </div>
+  </div>
 </template>
 <script>
 import {mapState} from 'vuex';
@@ -242,7 +248,6 @@ import {mapState} from 'vuex';
     //},
 
   
-
     item() {
 
         if (this.allCompanies) {
