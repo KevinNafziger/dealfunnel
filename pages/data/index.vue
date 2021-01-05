@@ -1,10 +1,14 @@
 <template>
 <div>
+
   <div data-v-69296181="" id="top" ><div data-v-69296181="" class="title"><div data-v-69296181="" class="content"><br data-v-69296181=""> <h2 data-v-69296181="">Article Data<i style="font-size: 13px; text-align:right; margin-left:3px;">{{ filterMessage }}</i></h2></div></div></div>
   <text class="headcomname">
     Article Data
   </text>
+  <div class="top-menus">
+  <Sidebar/>
 <DataTempSearch/>
+</div>
   <a href="https://fintechhorizonsmedia.com/fintechraises.xlsx"
    style="color:dimgray" id="myExcelIcoTag"><br>
    <center><span content="download excel report"
@@ -95,10 +99,17 @@
 </template>
 
 <script>
+import Vue from 'vue';
+import Sidebar from '@/components/Sidebar/Sidebar';
+Vue.component('Sidebar', Sidebar);
 import {mapState} from 'vuex';
 import DataTempSearch from '@/components/Data/DataTempSearch';
+
 export default {
 
+components: {
+  Sidebar,
+},
 
 computed: {
   ...mapState({
@@ -614,7 +625,9 @@ display: table;
    margin-left: auto;
    margin-right: auto;
 }
-
+.top-menus {
+      display: -webkit-box;
+}
 .title {
    text-align: -webkit-center;
    margin-top: 20px;

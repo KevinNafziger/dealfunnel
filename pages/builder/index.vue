@@ -8,6 +8,7 @@
 
     <main class="flexbox">
 
+
        <div class="left-side">
          <h2> Report Content </h2>
          <br>
@@ -82,12 +83,13 @@ import Searchbar from '@/components/Builder/Searchbar';
 import draggable from 'vuedraggable';
 import { tippy } from "vue-tippy";
 import Vuetify from 'vuetify';
+import VueSidebarMenu from 'vue-sidebar-menu'
 import VueTippy, { TippyComponent } from "vue-tippy";
 import {mapState, mapMutations} from 'vuex';
 Vue.component('Card', Card);
 Vue.component('Board', Board);
 Vue.component("tippy", TippyComponent);
-
+Vue.use(VueSidebarMenu);
 Vue.use(Vuetify);
 Vue.use(VueTippy);
 
@@ -101,7 +103,8 @@ export default {
    postsys,
    Searchbar,
  },
- props: [],
+ props: [
+ ],
 
  computed: {
 
@@ -374,6 +377,9 @@ export default {
 </script>
 
 <style scoped>
+img {
+  width: auto !important;
+}
 h2 {
       text-align: -webkit-center;
 }
@@ -794,9 +800,11 @@ flex: 1 1 200px;
   min-height: 600px;
 }
 
-
+ul {
+  width: auto;
+  min-width:400px !important;
+}
 .admin-menu {
-
   background: linear-gradient(-35deg, #14a0fd, #02d0ff, #14a0fd, #14a0fdd1);
 background-size: 400% 400%;
 animation: gradient 5s ease infinite;
