@@ -7,6 +7,7 @@
 </template>
 
 <script>
+//https://github.com/yaminncco/vue-sidebar-menu
 import "vue-sidebar-menu/src/scss/vue-sidebar-menu.scss";
 import { SidebarMenu } from 'vue-sidebar-menu'
 export default {
@@ -62,4 +63,21 @@ props: {
 .v-sidebar-menu {
     background-color: #4f81bd;
 }
+.v-sidebar-menu.vsm_collapsed.vsm_relative {
+    border-radius: 5px;
+        margin-left: 10px;
+}
+.v-sidebar-menu .vsm--mobile-bg {
+    background-color: #507cb1;
+    border-radius: 5px;
+}
+.v-sidebar-menu .vsm--toggle-btn {
+    color: #fff;
+    background-color: #696969;
+    border-radius: 5px;
+}
+.v-sidebar-menu .vsm--link_level-1 .vsm--icon {
+    background-color: #696969;
+}
+
 </style>
