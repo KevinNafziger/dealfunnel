@@ -250,7 +250,7 @@ img.in-your-face {
     margin-left: auto !important;
     margin-right: auto !important;
     margin-bottom: 32px !important;
-    background-color:#dedede;
+    background-color: #dedede00;
 }
 .article-card:hover {
     box-shadow: 0 1px 5px 0 rgba(0, 89, 132, 0.16);
@@ -380,4 +380,5 @@ img {
     }
 
   }
+
 </style>
