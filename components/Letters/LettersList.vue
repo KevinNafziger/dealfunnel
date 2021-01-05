@@ -92,26 +92,30 @@ import {mapState} from 'vuex';
    display: inline-table;
  }
  .gardient-button {
-   background-image: linear-gradient(200deg, #ffffff 10%, #ffffff 39%, #ffffff 80%);
-   background-size: 400% 400% !important;
-   -webkit-animation: gradient 15s ease infinite !important;
-   animation: gradient 15s ease infinite !important;
-   width: -webkit-fit-content !important;
-   width: -moz-fit-content !important;
-   width: fit-content !important;
-   margin-left: auto !important;
-   margin-right: auto !important;
-   margin-bottom: 20px !important;
-   border-radius: 10px !important;
-   border: none !important;
-   padding: 10px 20px !important;
-   font-family: poppins !important;
-   color: #4f81bd !important;
-   font-size: 12px !important;
-   height: min-content;
+     background-image: linear-gradient(200deg, #03A9F4 10%, #4f81bd 39%, #2196F3 80%);
+     background-size: 400% 400% !important;
+     -webkit-animation: gradient 15s ease infinite !important;
+     animation: gradient 15s ease infinite !important;
+     width: -webkit-fit-content !important;
+     width: -moz-fit-content !important;
+     width: fit-content !important;
+     margin-left: auto !important;
+     margin-right: auto !important;
+     margin-bottom: 20px !important;
+     border-radius: 10px !important;
+     border: none !important;
+     padding: 10px 20px !important;
+     font-family: poppins !important;
+     color: #ffffff !important;
+     font-size: 12px !important;
+     height: -webkit-min-content;
+     height: -moz-min-content;
+     height: min-content;
  }
  .gardient-button:hover {
-   box-shadow: 0px 0px 10px -5px gray;
+   box-shadow: 0px 0px 10px -5px gray !important;
+   transition: 0.2s;
+   text-decoration: none;
  }
  .center-btn{
    text-align: -webkit-center;
