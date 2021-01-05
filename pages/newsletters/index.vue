@@ -1,14 +1,8 @@
 
 <template>
 <div>
+<div data-v-31683ab5="" data-v-50f93fd9=""><div data-v-31683ab5="" data-v-50f93fd9="" class="content"><br data-v-31683ab5="" data-v-50f93fd9=""> <h2 data-v-31683ab5="" data-v-50f93fd9="">Newsletters</h2></div></div>
 
-  <center>
-    <div data-v-69296181="" id="top" class="sectionix"><div data-v-69296181="" class="title"><div data-v-69296181="" class="content"><br data-v-69296181="">
-
-      <h2 data-v-69296181="">Newsletters</h2>
-
-    </div></div></div>
-  </center>
 
   <div class="posts-page">
        <LettersList :letters="letters" :board="letters" />
@@ -47,7 +41,7 @@ export default {
 
 <style scoped>
 .art-rows {
-  display: contents !important;
+  display: inline-flex !important;
 }
  @font-face
   {font-family:"Cambria Math";

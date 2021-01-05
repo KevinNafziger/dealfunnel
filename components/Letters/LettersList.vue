@@ -14,16 +14,15 @@
 
        <div v-if="!(letter.created_date==null)" class="post-info" style="float:left;z-index:9;"><a class="datetag">{{letter.created_date}}</a>
         </div>
-
+        <div v-if="!(letter.logo_url==null)" class="flex-img">
+            <div class="centering-imgs w-col w-col-6 w-col-medium-6 w6-hide-tiny">
+                <a class="blog-image w-inline-block" >
+                    <img :src="letter.logo_url" width="70" style="max-width: 180px ;max-height:130; overflow:none;"
+                   >
+                </a>
+             </div>
+         </div><br>
         <div class="w-row">
-          <div v-if="!(letter.logo_url==null)" class="flex-img">
-              <div class="centering-imgs w-col w-col-6 w-col-medium-6 w6-hide-tiny">
-                  <a class="blog-image w-inline-block" >
-                      <img :src="letter.logo_url" width="50" style="max-width: 180px ;max-height:130; overflow:none;"
-                     >
-                  </a>
-               </div>
-           </div>
            <div class="w-col w-col-12 w-col-medium-12 w12-hide-tiny">
               <div>
                 <span style="text-transform:none !important;"  class="post-main-text">
@@ -36,10 +35,11 @@
                   </span>
                   </div>
               </div>
-              <div class="center-btn">
-                <nuxt-link class="gardient-button" :to="'/newsletters/' + letter.id " > Read More</nuxt-link>
-              </div>
+
           </div>
+        </div>
+        <div class="center-btn">
+          <nuxt-link class="gardient-button" :to="'/newsletters/' + letter.id " > Read More</nuxt-link>
         </div>
       </div>
         </div>
@@ -108,14 +108,19 @@ import {mapState} from 'vuex';
    font-family: poppins !important;
    color: #4f81bd !important;
    font-size: 12px !important;
+   height: min-content;
  }
  .gardient-button:hover {
    box-shadow: 0px 0px 10px -5px gray;
  }
  .center-btn{
    text-align: -webkit-center;
-   display: contents;
+   display: flex;
  }
+ .w-col.w-col-12.w-col-medium-12.w12-hide-tiny {
+    width: 100% !important;
+    padding: 20px;
+}
  a {
    color:#4f81bd;
    font-weight: bold;
@@ -130,17 +135,11 @@ import {mapState} from 'vuex';
       overflow:auto;
     }
   }
-
-  @media screen and (max-width:800px) {
-    .article-card {
-      min-height: 900px !important ;
-    }
-  }
   .w-row{
     display: flex;
   }
   .art-rows {
-    display: contents;
+    display: -webkit-inline-box;
     width: 50%;
     padding: 10px;
     place-content: center;
@@ -150,11 +149,13 @@ import {mapState} from 'vuex';
   }
   .post-main-text {
     height: auto;
+    min-height: 200px;
       display: -webkit-inline-box;
       border-bottom-style: groove;
       border-bottom-color: rgba(210,232,255,0.12157);
       overflow: auto;
-      width: 400px;
+      width: 100%;
+      padding: 20px;
   }
   table {
     width: 100%;
@@ -166,14 +167,16 @@ import {mapState} from 'vuex';
     margin-top:20px !important;
   }
   .flex-img {
-    display: table-cell;
+    display: contents;
         width: 200px;
   }
   .centering-imgs {
-    text-align:center !important;
+    text-align: center !important;
     margin-left: auto;
-    margin-right: auto;
-    display:table;
+    margin-right: -60px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: grid;
   }
   .postAdmin-btns {
       margin: 10px 0px 10px 0px;
@@ -234,13 +237,16 @@ img.in-your-face {
 .w-col.w-col-12.w-col-medium-12.w12-hide-tiny {
     color: dimgray;
 }
+.post-info {
+      margin-top: 10px;
+}
 .article-card {
     box-shadow: 0 1px 5px 0 rgb(0 89 132 / 30%);
     border-radius: 0px;
     padding: 10px;
     height: auto;
     width: 100%;
-
+    padding: 2px;
     margin-left: auto !important;
     margin-right: auto !important;
     margin-bottom: 32px !important;
@@ -353,7 +359,10 @@ img {
   .td  {
       text-align:left !important;
   }
-
+  .w-dyn-list {
+      width: 100% !important;
+      display: block;
+  }
 .datetag {
        position: relative !important;
        width: auto;
@@ -362,5 +371,13 @@ img {
        padding: 3px;
        border-radius: 3px;
        background: #ffffff80;
+  }
+  @media screen and (max-width:900px) {
+    .art-rows {
+          display: contents;
+          height: auto !important;
+          min-height: 300px !important;
+    }
+
   }
 </style>
