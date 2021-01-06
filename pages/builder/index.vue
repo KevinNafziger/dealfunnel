@@ -3,7 +3,17 @@
 
 <div>
   <br>
-    <div data-v-50f93fd9="" ><div data-v-50f93fd9="" class="content"><br data-v-50f93fd9=""> <h2 data-v-50f93fd9="">Builder</h2><nuxt-link to="/previews/builderpreview"><span class="mdi mdi-help"></span></nuxt-link></div></div>
+    <div data-v-50f93fd9="" >
+      <div data-v-50f93fd9="" class="content"><br>
+        <h2 data-v-50f93fd9="">Builder</h2>
+      <nuxt-link to="/previews/builderpreview">
+        <tippy to="Buildpre">
+        Builder Preview
+        </tippy>
+        <span name="Buildpre" class="mdi mdi-help"></span>
+      </nuxt-link>
+      </div>
+    </div>
     <br><br>
 
     <main class="flexbox">
