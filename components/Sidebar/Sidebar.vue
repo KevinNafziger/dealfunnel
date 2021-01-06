@@ -1,7 +1,7 @@
 <template>
   <sidebar-menu relative="true" :menu="menu"  collapsed="true" @toggle-collapse="onToggleCollapse" @item-click="onItemClick" >
      <span slot="toggle-icon"><span class="mdi mdi-menu"></span></span>
-     <span slot="dropdown-icon">dropdown-icon</span>
+     <span class="mdi mdi-menu" slot="dropdown-icon"></span>
 </sidebar-menu>
 </template>
 
@@ -24,15 +24,21 @@ export default {
                        icon: 'mdi mdi-help'
                    },
                    {
-                       href: '/charts',
+                       href: '/',
                        title: 'Charts',
                        icon: 'mdi mdi-group',
-                      //child: [
-                      //     {
-                      //         href: '/charts/sublink',
-                      //         title: 'Sub Link'
-                      //     }
-                      // ]
+                      child: [
+                           {
+                               href: '/',
+                               title: 'Download Link',
+                               icon: 'mdi mdi-arrow-down',
+                           },
+                           {
+                             href: '/',
+                             title: 'Sub Link',
+                             icon: 'mdi mdi-arrow-up',
+                           }
+                       ]
                    }
                ]
            }
