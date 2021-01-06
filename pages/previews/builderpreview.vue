@@ -3,7 +3,7 @@
   <center>
     <div id="top" class="sectionix"><div class="title"><div  class="content"><br >
 
-      <h2 >Builder Preview<i style="font-size: 13px; text-align:right; margin-left:3px;">{{ filterMessage }}</i></h2>
+      <h2 >Builder Preview</h2> <nuxt-link to="/builder"><span class="mdi mdi-arrow-left"></span>Back</nuxt-link>
 
     </div></div></div>
   </center>
@@ -20,5 +20,12 @@ h2 {
 }
 .builder-preview {
   margin: 20px;
+}
+span.mdi.mdi-arrow-left {
+    background: #4f81bd;
+    color: #ffffff;
+    padding: 5px;
+    border-radius: 3px;
+    margin: 3px;
 }
 </style>
