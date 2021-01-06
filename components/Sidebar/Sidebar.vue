@@ -32,7 +32,8 @@ export default {
                                href: '/',
                                title: 'Blockchain',
                                icon: 'mdi mdi-cash',
-                           },
+
+                      },
                            {
                              href: '/',
                              title: 'Insurtech',
@@ -84,5 +85,7 @@ props: {
 .v-sidebar-menu .vsm--link_level-1 .vsm--icon {
     background-color: #696969;
 }
-
+.vsm--toggle-btn, .vsm--toggle-btn_slot {
+  display: none !important;
+}
 </style>
