@@ -3,7 +3,7 @@
 
 <div>
   <br>
-    <div data-v-50f93fd9="" ><div data-v-50f93fd9="" class="content"><br data-v-50f93fd9=""> <h2 data-v-50f93fd9="">Builder</h2></div></div>
+    <div data-v-50f93fd9="" ><div data-v-50f93fd9="" class="content"><br data-v-50f93fd9=""> <h2 data-v-50f93fd9="">Builder</h2><nuxt-link to="/previews/builderpreview"><span class="mdi mdi-help"></span></nuxt-link></div></div>
     <br><br>
 
     <main class="flexbox">
@@ -848,7 +848,12 @@ margin-right: auto;
 .square-container {
   border-radius:0px !important;
 }
-
+span.mdi.mdi-help {
+    background: #4f81bd;
+    color: #ffffff;
+    border-radius: 3px;
+    padding: 3px;
+}
 .round-container {
   border-radius:10px !important;
 }
