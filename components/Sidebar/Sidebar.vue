@@ -1,6 +1,5 @@
 <template>
   <sidebar-menu relative="true" :menu="menu"  collapsed="true" @toggle-collapse="onToggleCollapse" @item-click="onItemClick" >
-
      <span slot="toggle-icon"><span class="mdi mdi-menu"></span></span>
      <span slot="dropdown-icon">dropdown-icon</span>
 </sidebar-menu>
@@ -58,7 +57,7 @@ props: {
 <style>
 .v-sidebar-menu {
     z-index:1 !important;
-    padding-top: 60px !important;
+    padding-top: 10px !important;
 }
 .v-sidebar-menu {
     background-color: #4f81bd;

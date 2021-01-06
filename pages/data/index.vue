@@ -1,12 +1,12 @@
 <template>
 <div>
-
+<Sidebar/>
   <div data-v-69296181="" id="top" ><div data-v-69296181="" class="title"><div data-v-69296181="" class="content"><br data-v-69296181=""> <h2 data-v-69296181="">Article Data<i style="font-size: 13px; text-align:right; margin-left:3px;">{{ filterMessage }}</i></h2></div></div></div>
   <text class="headcomname">
     Article Data
   </text>
   <div class="top-menus">
-  <Sidebar/>
+
 <DataTempSearch/>
 </div>
   <a href="https://fintechhorizonsmedia.com/fintechraises.xlsx"
@@ -632,5 +632,14 @@ display: table;
    text-align: -webkit-center;
    margin-top: 20px;
    margin-bottom: 20px;
+}
+.v-sidebar-menu.vsm_collapsed.vsm_relative {
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-top: 80px;
+}
+.v-sidebar-menu.vsm_relative {
+  position: fixed;
+  height: fit-content;
 }
 </style>
