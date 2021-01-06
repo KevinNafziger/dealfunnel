@@ -25,18 +25,18 @@ export default {
                    },
                    {
                        href: '/',
-                       title: 'Charts',
+                       title: 'Tags',
                        icon: 'mdi mdi-group',
                       child: [
                            {
                                href: '/',
-                               title: 'Download Link',
-                               icon: 'mdi mdi-arrow-down',
+                               title: 'Blockchain',
+                               icon: 'mdi mdi-cash',
                            },
                            {
                              href: '/',
-                             title: 'Sub Link',
-                             icon: 'mdi mdi-arrow-up',
+                             title: 'Insurtech',
+                             icon: 'mdi mdi-plus',
                            }
                        ]
                    }
