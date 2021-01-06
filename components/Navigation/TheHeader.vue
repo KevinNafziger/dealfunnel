@@ -2,7 +2,7 @@
 <div class="header-container">
   <header class="the-header">
     <Burger class="burger" />
-    <Sidebar>
+    <Mobilebar>
     <ul class="sidebar-panel-nav">
       <li class="nav-item"><nuxt-link to="/"><span class="mdi mdi-home"></span></nuxt-link></li>
       <li class="nav-item"><nuxt-link to="/posts">Articles</nuxt-link></li>
@@ -15,7 +15,7 @@
       <li class="nav-item"><nuxt-link to="/data">Data</nuxt-link></li>
       <li class="nav-item"><nuxt-link to="/deals">Deals</nuxt-link></li>
     </ul>
-  </Sidebar>
+  </Mobilebar>
     <div class="navigation-items">
       <ul class="nav-list">
         <li v-if="showLogOutBtn" class="nav-item"><nuxt-link to="/logout">Logout</nuxt-link></li>
@@ -44,13 +44,13 @@
 <script>
 import {mapState} from 'vuex';
 import Burger from "@/components/Navigation/Burger";
-import Sidebar from '@/components/Navigation/Sidebar.vue';
+import Mobilebar from '@/components/Navigation/Mobilebar.vue';
 
 export default {
   name: "TheHeader",
   components: {
     Burger,
-    Sidebar
+    Mobilebar
   },
   computed: {
 
