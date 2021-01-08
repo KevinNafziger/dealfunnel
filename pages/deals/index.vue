@@ -488,6 +488,9 @@ display: table;
   color: dimgray !important;
   margin:20px;
 }
+.draft-div {
+    overflow: auto;
+}
 .title {
     text-align: -webkit-center;
     margin-top: 20px;
