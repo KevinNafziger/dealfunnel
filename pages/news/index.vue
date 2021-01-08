@@ -482,16 +482,19 @@ export default {
    }
   @media screen and (max-width:1400px) {
     #examples{
-      width:49% !important;
+        width:49% !important;
+        height: 650px !important;
     }
   }
   @media screen and (max-width:1000px) {
+    #examples{
+        width:100% !important;
+      }
+
     .tagbtn {
       margin-bottom: 100px !important;
     }
-    #examples{
-      width:100% !important;
-    }
+
     .w-col {
         width: 100% !important;
         left: auto;
@@ -520,7 +523,7 @@ export default {
     margin: 0px, auto;
     width: 33%;
     border-radius: 10px;
-    height: 590px;
+    min-height: 620px;
     background: linear-gradient(45deg,#f7f9fb,#fff);
 }
   .btn-link:hover, .btn-link:focus {
