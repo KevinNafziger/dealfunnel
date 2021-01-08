@@ -72,6 +72,7 @@ props: {
 .v-sidebar-menu.vsm_collapsed.vsm_relative {
     border-radius: 5px;
         margin-left: 10px;
+        box-shadow: 0px 0px 10px -5px;
 }
 .v-sidebar-menu .vsm--mobile-bg {
     background-color: #507cb1;
