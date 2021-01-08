@@ -164,6 +164,7 @@ computed: {
   }
   #section-10{
     width: 100% !important;
+    max-width: 600px;
   }
 }
 .tag-search-div {
@@ -211,6 +212,7 @@ color: white;
   }
 input {
       background: rgba(105,105,105,0.07059);
+      margin: 0px !important;
 }
 h3, h2 {
   color: #4f81bd !important;
