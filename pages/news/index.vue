@@ -15,6 +15,7 @@
 
           <ul class="w-list-unstyled">
 
+
             <li v-for="link in links" id="examples" style="text-align: center; margin-bottom: 20px;" class="list-item-9 featuredsidemenu">
 
               <span class="datetag tl-c" style="margin-left:20px">
@@ -32,7 +33,7 @@
 
         <br>
         <div id="myCompanyTag" v-if="link.company_id" class=" mdi mdi-domain mdi-24px plain"> <nuxt-link :to="'/companies/' + link.company_id "> {{link.company.name}}  </nuxt-link></div>
-        
+
 
                 </span><br><br>
                 </em>
@@ -42,9 +43,10 @@
                 {{link.description}}
               </p>
 
+
               <div class="w-row">
-                <em>
-                <div class="w-col w-col-6">
+
+                <div clas="tag-row">
                   <div>
 
                   <a href="#" v-if="link.sector" v-on:click="getbyCategory(link.sector)" class="tagbtn" >
@@ -69,8 +71,9 @@
 
                   </div>
                 </div>
-                </em>
-              </div>
+
+              </div><br>
+
 
             </li>
 
@@ -483,6 +486,9 @@ export default {
     }
   }
   @media screen and (max-width:1000px) {
+    .tagbtn {
+      margin-bottom: 100px !important;
+    }
     #examples{
       width:100% !important;
     }
@@ -514,7 +520,7 @@ export default {
     margin: 0px, auto;
     width: 33%;
     border-radius: 10px;
-    height: 530px;
+    height: 590px;
     background: linear-gradient(45deg,#f7f9fb,#fff);
 }
   .btn-link:hover, .btn-link:focus {
@@ -541,7 +547,7 @@ export default {
   margin: auto;
 }
 #examples .example .hover {
-    display: inline-grid;
+    display: grid;
     margin-bottom:20px;
 }
 #myCompanyTag {
