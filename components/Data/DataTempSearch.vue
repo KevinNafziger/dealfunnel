@@ -1,5 +1,5 @@
  <template>
- <div>
+ <div style="-webkit-box-pack: center;">
   <div class="search-bar-div">
     <div class="search-div">
       <input content="Type your search text"
@@ -9,7 +9,7 @@
         <i class="glyphicon glyphicon-search"><span class="mdi mdi-file-search"></span></i>
       </button>
     </div>
-    <div>
+    <div style="max-width:850px;">
       <a href="#" v-on:click="changePage('Last')" class="tagbtn">All</a>
         <a href="#" v-on:click="showGrouping('Q320')" class="tagbtn">Q320</a>
         <a href="#" v-on:click="showGrouping('Q420')"  class="tagbtn">Q420</a>
