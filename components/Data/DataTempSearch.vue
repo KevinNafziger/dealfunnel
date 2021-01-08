@@ -1,5 +1,5 @@
  <template>
- <div style="-webkit-box-pack: center;">
+ <div style="-webkit-box-pack: center; margin:auto !important;">
   <div class="search-bar-div">
     <div class="search-div">
       <input content="Type your search text"
@@ -113,6 +113,10 @@ computed: {
 </script>
 
 <style scoped>
+.top-menus {
+    display: -webkit-box;
+    -webkit-box-pack: center;
+}
 .text-field {
   text-align-last: center;
 }
