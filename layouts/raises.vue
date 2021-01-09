@@ -11,7 +11,6 @@ import TheHeader from '@/components/Navigation/TheHeader'
 export default {
   
   components: {
-  TheHeader
   },
 }
 </script>

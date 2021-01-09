@@ -5,13 +5,13 @@
 <template>
 <div class="main-div">
   <div class="col-A">
-    <div class="col-sm-5">
-        <img  v-if="item.logo_item" class="nuxt__build_indicator2" :src="item.logo_item">
+    <div v-if="!(item.logo_item=='undefined') && !(item.logo_item=='')" class="col-sm-5">
+        <img v-if="item.logo_item" class="nuxt__build_indicator2" :src="item.logo_item">
     </div>
     <br>
 
     <div class="info-box">
-        {{ item.description }}
+        {{item.description}}
     </div><br>
 
     <div class=
@@ -102,7 +102,7 @@
                   </span>
 
                   <span v-if="!(executive.linkedIn ==='')" >
-                     <a :href="executive.linkedIn"  target="_blank" class="mdi mdi-linkedin" ></a>
+                     <a :href="executive.linkedIn" target="_blank" class="mdi mdi-linkedin" ></a>
                   </span>
 
                   <span  v-if="!(executive.twitterurl === '')" >
@@ -158,18 +158,18 @@
       <div class="info-box" v-show="!(raises.length == undefined)" v-for="raise in raises">
 
             {{raise.item_date }}
-             <a v-if="!(raise.url == undefined)" :href="raise.url" class="btn btn link"  target="_blank" > {{raise.raise_type}} {{raise.other}}</a>
+             <a v-if="!(raise.url == undefined)" :href="raise.url" class="btn btn-link"  target="_blank" > {{raise.raise_type}} {{raise.other}}</a>
 
             <br> {{raise.amount}}  <br>
-                Investors: {{raise.lead}} {{raise.partcipating}}
+                Investors: {{raise.lead}} {{raise.participating}}
 
       </div>
 
-      <div v-show="!(posts.length == undefined)"
+      <div v-if="!(posts.length == undefined)"
           v-for="post in posts">
 
-            <div v-if="!(post.funding ==''|| post.funding == undefined)|| !(post.advisors.length == undefined || post.advisors ==='')"  class="info-box">
-              <span v-if="!(post.funding ==''|| post.funding == undefined)">
+            <div v-if="(!post.funding =='')|| (!post.funding == undefined)|| (!post.advisors.length == undefined)|| (post.advisors ==='')" class="info-box">
+              <span v-if="!(post.funding =='') || !(post.funding == undefined)">
                   <b>Total funding</b><br> {{post.funding}}
                   <br>
               </span>
@@ -182,7 +182,7 @@
               </span>
             </div>
 
-            <div class="info-box">
+            <div v-if="post.interest" class="info-box">
 
               <span v-if="post.interest">
                  <br><b>Article Snippit: </b><br><br> {{post.interest }}<br>
@@ -217,15 +217,12 @@ import {mapState} from 'vuex';
 
     items() {
 
-        if (this.first == true && !(this.allCompanies.length) ) {
-          return this.starter
-        }
-        else if (this.allCompanies.length)
-        {
+        if (this.allCompanies.length)  {
           return this.allCompanies
         }
-        else {
-          return this.active;
+        else (this.allCompanies.length)
+        {
+          return this.first
         }
     },
 
@@ -247,17 +244,13 @@ import {mapState} from 'vuex';
 
     item() {
 
-        if (this.allCompanies) {
-
-           return this.allCompanies.find(p => p.id == this.$route.params.id)
-        }
-
-        else {
-           return this.items.find(p => p.id == this.$route.params.id)
-        }
-    }
-
-    },
+           if (!this.allCompanies.length == undefined) {
+              return  this.allCompanies.find(p => p.id == this.$route.params.id)
+           } 
+           else {
+              return this.starter.find(p => p.id == this.$route.params.id) }
+           }        
+   },
 
    async asyncData({params, $axios }) {
 

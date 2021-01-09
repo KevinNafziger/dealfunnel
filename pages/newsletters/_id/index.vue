@@ -30,7 +30,6 @@ import {mapState} from 'vuex';
 export default {
   computed: {
   ...mapState({
-  
           activeLetterInfo: state =>  state.posts.activeLetterInfo,
           activeView:  state => state.posts.activeView,
           newsletters: state => state.posts.newsletters,
@@ -48,7 +47,6 @@ export default {
     }, 
 
     letter() {
-    
         return this.letters.find(p => p.id == this.$route.params.id)
     }
  },

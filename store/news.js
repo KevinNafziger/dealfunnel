@@ -1,7 +1,6 @@
 import allNews from '~/static/news.json';
 
 export const state = () => ({
-  pages: [],
   insurtech: [],
   blockchain: [],
   payments:[],
@@ -47,6 +46,33 @@ export const state = () => ({
   block12: [],
   block13: [],
   blkNewsPage: 1,
+
+  news1: [],
+  news2: [],
+  news3: [],
+  news4: [],
+  news5: [],
+  news6: [],
+  news7: [],
+  news8: [],
+  news9: [],
+  news10: [],
+  news11: [],
+  news12: [],
+  news13: [],
+  news14: [],
+  news15: [],
+  news16: [],
+  news17: [],
+  news18: [],
+  news19: [],
+  news20: [],
+  news21: [],
+  news22: [],
+  news23: [],
+  news24: [],
+  news25:[],
+
 
   pay1: [],
   pay2: [],
@@ -115,11 +141,40 @@ export const mutations = {
   
     },
 
-    setAllNews(state, items) {
+    setAllNews(state, data) {
 
-      state.allNews = items;
-      state.activeLetterInfo = items;
-     
+      state.allNews = data;
+      var newsLength = data.length;
+      newsLength--;
+      state.activeNewsInfo = data.slice(0, 200);
+      state.news1 = data.slice(0, 200);
+      state.news2 = data.slice(200,400);
+      state.news3 = data.slice(400, 600);
+      state.news4 = data.slice(600, 800);
+      state.news5 = data.slice(800, 1000);
+      state.news6 = data.slice(1000,1200);
+      state.news7 = data.slice(1200, 1400);
+      state.news8 = data.slice(1400, 1600);
+      state.news9 = data.slice(1600, 1800);
+      state.news10 = data.slice(1800,2000);
+      state.news11 = data.slice(2000,2200);
+      state.news12 = data.slice(2200, 2400);  
+      state.news13 = data.slice(2400, 2600);
+      state.news14 = data.slice(2600, 2800);
+      state.news15 = data.slice(2800,3000);
+      state.news16 = data.slice(3000, 3200);
+      state.news17 = data.slice(3200, 3400);
+      state.news18 = data.slice(3400, 3600);
+      state.news19 = data.slice(3600,3800);
+      state.news20 = data.slice(3800, 4000);
+      state.news21 = data.slice(4000, 4200);
+      state.news22 = data.slice(4200, 4400);
+      state.news23 = data.slice(4400, newsLength);
+
+      state.activeNewsTab = 'All';
+      state.firstNewsLoad =false;
+
+   
     },
 
     setSector(state, data) {
@@ -137,7 +192,6 @@ export const mutations = {
 
    	 var temp = state.insNewsPage;
    	 temp++;
-   	 state.insNewsPage++ ;
    	 state.activeNewsInfo = data;
    	 state.activeNewsTab = 'Insurtech';
      state.firstNewsLoad = false;
@@ -150,14 +204,14 @@ export const mutations = {
 	   	  state.insur3 =  data;
 	   }
 
-	   	else if (temp == 4) {
+	   else if (temp == 4) {
 	   	   state.insur4 =  data;	
 	    }
 
 	    else if (temp == 5) {
 	   	   state.insur5= data;	
 	   	}
-   	 
+   	state.insNewsPage = temp;
    },
 
    setBlockNext(state, data) {
@@ -165,7 +219,6 @@ export const mutations = {
      var temp = state.blkNewsPage;
      temp++; 
 
-   	 state.blkNewsPage++ ;
    	 state.activeNewsInfo = data;
    	 state.activeNewsTab = 'Blockchain';
      state.firstNewsLoad = false;
@@ -216,6 +269,7 @@ export const mutations = {
      	else if (temp == 13) {
      	   	 state.block13 = data;	
      	}
+      state.blkNewsPage = temp;
 
    },
 
@@ -223,7 +277,6 @@ export const mutations = {
 
    	 var temp = state.payNewsPage;
    	 temp++ ;
-   	 state.payNewsPage++ ;
    	 state.activeNewsInfo = data;
      state.firstNewsLoad = false;
      state.activeNewsTab = 'Payments';
@@ -240,14 +293,13 @@ export const mutations = {
 	    else if (temp ==5) {
 	   	   	 state.pay5= data;	
 	   	}
-
+     state.payNewsPage = temp; 
    },
 
    setInsurPrevious(state) {
 
    	 var temp = state.insNewsPage;
    	 temp--	;
-   	 state.insNewsPage-- ;
    	 state.activeNewsTab = 'Insurtech';
      state.firstNewsLoad = false;
 
@@ -268,7 +320,7 @@ export const mutations = {
 	  else if (temp ==4) { 	   	 
 	   	   	 state.activeNewsInfo = state.insur4;	
 	  }
-
+    state.insNewsPage = temp;
    },
 
 
@@ -276,7 +328,6 @@ export const mutations = {
 
    	 var temp = state.blkNewsPage;
    	 temp--;
-   	 state.blkNewsPage-- ;
    	 state.activeNewsTab = 'Blockchain';
      state.firstNewsLoad = false;
 
@@ -332,15 +383,14 @@ export const mutations = {
    	   	
    	   	state.activeNewsInfo = state.block13; 
    	  }
-   	 
+   	 state.blkNewsPage = temp;
    },
 
    setPayPrevious(state) {
 
    	  var temp = state.payNewsPage;
    	  temp--;
-   	 state.payNewsPage-- ;
-     state.firstNewsLoad = false;
+      state.firstNewsLoad = false;
      state.activeNewsTab = 'Payments';
 
    	if (temp == 1) {
@@ -362,7 +412,7 @@ export const mutations = {
 	   	   
 	   	  state.activeNewsInfo = state.pay4;	
 	  }
-
+    state.payNewsPage = temp;
    },
 
   setBlock(state, data){
@@ -480,7 +530,6 @@ export const mutations = {
      state.activeNewsInfo = data;
   	 state.activeNewsTab = 'OpenBanking';	
   	 state.firstNewsLoad =false;
-
   	},
 
   	setNeo(state, data) {
@@ -540,44 +589,267 @@ export const mutations = {
 
     setPrevious(state) {
 
-	   if (state.numNewsPage >1) {
+    var temp = state.numNewsPage;
+    temp--;
 
- 	      state.numNewsPage--;
+	  
+   	 state.activeNewsTab = 'All';
+   	 state.firstNewsLoad = false;
+
+    if (temp == 1) {
+      state.activeNewsInfo = state.news1;
      }
-		 
-     else {
+    else if (temp == 2) {
+      state.activeNewsInfo = state.news2;
 
-		   state.numNewsPage = 1;
-		 }
+    }
 
-   	 state.activeNewsInfo = state.pages[state.numNewsPage];
-   	 state.activeNewsTab = 'Page';
-   	 state.firstNewsLoad =false;
-     	
+    else if (temp == 3) {
+      state.activeNewsInfo = state.news3;
+    }
+
+    else if (temp == 4) {
+        
+      state.activeNewsInfo = state.news4;
+    
+    }
+    
+    else if (temp == 5) {
+      state.activeNewsInfo = state.news5;
+    }
+
+    else if (temp == 6) {
+      state.activeNewsInfo = state.news6;      
+    }
+    else if (temp == 7) {
+        
+      state.activeNewsInfo = state.news7;
+    }
+    else if (temp == 8) {
+      state.activeNewsInfo = state.news8;
+     }
+     
+    else if (temp ==9) {
+        
+      state.activeNewsInfo = state.news9;
+      state.numNewsPage = 9;  
+    
+    }
+    
+    else if (temp == 10) {
+      state.activeNewsInfo = state.news10;
+    }
+    
+    else if (temp == 11) {    
+        
+      state.activeNewsInfo = state.news11;
+    }
+    
+    else if (temp == 12) {
+        
+      state.activeNewsInfo = state.news12;
+
+    }
+    
+    else if (temp == 13) {
+    
+      state.activeNewsInfo = state.news13;
+    }
+    else if (temp ==14) {
+      state.activeNewsInfo = state.news14; 
+    }
+    else if (temp==15) {     
+
+      state.activeNewsInfo = state.news15; 
+    }
+
+    else if (temp==16) {
+      state.activeNewsInfo = state.news16;
+    
+    }
+    else if (temp ==17) { 
+      state.activeNewsInfo = state.news17; 
+    }
+   
+   else if (temp == 18) {
+    state.activeNewsInfo = state.news18; 
+   }
+   
+   else if (temp == 19) {
+        
+    state.activeNewsInfo = state.news19; 
+   }
+  
+   else if (temp == 20) {
+        
+    state.activeNewsInfo = state.news20; 
+   
+   }
+  
+   else if (temp == 21) {
+    state.activeNewsInfo = state.news21; 
+
+   }
+ 
+   else if (temp == 22) {
+
+    state.activeNewsInfo = state.news22; 
+
+   }
+   
+   else if (temp == 23) {
+
+    state.activeNewsInfo = state.news23; 
+  }
+ 	  state.numNewsPage = temp;
     },
 
     setNextAndFetch(state, data) {
 
-  		state.numNewsPage++ ;
-  		state.pages[state.pages.length] = data;
+      state.numNewsPage++ ;
   		state.activeNewsInfo = data;
-  		state.activeNewsTab = 'Page';
+  		state.activeNewsTab = 'All';
   		state.firstNewsLoad = false;  
 
      },
 
     setNextNoFetch(state){
 
-    	 state.numNewsPage++ ;	
-    	 state.activeNewsInfo = state.pages[state.numNewsPage];
-    	 state.activeNewsTab = 'Page';
-   	   state.firstNewsLoad = false;
-     },
+     var temp = state.nunNewsPage;
+     temp++;
+     state.activeNewsTab = 'All';
+     state.firstNewsLoad = false;
 
-   setLast(state) {
+       if (temp == 2) {
+          state.activeNewsInfo = state.news2;
+          state.numNewsPage = 2;
+       }
 
-  		state.activeNewsInfo = state.pages[0];
-  		state.activeNewsTab = 'Page';
+       else if (temp == 3) {
+      
+        state.activeNewsInfo = state.news3;
+        state.numNewsPage = 3;
+
+       }
+
+       else if (temp == 4) {
+        
+        state.activeNewsInfo = state.news4;
+        state.numNewsPage = 4;
+       }
+
+       else if (temp == 5) {
+        
+       state.activeNewsInfo = state.news5;
+       state.numNewsPage = 5;
+     
+      }
+
+      else if (temp == 6) {
+        
+      state.activeNewsInfo = state.news6;  
+      state.numNewsPage = 6;
+     
+     }
+     
+     else if (temp == 7) {
+        
+      state.activeNewsInfo = state.news7;
+      state.numNewsPage = 7;
+     
+     }
+
+     else if (temp == 8) {  
+
+      state.activeNewsInfo = state.news8;
+      state.numNewsPage = 8; 
+     
+     }
+     
+     else if (temp ==9) {    
+      
+      state.activeNewsInfo = state.news9;
+      state.numNewsPage = 9;  
+     
+     }
+    
+     else if (temp == 10) { 
+     
+      state.activeNewsInfo = state.news10;
+      state.numNewsPage = 10;  
+     
+     }
+
+     else if (temp == 11) {       
+
+      state.activeNewsInfo = state.news11;
+      state.numNewsPage = 11;
+
+     }
+
+     else if (temp == 12) {
+
+      state.activeNewsInfo = state.news12;
+      state.numNewsPage = 12;
+
+     }
+
+     else if (temp == 13) {
+
+      state.activeNewsInfo = state.news13;
+      state.numNewsPage = 13;
+     }
+
+     else if (temp == 14) {
+      state.activeNewsInfo = state.news14; 
+      state.numNewsPage = 14;
+     }
+
+     else if (temp == 15) {     
+      state.activeNewsInfo = state.news15; 
+      state.numNewsPage = 15;
+     }
+
+    else if (temp == 16) {
+      state.activeNewsInfo = state.news16;
+      state.numNewsPage = 16; 
+    }
+    else if (temp ==17) {
+      state.activeNewsInfo = state.news17;
+      state.numNewsPage = 17; 
+    }
+    else if (temp == 18) {
+      state.activeNewsInfo = state.news18;
+      state.numNewsPage = 18; 
+    }
+    else if (temp == 19) {
+      state.activeNewsInfo = state.news19; 
+      state.numNewsPage = 19;
+   }
+   else if (temp == 20) {
+     state.activeNewsInfo = state.news20; 
+     state.numNewsPage = 20;
+   }
+   else if (temp == 21) { 
+     state.activeNewsInfo = state.news21; 
+     state.numNewsPage = 21;
+   }
+   else if (temp == 22) {
+    state.activeNewsInfo = state.news22; 
+    state.numNewsPage = 22;
+   }
+   else if (temp == 23) {
+    state.activeNewsInfo = state.news23; 
+    state.numNewsPage = 23; 
+   }
+     
+  },
+
+
+  setLast(state) {
+
+  		state.activeNewsInfo = state.news1;
+  		state.activeNewsTab = 'All';
 	    state.firstNewsLoad = false; 
 	  	state.numNewsPage = 1;	 
    
@@ -586,16 +858,11 @@ export const mutations = {
 
  	 set(state, page) {
 
-		if (!this.firstNewsFetched) {
-		  state.pages.push(page);
-		 }
-
-		 state.activeNewsInfo = state.pages[0];
-		 state.numNewsPage = 1;
-		 state.firstNewsLoad = false; 
-		  
+		state.news1 = page;
+		state.activeNewsInfo = page;
+		state.numNewsPage = 1;
+		state.firstNewsLoad = false; 
 	 },
-
 
 	 setInsurNoFetch(state){
 
@@ -615,9 +882,9 @@ export const mutations = {
 
   	setPayNoFetch(state) {
   		
-  		  state.activeNewsInfo = state.payments;
-  		  state.activeNewsTab = 'Payments';	
-  		  state.firstNewsLoad = false;
+  		 state.activeNewsInfo = state.payments;
+  		 state.activeNewsTab = 'Payments';	
+  		 state.firstNewsLoad = false;
   	},
 
 	 setLendNoFetch(state) {
@@ -692,7 +959,7 @@ export const mutations = {
 
   		state.activeNewsInfo = state.wealthtech;
   		state.activeNewsTab ='WealthTech';	
-  		state.firstNewsLoad = false ;
+  		state.firstNewsLoad = false;
 
 	 },
 
@@ -737,8 +1004,8 @@ export const mutations = {
 
    submitSearch(state, data) {
 
-       state.activeNewsInfo = data;
-       state.firstNewsLoad = false;     
+      state.activeNewsInfo = data;
+      state.firstNewsLoad = false;     
     },
 
     setSearchTab(state, topic) {
@@ -755,7 +1022,7 @@ export const mutations = {
 
 	   },
 	 
-  }
+}
 
  export const actions = {
     
@@ -801,7 +1068,7 @@ export const mutations = {
 
   		async setPay({ commit }) {
 
-    			if (!this.payNewsFetched && !this.allNewsFetched) {
+    		if (!this.payNewsFetched && !this.allNewsFetched) {
 
       	      await this.$axios.get('/links?pay=1')
                		.then(res => {
@@ -834,11 +1101,10 @@ export const mutations = {
         }
 
 		  else {
-
 				commit("setLendNoFetch");
 		   }
   		 
-  		 },
+  		},
 
   		 async setMergers({ commit }) {
 
@@ -849,6 +1115,7 @@ export const mutations = {
   					  commit("setMergers", res.data);
   		         })
   			 }
+
   		   else {
   				commit("setMergersNoFetch");
   		   }
@@ -858,7 +1125,7 @@ export const mutations = {
 
   		async setOpen({ commit }) {
 
-  		   if (!this.openNewsFetched && !this.allNewsFetched ){
+  		   if (!this.openNewsFetched && !this.allNewsFetched ) {
 
   	       		await this.$axios.get('/links?folder=openbanking')
            			.then(res => {
@@ -867,12 +1134,12 @@ export const mutations = {
   		   }
 
         else if (this.allNewsFetched )  {
-            newsbyFolder('personalfinance');
+            newsbyFolder('openbanking');
         }
 
-  		   else {
-  				commit("setOpenNoFetch");
-		      }
+  		  else {
+  				  commit("setOpenNoFetch");
+		    }
   		 
   		 },
 
@@ -883,7 +1150,7 @@ export const mutations = {
   	       await this.$axios.get('/links?folder=personalfinance')
            			.then(res => {
 					  commit("setPer", res.data);
-		         })
+		        })
 			  }
 
         else if (this.allNewsFetched)  {
@@ -891,14 +1158,14 @@ export const mutations = {
         }
 
 		   else {
-				commit("setPerNoFetch");
+				   commit("setPerNoFetch");
 		   }
   		 
   		},
 
   		async setWealth({ commit }) {
 
-  		    if (!this.wealthNewsFetched  && !this.allNewsFetched){
+  		    if (!this.wealthNewsFetched && !this.allNewsFetched){
 
     	       	await this.$axios.get('/links?folder=wealthtech')
              			.then(res => {
@@ -912,27 +1179,27 @@ export const mutations = {
 
 		      else {
 				    commit("setWealthNoFetch");
-		       }
+		      }
   		 
   		 },
 
   		  async setRemit({ commit }) {
 
-      		if (!this.remitNewsFetched && !this.allNewsFetched) { 
+      	 if (!this.remitNewsFetched && !this.allNewsFetched) { 
 
-        	       await this.$axios.get('/links?folder=remittance')
+        	   await this.$axios.get('/links?folder=remittance')
                  			.then(res => {
       					  commit("setRemit", res.data);
-      		         })
+      		   })
       		}
-
           else if (this.allNewsFetched)  {
             newsbyFolder('remittance');
+          
           }
-
       		else {
-      				commit("setRemitNoFetch");
-      		   }
+      		
+          		commit("setRemitNoFetch");
+      		}
         		 
         },
 
@@ -965,7 +1232,6 @@ export const mutations = {
 					  commit("setCyber", res.data);
 		      })
 			 }
-
        else if (this.allNewsFetched)  {
             newsbyFolder('cyberidentity');
        }
@@ -976,22 +1242,22 @@ export const mutations = {
   		 
   		 },
 
-
   		async setReal({ commit }) {
 
     		  if (!this.realNewsFetched && !this.allNewsFetched) {
-
       	       		await this.$axios.get('/links?folder=RealEstate')
                			.then(res => {
     					  commit("setReal", res.data);
     		         })
     			 }
 
-          else if (this.allNewsFetched)  {
+          else if (this.allNewsFetched) {
+
             newsbyFolder('regtech');
+          
           }
 
-    		   else {
+    		  else {
     				    commit("setRealNoFetch");
     		   }
   		 
@@ -1000,7 +1266,7 @@ export const mutations = {
 
   		async setReg({ commit }) {
 
-  		   if (!this.regNewsFetched && !allNewsFeteched) {
+  		   if (!(this.regNewsFetched) && !(allNewsFeteched)) {
 
     	    	await this.$axios.get('/links?folder=regtech')
          			.then(res => {
@@ -1013,11 +1279,9 @@ export const mutations = {
          }
 
   		   else {
-  				commit("setRegNoFetch");
-  		   }
-  		 
+  				  commit("setRegNoFetch");
+  		   }	 
   		 },
-
 
   		async setHealth({ commit }) {
 
@@ -1027,40 +1291,36 @@ export const mutations = {
   					  commit("setHealth", res.data);
   		         })
   			 }
-        
+
         else if (this.allNewsFetched)  {
            newsbyFolder('healthtech');
         } 
         
 		    else {
 				    commit("setHealthNoFetch");
-          }
-  		 },
-
+        }
+  		},
 
   		async setWealth({ commit }) {
 
-  		   if (!this.wealthNewsFetched && !this.allNewsFetched) {	
+  		   if (!(this.wealthNewsFetched) && !(this.allNewsFetched)) {	
 
     	     await this.$axios.get('links?folder=wealthtech')
              			.then(res => {
   				 commit("setWealth", res.data);
   		     })
   			 }
-         
          else if (this.allNewsFetched)  {
            newsbyFolder('wealthtech');
          } 
-        
   		   else {
   				  commit("setWealthNoFetch");
   		   }
-  		 
   		 },
 
   		async setGeneral({ commit }) {
 
-	      if (!this.generalNewsFetched  &&!this.allNewsFetched) {
+	      if (!(this.generalNewsFetched) && !(this.allNewsFetched)) {
 
 	   		await this.$axios.get('/links?folder=General')
          			.then(res => {
@@ -1075,7 +1335,6 @@ export const mutations = {
 		    else {
 				  commit("setGeneralNoFetch");
 		    }
-    		 
   		},
 
   		async setNeo({ commit }) {
@@ -1089,7 +1348,7 @@ export const mutations = {
   			 }
 
         else if (this.allNewsFetched)  {
-                newsbyFolder('neobank');
+            newsbyFolder('neobank');
         }
 
         else {
@@ -1127,13 +1386,10 @@ export const mutations = {
   				  commit("setVal", res.data);
   	         })
   		   }
-
   		   else {
   				  commit("setValNoFetch");
   		   }
-  		 
   		 },
-
 
   		 async setBank({ commit }) {
 		    
@@ -1146,11 +1402,11 @@ export const mutations = {
 		   	  } 
 
           else if (this.allNewsFetched)  {
-                newsbyFolder('openbanking');
+              newsbyFolder('openbanking');
           }  
 
 		   	  else {
-				  commit("setBankNoFetch" );
+				      commit("setBankNoFetch" );
 		      }
   		    
   		  },
@@ -1161,12 +1417,10 @@ export const mutations = {
 
       async goNext( {commit}, pageVal) {
 
-			 if (this.pageArryLength >= pageVal && this.allNewsFetched) {
-			       commit("setNextNoFetch");
-			 }	
-			       
-      else {
-		 
+			 if (this.allNewsFetched) {
+			    commit("setNextNoFetch");
+			 }	      
+       else {
 		      await this.$axios.get('/links?page=' + pageVal)
                 .then( res => {
 				       commit("setNextAndFetch", res.data)	  
@@ -1180,10 +1434,8 @@ export const mutations = {
   	  },
 
   	  async setBlockNext( {commit}, page) {
-
   			 var temp = page;
   			 temp++ ;
-
   			 await this.$axios.get('/links?blk=' + temp)
              .then( res => {
   				 commit("setBlockNext", res.data)	  
@@ -1191,13 +1443,10 @@ export const mutations = {
 		  },	 
   		 
      async setPayPrevious({ commit }, page ) {
-    	
-      commit("setPayPrevious");
-      		 
+        commit("setPayPrevious");		 
      },
 
      async setPayNext( {commit}, page) {
-
   		 	 var temp = page;
 			   temp++ ;
 			   await this.$axios.get('/links?pay=' + temp)
@@ -1207,16 +1456,13 @@ export const mutations = {
   	 },
 
      async setSector( {commit}, sector) {
-
         await this.$axios.get('/links?sector=' + sector)
                 .then( res => {
           commit("setSector", res.data)    
          })               
-    
      },
 
     async setbyID( {commit}, sector) {
-
         await this.$axios.get('/links?id=' + sector)
                 .then( res => {
           commit("setSector", res.data)    
@@ -1224,34 +1470,27 @@ export const mutations = {
      },
 
     setSectorTab( {commit}, sector) {
-
       commit("setTabForSector", sector)    
     },
-
   	async setInsurPrevious({ commit }, page ) {
-	
 		   commit("setInsurPrevious");
-  		 
   	},
 
   	async setInsurNext( {commit}, page) {
-
   			var temp = page;
-  			temp++ ;
-  			  
+  			temp++ ; 
   			await this.$axios.get('/links?ins=' + temp)
                   .then( res => {
   					commit("setInsurNext", res.data)	  
   			 })               
 		 },	 
 
-     
      async setSearchTab( {commit}, topic) {
           commit("setSearchTab", topic);    
-      },
+     },
 
      async submitSearch( {commit}, topic) {
-        await this.$axios.get('/links?term=' + topic)
+          await this.$axios.get('/links?term=' + topic)
               .then( res => {
               commit("submitSearch", res.data)
         
@@ -1262,13 +1501,13 @@ export const mutations = {
           commit("setAllNews", allNews); 
       },
 
-  	  async goLast( {commit}) {
+  	 async goLast( {commit}) {
           commit("setLast");
   	  },	
 
-  	 nuxtServerInit(vuexContext, context) {
+  	 async nuxtServerInit(vuexContext, context) {
 		   
-  		   if (!this.firstNewsFetched) { 
+  		   if (!this.allNewsFetched) { 
 
               return this.$axios.$get("/links?page=1")
               .then(data => {
@@ -1287,7 +1526,7 @@ export const mutations = {
 	export const getters = {
       
     loadedNews(state) {
-      return state.pages[0];
+      return state.news1 ;
 	  },
 
 	  payNewsFetched(state) {
@@ -1315,20 +1554,16 @@ export const mutations = {
 	   },
 	  
 	  pageArryLength(state) {
-
 		    return state.pages.length;
 	  },
 
 	  bankPostsFetched(state) {
-
 	    if (state.banking.length) {
         return true;
       } 
-
       else {
         return false;
       }
-	 
 	  },
 
 	  insurNewsFetched(state) {
@@ -1337,6 +1572,7 @@ export const mutations = {
       {
         return true;
       } 
+
       else {
         return false;
       } 
@@ -1358,16 +1594,12 @@ export const mutations = {
 	  
 	  firstNewsFetched(state) {
 	
-     if (state.pages[0].length) {
-
+     if (state.allNews.length) {
         return true;
       } 
-
-      else {
-
+    else {
         return false;
       }  
-
 	  },
 
 
@@ -1376,12 +1608,9 @@ export const mutations = {
       if (state.mergers.length) {
         return true;
       } 
-
       else {
-
         return false;
       }  
-
 	  },
 
 	  aiNewsFetched (state) {
@@ -1405,21 +1634,18 @@ export const mutations = {
       else {
         return false;
       }  
-
 	  },
 
 
 	  perNewsFetched (state) {
 
       if (state.personalfinance.length) {
-
         return true;
       } 
 
       else {
         return false;
       }    
-
 	  },
 
 	  capitalNewsFetched (state) {
@@ -1427,35 +1653,27 @@ export const mutations = {
       if (state.capitalmarkets.length) {
         return true;
       } 
-
       else {
         return false;
       }    
-
 	  },
 
   	  realNewsFetched (state) {
-
       if (state.realestate.length) {
         return true;
       } 
-
       else {
           return false;
         }  
-
 	   },
 
-	  regNewsFetched (state) {
-
+	   regNewsFetched (state) {
         if (state.regtech.length) {
           return true;
         } 
-
         else {
           return false;
         } 
-
 	  },
 
 	  cyberNewsFetched (state) {
@@ -1464,24 +1682,19 @@ export const mutations = {
       {
         return true;
       } 
-
       else {
         return false;
       }
-
 	  },
-
 
 	  generalNewsFetched (state) {
 
 	    if (state.general.length) {
         return true;
       } 
-
       else {
         return false;
       }
-
 	  },
 
  	  wealthNewsFetched (state) {
@@ -1489,37 +1702,29 @@ export const mutations = {
 	    if (state.wealthtech.length) {
         return true;
       } 
-
       else {
         return false;
       }   
-
 	  },
-
 
   	openNewsFetched (state) {
 
 	    if (state.openbanking.length) {
         return true;
       } 
-
       else {
         return false;
       }
-
 	  },
-
 
   	remitNewsFetched (state) {
 
       if (state.remittance.length) {
           return true;
       } 
-
       else {
          return false;
       }
-
 	  },
 
 	  neoNewsFetched (state) {
@@ -1527,11 +1732,9 @@ export const mutations = {
 	    if (state.neobank.length) {
         return true;
       } 
-
       else {
         return false;
       }
-
 	  },
 
 	  valNewsFetched (state) {
@@ -1539,7 +1742,6 @@ export const mutations = {
       if (state.valuation.length) {
         return true;
       } 
-
       else {
         return false;
       }
@@ -1548,8 +1750,7 @@ export const mutations = {
 
       
     firstpage(state) {
-
-		  return state.pages[0] ;
+		  return state.news1 ;
 	  },
 	 
 	  insurNews(state) {
@@ -1558,7 +1759,6 @@ export const mutations = {
 	  },
 	 
 	  lendNews(state) {
-	
 		   return state.lending;
 	  },
 	  
@@ -1567,22 +1767,14 @@ export const mutations = {
 		   return state.banking;
 	  },	
 	  
-	  pagesArry(state,item) {
-	
-		  return state.pages[item];	
-	  },
-	
 	 activeNewsPage(state) {
-		
 		 return state.numNewsPage;
 	 },
 
   allNewsFetched(state) {
-
     if (state.allNews.length) {
       return true;
     }
-
     else {
       return false;
     }
@@ -1594,11 +1786,9 @@ export const mutations = {
     if (this.allNewsLoaded) {
       return state.allNews.length;
     }
-
     else {
       return 0;
     }
-
   },
 
    newsbyFolder: (state, folder ) => {
@@ -1609,8 +1799,6 @@ export const mutations = {
 
    },  
 
-
-	
 	 prevArryVal(state) {
 
   	 	var val = state.numNewsPage();
@@ -1618,11 +1806,9 @@ export const mutations = {
   		if (val>= 0) {
   			return val;
   		}
-
   		else {
   			return 0;
   		}
-	 
 	 },	 
 
 	}

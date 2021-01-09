@@ -13,7 +13,7 @@
   class="" style="color:dimgray" id="myExcelIcoTag">
   <br>
   <center><span content="download excel report"
-v-tippy="{ placement : 'bottom' }"  id="oki" class="mdi mdi-file-excel" style="margin:20px;font-size: 34px;"></span></center><br>
+ id="oki" class="mdi mdi-file-excel" style="margin:20px;font-size: 34px;"></span></center><br>
   </a>
 
 

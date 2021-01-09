@@ -334,7 +334,7 @@ export default {
   computed: {
 
     ...mapState({
-      starter: state => state.news.pages[0],
+      starter: state => state.news1,
       first: state => state.news.firstNewsLoad,
       activeNewsInfo: state => state.news.activeNewsInfo,
       activeTab: state => state.news.activeNewsTab,
@@ -347,22 +347,22 @@ export default {
 
     filterMessage() {
 
-      if (this.activeTab == 'Page') {
-        return this.activeTab + ' ' +  this.numPage;
+      if (this.activeTab == 'All') {
+        return this.activeTab + ' ' + 'page ' +  this.numPage;
       }
 
       else if (this.activeTab == 'Blockchain') {
-        return this.activeTab + ' ' + 'page' + ' ' + this.blkPage;
+        return this.activeTab + ' ' + 'page ' + ' ' + this.blkPage;
       }
 
       else if (this.activeTab == 'Payments') {
 
-        return this.activeTab + ' ' + 'page' + ' ' + this.payPage;
+        return this.activeTab + ' ' + 'page ' + ' ' + this.payPage;
       }
 
       else if (this.activeTab == 'Insurtech') {
 
-        return this.activeTab + ' ' + 'page' + ' ' + this.insPage;
+        return this.activeTab + ' ' + 'page ' + ' ' + this.insPage;
 
       }
 

@@ -4,11 +4,11 @@
 
        <div class="search-div">
 
-         <input content="Type your search text"
-     v-tippy="{ placement : 'bottom' }" type="text"  name="term" id="term"  v-model="searchMessage" style="margin-right: 10px" width="100%" class="text-field w-input w-col w-col-6" placeholder="search  content">
+         <input 
+     type="text"  name="term" id="term"  v-model="searchMessage" style="margin-right: 10px" width="100%" class="text-field w-input w-col w-col-6" placeholder="search  content">
 
          <button content="Click to search"
-     v-tippy="{ placement : 'bottom' }" class="gardient-button" id="section-10" v-on:click="submitSearch(searchMessage)"  style="margin-left:1px;margin-top:5px;margin-bottom:10px" >
+     class="gardient-button" id="section-10" v-on:click="submitSearch(searchMessage)"  style="margin-left:1px;margin-top:5px;margin-bottom:10px" >
         <span class="mdi mdi-file-search"></span>
         </button>
         <br>
@@ -29,22 +29,18 @@
 
           <a href="#" v-on:click="showGrouping('AI')" class="tagbtn">AI</a>
 
-
-          <a href="#" v-show="showPreviousBtn" class="tagbtn"  v-on:click="changePage('Previous')">Prev</a>
+          <a href="#" v-show="showPreviousBtn" class="tagbtn" v-on:click="changePage('Previous')">Prev</a>
 
           <a href="#" v-show="showNextBtn" class="tagbtn" v-on:click="changePage('Next')">Next</a>
 
-          <a href="#" v-show="showPrevInsBtn" class="tagbtn"  v-on:click="changeInsur('Previous')">Prev</a>
+          <a href="#" v-show="showPrevInsBtn" class="tagbtn" v-on:click="changeInsur('Previous')">Prev</a>
           <a href="#" v-show="showNextInsBtn" class="tagbtn" v-on:click="changeInsur('Next')">Next</a>
-
 
          <a href="#" v-show="showPrevPayBtn" class="tagbtn"  v-on:click="changePay('Previous')">Prev</a>
          <a href="#" v-show="showNextPayBtn" class="tagbtn" v-on:click="changePay('Next')">Next</a>
 
-
          <a href="#" v-show="showPrevBlkBtn" class="tagbtn"  v-on:click="changeBlock('Previous')">Prev</a>
          <a href="#" v-show="showNextBlkBtn" class="tagbtn" v-on:click="changeBlock('Next')">Next</a>
-
 
          <br>
 

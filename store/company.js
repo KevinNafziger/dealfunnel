@@ -43,7 +43,7 @@ export const mutations = {
     state.company3 = state.allCompanies.slice(1000,1500);
     state.company4 = state.allCompanies.slice(1500,lastItem);
     state.activeInfo = state.allCompanies.slice(0, 500);  
-    state.activeTab = "All page 1";
+    state.activeTab = "All";
     state.firstLoad = false;
     state.activePage = 1;
 
@@ -334,10 +334,9 @@ export const mutations = {
 						  commit("setLend", res.data);
 			         })
 				}
-
-			   else if (origin =="notFromLoad")  {	
-					commit("setLendNoFetch");
-			    }  		 
+			   else if (this.pastInit || origin == "notFromLoad") {
+			   		commit("setLendNoFetch");
+			   } 
   		    },
 
 
@@ -564,7 +563,6 @@ export const mutations = {
 	  pastInit(state) {
 
 		  if (state.firstLoad) {
-
 	        return false;
 	      } 
 

@@ -128,7 +128,6 @@ methods: {
              else if (this.page == 2) {  
                   this.$store.dispatch("company/setComp3");
              }
-
              else if (this.page == 3) {
                this.$store.dispatch("company/setComp4");
              }
@@ -172,19 +171,7 @@ methods: {
 
 },
 
-  //watch: {
-
-  // companies: function () {
-
-    // if (this.firstLoad) {
-
-    //    this.$store.dispatch("company/setUS1");
-   // }
-
-   //  },
-
-  // },
-
+  
   created() {
 
      this.$nuxt.$on("getCategory", (category) => this.getbyCategory(category));
@@ -194,7 +181,6 @@ methods: {
    },
 
    async fetch({store}) {
-    
       await store.dispatch("company/setLend", "fromLoad");
    },
 };
