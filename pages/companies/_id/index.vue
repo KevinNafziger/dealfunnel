@@ -17,13 +17,14 @@
     <div class=
     "info-box" v-if="(item.state) || (item.phone) || (item.country) || (!item.website ==='') || (!item.email==='') || (!item.facebook ==='') || (!item.github ==='') || (!item.medium ==='') || (!item.youtube ==='') || (!item.pinterest ==='')" >
          <ul>
-          <li v-if="item.state"><b>Location:</b>{{item.city }}
-            {{ item.state }}  {{item.country}}
+          <li><b>Location:</b>{{item.city }}
+            {{ item.state }}  {{item.country_item
+            }}
           </li>
           <li v-if="item.phone"><b>Phone:</b>
               {{item.phone}}
           </li>
-          <li v-if="!(item.website ==='')">
+          <li v-if="!(item.website=='')">
             <b>Website:</b>
             <a href="#" v-on:click="openItem(item.website)" > {{item.website}}</a>
           </li>
