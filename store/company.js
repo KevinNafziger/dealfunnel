@@ -328,7 +328,6 @@ export const mutations = {
   		   async setLend({ commit }, origin) {
 
 			   if (!this.pastInit) {
-
 	  	       		await this.$axios.get('/companies?category=lending')
 	           			.then(res => {
 						  commit("setLend", res.data);
@@ -338,7 +337,6 @@ export const mutations = {
 			   		commit("setLendNoFetch");
 			   } 
   		    },
-
 
   		   async setBank({ commit }) {
 			    

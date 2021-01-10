@@ -282,7 +282,6 @@ export default {
             var page = this.payPage;
             this.$store.dispatch("news/setPayNext", page);
             break;
-
          }
      },
 

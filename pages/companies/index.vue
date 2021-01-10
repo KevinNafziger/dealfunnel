@@ -56,7 +56,7 @@
                   {{company.category}}
               </td>
               <td>
-                {{company.name}}
+                {{company.country_item}}
               </td>
               <td>
                 {{company.founding_yr}}

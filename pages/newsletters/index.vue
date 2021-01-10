@@ -16,6 +16,7 @@
 import {mapState} from 'vuex';
 import LettersList  from  '@/components/Letters/LettersList'
 export default {
+
   computed: {
   ...mapState({
           allLetters: state =>  state.posts.newsletters,

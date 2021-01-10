@@ -11,22 +11,26 @@
 <h1 style="padding-top: 30px; margin-bottom: 0px; opacity: 1; transform: translateX(0px) translateY(0px) translateZ(0px);" class="intro-title">Newsletters, data, and reports <br></h1><br>
 
 <p class=MsoNormal ><span class="intro-p" style='font-size:
-20.0pt;mso-bidi-font-size:11.0pt'><b>Focused Insights</b> – <span class=SpellE>DealFunnel's</span>
- articles are forward looking, focusing on a company’s plans related to capital raising, partnerships, international expansion and M&A. <span style='mso-spacerun:yes'></span></span></p>
+20.0pt;mso-bidi-font-size:11.0pt'><b>Actionable</b> – <span class=SpellE>DealFunnel</span>
+ articles are forward looking and focus on a company’s plans for capital raising, partnerships, expansion and M&A. <span style='mso-spacerun:yes'></span></span></p>
 
 <p class=MsoNormal><span class="intro-p" style='font-size:
-20.0pt;mso-bidi-font-size:11.0pt'><b>Exclusive Content</b><span class=SpellE> DealFunnel</span>
- newsletters summarize all transactions for a featured category. Newsletters and reports contain proprietary articles that highlight a company's strategic priorities, featuring firms of all sizes and stages of devlopment. <span style='mso-spacerun:yes'></span></span></p>
+20.0pt;mso-bidi-font-size:11.0pt'><b>Detailed</b>– <span class=SpellE> DealFunnel</span>
+ newsletters summarize all M&A and capital raises for a given category, including for fast-growing segments such as blockchain/DLT and insurtech. <span style='mso-spacerun:yes'></span></span></p>
 </p>
 
 <p class=MsoNormal><span class="intro-p" style='font-size:
-20.0pt;mso-bidi-font-size:11.0pt'><b>Drag & Drop Reports </b><span class=SpellE> DealFunnel</span> reports make it easy to scout for opportunities because they aggregate all intel for that topic, geography or time period. The drag and drop Reports Builder also lets dealmakers design their own reports, with only the information relevant to the firm and its clients.<span style='mso-spacerun:yes'></span></span></p>
+20.0pt;mso-bidi-font-size:11.0pt'><b>Easy to use– </b><span class=SpellE> DealFunnel</span> reports aggregate all our intel for a topic, geography or period. Our <i>drag and drop</i> Builder lets you create your own reports with just a few mouse clicks. <span style='mso-spacerun:yes'></span></span></p>
 </p>
 
 <p class=MsoNormal><span class="intro-p" style='font-size:
-20.0pt;mso-bidi-font-size:11.0pt'><b>Data Driven</b><span class=SpellE></span>
-DealFunnel datasets on Fintech capital raises, M&A, articles and companies can be exported to Excel. DealFunnel also provide exportable data for hundreds of company's expected timelines for future actions, allowing categorization of opportunities by expected data, type, geography and size. <span style='mso-spacerun:yes'></span></span></p>
+20.0pt;mso-bidi-font-size:11.0pt'><b> Data Driven</b>–<span class=SpellE></span>
+DealFunnel provides searchable data on capital raises, raises, M&A, articles and companies that can be exported to excel or other spreadsheet programs. <span style='mso-spacerun:yes'></span></span></p>
 </p>
+<p class=MsoNormal><span class="intro-p"><span class=SpellE></span>
+<b>Ahead of the curve</b>–<span class=SpellE></span> DealFunnel provides in-depth coverage of middle-market and emerging companies often ignored by other outlets. Click below to see how our unique approach can help you land more deals.  Our coverage of companies in insurtech, blockchain/DLT and embedded finance is unmatched. See some examples of our coverage below.
+<span style='mso-spacerun:yes'></span></span></p>
+
 
 <img class="img-G" width="200px;" src="https://firebasestorage.googleapis.com/v0/b/deal-funnel.appspot.com/o/deal%20funnel%20web%20stock%2Fsada.png?alt=media&amp;token=dad23bb5-f65c-414d-807e-372dee5a5522">
 <div class="rem-img">

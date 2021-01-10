@@ -24,18 +24,15 @@
          </div><br>
         <div class="w-row">
            <div class="w-col w-col-12 w-col-medium-12 w12-hide-tiny">
-              <div>
-                <span style="text-transform:none !important;"  class="post-main-text">
-                       <b>Most Recent Coverage:</b><br><b><nuxt-link id="myArticleLinkTag" :to="'/newsletters/' + letter.id " class="mdi mdi-book-open mdi-18px"  >{{letter.teaser }}</nuxt-link></b>,
+                <span style="overflow:auto;" class="post-main-text">
+                       <b>:</b><br><b><nuxt-link id="myArticleLinkTag" :to="'/newsletters/' + letter.id " class="mdi mdi-book-open mdi-18px"  ></nuxt-link></b>,
 
-                       <div class="sumary"> {{letter.summary}} </div>
+                       <div style="overflow:auto; margin:5px;" class="summary" v-html="letterPreview(letter)"> 
+                       </div>
                       <br>
-
-
                   </span>
-                  </div>
+                 
               </div>
-
           </div>
         </div>
         <div class="center-btn">
@@ -70,7 +67,13 @@ import {mapState} from 'vuex';
         return post_id;
       }
    return 0;
-},
+ },
+
+ letterPreview(item) {
+
+    return item.blog_entry.slice(0, (item.blog_entry.length/17));
+  },
+  
 
   lettersFilter: function(letters) {
 
@@ -83,9 +86,9 @@ import {mapState} from 'vuex';
 </script>
  <style scoped>
 
- .sumamry {
+ .summary {
    overflow: auto;
-   height: 100px;
+   height: 350px;
  }
  .w-dyn-list {
    width: 100% !important;
@@ -140,7 +143,7 @@ import {mapState} from 'vuex';
     }
   }
   .w-row{
-    display: flex;
+ 
   }
   .art-rows {
     display: -webkit-inline-box;
@@ -153,8 +156,7 @@ import {mapState} from 'vuex';
   }
   .post-main-text {
     height: auto;
-    min-height: 200px;
-      display: -webkit-inline-box;
+    min-height: 400px;
       border-bottom-style: groove;
       border-bottom-color: rgba(210,232,255,0.12157);
       overflow: auto;
@@ -191,15 +193,9 @@ import {mapState} from 'vuex';
   .w3-teal {
     margin-top:20px !important;
   }
-::-webkit-scrollbar-track {
-     -webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.5);
-     border-radius: 1px;
-     background: white;
-     box-shadow: none !important;
-}
 .post-summary-wrapper  {
        height: 400 !important;
-    overflow: scroll;
+    overflow: auto;
 }
      .blog-title {
        font-size: 20px !important;

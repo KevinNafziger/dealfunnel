@@ -5,7 +5,7 @@
 <template>
 <div class="main-div">
   <div class="col-A">
-    <div v-if="!(item.logo_item=='undefined') && !(item.logo_item=='')" class="col-sm-5">
+    <div v-if="!(item.logo_item=='')" class="col-sm-5">
         <img v-if="item.logo_item" class="nuxt__build_indicator2" :src="item.logo_item">
     </div>
     <br>
@@ -230,21 +230,11 @@ import {mapState} from 'vuex';
         return this.item.id;
     },
 
-    //showSocialDiv(current) {
-
-      //  if ((!current.facebook ==='') || (!current.medium ==='') || //(!current.github ==='') || !(!current.youtube ==='') || //(!current.pinterest ==='') || (!current.email ===''))
-        // {
-          //  return true;
-        // }
-        //else {
-          //  return false;
-        //}
-    //},
-
+  
 
     item() {
 
-           if (!this.allCompanies.length == undefined) {
+           if (this.allCompanies) {
               return  this.allCompanies.find(p => p.id == this.$route.params.id)
            } 
            else {
@@ -472,9 +462,8 @@ display:block; color:black;
   font-family: calibri;
   padding: 15px 15px;
   border-radius: 1px;
-  box-shadow: 1px 1px 2px 2px rgba(0,0,0,0.2);
   width: 420px;
-  z-index: 10;
+  z-index: 2;
   font-size: 24px;
   line-height: 1.2rem;
   font-style: calibri;

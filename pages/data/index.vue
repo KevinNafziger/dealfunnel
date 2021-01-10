@@ -85,7 +85,7 @@
             {{post.city }}
         </td>
         <td>
-            {{ post.country }}
+            {{ post.country_item }}
         </td>
         <td>
             {{ post.region }}
