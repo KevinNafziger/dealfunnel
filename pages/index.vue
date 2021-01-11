@@ -20,15 +20,15 @@
 </p>
 
 <p class=MsoNormal><span class="intro-p" style='font-size:
-20.0pt;mso-bidi-font-size:11.0pt'><b>Easy to use– </b><span class=SpellE> DealFunnel</span> reports aggregate all our intel for a topic, geography or period. Our <i>drag and drop</i> Builder lets you create your own reports with just a few mouse clicks. <span style='mso-spacerun:yes'></span></span></p>
+20.0pt;mso-bidi-font-size:11.0pt'><b>Easy to use– </b><span class=SpellE> DealFunnel</span> reports aggregate all our intel for a topic, geography or period. Our <i>drag and drop</i> Builder lets you create your own custom reports with just a few mouse clicks. <span style='mso-spacerun:yes'></span></span></p>
 </p>
 
 <p class=MsoNormal><span class="intro-p" style='font-size:
 20.0pt;mso-bidi-font-size:11.0pt'><b> Data Driven</b>–<span class=SpellE></span>
-DealFunnel provides searchable data on capital raises, raises, M&A, articles and companies that can be exported to excel or other spreadsheet programs. <span style='mso-spacerun:yes'></span></span></p>
+DealFunnel provides searchable data on capital raises, M&A, articles and companies that can be exported to <i>Excel</i> or any other program that allows data to be imported in CSV format. <span style='mso-spacerun:yes'></span></span></p>
 </p>
 <p class=MsoNormal><span class="intro-p"><span class=SpellE></span>
-<b>Ahead of the curve</b>–<span class=SpellE></span> DealFunnel provides in-depth coverage of middle-market and emerging companies often ignored by other outlets. Click below to see how our unique approach can help you land more deals.  Our coverage of companies in insurtech, blockchain/DLT and embedded finance is unmatched. See some examples of our coverage below.
+<b>Ahead of the curve</b>–<span class=SpellE></span> DealFunnel provides in-depth coverage of companies in the middle-market and  within emerging subsegments of financial services and financial technology, companies that often aren't the radar or other publications. By maintaining the focus our our coverage on the stategic priorities of a given company rather than on trending topics, we also provide you with leads that are both more tangible and more likely to mirror a company's own priorities. Click below to see examples of our coverage and to learn helpful best practices to use in conjunction with <i>DealFunnel</i> to hone in on the most relevant leads for you and your firm. These best practices can help remove the false positives and unproductive thought paths that inadvertently block even the most diligent practictioners from maximizing dealflow.  
 <span style='mso-spacerun:yes'></span></span></p>
 
 

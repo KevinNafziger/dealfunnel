@@ -56,17 +56,17 @@
         <td >
 
         <div id="myCompanyTag" >
-        <a content="click for website"
+        <a content="click to open website"
         v-tippy="{ placement : 'bottom' }":href="mydeal.sellurl" target="_blank">
         {{mydeal.sellname }}</a>
         </div>
         </td>
         <td>
-            <div content="click for company info"
+            <div v-if="mydeal.buyer_id" content="click to view company profile"
         v-tippy="{ placement : 'bottom' }" class="valuebtn">  <nuxt-link v-if="mydeal.buyer_id" 
            :to="'/companies/' + mydeal.buyer_id " > {{mydeal.buyname }}</nuxt-link>
-           <span v-if="!mydeal.buyer_id">{{mydeal.buyname }}
-           </span>
+           </div>
+           <div v-if="!(mydeal.buyer_id)" >{{mydeal.buyname }}
            </div>
         </td>
         <td>
