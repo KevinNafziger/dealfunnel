@@ -5,10 +5,10 @@
     <div data-v-69296181="" id="top" class="sectionix"><div data-v-69296181="" class="title"><div data-v-69296181="" class="content"><br data-v-69296181="">
 
       <h2 data-v-69296181="">Articles<i style="font-size: 13px; text-align:right; margin-left:3px;">{{ filterMessage }}</i></h2>
-      
+
     </div></div></div>
   </center>
- 
+
  <PostTempSearch> </PostTempSearch>
 
   <div class="posts-page">
@@ -78,7 +78,7 @@ export default {
 
          }
      },
-      
+
     changeInsur: function(direction) {
 
        switch(direction) {
@@ -97,7 +97,7 @@ export default {
 
          }
      },
- 
+
      changeBlock: function(direction) {
 
        switch(direction) {
@@ -208,7 +208,7 @@ export default {
    }
 
   },
-  
+
   computed: {
   ...mapState({
           starter: state => state.posts.pages[0],
@@ -263,7 +263,7 @@ export default {
      this.$nuxt.$on("getCategory", (category) => this.getbyCategory(category));
      this.$nuxt.$on("changePage", (direction) => this.changePage(direction));
      this.$nuxt.$on("submitSearch", (topic) => this.submitSearch(topic));
-   
+
      this.$nuxt.$on("changeInsur", (direction) => this.changeInsur(direction));
      this.$nuxt.$on("changeBlock", (direction) => this.changeBlock(direction));
      this.$nuxt.$on("changeBank", (direction) => this.changeBank(direction));
@@ -273,7 +273,7 @@ export default {
 
        store.dispatch("posts/setView", "Articles");
        await store.dispatch("posts/nuxtServerInit");
-    
+
   },
 
 }
@@ -356,5 +356,7 @@ h2 {
 #button {
   width: 16% !important;
 }
-
+input.text-field {
+      width: 20%;
+}
 </style>

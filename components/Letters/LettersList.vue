@@ -21,17 +21,19 @@
                    >
                 </a>
              </div>
-         </div><br>
+         </div>
+
+           <br>
         <div class="w-row">
            <div class="w-col w-col-12 w-col-medium-12 w12-hide-tiny">
                 <span style="overflow:auto;" class="post-main-text">
                        <b>:</b><br><b><nuxt-link id="myArticleLinkTag" :to="'/newsletters/' + letter.id " class="mdi mdi-book-open mdi-18px"  ></nuxt-link></b>,
 
-                       <div style="overflow:auto; margin:5px;" class="summary" v-html="letterPreview(letter)"> 
+                       <div style="overflow:auto; margin:5px;" class="summary" v-html="letterPreview(letter)">
                        </div>
                       <br>
                   </span>
-                 
+
               </div>
           </div>
         </div>
@@ -73,7 +75,7 @@ import {mapState} from 'vuex';
 
     return item.blog_entry.slice(0, (item.blog_entry.length/17));
   },
-  
+
 
   lettersFilter: function(letters) {
 
@@ -143,7 +145,7 @@ import {mapState} from 'vuex';
     }
   }
   .w-row{
- 
+
   }
   .art-rows {
     display: -webkit-inline-box;
@@ -245,6 +247,7 @@ img.in-your-face {
     border-radius: 0px;
     padding: 10px;
     height: auto;
+    min-height:625px;
     width: 100%;
     padding: 2px;
     margin-left: auto !important;
