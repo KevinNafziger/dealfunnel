@@ -516,7 +516,7 @@ export default {
     margin: auto;
 }
 #examples {
-    display: inline-block;
+    display: inline-table;
     background-color: #fff;
     opacity: .95;
     margin: 0px, auto;
@@ -547,6 +547,7 @@ export default {
   min-height: 132px;
   width: 90%;
   margin: auto;
+  padding-top: 30px;
 }
 #examples .example .hover {
     display: grid;
@@ -592,5 +593,9 @@ ul {
     font-weight: bold;
     text-align: center;
     text-align-last: center;
+  }
+  .datetag {
+    float:left;
+    display:block;
   }
 </style>
