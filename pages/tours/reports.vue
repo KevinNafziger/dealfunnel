@@ -13,7 +13,7 @@
 
     <text class="headcomname">
       Reports-Choose an existing report
-    </text>
+    </text><br>
   <br>
   <ol>
     <li>Login to the application and select the <i>Reports</i> tab from the navigation bar.</li>
@@ -28,7 +28,7 @@
   <br><br>
   <text class="headcomname">
     Reports Builder- Create your own report
-  </text>
+  </text><br>
   <br>
 
   <ol>
