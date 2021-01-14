@@ -1,0 +1,104 @@
+{
+  "DataTempSearch": {
+    "description": "Auto imported from components/Data/DataTempSearch.vue"
+  },
+  "LazyDataTempSearch": {
+    "description": "Auto imported from components/Data/DataTempSearch.vue"
+  },
+  "Postsys": {
+    "description": "Auto imported from components/Builder/Postsys.vue"
+  },
+  "LazyPostsys": {
+    "description": "Auto imported from components/Builder/Postsys.vue"
+  },
+  "Searchbar": {
+    "description": "Auto imported from components/Builder/Searchbar.vue"
+  },
+  "LazySearchbar": {
+    "description": "Auto imported from components/Builder/Searchbar.vue"
+  },
+  "CompanyTempSearch": {
+    "description": "Auto imported from components/Company/CompanyTempSearch.vue"
+  },
+  "LazyCompanyTempSearch": {
+    "description": "Auto imported from components/Company/CompanyTempSearch.vue"
+  },
+  "DealTempSearch": {
+    "description": "Auto imported from components/Deals/DealTempSearch.vue"
+  },
+  "LazyDealTempSearch": {
+    "description": "Auto imported from components/Deals/DealTempSearch.vue"
+  },
+  "Board": {
+    "description": "Auto imported from components/Draggable/Board.vue"
+  },
+  "LazyBoard": {
+    "description": "Auto imported from components/Draggable/Board.vue"
+  },
+  "Card": {
+    "description": "Auto imported from components/Draggable/Card.vue"
+  },
+  "LazyCard": {
+    "description": "Auto imported from components/Draggable/Card.vue"
+  },
+  "Burger": {
+    "description": "Auto imported from components/Navigation/Burger.vue"
+  },
+  "LazyBurger": {
+    "description": "Auto imported from components/Navigation/Burger.vue"
+  },
+  "Mobilebar": {
+    "description": "Auto imported from components/Navigation/Mobilebar.vue"
+  },
+  "LazyMobilebar": {
+    "description": "Auto imported from components/Navigation/Mobilebar.vue"
+  },
+  "TheHeader": {
+    "description": "Auto imported from components/Navigation/TheHeader.vue"
+  },
+  "LazyTheHeader": {
+    "description": "Auto imported from components/Navigation/TheHeader.vue"
+  },
+  "NewsTempSearch": {
+    "description": "Auto imported from components/News/NewsTempSearch.vue"
+  },
+  "LazyNewsTempSearch": {
+    "description": "Auto imported from components/News/NewsTempSearch.vue"
+  },
+  "LettersList": {
+    "description": "Auto imported from components/Letters/LettersList.vue"
+  },
+  "LazyLettersList": {
+    "description": "Auto imported from components/Letters/LettersList.vue"
+  },
+  "PostList": {
+    "description": "Auto imported from components/Posts/PostList.vue"
+  },
+  "LazyPostList": {
+    "description": "Auto imported from components/Posts/PostList.vue"
+  },
+  "PostTempSearch": {
+    "description": "Auto imported from components/Posts/PostTempSearch.vue"
+  },
+  "LazyPostTempSearch": {
+    "description": "Auto imported from components/Posts/PostTempSearch.vue"
+  },
+  "RaiseTempSearch": {
+    "description": "Auto imported from components/Raises/RaiseTempSearch.vue"
+  },
+  "LazyRaiseTempSearch": {
+    "description": "Auto imported from components/Raises/RaiseTempSearch.vue"
+  },
+  "Sidebar": {
+    "description": "Auto imported from components/Sidebar/Sidebar.vue"
+  },
+  "LazySidebar": {
+    "description": "Auto imported from components/Sidebar/Sidebar.vue"
+  },
+  "Visits": {
+    "description": "Auto imported from components/Visits/Visits.vue"
+  },
+  "LazyVisits": {
+    "description": "Auto imported from components/Visits/Visits.vue"
+  }
+}
