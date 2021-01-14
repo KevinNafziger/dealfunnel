@@ -255,10 +255,16 @@ body{
   .img-G {
     display: none;
   }
+  .intro-p{
+    padding:20px;
+    margin:auto;
+    max-width:600px !important;
+    display: flow-root;
+  }
 }
 
 .img-G {
-  right: 140px;
+  right: 75px;
   position: absolute;
   top: 290px;
 }
@@ -400,12 +406,13 @@ body{
   box-sizing: border-box;
   border: 1px solid black;
 }
-.intro-p{
-  padding:20px;
-  margin:auto;
-  max-width:600px;
-  display: flow-root;
+.intro-p {
+    padding: 20px;
+    margin: auto;
+    max-width: 1295px;
+    display: flow-root;
 }
+
 @media (min-width: 768px) {
   .intro h1 {
     font-size: 2rem;
