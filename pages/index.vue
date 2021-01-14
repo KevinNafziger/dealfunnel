@@ -59,7 +59,8 @@ DealFunnel provides searchable data on capital raises, M&A, articles and compani
     <div class="card">
       <div class="layer"></div>
       <div class="content">
-        <p>Famous Person, I love this product because it does it all for me, what i mean it does the search work for me that takes hours and hours off my day and this product gets me the data i need in seconds. and more things like getting pdf directly from the site.</p>
+        <p>Famous Person 
+    {{ userAgent }}</p>
         <div class="image">
          <img src="https://upload.wikimedia.org/wikipedia/commons/2/28/Female_portrait_placeholder_cropped.jpg" alt="">
         </div>
@@ -140,9 +141,12 @@ computed: {
       }),
    },
 
-    async fetch({store}) {
-      store.dispatch("posts/nuxtServerInit")
-    },    
+asyncData ({ userAgent }) {
+    return {
+      userAgent
+}
+},    
+
 }
 
 </script>

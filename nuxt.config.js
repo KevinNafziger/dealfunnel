@@ -53,4 +53,11 @@ export default {
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
   }
+  
+}
+// nuxt.config.js
+module.exports = {
+  router: {
+    middleware: ['visits', 'user-agent']
+  }
 }
