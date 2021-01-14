@@ -28,14 +28,12 @@
 DealFunnel provides searchable data on capital raises, M&A, articles and companies that can be exported to <i>Excel</i> or other programs that allow data to be imported in CSV format. <span style='mso-spacerun:yes'></span></span></p>
 </p>
 <p class=MsoNormal><span class="intro-p"><span class=SpellE></span>
-<b>Ahead of the curve</b>–<span class=SpellE></span> DealFunnel provides in-depth coverage of companies in the middle-market and within emerging segments of financial services and financial technology, companies that often aren't on the radar of other publications. By maintaining the focus of our coverage on the stategic priorities of a given company rather than on trending topics, we also provide you with leads that are both more tangible and more likely to match a company's own priorities. Click below to see examples of our coverage and to learn helpful best practices to use in conjunction with <i>DealFunnel</i> to hone in on the most relevant leads for you and your firm. These best practices can help remove the false positives and unproductive thought paths that inadvertently block even the most diligent practictioners from maximizing dealflow.  
+<b>Ahead of the curve</b>–<span class=SpellE></span> DealFunnel provides in-depth coverage of companies in the middle-market and within emerging segments of financial services and financial technology, companies that often aren't on the radar of other publications. By maintaining the focus of our coverage on the stategic priorities of a given company rather than on trending topics, we also provide you with leads that are both more tangible and more likely to match a company's own priorities. Click below to see examples of our coverage and to learn helpful best practices to use in conjunction with <i>DealFunnel</i> to hone in on the most relevant leads for you and your firm. These best practices can help remove the false positives and unproductive thought paths that inadvertently block even the most diligent practictioners from maximizing dealflow.
 <span style='mso-spacerun:yes'></span></span></p>
 
 
 <img class="img-G" width="200px;" src="https://firebasestorage.googleapis.com/v0/b/deal-funnel.appspot.com/o/deal%20funnel%20web%20stock%2Fsada.png?alt=media&amp;token=dad23bb5-f65c-414d-807e-372dee5a5522">
-<div class="rem-img">
-  <img width="400px" src="https://firebasestorage.googleapis.com/v0/b/deal-funnel.appspot.com/o/deal%20funnel%20web%20stock%2Fgraph.png?alt=media&amp;token=a913daac-672b-4969-a69b-b734fbc437db">
-  </div>
+
   <div class="featuredmenusection">
                                       <div style="margin-top:50px; margin-bottom:50px; margin-left: 25px; margin-right: 25px;" class="coolbar"></div>
 	<!-- column -->	<div><center>
@@ -59,7 +57,7 @@ DealFunnel provides searchable data on capital raises, M&A, articles and compani
     <div class="card">
       <div class="layer"></div>
       <div class="content">
-        <p>Famous Person 
+        <p>Famous Person
     {{ userAgent }}</p>
         <div class="image">
          <img src="https://upload.wikimedia.org/wikipedia/commons/2/28/Female_portrait_placeholder_cropped.jpg" alt="">
@@ -145,7 +143,7 @@ asyncData ({ userAgent }) {
     return {
       userAgent
 }
-},    
+},
 
 }
 
