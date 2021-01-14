@@ -36,11 +36,13 @@ DealFunnel provides searchable data on capital raises, M&A, articles and compani
 
   <div class="featuredmenusection">
                                       <div style="margin-top:50px; margin-bottom:50px; margin-left: 25px; margin-right: 25px;" class="coolbar"></div>
-	<!-- column -->	<div><center>
+<!-- column -->
+<div><center>
   	<h3 class="fea-headings"><br></h3>
   </center>
   	<center>
-      <h3 class="execspottittle" style="display:inline;">Deal Funnel Tour</h3>
+      <h3 class="execspottittle" style="display:inline;">Deal Funnel</h3>
+      <p> a product from Fintech Horizons Media </p>
   			<br><br>
   				<center>
             <div style="height:1px" class="bluebar"> </div>
@@ -50,8 +52,10 @@ DealFunnel provides searchable data on capital raises, M&A, articles and compani
   							<p>
   							</p></div>
   							<center><a href="http://localhost:3000/tourreview/index?product_tour_id=97066">
-  							<button class="gardient-button"><nuxt-link to="/tours/reports">See the Tour</nuxt-link></button>
+  							<button class="gardient-button"><nuxt-link to="/tours/reports">Builder Demo</nuxt-link></button>
   					</a></center>  </div>
+
+  <!--Testimonials-->
             <div class="testimonials">
     <!-- CARD 1 START-->
     <div class="card">
@@ -151,6 +155,10 @@ asyncData ({ userAgent }) {
 
 <style scoped>
 
+.p-class-j {
+  text-align:justify;
+  padding: 10px;
+}
 a {
   box-shadow: none;
   color:#ffffff;
