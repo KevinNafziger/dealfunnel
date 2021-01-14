@@ -598,4 +598,10 @@ ul {
     float:left;
     display:block;
   }
+  .section-15 {
+    margin-top: 100px;
+  }
+  .sectionnix {
+    margin-bottom: 200px;
+  }
 </style>
