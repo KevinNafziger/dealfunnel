@@ -47,12 +47,15 @@ DealFunnel provides searchable data on capital raises, M&A, articles and compani
   				<center>
             <div style="height:1px" class="bluebar"> </div>
               </center>
-  					    </center><center><p class="p-class-j">DealFunnel covers emerging technology businesses serving the financial services industry and beyond.  This includes companies in Blockchain, DLT and Crypto as well as in HealthTech, Artificial Intelligence, LegalTech, and Cybersecurity DealFunnel is perfect for  investment bankers, venture capitalists, private equity directors, attorneys and corporate executives. Learn more about DealFunnel by clicking on the <i>'See the Tour'</i> button.</p>
+  					    </center><center><p class="p-class-j">DealFunnel covers emerging technology businesses serving the financial services industry and beyond.
+                  This includes companies in Blockchain, DLT and Crypto as well as in HealthTech, Artificial Intelligence, LegalTech, and Cybersecurity DealFunnel is perfect for
+                  investment bankers, venture capitalists, private equity directors, attorneys and corporate executives.
+                  Learn more about DealFunnel's Report Builder by clicking on the <i>'Builder Demo'</i> button.</p>
                 </center>
   							<p>
   							</p></div>
   							<center><a href="http://localhost:3000/tourreview/index?product_tour_id=97066">
-  							<button class="gardient-button"><nuxt-link to="/tours/reports">Builder Demo</nuxt-link></button>
+  							<button class="gardient-button"><nuxt-link to="/tours/builderpreview">Builder Demo</nuxt-link></button>
   					</a></center>  </div>
 
   <!--Testimonials-->
