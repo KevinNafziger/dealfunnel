@@ -40,8 +40,11 @@ DealFunnel online contains all of the original reports and articles featured in 
 <p class="MsoNormal"><span class="intro-p"><span class=SpellE></span> DealFunnel provides great original research available both online and in our bi-weekly newsletter from DealFunnel premium subscribers. The focus of that research is companies in the middle-market and in emerging segments of financial services and financial technology. The bulk of those  articles come from interviews with executives of the featured company and focus on that company's timelines and strategic priorities.
 <span style='mso-spacerun:yes'></span></span></p>
 
-
+<!-- Girl Image -->
 <img class="img-G" width="200px;" src="https://firebasestorage.googleapis.com/v0/b/deal-funnel.appspot.com/o/deal%20funnel%20web%20stock%2Fsada.png?alt=media&amp;token=dad23bb5-f65c-414d-807e-372dee5a5522">
+
+<!-- grid fetcher -->
+<DynamicContent/>
 
   <div class="featuredmenusection">
                                       <div style="margin-top:50px; margin-bottom:50px; margin-left: 25px; margin-right: 25px;" class="coolbar"></div>
@@ -143,7 +146,7 @@ DealFunnel online contains all of the original reports and articles featured in 
   gtag('config', 'G-E4W12WNDD6');
 </script>
 <script>
-
+import DynamicContent from '@/components/Grid/DynamicContent';
 import {mapState, mapMutations} from 'vuex';
 export default {
 
