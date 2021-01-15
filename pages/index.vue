@@ -10,29 +10,34 @@
 
 <h1 style="padding-top: 30px; margin-bottom: 0px; opacity: 1; transform: translateX(0px) translateY(0px) translateZ(0px);" class="intro-title">Newsletters, data, and reports <br></h1><br>
 <p>
-<center>
-DealFunnel features articles, reports and rich set of exportable data set, but is best known for our biweekly <i>Big Fintech Newsletter.</i> which has both a free and premium version. While today the newsletter maintains it original "Big Fintech" name, its focus has grown broader overtime and now encompasses technology businesses serving the financial services industry and beyond.
+
+<p  class="MsoNormal"><span class="intro-p">
+  DealFunnel features articles, reports and rich set of exportable data set, but is best known for our biweekly <i>Big Fintech Newsletter.</i> which has both a free and premium version. While today the newsletter maintains it original "Big Fintech" name, its focus has grown broader overtime and now encompasses technology businesses serving the financial services industry and beyond.
                   This includes companies in Blockchain, DLT and Crypto as well as in HealthTech, Artificial Intelligence, LegalTech, and Cybersecurity.
-</center>
+                </span>
+            </p>
 </p>
 
 <p class="MsoNormal" ><span class="intro-p" style='font-size:
-20.0pt;mso-bidi-font-size:11.0pt'><b>Exceptional</b> – <span class=SpellE>The DealFunnel Premium</span>
+20.0pt;mso-bidi-font-size:11.0pt'><b>Exceptional</b> – <span class="SpellE">The DealFunnel Premium</span>
  newsletter is beloved by dealmakers and industry practitioners. While the newsletter occasionallly aims to be  be funny, sarcastic, wax nostagically about prior industry gatherings, promote partners, or tease readers with content marketing to promote our proprietary reports, these newsletter mainstays are not the focus. Our core mission remains simple and unwavering: to summarize every M&A deal, capital raise, growth investment, divestiture, public offering and token-sale for every category and sub-category for our stated coverage areas, delivered to your inbox every Tuesday and Thursday at or before 8 am EST, in one, very long email. We supplement our core focus  with original reporting and articles authored by  veteran business journalists. The newsletter also includes supplemental information related to M&A rumors, strategic management changes, and regulatory developments.<span style='mso-spacerun:yes'></span></span></p>
 
-<p class=MsoNormal ><span class="intro-p" style='font-size:
+<p class="MsoNormal" ><span class="intro-p" style='font-size:
 20.0pt;mso-bidi-font-size:11.0pt'><b>Actionable</b> – <span class=SpellE>DealFunnel</span>
  newsletters contains articles from our team of veteran business journalists. Those articles are forward-looking and focus on a company’s plans for capital raising, partnerships, expansion and M&A. <span style='mso-spacerun:yes'></span></span></p>
 
 
-<p class=MsoNormal><span class="intro-p" style='font-size:
+<p class="MsoNormal"><span class="intro-p" style='font-size:
 20.0pt;mso-bidi-font-size:11.0pt'><b> Data Driven</b>–<span class=SpellE></span>
  DealFunnel <i>Premium</i> includes online access to corresponding data from the items summarized in n our Premium Newsletter.These searchable datasets include material for  capital raises, M&A, articles and companies and can be exported to <i>Excel</i> or other spreadsheet programs. <span style='mso-spacerun:yes'></span></span></p>
 </p>
-<p class=MsoNormal><span class="intro-p"></span>
-<b>Bonus material</b>–<span class=SpellE></span> DealFunnel online contains all of the original reports and articles featured in our newsletter and also has an <i>experimental Builder</i> section where premium readers can create their own reports from articles featured in our past newsletters.</p>
+<p class="MsoNormal"><span class="intro-p" style='font-size:
+20.0pt;mso-bidi-font-size:11.0pt'>
+<b>Bonus material</b>–<span class=SpellE></span>
+DealFunnel online contains all of the original reports and articles featured in our newsletter and also has an <i>experimental Builder</i> section where premium readers can create their own reports from articles featured in our past newsletters.
+</span></p>
 
-<p class=MsoNormal><span class="intro-p"><span class=SpellE></span> DealFunnel provides great original research available both online and in our bi-weekly newsletter from DealFunnel premium subscribers. The focus of that research is companies in the middle-market and in emerging segments of financial services and financial technology. The bulk of those  articles come from interviews with executives of the featured company and focus on that company's timelines and strategic priorities.
+<p class="MsoNormal"><span class="intro-p"><span class=SpellE></span> DealFunnel provides great original research available both online and in our bi-weekly newsletter from DealFunnel premium subscribers. The focus of that research is companies in the middle-market and in emerging segments of financial services and financial technology. The bulk of those  articles come from interviews with executives of the featured company and focus on that company's timelines and strategic priorities.
 <span style='mso-spacerun:yes'></span></span></p>
 
 
