@@ -5,30 +5,35 @@
 <section style="margin-bottom:30px;">
 </section>
 <center>
-<img src="dealfunnel.png" style="width:240.3pt;    height: 61.45pt;">
+<img src="dealfunnel.png" style="width:240.3pt; height: 61.45pt;">
 </center>
 
 <h1 style="padding-top: 30px; margin-bottom: 0px; opacity: 1; transform: translateX(0px) translateY(0px) translateZ(0px);" class="intro-title">Newsletters, data, and reports <br></h1><br>
+<p>
+<center>
+DealFunnel features articles, reports and exportable dataset, but is best known for our premium and biweekly <i>Big Fintech Newsletter.</i> The DealFunnel Newsletter focus on emerging technology businesses serving the financial services industry and beyond.
+                  This includes companies in Blockchain, DLT and Crypto as well as in HealthTech, Artificial Intelligence, LegalTech, and Cybersecurity DealFunnel is perfect for any who covers, works in, invests in or provides services to those industries including
+                  investment bankers, venture capitalists, private equity directors, attorneys and corporate executives.
+</center>
+</p>
+
+<p class="MsoNormal" ><span class="intro-p" style='font-size:
+20.0pt;mso-bidi-font-size:11.0pt'><b>Exceptional</b> – <span class=SpellE>The DealFunnel Premium</span>
+ newsletter is beloved by dealmakers and industry practitioners. While the newsletter occasionallly aims to be  be funny, sarcastic, wax nostagically about prior industry gatherings, promote partners, or tease readers with content marketing to promote our proprietary reports, these newsletter mainstays are not the focus. Our core mission remains simple and unwavering: to summarize every M&A deal, capital raise, growth investment, divestiture, public offering and token-sale for every category and sub-category for our stated coverage areas, with that information delivered to your inbox every Tuesday and Thursday at or before 8 am EST, in one, very long email. We supplement our core material with original reporting and articles authored by our team of veteran business journalists. The newsletter also includes supplemental information related to M&A rumors, strategic management changes, and regulatory developments.<span style='mso-spacerun:yes'></span></span></p>
 
 <p class=MsoNormal ><span class="intro-p" style='font-size:
 20.0pt;mso-bidi-font-size:11.0pt'><b>Actionable</b> – <span class=SpellE>DealFunnel</span>
- articles are forward looking and focus on a company’s plans for capital raising, partnerships, expansion and M&A. <span style='mso-spacerun:yes'></span></span></p>
+ newsletters contains articles from our team of veteran business journalists. Those articles are forward-looking and focus on a company’s plans for capital raising, partnerships, expansion and M&A. <span style='mso-spacerun:yes'></span></span></p>
 
-<p class=MsoNormal><span class="intro-p" style='font-size:
-20.0pt;mso-bidi-font-size:11.0pt'><b>Detailed</b>– <span class=SpellE> DealFunnel</span>
- newsletters summarize all M&A and capital raises for a given category, including for fast-growing segments such as blockchain/DLT and insurtech. <span style='mso-spacerun:yes'></span></span></p>
-</p>
-
-<p class=MsoNormal><span class="intro-p" style='font-size:
-20.0pt;mso-bidi-font-size:11.0pt'><b>Easy to use– </b><span class=SpellE> DealFunnel</span> reports aggregate all our intel for a topic, geography or period. Our <i>drag and drop</i> Builder lets you create your own custom reports with just a few mouse clicks. <span style='mso-spacerun:yes'></span></span></p>
-</p>
 
 <p class=MsoNormal><span class="intro-p" style='font-size:
 20.0pt;mso-bidi-font-size:11.0pt'><b> Data Driven</b>–<span class=SpellE></span>
-DealFunnel provides searchable data on capital raises, M&A, articles and companies that can be exported to <i>Excel</i> or other programs that allow data to be imported in CSV format. <span style='mso-spacerun:yes'></span></span></p>
+ DealFunnel <i>Premium Newsletter Package</i> includes online access to corresponding data collected on items from our Premium Newsletter. Our searchable datasets feature data on capital raises, M&A, articles and companies that can be exported to <i>Excel</i> or other spreadsheet programs. <span style='mso-spacerun:yes'></span></span></p>
 </p>
-<p class=MsoNormal><span class="intro-p"><span class=SpellE></span>
-<b>Ahead of the curve</b>–<span class=SpellE></span> DealFunnel provides in-depth coverage of companies in the middle-market and within emerging segments of financial services and financial technology, companies that often aren't on the radar of other publications. By maintaining the focus of our coverage on the stategic priorities of a given company rather than on trending topics, we also provide you with leads that are both more tangible and more likely to match a company's own priorities. Click below to see examples of our coverage and to learn helpful best practices to use in conjunction with <i>DealFunnel</i> to hone in on the most relevant leads for you and your firm. These best practices can help remove the false positives and unproductive thought paths that inadvertently block even the most diligent practictioners from maximizing dealflow.
+<p class=MsoNormal><span class="intro-p"></span>
+<b>Bonus material</b>–<span class=SpellE></span> DealFunnel online contains all of the original reports and articles featured in our newsletter and also has <i>experimentalBuilder</i> where premium readers can create their own reports from articles featured in our past newsletters.</p>
+
+<p class=MsoNormal><span class="intro-p"><span class=SpellE></span> DealFunnel provides great original research available both online and in our bi-weekly newsletter from DealFunnel premium subscribers. The focus of that research is companies in the middle-market and in emerging segments of financial services and financial technology. The bulk of those  articles come from interviews with executives of the featured company and focus on that company's timelines and strategic priorities.
 <span style='mso-spacerun:yes'></span></span></p>
 
 
@@ -42,13 +47,13 @@ DealFunnel provides searchable data on capital raises, M&A, articles and compani
   </center>
   	<center>
       <h3 class="execspottittle" style="display:inline;">Deal Funnel</h3>
-      <p> a product from Fintech Horizons Media </p>
+      <p> origins and team</p>
   			<br><br>
   				<center>
             <div style="height:1px" class="bluebar"> </div>
               </center>
   					    </center><center><p class="p-class-j">DealFunnel covers emerging technology businesses serving the financial services industry and beyond.
-                  This includes companies in Blockchain, DLT and Crypto as well as in HealthTech, Artificial Intelligence, LegalTech, and Cybersecurity DealFunnel is perfect for
+                  This includes companies in Blockchain, DLT and Crypto as well as in HealthTech, Artificial Intelligence, LegalTech, and Cybersecurity. DealFunnel is perfect for
                   investment bankers, venture capitalists, private equity directors, attorneys and corporate executives.
                   Learn more about DealFunnel's Report Builder by clicking on the <i>'Builder Demo'</i> button.</p>
                 </center>

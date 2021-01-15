@@ -16,7 +16,7 @@ const _c93db384 = () => interopDefault(import('..\\pages\\posts\\index.vue' /* w
 const _64592b48 = () => interopDefault(import('..\\pages\\raises\\index.vue' /* webpackChunkName: "pages/raises/index" */))
 const _2af44600 = () => interopDefault(import('..\\pages\\register\\index.vue' /* webpackChunkName: "pages/register/index" */))
 const _7ae77f12 = () => interopDefault(import('..\\pages\\reports\\index.vue' /* webpackChunkName: "pages/reports/index" */))
-const _78c65c17 = () => interopDefault(import('..\\pages\\previews\\builderpreview.vue' /* webpackChunkName: "pages/previews/builderpreview" */))
+const _891b804e = () => interopDefault(import('..\\pages\\tours\\builderpreview.vue' /* webpackChunkName: "pages/tours/builderpreview" */))
 const _4a9edb63 = () => interopDefault(import('..\\pages\\tours\\reports.vue' /* webpackChunkName: "pages/tours/reports" */))
 const _56985f24 = () => interopDefault(import('..\\pages\\companies\\_id\\index.vue' /* webpackChunkName: "pages/companies/_id/index" */))
 const _5b98403a = () => interopDefault(import('..\\pages\\newsletters\\_id\\index.vue' /* webpackChunkName: "pages/newsletters/_id/index" */))
@@ -92,9 +92,9 @@ export const routerOptions = {
     component: _7ae77f12,
     name: "reports"
   }, {
-    path: "/previews/builderpreview",
-    component: _78c65c17,
-    name: "previews-builderpreview"
+    path: "/tours/builderpreview",
+    component: _891b804e,
+    name: "tours-builderpreview"
   }, {
     path: "/tours/reports",
     component: _4a9edb63,

@@ -1,10 +1,4 @@
 {
-  "DataTempSearch": {
-    "description": "Auto imported from components/Data/DataTempSearch.vue"
-  },
-  "LazyDataTempSearch": {
-    "description": "Auto imported from components/Data/DataTempSearch.vue"
-  },
   "Postsys": {
     "description": "Auto imported from components/Builder/Postsys.vue"
   },
@@ -16,6 +10,12 @@
   },
   "LazySearchbar": {
     "description": "Auto imported from components/Builder/Searchbar.vue"
+  },
+  "DataTempSearch": {
+    "description": "Auto imported from components/Data/DataTempSearch.vue"
+  },
+  "LazyDataTempSearch": {
+    "description": "Auto imported from components/Data/DataTempSearch.vue"
   },
   "CompanyTempSearch": {
     "description": "Auto imported from components/Company/CompanyTempSearch.vue"
@@ -41,6 +41,12 @@
   "LazyCard": {
     "description": "Auto imported from components/Draggable/Card.vue"
   },
+  "LettersList": {
+    "description": "Auto imported from components/Letters/LettersList.vue"
+  },
+  "LazyLettersList": {
+    "description": "Auto imported from components/Letters/LettersList.vue"
+  },
   "Burger": {
     "description": "Auto imported from components/Navigation/Burger.vue"
   },
@@ -64,12 +70,6 @@
   },
   "LazyNewsTempSearch": {
     "description": "Auto imported from components/News/NewsTempSearch.vue"
-  },
-  "LettersList": {
-    "description": "Auto imported from components/Letters/LettersList.vue"
-  },
-  "LazyLettersList": {
-    "description": "Auto imported from components/Letters/LettersList.vue"
   },
   "PostList": {
     "description": "Auto imported from components/Posts/PostList.vue"
