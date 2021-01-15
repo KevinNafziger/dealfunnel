@@ -1,7 +1,7 @@
 export { default as Postsys } from '../..\\components\\Builder\\Postsys.vue'
 export { default as Searchbar } from '../..\\components\\Builder\\Searchbar.vue'
-export { default as DataTempSearch } from '../..\\components\\Data\\DataTempSearch.vue'
 export { default as CompanyTempSearch } from '../..\\components\\Company\\CompanyTempSearch.vue'
+export { default as DataTempSearch } from '../..\\components\\Data\\DataTempSearch.vue'
 export { default as DealTempSearch } from '../..\\components\\Deals\\DealTempSearch.vue'
 export { default as Board } from '../..\\components\\Draggable\\Board.vue'
 export { default as Card } from '../..\\components\\Draggable\\Card.vue'
@@ -18,8 +18,8 @@ export { default as Visits } from '../..\\components\\Visits\\Visits.vue'
 
 export const LazyPostsys = import('../..\\components\\Builder\\Postsys.vue' /* webpackChunkName: "components_Builder/Postsys" */).then(c => c.default || c)
 export const LazySearchbar = import('../..\\components\\Builder\\Searchbar.vue' /* webpackChunkName: "components_Builder/Searchbar" */).then(c => c.default || c)
-export const LazyDataTempSearch = import('../..\\components\\Data\\DataTempSearch.vue' /* webpackChunkName: "components_Data/DataTempSearch" */).then(c => c.default || c)
 export const LazyCompanyTempSearch = import('../..\\components\\Company\\CompanyTempSearch.vue' /* webpackChunkName: "components_Company/CompanyTempSearch" */).then(c => c.default || c)
+export const LazyDataTempSearch = import('../..\\components\\Data\\DataTempSearch.vue' /* webpackChunkName: "components_Data/DataTempSearch" */).then(c => c.default || c)
 export const LazyDealTempSearch = import('../..\\components\\Deals\\DealTempSearch.vue' /* webpackChunkName: "components_Deals/DealTempSearch" */).then(c => c.default || c)
 export const LazyBoard = import('../..\\components\\Draggable\\Board.vue' /* webpackChunkName: "components_Draggable/Board" */).then(c => c.default || c)
 export const LazyCard = import('../..\\components\\Draggable\\Card.vue' /* webpackChunkName: "components_Draggable/Card" */).then(c => c.default || c)

@@ -11,17 +11,17 @@
   "LazySearchbar": {
     "description": "Auto imported from components/Builder/Searchbar.vue"
   },
-  "DataTempSearch": {
-    "description": "Auto imported from components/Data/DataTempSearch.vue"
-  },
-  "LazyDataTempSearch": {
-    "description": "Auto imported from components/Data/DataTempSearch.vue"
-  },
   "CompanyTempSearch": {
     "description": "Auto imported from components/Company/CompanyTempSearch.vue"
   },
   "LazyCompanyTempSearch": {
     "description": "Auto imported from components/Company/CompanyTempSearch.vue"
+  },
+  "DataTempSearch": {
+    "description": "Auto imported from components/Data/DataTempSearch.vue"
+  },
+  "LazyDataTempSearch": {
+    "description": "Auto imported from components/Data/DataTempSearch.vue"
   },
   "DealTempSearch": {
     "description": "Auto imported from components/Deals/DealTempSearch.vue"
