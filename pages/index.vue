@@ -12,33 +12,32 @@
 <p>
 
 <p  class="MsoNormal"><span class="intro-p">
-  DealFunnel features articles, reports and rich set of exportable data set, but is best known for our biweekly <i>Big Fintech Newsletter.</i> which has both a free and premium version. While today the newsletter maintains it original "Big Fintech" name, its focus has grown broader overtime and now encompasses technology businesses serving the financial services industry and beyond.
+  DealFunnel features articles, reports and searchable datasets, but is best known for our biweekly <i>Big Fintech Newsletter.</i> While the DealFunnel newsletter still keeps the words "Big Fintech" in its title, its focus has broadened overtime and encompasses technology businesses serving the financial services industry and beyond.
                   This includes companies in Blockchain, DLT and Crypto as well as in HealthTech, Artificial Intelligence, LegalTech, and Cybersecurity.
                 </span>
             </p>
 </p>
 
 <p class="MsoNormal" ><span class="intro-p" style='font-size:
-20.0pt;mso-bidi-font-size:11.0pt'><b>Exceptional</b> – <span class="SpellE">The DealFunnel Premium</span>
- newsletter is beloved by dealmakers and industry practitioners. While the newsletter occasionallly aims to be  be funny, sarcastic, wax nostagically about prior industry gatherings, promote partners, or tease readers with content marketing to promote our proprietary reports, these newsletter mainstays are not the focus. Our core mission remains simple and unwavering: to summarize every M&A deal, capital raise, growth investment, divestiture, public offering and token-sale for every category and sub-category for our stated coverage areas, delivered to your inbox every Tuesday and Thursday at or before 8 am EST, in one, very long email. We supplement our core focus  with original reporting and articles authored by  veteran business journalists. The newsletter also includes supplemental information related to M&A rumors, strategic management changes, and regulatory developments.<span style='mso-spacerun:yes'></span></span></p>
-
-<p class="MsoNormal" ><span class="intro-p" style='font-size:
-20.0pt;mso-bidi-font-size:11.0pt'><b>Actionable</b> – <span class=SpellE>DealFunnel</span>
- newsletters contains articles from our team of veteran business journalists. Those articles are forward-looking and focus on a company’s plans for capital raising, partnerships, expansion and M&A. <span style='mso-spacerun:yes'></span></span></p>
-
+20.0pt;mso-bidi-font-size:11.0pt'><b>Exceptional</b> – <span class="SpellE">DealFunnel's Newsletter</span>
+  is beloved by dealmakers including investment bankers, partners and associates of venture capital firms, industry attorneys, PE practitioners and corporate executives. The newsletters core mission remains constant: to summarize every M&A deal, capital raise, growth investment, divestiture, public offering and token sale for every featured category and subcategory within our areas of focus, and to deliver that summary via email to each subscriber every Tuesday and Thursday at or before 8am ET. Beyond this core focus, each newsletter also highlights information readers can use to generate leads and stay abreast of news on management changes, company pivots, reported M&A rumors, busted deals and regulatory develpments. Each newsletter typically also highlights a propietary <i>DealFunnel</i> report or article, and provides readers access to that propietary content via link, or for some articles, through inclusion of the the full text of that article in the newsletter. Paid subscribers can also access all content from current and previously published newsletters through DealFunnel's online portal. </span></span></p>
 
 <p class="MsoNormal"><span class="intro-p" style='font-size:
 20.0pt;mso-bidi-font-size:11.0pt'><b> Data Driven</b>–<span class=SpellE></span>
- DealFunnel <i>Premium</i> includes online access to corresponding data from the items summarized in n our Premium Newsletter.These searchable datasets include material for  capital raises, M&A, articles and companies and can be exported to <i>Excel</i> or other spreadsheet programs. <span style='mso-spacerun:yes'></span></span></p>
+ With a DealFunnel <i>Premium</i> subscription, subscribers receive online access to our set of searchable datasets which includes data that corresponds closely with the summaries featured in each newsletter. These searchable datasets include material on capital raises, M&A, articles and companies and include sortable columns by date, amount, location, future quarter of expected action, size or expected raise, etc., with the names of the sortable columns differing depending on the the featured data set in question. Datasets can also be exported to <i>Excel</i> or other spreadsheet programs by clicking on the spreadsheet icon found near the top of each  view. <span style='mso-spacerun:yes'></span></span></p>
 </p>
+<p class="MsoNormal"><span class="intro-p" style='font-size:
+20.0pt;mso-bidi-font-size:11.0pt'><b>Support options</b>–<span class=SpellE></span>
+Subscribers can get help finding content via our online search, by emailing our help desk or by calling our support line. Phone and email contact information is listed at the bottom of this page. Support requests by phone or email are monitored during normal business hours, 8am to 8pm ET, and periodically outside those hours. Requests to schedule a meeting on Skype or by phone for onboarding, product introduction, or for formal training for an individiual or group, can typically be accomodated within 1 to 3 business days. Email meeting requests can be more efficiently accomodated if two or more preferred times are listed, in the order preferred by the requestor with a suggested meeting duration for typical requests of 30 to 40 minutes. Subscribers seeking more informal help can ping a DealFunnel team member via Slack at need to list our slack channel here. <span style='mso-spacerun:yes'></span></span></p>
+
+
 <p class="MsoNormal"><span class="intro-p" style='font-size:
 20.0pt;mso-bidi-font-size:11.0pt'>
 <b>Bonus material</b>–<span class=SpellE></span>
-DealFunnel online contains all of the original reports and articles featured in our newsletter and also has an <i>experimental Builder</i> section where premium readers can create their own reports from articles featured in our past newsletters.
+DealFunnel online gives readers easy access to all of our original reports and articles featured in our newsletter. We also have an experimental <i>Builder</i> area where subscribers can create their own reports from articles featured in past newsletters through an easy to use <i>drag and drop</i> interface that supports online viewing and PDF export of the report you create. 
 </span></p>
 
-<p class="MsoNormal"><span class="intro-p"><span class=SpellE></span> DealFunnel provides great original research available both online and in our bi-weekly newsletter from DealFunnel premium subscribers. The focus of that research is companies in the middle-market and in emerging segments of financial services and financial technology. The bulk of those  articles come from interviews with executives of the featured company and focus on that company's timelines and strategic priorities.
-<span style='mso-spacerun:yes'></span></span></p>
+<p class="MsoNormal"><span class="intro-p"><b>Propietary Research</b>–<span class=SpellE></span> DealFunnel is a great source for propietary research that is featured in our newsletter and which can also be accessed online by paid subscribers. The focus for the bulk of our propietary research is companies in the middle-market and in emerging segments of financial services and financial technology. All propietary articles are derived either from interviews with executives at the featured company or industry experts, with sourcing for each paragraph typically delineated within the text of that article. <span     style='mso-spacerun:yes'></span></span></p>
 
 <!-- Girl Image -->
 <img class="img-G" width="200px;" src="https://firebasestorage.googleapis.com/v0/b/deal-funnel.appspot.com/o/deal%20funnel%20web%20stock%2Fsada.png?alt=media&amp;token=dad23bb5-f65c-414d-807e-372dee5a5522">
