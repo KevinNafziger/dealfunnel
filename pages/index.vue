@@ -83,7 +83,7 @@ This propietary content includes reports on trending topics along with sets of a
         <p>Famous Person
     {{ userAgent }}</p>
         <div class="image">
-         <img src="https://upload.wikimedia.org/wikipedia/commons/2/28/Female_portrait_placeholder_cropped.jpg" alt="">
+         <img class="images"  src="https://upload.wikimedia.org/wikipedia/commons/2/28/Female_portrait_placeholder_cropped.jpg" alt="">
         </div>
         <div class="details">
           <h2>
@@ -101,7 +101,7 @@ This propietary content includes reports on trending topics along with sets of a
       <div class="content">
         <p>Famous Person, I love this product because it does it all for me, what i mean it does the search work for me that takes hours and hours off my day and this product gets me the data i need in seconds. and more things like getting pdf directly from the site.</p>
         <div class="image">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/2/28/Female_portrait_placeholder_cropped.jpg" alt="">
+          <img class="images"  src="https://upload.wikimedia.org/wikipedia/commons/2/28/Female_portrait_placeholder_cropped.jpg" alt="">
         </div>
         <div class="details">
           <h2>
@@ -118,7 +118,7 @@ This propietary content includes reports on trending topics along with sets of a
       <div class="content">
         <p>Famous Person, I love this product because it does it all for me, what i mean it does the search work for me that takes hours and hours off my day and this product gets me the data i need in seconds. and more things like getting pdf directly from the site.</p>
         <div class="image">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/2/28/Female_portrait_placeholder_cropped.jpg" alt="">
+          <img class="images" src="https://upload.wikimedia.org/wikipedia/commons/2/28/Female_portrait_placeholder_cropped.jpg" alt="">
         </div>
         <div class="details">
           <h2>
@@ -451,6 +451,11 @@ h2 {
 }
 b {
   color:#4f81bd;
+}
+.images {
+  width: auto;
+margin: 0px;
+border-radius: 20px;
 }
 
 </style>
