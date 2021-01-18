@@ -17,38 +17,41 @@
                     This includes companies in Blockchain, DLT and Crypto as well as in HealthTech, Artificial Intelligence, LegalTech, and Cybersecurity.
   </span>
 </p>
-<p class="MsoNormal" >
-<b>Exceptional</b> – 
+<p  class="intro-p" >
+<b>Exceptional</b> –
 <span class="SpellE">The <i>Big Fintech Newsletter</i> </span>
   is beloved by dealmakers including investment bankers, partners and associates of venture capital firms, industry attorneys, PE practitioners and corporate executives. The newsletter's core mission remains constant: to summarize every M&A deal, capital raise, growth investment, divestiture, public offering and token sale for every featured category and subcategory within the newsletters areas of focus, and to deliver that summary in an email to subscribers every Tuesday and Thursday at or before 8am ET. Beyond this core focus, each newsletter highlights information for generating new business opportunites, and for staying abreast of news on management changes, company pivots, reported M&A rumors, busted deals and regulatory developments. Each newsletter typically also includes a DealFunnel propietary report or article through a direct link or by including the full text of an article in the newsletter. Subscribers can also access all content from current and prior newsletters via our online portal.
 </p>
-<p class="MsoNormal"><b>Data Driven</b>–<span class="SpellE"></span>
+<p class="intro-p"><b>Data Driven</b>–<span class="SpellE"></span>
  DealFunnel subscribers also receive online access to searchable datasets on capital raises, companies and articles derived from newsletter summaries and articles. Our Datasets can be sorted by column and exported to <i>Excel</i> and other spreadsheet programs.
   <span style="mso-spacerun:yes"></span>
 </p>
-<p style="font-size:20.0pt; mso-bidi-font-size:11.0pt"><b>Multi-channel support email, phone, Both provide quick response which are from monitored 8am to 8pm ET.k </b>–
-  The DealFunnel team is available to help by email,  
-    or phone and readers can immdediate answers to any question by joinin our Slack channel. 
+<p class="intro-p" style="font-size:20.0pt; mso-bidi-font-size:11.0pt"><b>Multi-channel support email, phone, Both provide quick response which are from monitored 8am to 8pm ET.k </b>–
+  The DealFunnel team is available to help by email,
+    or phone and readers can immdediate answers to any question by joinin our Slack channel.
    <span style="mso-spacerun:yes"></span>
  </p>
- <p>
+ <p class="intro-p">
  <b>Propietary Content</b>–<span class="SpellE"></span>
 
-DealFunnel's online portal gives readers access to all of the propietary content from our <i>Big Fintech Newsletter</i>. 
+DealFunnel's online portal gives readers access to all of the propietary content from our <i>Big Fintech Newsletter</i>.
 
-This propietary content includes reports on trending topics along with sets of auto-generated reports which include all company-related articles and capital raise data for that topic. DealFunnel auto-generated reports are grouped by strategic action, size of expected raise, timing of expected raise, geography,  by subsector, and by broader categories such as 'Blockchain', 'Insurtech', 'Payments', 'AI', 'Lending' and 'OpenBanking.' DealFunnel reports can sometimes  generate a "wow" reaction from first-time readers, because of the sheer volume of company-specific intelligence they offer. DealFunnel reports  aggregate all of DealFunnel's own company-specific intelligence for that topic, derived from interviews with an executive or executives of the featured company. A DealFunnel report isn't designed to provide readers a quick over of the featured topic, but is created for practioners who want to review a variety of company specific insights from multiple companies within that segment in a single document. DealFunnel reports start with a summary view that highlight all of the most actionable nuggets from each featured article. This view allows readers to quickly scan all leads in a matter of minutes, rapidly identify the most relevant ones, and select those most relevant leads to see an expanded view with the full article, related intel and company and executive contact details.   
+This propietary content includes reports on trending topics along with sets of auto-generated reports which include all company-related articles and capital raise data for that topic. DealFunnel auto-generated reports are grouped by strategic action, size of expected raise, timing of expected raise, geography,  by subsector, and by broader categories such as 'Blockchain', 'Insurtech', 'Payments', 'AI', 'Lending' and 'OpenBanking.' DealFunnel reports can sometimes  generate a "wow" reaction from first-time readers, because of the sheer volume of company-specific intelligence they offer. DealFunnel reports  aggregate all of DealFunnel's own company-specific intelligence for that topic, derived from interviews with an executive or executives of the featured company. A DealFunnel report isn't designed to provide readers a quick over of the featured topic, but is created for practioners who want to review a variety of company specific insights from multiple companies within that segment in a single document. DealFunnel reports start with a summary view that highlight all of the most actionable nuggets from each featured article. This view allows readers to quickly scan all leads in a matter of minutes, rapidly identify the most relevant ones, and select those most relevant leads to see an expanded view with the full article, related intel and company and executive contact details.
 </p>
-<p class="MsoNormal"><b>Value Proposition</b>–<span></span>
+<p class="intro-p"><b>Value Proposition</b>–<span></span>
 
- DealFunnel provides two primary sources of value to subscribers. The first is from our comprehensive summary of all equity raises, M&A, public offerings and token sales within our core focus areas, provided through our newsletter, two times a week. Readers trust DealFunnel for a complete, accurate account of strategic transcactions for all featured categories in our newsletter's core focus areas. This is a trust we have built with those readers by consistently delivering a complete, accurate summary in each newsletter we publish. This commitment to provide what we promise has allowed readers to rely on our newsletter to form their own picture of how the recent set of  strategic transactions might relate to their own client needs and broader industry trends. DealFunnel propietary reports and articles, featured in our newletter and online, provide a second source of value for readers, which they rely on for forward-looking insights on a company or group of companies. Readers love the depth of insight provided from our reports and articles, which they use to uncover additional revenue opportunities that typically are not on the radar of other news providers.   
- More practically, we see the newlsetter as a more efficent way to get the information you need. By spending 10 minutes a day, twice a week, reading <i>the Big Fintech Newsletter</i>, you can save hours of time that you would have otherwise needed to spend searching financial news publicatons and industry websites to locate the same information. You also gain a regular source of primary source leads that highlight opportunities rarely found elsewere that can help you unlock new revenue opportunities. Additionally, you get access to all of the tools, data and content from DealFunnel online to peruse at your leisure, all of which are designed to find additonal sources of primary source leads in your areas of interest.       
+ DealFunnel provides two primary sources of value to subscribers. The first is from our comprehensive summary of all equity raises, M&A, public offerings and token sales within our core focus areas, provided through our newsletter, two times a week. Readers trust DealFunnel for a complete, accurate account of strategic transcactions for all featured categories in our newsletter's core focus areas. This is a trust we have built with those readers by consistently delivering a complete, accurate summary in each newsletter we publish. This commitment to provide what we promise has allowed readers to rely on our newsletter to form their own picture of how the recent set of  strategic transactions might relate to their own client needs and broader industry trends. DealFunnel propietary reports and articles, featured in our newletter and online, provide a second source of value for readers, which they rely on for forward-looking insights on a company or group of companies. Readers love the depth of insight provided from our reports and articles, which they use to uncover additional revenue opportunities that typically are not on the radar of other news providers.
+ More practically, we see the newlsetter as a more efficent way to get the information you need. By spending 10 minutes a day, twice a week, reading <i>the Big Fintech Newsletter</i>, you can save hours of time that you would have otherwise needed to spend searching financial news publicatons and industry websites to locate the same information. You also gain a regular source of primary source leads that highlight opportunities rarely found elsewere that can help you unlock new revenue opportunities. Additionally, you get access to all of the tools, data and content from DealFunnel online to peruse at your leisure, all of which are designed to find additonal sources of primary source leads in your areas of interest.
 
-  A subscription to DealFunnel costs $79.99 a month. To subscribe, or to learn more details about what comes with a subscription, clcik on the TK button below.   
+  A subscription to DealFunnel costs $79.99 a month. To subscribe, or to learn more details about what comes with a subscription, clcik on the TK button below.
 </p>
 
 
-<!-- Girl Image -->
-<img class="img-G" width="200px;" src="https://firebasestorage.googleapis.com/v0/b/deal-funnel.appspot.com/o/deal%20funnel%20web%20stock%2Fsada.png?alt=media&amp;token=dad23bb5-f65c-414d-807e-372dee5a5522">
+<!-- Girl Image
+<img class="img-G" width="300px;" src="https://firebasestorage.googleapis.com/v0/b/deal-funnel.appspot.com/o/deal%20funnel%20web%20stock%2Fsada.png?alt=media&amp;token=dad23bb5-f65c-414d-807e-372dee5a5522">
+
+
+ -->
 
 <!-- grid fetcher -->
 <DynamicContent/>
@@ -68,7 +71,7 @@ This propietary content includes reports on trending topics along with sets of a
   					</div>
   							<center><a href="http://localhost:3000/tourreview/index?product_tour_id=97066">
   							<button class="gardient-button"><nuxt-link to="/tours/builderpreview">Builder Demo</nuxt-link></button>
-  					   </a></center> 
+  					   </a></center>
              </div>
 
   <!--Testimonials-->
