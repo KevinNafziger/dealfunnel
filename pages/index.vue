@@ -26,7 +26,7 @@
  DealFunnel subscribers also receive online access to searchable datasets on capital raises, companies and articles derived from newsletter summaries and articles. Our Datasets can be sorted by column and exported to <i>Excel</i> and other spreadsheet programs.
   <span style="mso-spacerun:yes"></span>
 </p>
-<p class="intro-p" style="font-size:20.0pt; mso-bidi-font-size:11.0pt"><b>Multi-channel support email, phone, Both provide quick response which are from monitored 8am to 8pm ET.k </b>–
+<p class="intro-p" style="font-size:20.0pt; mso-bidi-font-size:11.0pt; line-height: 50px;"><b>Multi-channel support email, phone, Both provide quick response which are from monitored 8am to 8pm ET.k </b>–
   The DealFunnel team is available to help by email,
     or phone and readers can immdediate answers to any question by joinin our Slack channel.
    <span style="mso-spacerun:yes"></span>
@@ -448,6 +448,9 @@ p.MsoNormal {
 }
 h2 {
     color: #4f81bd !important;
+}
+b {
+  color:#4f81bd;
 }
 
 </style>
