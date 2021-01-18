@@ -58,7 +58,7 @@ This propietary content includes reports on trending topics along with sets of a
   <div class="featuredmenusection">
                                       <div style="margin-top:50px; margin-bottom:50px; margin-left: 25px; margin-right: 25px;" class="coolbar"></div>
 <!-- column -->
-<div>
+<div style="text-align-last: center;">
   	<h3 class="fea-headings"><br></h3>
       <h3 class="execspottittle" style="display:inline;">Deal Funnel</h3>
       <p>origins and team</p>
