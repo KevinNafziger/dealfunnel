@@ -7,23 +7,14 @@
       <a href="" class="module" style="display:flex;text-decoration:none;color:#14a0fd;">
         <div>
           <img  src="https://fintechapp.s3.us-east-2.amazonaws.com/y2qYjf8e2hp8z5yrgyfxF2NN?response-content-disposition=inline%3B%20filename%3D%22BoxLogo.png%22%3B%20filename%2A%3DUTF-8%27%27BoxLogo.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJG6DG75G7BXQ3XUA%2F20210115%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210115T192217Z&X-Amz-Expires=518400&X-Amz-SignedHeaders=host&X-Amz-Signature=26b742c676a7fc0854c1efa0c81bf60e9239bc5068606262b3b1eab0f7a21245">
-          <p> Visa and Plaid have mutually terminated their merger agreement – Business Wire
-
-Rapyd, the global Fintech as a Service company, secured $300 million in a Series</p>
+          <p> Visa and Plaid have mutually terminated their merger agreement – Business Wire Rapyd, the global Fintech as a Service company, secured $300 million in a Series</p>
         </div>
       </a>
       <a  href="" class="module" style="display:flex;text-decoration:none;color:#14a0fd; ">
       <div>
         <img  src="https://techcrunch.com/wp-content/uploads/2021/01/GettyImages-1221636480.jpg?w=990&crop=1">
-        <p> Technology: Zipmex, which aspires to build the Asia Pacific region’s largest digital assets exchange, raises $6 million led by Jump Capital
-
-
-
-TechCrunch
-
-Zipmex
-
-Zipmex, a digital assets exchange headquartered in Singapore, has raised $6 million in funding led by Jump Capital. – TechCrunch</p>
+        <p> Technology: Zipmex, which aspires to build the Asia Pacific region’s largest digital assets exchange, raises $6 million led by Jump Capital TechCrunch Zipmex
+          Zipmex, a digital assets exchange headquartered in Singapore, has raised $6 million in funding led by Jump Capital. – TechCrunch</p>
       </div>
     </a>
     <a  href="" class="module" style="display:flex;text-decoration:none;color:#14a0fd; ">
