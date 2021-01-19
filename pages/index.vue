@@ -29,7 +29,7 @@
   <span style="mso-spacerun:yes"></span>
 </p>
 <p class="intro-p" style="font-size:20.0pt; mso-bidi-font-size:11.0pt; line-height: 50px;"><b>Multi-channel support </b>–
-  The <i>DealFunnel</i> team is here to help. You can contact us by email,
+  The <i>DealFunnel</i> team is here to help answer your questions. You can contact us by email,
      phone or join our Slack channel.
    <span style="mso-spacerun:yes"></span>
  </p>
