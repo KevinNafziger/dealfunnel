@@ -13,7 +13,7 @@
 
 <p class="MsoNormal">
   <span class="intro-p">
-    DealFunnel features articles, reports, searchable datasets and our popular biweekly <i>Big Fintech Newsletter.</i> Our newsletter has grown in scope over time. It still has "Big Fintech" in its title, but its focus now encompasses technology businesses serving the financial services industry and beyond.
+    DealFunnel features articles, reports, searchable datasets and our popular biweekly <i>Big Fintech Newsletter.</i> Our newsletter has grown and added new coverage areas over time. It still has "Big Fintech" in its title, but its focus now encompasses technology businesses serving the financial services industry and beyond.
                     This includes companies in Blockchain, DLT and Crypto as well as in HealthTech, Artificial Intelligence, LegalTech, and Cybersecurity.
   </span>
 </p>
@@ -29,7 +29,7 @@
   <span style="mso-spacerun:yes"></span>
 </p>
 <p class="intro-p" style="font-size:20.0pt; mso-bidi-font-size:11.0pt; line-height: 50px;"><b>Multi-channel support </b>–
-  The <i>DealFunnel</i> team is here to help with any question. You can contact us by email,
+  The <i>DealFunnel</i> team is here to help. You can contact us by email,
      phone or join our Slack channel.
    <span style="mso-spacerun:yes"></span>
  </p>
@@ -40,15 +40,15 @@
 
 This propietary content includes reports on trending topics along with sets of auto-generated reports which include all of the company-related articles and capital raise data for that topic. <i>DealFunnel's</i> auto-generated reports are grouped by strategic action, size of expected raise, timing of expected raise, geography, subsector, and by broader categories such as 'Blockchain', 'Insurtech', 'Payments', 'AI', 'Lending' and 'OpenBanking. <i>DealFunnel</i> reports aggregate all of <i>DealFunnel's</i> own company-specific intelligence on that topic, derived from interviews with an executive or executives at the featured company.
 Our reports can generate a "wow" from some readers when they see the sheer volume of company-specific intelligence they provide.
- A <i>DealFunnel</i> report isn't designed to provide a quick overview but to serve practitioners who want to review a large amount of company-specific intelligence related to a topic in a single document. A <i>DealFunnel</i> report starts with a summary view highlighting the most actionable parts of each featured article. From this view, readers can scan all leads on a topic in order to quickly discover only those most relevant to them.   
+  <i>DealFunnel</i> reports aren't designed to provide a quick overview but to serve practitioners who want to review a large amount of company-specific intelligence related to a topic in a single document. A <i>DealFunnel</i> report starts with a summary view highlighting the most actionable parts of each featured article. From this view, readers can scan all leads on a topic in order to quickly discover only those most relevant to them.   
 
 </p>
 <p class="intro-p"><b>Value Proposition</b>–<span></span>
 
- <i>DealFunnel</i> provides two main sources of value to subscribers. The first is a comprehensive summary of all equity raises, M&A, public offerings and token sales within our core focus areas, contained in  our newsletter and delivered every Tuesday and Thursday morning. Readers trust <i>DealFunnel</i> for a complete, accurate account of strategic transactions for all featured categories in our newsletter's core areas. We built this trust by consistently delivering a complete, reliable summary of financial transactions in every newsletter. Readers know they can rely on our newsletter to form their own picture of change and can also utilize our the transcations summary it offer as to provide useful insights to their own clients on capital raising and M&A decisions. <i>DealFunnel</i> propietary reports and articles, featured in the newletter and through <i>DealFunnel Online</i>, offer another key source of value to readers. <i>DealFunnel's</i> propietary content serves as a rich repository of primary source leads, leads that you rarely find anywhere else.       
-   The newsletter arrives in your inbox every Tuesday and Thursday morning. It is easy-to-read and designed so you can quickly absorb the information you need and then go on with your day, armed with a complete picture of change in the sectors germane to your own deal funnel. Capturing even a subset of the newsletter's information on your own would require hours of alternating between feeds, blogs, online news portals and industry websites. The newsletter also highlights new revenue opportunities from our propietary reports and articles and subscribers also get complete access to <i>DealFunnel Online</i> and all of its searchable datasets and propietary content.
+ <i>DealFunnel</i> provides two main sources of value to subscribers. The first is a comprehensive summary of all equity raises, M&A, public offerings and token sales within our core focus areas, contained in  our newsletter and delivered every Tuesday and Thursday morning. Readers trust <i>DealFunnel</i> for a complete, accurate account of strategic transactions for all featured categories in our newsletter's core areas. We built this trust by consistently delivering a complete, reliable summary of financial transactions in each and every newsletter. Readers know they can rely on our newsletter to form their own picture of change and can also utilize the complete transactions summary to provide useful insights to their own clients. <i>DealFunnel</i> propietary reports and articles, featured in the newsletter and through <i>DealFunnel Online</i>, offer another key source of value to readers. <i>DealFunnel's</i> propietary content serves as a rich repository of primary source leads on forward-looking company strategy that are rarely found in other publciations.        
+   <a>The Big Fintech Newsletter</a> arrives in your inbox every Tuesday and Thursday morning. It is easy-to-read and designed so you can quickly absorb the information you need and go on with your day, armed with new insights on how your industry is changing. Capturing even a subset of the newsletter's information on your own would require hours of alternating between feeds, blogs, online news portals, corporate websites and online trade publications. The newsletter also highlights new revenue opportunities from our propietary reports and articles and subscribers also get complete access to <i>DealFunnel Online</i> and all of its searchable datasets and propietary content.
   
-  A subscription to <i>DealFunnel</i> is $79.99 a month. To subscribe, or to lean more about whats included in a <i>DealFunnel</i> subscription, click on the TK button below.
+  A subscription to <i>DealFunnel</i> is $79.99 a month. To subscribe, or to learn more about whats included in a <i>DealFunnel</i> subscription, click on the TK button below.
 
 </p>
 
