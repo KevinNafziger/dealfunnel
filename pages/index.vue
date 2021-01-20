@@ -12,10 +12,10 @@
 </h1><br>
 
 <p class="MsoNormal">
-  <span class="intro-p">
+  <scan class="intro-p">
     DealFunnel features articles, reports, searchable datasets and our popular biweekly <i>Big Fintech Newsletter.</i> Our newsletter has grown and added new coverage areas over time. It still has "Big Fintech" in its title, but its focus now encompasses technology businesses serving the financial services industry and beyond.
                     This includes companies in Blockchain, DLT and Crypto as well as in HealthTech, Artificial Intelligence, LegalTech, and Cybersecurity.
-  </span>
+  </scan>
 </p>
 <p  class="intro-p" >
 <b>Exceptional</b> –
@@ -23,13 +23,12 @@
   is beloved by dealmakers including investment bankers, partners and associates of venture capital firms, industry attorneys, PE practitioners and corporate executives. The newsletter's core mission remains constant: to summarize every M&A deal, capital raise, growth investment, divestiture, public offering and token sale for every featured category and subcategory within the newsletter's areas of focus, and to deliver that summary in an email to subscribers each  Tuesday and Thursday at or before 8am ET. Beyond this core focus, each newsletter highlights information for generating new business opportunities and for staying abreast of news on management changes, company pivots, reported M&A rumors, busted deals and regulatory developments. Each newsletter typically also includes a link to a <i>DealFunnel</i> propietary report or article or includes the full text of an article or articles within the newsletter body. Subscribers also get access to all content from current and prior newsletters through <i>DealFunnel Online</i>.
 </p>
  
-
 <p class="intro-p"><b>Data Driven</b>–<span class="SpellE"></span>
  <i>DealFunnel</i> subscribers also receive online access to searchable datasets on capital raises, companies and articles derived from those sections in the newsletter. All data is sortable and can be exported to <i>Excel</i> and other spreadsheet programs.
   <span style="mso-spacerun:yes"></span>
 </p>
 
-<p class="intro-p" style="font-size:20.0pt; mso-bidi-font-size:11.0pt; line-height: 50px;"><b>Multi-channel support </b>–<span class="SpellE"></span>
+<p class="intro-p" ><b>Multi-channel support </b>–<span class="SpellE"></span>
   The <i>DealFunnel</i> team is here to help answer your questions. You can contact us by email,
      phone or join our Slack channel.
    <span style="mso-spacerun:yes"></span>
@@ -71,7 +70,7 @@ Our reports can generate a "wow" from some readers when they see the sheer volum
       <p>origins and team</p>
             <div style="height:1px" class="bluebar"> </div>
   					    <center><p class="p-class-j">
-<i>DealFunnel</i> is the lead publication of <i>Fintech Horizons Media</i>, an independent news organization founded by deal information specialists. The <i>DealFunnel</i> team includes Kevin Nafziger, CEO and Co-founder; Ben Koconis, Editor and Co-founder; Rebecca Wenzel, Americas Editor; Abraham Felix, Head of IT; and Berenice Cabellero, Head of Research. </p>
+<i>DealFunnel</i> is a publication of <i>Fintech Horizons Media</i>, an independent news organization founded by deal information specialists. The <i>DealFunnel</i> team includes Kevin Nafziger, CEO and Co-founder; Ben Koconis, Editor and Co-founder; Rebecca Wenzel, Americas Editor; Abraham Felix, Head of IT; and Berenice Cabellero, Head of Research. </p>
                 </center>
   					</div>
   							
@@ -110,12 +109,12 @@ Our reports can generate a "wow" from some readers when they see the sheer volum
         </div>
       </div>
     </div>
-    <!-- CARD 1 end-->
+ 
     <!-- CARD 3 START-->
     <div class="card">
       <div class="layer"></div>
       <div class="content">
-        <p>I really like the all-in-one approach. I think you are on to to something. When I read your newsletter, I feel smarter, like I have learned something new. </p>
+        <p>I really like the all-in-one approach. I think you are on to to something. After I read your newsletter, I alwaysfeel smarter, like I have learned something new. </p>
         <div class="image">
           <img class="images" src="https://upload.wikimedia.org/wikipedia/commons/2/28/Female_portrait_placeholder_cropped.jpg" alt="">
         </div>
