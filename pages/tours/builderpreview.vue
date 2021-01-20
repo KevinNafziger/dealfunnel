@@ -22,7 +22,9 @@
 h2 {
   margin-top:50px;
 }
-
+img {
+  width: auto !important;
+}
 .builder-preview {
 box-shadow: 0px 0px 7px -5px;
 padding: 10px;
