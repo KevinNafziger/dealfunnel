@@ -12,7 +12,7 @@
   </div>
   </center>
   <center>
-  <img class="builder-preview" src="https://filesforfintech.s3.amazonaws.com/images/giffs/Deal+Funnel+-+Builder+Preview.gif"> </img>
+  <img class="img-preview builder-preview" src="https://filesforfintech.s3.amazonaws.com/images/giffs/Deal+Funnel+-+Builder+Preview.gif"> </img>
   </center>
 </div>
 </template>
@@ -22,8 +22,9 @@
 h2 {
   margin-top:50px;
 }
-img {
+.img-preview {
   width: auto !important;
+
 }
 .builder-preview {
 box-shadow: 0px 0px 7px -5px;
