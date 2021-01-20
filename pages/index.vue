@@ -66,18 +66,14 @@ Our reports can generate a "wow" from some readers when they see the sheer volum
 <!-- column -->
 <div style="text-align-last: center;">
   	<h3 class="fea-headings"><br></h3>
-      <h3 class="execspottittle" style="display:inline;">Deal Funnel</h3>
+      <h3 class="execspottittle" style="display:inline;"><i>DealFunnel</i></h3><br>
       <p>origins and team</p>
-  			<br><br>
             <div style="height:1px" class="bluebar"> </div>
-  					    <center><p class="p-class-j">DealFunnel covers emerging technology businesses serving the financial services industry and beyond.
-                  This includes companies in Blockchain, DLT and Crypto as well as in HealthTech, Artificial Intelligence, LegalTech, and Cybersecurity. DealFunnel is perfect for investment bankers, venture capitalists, private equity directors, attorneys and corporate executives.
-                  Learn more about DealFunnel's Report Builder by clicking on the <i>'Builder Demo'</i> button.</p>
+  					    <center><p class="p-class-j">
+<i>DealFunnel</i> is the lead publication of <i>Fintech Horizons Media</i>, an independent news organization founded by deal information specialists. The <i>DealFunnel</i> team includes Kevin Nafziger, CEO and Co-founder; Ben Koconis, Editor and Co-founder; Rebecca Wenzel, Americas Editor; Abraham Felix, Head of IT; and Berenice Cabellero, Head of Research. </p>
                 </center>
   					</div>
-  							<center><a href="http://localhost:3000/tourreview/index?product_tour_id=97066">
-  							<button class="gardient-button"><nuxt-link to="/tours/builderpreview">Builder Demo</nuxt-link></button>
-  					   </a></center>
+  							
              </div>
 
   <!--Testimonials-->
@@ -86,15 +82,15 @@ Our reports can generate a "wow" from some readers when they see the sheer volum
     <div class="card">
       <div class="layer"></div>
       <div class="content">
-        <p>Famous Person
-    {{ userAgent }}</p>
+        <p>I read three to four hours a day, and there is not much new out there. When I read your research, I feel like I am walking along a path for the first time, and I enjoy seeing where it takes me.    
+        </p>
         <div class="image">
          <img class="images"  src="https://upload.wikimedia.org/wikipedia/commons/2/28/Female_portrait_placeholder_cropped.jpg" alt="">
         </div>
         <div class="details">
           <h2>
-            Someone Famous <br>
-            <span>SOMEONE FAMOUS ARTIST</span>
+            Managing Partner, Private Equity Firm.<br>
+            <span></span>
           </h2>
         </div>
       </div>
@@ -105,14 +101,14 @@ Our reports can generate a "wow" from some readers when they see the sheer volum
     <div class="card">
       <div class="layer"></div>
       <div class="content">
-        <p>Famous Person, I love this product because it does it all for me, what i mean it does the search work for me that takes hours and hours off my day and this product gets me the data i need in seconds. and more things like getting pdf directly from the site.</p>
+        <p>We love the newsletter. It's the best out there. There is nothing close. </p>
         <div class="image">
           <img class="images"  src="https://upload.wikimedia.org/wikipedia/commons/2/28/Female_portrait_placeholder_cropped.jpg" alt="">
         </div>
         <div class="details">
           <h2>
-            Someone Famous 2 <br>
-            <span>SOMEONE FAMOUS WEB DEV</span>
+            CVC firm, Head of Research<br>
+            <span></span>
           </h2>
         </div>
       </div>
@@ -122,14 +118,14 @@ Our reports can generate a "wow" from some readers when they see the sheer volum
     <div class="card">
       <div class="layer"></div>
       <div class="content">
-        <p>Famous Person, I love this product because it does it all for me, what i mean it does the search work for me that takes hours and hours off my day and this product gets me the data i need in seconds. and more things like getting pdf directly from the site.</p>
+        <p>I really like the all-in-one approach. I think you are on to to something. When I read it, I feel smarter, like I have learned something new. </p>
         <div class="image">
           <img class="images" src="https://upload.wikimedia.org/wikipedia/commons/2/28/Female_portrait_placeholder_cropped.jpg" alt="">
         </div>
         <div class="details">
           <h2>
-            Someone Famous 3 <br>
-            <span>FRONT-END ENGINEER</span>
+            Partner, Head of Fintech, Law Firm<br>
+            <span></span>
           </h2>
         </div>
       </div>
