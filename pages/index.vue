@@ -82,6 +82,20 @@ Our reports can generate a "wow" from some readers when they see the sheer volum
     <div class="card">
       <div class="layer"></div>
       <div class="content">
+        <p><i>DealFunnel</i> offers insightful content about innovative firms in the industry, allowing us to keep abreast of M&A and capital raises in the US and globally. The platform presents Fintech opportunities that we might not have seen in more traditional news or data sources.</p>
+         <img src="https://filesforfintech.s3.amazonaws.com/EvolveCapital.png" alt="">
+
+        <div class="details">
+          <h2>
+            <a href="https://www.evolve-capital.com/">Evolve Capital Partners</a><br>
+            <span></span>
+          </h2>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="layer"></div>
+      <div class="content">
         <p>I read three to four hours a day, and there is not much new out there. When I read your research, I feel like I am walking along a path for the first time, and I enjoy seeing where it takes me.    
         </p>
         <div class="image">
@@ -89,36 +103,18 @@ Our reports can generate a "wow" from some readers when they see the sheer volum
         </div>
         <div class="details">
           <h2>
-            Managing Partner, Private Equity Firm.<br>
+            Managing Partner, Private Equity Firm<br>
             <span></span>
           </h2>
         </div>
       </div>
     </div>
     <!-- CARD 1 end-->
-
-    <!-- CARD 2 START-->
-    <div class="card">
-      <div class="layer"></div>
-      <div class="content">
-        <p>We love the newsletter. It's the best out there. There is nothing close. </p>
-        <div class="image">
-          <img class="images"  src="https://upload.wikimedia.org/wikipedia/commons/2/28/Female_portrait_placeholder_cropped.jpg" alt="">
-        </div>
-        <div class="details">
-          <h2>
-            CVC firm, Head of Research<br>
-            <span></span>
-          </h2>
-        </div>
-      </div>
-    </div>
-    <!-- CARD 2 end-->
     <!-- CARD 3 START-->
     <div class="card">
       <div class="layer"></div>
       <div class="content">
-        <p>I really like the all-in-one approach. I think you are on to to something. When I read it, I feel smarter, like I have learned something new. </p>
+        <p>I really like the all-in-one approach. I think you are on to to something. When I read your newsletter, I feel smarter, like I have learned something new. </p>
         <div class="image">
           <img class="images" src="https://upload.wikimedia.org/wikipedia/commons/2/28/Female_portrait_placeholder_cropped.jpg" alt="">
         </div>

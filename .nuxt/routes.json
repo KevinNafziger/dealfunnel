@@ -3,114 +3,133 @@
     "name": "about",
     "path": "/about",
     "component": "C:\\\\htree4\\\\dealfunnel\\\\pages\\\\about\\\\index.vue",
-    "chunkName": "pages/about/index"
+    "chunkName": "pages/about/index",
+    "_name": "_426e4644"
   },
   {
     "name": "builder",
     "path": "/builder",
     "component": "C:\\\\htree4\\\\dealfunnel\\\\pages\\\\builder\\\\index.vue",
-    "chunkName": "pages/builder/index"
+    "chunkName": "pages/builder/index",
+    "_name": "_af504094"
   },
   {
     "name": "companies",
     "path": "/companies",
     "component": "C:\\\\htree4\\\\dealfunnel\\\\pages\\\\companies\\\\index.vue",
-    "chunkName": "pages/companies/index"
+    "chunkName": "pages/companies/index",
+    "_name": "_0e8b4fb6"
   },
   {
     "name": "data",
     "path": "/data",
     "component": "C:\\\\htree4\\\\dealfunnel\\\\pages\\\\data\\\\index.vue",
-    "chunkName": "pages/data/index"
+    "chunkName": "pages/data/index",
+    "_name": "_7d451f19"
   },
   {
     "name": "deals",
     "path": "/deals",
     "component": "C:\\\\htree4\\\\dealfunnel\\\\pages\\\\deals\\\\index.vue",
-    "chunkName": "pages/deals/index"
+    "chunkName": "pages/deals/index",
+    "_name": "_3048380a"
   },
   {
     "name": "login",
     "path": "/login",
     "component": "C:\\\\htree4\\\\dealfunnel\\\\pages\\\\login\\\\index.vue",
-    "chunkName": "pages/login/index"
+    "chunkName": "pages/login/index",
+    "_name": "_189ab8e8"
   },
   {
     "name": "logout",
     "path": "/logout",
     "component": "C:\\\\htree4\\\\dealfunnel\\\\pages\\\\logout\\\\index.vue",
-    "chunkName": "pages/logout/index"
+    "chunkName": "pages/logout/index",
+    "_name": "_16f32a0e"
   },
   {
     "name": "news",
     "path": "/news",
     "component": "C:\\\\htree4\\\\dealfunnel\\\\pages\\\\news\\\\index.vue",
-    "chunkName": "pages/news/index"
+    "chunkName": "pages/news/index",
+    "_name": "_4555bf60"
   },
   {
     "name": "newsletters",
     "path": "/newsletters",
     "component": "C:\\\\htree4\\\\dealfunnel\\\\pages\\\\newsletters\\\\index.vue",
-    "chunkName": "pages/newsletters/index"
+    "chunkName": "pages/newsletters/index",
+    "_name": "_6a37d8d2"
   },
   {
     "name": "posts",
     "path": "/posts",
     "component": "C:\\\\htree4\\\\dealfunnel\\\\pages\\\\posts\\\\index.vue",
-    "chunkName": "pages/posts/index"
+    "chunkName": "pages/posts/index",
+    "_name": "_c93db384"
   },
   {
     "name": "raises",
     "path": "/raises",
     "component": "C:\\\\htree4\\\\dealfunnel\\\\pages\\\\raises\\\\index.vue",
-    "chunkName": "pages/raises/index"
+    "chunkName": "pages/raises/index",
+    "_name": "_64592b48"
   },
   {
     "name": "register",
     "path": "/register",
     "component": "C:\\\\htree4\\\\dealfunnel\\\\pages\\\\register\\\\index.vue",
-    "chunkName": "pages/register/index"
+    "chunkName": "pages/register/index",
+    "_name": "_2af44600"
   },
   {
     "name": "reports",
     "path": "/reports",
     "component": "C:\\\\htree4\\\\dealfunnel\\\\pages\\\\reports\\\\index.vue",
-    "chunkName": "pages/reports/index"
+    "chunkName": "pages/reports/index",
+    "_name": "_7ae77f12"
   },
   {
     "name": "tours-builderpreview",
     "path": "/tours/builderpreview",
     "component": "C:\\\\htree4\\\\dealfunnel\\\\pages\\\\tours\\\\builderpreview.vue",
-    "chunkName": "pages/tours/builderpreview"
+    "chunkName": "pages/tours/builderpreview",
+    "_name": "_891b804e"
   },
   {
     "name": "tours-reports",
     "path": "/tours/reports",
     "component": "C:\\\\htree4\\\\dealfunnel\\\\pages\\\\tours\\\\reports.vue",
-    "chunkName": "pages/tours/reports"
+    "chunkName": "pages/tours/reports",
+    "_name": "_4a9edb63"
   },
   {
     "name": "companies-id",
     "path": "/companies/:id",
     "component": "C:\\\\htree4\\\\dealfunnel\\\\pages\\\\companies\\\\_id\\\\index.vue",
-    "chunkName": "pages/companies/_id/index"
+    "chunkName": "pages/companies/_id/index",
+    "_name": "_56985f24"
   },
   {
     "name": "newsletters-id",
     "path": "/newsletters/:id",
     "component": "C:\\\\htree4\\\\dealfunnel\\\\pages\\\\newsletters\\\\_id\\\\index.vue",
-    "chunkName": "pages/newsletters/_id/index"
+    "chunkName": "pages/newsletters/_id/index",
+    "_name": "_5b98403a"
   },
   {
     "name": "posts-id",
     "path": "/posts/:id",
     "component": "C:\\\\htree4\\\\dealfunnel\\\\pages\\\\posts\\\\_id\\\\index.vue",
-    "chunkName": "pages/posts/_id/index"
+    "chunkName": "pages/posts/_id/index",
+    "_name": "_c7e944c8"
   },
   {
     "name": "index",
     "path": "/",
     "component": "C:\\\\htree4\\\\dealfunnel\\\\pages\\\\index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_cd61017a"
   }
 ]

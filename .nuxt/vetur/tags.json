@@ -1,10 +1,4 @@
 {
-  "CompanyTempSearch": {
-    "description": "Auto imported from components/Company/CompanyTempSearch.vue"
-  },
-  "LazyCompanyTempSearch": {
-    "description": "Auto imported from components/Company/CompanyTempSearch.vue"
-  },
   "Postsys": {
     "description": "Auto imported from components/Builder/Postsys.vue"
   },
@@ -16,6 +10,12 @@
   },
   "LazySearchbar": {
     "description": "Auto imported from components/Builder/Searchbar.vue"
+  },
+  "CompanyTempSearch": {
+    "description": "Auto imported from components/Company/CompanyTempSearch.vue"
+  },
+  "LazyCompanyTempSearch": {
+    "description": "Auto imported from components/Company/CompanyTempSearch.vue"
   },
   "DataTempSearch": {
     "description": "Auto imported from components/Data/DataTempSearch.vue"
@@ -77,12 +77,6 @@
   "LazyNewsTempSearch": {
     "description": "Auto imported from components/News/NewsTempSearch.vue"
   },
-  "RaiseTempSearch": {
-    "description": "Auto imported from components/Raises/RaiseTempSearch.vue"
-  },
-  "LazyRaiseTempSearch": {
-    "description": "Auto imported from components/Raises/RaiseTempSearch.vue"
-  },
   "PostList": {
     "description": "Auto imported from components/Posts/PostList.vue"
   },
@@ -94,6 +88,12 @@
   },
   "LazyPostTempSearch": {
     "description": "Auto imported from components/Posts/PostTempSearch.vue"
+  },
+  "RaiseTempSearch": {
+    "description": "Auto imported from components/Raises/RaiseTempSearch.vue"
+  },
+  "LazyRaiseTempSearch": {
+    "description": "Auto imported from components/Raises/RaiseTempSearch.vue"
   },
   "Sidebar": {
     "description": "Auto imported from components/Sidebar/Sidebar.vue"
