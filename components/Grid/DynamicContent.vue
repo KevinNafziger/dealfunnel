@@ -2,12 +2,42 @@
   <div class="exespotbody">
   <div class="grid">
 
-    <a v-for="job in jobs" :key="job.id" href="" class="module" style="display:flex;text-decoration:none;color:#14a0fd;">
+  <!--  <a v-for="(news,index) in newsList" v-bind:key="news.id" href="" class="module" style="display:flex;text-decoration:none;color:#14a0fd;">
       <div>
         <img  src="https://fintechapp.s3.us-east-2.amazonaws.com/y2qYjf8e2hp8z5yrgyfxF2NN?response-content-disposition=inline%3B%20filename%3D%22BoxLogo.png%22%3B%20filename%2A%3DUTF-8%27%27BoxLogo.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJG6DG75G7BXQ3XUA%2F20210115%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210115T192217Z&X-Amz-Expires=518400&X-Amz-SignedHeaders=host&X-Amz-Signature=26b742c676a7fc0854c1efa0c81bf60e9239bc5068606262b3b1eab0f7a21245">
-        <p> {{ job.details }} </p>
+        <p> {{ news.description }} </p>
       </div>
-    </a>
+    </a> -->
+
+    <!-- single news Block for news -->
+  <a v-bind:key="newsList[0].id" href="" class="module" style="display:flex;text-decoration:none;color:#14a0fd;">
+     <div>
+       <img  src="https://fintechapp.s3.us-east-2.amazonaws.com/y2qYjf8e2hp8z5yrgyfxF2NN?response-content-disposition=inline%3B%20filename%3D%22BoxLogo.png%22%3B%20filename%2A%3DUTF-8%27%27BoxLogo.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJG6DG75G7BXQ3XUA%2F20210115%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210115T192217Z&X-Amz-Expires=518400&X-Amz-SignedHeaders=host&X-Amz-Signature=26b742c676a7fc0854c1efa0c81bf60e9239bc5068606262b3b1eab0f7a21245">
+       <p> {{ newsList[0].description }} </p>
+     </div>
+   </a>
+   <!-- End of single news Block -->
+
+   <!-- single news Block for comapnies-->
+ <a v-bind:key="companyList[0].id" href="" class="module" style="display:flex;text-decoration:none;color:#14a0fd;">
+    <div>
+      <img  src="https://fintechapp.s3.us-east-2.amazonaws.com/y2qYjf8e2hp8z5yrgyfxF2NN?response-content-disposition=inline%3B%20filename%3D%22BoxLogo.png%22%3B%20filename%2A%3DUTF-8%27%27BoxLogo.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJG6DG75G7BXQ3XUA%2F20210115%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210115T192217Z&X-Amz-Expires=518400&X-Amz-SignedHeaders=host&X-Amz-Signature=26b742c676a7fc0854c1efa0c81bf60e9239bc5068606262b3b1eab0f7a21245">
+      <p> {{ companyList[0].description }} </p>
+    </div>
+  </a>
+  <!-- End of single news Block -->
+
+  <!-- single news Block for data-->
+<a v-bind:key="dataList[0].id" href="" class="module" style="display:flex;text-decoration:none;color:#14a0fd;">
+   <div>
+     <img  src="https://fintechapp.s3.us-east-2.amazonaws.com/y2qYjf8e2hp8z5yrgyfxF2NN?response-content-disposition=inline%3B%20filename%3D%22BoxLogo.png%22%3B%20filename%2A%3DUTF-8%27%27BoxLogo.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJG6DG75G7BXQ3XUA%2F20210115%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210115T192217Z&X-Amz-Expires=518400&X-Amz-SignedHeaders=host&X-Amz-Signature=26b742c676a7fc0854c1efa0c81bf60e9239bc5068606262b3b1eab0f7a21245">
+     <p> {{ dataList[0].title }} </p>
+     <!-- <p v-html="dataList[0].blog_entry"> </p> --> 
+     <p> {{ dataList[0].author.name }} </p>
+     <p> {{ dataList[0].author.title}} </p>
+   </div>
+ </a>
+ <!-- End of single news Block -->
 
   <!--  <a class="module" style="display:flex;text-decoration:none;color:#14a0fd; ">
       <div>
@@ -21,14 +51,17 @@
 </template>
 
 <script>
+
+
+import newsData from "@/static/news.json";
+import companyData from "@/static/company.json";
+import dataData from "@/static/data.json";
 export default {
   data() {
     return {
-      jobs: [
-        { title: "Ninja Ux Designer", id: 1, details: "lorem: Visa and Plaid have mutually terminated their merger agreement – Business Wire Rapyd, the global Fintech as a Service company, secured $300 million in a Series" },
-        { title: "Ninja Web Designer", id: 2, details: "lorem: Visa and Plaid have mutually terminated their merger agreement – Business Wire Rapyd, the global Fintech as a Service company, secured $300 million in a Series" },
-        { title: "Ninja Front End Dev", id: 3, details: "lorem: Visa and Plaid have mutually terminated their merger agreement – Business Wire Rapyd, the global Fintech as a Service company, secured $300 million in a Series" },
-      ]
+      newsList: newsData, // to avoid ambiguity in v-for
+      companyList: companyData,
+      dataList: dataData,
     }
   }
 }
