@@ -51,7 +51,7 @@ Our reports can generate a "wow" from some readers when they see the sheer volum
   A subscription to <i>DealFunnel</i> is $79.99 a month. To subscribe, or to learn more about whats included in a <i>DealFunnel</i> subscription, click on the TK button below.
 </p>
 
-<nuxt-link class="gardient-button" to="/news">Subscribe</nuxt-link>
+<nuxt-link class="gardient-button" to="/subscription">Subscribe</nuxt-link>
 
 <p class="intro-p"><b>Team</b>–<span></span>
 <i>DealFunnel</i> is the lead publication of <i>Fintech Horizons Media</i>, a news organization founded by deal information specialists. The <i>DealFunnel</i> team includes Kevin Nafziger, CEO and Co-founder; Ben Koconis, Editor and Co-founder; Rebecca Wenzel, Americas Editor; Abraham Felix, Head of IT; and Berenice Cabellero, Head of Research.
