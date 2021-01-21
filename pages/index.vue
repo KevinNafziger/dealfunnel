@@ -53,8 +53,7 @@ Our reports can generate a "wow" from some readers when they see the sheer volum
 </p>
 
 <p class="intro-p"><b>Team</b>–<span></span>
-<i>DealFunnel</i> is a publication of <i>Fintech Horizons Media</i>The DealFunnel team was founded by deal information specialis. The <i>DealFunnel</i> team includes Kevin Nafziger, CEO and Co-founder; Ben Koconis, Editor and Co-founder; Rebecca Wenzel, Americas Editor; Abraham Felix, Head of IT; and Berenice Cabellero, Head of Research.
-
+<i>DealFunnel</i> is the lead publication of <i>Fintech Horizons Media</i>, a news organization founded by deal information specialists. The <i>DealFunnel</i> team includes Kevin Nafziger, CEO and Co-founder; Ben Koconis, Editor and Co-founder; Rebecca Wenzel, Americas Editor; Abraham Felix, Head of IT; and Berenice Cabellero, Head of Research.
 
 </p>
 
