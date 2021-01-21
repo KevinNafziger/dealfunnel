@@ -7,8 +7,8 @@
   <center>
   <img src="dealfunnel.png" style="width:240.3pt; height: 61.45pt;">
   </center>
-
-<h1 style="padding-top: 30px; margin-bottom: 0px; opacity: 1; transform: translateX(0px) translateY(0px) translateZ(0px);" class="intro-title">Newsletters, data, and reports <br>
+<br>
+<h1 style=" margin-bottom: 0px; opacity: 1; transform: translateX(0px) translateY(0px) translateZ(0px);" class="intro-title">Newsletters, data, and reports <br>
 </h1><br>
 
 <p class="MsoNormal">
