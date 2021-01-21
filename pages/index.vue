@@ -49,8 +49,9 @@ Our reports can generate a "wow" from some readers when they see the sheer volum
    <i>The Big Fintech Newsletter</i> arrives in your inbox every Tuesday and Thursday morning. It is easy-to-read and designed so you can quickly absorb the information you need and go on with your day, armed with new insights on how your industry is changing. Capturing even a subset of the newsletter's information on your own would require hours of alternating between feeds, blogs, online news portals, corporate websites and online trade publications. The newsletter also highlights new revenue opportunities from our propietary reports and articles and subscribers also get complete access to <i>DealFunnel Online</i> and all of its searchable datasets and propietary content.
 
   A subscription to <i>DealFunnel</i> is $79.99 a month. To subscribe, or to learn more about whats included in a <i>DealFunnel</i> subscription, click on the TK button below.
-
 </p>
+
+<nuxt-link class="gardient-button" to="/news">Subscribe</nuxt-link>
 
 <p class="intro-p"><b>Team</b>–<span></span>
 <i>DealFunnel</i> is the lead publication of <i>Fintech Horizons Media</i>, a news organization founded by deal information specialists. The <i>DealFunnel</i> team includes Kevin Nafziger, CEO and Co-founder; Ben Koconis, Editor and Co-founder; Rebecca Wenzel, Americas Editor; Abraham Felix, Head of IT; and Berenice Cabellero, Head of Research.
@@ -61,8 +62,8 @@ Our reports can generate a "wow" from some readers when they see the sheer volum
 <img class="img-G" width="300px;" src="https://firebasestorage.googleapis.com/v0/b/deal-funnel.appspot.com/o/deal%20funnel%20web%20stock%2Fsada.png?alt=media&amp;token=dad23bb5-f65c-414d-807e-372dee5a5522">
 
 
-  <!--Testimonials-->
-            <div class="testimonials">
+  <!-- Testimonials -->
+  <div class="testimonials">
     <!-- CARD 1 START-->
     <div class="card">
       <div class="layer"></div>
@@ -251,6 +252,7 @@ body{
 }
 
 .gardient-button {
+    display: grid;
     background-image: linear-gradient(200deg, #4F81BD 10%, #4F81BD 39%, #8ab4f8 80%);
     background-size: 400% 400% !important;
     animation: gradient 15s ease infinite !important;
@@ -263,12 +265,15 @@ body{
     font-family: poppins !important;
     color: #ffffff !important;
     font-size: 12px !important;
-    transition: 1s;
-    margin-top: 50px;
+    transition: 0.3s;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 16px !important;
+    box-shadow: 0px 1px 10px -3px #474747 !important;
 }
 
 .gardient-button:hover {
-  box-shadow: 0px 1px 10px -3px dimgray;
+box-shadow: 0px 1px 5px -3px #474747 !important;
   }
 
 .execspottittle {
