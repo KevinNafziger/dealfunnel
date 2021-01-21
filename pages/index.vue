@@ -60,7 +60,7 @@ Our reports can generate a "wow" from some readers when they see the sheer volum
  -->
 
 <!-- grid fetcher -->
-<DynamicContent/>
+
   <div class="featuredmenusection">
                                       <div style="margin-top:50px; margin-bottom:50px; margin-left: 25px; margin-right: 25px;" class="coolbar"></div>
 <!-- column -->
@@ -96,31 +96,14 @@ Our reports can generate a "wow" from some readers when they see the sheer volum
     <div class="card">
       <div class="layer"></div>
       <div class="content">
-        <p>I read three to four hours a day, and there is not much new out there. When I read your research, I feel like I am walking along a path for the first time, and I enjoy seeing where it takes me.    
+        <p>We love the newsletter. It's the best out there. Its not even close.    
         </p>
         <div class="image">
          <img class="images"  src="https://upload.wikimedia.org/wikipedia/commons/2/28/Female_portrait_placeholder_cropped.jpg" alt="">
         </div>
         <div class="details">
           <h2>
-            Managing Partner, Private Equity Firm<br>
-            <span></span>
-          </h2>
-        </div>
-      </div>
-    </div>
- 
-    <!-- CARD 3 START-->
-    <div class="card">
-      <div class="layer"></div>
-      <div class="content">
-        <p>I really like the all-in-one approach. I think you are on to to something. After I read your newsletter, I alwaysfeel smarter, like I have learned something new. </p>
-        <div class="image">
-          <img class="images" src="https://upload.wikimedia.org/wikipedia/commons/2/28/Female_portrait_placeholder_cropped.jpg" alt="">
-        </div>
-        <div class="details">
-          <h2>
-            Partner, Head of Fintech, Law Firm<br>
+            Head of Research, CVC Firm<br>
             <span></span>
           </h2>
         </div>

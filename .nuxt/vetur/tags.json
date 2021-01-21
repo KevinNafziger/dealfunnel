@@ -1,10 +1,4 @@
 {
-  "DataTempSearch": {
-    "description": "Auto imported from components/Data/DataTempSearch.vue"
-  },
-  "LazyDataTempSearch": {
-    "description": "Auto imported from components/Data/DataTempSearch.vue"
-  },
   "Postsys": {
     "description": "Auto imported from components/Builder/Postsys.vue"
   },
@@ -16,6 +10,12 @@
   },
   "LazySearchbar": {
     "description": "Auto imported from components/Builder/Searchbar.vue"
+  },
+  "DataTempSearch": {
+    "description": "Auto imported from components/Data/DataTempSearch.vue"
+  },
+  "LazyDataTempSearch": {
+    "description": "Auto imported from components/Data/DataTempSearch.vue"
   },
   "CompanyTempSearch": {
     "description": "Auto imported from components/Company/CompanyTempSearch.vue"
@@ -41,23 +41,23 @@
   "LazyCard": {
     "description": "Auto imported from components/Draggable/Card.vue"
   },
-  "LettersList": {
-    "description": "Auto imported from components/Letters/LettersList.vue"
-  },
-  "LazyLettersList": {
-    "description": "Auto imported from components/Letters/LettersList.vue"
-  },
   "DynamicContent": {
     "description": "Auto imported from components/Grid/DynamicContent.vue"
   },
   "LazyDynamicContent": {
     "description": "Auto imported from components/Grid/DynamicContent.vue"
   },
-  "NewsTempSearch": {
-    "description": "Auto imported from components/News/NewsTempSearch.vue"
+  "Leftbar": {
+    "description": "Auto imported from components/Leftbar/Leftbar.vue"
   },
-  "LazyNewsTempSearch": {
-    "description": "Auto imported from components/News/NewsTempSearch.vue"
+  "LazyLeftbar": {
+    "description": "Auto imported from components/Leftbar/Leftbar.vue"
+  },
+  "LettersList": {
+    "description": "Auto imported from components/Letters/LettersList.vue"
+  },
+  "LazyLettersList": {
+    "description": "Auto imported from components/Letters/LettersList.vue"
   },
   "Burger": {
     "description": "Auto imported from components/Navigation/Burger.vue"
@@ -76,6 +76,12 @@
   },
   "LazyTheHeader": {
     "description": "Auto imported from components/Navigation/TheHeader.vue"
+  },
+  "NewsTempSearch": {
+    "description": "Auto imported from components/News/NewsTempSearch.vue"
+  },
+  "LazyNewsTempSearch": {
+    "description": "Auto imported from components/News/NewsTempSearch.vue"
   },
   "PostList": {
     "description": "Auto imported from components/Posts/PostList.vue"

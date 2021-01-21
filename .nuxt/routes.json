@@ -28,13 +28,6 @@
     "_name": "_7d451f19"
   },
   {
-    "name": "deals",
-    "path": "/deals",
-    "component": "C:\\\\htree4\\\\dealfunnel\\\\pages\\\\deals\\\\index.vue",
-    "chunkName": "pages/deals/index",
-    "_name": "_3048380a"
-  },
-  {
     "name": "login",
     "path": "/login",
     "component": "C:\\\\htree4\\\\dealfunnel\\\\pages\\\\login\\\\index.vue",

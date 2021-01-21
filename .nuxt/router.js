@@ -7,7 +7,6 @@ const _426e4644 = () => interopDefault(import('..\\pages\\about\\index.vue' /* w
 const _af504094 = () => interopDefault(import('..\\pages\\builder\\index.vue' /* webpackChunkName: "pages/builder/index" */))
 const _0e8b4fb6 = () => interopDefault(import('..\\pages\\companies\\index.vue' /* webpackChunkName: "pages/companies/index" */))
 const _7d451f19 = () => interopDefault(import('..\\pages\\data\\index.vue' /* webpackChunkName: "pages/data/index" */))
-const _3048380a = () => interopDefault(import('..\\pages\\deals\\index.vue' /* webpackChunkName: "pages/deals/index" */))
 const _189ab8e8 = () => interopDefault(import('..\\pages\\login\\index.vue' /* webpackChunkName: "pages/login/index" */))
 const _16f32a0e = () => interopDefault(import('..\\pages\\logout\\index.vue' /* webpackChunkName: "pages/logout/index" */))
 const _4555bf60 = () => interopDefault(import('..\\pages\\news\\index.vue' /* webpackChunkName: "pages/news/index" */))
@@ -55,10 +54,6 @@ export const routerOptions = {
     path: "/data",
     component: _7d451f19,
     name: "data"
-  }, {
-    path: "/deals",
-    component: _3048380a,
-    name: "deals"
   }, {
     path: "/login",
     component: _189ab8e8,

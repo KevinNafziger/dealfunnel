@@ -13,7 +13,6 @@
       <li class="nav-item"><nuxt-link to="/raises">Raises</nuxt-link></li>
       <li class="nav-item"><nuxt-link to="/companies">Companies</nuxt-link></li>
       <li class="nav-item"><nuxt-link to="/data">Data</nuxt-link></li>
-      <li class="nav-item"><nuxt-link to="/deals">Deals</nuxt-link></li>
     </ul>
   </Mobilebar>
     <div class="navigation-items">
@@ -28,7 +27,6 @@
         <li class="nav-item"><nuxt-link to="/raises">Raises</nuxt-link></li>
         <li class="nav-item"><nuxt-link to="/companies">Companies</nuxt-link></li>
         <li class="nav-item"><nuxt-link to="/data">Data</nuxt-link></li>
-        <li class="nav-item"><nuxt-link to="/deals">Deals</nuxt-link></li>
         <li v-if="!(this.loggedIn)" class="nav-item"><nuxt-link to="/login">Login</nuxt-link></li>
         <li v-if="!(this.loggedIn)" class="nav-item"><nuxt-link to="/register">Register</nuxt-link></li>
          <li  v-if="this.loggedIn">
