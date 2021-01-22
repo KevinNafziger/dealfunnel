@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="layout-d">
   <TheHeader />
-    <Nuxt /> 
+    <Nuxt />
   </div>
 </template>
 
@@ -15,12 +15,12 @@ export default {
 
   middleware: 'load-initial-data',
 
-  
+
   components: {
   TheHeader,
   Visits
   },
- 
+
 }
 </script>
 
@@ -49,6 +49,9 @@ html {
 *::after {
   box-sizing: border-box;
   margin: 0;
+}
+.layout-d {
+  background: #f1f1f1fa;
 }
 
 .button--green {

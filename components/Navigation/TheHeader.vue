@@ -3,7 +3,7 @@
   <header class="the-header">
     <Burger class="burger" />
     <Mobilebar>
-    <ul class="sidebar-panel-nav">
+      <ul class="sidebar-panel-nav">
       <li class="nav-item"><nuxt-link to="/"><span class="mdi mdi-home"></span></nuxt-link></li>
       <li class="nav-item"><nuxt-link to="/posts">Articles</nuxt-link></li>
       <li class="nav-item"><nuxt-link to="/news">News</nuxt-link></li>
@@ -15,6 +15,7 @@
       <li class="nav-item"><nuxt-link to="/data">Data</nuxt-link></li>
     </ul>
   </Mobilebar>
+  <img src="dealfunnelwhite.png" class="logo"/>
     <div class="navigation-items">
       <ul class="nav-list">
         <li v-if="showLogOutBtn" class="nav-item"><nuxt-link to="/logout">Logout</nuxt-link></li>
@@ -115,12 +116,38 @@ export default {
   box-sizing: border-box;
   padding: 0 20px;
 }
-
+@media screen and (max-width: 1400px){
 .logo {
   margin: 0 10px;
   font-size: 1.3rem;
+  width:auto;
+  max-width: 150px !important;
+  float: left;
+  position: relative !important;
+  left: 0px;
+  transition:1s;
+ }
 }
-
+@media screen and (max-width: 990px){
+.logo {
+  display: none;
+ }
+}
+@media screen and (max-width: 760px){
+.logo {
+  display: block !important;
+ }
+}
+.logo {
+  transition:1s;
+  margin: 0 10px;
+  font-size: 1.3rem;
+  width:auto;
+  max-width: 250px;
+  float: left;
+  position: absolute;
+  left: 0px;
+}
 .logo a {
   text-decoration: none;
   color: white;
@@ -173,7 +200,7 @@ export default {
    font-family: 'Lato'
  }
 
- @media screen and (min-width:790px) {
+ @media  (min-width:790px) {
    .burger {
      display:none !important;
    }
