@@ -3,9 +3,9 @@
 <section class="pricing">
  <header class="pricing__header">
    <h1 class="pricing__title">Pricing plans</h1>
-   <h5 class="pricing__subtitle">First 15 days absolutely <span class="accent-1">free</span> for any plan, no credit card required to get started.</h5>
+   <h5 class="pricing__subtitle">Subscribe <span class="accent-1">today</span> for our plan, to get started.</h5>
  </header>
- <article class="plans">
+ <!--<article class="plans">
    <div class="plans__list">
      <article class="plan__item">
        <div class="plan__header">
@@ -20,11 +20,11 @@
        </ul>
 
        <a href="#" class="plan__cta-link ">Get Started</a>
-     </article>
+     </article> -->
      <article class="plan__item plan__item--active">
        <div class="plan__header">
-         <h2 class="plan__title">Teams</h2>
-         <h1 class="plan__price">20</h1>
+         <h2 class="plan__title">Pro</h2>
+         <h1 class="plan__price">79.99</h1>
        </div>
        <ul class="plan__feature-list">
          <li class="plan__feature-item"><span class="accent-2">20GB</span> file storage</li>
@@ -35,10 +35,10 @@
 
        <a href="#" class="plan__cta-link plan__cta-link--active">Get Started</a>
      </article>
-     <article class="plan__item">
+    <!-- <article class="plan__item">
        <div class="plan__header">
          <h2 class="plan__title">Enterprise</h2>
-         <h1 class="plan__price">80</h1>
+         <h1 class="plan__price">79.99</h1>
        </div>
 
        <ul class="plan__feature-list">
@@ -49,10 +49,10 @@
        </ul>
 
        <a href="#" class="plan__cta-link">Get Started</a>
-     </article>
+     </article> -->
    </div>
    <div class="plans__special-offer">
-     <p><b>Limited offer: </b> Save 20% on anuual plans. Get the coupon <a class="cupon-link" href="#"><b>here</b></a></p>
+     <p><b>Limited offer </b> </p>
 
  </div>
  </article>
@@ -69,29 +69,9 @@
 
  <style>
  @import url("https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap");
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-:root {
-  --primary-font: "Poppins", sans-serif;
-  --margin-x: 1em;
-  --accent-1:  #4f81bd ;
-  --accent-2: #563677;
-  --accent-3: #6865ff;
-  --black: #212733;
-  --pink: #f3659a;
-}
 
-html,
-body {
-  font-family: var(--primary-font);
-  color: var(--black);
-  line-height: 1.3;
-  max-width: 1250px;
-  margin: 0 auto;
-}
+
+
 .accent-1 {
   color: var(--accent-1);
 }
@@ -181,10 +161,13 @@ a {
   --radius: 10px;
   border-radius: var(--radius);
   box-shadow: 1px 2px 15px rgba(80,80,80,0.12);
-  margin: 1rem;
+  margin-top: 3vw;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  max-width: 600px;
 }
 .plan__item--active {
   box-shadow: 0 0 55px rgba(80,80,80,0.25);
@@ -230,7 +213,9 @@ a {
   color: var(--accent-2);
   text-decoration: underline;
   text-decoration-color: var(--accent-2);
-
+}
+.plans__special-offer {
+    margin-top: 5vw;
 }
 .currency {
   margin: 2em var(--margin-x);
