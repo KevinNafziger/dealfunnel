@@ -385,7 +385,8 @@
       max-width:1550px !important;
       margin-left:auto !important;
       margin-right: auto !important;
-
+      background: #ffffff;
+      border-radius: 5px;
     }
 
      table {

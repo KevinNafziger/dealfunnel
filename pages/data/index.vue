@@ -474,6 +474,8 @@ tr {
  max-width:1550px !important;
  margin-left:auto !important;
  margin-right: auto !important;
+ background: #ffffff;
+ border-radius: 5px;
 }
 table {
      box-shadow: 0px 0px 10px -9px black;
