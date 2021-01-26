@@ -413,6 +413,10 @@ export default {
 </script>
 
 <style scoped>
+.w-container-2 {
+  background: #f1f1f1fa;
+  padding-top: 20px;  
+}
  .search-bar-div {
        text-align: center;
  }
