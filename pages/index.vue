@@ -38,9 +38,9 @@
   <p class="intro-p"><b>Value Proposition</b>–<span></span>
   <i>DealFunnel</i> provides two main sources of value to subscribers. The first is a comprehensive summary of all equity raises, M&A, public offerings and token sales within our core focus areas, contained in our newsletter and delivered every Tuesday and Thursday morning. Readers trust <i>DealFunnel</i> for a complete, accurate account of strategic transactions for all featured categories in our newsletter's core areas. We built this trust by consistently delivering a complete, reliable summary of financial transactions in each and every newsletter. Readers know they can rely on our newsletter to form their own picture of change and can also utilize the complete transactions summary to provide useful insights to their clients. <i>DealFunnel</i> propietary reports and articles, featured in the newsletter and through <i>DealFunnel Online</i>, offer another key source of value for subscribers. <i>DealFunnel's</i> propietary content serves as a rich repository of primary source   leads on forward-looking company strategy that are rarely available in other publciations.
   <i>The Big Fintech Newsletter</i> arrives in your inbox every Tuesday and Thursday morning. It is easy-to-read and designed so you can quickly absorb the information you need and go on with your day, armed with new insights on how your industry is changing. Capturing even a subset of the newsletter's information on your own would require hours of alternating between feeds, blogs, online news portals, corporate websites and online trade publications. The newsletter also highlights new revenue opportunities from our propietary reports and articles and subscribers also get complete access to <i>DealFunnel Online</i> and all of its searchable datasets and propietary content.
-  A subscription to <i>DealFunnel</i> is $79.99 a month. To subscribe, or to learn more about whats included in a <i>DealFunnel</i> subscription, click on the TK button below.
+  A subscription to <i>DealFunnel</i> is $79.99 a month. To subscribe, or to learn more about whats included in a <i>DealFunnel</i> subscription, click on the <i>Plan Details</i> button below.
   </p>
-  <nuxt-link class="gardient-button" to="/subscription">Subscribe</nuxt-link>
+  <nuxt-link class="gardient-button" to="/subscription">Plan Details</nuxt-link>
   <p class="intro-p"><b>Team</b>–<span></span>
     <i>DealFunnel</i> is the lead publication of <i>Fintech Horizons Media</i>, a news organization founded by deal information specialists. The <i>DealFunnel</i> team includes Kevin Nafziger, CEO and Co-founder; Ben Koconis, Editor and Co-founder; Rebecca Wenzel, Americas Editor; Abraham Felix, Head of IT; and Berenice Cabellero, Head of Research.
   </p>
@@ -69,7 +69,7 @@
     <div class="card">
       <div class="layer"></div>
       <div class="content">
-        <p>We love the newsletter. It is the best out there. Its not even close.
+        <p>We love the newsletter. It is the best out there. It is not even close.
         </p>
         <div class="image">
          <img class="images"  src="https://upload.wikimedia.org/wikipedia/commons/2/28/Female_portrait_placeholder_cropped.jpg" alt="">
@@ -109,7 +109,7 @@ export default {
 
 computed: {
     ...mapState({
-          loadedPosts: pages => state.pages.pages[0],
+          loadedPosts: pages => state.Post1,
           //post:  state.posts.post
 
       }),

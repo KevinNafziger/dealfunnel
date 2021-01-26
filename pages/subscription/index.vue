@@ -1,36 +1,20 @@
 <template>
 
 <section class="pricing">
- <header class="pricing__header">
-   <h1 class="pricing__title">Pricing plans</h1>
-   <h5 class="pricing__subtitle">Subscribe <span class="accent-1">today</span> for our plan, to get started.</h5>
- </header>
- <!--<article class="plans">
-   <div class="plans__list">
-     <article class="plan__item">
-       <div class="plan__header">
-         <h2 class="plan__title">Freelance</h2>
-         <h1 class="plan__price">5</h1>
-       </div>
+ 
 
-       <ul class="plan__feature-list">
-         <li class="plan__feature-item"><span class="accent-2">5GB</span> file storage</li>
-         <li class="plan__feature-item">File manager</li>
-         <li class="plan__feature-item">Upgrade any time</li>
-       </ul>
-
-       <a href="#" class="plan__cta-link ">Get Started</a>
-     </article> -->
      <article class="plan__item plan__item--active">
-       <div class="plan__header">
-         <h2 class="plan__title">Pro</h2>
-         <h1 class="plan__price">79.99</h1>
-       </div>
        <ul class="plan__feature-list">
-         <li class="plan__feature-item"><span class="accent-2">20GB</span> file storage</li>
-         <li class="plan__feature-item">Collaboration mode</li>
-         <li class="plan__feature-item">Up to <span class="accent-2">10</span> users</li>
-         <li class="plan__feature-item"><span class="accent-2">Trello</span> integration</li>
+         <li class="plan__feature-item"></li>
+       </ul>
+       <ul class="plan__feature-list">
+        <li class="plan__feature-item">A subscription to <span class="accent-2"><i>DealFunnel</i> </span> is $79.99 a month.<br></li>
+         <li class="plan__feature-item"><br><span class="accent-2">A subscription includes:</span></li>
+        <li class="plan__feature-item">-The
+       <span class="accent-2"><i>DealFunnel</i> newsletter</span></li>
+         <li class="plan__feature-item"><i><span class="accent-2">-DealFunnel Online</span></i></li>
+         <li class="plan__feature-item">-<i>DealFunnel</i> support<span class="accent-2"></span></li>
+         <li class="plan__feature-item"><span class="accent-2"></span></li>
        </ul>
 
        <a href="#" class="plan__cta-link plan__cta-link--active">Get Started</a>
@@ -51,10 +35,7 @@
        <a href="#" class="plan__cta-link">Get Started</a>
      </article> -->
    </div>
-   <div class="plans__special-offer">
-     <p><b>Limited offer </b> </p>
-
- </div>
+  
  </article>
 
 </section>

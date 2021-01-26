@@ -80,8 +80,8 @@ export const state = () => ({
   pay4: [],
   pay5: [],
   payNewsPage: 1,
-  allNews:[]
-,
+  allNews:[],
+
 })
 
 export const mutations = {
@@ -170,7 +170,6 @@ export const mutations = {
       state.news21 = data.slice(4000, 4200);
       state.news22 = data.slice(4200, 4400);
       state.news23 = data.slice(4400, newsLength);
-
       state.activeNewsTab = 'All';
       state.firstNewsLoad =false;
 
@@ -715,8 +714,8 @@ export const mutations = {
 
     setNextNoFetch(state){
 
-     var temp = state.nunNewsPage;
-     temp++;
+     state.numNewsPage++ 
+     var temp = state.numNewsPage;
      state.activeNewsTab = 'All';
      state.firstNewsLoad = false;
 
@@ -1417,11 +1416,14 @@ export const mutations = {
 
       async goNext( {commit}, pageVal) {
 
+      
 			 if (this.allNewsFetched) {
 			    commit("setNextNoFetch");
 			 }	      
        else {
-		      await this.$axios.get('/links?page=' + pageVal)
+           var temp = nextArryVal;
+
+		      await this.$axios.get('/links?page=' + temp)
                 .then( res => {
 				       commit("setNextAndFetch", res.data)	  
 		       })               
@@ -1772,11 +1774,11 @@ export const mutations = {
 	 },
 
   allNewsFetched(state) {
-    if (state.allNews.length) {
-      return true;
+    if (!state.allNews.length) {
+      return false;
     }
     else {
-      return false;
+      return true;
     }
   
   },

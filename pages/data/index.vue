@@ -1,6 +1,5 @@
 <template>
 <div>
-<Sidebar/>
   <div data-v-69296181="" id="top" ><div data-v-69296181="" class="title"><div data-v-69296181="" class="content"><br data-v-69296181=""> <h2 data-v-69296181="">Article Data<i style="font-size: 13px; text-align:right; margin-left:3px;">{{ filterMessage }}</i></h2></div></div></div>
   <text class="headcomname">
     Article Data
@@ -100,20 +99,15 @@
 
 <script>
 import Vue from 'vue';
-import Sidebar from '@/components/Sidebar/Sidebar';
-Vue.component('Sidebar', Sidebar);
 import {mapState} from 'vuex';
 import DataTempSearch from '@/components/Data/DataTempSearch';
 
 export default {
 
-components: {
-  Sidebar,
-},
 
 computed: {
   ...mapState({
-          starter: state => state.posts.pages[0],
+          starter: state => state.Post1,
           firstDataLoad: state => state.posts.firstDataLoad,
           activeDataInfo:  state => state.posts.activeDataInfo,
           activeTab:  state => state.posts.activeDataTab,
