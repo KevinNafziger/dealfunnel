@@ -247,6 +247,7 @@ img.in-your-face {
     border-radius: 0px;
     padding: 10px;
     height: auto;
+    background: #ffffff !important;
     min-height:625px;
     width: 100%;
     padding: 2px;
