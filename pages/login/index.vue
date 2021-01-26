@@ -86,6 +86,9 @@ label, md-button {
   margin-top:20px !important;
   margin-bottom:20px !important;
 }
+.md-card {
+  background: #ffffff;
+}
 .md-button {
   background-color: blue;
   color: #ffffff !important;

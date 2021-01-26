@@ -1,12 +1,12 @@
 <template>
 <div>
         <div data-v-69296181="" id="top" ><div data-v-69296181="" class="title"><div data-v-69296181="" class="content"><br data-v-69296181=""> <h2 data-v-69296181="">Companies
-      
+
         <i style="font-size: 13px; text-align:right; margin-left:3px;">{{ filterMessage}} </i>
         </h2></div></div></div>
 
       <CompanyTempSearch></CompanyTempSearch>
-      
+
       <div class="draft-div">
           <table class="table-striped" width="100%">
               <thead class="fixed-head">
@@ -117,15 +117,15 @@ methods: {
             }
             else if (this.page == 2) {
                   this.$store.dispatch("company/setComp1");
-            }      
+            }
             break;
-          
+
            case 'Next':
              if (this.page == 1)
              {
                   this.$store.dispatch("company/setComp2");
              }
-             else if (this.page == 2) {  
+             else if (this.page == 2) {
                   this.$store.dispatch("company/setComp3");
              }
              else if (this.page == 3) {
@@ -134,7 +134,7 @@ methods: {
              else {
                 this.$store.dispatch("company/setComp2");
              }
-             
+
              break;
              }
 
@@ -171,7 +171,7 @@ methods: {
 
 },
 
-  
+
   created() {
 
      this.$nuxt.$on("getCategory", (category) => this.getbyCategory(category));
@@ -292,6 +292,8 @@ tr {
   max-width:1550px !important;
   margin-left:auto !important;
   margin-right: auto !important;
+  background: #ffffff;
+  border-radius: 5px;
 }
 table {
       box-shadow: 0px 0px 10px -9px black;

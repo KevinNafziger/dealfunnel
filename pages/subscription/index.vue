@@ -149,6 +149,7 @@ a {
   flex-direction: column;
   justify-content: space-between;
   max-width: 600px;
+  background: #ffffff;
 }
 .plan__item--active {
   box-shadow: 0 0 55px rgba(80,80,80,0.25);

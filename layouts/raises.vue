@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="layout-d">
   <TheHeader />
   <Visits />
     <Nuxt />
@@ -11,7 +11,7 @@ import TheHeader from '@/components/Navigation/TheHeader';
 import Visits from '@/components/Visits/Visits';
 
 export default {
-  
+
   components: {
   TheHeader,
   Visits
@@ -19,4 +19,8 @@ export default {
 }
 </script>
 
-
+<style>
+.layout-d {
+  background: #f1f1f1fa;
+}
+</style>

@@ -111,9 +111,12 @@ import {mapState} from 'vuex';
    font-family: poppins !important;
    color: #4f81bd !important;
    font-size: 12px !important;
+   text-decoration: none !important;
+   box-shadow: 0px 0px 10px -8px !important;
  }
  .gardient-button:hover {
-   box-shadow: 0px 0px 10px -5px gray;
+
+   box-shadow: 0px 0px 10px -5px !important;
  }
  .center-btn{
    text-align: -webkit-center;
@@ -244,7 +247,7 @@ img.in-your-face {
     margin-left: auto !important;
     margin-right: auto !important;
     margin-bottom: 50px !important;
-    background-color:#dedede;
+        background: #f7f7f7 !important;
 }
 .article-card:hover {
     box-shadow: 0 1px 5px 0 rgba(0, 89, 132, 0.16);

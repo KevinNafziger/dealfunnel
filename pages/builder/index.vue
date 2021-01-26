@@ -793,7 +793,9 @@ flex: 1 1 200px;
   width: 100%;
   margin: 20px;
   overflow: auto;
-
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 12px -10px;
 }
 
 .right-side {
@@ -803,7 +805,9 @@ flex: 1 1 200px;
   width: 100%;
   margin: 20px;
   overflow: auto;
-
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 12px -10px;
 }
 
  #board-right {
