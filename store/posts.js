@@ -2943,8 +2943,11 @@ export const mutations = {
   			 	})
   		   	}
           else if (this.allPostsLoaded) {
-.
- .             commit("setQ421", this.postsbyQuarter('Q421'))	   	else {
+          
+              commit("setQ421", this.postsbyQuarter('Q421'))
+          }
+          
+          else {
   			
   				    commit("setQ421NoFetch" );
   		    }
