@@ -281,7 +281,7 @@ export const mutations = {
         state.blkArticlePage++ ;
         var temp = state.blkArtPage;
         state.activeArticleTab = 'Blockchain';
-        state.firstArtdLoad = false;
+        state.firstArtLoad = false;
       
         if (temp == 2) {
             state.activeArtInfo= state.block2;
