@@ -2926,7 +2926,7 @@ export const mutations = {
           
           }
   		   	else {
-  				.
+  				
   				    commit("setQ321NoFetch" );
   		    }
   		 
@@ -2942,13 +2942,9 @@ export const mutations = {
             			commit("setQ421", res.data);
   			 	})
   		   	}
-          e.lse if (this.allPostsLoaded) {
+          else if (this.allPostsLoaded) {
 .
- .             commit("setQ421", this.postsbyQuarter('Q421'));
-  .        
-   .       }
-.
- . 		   	else {
+ .             commit("setQ421", this.postsbyQuarter('Q421'))	   	else {
   			
   				    commit("setQ421NoFetch" );
   		    }
