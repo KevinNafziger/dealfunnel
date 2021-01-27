@@ -90,13 +90,7 @@ export const state = () => ({
   Post11: [],
   Post12: [],
   Post13: [],
-  Post14: [],
-  Post15: [],
-  Post16: [],
-  Post17: [],
-  Post18: [],
-  Post19: [],
-  Post20: [],
+ 
 
   bnkArtPage: 1,
   insArtPage: 1,
