@@ -1012,9 +1012,6 @@ export const mutations = {
 
    },
 
-
-
-
    setNYC(state, data) {
 
     state.nyc = data; 
@@ -1066,7 +1063,6 @@ export const mutations = {
     }
 
   },
-
 
   setSilicon(state, data) {
 
@@ -1457,56 +1453,59 @@ export const mutations = {
 
       case "Data":
 
-        if (state.dataPage >1) {
-
-          state.dataPage--;
-        }
-        
-        else {
-
-         state.dataPage = 1;
-        
-        }
+       
           var temp = state.dataPage;
+          temp--;
           if (temp==1){
              state.activeDataInfo = state.post1;
+             state.dataPage =1;
           }
           else if (temp == 2) {
              state.activeDataInfo = state.post2;
+                    state.dataPage=2;
           }
           else if (temp == 3) {
              state.activeDataInfo = state.post3;
+                    state.dataPage=3;
           }
           else if (temp == 4) {
              state.activeDataInfo = state.post4;
+                    state.dataPage =4;
           }
           else if (temp == 5)
           {
              state.activeDataInfo = state.post5;
+                    state.dataPage =5; 
           }
           else if (temp == 6)
           {
              state.activeDataInfo = state.post6;
+                    state.dataPage =6; 
           }
           else if (temp == 7)
           {
              state.activeDataInfo = state.post7;
+             state.dataPage =7;
           }
           else if (temp == 8)
           {
              state.activeDataInfo = state.post8;
+             state.dataPage =8;
           }
           else if (temp == 9)
           {
              state.activeDataInfo = state.post9;
+             state.dataPage =9;
           }
           else if (temp == 10)
           {
              state.activeDataInfo = state.post10;
+             state.dataPage =10;
           }
           
           state.activeDataTab = 'Page';
           state.firstDataLoad =false;
+       
           break;
   	   	 
       }
@@ -1534,9 +1533,58 @@ export const mutations = {
           break;
 
         case "Data":
-          state.dataPage++ ;
-          state.pages[state.pages.length]=data;
-          state.activeDataInfo = data;
+      
+          var temp = state.dataPage;
+          temp++;
+          if (temp==1){
+             state.activeDataInfo = state.post1;
+              state.dataPage =1;
+          }
+          else if (temp == 2) {
+             state.activeDataInfo = state.post2;
+              state.dataPage =2;
+          }
+          else if (temp == 3) {
+             state.activeDataInfo = state.post3;
+              state.dataPage =3;
+          }
+          else if (temp == 4) {
+             state.activeDataInfo = state.post4;
+            state.dataPage =4;
+          }
+          else if (temp == 5)
+          {
+             state.activeDataInfo = state.post5;
+            state.dataPage =5;
+          }
+          else if (temp == 6)
+          {
+             state.activeDataInfo = state.post6;
+          }
+          else if (temp == 7)
+          {
+             state.activeDataInfo = state.post7;
+              state.dataPage =7;
+          }
+          else if (temp == 8)
+          {
+             state.activeDataInfo = state.post8;
+             state.dataPage =8;
+          }
+          else if (temp == 9)
+          {
+             state.activeDataInfo = state.post9;
+             state.dataPage = 9 ;
+          }
+          else if (temp == 10)
+          {
+             state.activeDataInfo = state.post10;
+             state.dataPage = 10; 
+          }
+          
+          state.activeDataTab = 'Page';
+          state.firstDataLoad =false;
+        
           state.activeDataTab = 'Page';
           state.firstDataLoad =false;  
           break;
@@ -1636,10 +1684,12 @@ export const mutations = {
      	   break;
 
         case "Data":
-         state.dataPage++ ; 
+
          var temp = state.dataPage;
+         temp++
 
          if (temp == 2) {
+
              state.activeDataInfo = state.post2;
           }
           else if (temp == 3) {
@@ -1672,7 +1722,8 @@ export const mutations = {
           {
            state.activeDataInfo = state.post10;
           }
-          
+         
+         state.dataPage = temp; 
          state.activeDataTab = 'Page';
          state.firstDataLoad =false;
          break;
