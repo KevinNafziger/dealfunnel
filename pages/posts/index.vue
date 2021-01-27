@@ -211,7 +211,7 @@ export default {
 
   computed: {
   ...mapState({
-          starter: state => state.Post1,
+          starter: state => state.posts.post1,
           activeTab: state => state.posts.activeArtTab,
           myboard:   state => state.boards.myboard,
           activeArtInfo: state =>  state.posts.activeArtInfo,

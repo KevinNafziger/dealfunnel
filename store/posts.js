@@ -77,20 +77,17 @@ export const state = () => ({
   bank3: [],
   bank4: [],
 
-  Post1: [],
-  Post2: [],
-  Post3: [],
-  Post4: [],
-  Post5: [],
-  Post6: [],
-  Post7: [],
-  Post8: [],
-  Post9: [],
-  Post10: [],
-  Post11: [],
-  Post12: [],
-  Post13: [],
- 
+  post1: [],
+  post2: [],
+  post3: [],
+  post4: [],
+  post5: [],
+  post6: [],
+  post7: [],
+  post8: [],
+  post9: [],
+  post10: [],
+   
 
   bnkArtPage: 1,
   insArtPage: 1,
@@ -1365,52 +1362,40 @@ export const mutations = {
 
    	   		var temp = state.numBuildPage;
           if (temp==1){
-             state.activeBuildInfo = state.Post1;
+             state.activeBuildInfo = state.post1;
           }
           else if (temp == 2) {
-             state.activeBuildInfo = state.Post2;
+             state.activeBuildInfo = state.post2;
           }
           else if (temp == 3) {
-             state.activeBuildInfo = state.Post3;
+             state.activeBuildInfo = state.post3;
           }
           else if (temp == 4) {
-             state.activeBuildInfo = state.Post4;
+             state.activeBuildInfo = state.post4;
           }
           else if (temp == 5)
           {
-             state.activeBuildInfo = state.Post5;
+             state.activeBuildInfo = state.post5;
           }
           else if (temp == 6)
           {
-             state.activeBuildInfo = state.Post6;
+             state.activeBuildInfo = state.post6;
           }
           else if (temp == 7)
           {
-             state.activeBuildInfo = state.Post7;
+             state.activeBuildInfo = state.post7;
           }
           else if (temp == 8)
           {
-             state.activeBuildInfo = state.Post8;
+             state.activeBuildInfo = state.post8;
           }
           else if (temp == 9)
           {
-             state.activeBuildInfo = state.Post9;
+             state.activeBuildInfo = state.post9;
           }
           else if (temp == 10)
           {
-             state.activeBuildInfo = state.Post10;
-          }
-          else if (temp == 11)
-          {
-             state.activeBuildInfo = state.Post11;
-          }
-           else if (temp == 12)
-          {
-             state.activeBuildInfo = state.Post12;
-          }
-          else if (temp == 13)
-          {
-             state.activeBuildInfo = state.Post13;
+             state.activeBuildInfo = state.post10;
           }
    	   		state.activeBuildTab = 'Page';
   	   		state.firstBuildLoad =false;
@@ -1430,53 +1415,42 @@ export const mutations = {
 
           var temp = state.numArtPage;
           if (temp==1){
-             state.activeArtInfo = state.Post1;
+             state.activeArtInfo = state.post1;
           }
           else if (temp == 2) {
-             state.activeArtInfo = state.Post2;
+             state.activeArtInfo = state.post2;
           }
           else if (temp == 3) {
-             state.activeArtInfo = state.Post3;
+             state.activeArtInfo = state.post3;
           }
           else if (temp == 4) {
-             state.activeArtInfo = state.Post4;
+             state.activeArtInfo = state.post4;
           }
           else if (temp == 5)
           {
-             state.activeArtInfo = state.Post5;
+             state.activeArtInfo = state.post5;
           }
           else if (temp == 6)
           {
-             state.activeBuildInfo = state.Post6;
+             state.activeBuildInfo = state.post6;
           }
           else if (temp == 7)
           {
-             state.activeArtInfo = state.Post7;
+             state.activeArtInfo = state.post7;
           }
           else if (temp == 8)
           {
-             state.activeArtInfo = state.Post8;
+             state.activeArtInfo = state.post8;
           }
           else if (temp == 9)
           {
-             state.activeArtInfo = state.Post9;
+             state.activeArtInfo = state.post9;
           }
           else if (temp == 10)
           {
-             state.activeArtInfo = state.Post10;
+             state.activeArtInfo = state.post10;
           }
-          else if (temp == 11)
-          {
-             state.activeArtInfo = state.Post11;
-          }
-           else if (temp == 12)
-          {
-             state.activeArtInfo = state.Post12;
-          }
-          else if (temp == 13)
-          {
-             state.activeArtInfo = state.Post13;
-          }
+          e
    	   		state.activeArtTab = 'Page';
   	   		state.firstArtLoad =false;
   	   		break;
@@ -1495,53 +1469,42 @@ export const mutations = {
         }
           var temp = state.dataPage;
           if (temp==1){
-             state.activeDataInfo = state.Post1;
+             state.activeDataInfo = state.post1;
           }
           else if (temp == 2) {
-             state.activeDataInfo = state.Post2;
+             state.activeDataInfo = state.post2;
           }
           else if (temp == 3) {
-             state.activeDataInfo = state.Post3;
+             state.activeDataInfo = state.post3;
           }
           else if (temp == 4) {
-             state.activeDataInfo = state.Post4;
+             state.activeDataInfo = state.post4;
           }
           else if (temp == 5)
           {
-             state.activeDataInfo = state.Post5;
+             state.activeDataInfo = state.post5;
           }
           else if (temp == 6)
           {
-             state.activeDataInfo = state.Post6;
+             state.activeDataInfo = state.post6;
           }
           else if (temp == 7)
           {
-             state.activeDataInfo = state.Post7;
+             state.activeDataInfo = state.post7;
           }
           else if (temp == 8)
           {
-             state.activeDataInfo = state.Post8;
+             state.activeDataInfo = state.post8;
           }
           else if (temp == 9)
           {
-             state.activeDataInfo = state.Post9;
+             state.activeDataInfo = state.post9;
           }
           else if (temp == 10)
           {
-             state.activeDataInfo = state.Post10;
+             state.activeDataInfo = state.post10;
           }
-          else if (temp == 11)
-          {
-             state.activeDataInfo = state.Post11;
-          }
-           else if (temp == 12)
-          {
-             state.activeDataInfo = state.Post12;
-          }
-          else if (temp == 13)
-          {
-             state.activeDataInfo = state.Post13;
-          }
+          
           state.activeDataTab = 'Page';
           state.firstDataLoad =false;
           break;
@@ -1592,50 +1555,39 @@ export const mutations = {
           var temp = state.numBuildPage;
           
           if (temp == 2) {
-	  		     state.activeBuildInfo = state.Post2;
+	  		     state.activeBuildInfo = state.post2;
           }
           else if (temp == 3) {
-             state.activeBuildInfo = state.Post3;
+             state.activeBuildInfo = state.post3;
           }
           else if (temp == 4) {
-             state.activeBuildInfo = state.Post4;
+             state.activeBuildInfo = state.post4;
           }
           else if (temp == 5)
           {
-             state.activeBuildInfo = state.Post5;
+             state.activeBuildInfo = state.post5;
           }
           else if (temp == 6)
           {
-             state.activeBuildInfo = state.Post6;
+             state.activeBuildInfo = state.post6;
           }
           else if (temp == 7)
           {
-             state.activeBuildInfo = state.Post7;
+             state.activeBuildInfo = state.post7;
           }
           else if (temp == 8)
           {
-             state.activeBuildInfo = state.Post8;
+             state.activeBuildInfo = state.post8;
           }
           else if (temp == 9)
           {
-             state.activeBuildInfo = state.Post9;
+             state.activeBuildInfo = state.post9;
           }
           else if (temp == 10)
           {
-             state.activeBuildInfo = state.Post10;
+             state.activeBuildInfo = state.post10;
           }
-          else if (temp == 11)
-          {
-             state.activeBuildInfo = state.Post11;
-          }
-           else if (temp == 12)
-          {
-             state.activeBuildInfo = state.Post12;
-          }
-          else if (temp == 13)
-          {
-             state.activeBuildInfo = state.Post13;
-          }
+         
 	  		  state.activeBuildTab = 'Page';
      	    state.firstBuildLoad =false;
      	    break;
@@ -1646,50 +1598,39 @@ export const mutations = {
          var temp = state.numArtPage;
 
 	  		 if (temp == 2) {
-             state.activeArtInfo = state.Post2;
+             state.activeArtInfo = state.post2;
           }
           else if (temp == 3) {
-            state.activeArtInfo= state.Post3;
+            state.activeArtInfo= state.post3;
           }
           else if (temp == 4) {
-             state.activeArtInfo = state.Post4;
+             state.activeArtInfo = state.post4;
           }
           else if (temp == 5)
           {
-            state.activeArtInfo = state.Post5;
+            state.activeArtInfo = state.post5;
           }
           else if (temp == 6)
           {
-            state.activeArtInfo= state.Post6;
+            state.activeArtInfo= state.post6;
           }
           else if (temp == 7)
           {
-             state.activeArtInfo = state.Post7;
+             state.activeArtInfo = state.post7;
           }
           else if (temp == 8)
           {
-           state.activeArtInfo = state.Post8;
+           state.activeArtInfo = state.post8;
           }
           else if (temp == 9)
           {
-           state.activeArtInfo = state.Post9;
+           state.activeArtInfo = state.post9;
           }
           else if (temp == 10)
           {
-           state.activeArtInfo = state.Post10;
+           state.activeArtInfo = state.post10;
           }
-          else if (temp == 11)
-          {
-            state.activeArtInfo= state.Post11;
-          }
-           else if (temp == 12)
-          {
-            state.activeArtInfo= state.Post12;
-          }
-          else if (temp == 13)
-          {
-             state.activeArtInfo = state.Post13;
-          }
+          
 	  		 state.activeArtTab = 'Page';
      	   state.firstArtLoad =false;
      	   break;
@@ -1699,50 +1640,39 @@ export const mutations = {
          var temp = state.dataPage;
 
          if (temp == 2) {
-             state.activeDataInfo = state.Post2;
+             state.activeDataInfo = state.post2;
           }
           else if (temp == 3) {
-            state.activeDataInfo= state.Post3;
+            state.activeDataInfo= state.post3;
           }
           else if (temp == 4) {
-             state.activeDataInfo = state.Post4;
+             state.activeDataInfo = state.post4;
           }
           else if (temp == 5)
           {
-            state.activeDataInfo = state.Post5;
+            state.activeDataInfo = state.post5;
           }
           else if (temp == 6)
           {
-            state.activeDataInfo= state.Post6;
+            state.activeDataInfo= state.post6;
           }
           else if (temp == 7)
           {
-             state.activeDataInfo = state.Post7;
+             state.activeDataInfo = state.post7;
           }
           else if (temp == 8)
           {
-           state.activeDataInfo = state.Post8;
+           state.activeDataInfo = state.post8;
           }
           else if (temp == 9)
           {
-           state.activeDataInfo = state.Post9;
+           state.activeDataInfo = state.post9;
           }
           else if (temp == 10)
           {
-           state.activeDataInfo = state.Post10;
+           state.activeDataInfo = state.post10;
           }
-          else if (temp == 11)
-          {
-            state.activeDataInfo= state.Post11;
-          }
-           else if (temp == 12)
-          {
-            state.activeDataInfo= state.Post12;
-          }
-          else if (temp == 13)
-          {
-             state.activeDataInfo = state.Post13;
-          }
+          
          state.activeDataTab = 'Page';
          state.firstDataLoad =false;
          break;
@@ -1757,21 +1687,21 @@ export const mutations = {
    	  switch(state.activeView) {
 
    	   	case "Builder":
-   	   		state.activeBuildInfo = state.Post1;
+   	   		state.activeBuildInfo = state.post1;
    	   		state.activeBuildTab = 'Page';
 	   		  state.firstBuildLoad = false; 
 	   		  state.numBuildPage = 1;	 
 	   		  break;
 
 	   	  case "Articles":
-	   	    state.activeArtInfo = state.Post1;
+	   	    state.activeArtInfo = state.post1;
    	   		state.activeArtTab = 'Page';
 	   		  state.firstArtLoad = false; 
 	   		  state.numArtPage = 1;	 
 	   		  break;
 
         case "Data":
-          state.activeDataInfo = state.Post1;
+          state.activeDataInfo = state.post1;
           state.activeDataTab = 'Page';
           state.firstDataLoad = false; 
           state.dataPage = 1;  
@@ -1831,19 +1761,19 @@ export const mutations = {
 		switch(state.activeView) {
 
    	   case "Builder":
-		  	state.activeBuildInfo = state.Post1;
+		  	state.activeBuildInfo = state.post1;
 		  	state.numBuildPage = 1;
 		  	state.firstBuildLoad = false; 
 		  	break;
 
 		  case "Articles":
-		    state.activeArtInfo = state.Post1;
+		    state.activeArtInfo = state.post1;
 		  	state.numArtPage = 1;
 		  	state.firstArtLoad = false; 
 		  	break;
 
        case "Data":
-        state.activeDataInfo = state.Post1;
+        state.activeDataInfo = state.post1;
         state.DataPage = 1;
         state.firstDataLoad = false; 
         break;
@@ -2585,19 +2515,16 @@ export const mutations = {
       state.allPosts = data;
       var PostsLength = data.length;
       PostsLength--;
-      state.Post1 = data.slice(0, 50);
-      state.Post2 = data.slice(50, 100);
-      state.Post3 = data.slice(100, 150);
-      state.Post4 = data.slice(150, 200);
-      state.Post5 = data.slice(200, 250);
-      state.Post6 = data.slice(250, 300);
-      state.Post7 = data.slice(300, 350);
-      state.Post8 = data.slice(350, 400);
-      state.Post9 = data.slice(400, 450);
-      state.Post10 = data.slice(450,500);
-      state.Post11 = data.slice(500,550);
-      state.Post12 = data.slice(550, 600);  
-      state.Post13 = data.slice(600, PostsLength);
+      state.post1 = data.slice(0, 50);
+      state.post2 = data.slice(50, 100);
+      state.post3 = data.slice(100, 150);
+      state.post4 = data.slice(150, 200);
+      state.post5 = data.slice(200, 250);
+      state.post6 = data.slice(250, 300);
+      state.post7 = data.slice(300, 350);
+      state.post8 = data.slice(350, 400);
+      state.post9 = data.slice(400, 450);
+      state.post10 = data.slice(450, PostsLength);
    }
 	 
  }
@@ -2999,7 +2926,7 @@ export const mutations = {
           
           }
   		   	else {
-  				
+  				.
   				    commit("setQ321NoFetch" );
   		    }
   		 
@@ -3015,23 +2942,23 @@ export const mutations = {
             			commit("setQ421", res.data);
   			 	})
   		   	}
-          else if (this.allPostsLoaded) {
-
-              commit("setQ421", this.postsbyQuarter('Q421'));
-          
-          }
-
-  		   	else {
-  				
+          e.lse if (this.allPostsLoaded) {
+.
+ .             commit("setQ421", this.postsbyQuarter('Q421'));
+  .        
+   .       }
+.
+ . 		   	else {
+  			
   				    commit("setQ421NoFetch" );
   		    }
   		 
   		  },
 
 
-  		  async setQ420({ commit }) {
-		    
-  		    if (!this.allPostsLoaded || !this.Q420PostsFetched)
+ 		  async setQ420({ commit }) {
+	    
+		    if (!this.allPostsLoaded || !this.Q420PostsFetched)
   		   	{	
     	    		await this.$axios.get('/posts?quarter=Q420')
              			.then(res => {
@@ -3039,7 +2966,7 @@ export const mutations = {
   			 	})
   		   	}
 
-          else if (this.allPostsLoaded) {
+       else if (this.allPostsLoaded) {
 
               commit("setQ420", this.postsbyQuarter('Q420'));
           
@@ -3830,7 +3757,7 @@ export const mutations = {
 	export const getters = {
       
     loadedPosts(state) {
-        return state.Post1;
+      return state.post1;
 	   },
 
 	   payPostsFetched(state) {
@@ -4083,7 +4010,7 @@ export const mutations = {
     },
       
     firstpage(state) {	
-		  return state.Post1 ;
+		  return state.post1 ;
 	  },
 	 
 	  insurPosts(state) {

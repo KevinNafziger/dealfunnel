@@ -107,7 +107,7 @@ export default {
 
 computed: {
   ...mapState({
-          starter: state => state.Post1,
+          starter: state => state.posts.post1,
           firstDataLoad: state => state.posts.firstDataLoad,
           activeDataInfo:  state => state.posts.activeDataInfo,
           activeTab:  state => state.posts.activeDataTab,
