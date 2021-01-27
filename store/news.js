@@ -714,7 +714,7 @@ export const mutations = {
 
     setNextNoFetch(state){
 
-     state.numNewsPage++ 
+     state.numNewsPage+=1 
      var temp = state.numNewsPage;
      state.activeNewsTab = 'All';
      state.firstNewsLoad = false;
@@ -1421,7 +1421,7 @@ export const mutations = {
 			    commit("setNextNoFetch");
 			 }	      
        else {
-           var temp = nextArryVal;
+           var temp = this.nextArryVal;
 
 		      await this.$axios.get('/links?page=' + temp)
                 .then( res => {
@@ -1800,6 +1800,13 @@ export const mutations = {
       });
 
    },  
+  nextArryVal(state) {
+
+    var val = state.numNewsPage();
+    val++;
+    return val;
+   }, 
+
 
 	 prevArryVal(state) {
 

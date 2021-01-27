@@ -32,7 +32,7 @@
                 <br>
 
         <br>
-        <div id="myCompanyTag" v-if="link.company_id" class=" mdi mdi-domain mdi-24px plain"> <nuxt-link :to="'/companies/' + link.company_id "> {{link.company.name}}  </nuxt-link></div>
+        <div id="myCompanyTag" v-if="link.company_id && (link.company.name!== undefined)" class=" mdi mdi-domain mdi-24px plain"> <nuxt-link :to="'/companies/' + link.company_id "> {{link.company.name}}  </nuxt-link></div>
 
 
                 </span><br><br>
