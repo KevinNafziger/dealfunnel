@@ -119,7 +119,7 @@ export default {
  computed: {
 
   ...mapState({
-      starter: state => state.posts.pages[0],
+      starter: state => state.posts.post1,
       myboard: state => state.boards.myboard,
       showModal: state => state.boards.showModal,
       first: state => state.posts.firstBuildLoad,

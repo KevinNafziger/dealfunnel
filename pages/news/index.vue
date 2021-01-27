@@ -33,7 +33,8 @@
                 <br>
 
         <br>
-        <div id="myCompanyTag" v-if="link.company_id && !(link.company.name== undefined)" class="mdi mdi-domain mdi-24px plain"> <nuxt-link :to="'/companies/' + link.company_id "> {{link.company.name}}  </nuxt-link></div>
+        <div id="myCompanyTag" v-if="showCompany" class="mdi mdi-domain mdi-24px plain"> <nuxt-link v-if="showCompany" :to="'/companies/' + link.company_id "> {{link.company.name}}  </nuxt-link>
+        </div>
 
 
                 </span><br><br>
@@ -92,6 +93,12 @@ import {mapState} from 'vuex';
 import NewsTempSearch from '@/components/News/NewsTempSearch';
 export default {
   layout: 'raises',
+
+      data () {
+      return {
+      showCompany: false,
+     }
+    },
   methods: {
 
     getbyCategory: function(category) {
@@ -377,12 +384,14 @@ export default {
 
       if (this.first == true)
       {
+        this.showCompany = false;
         return this.starter;
       }
 
       else
 
       {
+        this.showCompany = true;
         return this.activeNewsInfo;
       }
 
