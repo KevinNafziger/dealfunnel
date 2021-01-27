@@ -3,7 +3,7 @@
 
       <div class="footer-info-row" >
         <div class="footer-info-links">
-          <p class="paragraph-34"><strong class="bold-text-11"><span class="mdi mdi-mail"></span> info@fintechhorizonsmedia.com</strong></p>
+          <p class="paragraph-34"><strong class="bold-text-11"><a href="mailto:info@fintechhorizonsmedia.com"><span  class="mdi mdi-mail"></span></a> <span class="info-email-link">info@fintechhorizonsmedia.com </span></strong></p>
         </div>
         <div class="footer-info-links">
           <p class="paragraph-34"><strong class="bold-text-11"><span class="mdi mdi-phone"></span> ‍480-438-5302</strong></p>
@@ -58,5 +58,11 @@ export default {
 .micro-txt {
   font-size: 10px;
   margin-top: -12px;
+}
+
+@media screen and (max-width:900px) {
+  .info-email-link {
+    display: none !important;
+  }
 }
 </style>
