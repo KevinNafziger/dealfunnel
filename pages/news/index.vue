@@ -29,10 +29,11 @@
                 <em>
                 <span style="margin-right:15px">
                    <a :href="link.url"  target="_blank" style="color:#4286ff">  {{link.publication}} </a>
+
                 <br>
 
         <br>
-        <div id="myCompanyTag" v-if="link.company_id && (link.company.name!== undefined)" class=" mdi mdi-domain mdi-24px plain"> <nuxt-link :to="'/companies/' + link.company_id "> {{link.company.name}}  </nuxt-link></div>
+        <div id="myCompanyTag" v-if="link.company_id && !(link.company.name== undefined)" class="mdi mdi-domain mdi-24px plain"> <nuxt-link :to="'/companies/' + link.company_id "> {{link.company.name}}  </nuxt-link></div>
 
 
                 </span><br><br>
@@ -333,7 +334,7 @@ export default {
   computed: {
 
     ...mapState({
-      starter: state => state.news1,
+      starter: state => state.news.news1,
       first: state => state.news.firstNewsLoad,
       activeNewsInfo: state => state.news.activeNewsInfo,
       activeTab: state => state.news.activeNewsTab,

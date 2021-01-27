@@ -172,6 +172,7 @@ export const mutations = {
       state.news23 = data.slice(4400, newsLength);
       state.activeNewsTab = 'All';
       state.firstNewsLoad =false;
+      state.numNewsPage =1;
 
    
     },
@@ -705,68 +706,175 @@ export const mutations = {
 
     setNextAndFetch(state, data) {
 
-      state.numNewsPage++ ;
+     var temp = state.numNewsPage;
+     temp++
+      
   		state.activeNewsInfo = data;
   		state.activeNewsTab = 'All';
-  		state.firstNewsLoad = false;  
+  		state.firstNewsLoad = false; 
+      if (temp==2) {
+          state.news2 = state.activeNewsInfo;
+          state.numNewsPage = 2;
+       }
+       else if (temp == 3) {
+      
+        state.news3 =state.activeNewsInfo;
+        state.numNewsPage = 3;
+
+       }
+       else if (temp == 4) {
+        
+        state.news4= state.activeNewsInfo;
+        state.numNewsPage = 4;
+       }
+       else if (temp == 5) {
+        
+       state.news5= state.activeNewsInfo;
+       state.numNewsPage = 5;
+       }
+
+       else if (temp == 6) { 
+       
+       state.news6 =state.activeNewsInfo;  
+       state.numNewsPage = 6;
+     
+      }
+       else if (temp == 7) {
+        
+      state.news7 = state.activeNewsInfo;
+      state.numNewsPage = 7;
+     
+       }
+     else if (temp == 8) {  
+
+      state.news8= state.activeNewsInfo;
+      state.numNewsPage = 8; 
+     
+     }
+     else if (temp ==9) {   
+      state.news9=state.activeNewsInfo;
+      state.numNewsPage = 9;  
+     
+     }
+    
+     else if (temp == 10) { 
+     
+      state.news10= state.activeNewsInfo;
+      state.numNewsPage = 10;  
+     
+     }
+
+     else if (temp == 11) {       
+
+      state.news11=state.activeNewsInfo;
+      state.numNewsPage = 11;
+
+     }
+
+     else if (temp == 12) {
+
+      state.news12=state.activeNewsInfo;
+      state.numNewsPage = 12;
+
+     }
+
+     else if (temp == 13) {
+
+      state.news13= state.activeNewsInfo;
+      state.numNewsPage = 13;
+     }
+
+     else if (temp == 14) {
+      state.news14=state.activeNewsInfo; 
+      state.numNewsPage = 14;
+     }
+
+     else if (temp == 15) {     
+       state.news15= state.activeNewsInfo; 
+      state.numNewsPage = 15;
+     }
+
+    else if (temp == 16) {
+     state.news16=state.activeNewsInfo;
+      state.numNewsPage = 16; 
+    }
+    else if (temp ==17) {
+      state.news17=state.activeNewsInfo;
+      state.numNewsPage = 17; 
+    }
+    else if (temp == 18) {
+      state.news18= state.activeNewsInfo;
+      state.numNewsPage = 18; 
+    }
+    else if (temp == 19) {
+      state.news19= state.activeNewsInfo; 
+      state.numNewsPage = 19;
+   }
+   else if (temp == 20) {
+     state.news20= state.activeNewsInfo; 
+     state.numNewsPage = 20;
+   }
+   else if (temp == 21) { 
+     state.news21= state.activeNewsInfo; 
+     state.numNewsPage = 21;
+   }
+   else if (temp == 22) {
+    state.news22= state.activeNewsInfo; 
+    state.numNewsPage = 22;
+   }
+   else if (temp == 23) {
+    state.news23= state.activeNewsInfo; 
+    state.numNewsPage = 23; 
+   } 
 
      },
 
     setNextNoFetch(state){
-
-     state.numNewsPage+=1 
+ 
      var temp = state.numNewsPage;
+     temp++
      state.activeNewsTab = 'All';
      state.firstNewsLoad = false;
 
-       if (temp == 2) {
-          state.activeNewsInfo = state.news2;
+       if (temp==2) {
+          state.activeNewsInfo= state.news2;
           state.numNewsPage = 2;
        }
-
        else if (temp == 3) {
       
         state.activeNewsInfo = state.news3;
         state.numNewsPage = 3;
 
        }
-
        else if (temp == 4) {
         
         state.activeNewsInfo = state.news4;
         state.numNewsPage = 4;
        }
-
        else if (temp == 5) {
         
        state.activeNewsInfo = state.news5;
        state.numNewsPage = 5;
-     
-      }
+       }
 
-      else if (temp == 6) {
-        
+      else if (temp == 6) { 
       state.activeNewsInfo = state.news6;  
       state.numNewsPage = 6;
      
      }
-     
      else if (temp == 7) {
         
       state.activeNewsInfo = state.news7;
       state.numNewsPage = 7;
      
      }
-
      else if (temp == 8) {  
 
       state.activeNewsInfo = state.news8;
       state.numNewsPage = 8; 
      
      }
-     
-     else if (temp ==9) {    
-      
+     else if (temp ==9) {   
       state.activeNewsInfo = state.news9;
       state.numNewsPage = 9;  
      
@@ -1414,15 +1522,15 @@ export const mutations = {
 		      commit("setPrevious");  		 
   		 },
 
-      async goNext( {commit}, pageVal) {
+      async goNext( {commit}, pagey) {
 
       
 			 if (this.allNewsFetched) {
 			    commit("setNextNoFetch");
 			 }	      
        else {
-           var temp = this.nextArryVal;
-
+          var temp = pagey;
+          temp++ ;
 		      await this.$axios.get('/links?page=' + temp)
                 .then( res => {
 				       commit("setNextAndFetch", res.data)	  
@@ -1783,9 +1891,13 @@ export const mutations = {
   
   },
 
+  newsPage(state) {
+    return state.numNewsPage;
+  },
+
   totalAllNews(state) {
 
-    if (this.allNewsLoaded) {
+    if (this.allNewsFetched) {
       return state.allNews.length;
     }
     else {
