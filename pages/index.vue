@@ -85,10 +85,20 @@
     <!-- CARD 3 end-->
   </div>
 <div class="footer">
-  <p ><br>
-  To learn more about our services, or to receive a demo, click here or call
-  <span class="mdi mdi-phone"></span><span style="color:#000099"> 480-438-5302 </span> for more information. </p>
-  </span>
+
+  <div class="footer-info-row" >
+    <div class="footer-info-links">
+      <p class="paragraph-34"><strong class="bold-text-11"><span class="mdi mdi-mail"></span> info@fintechhorizonsmedia.com</strong></p>
+    </div>
+    <div class="footer-info-links">
+      <p class="paragraph-34"><strong class="bold-text-11"><span class="mdi mdi-phone"></span> ‍480-438-5302</strong></p>
+    </div>
+    <div class="footer-info-links">  <!-- slack channel link expires every 30 days -->
+      <p class="paragraph-34"><strong class="bold-text-11">Join us on <a href="https://join.slack.com/t/fintechhorizonsmedia/shared_invite/zt-ln45ksap-qfM473ZMz0KbifvWPoyNSw"><img width="50px" class="slack-link" src="https://a.slack-edge.com/bv1-9/slack_logo-ebd02d1.svg"></img></a></strong></p>
+    </div>
+  </div>
+  <p class="micro-txt"> learn more about our services, or to receive a demo. </p>
+
 </div>
 
 </div>
@@ -345,17 +355,6 @@ box-shadow: 0px 1px 5px -3px #474747 !important;
     box-shadow: 0 1px 3px 0 #a5a5a5 !important;
   }
 
-.footer{
-  width:100%;
-  height:50px;
-  background-color: #4f81bd;
-  color: #ffffff;
-  bottom: 0px;
-  position: fixed;
-  text-align: center;
-  z-index: 9;
-}
-
 .intro {
   position: relative;
   padding: 30px;
@@ -423,4 +422,41 @@ margin: 0px;
 border-radius: 20px;
 }
 
+
+
+.footer-info-links {
+  width: 33.33% ;
+}
+
+
+.social-media-links {
+    width: 19%;
+    display: inline-flex;
+    justify-content: center;
+}
+.footer-info-row {
+  display: inline-flex;
+    margin-top: 16px;
+    font-size: 14px;
+    font-weight: 300;
+    width: 100%;
+}
+.slack-link {
+      margin-top: 0px;
+}
+
+.footer{
+  width:100%;
+  height:70px;
+  background-color: #4f81bd;
+  color: #ffffff;
+  bottom: 0px;
+  position: fixed;
+  text-align: center;
+  z-index: 9;
+}
+.micro-txt {
+  font-size: 10px;
+  margin-top: -12px;
+}
 </style>
