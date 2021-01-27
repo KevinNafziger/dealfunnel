@@ -1,26 +1,28 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import { normalizeURL, decode } from '@nuxt/ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _426e4644 = () => interopDefault(import('..\\pages\\about\\index.vue' /* webpackChunkName: "pages/about/index" */))
-const _af504094 = () => interopDefault(import('..\\pages\\builder\\index.vue' /* webpackChunkName: "pages/builder/index" */))
-const _0e8b4fb6 = () => interopDefault(import('..\\pages\\companies\\index.vue' /* webpackChunkName: "pages/companies/index" */))
-const _7d451f19 = () => interopDefault(import('..\\pages\\data\\index.vue' /* webpackChunkName: "pages/data/index" */))
-const _189ab8e8 = () => interopDefault(import('..\\pages\\login\\index.vue' /* webpackChunkName: "pages/login/index" */))
-const _16f32a0e = () => interopDefault(import('..\\pages\\logout\\index.vue' /* webpackChunkName: "pages/logout/index" */))
-const _4555bf60 = () => interopDefault(import('..\\pages\\news\\index.vue' /* webpackChunkName: "pages/news/index" */))
-const _6a37d8d2 = () => interopDefault(import('..\\pages\\newsletters\\index.vue' /* webpackChunkName: "pages/newsletters/index" */))
-const _c93db384 = () => interopDefault(import('..\\pages\\posts\\index.vue' /* webpackChunkName: "pages/posts/index" */))
-const _64592b48 = () => interopDefault(import('..\\pages\\raises\\index.vue' /* webpackChunkName: "pages/raises/index" */))
-const _2af44600 = () => interopDefault(import('..\\pages\\register\\index.vue' /* webpackChunkName: "pages/register/index" */))
-const _7ae77f12 = () => interopDefault(import('..\\pages\\reports\\index.vue' /* webpackChunkName: "pages/reports/index" */))
-const _891b804e = () => interopDefault(import('..\\pages\\tours\\builderpreview.vue' /* webpackChunkName: "pages/tours/builderpreview" */))
-const _4a9edb63 = () => interopDefault(import('..\\pages\\tours\\reports.vue' /* webpackChunkName: "pages/tours/reports" */))
-const _56985f24 = () => interopDefault(import('..\\pages\\companies\\_id\\index.vue' /* webpackChunkName: "pages/companies/_id/index" */))
-const _5b98403a = () => interopDefault(import('..\\pages\\newsletters\\_id\\index.vue' /* webpackChunkName: "pages/newsletters/_id/index" */))
-const _c7e944c8 = () => interopDefault(import('..\\pages\\posts\\_id\\index.vue' /* webpackChunkName: "pages/posts/_id/index" */))
-const _cd61017a = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
+const _1736d247 = () => interopDefault(import('..\\pages\\about\\index.vue' /* webpackChunkName: "pages/about/index" */))
+const _6d2d76f9 = () => interopDefault(import('..\\pages\\builder\\index.vue' /* webpackChunkName: "pages/builder/index" */))
+const _174fbb8e = () => interopDefault(import('..\\pages\\companies\\index.vue' /* webpackChunkName: "pages/companies/index" */))
+const _210986b6 = () => interopDefault(import('..\\pages\\data\\index.vue' /* webpackChunkName: "pages/data/index" */))
+const _2539762a = () => interopDefault(import('..\\pages\\login\\index.vue' /* webpackChunkName: "pages/login/index" */))
+const _8e614154 = () => interopDefault(import('..\\pages\\logout\\index.vue' /* webpackChunkName: "pages/logout/index" */))
+const _fdccf026 = () => interopDefault(import('..\\pages\\news\\index.vue' /* webpackChunkName: "pages/news/index" */))
+const _70c6515a = () => interopDefault(import('..\\pages\\newsletters\\index.vue' /* webpackChunkName: "pages/newsletters/index" */))
+const _7029b241 = () => interopDefault(import('..\\pages\\posts\\index.vue' /* webpackChunkName: "pages/posts/index" */))
+const _dbc7428e = () => interopDefault(import('..\\pages\\raises\\index.vue' /* webpackChunkName: "pages/raises/index" */))
+const _00d1971d = () => interopDefault(import('..\\pages\\register\\index.vue' /* webpackChunkName: "pages/register/index" */))
+const _3fbd1655 = () => interopDefault(import('..\\pages\\reports\\index.vue' /* webpackChunkName: "pages/reports/index" */))
+const _5d049d3a = () => interopDefault(import('..\\pages\\subscription\\index.vue' /* webpackChunkName: "pages/subscription/index" */))
+const _6338f194 = () => interopDefault(import('..\\pages\\tours\\builderpreview.vue' /* webpackChunkName: "pages/tours/builderpreview" */))
+const _0f7472a6 = () => interopDefault(import('..\\pages\\tours\\reports.vue' /* webpackChunkName: "pages/tours/reports" */))
+const _6989a681 = () => interopDefault(import('..\\pages\\companies\\_id\\index.vue' /* webpackChunkName: "pages/companies/_id/index" */))
+const _241e7800 = () => interopDefault(import('..\\pages\\newsletters\\_id\\index.vue' /* webpackChunkName: "pages/newsletters/_id/index" */))
+const _6fd8db79 = () => interopDefault(import('..\\pages\\posts\\_id\\index.vue' /* webpackChunkName: "pages/posts/_id/index" */))
+const _63ed20a0 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 
 // TODO: remove in Nuxt 3
 const emptyFn = () => {}
@@ -40,91 +42,106 @@ export const routerOptions = {
 
   routes: [{
     path: "/about",
-    component: _426e4644,
+    component: _1736d247,
     name: "about"
   }, {
     path: "/builder",
-    component: _af504094,
+    component: _6d2d76f9,
     name: "builder"
   }, {
     path: "/companies",
-    component: _0e8b4fb6,
+    component: _174fbb8e,
     name: "companies"
   }, {
     path: "/data",
-    component: _7d451f19,
+    component: _210986b6,
     name: "data"
   }, {
     path: "/login",
-    component: _189ab8e8,
+    component: _2539762a,
     name: "login"
   }, {
     path: "/logout",
-    component: _16f32a0e,
+    component: _8e614154,
     name: "logout"
   }, {
     path: "/news",
-    component: _4555bf60,
+    component: _fdccf026,
     name: "news"
   }, {
     path: "/newsletters",
-    component: _6a37d8d2,
+    component: _70c6515a,
     name: "newsletters"
   }, {
     path: "/posts",
-    component: _c93db384,
+    component: _7029b241,
     name: "posts"
   }, {
     path: "/raises",
-    component: _64592b48,
+    component: _dbc7428e,
     name: "raises"
   }, {
     path: "/register",
-    component: _2af44600,
+    component: _00d1971d,
     name: "register"
   }, {
     path: "/reports",
-    component: _7ae77f12,
+    component: _3fbd1655,
     name: "reports"
   }, {
+    path: "/subscription",
+    component: _5d049d3a,
+    name: "subscription"
+  }, {
     path: "/tours/builderpreview",
-    component: _891b804e,
+    component: _6338f194,
     name: "tours-builderpreview"
   }, {
     path: "/tours/reports",
-    component: _4a9edb63,
+    component: _0f7472a6,
     name: "tours-reports"
   }, {
     path: "/companies/:id",
-    component: _56985f24,
+    component: _6989a681,
     name: "companies-id"
   }, {
     path: "/newsletters/:id",
-    component: _5b98403a,
+    component: _241e7800,
     name: "newsletters-id"
   }, {
     path: "/posts/:id",
-    component: _c7e944c8,
+    component: _6fd8db79,
     name: "posts-id"
   }, {
     path: "/",
-    component: _cd61017a,
+    component: _63ed20a0,
     name: "index"
   }],
 
   fallback: false
 }
 
+function decodeObj(obj) {
+  for (const key in obj) {
+    if (typeof obj[key] === 'string') {
+      obj[key] = decode(obj[key])
+    }
+  }
+}
+
 export function createRouter () {
   const router = new Router(routerOptions)
-  const resolve = router.resolve.bind(router)
 
-  // encodeURI(decodeURI()) ~> support both encoded and non-encoded urls
+  const resolve = router.resolve.bind(router)
   router.resolve = (to, current, append) => {
     if (typeof to === 'string') {
-      to = encodeURI(decodeURI(to))
+      to = normalizeURL(to)
     }
-    return resolve(to, current, append)
+    const r = resolve(to, current, append)
+    if (r && r.resolved && r.resolved.query) {
+      decodeObj(r.resolved.query)
+    }
+    return r
   }
 
   return router

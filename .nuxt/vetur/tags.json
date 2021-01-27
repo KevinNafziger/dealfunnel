@@ -1,116 +1,110 @@
 {
-  "Postsys": {
-    "description": "Auto imported from components/Builder/Postsys.vue"
-  },
-  "LazyPostsys": {
-    "description": "Auto imported from components/Builder/Postsys.vue"
-  },
-  "Searchbar": {
-    "description": "Auto imported from components/Builder/Searchbar.vue"
-  },
-  "LazySearchbar": {
-    "description": "Auto imported from components/Builder/Searchbar.vue"
-  },
   "DataTempSearch": {
-    "description": "Auto imported from components/Data/DataTempSearch.vue"
+    "description": "Auto imported from C:/qfish4/dealfunnel/components/Data/DataTempSearch.vue"
   },
   "LazyDataTempSearch": {
-    "description": "Auto imported from components/Data/DataTempSearch.vue"
+    "description": "Auto imported from C:/qfish4/dealfunnel/components/Data/DataTempSearch.vue"
   },
   "CompanyTempSearch": {
-    "description": "Auto imported from components/Company/CompanyTempSearch.vue"
+    "description": "Auto imported from C:/qfish4/dealfunnel/components/Company/CompanyTempSearch.vue"
   },
   "LazyCompanyTempSearch": {
-    "description": "Auto imported from components/Company/CompanyTempSearch.vue"
+    "description": "Auto imported from C:/qfish4/dealfunnel/components/Company/CompanyTempSearch.vue"
+  },
+  "Postsys": {
+    "description": "Auto imported from C:/qfish4/dealfunnel/components/Builder/Postsys.vue"
+  },
+  "LazyPostsys": {
+    "description": "Auto imported from C:/qfish4/dealfunnel/components/Builder/Postsys.vue"
+  },
+  "Searchbar": {
+    "description": "Auto imported from C:/qfish4/dealfunnel/components/Builder/Searchbar.vue"
+  },
+  "LazySearchbar": {
+    "description": "Auto imported from C:/qfish4/dealfunnel/components/Builder/Searchbar.vue"
   },
   "DealTempSearch": {
-    "description": "Auto imported from components/Deals/DealTempSearch.vue"
+    "description": "Auto imported from C:/qfish4/dealfunnel/components/Deals/DealTempSearch.vue"
   },
   "LazyDealTempSearch": {
-    "description": "Auto imported from components/Deals/DealTempSearch.vue"
+    "description": "Auto imported from C:/qfish4/dealfunnel/components/Deals/DealTempSearch.vue"
   },
   "Board": {
-    "description": "Auto imported from components/Draggable/Board.vue"
+    "description": "Auto imported from C:/qfish4/dealfunnel/components/Draggable/Board.vue"
   },
   "LazyBoard": {
-    "description": "Auto imported from components/Draggable/Board.vue"
+    "description": "Auto imported from C:/qfish4/dealfunnel/components/Draggable/Board.vue"
   },
   "Card": {
-    "description": "Auto imported from components/Draggable/Card.vue"
+    "description": "Auto imported from C:/qfish4/dealfunnel/components/Draggable/Card.vue"
   },
   "LazyCard": {
-    "description": "Auto imported from components/Draggable/Card.vue"
+    "description": "Auto imported from C:/qfish4/dealfunnel/components/Draggable/Card.vue"
   },
   "DynamicContent": {
-    "description": "Auto imported from components/Grid/DynamicContent.vue"
+    "description": "Auto imported from C:/qfish4/dealfunnel/components/Grid/DynamicContent.vue"
   },
   "LazyDynamicContent": {
-    "description": "Auto imported from components/Grid/DynamicContent.vue"
-  },
-  "Leftbar": {
-    "description": "Auto imported from components/Leftbar/Leftbar.vue"
-  },
-  "LazyLeftbar": {
-    "description": "Auto imported from components/Leftbar/Leftbar.vue"
+    "description": "Auto imported from C:/qfish4/dealfunnel/components/Grid/DynamicContent.vue"
   },
   "LettersList": {
-    "description": "Auto imported from components/Letters/LettersList.vue"
+    "description": "Auto imported from C:/qfish4/dealfunnel/components/Letters/LettersList.vue"
   },
   "LazyLettersList": {
-    "description": "Auto imported from components/Letters/LettersList.vue"
+    "description": "Auto imported from C:/qfish4/dealfunnel/components/Letters/LettersList.vue"
   },
   "Burger": {
-    "description": "Auto imported from components/Navigation/Burger.vue"
+    "description": "Auto imported from C:/qfish4/dealfunnel/components/Navigation/Burger.vue"
   },
   "LazyBurger": {
-    "description": "Auto imported from components/Navigation/Burger.vue"
+    "description": "Auto imported from C:/qfish4/dealfunnel/components/Navigation/Burger.vue"
   },
   "Mobilebar": {
-    "description": "Auto imported from components/Navigation/Mobilebar.vue"
+    "description": "Auto imported from C:/qfish4/dealfunnel/components/Navigation/Mobilebar.vue"
   },
   "LazyMobilebar": {
-    "description": "Auto imported from components/Navigation/Mobilebar.vue"
+    "description": "Auto imported from C:/qfish4/dealfunnel/components/Navigation/Mobilebar.vue"
   },
   "TheHeader": {
-    "description": "Auto imported from components/Navigation/TheHeader.vue"
+    "description": "Auto imported from C:/qfish4/dealfunnel/components/Navigation/TheHeader.vue"
   },
   "LazyTheHeader": {
-    "description": "Auto imported from components/Navigation/TheHeader.vue"
+    "description": "Auto imported from C:/qfish4/dealfunnel/components/Navigation/TheHeader.vue"
   },
   "NewsTempSearch": {
-    "description": "Auto imported from components/News/NewsTempSearch.vue"
+    "description": "Auto imported from C:/qfish4/dealfunnel/components/News/NewsTempSearch.vue"
   },
   "LazyNewsTempSearch": {
-    "description": "Auto imported from components/News/NewsTempSearch.vue"
+    "description": "Auto imported from C:/qfish4/dealfunnel/components/News/NewsTempSearch.vue"
   },
   "PostList": {
-    "description": "Auto imported from components/Posts/PostList.vue"
+    "description": "Auto imported from C:/qfish4/dealfunnel/components/Posts/PostList.vue"
   },
   "LazyPostList": {
-    "description": "Auto imported from components/Posts/PostList.vue"
+    "description": "Auto imported from C:/qfish4/dealfunnel/components/Posts/PostList.vue"
   },
   "PostTempSearch": {
-    "description": "Auto imported from components/Posts/PostTempSearch.vue"
+    "description": "Auto imported from C:/qfish4/dealfunnel/components/Posts/PostTempSearch.vue"
   },
   "LazyPostTempSearch": {
-    "description": "Auto imported from components/Posts/PostTempSearch.vue"
+    "description": "Auto imported from C:/qfish4/dealfunnel/components/Posts/PostTempSearch.vue"
   },
   "RaiseTempSearch": {
-    "description": "Auto imported from components/Raises/RaiseTempSearch.vue"
+    "description": "Auto imported from C:/qfish4/dealfunnel/components/Raises/RaiseTempSearch.vue"
   },
   "LazyRaiseTempSearch": {
-    "description": "Auto imported from components/Raises/RaiseTempSearch.vue"
+    "description": "Auto imported from C:/qfish4/dealfunnel/components/Raises/RaiseTempSearch.vue"
   },
   "Sidebar": {
-    "description": "Auto imported from components/Sidebar/Sidebar.vue"
+    "description": "Auto imported from C:/qfish4/dealfunnel/components/Sidebar/Sidebar.vue"
   },
   "LazySidebar": {
-    "description": "Auto imported from components/Sidebar/Sidebar.vue"
+    "description": "Auto imported from C:/qfish4/dealfunnel/components/Sidebar/Sidebar.vue"
   },
   "Visits": {
-    "description": "Auto imported from components/Visits/Visits.vue"
+    "description": "Auto imported from C:/qfish4/dealfunnel/components/Visits/Visits.vue"
   },
   "LazyVisits": {
-    "description": "Auto imported from components/Visits/Visits.vue"
+    "description": "Auto imported from C:/qfish4/dealfunnel/components/Visits/Visits.vue"
   }
 }
