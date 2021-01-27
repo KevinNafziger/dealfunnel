@@ -84,22 +84,7 @@
     </div>
     <!-- CARD 3 end-->
   </div>
-<div class="footer">
 
-  <div class="footer-info-row" >
-    <div class="footer-info-links">
-      <p class="paragraph-34"><strong class="bold-text-11"><span class="mdi mdi-mail"></span> info@fintechhorizonsmedia.com</strong></p>
-    </div>
-    <div class="footer-info-links">
-      <p class="paragraph-34"><strong class="bold-text-11"><span class="mdi mdi-phone"></span> ‍480-438-5302</strong></p>
-    </div>
-    <div class="footer-info-links">  <!-- slack channel link expires every 30 days -->
-      <p class="paragraph-34"><strong class="bold-text-11">Join us on <a href="https://join.slack.com/t/fintechhorizonsmedia/shared_invite/zt-ln45ksap-qfM473ZMz0KbifvWPoyNSw"><img width="50px" class="slack-link" src="https://a.slack-edge.com/bv1-9/slack_logo-ebd02d1.svg"></img></a></strong></p>
-    </div>
-  </div>
-  <p class="micro-txt"> learn more about our services, or to receive a demo. </p>
-
-</div>
 
 </div>
 </template>
