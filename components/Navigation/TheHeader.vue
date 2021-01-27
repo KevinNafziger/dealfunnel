@@ -31,7 +31,7 @@
         <li v-if="!(this.loggedIn)" class="nav-item"><nuxt-link to="/login">Login</nuxt-link></li>
         <li v-if="!(this.loggedIn)" class="nav-item"><nuxt-link to="/register">Register</nuxt-link></li>
          <li  v-if="this.loggedIn">
-             <i style="color:white">signed in:<b>{{email}}</b></i>
+             <i style="color:#b9cfe6">signed in:<b>{{email}}</b></i>
          </li>
 
       </ul>
