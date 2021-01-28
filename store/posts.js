@@ -1538,7 +1538,7 @@ export const mutations = {
           
           else if (temp == 2) {
 
-             state.post2 =state.activeBuildInfo;
+             state.post2= state.activeBuildInfo;
              state.numBuildPage =2;
           }
           else if (temp == 3) {
@@ -1854,7 +1854,6 @@ export const mutations = {
     }
 
    },
-
 
    setLast(state) {
 
@@ -2216,7 +2215,7 @@ export const mutations = {
 
 		switch(state.activeView) {
 
-   	   	  case "Data":
+   	   case "Data":
 		     state.activeDataInfo = state.Q221;
 		     state.activeDataTab = 'Next Raise: Q221';	
 		     state.DataLoad = false;
@@ -2230,7 +2229,7 @@ export const mutations = {
 
 		switch(state.activeView) {
 
-   	   	  case "Data":
+   	   case "Data":
 		     state.activeDataInfo = state.Q321;
 		     state.activeDataTab = 'Next Raise: Q321';	
 		     state.firstDataLoad = false;
@@ -2244,7 +2243,7 @@ export const mutations = {
 
 		switch(state.activeView) {
 
-   	   	  case "Data":
+   	   case "Data":
 		     state.activeDataInfo = state.Q421;
 		     state.activeDataTab = 'Q421';	
 		     state.firstLoad = false;
@@ -2256,7 +2255,7 @@ export const mutations = {
 
 		switch(state.activeView) {
 
-   	   	  case "Data":
+   	   case "Data":
 		     state.activeDataInfo = state.zerotoone;
 		     state.activeDataTab = 'Next Raise: $0m to $1m';	
 		     state.firstLoad = false;
@@ -2611,7 +2610,7 @@ export const mutations = {
 		
 		switch(state.activeView) {
 
-   	   	  case "Builder":
+   	   	case "Builder":
 		       state.activeBuildInfo = state.payments;
 		       state.activeBuildTab = 'Payments';	
 		       state.firstBuildLoad = false;
@@ -2659,7 +2658,6 @@ export const mutations = {
 			  break;
 	   }
 	},
-
 
 
 	setBankNoFetch(state) {
@@ -2865,7 +2863,6 @@ export const mutations = {
 			   }
   		 
   	 },
-
 
   	 async setGrowth({ commit }) {
 
@@ -3751,25 +3748,9 @@ export const mutations = {
   		 },
 
   		 async goNext( {commit}, pageVal) {
+    			   commit("setNextNoFetch");
 
-    			if (this.allPostsLoaded) {
-
-    			  commit("setNextNoFetch");
-    			}	
-
-    			else {
-    			  
-    			  var items = pageVal;
-            items++;
-    			  await this.$axios.get('/posts?page=' + items)
-                    .then( res => {
-    					commit("setNextAndFetch", res.data)	  
-    			   })               
-    			}	 
-  		 
-  		  },
-
-
+      },
   		 async setSearchTab( {commit}, topic) {
 
           		commit("setSearchTab", topic);
@@ -3901,7 +3882,6 @@ export const mutations = {
                })  
            }
            else {
-
                commit("setInsurNextNoFetch") 
            }
 
@@ -4036,12 +4016,12 @@ export const mutations = {
 
 	  firstPostsFetched(state) {
 
-      if (state.Post1.length) {
-        return true;
+      if (!(state.post1.length)) {
+        return false;
       } 
 
       else {
-        return false;
+        return true;
       }
 
     },
@@ -4579,8 +4559,7 @@ export const mutations = {
       return false;
     }
 
-
-   },
+  },
 
   midatlanticPostsFetched(state) {
 
@@ -4594,21 +4573,21 @@ export const mutations = {
 
    },
  
-  allPostsLoaded(state) {
+   allPostsLoaded(state) {
 
-      if (state.allPosts.length) {
-        return true;
+      if (!(state.allPosts.length)) {
+        return false;
       }
 
       else {
-        return false;
+        return true;
       }
   
     },
 
    totalAllPosts(state) {
 
-      if (this.allPostsLoaded) {
+      if (!(state.allPosts.length == undefined)) {
         return state.allPosts.length;
       }
 
@@ -4657,7 +4636,7 @@ export const mutations = {
      },    
   
 
-	   prevArryVal() {
+	   prevArryVal(state) {
 
   	 if (this.activeView == "Articles") {
   	 		var val = this.activeArtPage();
