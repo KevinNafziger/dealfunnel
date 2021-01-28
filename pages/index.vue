@@ -9,10 +9,10 @@
   <h1 style="border-radius:3px; margin-bottom: 0px; opacity: 1; transform: translateX(0px) translateY(0px) translateZ(0px);" class="intro-title">Newsletters, data, and reports <br>
   </h1><br>
   <p class="MsoNormal">
-  <scan class="intro-p">
+  <span class="intro-p">
     DealFunnel features articles, reports, searchable datasets and our popular biweekly <i>Big Fintech Newsletter.</i> Our newsletter has grown and added new coverage areas over time. It still has "Big Fintech" in its title, but its focus now encompasses technology businesses serving the financial services industry and beyond.
     This includes companies in Blockchain, DLT and Crypto as well as in HealthTech, Artificial Intelligence, LegalTech, and Cybersecurity.
-  </scan>
+  </span>
   </p>
   <p class="intro-p" >
   <b>Exceptional</b> –
