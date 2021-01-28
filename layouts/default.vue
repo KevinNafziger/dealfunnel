@@ -2,12 +2,14 @@
   <div class="layout-d">
   <TheHeader />
     <Nuxt />
+    <TheFooter />
   </div>
 </template>
 
 
 <script>
 import TheHeader from '@/components/Navigation/TheHeader';
+import TheFooter from '@/components/Navigation/TheFooter';
 import Visits from '@/components/Visits/Visits';
 
 
@@ -18,7 +20,8 @@ export default {
 
   components: {
   TheHeader,
-  Visits
+  Visits,
+  TheFooter
   },
 
 }

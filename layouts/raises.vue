@@ -3,6 +3,7 @@
   <TheHeader />
   <Visits />
     <Nuxt />
+    <TheFooter />
   </div>
 </template>
 
