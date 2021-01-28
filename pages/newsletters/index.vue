@@ -14,7 +14,7 @@
 
 <script>
 import {mapState} from 'vuex';
-import LettersList  from  '@/components/Letters/LettersList'
+import LettersList from '@/components/Letters/LettersList'
 export default {
 
   computed: {

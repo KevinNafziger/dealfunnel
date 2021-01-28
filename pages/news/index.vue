@@ -272,7 +272,7 @@ export default {
 
           case 'Last':
             var page = this.numPage;
-            this.$store.dispatch("news/goLast", page);
+            this.$store.dispatch("news/goLast");
             break;
          }
      },
@@ -306,7 +306,6 @@ export default {
             var page = this.insPage;
             this.$store.dispatch("news/setInsurNext", page);
             break;
-
          }
      },
 
@@ -384,14 +383,13 @@ export default {
 
       if (this.first == true)
       {
-        this.showCompany = false;
         return this.starter;
       }
 
-      else
-
-      {
-        this.showCompany = true;
+      else {
+        if (this.numNewsPage > 1) {
+            this.showCompany = true;
+        }
         return this.activeNewsInfo;
       }
 

@@ -10,7 +10,7 @@
 </div>
   <a href="https://fintechhorizonsmedia.com/fintechraises.xlsx"
    style="color:dimgray" id="myExcelIcoTag"><br>
-   <center><span content="download excel report"
+   <center><span content="export to Excel"
  v-tippy="{ placement : 'bottom' }" id="oki" class="mdi mdi-file-excel" style="margin:20px;font-size: 34px;"></span></center><br>
  </a>
 

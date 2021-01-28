@@ -19,11 +19,16 @@
 
   <RaiseTempSearch></RaiseTempSearch> <br>
 
-  <a href="https://fintechhorizonsmedia.com/fintechraises.xlsx"
+
+  <a v-if="this.loggedIn" href="https://fintechhorizonsmedia.com/fintechraises.xlsx"
    >
     <center><span content="export to Excel"
   v-tippy="{ placement : 'bottom' }" id="oki" class="mdi mdi-file-excel" style="margin:20px;font-size: 34px;"></span></center><br>
   </a>
+  <nuxt-link v-if="!(this.loggedIn)" :to="'/login/'"  >
+    <center><span content="export to Excel"
+  v-tippy="{ placement : 'bottom' }" id="oki" class="mdi mdi-file-excel" style="margin:20px;font-size: 34px;"></span></center><br>
+  </nuxt-link>
 
   <div class="draft-div">
     <table class="table-striped" width="100%">
@@ -184,11 +189,10 @@
        },
 
 
-
       submitSearch(topic) {
 
         this.$store.dispatch("raise/setActiveTab", topic);
-         this.$store.dispatch("raise/submitSearch", topic);
+        this.$store.dispatch("raise/submitSearch", topic);
 
       }
 
@@ -201,6 +205,7 @@
           allRaises:  state => state.raise.allRaises,
           raises: state =>  state.raise.activeRaiseInfo,
           firstRaiseLoad: state => state.raise.firstRaiseLoad,
+          loggedIn: state => state.auth.loggedIn,
       }),
 
       filterMessage() {

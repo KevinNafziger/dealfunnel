@@ -98,6 +98,7 @@ export const mutations = {
       state.insur5 = data.slice(800, insurLength);
 
       state.activeNewsInfo = data.slice(0, 200);
+      state.insNewsPage = 1;
       state.activeNewsTab = 'Insurtech';
       state.firstNewsLoad =false;
    },
@@ -171,7 +172,7 @@ export const mutations = {
       state.news22 = data.slice(4200, 4400);
       state.news23 = data.slice(4400, newsLength);
       state.activeNewsTab = 'All';
-      state.firstNewsLoad =false;
+      state.firstNewsLoad = false;
       state.numNewsPage =1;
 
    
@@ -181,7 +182,10 @@ export const mutations = {
     
      state.activeNewsInfo = data;
      state.firstNewsLoad = false;
-    
+     state.numNewsPage=1;
+     state.blkNewsPage=1;
+     state.insNewsPage=1;
+     state.payNewsPage=1;        
     },
 
    setTabForSector (state, sector) {
@@ -201,11 +205,11 @@ export const mutations = {
 	   }
 	 
      else if (temp == 3)	{
-	   	  state.insur3 =  data;
+	   	  state.insur3 = data;
 	   }
 
 	   else if (temp == 4) {
-	   	   state.insur4 =  data;	
+	   	   state.insur4 = data;	
 	    }
 
 	    else if (temp == 5) {
@@ -218,7 +222,7 @@ export const mutations = {
 
      var temp = state.blkNewsPage;
      temp++; 
-
+  
    	 state.activeNewsInfo = data;
    	 state.activeNewsTab = 'Blockchain';
      state.firstNewsLoad = false;
@@ -305,24 +309,24 @@ export const mutations = {
 
 		if (temp == 1) {
 
-	   		 state.activeNewsInfo = state.insur1;
-	     }
+	    state.activeNewsInfo = state.insur1;
+	  }
 	 
    	else if (temp == 2)	{
 	   	   	 
-	   	   	 state.activeNewsInfo = state.insur2;
+	    state.activeNewsInfo = state.insur2;
 	  }
 
 	  else if (temp == 3) {
-	   		state.activeNewsInfo = state.insur3;
+	   
+     	state.activeNewsInfo = state.insur3;
 	  }
 
-	  else if (temp ==4) { 	   	 
-	   	   	 state.activeNewsInfo = state.insur4;	
+	  else if (temp == 4) { 	   	 
+	      	 state.activeNewsInfo = state.insur4;	
 	  }
     state.insNewsPage = temp;
    },
-
 
    setBlockPrevious(state) {
 
@@ -917,41 +921,47 @@ export const mutations = {
       state.numNewsPage = 15;
      }
 
-    else if (temp == 16) {
+     else if (temp == 16) {
       state.activeNewsInfo = state.news16;
       state.numNewsPage = 16; 
-    }
+      }
+
     else if (temp ==17) {
       state.activeNewsInfo = state.news17;
       state.numNewsPage = 17; 
     }
+
     else if (temp == 18) {
       state.activeNewsInfo = state.news18;
       state.numNewsPage = 18; 
     }
+
     else if (temp == 19) {
       state.activeNewsInfo = state.news19; 
       state.numNewsPage = 19;
-   }
+    }
+
    else if (temp == 20) {
      state.activeNewsInfo = state.news20; 
      state.numNewsPage = 20;
    }
+
    else if (temp == 21) { 
      state.activeNewsInfo = state.news21; 
      state.numNewsPage = 21;
    }
+
    else if (temp == 22) {
     state.activeNewsInfo = state.news22; 
     state.numNewsPage = 22;
    }
+
    else if (temp == 23) {
     state.activeNewsInfo = state.news23; 
     state.numNewsPage = 23; 
    }
      
   },
-
 
   setLast(state) {
 
@@ -965,8 +975,7 @@ export const mutations = {
 
  	 set(state, page) {
 
-		state.news1 = page;
-		state.activeNewsInfo = page;
+		state.activeNewsInfo = state.news1;
 		state.numNewsPage = 1;
 		state.firstNewsLoad = false; 
 	 },
@@ -1006,7 +1015,6 @@ export const mutations = {
 		  state.activeNewsInfo = state.banking;
 		  state.activeNewsTab ='Banking';	
 		  state.firstNewsLoad =false;
-
 	 },
 
 	setMergersNoFetch(state) {
@@ -1014,7 +1022,7 @@ export const mutations = {
 		  state.activeNewsInfo = state.mergers;
 		  state.activeNewsTab ='M&A';	
 		  state.firstNewsLoad =false;
-	 },
+	},
 
 	setAINoFetch(state) {
 
@@ -1116,9 +1124,7 @@ export const mutations = {
     },
 
     setSearchTab(state, topic) {
-
-       state.activeNewsTab = topic ;
-
+      state.activeNewsTab = topic ;
     },
 
 	  setValNoFetch(state) {
@@ -1127,7 +1133,7 @@ export const mutations = {
   		state.activeNewsTab ='Valuation';	
   		state.firstNewsLoad = false;
 
-	   },
+	  },
 	 
 }
 
@@ -1193,30 +1199,30 @@ export const mutations = {
   		 
   		  },
 
-  	async setLend({ commit }) {
+  	   async setLend({ commit }) {
 
-		   if (!this.lendNewsFetched && !this.allNewsFetched)
-		   {	
+		    if (!this.lendNewsFetched && !this.allNewsFetched) {
+
   	       		await this.$axios.get('/links?folder=lending')
            			.then(res => {
 					  commit("setLend", res.data);
 		         })
-			 }
+			  }
 
        else if (this.allNewsFetched)  {
             newsbyFolder('lending');
-        }
+       }
 
-		  else {
+		   else {
 				commit("setLendNoFetch");
 		   }
   		 
   		},
 
-  		 async setMergers({ commit }) {
+  		async setMergers({ commit }) {
 
-  		   if (!this.mergerNewsFetched)
-  		   {	
+  		   if (!this.mergerNewsFetched) {
+         	
     	       		await this.$axios.get('/links?id=M%26A')
              			.then(res => {
   					  commit("setMergers", res.data);
@@ -1228,7 +1234,6 @@ export const mutations = {
   		   }
   		 
   		 },
-
 
   		async setOpen({ commit }) {
 
@@ -1369,7 +1374,6 @@ export const mutations = {
     		   }
   		 
   		 },
-
 
   		async setReg({ commit }) {
 
@@ -1524,18 +1528,18 @@ export const mutations = {
 
       async goNext( {commit}, pagey) {
 
-      
-			 if (this.allNewsFetched) {
-			    commit("setNextNoFetch");
-			 }	      
-       else {
+			  if (!this.allNewsFetched) {
+			 
           var temp = pagey;
           temp++ ;
 		      await this.$axios.get('/links?page=' + temp)
                 .then( res => {
 				       commit("setNextAndFetch", res.data)	  
 		       })               
-		   }	 
+		    }	
+       else {
+           commit("setNextNoFetch");
+       }         
   		 
   	  },
 
@@ -1617,14 +1621,13 @@ export const mutations = {
 
   	 async nuxtServerInit(vuexContext, context) {
 		   
-  		   if (!this.allNewsFetched) { 
+  		   if (!this.loadedNews) { 
 
               return this.$axios.$get("/links?page=1")
               .then(data => {
                 vuexContext.commit("set", data);
               })
   		    }
-        
 		      else  {
 			       vuexContext.commit("set");
 		      }
@@ -1882,7 +1885,7 @@ export const mutations = {
 	 },
 
   allNewsFetched(state) {
-    if (!state.allNews.length) {
+    if (!(state.allNews.length)) {
       return false;
     }
     else {
