@@ -72,6 +72,7 @@
               <span class="mdi mdi-pdf-box"></span>
               PDF
               </button>
+               <nuxt-link to="/login">  <span class="mdi mdi-pdf-box"></span>for PDF loggin </nuxt-link>
             </div>
              <card v-for="myboard in myboards" :id="myboard.id" :key="myboard.id" draggable="true" class="list-group-item">
                 <h3>  {{ myboard.title }} </h3>
