@@ -15,113 +15,99 @@
   <div class="grid">
 
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
-  
+
       <div>
         <p>Lending</p>
       </div>
-  
+
       <div class="col-reports-div">
-      
-        <div class="col-report" id="myEditReportButton">
-        </div>
-      
-          <a href="lendingcontent.pdf">
-        
+          <a v-if="loggedIn" href="lendingcontent.pdf">
             <div class="col-report" id="myReportPdfButton">
               <span class="mdi mdi-pdf-box "></span>
             </div>
-        
           </a>
-
-          <a href="lending.pdf">
-          
+          <a v-if="loggedIn" href="lending.pdf">
             <div class="col-report" id="myViewReportLinkTag">
               <span class="mdi mdi-eye "></span>
             </div>
-       
           </a>
-
+          <nuxt-link title="Please Login to view PDF" v-else to="/login">
+            <span class="mdi mdi-key"></span><br>
+            for PDF loggin
+          </nuxt-link>
       </div>
-
   </span>
 
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
-    
+
      <div>
       <p>Insurtech</p>
      </div>
 
-     <div class="col-reports-div">      
-       
-       <a href="insurtechcontent.pdf">      
-         
+     <div class="col-reports-div">
+       <a v-if="loggedIn" href="insurtechcontent.pdf">
          <div class="col-report"   id="myReportPdfButton">
               <span class="mdi mdi-pdf-box"></span>
          </div>
-       
-       </a> 
-          
-       <a href="insurtech.pdf" >    
-        
+       </a>
+       <a v-if="loggedIn" href="insurtech.pdf" >
          <div class="col-report"  id="myViewReportLinkTag">
-            
          <span class="mdi mdi-eye "></span>
-          
          </div>
       </a>
-      
+      <nuxt-link title="Please Login to view PDF" v-else to="/login">
+        <span class="mdi mdi-key"></span><br>
+        for PDF loggin
+      </nuxt-link>
      </div>
-
     </span>
-  
+
     <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
-    
+
       <div>
         <p>Blockchain/DLT</p>
       </div>
-    
-      <div class="col-reports-div">
 
-         <a href="blockchaincontent.pdf" >
+      <div class="col-reports-div">
+         <a v-if="loggedIn" href="blockchaincontent.pdf" >
             <div class="col-report" id="myReportPdfButton">
             <span class="mdi mdi-pdf-box "></span>
           </div>
         </a>
-
-        <a href="blockchain.pdf">
+        <a  v-if="loggedIn" href="blockchain.pdf">
           <div class="col-report" id="myViewReportLinkTag">
             <span class="mdi mdi-eye "></span>
           </div>
         </a>
-
+        <nuxt-link title="Please Login to view PDF" v-else to="/login">
+          <span class="mdi mdi-key"></span><br>
+          for PDF loggin
+        </nuxt-link>
       </div>
-    
     </span>
 
     <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
-      
+
       <div>
         <p>Banking</p>
       </div>
-     
       <div class="col-reports-div">
-        
-        <a href="bankingcontent.pdf">
+        <a v-if="loggedIn" href="bankingcontent.pdf">
           <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
           </div>
         </a>
-        
-        <a href="banking.pdf">
+        <a v-if="loggedIn" href="banking.pdf">
           <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye"></span>
           </div>
         </a>
-      
+        <nuxt-link title="Please Login to view PDF" v-else to="/login">
+          <span class="mdi mdi-key"></span><br>
+          for PDF loggin
+        </nuxt-link>
       </div>
-  
     </span>
-
   </div>
 </div>
 
@@ -133,54 +119,49 @@
       <div>
         <p>WealthTech</p>
       </div>
-    
+
       <div class="col-reports-div">
-    
-          <div class="col-report" id="myReportPdfButton">
-        
-            <a href="wealthtechcontent.pdf">
+            <a  v-if="loggedIn" href="wealthtechcontent.pdf">
+              <div class="col-report" id="myReportPdfButton">
               <span class="mdi mdi-pdf-box "></span>
+                </div>
             </a>
-          
-          </div>
-
-          <div class="col-report" id="myViewReportLinkTag">
-         
-            <a href="wealthtech.pdf">
+            <a v-if="loggedIn" href="wealthtech.pdf">
+              <div class="col-report" id="myViewReportLinkTag">
               <span class="mdi mdi-eye "></span>
+            </div>
             </a>
-         </div>
-
+         <nuxt-link title="Please Login to view PDF" v-else to="/login">
+           <span class="mdi mdi-key"></span><br>
+           for PDF loggin
+         </nuxt-link>
       </div>
   </span>
 
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
-    
+
     <div>
       <p>Payments</p>
     </div>
 
     <div class="col-reports-div">
-
-      <div class="col-report" id="myReportPdfButton">
-        
-        <a href="paymentscontent.pdf">
+        <a v-if="loggedIn" href="paymentscontent.pdf">
+          <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
+          </div>
         </a>
-      </div>
-      
-      <div class="col-report" id="myViewReportLinkTag">
-      
-        <a href="payments.pdf">
+        <a v-if="loggedIn" href="payments.pdf">
+          <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
+        </div>
         </a>
-      
-      </div>
-    
+        <nuxt-link title="Please Login to view PDF" v-else to="/login">
+          <span class="mdi mdi-key"></span><br>
+          for PDF loggin
+        </nuxt-link>
     </div>
-  
   </span>
-  
+
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
 
       <div>
@@ -188,166 +169,147 @@
       </div>
 
       <div class="col-reports-div">
-    
-        <div class="col-report" id="myReportPdfButton">
-          
-          <a href="cybercontent.pdf">
+          <a v-if="loggedIn" href="cybercontent.pdf">
+            <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
-          </a>
-      
         </div>
-    
-        <div class="col-report"   id="myViewReportLinkTag">  
-         
-          <a href="cyber.pdf">
+          </a>
+          <a v-if="loggedIn" href="cyber.pdf">
+            <div class="col-report"   id="myViewReportLinkTag">
             <span class="mdi mdi-eye "></span>
+          </div>
           </a>
-        
-        </div>
-      
+          <nuxt-link title="Please Login to view PDF" v-else to="/login">
+            <span class="mdi mdi-key"></span><br>
+            for PDF loggin
+          </nuxt-link>
       </div>
-  
   </span>
-  
+
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
 
     <div>
       <p>Identity</p>
     </div>
-    
+
     <div class="col-reports-div">
-
-      <div class="col-report" id="myReportPdfButton">
-    
-        <a href="identitycontent.pdf">
+        <a v-if="loggedIn" href="identitycontent.pdf">
+          <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
+        </div>
         </a>
-      
-      </div>
-      
-      <div class="col-report" id="myViewReportLinkTag">
-       
-        <a href="identity.pdf">
+        <a v-if="loggedIn" href="identity.pdf">
+          <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
+        </div>
         </a>
-      
-      </div>
-      
+        <nuxt-link title="Please Login to view PDF" v-else to="/login">
+          <span class="mdi mdi-key"></span><br>
+          for PDF loggin
+        </nuxt-link>
     </div>
-  
   </span>
-
 </div>
 </div>
-
 
 <div class="exespotbody">
   <div class="grid">
-  
+
   <span  class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
-    
+
     <div>
       <p>RegTech</p>
     </div>
-    
+
     <div class="col-reports-div">
-    
-        <div class="col-report" id="myEditReportButton">
-        <span  ></span>
-        </div>
-      
-        <a href="regtechcontent.pdf">
+        <a v-if="loggedIn" href="regtechcontent.pdf">
           <div class="col-report" id="myReportPdfButton">
             <span class="mdi mdi-pdf-box "></span>
           </div>
         </a>
-
-        <a href="regtech.pdf">
+        <a v-if="loggedIn" href="regtech.pdf">
           <div class="col-report" id="myViewReportLinkTag">
             <span class="mdi mdi-eye "></span>
           </div>
         </a>
-
+        <nuxt-link title="Please Login to view PDF" v-else to="/login">
+          <span class="mdi mdi-key"></span><br>
+          for PDF loggin
+        </nuxt-link>
     </div>
-  
   </span>
-  
+
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
-  
+
       <div >
         <p>HealthTech</p>
       </div>
-  
+
       <div class="col-reports-div">
-      
-        <a href="healthtechcontent.pdf">
-      
+        <a v-if="loggedIn" href="healthtechcontent.pdf">
           <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
           </div>
-      
         </a>
-      
-        <div class="col-report" id="myViewReportLinkTag">
-      
-          <a href="healthtech.pdf" >
+          <a v-if="loggedIn" href="healthtech.pdf" >
+            <div class="col-report" id="myViewReportLinkTag">
             <span class="mdi mdi-eye "></span>
+          </div>
           </a>
-      
-        </div>
-  
+        <nuxt-link title="Please Login to view PDF" v-else to="/login">
+          <span class="mdi mdi-key"></span><br>
+          for PDF loggin
+        </nuxt-link>
       </div>
-  
   </span>
-  
+
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
-    
+
       <div>
         <p>Artificial Intelligence</p>
       </div>
-    
+
      <div class="col-reports-div">
-       
-        <a href="aicontent.pdf" >
+        <a v-if="loggedIn" href="aicontent.pdf" >
           <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box "></span>
           </div>
         </a>
-      
-        <a href="ai.pdf">
+        <a v-if="loggedIn" href="ai.pdf">
             <div class="col-report" id="myViewReportLinkTag">
               <span class="mdi mdi-eye "></span>
           </div>
         </a>
-     
+        <nuxt-link title="Please Login to view PDF" v-else to="/login">
+          <span class="mdi mdi-key"></span><br>
+          for PDF loggin
+        </nuxt-link>
      </div>
-
   </span>
-  
+
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
-      
+
       <div>
         <p>MGAs</p>
       </div>
-     
+
       <div class="col-reports-div">
-      
-          <a href="mgacontent.pdf"> 
+         <a v-if="loggedIn" href="mgacontent.pdf">
             <div class="col-report" id="myReportPdfButton">
               <span class="mdi mdi-pdf-box " ></span>
             </div>
           </a>
-
-          <a href="mga.pdf">
+          <a v-if="loggedIn" href="mga.pdf">
             <div class="col-report" id="myViewReportLinkTag">
               <span class="mdi mdi-eye "></span>
-            </div>  
+            </div>
           </a>
-    
+          <nuxt-link title="Please Login to view PDF" v-else to="/login">
+            <span class="mdi mdi-key"></span><br>
+            for PDF loggin
+          </nuxt-link>
       </div>
-
   </span>
-
 </div>
 </div>
 
@@ -359,56 +321,49 @@
       <div>
         <p>RealEstate</p>
       </div>
-    
-      <div class="col-reports-div">
-          
-          <div class="col-report" id="myReportPdfButton">
-            
-            <a href="realestatecontent.pdf">
-              <span class="mdi mdi-pdf-box "></span>
-            </a>
-          
-          </div>
-      
-          <div class="col-report" id="myViewReportLinkTag">
-          
-            <a href="realestate.pdf">
-              <span class="mdi mdi-eye "></span>
-            </a>
-        
-         </div>
 
+      <div class="col-reports-div">
+            <a v-if="loggedIn" href="realestatecontent.pdf">
+              <div class="col-report" id="myReportPdfButton">
+              <span class="mdi mdi-pdf-box "></span>
+            </div>
+            </a>
+            <a v-if="loggedIn" href="realestate.pdf">
+              <div class="col-report" id="myViewReportLinkTag">
+              <span class="mdi mdi-eye "></span>
+            </div>
+            </a>
+         <nuxt-link title="Please Login to view PDF" v-else to="/login">
+           <span class="mdi mdi-key"></span><br>
+           for PDF loggin
+         </nuxt-link>
     </div>
 </span>
 
 <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
-  
+
       <div>
         <p>Remittances</p>
       </div>
-      
+
       <div class="col-reports-div">
-
-        <div class="col-report" id="myReportPdfButton">
-        
-          <a href="remittancescontent.pdf">
+          <a v-if="loggedIn" href="remittancescontent.pdf">
+            <div class="col-report" id="myReportPdfButton">
             <span class="mdi mdi-pdf-box " ></span>
+          </div>
           </a>
-        
-        </div>
-        
-        <div class="col-report" id="myViewReportLinkTag">
-          
-          <a href="remittances.pdf">
+          <a v-if="loggedIn" href="remittances.pdf">
+            <div class="col-report" id="myViewReportLinkTag">
             <span class="mdi mdi-eye "></span>
+          </div>
           </a>
-        
-        </div>
-      
+          <nuxt-link title="Please Login to view PDF" v-else to="/login">
+            <span class="mdi mdi-key"></span><br>
+            for PDF loggin
+          </nuxt-link>
       </div>
-
 </span>
-  
+
 <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
 
     <div>
@@ -416,55 +371,50 @@
     </div>
 
     <div class="col-reports-div">
-
-      <div class="col-report" id="myReportPdfButton">
-          
-          <a href="capitalmarketscontent.pdf">
+          <a v-if="loggedIn" href="capitalmarketscontent.pdf">
+            <div class="col-report" id="myReportPdfButton">
             <span class="mdi mdi-pdf-box " ></span>
+          </div>
           </a>
-      
-      </div>
-      
-      <div class="col-report" id="myViewReportLinkTag">
-    
-        <a href="capitalmarkets.pdf">
+        <a  v-if="loggedIn" href="capitalmarkets.pdf">
+          <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
+        </div>
         </a>
-      </div>
-      
+      <nuxt-link title="Please Login to view PDF" v-else to="/login">
+        <span class="mdi mdi-key"></span><br>
+        for PDF loggin
+      </nuxt-link>
     </div>
   </span>
 
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
 
-      <div>  
+      <div>
         <p>Personal Finance</p>
       </div>
-    
+
       <div class="col-reports-div">
-      
-          <div class="col-report" id="myReportPdfButton">
-            
-            <a href="personalfinancecontent.pdf">
+            <a v-if="loggedIn" href="personalfinancecontent.pdf">
+              <div class="col-report" id="myReportPdfButton">
               <span class="mdi mdi-pdf-box " ></span>
+            </div>
             </a>
-          </div>
-
-          <div class="col-report" id="myViewReportLinkTag">
-            <a href="personalfinance.pdf">
+            <a v-if="loggedIn" href="personalfinance.pdf">
+              <div class="col-report" id="myViewReportLinkTag">
               <span class="mdi mdi-eye "></span>
+            </div>
             </a>
-          </div>
- 
+            <nuxt-link title="Please Login to view PDF" v-else to="/login">
+              <span class="mdi mdi-key"></span><br>
+              for PDF loggin
+            </nuxt-link>
       </div>
-
- 
 </span>
-
 </div>
 </div>
 
-<!---strategy--->
+<!-- strategy -->
 
  <div class="sectionix" id="top">
      <div class="title">
@@ -484,54 +434,49 @@
       <div>
         <p>Growth Equity Raise</p>
       </div>
-    
+
       <div class="col-reports-div">
-    
-          <div class="col-report" id="myReportPdfButton">
-        
-            <a href="growthequitycontent.pdf">
+            <a v-if="loggedIn" href="growthequitycontent.pdf">
+              <div class="col-report" id="myReportPdfButton">
               <span class="mdi mdi-pdf-box "></span>
+            </div>
             </a>
-          
-          </div>
-
-          <div class="col-report" id="myViewReportLinkTag">
-         
-            <a href="growthequity.pdf">
+            <a v-if="loggedIn" href="growthequity.pdf">
+              <div class="col-report" id="myViewReportLinkTag">
               <span class="mdi mdi-eye "></span>
+            </div>
             </a>
-         </div>
-
+            <nuxt-link title="Please Login to view PDF" v-else to="/login">
+              <span class="mdi mdi-key"></span><br>
+              for PDF loggin
+            </nuxt-link>
       </div>
   </span>
 
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
-    
+
     <div>
       <p>M&A</p>
     </div>
 
     <div class="col-reports-div">
-
-      <div class="col-report" id="myReportPdfButton">
-        
-        <a href="mergerscontent.pdf">
+        <a v-if="loggedIn" href="mergerscontent.pdf">
+          <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
+        </div>
         </a>
-      </div>
-      
-      <div class="col-report" id="myViewReportLinkTag">
-      
-        <a href="mergers.pdf">
+        <a v-if="loggedIn" href="mergers.pdf">
+          <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
+        </div>
         </a>
-      
-      </div>
-    
+        <nuxt-link title="Please Login to view PDF" v-else to="/login">
+          <span class="mdi mdi-key"></span><br>
+          for PDF loggin
+        </nuxt-link>
     </div>
-  
   </span>
-  
+
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
 
       <div>
@@ -539,58 +484,48 @@
       </div>
 
       <div class="col-reports-div">
-    
-        <div class="col-report" id="myReportPdfButton">
-          
-          <a href="partnershipcontent.pdf">
+          <a v-if="loggedIn" href="partnershipcontent.pdf">
+            <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
-          </a>
-      
         </div>
-    
-        <div class="col-report"   id="myViewReportLinkTag">  
-         
-          <a href="partnerships.pdf">
+          </a>
+          <a v-if="loggedIn" href="partnerships.pdf">
+            <div class="col-report"   id="myViewReportLinkTag">
             <span class="mdi mdi-eye "></span>
+          </div>
           </a>
-        
+          <nuxt-link title="Please Login to view PDF" v-else to="/login">
+            <span class="mdi mdi-key"></span><br>
+            for PDF loggin
+          </nuxt-link>
         </div>
-      
-      </div>
-  
   </span>
-  
+
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
 
     <div>
       <p>Spin-Offs</p>
     </div>
-    
+
     <div class="col-reports-div">
-
-      <div class="col-report" id="myReportPdfButton">
-    
-        <a href="spinoffscontent.pdf">
+        <a v-if="loggedIn" href="spinoffscontent.pdf">
+          <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
+        </div>
         </a>
-      
-      </div>
-      
-      <div class="col-report" id="myViewReportLinkTag">
-       
-        <a href="spinoffs.pdf">
+        <a v-if="loggedIn" href="spinoffs.pdf">
+          <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
+        </div>
         </a>
-      
-      </div>
-      
+        <nuxt-link title="Please Login to view PDF" v-else to="/login">
+          <span class="mdi mdi-key"></span><br>
+          for PDF loggin
+        </nuxt-link>
     </div>
-  
   </span>
-
 </div>
 </div>
-
 
 <div class="exespotbody">
   <div class="grid">
@@ -600,54 +535,49 @@
       <div>
         <p>Valuation</p>
       </div>
-    
+
       <div class="col-reports-div">
-    
-          <div class="col-report" id="myReportPdfButton">
-        
-            <a href="valuationcontent.pdf">
+            <a v-if="loggedIn" href="valuationcontent.pdf">
+              <div class="col-report" id="myReportPdfButton">
               <span class="mdi mdi-pdf-box "></span>
+            </div>
             </a>
-          
-          </div>
-
-          <div class="col-report" id="myViewReportLinkTag">
-         
-            <a href="valuation.pdf">
+            <a v-if="loggedIn" href="valuation.pdf">
+              <div class="col-report" id="myViewReportLinkTag">
               <span class="mdi mdi-eye "></span>
+            </div>
             </a>
-         </div>
-
+            <nuxt-link title="Please Login to view PDF" v-else to="/login">
+              <span class="mdi mdi-key"></span><br>
+              for PDF loggin
+            </nuxt-link>
       </div>
   </span>
 
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
-    
+
     <div>
       <p>Bootstrapped</p>
     </div>
 
     <div class="col-reports-div">
-
-      <div class="col-report" id="myReportPdfButton">
-        
-        <a href="bootstrappedcontent.pdf">
+        <a v-if="loggedIn" href="bootstrappedcontent.pdf">
+          <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
+        </div>
         </a>
-      </div>
-      
-      <div class="col-report" id="myViewReportLinkTag">
-      
-        <a href="bootstrapped.pdf">
+        <a v-if="loggedIn" href="bootstrapped.pdf">
+          <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
+        </div>
         </a>
-      
-      </div>
-    
+        <nuxt-link title="Please Login to view PDF" v-else to="/login">
+          <span class="mdi mdi-key"></span><br>
+          for PDF loggin
+        </nuxt-link>
     </div>
-  
   </span>
-  
+
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
 
       <div>
@@ -655,59 +585,50 @@
       </div>
 
       <div class="col-reports-div">
-    
-        <div class="col-report" id="myReportPdfButton">
-          
-          <a href="iposcontent.pdf">
+          <a v-if="loggedIn" href="iposcontent.pdf">
+            <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
-          </a>
-      
         </div>
-    
-        <div class="col-report"   id="myViewReportLinkTag">  
-         
-          <a href="ipos.pdf">
+          </a>
+          <a v-if="loggedIn" href="ipos.pdf">
+            <div class="col-report"   id="myViewReportLinkTag">
             <span class="mdi mdi-eye "></span>
+          </div>
           </a>
-        
-        </div>
-      
+          <nuxt-link title="Please Login to view PDF" v-else to="/login">
+            <span class="mdi mdi-key"></span><br>
+            for PDF loggin
+          </nuxt-link>
       </div>
-  
   </span>
-  
+
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
 
     <div>
       <p>Profitable</p>
     </div>
-    
+
     <div class="col-reports-div">
-
-      <div class="col-report" id="myReportPdfButton">
-    
-        <a href="profitablecontent.pdf">
+        <a v-if="loggedIn" href="profitablecontent.pdf">
+          <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
+        </div>
         </a>
-      
-      </div>
-      
-      <div class="col-report" id="myViewReportLinkTag">
-       
-        <a href="profitable.pdf">
+        <a v-if="loggedIn" href="profitable.pdf">
+          <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
+        </div>
         </a>
-      
-      </div>
-      
+        <nuxt-link title="Please Login to view PDF" v-else to="/login">
+          <span class="mdi mdi-key"></span><br>
+          for PDF loggin
+        </nuxt-link>
     </div>
-  
   </span>
-
 </div>
 </div>
 
-<!--- timing --->
+<!-- timing -->
  <div class="sectionix" id="top">
      <div class="title">
         <div class="content">
@@ -726,54 +647,49 @@
       <div>
         <p>Q1 2020</p>
       </div>
-    
+
       <div class="col-reports-div">
-    
-          <div class="col-report" id="myReportPdfButton">
-        
-            <a href="q12020content.pdf">
+            <a v-if="loggedIn" href="q12020content.pdf">
+              <div class="col-report" id="myReportPdfButton">
               <span class="mdi mdi-pdf-box "></span>
+            </div>
             </a>
-          
-          </div>
-
-          <div class="col-report" id="myViewReportLinkTag">
-         
-            <a href="q12020.pdf">
+            <a v-if="loggedIn" href="q12020.pdf">
+              <div class="col-report" id="myViewReportLinkTag">
               <span class="mdi mdi-eye "></span>
+            </div>
             </a>
-         </div>
-
+            <nuxt-link title="Please Login to view PDF" v-else to="/login">
+              <span class="mdi mdi-key"></span><br>
+              for PDF loggin
+            </nuxt-link>
       </div>
   </span>
 
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
-    
+
     <div>
       <p>Q2 2020</p>
     </div>
 
     <div class="col-reports-div">
-
-      <div class="col-report" id="myReportPdfButton">
-        
-        <a href="q22020content.pdf">
+        <a v-if="loggedIn" href="q22020content.pdf">
+          <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
+        </div>
         </a>
-      </div>
-      
-      <div class="col-report" id="myViewReportLinkTag">
-      
-        <a href="q22020.pdf">
+        <a v-if="loggedIn" href="q22020.pdf">
+          <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
+        </div>
         </a>
-      
+        <nuxt-link title="Please Login to view PDF" v-else to="/login">
+          <span class="mdi mdi-key"></span><br>
+          for PDF loggin
+        </nuxt-link>
       </div>
-    
-    </div>
-  
   </span>
-  
+
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
 
       <div>
@@ -781,55 +697,46 @@
       </div>
 
       <div class="col-reports-div">
-    
-        <div class="col-report" id="myReportPdfButton">
-          
-          <a href="Q32020content.pdf">
+          <a v-if="loggedIn" href="Q32020content.pdf">
+            <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
+          </div>
           </a>
-      
-        </div>
-    
-        <div class="col-report"   id="myViewReportLinkTag">  
-         
-          <a href="Q32020.pdf">
+          <a v-if="loggedIn" href="Q32020.pdf">
+            <div class="col-report"   id="myViewReportLinkTag">
             <span class="mdi mdi-eye "></span>
+            </div>
           </a>
-        
-        </div>
-      
+          <nuxt-link title="Please Login to view PDF" v-else to="/login">
+            <span class="mdi mdi-key"></span><br>
+            for PDF loggin
+          </nuxt-link>
       </div>
-  
   </span>
-  
+
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
 
     <div>
       <p>Q4 2020</p>
     </div>
-    
+
     <div class="col-reports-div">
-
-      <div class="col-report" id="myReportPdfButton">
-    
-        <a href="Q42020content.pdf">
+        <a v-if="loggedIn" href="Q42020content.pdf">
+          <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
+          </div>
         </a>
-      
-      </div>
-      
-      <div class="col-report" id="myViewReportLinkTag">
-       
-        <a href="Q42020.pdf">
+        <a v-if="loggedIn" href="Q42020.pdf">
+          <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
+          </div>
         </a>
-      
-      </div>
-      
+        <nuxt-link title="Please Login to view PDF" v-else to="/login">
+          <span class="mdi mdi-key"></span><br>
+          for PDF loggin
+        </nuxt-link>
     </div>
-  
   </span>
-
 </div>
 </div>
 
@@ -842,54 +749,49 @@
       <div>
         <p>Q1 2021</p>
       </div>
-    
+
       <div class="col-reports-div">
-    
-          <div class="col-report" id="myReportPdfButton">
-        
-            <a href="Q12021content.pdf">
+            <a v-if="loggedIn" href="Q12021content.pdf">
+              <div class="col-report" id="myReportPdfButton">
               <span class="mdi mdi-pdf-box "></span>
+              </div>
             </a>
-          
-          </div>
-
-          <div class="col-report" id="myViewReportLinkTag">
-         
-            <a href="Q12021.pdf">
+            <a v-if="loggedIn" href="Q12021.pdf">
+              <div class="col-report" id="myViewReportLinkTag">
               <span class="mdi mdi-eye "></span>
+              </div>
             </a>
-         </div>
-
+            <nuxt-link title="Please Login to view PDF" v-else to="/login">
+              <span class="mdi mdi-key"></span><br>
+              for PDF loggin
+            </nuxt-link>
       </div>
   </span>
 
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
-    
+
     <div>
       <p>Q2 2021</p>
     </div>
 
     <div class="col-reports-div">
-
-      <div class="col-report" id="myReportPdfButton">
-        
-        <a href="Q22021content.pdf">
+        <a v-if="loggedIn" href="Q22021content.pdf">
+          <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
+          </div>
         </a>
-      </div>
-      
-      <div class="col-report" id="myViewReportLinkTag">
-      
-        <a href="Q22021.pdf">
+        <a v-if="loggedIn" href="Q22021.pdf">
+          <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
+          </div>
         </a>
-      
-      </div>
-    
+        <nuxt-link title="Please Login to view PDF" v-else to="/login">
+          <span class="mdi mdi-key"></span><br>
+          for PDF loggin
+        </nuxt-link>
     </div>
-  
   </span>
-  
+
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
 
       <div>
@@ -897,59 +799,50 @@
       </div>
 
       <div class="col-reports-div">
-    
-        <div class="col-report" id="myReportPdfButton">
-          
-          <a href="q32021content.pdf">
+          <a v-if="loggedIn" href="q32021content.pdf">
+            <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
+          </div>
           </a>
-      
-        </div>
-    
-        <div class="col-report"   id="myViewReportLinkTag">  
-         
-          <a href="q32021.pdf">
+          <a v-if="loggedIn" href="q32021.pdf">
+            <div class="col-report"   id="myViewReportLinkTag">
             <span class="mdi mdi-eye "></span>
+          </div>
           </a>
-        
-        </div>
-      
+          <nuxt-link title="Please Login to view PDF" v-else to="/login">
+            <span class="mdi mdi-key"></span><br>
+            for PDF loggin
+          </nuxt-link>
       </div>
-  
   </span>
-  
+
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
 
     <div>
       <p>Q4 2021</p>
     </div>
-    
+
     <div class="col-reports-div">
-
-      <div class="col-report" id="myReportPdfButton">
-    
-        <a href="q42021content.pdf">
+        <a  v-if="loggedIn" href="q42021content.pdf">
+          <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
+        </div>
         </a>
-      
-      </div>
-      
-      <div class="col-report" id="myViewReportLinkTag">
-       
-        <a href="q42021.pdf">
+        <a v-if="loggedIn" href="q42021.pdf">
+          <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
+        </div>
         </a>
-      
-      </div>
-      
+        <nuxt-link title="Please Login to view PDF" v-else to="/login">
+          <span class="mdi mdi-key"></span><br>
+          for PDF loggin
+        </nuxt-link>
     </div>
-  
   </span>
-
 </div>
 </div>
 
-<!--- Next Raise --->
+<!-- Next Raise -->
  <div class="sectionix" id="top">
      <div class="title">
         <div class="content">
@@ -968,54 +861,49 @@
       <div>
         <p>$0m to $1m</p>
       </div>
-    
+
       <div class="col-reports-div">
-    
-          <div class="col-report" id="myReportPdfButton">
-        
-            <a href="zerotoonecontent.pdf">
+            <a v-if="loggedIn" href="zerotoonecontent.pdf">
+                <div class="col-report" id="myReportPdfButton">
               <span class="mdi mdi-pdf-box "></span>
+              </div>
             </a>
-          
-          </div>
-
-          <div class="col-report" id="myViewReportLinkTag">
-         
-            <a href="zerotoone.pdf">
+            <a v-if="loggedIn" href="zerotoone.pdf">
+              <div class="col-report" id="myViewReportLinkTag">
               <span class="mdi mdi-eye "></span>
+            </div>
             </a>
-         </div>
-
+            <nuxt-link title="Please Login to view PDF" v-else to="/login">
+              <span class="mdi mdi-key"></span><br>
+              for PDF loggin
+            </nuxt-link>
       </div>
   </span>
 
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
-    
+
     <div>
       <p>$1m to $5m</p>
     </div>
 
     <div class="col-reports-div">
-
-      <div class="col-report" id="myReportPdfButton">
-        
-        <a href="onetofivecontent.pdf">
+        <a  v-if="loggedIn" href="onetofivecontent.pdf">
+          <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
+        </div>
         </a>
-      </div>
-      
-      <div class="col-report" id="myViewReportLinkTag">
-      
-        <a href="onetofive.pdf">
+        <a v-if="loggedIn" href="onetofive.pdf">
+          <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
+        </div>
         </a>
-      
-      </div>
-    
+        <nuxt-link title="Please Login to view PDF" v-else to="/login">
+          <span class="mdi mdi-key"></span><br>
+          for PDF loggin
+        </nuxt-link>
     </div>
-  
   </span>
-  
+
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
 
       <div>
@@ -1023,58 +911,48 @@
       </div>
 
       <div class="col-reports-div">
-    
-        <div class="col-report" id="myReportPdfButton">
-          
-          <a href="fivetotencontent.pdf">
+        <a  v-if="loggedIn" href="fivetotencontent.pdf">
+          <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
-          </a>
-      
         </div>
-    
-        <div class="col-report"   id="myViewReportLinkTag">  
-         
-          <a href="fivetoten.pdf">
+          </a>
+          <a v-if="loggedIn" href="fivetoten.pdf">
+            <div class="col-report"   id="myViewReportLinkTag">
             <span class="mdi mdi-eye "></span>
+          </div>
           </a>
-        
-        </div>
-      
-      </div>
-  
+          <nuxt-link title="Please Login to view PDF" v-else to="/login">
+            <span class="mdi mdi-key"></span><br>
+            for PDF loggin
+          </nuxt-link>
+    </div>
   </span>
-  
+
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
 
     <div>
       <p>$10m to $20m</p>
     </div>
-    
+
     <div class="col-reports-div">
-
-      <div class="col-report" id="myReportPdfButton">
-    
-        <a href="tentotwentycontent.pdf">
+        <a v-if="loggedIn" href="tentotwentycontent.pdf">
+          <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
+        </div>
         </a>
-      
-      </div>
-      
-      <div class="col-report" id="myViewReportLinkTag">
-       
-        <a href="tentotwenty.pdf">
+        <a v-if="loggedIn" href="tentotwenty.pdf">
+          <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
+        </div>
         </a>
-      
-      </div>
-      
+        <nuxt-link title="Please Login to view PDF" v-else to="/login">
+          <span class="mdi mdi-key"></span><br>
+          for PDF loggin
+        </nuxt-link>
     </div>
-  
   </span>
-
 </div>
 </div>
-
 
 <div class="exespotbody">
   <div class="grid">
@@ -1084,54 +962,49 @@
       <div>
         <p>$20m to $50m</p>
       </div>
-    
+
       <div class="col-reports-div">
-    
-          <div class="col-report" id="myReportPdfButton">
-        
-            <a href="twentytofiftycontent.pdf">
+            <a v-if="loggedIn" href="twentytofiftycontent.pdf">
+              <div class="col-report" id="myReportPdfButton">
               <span class="mdi mdi-pdf-box "></span>
+            </div>
             </a>
-          
-          </div>
-
-          <div class="col-report" id="myViewReportLinkTag">
-         
-            <a href="twentytofifty.pdf">
+            <a v-if="loggedIn" href="twentytofifty.pdf">
+              <div class="col-report" id="myViewReportLinkTag">
               <span class="mdi mdi-eye "></span>
+            </div>
             </a>
-         </div>
-
+            <nuxt-link title="Please Login to view PDF" v-else to="/login">
+              <span class="mdi mdi-key"></span><br>
+              for PDF loggin
+            </nuxt-link>
       </div>
   </span>
 
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
-    
+
     <div>
       <p>$50m to $100m </p>
     </div>
 
     <div class="col-reports-div">
-
-      <div class="col-report" id="myReportPdfButton">
-        
-        <a href="fiftytohundredcontent.pdf">
+        <a v-if="loggedIn" href="fiftytohundredcontent.pdf">
+          <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
+        </div>
         </a>
-      </div>
-      
-      <div class="col-report" id="myViewReportLinkTag">
-      
-        <a href="fiftytohundred.pdf">
+        <a v-if="loggedIn" href="fiftytohundred.pdf">
+          <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
+        </div>
         </a>
-      
-      </div>
-    
+        <nuxt-link title="Please Login to view PDF" v-else to="/login">
+          <span class="mdi mdi-key"></span><br>
+          for PDF loggin
+        </nuxt-link>
     </div>
-  
   </span>
-  
+
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
 
       <div>
@@ -1139,33 +1012,26 @@
       </div>
 
       <div class="col-reports-div">
-    
-        <div class="col-report" id="myReportPdfButton">
-          
-          <a href="hundredmilpluscontent.pdf">
+          <a  v-if="loggedIn" href="hundredmilpluscontent.pdf">
+            <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
-          </a>
-      
         </div>
-    
-        <div class="col-report"   id="myViewReportLinkTag">  
-         
-          <a href="hundredmilplus.pdf">
+          </a>
+          <a v-if="loggedIn" href="hundredmilplus.pdf">
+            <div class="col-report"   id="myViewReportLinkTag">
             <span class="mdi mdi-eye "></span>
+          </div>
           </a>
-        
-        </div>
-      
+          <nuxt-link title="Please Login to view PDF" v-else to="/login">
+            <span class="mdi mdi-key"></span><br>
+            for PDF loggin
+          </nuxt-link>
       </div>
-  
   </span>
-  
-  
-
 </div>
 </div>
 
-<!--- Geography --->
+<!-- Geography -->
 
  <div class="sectionix" id="top">
      <div class="title">
@@ -1185,54 +1051,49 @@
       <div>
         <p>Latin America</p>
       </div>
-    
+
       <div class="col-reports-div">
-    
-          <div class="col-report" id="myReportPdfButton">
-        
-            <a href="latinamericacontent.pdf">
+            <a v-if="loggedIn" href="latinamericacontent.pdf">
+              <div class="col-report" id="myReportPdfButton">
               <span class="mdi mdi-pdf-box "></span>
+            </div>
             </a>
-          
-          </div>
-
-          <div class="col-report" id="myViewReportLinkTag">
-         
-            <a href="latinamerica.pdf">
+            <a v-if="loggedIn" href="latinamerica.pdf">
+              <div class="col-report" id="myViewReportLinkTag">
               <span class="mdi mdi-eye "></span>
+            </div>
             </a>
-         </div>
-
+            <nuxt-link title="Please Login to view PDF" v-else to="/login">
+              <span class="mdi mdi-key"></span><br>
+              for PDF loggin
+            </nuxt-link>
       </div>
   </span>
 
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
-    
+
     <div>
       <p>Canada</p>
     </div>
 
     <div class="col-reports-div">
-
-      <div class="col-report" id="myReportPdfButton">
-        
-        <a href="canadacontent.pdf">
+        <a v-if="loggedIn" href="canadacontent.pdf">
+          <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
+        </div>
         </a>
-      </div>
-      
-      <div class="col-report" id="myViewReportLinkTag">
-      
-        <a href="canada.pdf">
+        <a v-if="loggedIn" href="canada.pdf">
+          <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
+        </div>
         </a>
-      
-      </div>
-    
+        <nuxt-link title="Please Login to view PDF" v-else to="/login">
+          <span class="mdi mdi-key"></span><br>
+          for PDF loggin
+        </nuxt-link>
     </div>
-  
   </span>
-  
+
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
 
       <div>
@@ -1240,55 +1101,45 @@
       </div>
 
       <div class="col-reports-div">
-    
-        <div class="col-report" id="myReportPdfButton">
-          
-          <a href="europecontent.pdf">
+          <a v-if="loggedIn" href="europecontent.pdf">
+            <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
-          </a>
-      
         </div>
-    
-        <div class="col-report"   id="myViewReportLinkTag">  
-         
-          <a href="europe.pdf">
+          </a>
+          <a v-if="loggedIn" href="europe.pdf">
+            <div class="col-report"   id="myViewReportLinkTag">
             <span class="mdi mdi-eye "></span>
+          </div>
           </a>
-        
-        </div>
-      
+          <nuxt-link title="Please Login to view PDF" v-else to="/login">
+            <span class="mdi mdi-key"></span><br>
+            for PDF loggin
+          </nuxt-link>
       </div>
-  
   </span>
-  
+
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
 
     <div>
       <p>Asia</p>
     </div>
-    
+
     <div class="col-reports-div">
-
-      <div class="col-report" id="myReportPdfButton">
-    
-        <a href="asiacontent.pdf">
+        <a v-if="loggedIn" href="asiacontent.pdf">
+          <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
-        </a>
-      
-      </div>
-      
-      <div class="col-report" id="myViewReportLinkTag">
-       
-        <a href="asia.pdf">
+        </div></a>
+        <a v-if="loggedIn" href="asia.pdf">
+          <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
+        </div>
         </a>
-      
-      </div>
-      
+        <nuxt-link title="Please Login to view PDF" v-else to="/login">
+          <span class="mdi mdi-key"></span><br>
+          for PDF loggin
+        </nuxt-link>
     </div>
-  
   </span>
-
 </div>
 </div>
 
@@ -1296,59 +1147,54 @@
 <div class="exespotbody">
   <div class="grid">
 
-    <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
+  <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
 
       <div>
         <p>Middle East</p>
       </div>
-    
+
       <div class="col-reports-div">
-    
-          <div class="col-report" id="myReportPdfButton">
-        
-            <a href="middleeastcontent.pdf">
+            <a v-if="loggedIn" href="middleeastcontent.pdf">
+              <div class="col-report" id="myReportPdfButton">
               <span class="mdi mdi-pdf-box "></span>
+            </div>
             </a>
-          
-          </div>
-
-          <div class="col-report" id="myViewReportLinkTag">
-         
-            <a href="middleeast.pdf">
+            <a v-if="loggedIn" href="middleeast.pdf">
+              <div class="col-report" id="myViewReportLinkTag">
               <span class="mdi mdi-eye "></span>
+            </div>
             </a>
-         </div>
-
+         <nuxt-link title="Please Login to view PDF" v-else to="/login">
+           <span class="mdi mdi-key"></span><br>
+           for PDF loggin
+         </nuxt-link>
       </div>
   </span>
 
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
-    
+
     <div>
       <p>Africa</p>
     </div>
 
     <div class="col-reports-div">
-
-      <div class="col-report" id="myReportPdfButton">
-        
-        <a href="africacontent.pdf">
+        <a v-if="loggedIn" href="africacontent.pdf">
+          <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
+        </div>
         </a>
-      </div>
-      
-      <div class="col-report" id="myViewReportLinkTag">
-      
-        <a href="africa.pdf">
+        <a v-if="loggedIn" href="africa.pdf">
+          <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
+        </div>
         </a>
-      
-      </div>
-    
+        <nuxt-link title="Please Login to view PDF" v-else to="/login">
+          <span class="mdi mdi-key"></span><br>
+          for PDF loggin
+        </nuxt-link>
     </div>
-  
   </span>
-  
+
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
 
       <div>
@@ -1356,82 +1202,71 @@
       </div>
 
       <div class="col-reports-div">
-    
-        <div class="col-report" id="myReportPdfButton">
-          
-          <a href="oceaniacontent.pdf">
+          <a v-if="loggedIn" href="oceaniacontent.pdf">
+            <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
-          </a>
-      
         </div>
-    
-        <div class="col-report"   id="myViewReportLinkTag">  
-         
-          <a href="oceania.pdf">
+          </a>
+          <a v-if="loggedIn" href="oceania.pdf">
+            <div class="col-report"   id="myViewReportLinkTag">
             <span class="mdi mdi-eye "></span>
+          </div>
           </a>
-        
-        </div>
-      
+          <nuxt-link title="Please Login to view PDF" v-else to="/login">
+            <span class="mdi mdi-key"></span><br>
+            for PDF loggin
+          </nuxt-link>
       </div>
-  
   </span>
-  
+
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
 
     <div>
       <p>Carribean</p>
     </div>
-    
-    <div class="col-reports-div">
 
-      <div class="col-report" id="myReportPdfButton">
-    
-        <a href="carribeancontent.pdf">
+    <div class="col-reports-div">
+        <a v-if="loggedIn" href="carribeancontent.pdf">
+          <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
+        </div>
         </a>
-      
-      </div>
-      
-      <div class="col-report" id="myViewReportLinkTag">
-       
-        <a href="carribean.pdf">
+        <a v-if="loggedIn" href="carribean.pdf">
+          <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
+        </div>
         </a>
-      
-      </div>
-      
+        <nuxt-link title="Please Login to view PDF" v-else to="/login">
+          <span class="mdi mdi-key"></span><br>
+          for PDF loggin
+        </nuxt-link>
     </div>
-  
   </span>
 
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
-    
+
     <div>
       <p>Africa</p>
     </div>
 
     <div class="col-reports-div">
-
-      <div class="col-report" id="myReportPdfButton">
-        
-        <a href="africacontent.pdf">
+        <a v-if="loggedIn" href="africacontent.pdf">
+          <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
+        </div>
         </a>
-      </div>
-      
-      <div class="col-report" id="myViewReportLinkTag">
-      
-        <a href="africa.pdf">
+        <a v-if="loggedIn" href="africa.pdf">
+            <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
+        </div>
         </a>
-      
-      </div>
-    
+        <nuxt-link title="Please Login to view PDF" v-else to="/login">
+          <span class="mdi mdi-key"></span><br>
+          for PDF loggin
+        </nuxt-link>
     </div>
-  
   </span>
-  
+
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
 
       <div>
@@ -1439,249 +1274,213 @@
       </div>
 
       <div class="col-reports-div">
-    
-        <div class="col-report" id="myReportPdfButton">
-          
-          <a href="newyorkcontent.pdf">
+          <a v-if="loggedIn" href="newyorkcontent.pdf">
+            <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
-          </a>
-      
         </div>
-    
-        <div class="col-report"   id="myViewReportLinkTag">  
-         
-          <a href="newyork.pdf">
+          </a>
+          <a v-if="loggedIn" href="newyork.pdf">
+            <div class="col-report"   id="myViewReportLinkTag">
             <span class="mdi mdi-eye "></span>
+          </div>
           </a>
-        
-        </div>
-      
+          <nuxt-link title="Please Login to view PDF" v-else to="/login">
+            <span class="mdi mdi-key"></span><br>
+            for PDF loggin
+          </nuxt-link>
       </div>
-  
   </span>
-  
+
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
 
     <div>
       <p>New England</p>
     </div>
-    
+
     <div class="col-reports-div">
-
-      <div class="col-report" id="myReportPdfButton">
-    
-        <a href="newenglandcontent.pdf">
+        <a v-if="loggedIn" href="newenglandcontent.pdf">
+          <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
+        </div>
         </a>
-      
-      </div>
-      
-      <div class="col-report" id="myViewReportLinkTag">
-       
-        <a href="newengland.pdf">
+        <a v-if="loggedIn" href="newengland.pdf">
+          <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
+        </div>
         </a>
-      
-      </div>
-      
+        <nuxt-link title="Please Login to view PDF" v-else to="/login">
+          <span class="mdi mdi-key"></span><br>
+          for PDF loggin
+        </nuxt-link>
     </div>
-
   </span>
 
-    <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
+  <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
 
     <div>
       <p>MidAltantic</p>
     </div>
-    
+
     <div class="col-reports-div">
-
-      <div class="col-report" id="myReportPdfButton">
-    
-        <a href="midatlanticcontent.pdf">
+        <a v-if="loggedIn" href="midatlanticcontent.pdf">
+          <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
+        </div>
         </a>
-      
-      </div>
-      
-      <div class="col-report" id="myViewReportLinkTag">
-       
-        <a href="midatlantic.pdf">
+        <a v-if="loggedIn" href="midatlantic.pdf">
+          <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
+        </div>
         </a>
-      
-      </div>
-      
+        <nuxt-link title="Please Login to view PDF" v-else to="/login">
+          <span class="mdi mdi-key"></span><br>
+          for PDF loggin
+        </nuxt-link>
     </div>
-
   </span>
 
-    <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
+  <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
 
     <div>
       <p>Southeast</p>
     </div>
-    
+
     <div class="col-reports-div">
-
-      <div class="col-report" id="myReportPdfButton">
-    
-        <a href="southeastcontent.pdf">
+        <a v-if="loggedIn" href="southeastcontent.pdf">
+          <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
+        </div>
         </a>
-      
-      </div>
-      
-      <div class="col-report" id="myViewReportLinkTag">
-       
-        <a href="southeast.pdf">
+        <a v-if="loggedIn" href="southeast.pdf">
+          <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
+        </div>
         </a>
-      
-      </div>
-      
+        <nuxt-link title="Please Login to view PDF" v-else to="/login">
+          <span class="mdi mdi-key"></span><br>
+          for PDF loggin
+        </nuxt-link>
     </div>
-
   </span>
 
-     <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
+  <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
 
     <div>
       <p>South</p>
     </div>
-    
+
     <div class="col-reports-div">
-
-      <div class="col-report" id="myReportPdfButton">
-    
-        <a href="southcontent.pdf">
+        <a v-if="loggedIn" href="southcontent.pdf">
+          <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
+        </div>
         </a>
-      
-      </div>
-      
-      <div class="col-report" id="myViewReportLinkTag">
-       
-        <a href="south.pdf">
+        <a  v-if="loggedIn" href="south.pdf">
+          <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
+        </div>
         </a>
-      
-      </div>
-      
+        <nuxt-link title="Please Login to view PDF" v-else to="/login">
+          <span class="mdi mdi-key"></span><br>
+          for PDF loggin
+        </nuxt-link>
     </div>
-
   </span>
 
-   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
+  <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
 
     <div>
       <p>Midwest</p>
     </div>
-    
+
     <div class="col-reports-div">
-
-      <div class="col-report" id="myReportPdfButton">
-    
         <a href="midwestcontent.pdf">
+          <div v-if="loggedIn" class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
+        </div>
         </a>
-      
-      </div>
-      
-      <div class="col-report" id="myViewReportLinkTag">
-       
-        <a href="midwest.pdf">
+        <a v-if="loggedIn" href="midwest.pdf">
+          <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
+        </div>
         </a>
-      
-      </div>
-      
+        <nuxt-link title="Please Login to view PDF" v-else to="/login">
+          <span class="mdi mdi-key"></span><br>
+          for PDF loggin
+        </nuxt-link>
     </div>
-
   </span>
 
-     <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
+  <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
 
     <div>
       <p>Rocky Mountains</p>
     </div>
-    
+
     <div class="col-reports-div">
-
-      <div class="col-report" id="myReportPdfButton">
-    
-        <a href="rockycontent.pdf">
+        <a v-if="loggedIn" href="rockycontent.pdf">
+          <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
+        </div>
         </a>
-      
-      </div>
-      
-      <div class="col-report" id="myViewReportLinkTag">
-       
-        <a href="rockey.pdf">
+        <a v-if="loggedIn" href="rockey.pdf">
+          <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
+        </div>
         </a>
-      
-      </div>
-      
+        <nuxt-link title="Please Login to view PDF" v-else to="/login">
+          <span class="mdi mdi-key"></span><br>
+          for PDF loggin
+        </nuxt-link>
     </div>
-
   </span>
 
-     <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
+  <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
 
     <div>
       <p>Southwest</p>
     </div>
-    
+
     <div class="col-reports-div">
-
-      <div class="col-report" id="myReportPdfButton">
-    
-        <a href="southwestcontent.pdf">
+        <a v-if="loggedIn" href="southwestcontent.pdf">
+          <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
+        </div>
         </a>
-      
-      </div>
-      
-      <div class="col-report" id="myViewReportLinkTag">
-       
-        <a href="southwest.pdf">
+        <a v-if="loggedIn" href="southwest.pdf">
+          <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
+        </div>
         </a>
-      
-      </div>
-      
+        <nuxt-link title="Please Login to view PDF" v-else to="/login">
+          <span class="mdi mdi-key"></span><br>
+          for PDF loggin
+        </nuxt-link>
     </div>
-
   </span>
 
-     <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
+  <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
 
     <div>
       <p>Pacific Northwest</p>
     </div>
-    
+
     <div class="col-reports-div">
-
-      <div class="col-report" id="myReportPdfButton">
-    
-        <a href="pacificcontent.pdf">
+        <a v-if="loggedIn" href="pacificcontent.pdf">
+          <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
+        </div>
         </a>
-      
-      </div>
-      
-      <div class="col-report" id="myViewReportLinkTag">
-       
-        <a href="pacific.pdf">
+        <a v-if="loggedIn" href="pacific.pdf">
+          <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
+        </div>
         </a>
-      
-      </div>
-      
+        <nuxt-link title="Please Login to view PDF" v-else to="/login">
+          <span class="mdi mdi-key"></span><br>
+          for PDF loggin
+        </nuxt-link>
     </div>
-
   </span>
 
      <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
@@ -1689,27 +1488,23 @@
     <div>
       <p>Silicon Valley</p>
     </div>
-    
+
     <div class="col-reports-div">
-
-      <div class="col-report" id="myReportPdfButton">
-    
-        <a href="siliconvalleycontent.pdf">
+        <a v-if="loggedIn" href="siliconvalleycontent.pdf">
+          <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
+        </div>
         </a>
-      
-      </div>
-      
-      <div class="col-report" id="myViewReportLinkTag">
-       
-        <a href="siliconvalley.pdf">
+        <a v-if="loggedIn"  href="siliconvalley.pdf">
+          <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
+        </div>
         </a>
-      
-      </div>
-      
+        <nuxt-link title="Please Login to view PDF" v-else to="/login">
+          <span class="mdi mdi-key"></span><br>
+          for PDF loggin
+        </nuxt-link>
     </div>
-
   </span>
 
      <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
@@ -1717,27 +1512,23 @@
     <div>
       <p>Southern California</p>
     </div>
-    
+
     <div class="col-reports-div">
-
-      <div class="col-report" id="myReportPdfButton">
-    
-        <a href="socalcontent.pdf">
+        <a v-if="loggedIn" href="socalcontent.pdf">
+          <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
+        </div>
         </a>
-      
-      </div>
-      
-      <div class="col-report" id="myViewReportLinkTag">
-       
-        <a href="socal.pdf">
+        <a v-if="loggedIn" href="socal.pdf">
+          <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
+        </div>
         </a>
-      
-      </div>
-      
+        <nuxt-link title="Please Login to view PDF" v-else to="/login">
+          <span class="mdi mdi-key"></span><br>
+          for PDF loggin
+        </nuxt-link>
     </div>
-
   </span>
 
      <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
@@ -1745,27 +1536,23 @@
     <div>
       <p>UK</p>
     </div>
-    
+
     <div class="col-reports-div">
-
-      <div class="col-report" id="myReportPdfButton">
-    
-        <a href="ukcontent.pdf">
+        <a v-if="loggedIn" href="ukcontent.pdf">
+          <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
+        </div>
         </a>
-      
-      </div>
-      
-      <div class="col-report" id="myViewReportLinkTag">
-       
-        <a href="uk.pdf">
+        <a v-if="loggedIn" href="uk.pdf">
+          <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
+        </div>
         </a>
-      
-      </div>
-      
+        <nuxt-link title="Please Login to view PDF" v-else to="/login">
+          <span class="mdi mdi-key"></span><br>
+          for PDF loggin
+        </nuxt-link>
     </div>
-
   </span>
 </div>
 </div>
@@ -1781,7 +1568,6 @@
      </div>
   </div>
 
-
 <div class="exespotbody">
   <div class="grid">
 
@@ -1790,54 +1576,49 @@
       <div>
         <p>WealthTech 2020</p>
       </div>
-    
+
       <div class="col-reports-div">
-    
-          <div class="col-report" id="myReportPdfButton">
-        
-            <a href="wealthtech2020.pdf">
+            <a v-if="loggedIn" href="wealthtech2020.pdf">
+              <div class="col-report" id="myReportPdfButton">
               <span class="mdi mdi-pdf-box "></span>
+            </div>
             </a>
-          
-          </div>
-
-          <div class="col-report" id="myViewReportLinkTag">
-         
-            <a href="wealthtech2020.pdf">
+            <a v-if="loggedIn" href="wealthtech2020.pdf">
+              <div class="col-report" id="myViewReportLinkTag">
               <span class="mdi mdi-eye "></span>
+            </div>
             </a>
-         </div>
-
+            <nuxt-link title="Please Login to view PDF" v-else to="/login">
+              <span class="mdi mdi-key"></span><br>
+              for PDF loggin
+            </nuxt-link>
       </div>
   </span>
 
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
-    
+
     <div>
       <p>Blockchain and Finance</p>
     </div>
 
     <div class="col-reports-div">
-
-      <div class="col-report" id="myReportPdfButton">
-        
-        <a href="blockchainplusfinance.pdf">
+        <a v-if="loggedIn" href="blockchainplusfinance.pdf">
+          <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
+        </div>
         </a>
-      </div>
-      
-      <div class="col-report" id="myViewReportLinkTag">
-      
-        <a href="blockchainplusfinance.pdf">
+        <a v-if="loggedIn" href="blockchainplusfinance.pdf">
+          <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
+        </div>
         </a>
-      
-      </div>
-    
+        <nuxt-link title="Please Login to view PDF" v-else to="/login">
+          <span class="mdi mdi-key"></span><br>
+          for PDF loggin
+        </nuxt-link>
     </div>
-  
   </span>
-  
+
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
 
       <div>
@@ -1845,58 +1626,48 @@
       </div>
 
       <div class="col-reports-div">
-    
-        <div class="col-report" id="myReportPdfButton">
-          
-          <a href="insurtechdistribution.pdf">
+          <a v-if="loggedIn" href="insurtechdistribution.pdf">
+              <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
-          </a>
-      
         </div>
-    
-        <div class="col-report"   id="myViewReportLinkTag">  
-         
-          <a href="insurtechdistribution.pdf">
+          </a>
+          <a v-if="loggedIn" href="insurtechdistribution.pdf">
+            <div class="col-report"   id="myViewReportLinkTag">
             <span class="mdi mdi-eye "></span>
+          </div>
           </a>
-        
-        </div>
-      
+          <nuxt-link title="Please Login to view PDF" v-else to="/login">
+            <span class="mdi mdi-key"></span><br>
+            for PDF loggin
+          </nuxt-link>
       </div>
-  
   </span>
-  
+
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
 
     <div>
       <p>Challenger Banks</p>
     </div>
-    
+
     <div class="col-reports-div">
-
-      <div class="col-report" id="myReportPdfButton">
-    
-        <a href="challengerbanks.pdf">
+        <a v-if="loggedIn" href="challengerbanks.pdf">
+          <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
+        </div>
         </a>
-      
-      </div>
-      
-      <div class="col-report" id="myViewReportLinkTag">
-       
-        <a href="challengerbanks.pdf">
+        <a v-if="loggedIn" href="challengerbanks.pdf">
+          <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
+        </div>
         </a>
-      
-      </div>
-      
+        <nuxt-link title="Please Login to view PDF" v-else to="/login">
+          <span class="mdi mdi-key"></span><br>
+          for PDF loggin
+        </nuxt-link>
     </div>
-  
   </span>
-
 </div>
 </div>
-
 
 <div class="exespotbody">
   <div class="grid">
@@ -1906,54 +1677,49 @@
       <div>
         <p>Insurtech Flood/Catastrophe</p>
       </div>
-    
+
       <div class="col-reports-div">
-    
-          <div class="col-report" id="myReportPdfButton">
-        
-            <a href="foodpluscatastrophe.pdf">
+            <a v-if="loggedIn" href="foodpluscatastrophe.pdf">
+              <div class="col-report" id="myReportPdfButton">
               <span class="mdi mdi-pdf-box "></span>
+            </div>
             </a>
-          
-          </div>
-
-          <div class="col-report" id="myViewReportLinkTag">
-         
-            <a href="floodpluscatastrophe.pdf">
+            <a v-if="loggedIn" href="floodpluscatastrophe.pdf">
+              <div class="col-report" id="myViewReportLinkTag">
               <span class="mdi mdi-eye "></span>
+            </div>
             </a>
-         </div>
-
+            <nuxt-link title="Please Login to view PDF" v-else to="/login">
+              <span class="mdi mdi-key"></span><br>
+              for PDF loggin
+            </nuxt-link>
       </div>
   </span>
 
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
-    
+
     <div>
       <p>Fintech Execs talk Covid 19</p>
     </div>
 
     <div class="col-reports-div">
-
-      <div class="col-report" id="myReportPdfButton">
-        
-        <a href="covid19.pdf">
+        <a v-if="loggedIn" href="covid19.pdf">
+          <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-pdf-box " ></span>
+        </div>
         </a>
-      </div>
-      
-      <div class="col-report" id="myViewReportLinkTag">
-      
-        <a href="covid19.pdf">
+        <a v-if="loggedIn" href="covid19.pdf">
+          <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
+        </div>
         </a>
-      
-      </div>
-    
+        <nuxt-link title="Please Login to view PDF" v-else to="/login">
+          <span class="mdi mdi-key"></span><br>
+          for PDF loggin
+        </nuxt-link>
     </div>
-  
   </span>
-  
+
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
 
       <div>
@@ -1961,64 +1727,66 @@
       </div>
 
       <div class="col-reports-div">
-    
-        <div class="col-report" id="myReportPdfButton">
-          
-          <a href="ai2020.pdf">
+          <a v-if="loggedIn" href="ai2020.pdf">
+            <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
-          </a>
-      
         </div>
-    
-        <div class="col-report"   id="myViewReportLinkTag">  
-         
-          <a href="ai2020.pdf">
+          </a>
+          <a v-if="loggedIn" href="ai2020.pdf">
+            <div class="col-report"   id="myViewReportLinkTag">
             <span class="mdi mdi-eye "></span>
+          </div>
           </a>
-        
-        </div>
-      
+          <nuxt-link title="Please Login to view PDF" v-else to="/login">
+            <span class="mdi mdi-key"></span><br>
+            for PDF loggin
+          </nuxt-link>
       </div>
-  
+
   </span>
-  
+
   <span class="module" style="display:grid;text-decoration:none;color:#14a0fd;" >
 
     <div>
       <p>Insurtech Coverage 2020</p>
     </div>
-    
+
     <div class="col-reports-div">
-
-      <div class="col-report" id="myReportPdfButton">
-    
-        <a href="insurtech2020.pdf">
+        <a v-if="loggedIn" href="insurtech2020.pdf">
+          <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
+        </div>
         </a>
-      
-      </div>
-      
-      <div class="col-report" id="myViewReportLinkTag">
-       
-        <a href="insurtech2020.pdf">
+        <a v-if="loggedIn" href="insurtech2020.pdf">
+          <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
+        </div>
         </a>
-      
-      </div>
-      
+        <nuxt-link title="Please Login to view PDF" v-else to="/login">
+          <span class="mdi mdi-key"></span><br>
+          for PDF loggin
+        </nuxt-link>
     </div>
-  
   </span>
-
 </div>
 </div>
-
-
-
 </div>
 
 </template>
 
+<script>
+
+import {mapState, mapMutations} from 'vuex';
+
+export default {
+  name: 'reports',
+  computed: {
+   ...mapState({
+       loggedIn: state => state.auth.loggedIn,
+    })
+},
+}
+</script>
 
 <style scoped>
 
@@ -2028,13 +1796,13 @@
     }
 
     h2 {
-    
+
       margin-top: 0px;
       color: #4f81bd !important;
     }
-    
+
     .alpha {
-    
+
       box-shadow: 0px 0px 7px -5px;
       width: max-content;
       padding: 5px;
@@ -2042,17 +1810,17 @@
       background: #ffffff;
       border-radius: 5px;
     }
-    
+
     html {
       background: rgb(20 160 253 / 4%);
     }
-    
+
     body {
-    
+
       margin-top: -35px;
       padding-top: 20px;
       background: #00000000 !important;
-    
+
     }
 
     .row-27 {
@@ -2068,7 +1836,7 @@
     }
 
     .scroll-top i {
-    
+
       width: -webkit-fill-available;
       display: inline-block;
       color: #FFFFFF;
@@ -2076,7 +1844,7 @@
       border-radius: 10px;
       box-shadow: 0px 0px 3px -1px grey;
       transitions:2s !important;
-    
+
     }
 
     .scroll-top i:hover {
@@ -2089,7 +1857,7 @@
     .content {
       text-align:center;
     }
-  
+
     @media screen and (max-width:990){
        .exespotbody{
           display: table;
@@ -2097,31 +1865,31 @@
     }
 
     .header{
-    
+
       margin-top:100px;
       min-height:200px;
       height:auto;
-    
+
     }
 
     .footer {
       margin-top:200px;
     }
-    
+
     .header, .footer {
-    
+
       text-align:center;
       padding:auto;
       background-color: rgba(20, 160, 253, .82);
       background: #ffffff;
-    
+
     }
 
     .sectionix {
-      
+
       height:auto;
       width:100%;
-    
+
     }
 
     h1 {
@@ -2133,7 +1901,7 @@
     }
 
     p {
-    
+
       font-size: 20px;
       margin-top:20px;
       margin-bottom:20px;
@@ -2144,44 +1912,44 @@
     }
 
   .right {
-      
+
       float:right;
       padding:5%;
   }
-  
+
   .left {
-   
+
       float:left;
       padding:5%;
   }
-  
+
   .ok {
       width: 24.7% !important;
   }
 
   .hitri {
-      
+
       max-width: -webkit-fill-available;
       height: 400;
   }
 
   .exespotlightsection {
-      
+
       background-image:  url("https://filesforfintech.s3.amazonaws.com/images/insight+background.png") ;
       background-repeat: round;
       background-size: cover;
   }
-  
+
   .exespotbody {
-      
+
       margin: 0 auto;
       max-width: 86em;
       padding: 1em 0;
-  
+
   }
-  
+
   .grid {
-  
+
       display: flex;
       flex-wrap: wrap;
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -2190,7 +1958,7 @@
   }
 
   .module:hover {
-  
+
       background:#fbfbfb;
       -webkit-box-shadow: 0px 0px 35px -16px rgba(161,161,161,1);
       -moz-box-shadow: 0px 0px 35px -16px rgba(161,161,161,1);
@@ -2198,7 +1966,7 @@
   }
 
   .module {
-      
+
       background: white;
       display: inline-table;
       align-items: center;
@@ -2219,15 +1987,15 @@
   }
 
   @supports (display: grid) {
-  
+
     .module {
         margin: 0;
     }
-  
+
   }
 
   .content {
-    
+
     background: #ffffffc7;
     padding-bottom: 10px;
     border-radius: 10px;
@@ -2239,25 +2007,25 @@
   }
 
   .col-reports-div {
-  
+
     display: flex;
     place-self: center;
     width: fit-content;
   }
-  
+
   .col-report {
-  
+
     width:50%;
     padding:10px;
   }
 
   .mdi {
-  
+
     font-size: 34px;
   }
 
   .i-p-h {
-  
+
     padding:20px;
     text-align:justify;
     font-size:16px;
