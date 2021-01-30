@@ -5,5 +5,7 @@ export default async function ({store, from}) {
       store.dispatch("posts/setAllPosts")
       store.dispatch("company/setAllCompanies")
       store.dispatch("news/setAllNews")
+      store.dispatch("raise/setAll")
+
     }
 }

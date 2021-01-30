@@ -1,3 +1,4 @@
+import allRaises from '~/static/raises.json';
 export const state = () => ({
  allRaises: [],
  activeTab: 'All', 
@@ -100,17 +101,14 @@ export const mutations = {
 
  export const actions = {
 
-     nuxtServerInit(vuexContext, data) {
+     nuxtServerInit(vuexContext) {
+            vuexContext.commit("setAll", allRaises);
     
-        return this.$axios.$get("/raises")
-          .then(data => {
-            vuexContext.commit("setAll", data);
-         })
      }, 
 
-     setAll(vueContext, data ) {
+     setAll(vuexContext ) {
 
-        vuexContext.commit("setAll", data);
+        vuexContext.commit("setAll",allRaises);
      },
 
 
