@@ -57,7 +57,7 @@
           </postsys>
 
           <Board v-show="!this.showModal" :posts="posts" id="board-right" >
-            <div class="builder-btns">
+            <div  class="builder-btns">
               <tippy to="Openview">
               Open PDf Preview
               </tippy>
@@ -65,13 +65,15 @@
               <span class="mdi mdi-file-eye"></span>
               View
               </button>
-              <tippy to="getPdf">
+
+              <tippy v-if="loggedIn" to="getPdf">
               Download pdf
               </tippy>
-              <button name="getPdf" v-on:click="generateReport()" class="gardient-button b-lr-s">
+              <button v-if="loggedIn" name="getPdf" v-on:click="generateReport()" class="gardient-button b-lr-s">
               <span class="mdi mdi-pdf-box"></span>
               PDF
               </button>
+               <nuxt-link v-else to="/login">  <span class="mdi mdi-pdf-box"></span>for PDF loggin </nuxt-link>
             </div>
              <card v-for="myboard in myboards" :id="myboard.id" :key="myboard.id" draggable="true" class="list-group-item">
                 <h3>  {{ myboard.title }} </h3>
@@ -132,6 +134,7 @@ export default {
       blkPage:  state => state.posts.blkBuildPage,
       bnkPage:  state => state.posts.bnkBuildPage,
       insPage:  state => state.posts.insBuildPage,
+      loggedIn: state => state.auth.loggedIn,
    }),
 
   filterMessage() {
