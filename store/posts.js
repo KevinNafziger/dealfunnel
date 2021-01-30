@@ -1402,121 +1402,119 @@ export const mutations = {
   	   		break;
 
      	case "Articles":
-
+          state.activeArtTab = 'Page';
+          state.firstArtLoad =false;
+          
           var temp = state.numArtPage;
           temp--;
+          state.numArtPage = temp;
+
           if (temp==1) {
              state.activeArtInfo = state.post1;
-             state.numArtPage = 1;
           }
           else if (temp == 2) {
              state.activeArtInfo = state.post2;
-             state.numArtPage = 2;
+  
           }
           else if (temp == 3) {
              state.activeArtInfo = state.post3;
-             state.numArtPage = 3;
+     
           }
           else if (temp == 4) {
              state.activeArtInfo = state.post4;
-             state.numArtPage = 4;
+ 
           }
           else if (temp == 5) {
 
              state.activeArtInfo = state.post5;
-             state.numArtPage = 5;
+       
           }
 
           else if (temp == 6) {
 
              state.activeBuildInfo = state.post6;
-             state.numArtPage = 6;
+
           }
 
           else if (temp == 7) {
 
              state.activeArtInfo = state.post7;
-             state.numArtPage = 7;
+
           }
           else if (temp == 8) {
              state.activeArtInfo = state.post8;
-             state.numArtPage = 8;
+      
           }
           else if (temp == 9) {
 
              state.activeArtInfo = state.post9;
-             state.numArtPage = 9;
+      
           }
           else if (temp == 10) {
 
              state.activeArtInfo = state.post10;
-             state.numArtPage = 10;
           }
-   	   		state.activeArtTab = 'Page';
-  	   		state.firstArtLoad =false;
   	   		break;
 
       case "Data":
 
+          state.activeDataTab = 'Page';
+          state.firstDataLoad = false;
           var temp = state.dataPage;
           temp--;
           if (temp==1) {
 
              state.activeDataInfo = state.post1;
-             state.dataPage =1;
+        
           }
 
           else if (temp == 2) {
              state.activeDataInfo = state.post2;
-             state.dataPage=2;
+          
           }
 
           else if (temp == 3) {
 
              state.activeDataInfo = state.post3;
-             state.dataPage=3;
+        
           }
 
           else if (temp == 4) {
           
              state.activeDataInfo = state.post4;
-             state.dataPage =4;
+          
           }
 
           else if (temp == 5) {
 
             state.activeDataInfo = state.post5;
-            state.dataPage = 5; 
+            
           }
           
           else if (temp == 6) {
 
              state.activeDataInfo = state.post6;
-             state.dataPage =6; 
+            
           }
           else if (temp == 7) {
 
              state.activeDataInfo = state.post7;
-             state.dataPage = 7;
+            
           }
           else if (temp == 8) {
 
              state.activeDataInfo = state.post8;
-             state.dataPage =8;
+           
           }
           else if (temp == 9) {
 
              state.activeDataInfo = state.post9;
-             state.dataPage =9;
+           
           }
           else if (temp == 10) {
 
              state.activeDataInfo = state.post10;
-             state.dataPage =10;
           }
-          
-          state.activeDataTab = 'Page';
-          state.firstDataLoad =false;
           break;
   	   	 
       }
@@ -1703,22 +1701,21 @@ export const mutations = {
    	   switch(state.activeView) {
 
    	   	case "Builder":
-
 	  		 
           var temp = state.numBuildPage;
           temp++;
           
           if (temp == 2) {
 	  		     state.activeBuildInfo = state.post2;
-             state.numBuildPage =2;
+             state.numBuildPage=2;
           }
           else if (temp == 3) {
              state.activeBuildInfo = state.post3;
-             state.numBuildPage =3;
+             state.numBuildPage=3;
           }
           else if (temp == 4) {
              state.activeBuildInfo = state.post4;
-             state.numBuildPage =4;
+             state.numBuildPage=4;
           }
           else if (temp == 5)
           {
@@ -1728,12 +1725,12 @@ export const mutations = {
           else if (temp == 6)
           {
              state.activeBuildInfo = state.post6;
-             state.numBuildPage =6;
+             state.numBuildPage=6;
           }
           else if (temp == 7)
           {
              state.activeBuildInfo = state.post7;
-             state.numBuildPage =7;
+             state.numBuildPage=7;
           }
           else if (temp == 8)
           {
