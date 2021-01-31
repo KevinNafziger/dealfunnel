@@ -374,6 +374,8 @@ box-shadow: 0px 1px 5px -3px #474747 !important;
     max-width: 1295px;
     display: flow-root;
     color: #474747 ;
+    line-height: 1.9;
+    letter-spacing: 0.6px;
     transition: 1s;
 }
 
