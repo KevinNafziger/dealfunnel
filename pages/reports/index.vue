@@ -20,19 +20,19 @@
       </div>
 
       <div class="col-reports-div">
-          <a v-if="loggedIn" href="lendingcontent.pdf" >
+          <a v-if="loggedIn" target="_blank" href="lendingcontent.pdf" >
             <div class="col-report" id="myReportPdfButton">
               <span class="mdi mdi-pdf-box "></span>
             </div>
           </a>
-          <a v-if="loggedIn" href="lending.pdf">
+          <a v-if="loggedIn" target="_blank"  href="lending.pdf">
             <div class="col-report" id="myViewReportLinkTag">
               <span class="mdi mdi-eye "></span>
             </div>
           </a>
-          <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+          <nuxt-link title="Please Login to view PDF"  v-else to="/login">
             <span class="mdi mdi-key"></span><br>
-            for PDF loggin
+            Login for PDF
           </nuxt-link>
       </div>
   </span>
@@ -44,17 +44,17 @@
      </div>
 
      <div class="col-reports-div">
-       <a v-if="loggedIn" href="insurtechcontent.pdf">
+       <a v-if="loggedIn"  target="_blank" href="insurtechcontent.pdf">
          <div class="col-report"   id="myReportPdfButton">
               <span class="mdi mdi-pdf-box"></span>
          </div>
        </a>
-       <a v-if="loggedIn" href="insurtech.pdf" >
+       <a v-if="loggedIn" target="_blank" href="insurtech.pdf" >
          <div class="col-report"  id="myViewReportLinkTag">
          <span class="mdi mdi-eye "></span>
          </div>
       </a>
-      <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+      <nuxt-link title="Please Login to view PDF"  v-else to="/login">
         <span class="mdi mdi-key"></span><br>
         for PDF loggin
       </nuxt-link>
@@ -68,17 +68,17 @@
       </div>
 
       <div class="col-reports-div">
-         <a v-if="loggedIn" href="blockchaincontent.pdf" >
+         <a v-if="loggedIn" target="_blank" href="blockchaincontent.pdf" >
             <div class="col-report" id="myReportPdfButton">
             <span class="mdi mdi-pdf-box "></span>
           </div>
         </a>
-        <a  v-if="loggedIn" href="blockchain.pdf">
+        <a  v-if="loggedIn" target="_blank" href="blockchain.pdf">
           <div class="col-report" id="myViewReportLinkTag">
             <span class="mdi mdi-eye "></span>
           </div>
         </a>
-        <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+        <nuxt-link title="Please Login to view PDF" v-else to="/login">
           <span class="mdi mdi-key"></span><br>
           for PDF loggin
         </nuxt-link>
@@ -91,17 +91,17 @@
         <p>Banking</p>
       </div>
       <div class="col-reports-div">
-        <a v-if="loggedIn" href="bankingcontent.pdf">
+        <a v-if="loggedIn" target="_blank" href="bankingcontent.pdf">
           <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
           </div>
         </a>
-        <a v-if="loggedIn" href="banking.pdf">
+        <a v-if="loggedIn" target="_blank" href="banking.pdf">
           <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye"></span>
           </div>
         </a>
-        <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+        <nuxt-link title="Please Login to view PDF"  v-else to="/login">
           <span class="mdi mdi-key"></span><br>
           for PDF loggin
         </nuxt-link>
@@ -120,17 +120,17 @@
       </div>
 
       <div class="col-reports-div">
-            <a  v-if="loggedIn" href="wealthtechcontent.pdf">
+            <a  v-if="loggedIn" target="_blank" href="wealthtechcontent.pdf">
               <div class="col-report" id="myReportPdfButton">
               <span class="mdi mdi-pdf-box "></span>
                 </div>
             </a>
-            <a v-if="loggedIn" href="wealthtech.pdf">
+            <a v-if="loggedIn" target="_blank" href="wealthtech.pdf">
               <div class="col-report" id="myViewReportLinkTag">
               <span class="mdi mdi-eye "></span>
             </div>
             </a>
-         <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+         <nuxt-link title="Please Login to view PDF"  v-else to="/login">
            <span class="mdi mdi-key"></span><br>
            for PDF loggin
          </nuxt-link>
@@ -144,17 +144,17 @@
     </div>
 
     <div class="col-reports-div">
-        <a v-if="loggedIn" href="paymentscontent.pdf">
+        <a v-if="loggedIn" target="_blank" href="paymentscontent.pdf">
           <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
           </div>
         </a>
-        <a v-if="loggedIn" href="payments.pdf">
+        <a v-if="loggedIn" target="_blank" href="payments.pdf">
           <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
         </div>
         </a>
-        <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+        <nuxt-link title="Please Login to view PDF" v-else to="/login">
           <span class="mdi mdi-key"></span><br>
           for PDF loggin
         </nuxt-link>
@@ -168,17 +168,17 @@
       </div>
 
       <div class="col-reports-div">
-          <a v-if="loggedIn" href="cybercontent.pdf">
+          <a v-if="loggedIn" target="_blank" href="cybercontent.pdf">
             <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
         </div>
           </a>
-          <a v-if="loggedIn" href="cyber.pdf">
+          <a v-if="loggedIn" target="_blank" href="cyber.pdf">
             <div class="col-report"   id="myViewReportLinkTag">
             <span class="mdi mdi-eye "></span>
           </div>
           </a>
-          <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+          <nuxt-link title="Please Login to view PDF"  v-else to="/login">
             <span class="mdi mdi-key"></span><br>
             for PDF loggin
           </nuxt-link>
@@ -192,17 +192,17 @@
     </div>
 
     <div class="col-reports-div">
-        <a v-if="loggedIn" href="identitycontent.pdf">
+        <a v-if="loggedIn" target="_blank" href="identitycontent.pdf">
           <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
         </div>
         </a>
-        <a v-if="loggedIn" href="identity.pdf">
+        <a v-if="loggedIn" target="_blank" href="identity.pdf">
           <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
         </div>
         </a>
-        <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+        <nuxt-link title="Please Login to view PDF"  v-else to="/login">
           <span class="mdi mdi-key"></span><br>
           for PDF loggin
         </nuxt-link>
@@ -221,17 +221,17 @@
     </div>
 
     <div class="col-reports-div">
-        <a v-if="loggedIn" href="regtechcontent.pdf">
+        <a v-if="loggedIn" target="_blank" href="regtechcontent.pdf">
           <div class="col-report" id="myReportPdfButton">
             <span class="mdi mdi-pdf-box "></span>
           </div>
         </a>
-        <a v-if="loggedIn" href="regtech.pdf">
+        <a v-if="loggedIn" target="_blank" href="regtech.pdf">
           <div class="col-report" id="myViewReportLinkTag">
             <span class="mdi mdi-eye "></span>
           </div>
         </a>
-        <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+        <nuxt-link title="Please Login to view PDF" v-else to="/login">
           <span class="mdi mdi-key"></span><br>
           for PDF loggin
         </nuxt-link>
@@ -245,17 +245,17 @@
       </div>
 
       <div class="col-reports-div">
-        <a v-if="loggedIn" href="healthtechcontent.pdf">
+        <a v-if="loggedIn" target="_blank" href="healthtechcontent.pdf">
           <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
           </div>
         </a>
-          <a v-if="loggedIn" href="healthtech.pdf" >
+          <a v-if="loggedIn" target="_blank" href="healthtech.pdf" >
             <div class="col-report" id="myViewReportLinkTag">
             <span class="mdi mdi-eye "></span>
           </div>
           </a>
-        <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+        <nuxt-link title="Please Login to view PDF"  v-else to="/login">
           <span class="mdi mdi-key"></span><br>
           for PDF loggin
         </nuxt-link>
@@ -269,17 +269,17 @@
       </div>
 
      <div class="col-reports-div">
-        <a v-if="loggedIn" href="aicontent.pdf" >
+        <a v-if="loggedIn" target="_blank" href="aicontent.pdf" >
           <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box "></span>
           </div>
         </a>
-        <a v-if="loggedIn" href="ai.pdf">
+        <a v-if="loggedIn" target="_blank" href="ai.pdf">
             <div class="col-report" id="myViewReportLinkTag">
               <span class="mdi mdi-eye "></span>
           </div>
         </a>
-        <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+        <nuxt-link title="Please Login to view PDF" v-else to="/login">
           <span class="mdi mdi-key"></span><br>
           for PDF loggin
         </nuxt-link>
@@ -293,17 +293,17 @@
       </div>
 
       <div class="col-reports-div">
-         <a v-if="loggedIn" href="mgacontent.pdf">
+         <a v-if="loggedIn" target="_blank" href="mgacontent.pdf">
             <div class="col-report" id="myReportPdfButton">
               <span class="mdi mdi-pdf-box " ></span>
             </div>
           </a>
-          <a v-if="loggedIn" href="mga.pdf">
+          <a v-if="loggedIn" target="_blank" href="mga.pdf">
             <div class="col-report" id="myViewReportLinkTag">
               <span class="mdi mdi-eye "></span>
             </div>
           </a>
-          <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+          <nuxt-link title="Please Login to view PDF" v-else to="/login">
             <span class="mdi mdi-key"></span><br>
             for PDF loggin
           </nuxt-link>
@@ -322,17 +322,17 @@
       </div>
 
       <div class="col-reports-div">
-            <a v-if="loggedIn" href="realestatecontent.pdf">
+            <a v-if="loggedIn" target="_blank" href="realestatecontent.pdf">
               <div class="col-report" id="myReportPdfButton">
               <span class="mdi mdi-pdf-box "></span>
             </div>
             </a>
-            <a v-if="loggedIn" href="realestate.pdf">
+            <a v-if="loggedIn" target="_blank" href="realestate.pdf">
               <div class="col-report" id="myViewReportLinkTag">
               <span class="mdi mdi-eye "></span>
             </div>
             </a>
-         <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+         <nuxt-link title="Please Login to view PDF"  v-else to="/login">
            <span class="mdi mdi-key"></span><br>
            for PDF loggin
          </nuxt-link>
@@ -346,17 +346,17 @@
       </div>
 
       <div class="col-reports-div">
-          <a v-if="loggedIn" href="remittancescontent.pdf">
+          <a v-if="loggedIn" target="_blank" href="remittancescontent.pdf">
             <div class="col-report" id="myReportPdfButton">
             <span class="mdi mdi-pdf-box " ></span>
           </div>
           </a>
-          <a v-if="loggedIn" href="remittances.pdf">
+          <a v-if="loggedIn" target="_blank" href="remittances.pdf">
             <div class="col-report" id="myViewReportLinkTag">
             <span class="mdi mdi-eye "></span>
           </div>
           </a>
-          <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+          <nuxt-link title="Please Login to view PDF" v-else to="/login">
             <span class="mdi mdi-key"></span><br>
             for PDF loggin
           </nuxt-link>
@@ -370,17 +370,17 @@
     </div>
 
     <div class="col-reports-div">
-          <a v-if="loggedIn" href="capitalmarketscontent.pdf">
+          <a v-if="loggedIn" target="_blank" href="capitalmarketscontent.pdf">
             <div class="col-report" id="myReportPdfButton">
             <span class="mdi mdi-pdf-box " ></span>
           </div>
           </a>
-        <a  v-if="loggedIn" href="capitalmarkets.pdf">
+        <a  v-if="loggedIn" target="_blank" href="capitalmarkets.pdf">
           <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
         </div>
         </a>
-      <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+      <nuxt-link title="Please Login to view PDF"  v-else to="/login">
         <span class="mdi mdi-key"></span><br>
         for PDF loggin
       </nuxt-link>
@@ -394,17 +394,17 @@
       </div>
 
       <div class="col-reports-div">
-            <a v-if="loggedIn" href="personalfinancecontent.pdf">
+            <a v-if="loggedIn" target="_blank" href="personalfinancecontent.pdf">
               <div class="col-report" id="myReportPdfButton">
               <span class="mdi mdi-pdf-box " ></span>
             </div>
             </a>
-            <a v-if="loggedIn" href="personalfinance.pdf">
+            <a v-if="loggedIn" target="_blank" href="personalfinance.pdf">
               <div class="col-report" id="myViewReportLinkTag">
               <span class="mdi mdi-eye "></span>
             </div>
             </a>
-            <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+            <nuxt-link title="Please Login to view PDF"  v-else to="/login">
               <span class="mdi mdi-key"></span><br>
               for PDF loggin
             </nuxt-link>
@@ -435,17 +435,17 @@
       </div>
 
       <div class="col-reports-div">
-            <a v-if="loggedIn" href="growthequitycontent.pdf">
+            <a v-if="loggedIn" target="_blank" href="growthequitycontent.pdf">
               <div class="col-report" id="myReportPdfButton">
               <span class="mdi mdi-pdf-box "></span>
             </div>
             </a>
-            <a v-if="loggedIn" href="growthequity.pdf">
+            <a v-if="loggedIn" target="_blank" href="growthequity.pdf">
               <div class="col-report" id="myViewReportLinkTag">
               <span class="mdi mdi-eye "></span>
             </div>
             </a>
-            <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+            <nuxt-link title="Please Login to view PDF"  v-else to="/login">
               <span class="mdi mdi-key"></span><br>
               for PDF loggin
             </nuxt-link>
@@ -459,17 +459,17 @@
     </div>
 
     <div class="col-reports-div">
-        <a v-if="loggedIn" href="mergerscontent.pdf">
+        <a target="_blank" v-if="loggedIn" href="mergerscontent.pdf">
           <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
         </div>
         </a>
-        <a v-if="loggedIn" href="mergers.pdf">
+        <a target="_blank" v-if="loggedIn" href="mergers.pdf">
           <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
         </div>
         </a>
-        <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+        <nuxt-link title="Please Login to view PDF" v-else to="/login">
           <span class="mdi mdi-key"></span><br>
           for PDF loggin
         </nuxt-link>
@@ -483,17 +483,17 @@
       </div>
 
       <div class="col-reports-div">
-          <a v-if="loggedIn" href="partnershipcontent.pdf">
+          <a v-if="loggedIn" target="_blank" href="partnershipcontent.pdf">
             <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
         </div>
           </a>
-          <a v-if="loggedIn" href="partnerships.pdf">
+          <a v-if="loggedIn" target="_blank" href="partnerships.pdf">
             <div class="col-report"   id="myViewReportLinkTag">
             <span class="mdi mdi-eye "></span>
           </div>
           </a>
-          <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+          <nuxt-link title="Please Login to view PDF"  v-else to="/login">
             <span class="mdi mdi-key"></span><br>
             for PDF loggin
           </nuxt-link>
@@ -507,17 +507,17 @@
     </div>
 
     <div class="col-reports-div">
-        <a v-if="loggedIn" href="spinoffscontent.pdf">
+        <a v-if="loggedIn" target="_blank" href="spinoffscontent.pdf">
           <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
         </div>
         </a>
-        <a v-if="loggedIn" href="spinoffs.pdf">
+        <a v-if="loggedIn" target="_blank" href="spinoffs.pdf">
           <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
         </div>
         </a>
-        <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+        <nuxt-link title="Please Login to view PDF"  v-else to="/login">
           <span class="mdi mdi-key"></span><br>
           for PDF loggin
         </nuxt-link>
@@ -536,17 +536,17 @@
       </div>
 
       <div class="col-reports-div">
-            <a v-if="loggedIn" href="valuationcontent.pdf">
+            <a v-if="loggedIn" target="_blank" href="valuationcontent.pdf">
               <div class="col-report" id="myReportPdfButton">
               <span class="mdi mdi-pdf-box "></span>
             </div>
             </a>
-            <a v-if="loggedIn" href="valuation.pdf">
+            <a v-if="loggedIn" target="_blank" href="valuation.pdf">
               <div class="col-report" id="myViewReportLinkTag">
               <span class="mdi mdi-eye "></span>
             </div>
             </a>
-            <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+            <nuxt-link title="Please Login to view PDF"  v-else to="/login">
               <span class="mdi mdi-key"></span><br>
               for PDF loggin
             </nuxt-link>
@@ -560,17 +560,17 @@
     </div>
 
     <div class="col-reports-div">
-        <a v-if="loggedIn" href="bootstrappedcontent.pdf">
+        <a v-if="loggedIn" target="_blank" href="bootstrappedcontent.pdf">
           <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
         </div>
         </a>
-        <a v-if="loggedIn" href="bootstrapped.pdf">
+        <a v-if="loggedIn" target="_blank" href="bootstrapped.pdf">
           <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
         </div>
         </a>
-        <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+        <nuxt-link title="Please Login to view PDF" v-else to="/login">
           <span class="mdi mdi-key"></span><br>
           for PDF loggin
         </nuxt-link>
@@ -584,17 +584,17 @@
       </div>
 
       <div class="col-reports-div">
-          <a v-if="loggedIn" href="iposcontent.pdf">
+          <a v-if="loggedIn" target="_blank" href="iposcontent.pdf">
             <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
         </div>
           </a>
-          <a v-if="loggedIn" href="ipos.pdf">
+          <a v-if="loggedIn" target="_blank" href="ipos.pdf">
             <div class="col-report"   id="myViewReportLinkTag">
             <span class="mdi mdi-eye "></span>
           </div>
           </a>
-          <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+          <nuxt-link title="Please Login to view PDF" v-else to="/login">
             <span class="mdi mdi-key"></span><br>
             for PDF loggin
           </nuxt-link>
@@ -608,17 +608,17 @@
     </div>
 
     <div class="col-reports-div">
-        <a v-if="loggedIn" href="profitablecontent.pdf">
+        <a v-if="loggedIn" target="_blank" href="profitablecontent.pdf">
           <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
         </div>
         </a>
-        <a v-if="loggedIn" href="profitable.pdf">
+        <a v-if="loggedIn" target="_blank" href="profitable.pdf">
           <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
         </div>
         </a>
-        <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+        <nuxt-link title="Please Login to view PDF"  v-else to="/login">
           <span class="mdi mdi-key"></span><br>
           for PDF loggin
         </nuxt-link>
@@ -648,17 +648,17 @@
       </div>
 
       <div class="col-reports-div">
-            <a v-if="loggedIn" href="q12020content.pdf">
+            <a v-if="loggedIn" target="_blank" href="q12020content.pdf">
               <div class="col-report" id="myReportPdfButton">
               <span class="mdi mdi-pdf-box "></span>
             </div>
             </a>
-            <a v-if="loggedIn" href="q12020.pdf">
+            <a v-if="loggedIn"target="_blank" href="q12020.pdf">
               <div class="col-report" id="myViewReportLinkTag">
               <span class="mdi mdi-eye "></span>
             </div>
             </a>
-            <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+            <nuxt-link title="Please Login to view PDF"  v-else to="/login">
               <span class="mdi mdi-key"></span><br>
               for PDF loggin
             </nuxt-link>
@@ -672,17 +672,17 @@
     </div>
 
     <div class="col-reports-div">
-        <a v-if="loggedIn" href="q22020content.pdf">
+        <a v-if="loggedIn" target="_blank" href="q22020content.pdf">
           <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
         </div>
         </a>
-        <a v-if="loggedIn" href="q22020.pdf">
+        <a v-if="loggedIn"target="_blank"  href="q22020.pdf">
           <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
         </div>
         </a>
-        <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+        <nuxt-link title="Please Login to view PDF"  v-else to="/login">
           <span class="mdi mdi-key"></span><br>
           for PDF loggin
         </nuxt-link>
@@ -696,17 +696,17 @@
       </div>
 
       <div class="col-reports-div">
-          <a v-if="loggedIn" href="Q32020content.pdf">
+          <a v-if="loggedIn" target="_blank" href="Q32020content.pdf">
             <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
           </div>
           </a>
-          <a v-if="loggedIn" href="Q32020.pdf">
+          <a v-if="loggedIn" target="_blank" href="Q32020.pdf">
             <div class="col-report"   id="myViewReportLinkTag">
             <span class="mdi mdi-eye "></span>
             </div>
           </a>
-          <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+          <nuxt-link title="Please Login to view PDF"  v-else to="/login">
             <span class="mdi mdi-key"></span><br>
             for PDF loggin
           </nuxt-link>
@@ -720,17 +720,17 @@
     </div>
 
     <div class="col-reports-div">
-        <a v-if="loggedIn" href="Q42020content.pdf">
+        <a v-if="loggedIn" target="_blank" href="Q42020content.pdf">
           <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
           </div>
         </a>
-        <a v-if="loggedIn" href="Q42020.pdf">
+        <a v-if="loggedIn" target="_blank" href="Q42020.pdf">
           <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
           </div>
         </a>
-        <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+        <nuxt-link title="Please Login to view PDF"  v-else to="/login">
           <span class="mdi mdi-key"></span><br>
           for PDF loggin
         </nuxt-link>
@@ -750,17 +750,17 @@
       </div>
 
       <div class="col-reports-div">
-            <a v-if="loggedIn" href="Q12021content.pdf">
+            <a v-if="loggedIn" target="_blank" href="Q12021content.pdf">
               <div class="col-report" id="myReportPdfButton">
               <span class="mdi mdi-pdf-box "></span>
               </div>
             </a>
-            <a v-if="loggedIn" href="Q12021.pdf">
+            <a v-if="loggedIn" target="_blank" href="Q12021.pdf">
               <div class="col-report" id="myViewReportLinkTag">
               <span class="mdi mdi-eye "></span>
               </div>
             </a>
-            <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+            <nuxt-link title="Please Login to view PDF"  v-else to="/login">
               <span class="mdi mdi-key"></span><br>
               for PDF loggin
             </nuxt-link>
@@ -774,17 +774,17 @@
     </div>
 
     <div class="col-reports-div">
-        <a v-if="loggedIn" href="Q22021content.pdf">
+        <a v-if="loggedIn" target="_blank" href="Q22021content.pdf">
           <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
           </div>
         </a>
-        <a v-if="loggedIn" href="Q22021.pdf">
+        <a v-if="loggedIn" target="_blank" href="Q22021.pdf">
           <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
           </div>
         </a>
-        <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+        <nuxt-link title="Please Login to view PDF" v-else to="/login">
           <span class="mdi mdi-key"></span><br>
           for PDF loggin
         </nuxt-link>
@@ -798,17 +798,17 @@
       </div>
 
       <div class="col-reports-div">
-          <a v-if="loggedIn" href="q32021content.pdf">
+          <a v-if="loggedIn" target="_blank" href="q32021content.pdf">
             <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
           </div>
           </a>
-          <a v-if="loggedIn" href="q32021.pdf">
+          <a v-if="loggedIn" target="_blank" href="q32021.pdf">
             <div class="col-report"   id="myViewReportLinkTag">
             <span class="mdi mdi-eye "></span>
           </div>
           </a>
-          <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+          <nuxt-link title="Please Login to view PDF" v-else to="/login">
             <span class="mdi mdi-key"></span><br>
             for PDF loggin
           </nuxt-link>
@@ -822,17 +822,17 @@
     </div>
 
     <div class="col-reports-div">
-        <a  v-if="loggedIn" href="q42021content.pdf">
+        <a  v-if="loggedIn" target="_blank" href="q42021content.pdf">
           <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
         </div>
         </a>
-        <a v-if="loggedIn" href="q42021.pdf">
+        <a v-if="loggedIn" target="_blank" href="q42021.pdf">
           <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
         </div>
         </a>
-        <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+        <nuxt-link title="Please Login to view PDF"  v-else to="/login">
           <span class="mdi mdi-key"></span><br>
           for PDF loggin
         </nuxt-link>
@@ -862,17 +862,17 @@
       </div>
 
       <div class="col-reports-div">
-            <a v-if="loggedIn" href="zerotoonecontent.pdf">
+            <a v-if="loggedIn" target="_blank" href="zerotoonecontent.pdf">
                 <div class="col-report" id="myReportPdfButton">
               <span class="mdi mdi-pdf-box "></span>
               </div>
             </a>
-            <a v-if="loggedIn" href="zerotoone.pdf">
+            <a v-if="loggedIn" target="_blank" href="zerotoone.pdf">
               <div class="col-report" id="myViewReportLinkTag">
               <span class="mdi mdi-eye "></span>
             </div>
             </a>
-            <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+            <nuxt-link title="Please Login to view PDF" v-else to="/login">
               <span class="mdi mdi-key"></span><br>
               for PDF loggin
             </nuxt-link>
@@ -886,17 +886,17 @@
     </div>
 
     <div class="col-reports-div">
-        <a  v-if="loggedIn" href="onetofivecontent.pdf">
+        <a  v-if="loggedIn" target="_blank" href="onetofivecontent.pdf">
           <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
         </div>
         </a>
-        <a v-if="loggedIn" href="onetofive.pdf">
+        <a v-if="loggedIn" target="_blank" href="onetofive.pdf">
           <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
         </div>
         </a>
-        <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+        <nuxt-link title="Please Login to view PDF" v-else to="/login">
           <span class="mdi mdi-key"></span><br>
           for PDF loggin
         </nuxt-link>
@@ -910,17 +910,17 @@
       </div>
 
       <div class="col-reports-div">
-        <a  v-if="loggedIn" href="fivetotencontent.pdf">
+        <a  v-if="loggedIn" target="_blank" href="fivetotencontent.pdf">
           <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
         </div>
           </a>
-          <a v-if="loggedIn" href="fivetoten.pdf">
+          <a v-if="loggedIn" target="_blank" href="fivetoten.pdf">
             <div class="col-report"   id="myViewReportLinkTag">
             <span class="mdi mdi-eye "></span>
           </div>
           </a>
-          <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+          <nuxt-link title="Please Login to view PDF" v-else to="/login">
             <span class="mdi mdi-key"></span><br>
             for PDF loggin
           </nuxt-link>
@@ -934,17 +934,17 @@
     </div>
 
     <div class="col-reports-div">
-        <a v-if="loggedIn" href="tentotwentycontent.pdf">
+        <a v-if="loggedIn" target="_blank" href="tentotwentycontent.pdf">
           <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
         </div>
         </a>
-        <a v-if="loggedIn" href="tentotwenty.pdf">
+        <a v-if="loggedIn" target="_blank" href="tentotwenty.pdf">
           <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
         </div>
         </a>
-        <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+        <nuxt-link title="Please Login to view PDF" v-else to="/login">
           <span class="mdi mdi-key"></span><br>
           for PDF loggin
         </nuxt-link>
@@ -963,17 +963,17 @@
       </div>
 
       <div class="col-reports-div">
-            <a v-if="loggedIn" href="twentytofiftycontent.pdf">
+            <a v-if="loggedIn" target="_blank" href="twentytofiftycontent.pdf">
               <div class="col-report" id="myReportPdfButton">
               <span class="mdi mdi-pdf-box "></span>
             </div>
             </a>
-            <a v-if="loggedIn" href="twentytofifty.pdf">
+            <a v-if="loggedIn" target="_blank" href="twentytofifty.pdf">
               <div class="col-report" id="myViewReportLinkTag">
               <span class="mdi mdi-eye "></span>
             </div>
             </a>
-            <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+            <nuxt-link title="Please Login to view PDF" v-else to="/login">
               <span class="mdi mdi-key"></span><br>
               for PDF loggin
             </nuxt-link>
@@ -987,17 +987,17 @@
     </div>
 
     <div class="col-reports-div">
-        <a v-if="loggedIn" href="fiftytohundredcontent.pdf">
+        <a v-if="loggedIn" target="_blank" href="fiftytohundredcontent.pdf">
           <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
         </div>
         </a>
-        <a v-if="loggedIn" href="fiftytohundred.pdf">
+        <a v-if="loggedIn" target="_blank" href="fiftytohundred.pdf">
           <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
         </div>
         </a>
-        <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+        <nuxt-link title="Please Login to view PDF" v-else to="/login">
           <span class="mdi mdi-key"></span><br>
           for PDF loggin
         </nuxt-link>
@@ -1011,17 +1011,17 @@
       </div>
 
       <div class="col-reports-div">
-          <a  v-if="loggedIn" href="hundredmilpluscontent.pdf">
+          <a  v-if="loggedIn" target="_blank" href="hundredmilpluscontent.pdf">
             <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
         </div>
           </a>
-          <a v-if="loggedIn" href="hundredmilplus.pdf">
+          <a v-if="loggedIn" target="_blank" href="hundredmilplus.pdf">
             <div class="col-report"   id="myViewReportLinkTag">
             <span class="mdi mdi-eye "></span>
           </div>
           </a>
-          <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+          <nuxt-link title="Please Login to view PDF" v-else to="/login">
             <span class="mdi mdi-key"></span><br>
             for PDF loggin
           </nuxt-link>
@@ -1052,17 +1052,17 @@
       </div>
 
       <div class="col-reports-div">
-            <a v-if="loggedIn" href="latinamericacontent.pdf">
+            <a v-if="loggedIn" target="_blank" href="latinamericacontent.pdf">
               <div class="col-report" id="myReportPdfButton">
               <span class="mdi mdi-pdf-box "></span>
             </div>
             </a>
-            <a v-if="loggedIn" href="latinamerica.pdf">
+            <a v-if="loggedIn" target="_blank" href="latinamerica.pdf">
               <div class="col-report" id="myViewReportLinkTag">
               <span class="mdi mdi-eye "></span>
             </div>
             </a>
-            <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+            <nuxt-link title="Please Login to view PDF" v-else to="/login">
               <span class="mdi mdi-key"></span><br>
               for PDF loggin
             </nuxt-link>
@@ -1076,17 +1076,17 @@
     </div>
 
     <div class="col-reports-div">
-        <a v-if="loggedIn" href="canadacontent.pdf">
+        <a v-if="loggedIn" target="_blank" href="canadacontent.pdf">
           <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
         </div>
         </a>
-        <a v-if="loggedIn" href="canada.pdf">
+        <a v-if="loggedIn" target="_blank" href="canada.pdf">
           <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
         </div>
         </a>
-        <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+        <nuxt-link title="Please Login to view PDF"  v-else to="/login">
           <span class="mdi mdi-key"></span><br>
           for PDF loggin
         </nuxt-link>
@@ -1100,17 +1100,17 @@
       </div>
 
       <div class="col-reports-div">
-          <a v-if="loggedIn" href="europecontent.pdf">
+          <a v-if="loggedIn" target="_blank" href="europecontent.pdf">
             <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
         </div>
           </a>
-          <a v-if="loggedIn" href="europe.pdf">
+          <a v-if="loggedIn" target="_blank" href="europe.pdf">
             <div class="col-report"   id="myViewReportLinkTag">
             <span class="mdi mdi-eye "></span>
           </div>
           </a>
-          <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+          <nuxt-link title="Please Login to view PDF"  v-else to="/login">
             <span class="mdi mdi-key"></span><br>
             for PDF loggin
           </nuxt-link>
@@ -1124,16 +1124,16 @@
     </div>
 
     <div class="col-reports-div">
-        <a v-if="loggedIn" href="asiacontent.pdf">
+        <a v-if="loggedIn" target="_blank" href="asiacontent.pdf">
           <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
         </div></a>
-        <a v-if="loggedIn" href="asia.pdf">
+        <a v-if="loggedIn" target="_blank" href="asia.pdf">
           <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
         </div>
         </a>
-        <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+        <nuxt-link title="Please Login to view PDF" v-else to="/login">
           <span class="mdi mdi-key"></span><br>
           for PDF loggin
         </nuxt-link>
@@ -1153,17 +1153,17 @@
       </div>
 
       <div class="col-reports-div">
-            <a v-if="loggedIn" href="middleeastcontent.pdf">
+            <a v-if="loggedIn" target="_blank" href="middleeastcontent.pdf">
               <div class="col-report" id="myReportPdfButton">
               <span class="mdi mdi-pdf-box "></span>
             </div>
             </a>
-            <a v-if="loggedIn" href="middleeast.pdf">
+            <a v-if="loggedIn" target="_blank"  href="middleeast.pdf">
               <div class="col-report" id="myViewReportLinkTag">
               <span class="mdi mdi-eye "></span>
             </div>
             </a>
-         <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+         <nuxt-link title="Please Login to view PDF"  v-else to="/login">
            <span class="mdi mdi-key"></span><br>
            for PDF loggin
          </nuxt-link>
@@ -1177,17 +1177,17 @@
     </div>
 
     <div class="col-reports-div">
-        <a v-if="loggedIn" href="africacontent.pdf">
+        <a v-if="loggedIn" target="_blank" href="africacontent.pdf">
           <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
         </div>
         </a>
-        <a v-if="loggedIn" href="africa.pdf">
+        <a v-if="loggedIn" target="_blank" href="africa.pdf">
           <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
         </div>
         </a>
-        <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+        <nuxt-link title="Please Login to view PDF" v-else to="/login">
           <span class="mdi mdi-key"></span><br>
           for PDF loggin
         </nuxt-link>
@@ -1201,17 +1201,17 @@
       </div>
 
       <div class="col-reports-div">
-          <a v-if="loggedIn" href="oceaniacontent.pdf">
+          <a v-if="loggedIn" target="_blank" href="oceaniacontent.pdf">
             <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
         </div>
           </a>
-          <a v-if="loggedIn" href="oceania.pdf">
+          <a v-if="loggedIn" target="_blank" href="oceania.pdf">
             <div class="col-report"   id="myViewReportLinkTag">
             <span class="mdi mdi-eye "></span>
           </div>
           </a>
-          <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+          <nuxt-link title="Please Login to view PDF" v-else to="/login">
             <span class="mdi mdi-key"></span><br>
             for PDF loggin
           </nuxt-link>
@@ -1225,17 +1225,17 @@
     </div>
 
     <div class="col-reports-div">
-        <a v-if="loggedIn" href="carribeancontent.pdf">
+        <a v-if="loggedIn" target="_blank" href="carribeancontent.pdf">
           <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
         </div>
         </a>
-        <a v-if="loggedIn" href="carribean.pdf">
+        <a v-if="loggedIn" target="_blank" href="carribean.pdf">
           <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
         </div>
         </a>
-        <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+        <nuxt-link title="Please Login to view PDF"  v-else to="/login">
           <span class="mdi mdi-key"></span><br>
           for PDF loggin
         </nuxt-link>
@@ -1249,17 +1249,17 @@
     </div>
 
     <div class="col-reports-div">
-        <a v-if="loggedIn" href="africacontent.pdf">
+        <a v-if="loggedIn" target="_blank" href="africacontent.pdf">
           <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
         </div>
         </a>
-        <a v-if="loggedIn" href="africa.pdf">
+        <a v-if="loggedIn" target="_blank" href="africa.pdf">
             <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
         </div>
         </a>
-        <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+        <nuxt-link title="Please Login to view PDF"  v-else to="/login">
           <span class="mdi mdi-key"></span><br>
           for PDF loggin
         </nuxt-link>
@@ -1273,17 +1273,17 @@
       </div>
 
       <div class="col-reports-div">
-          <a v-if="loggedIn" href="newyorkcontent.pdf">
+          <a v-if="loggedIn" target="_blank" href="newyorkcontent.pdf">
             <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
         </div>
           </a>
-          <a v-if="loggedIn" href="newyork.pdf">
+          <a v-if="loggedIn" target="_blank" href="newyork.pdf">
             <div class="col-report"   id="myViewReportLinkTag">
             <span class="mdi mdi-eye "></span>
           </div>
           </a>
-          <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+          <nuxt-link title="Please Login to view PDF" v-else to="/login">
             <span class="mdi mdi-key"></span><br>
             for PDF loggin
           </nuxt-link>
@@ -1297,17 +1297,17 @@
     </div>
 
     <div class="col-reports-div">
-        <a v-if="loggedIn" href="newenglandcontent.pdf">
+        <a v-if="loggedIn" target="_blank" href="newenglandcontent.pdf">
           <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
         </div>
         </a>
-        <a v-if="loggedIn" href="newengland.pdf">
+        <a v-if="loggedIn" target="_blank" href="newengland.pdf">
           <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
         </div>
         </a>
-        <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+        <nuxt-link title="Please Login to view PDF" v-else to="/login">
           <span class="mdi mdi-key"></span><br>
           for PDF loggin
         </nuxt-link>
@@ -1321,17 +1321,17 @@
     </div>
 
     <div class="col-reports-div">
-        <a v-if="loggedIn" href="midatlanticcontent.pdf">
+        <a v-if="loggedIn" target="_blank" href="midatlanticcontent.pdf">
           <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
         </div>
         </a>
-        <a v-if="loggedIn" href="midatlantic.pdf">
+        <a v-if="loggedIn" target="_blank" href="midatlantic.pdf">
           <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
         </div>
         </a>
-        <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+        <nuxt-link title="Please Login to view PDF" v-else to="/login">
           <span class="mdi mdi-key"></span><br>
           for PDF loggin
         </nuxt-link>
@@ -1345,17 +1345,17 @@
     </div>
 
     <div class="col-reports-div">
-        <a v-if="loggedIn" href="southeastcontent.pdf">
+        <a v-if="loggedIn" target="_blank" href="southeastcontent.pdf">
           <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
         </div>
         </a>
-        <a v-if="loggedIn" href="southeast.pdf">
+        <a v-if="loggedIn" target="_blank" href="southeast.pdf">
           <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
         </div>
         </a>
-        <nuxt-link title="Please Login to view PDF"  target="_blank" v-else to="/login">
+        <nuxt-link title="Please Login to view PDF"   v-else to="/login">
           <span class="mdi mdi-key"></span><br>
           for PDF loggin
         </nuxt-link>
@@ -1369,17 +1369,17 @@
     </div>
 
     <div class="col-reports-div">
-        <a v-if="loggedIn" href="southcontent.pdf">
+        <a v-if="loggedIn"  target="_blank" href="southcontent.pdf">
           <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
         </div>
         </a>
-        <a  v-if="loggedIn" href="south.pdf">
+        <a  v-if="loggedIn" target="_blank" href="south.pdf">
           <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
         </div>
         </a>
-        <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+        <nuxt-link title="Please Login to view PDF" v-else to="/login">
           <span class="mdi mdi-key"></span><br>
           for PDF loggin
         </nuxt-link>
@@ -1394,16 +1394,16 @@
 
     <div class="col-reports-div">
         <a href="midwestcontent.pdf">
-          <div v-if="loggedIn" class="col-report" id="myReportPdfButton">
+          <div v-if="loggedIn" target="_blank" class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
         </div>
         </a>
-        <a v-if="loggedIn" href="midwest.pdf">
+        <a v-if="loggedIn" target="_blank" href="midwest.pdf">
           <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
         </div>
         </a>
-        <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+        <nuxt-link title="Please Login to view PDF" v-else to="/login">
           <span class="mdi mdi-key"></span><br>
           for PDF loggin
         </nuxt-link>
@@ -1417,17 +1417,17 @@
     </div>
 
     <div class="col-reports-div">
-        <a v-if="loggedIn" href="rockycontent.pdf">
+        <a v-if="loggedIn" target="_blank" href="rockycontent.pdf">
           <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
         </div>
         </a>
-        <a v-if="loggedIn" href="rockey.pdf">
+        <a v-if="loggedIn" target="_blank" href="rockey.pdf">
           <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
         </div>
         </a>
-        <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+        <nuxt-link title="Please Login to view PDF"  v-else to="/login">
           <span class="mdi mdi-key"></span><br>
           for PDF loggin
         </nuxt-link>
@@ -1441,17 +1441,17 @@
     </div>
 
     <div class="col-reports-div">
-        <a v-if="loggedIn" href="southwestcontent.pdf">
+        <a v-if="loggedIn" target="_blank" href="southwestcontent.pdf">
           <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
         </div>
         </a>
-        <a v-if="loggedIn" href="southwest.pdf">
+        <a v-if="loggedIn" target="_blank" href="southwest.pdf">
           <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
         </div>
         </a>
-        <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+        <nuxt-link title="Please Login to view PDF"  v-else to="/login">
           <span class="mdi mdi-key"></span><br>
           for PDF loggin
         </nuxt-link>
@@ -1465,17 +1465,17 @@
     </div>
 
     <div class="col-reports-div">
-        <a v-if="loggedIn" href="pacificcontent.pdf">
+        <a v-if="loggedIn" target="_blank" href="pacificcontent.pdf">
           <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
         </div>
         </a>
-        <a v-if="loggedIn" href="pacific.pdf">
+        <a v-if="loggedIn" target="_blank" href="pacific.pdf">
           <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
         </div>
         </a>
-        <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+        <nuxt-link title="Please Login to view PDF" v-else to="/login">
           <span class="mdi mdi-key"></span><br>
           for PDF loggin
         </nuxt-link>
@@ -1489,17 +1489,17 @@
     </div>
 
     <div class="col-reports-div">
-        <a v-if="loggedIn" href="siliconvalleycontent.pdf">
+        <a v-if="loggedIn" target="_blank" href="siliconvalleycontent.pdf">
           <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
         </div>
         </a>
-        <a v-if="loggedIn"  href="siliconvalley.pdf">
+        <a v-if="loggedIn" target="_blank" href="siliconvalley.pdf">
           <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
         </div>
         </a>
-        <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+        <nuxt-link title="Please Login to view PDF" v-else to="/login">
           <span class="mdi mdi-key"></span><br>
           for PDF loggin
         </nuxt-link>
@@ -1513,17 +1513,17 @@
     </div>
 
     <div class="col-reports-div">
-        <a v-if="loggedIn" href="socalcontent.pdf">
+        <a v-if="loggedIn" target="_blank" href="socalcontent.pdf">
           <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
         </div>
         </a>
-        <a v-if="loggedIn" href="socal.pdf">
+        <a v-if="loggedIn" target="_blank" href="socal.pdf">
           <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
         </div>
         </a>
-        <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+        <nuxt-link title="Please Login to view PDF" v-else to="/login">
           <span class="mdi mdi-key"></span><br>
           for PDF loggin
         </nuxt-link>
@@ -1537,17 +1537,17 @@
     </div>
 
     <div class="col-reports-div">
-        <a v-if="loggedIn" href="ukcontent.pdf">
+        <a v-if="loggedIn" target="_blank" href="ukcontent.pdf">
           <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
         </div>
         </a>
-        <a v-if="loggedIn" href="uk.pdf">
+        <a v-if="loggedIn" target="_blank" href="uk.pdf">
           <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
         </div>
         </a>
-        <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+        <nuxt-link title="Please Login to view PDF" v-else to="/login">
           <span class="mdi mdi-key"></span><br>
           for PDF loggin
         </nuxt-link>
@@ -1577,17 +1577,17 @@
       </div>
 
       <div class="col-reports-div">
-            <a v-if="loggedIn" href="wealthtech2020.pdf">
+            <a v-if="loggedIn" target="_blank" href="wealthtech2020.pdf">
               <div class="col-report" id="myReportPdfButton">
               <span class="mdi mdi-pdf-box "></span>
             </div>
             </a>
-            <a v-if="loggedIn" href="wealthtech2020.pdf">
+            <a v-if="loggedIn" target="_blank" href="wealthtech2020.pdf">
               <div class="col-report" id="myViewReportLinkTag">
               <span class="mdi mdi-eye "></span>
             </div>
             </a>
-            <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+            <nuxt-link title="Please Login to view PDF" v-else to="/login">
               <span class="mdi mdi-key"></span><br>
               for PDF loggin
             </nuxt-link>
@@ -1601,17 +1601,17 @@
     </div>
 
     <div class="col-reports-div">
-        <a v-if="loggedIn" href="blockchainplusfinance.pdf">
+        <a v-if="loggedIn" target="_blank" href="blockchainplusfinance.pdf">
           <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
         </div>
         </a>
-        <a v-if="loggedIn" href="blockchainplusfinance.pdf">
+        <a v-if="loggedIn" target="_blank" href="blockchainplusfinance.pdf">
           <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
         </div>
         </a>
-        <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+        <nuxt-link title="Please Login to view PDF" v-else to="/login">
           <span class="mdi mdi-key"></span><br>
           for PDF loggin
         </nuxt-link>
@@ -1625,17 +1625,17 @@
       </div>
 
       <div class="col-reports-div">
-          <a v-if="loggedIn" href="insurtechdistribution.pdf">
+          <a v-if="loggedIn" target="_blank" href="insurtechdistribution.pdf">
               <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
         </div>
           </a>
-          <a v-if="loggedIn" href="insurtechdistribution.pdf">
+          <a v-if="loggedIn" target="_blank" href="insurtechdistribution.pdf">
             <div class="col-report"   id="myViewReportLinkTag">
             <span class="mdi mdi-eye "></span>
           </div>
           </a>
-          <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+          <nuxt-link title="Please Login to view PDF"  v-else to="/login">
             <span class="mdi mdi-key"></span><br>
             for PDF loggin
           </nuxt-link>
@@ -1649,17 +1649,17 @@
     </div>
 
     <div class="col-reports-div">
-        <a v-if="loggedIn" href="challengerbanks.pdf">
+        <a v-if="loggedIn"  target="_blank"href="challengerbanks.pdf">
           <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
         </div>
         </a>
-        <a v-if="loggedIn" href="challengerbanks.pdf">
+        <a v-if="loggedIn" target="_blank" href="challengerbanks.pdf">
           <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
         </div>
         </a>
-        <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+        <nuxt-link title="Please Login to view PDF"  v-else to="/login">
           <span class="mdi mdi-key"></span><br>
           for PDF loggin
         </nuxt-link>
@@ -1678,17 +1678,17 @@
       </div>
 
       <div class="col-reports-div">
-            <a v-if="loggedIn" href="foodpluscatastrophe.pdf">
+            <a v-if="loggedIn" target="_blank" href="foodpluscatastrophe.pdf">
               <div class="col-report" id="myReportPdfButton">
               <span class="mdi mdi-pdf-box "></span>
             </div>
             </a>
-            <a v-if="loggedIn" href="floodpluscatastrophe.pdf">
+            <a v-if="loggedIn" target="_blank" href="floodpluscatastrophe.pdf">
               <div class="col-report" id="myViewReportLinkTag">
               <span class="mdi mdi-eye "></span>
             </div>
             </a>
-            <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+            <nuxt-link title="Please Login to view PDF"  v-else to="/login">
               <span class="mdi mdi-key"></span><br>
               for PDF loggin
             </nuxt-link>
@@ -1702,17 +1702,17 @@
     </div>
 
     <div class="col-reports-div">
-        <a v-if="loggedIn" href="covid19.pdf">
+        <a v-if="loggedIn" target="_blank" href="covid19.pdf">
           <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-pdf-box " ></span>
         </div>
         </a>
-        <a v-if="loggedIn" href="covid19.pdf">
+        <a v-if="loggedIn" target="_blank" href="covid19.pdf">
           <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
         </div>
         </a>
-        <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+        <nuxt-link title="Please Login to view PDF"  v-else to="/login">
           <span class="mdi mdi-key"></span><br>
           for PDF loggin
         </nuxt-link>
@@ -1726,17 +1726,17 @@
       </div>
 
       <div class="col-reports-div">
-          <a v-if="loggedIn" href="ai2020.pdf">
+          <a v-if="loggedIn" target="_blank" href="ai2020.pdf">
             <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
         </div>
           </a>
-          <a v-if="loggedIn" href="ai2020.pdf">
+          <a v-if="loggedIn" target="_blank" href="ai2020.pdf">
             <div class="col-report"   id="myViewReportLinkTag">
             <span class="mdi mdi-eye "></span>
           </div>
           </a>
-          <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+          <nuxt-link title="Please Login to view PDF"  v-else to="/login">
             <span class="mdi mdi-key"></span><br>
             for PDF loggin
           </nuxt-link>
@@ -1751,17 +1751,17 @@
     </div>
 
     <div class="col-reports-div">
-        <a v-if="loggedIn" href="insurtech2020.pdf">
+        <a v-if="loggedIn" target="_blank" href="insurtech2020.pdf">
           <div class="col-report" id="myReportPdfButton">
           <span class="mdi mdi-pdf-box " ></span>
         </div>
         </a>
-        <a v-if="loggedIn" href="insurtech2020.pdf">
+        <a v-if="loggedIn" target="_blank" href="insurtech2020.pdf">
           <div class="col-report" id="myViewReportLinkTag">
           <span class="mdi mdi-eye "></span>
         </div>
         </a>
-        <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
+        <nuxt-link title="Please Login to view PDF" v-else to="/login">
           <span class="mdi mdi-key"></span><br>
           for PDF loggin
         </nuxt-link>
