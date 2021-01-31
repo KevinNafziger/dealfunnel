@@ -159,12 +159,15 @@ body{
     display:grid;
     grid-template-columns: repeat(auto-fit,minmax(350px, 1fr));
     grid-gap:20px;
+    max-width: 1100px;
     padding-bottom: 200px;
   }
 
   .testimonials .card{
       position:relative;
-      width:350px;
+      max-width: 440px;
+      width: auto;
+
       margin:0 auto;
       background:#0616217a;
       padding:20px;
