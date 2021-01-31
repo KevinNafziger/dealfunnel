@@ -55,7 +55,7 @@
     <div class="card">
       <div class="layer"></div>
       <div class="content">
-        <p><i>DealFunnel</i> offers insightful content about innovative firms in the industry, allowing us to keep abreast of M&A and capital raises in the US and globally. The platform presents Fintech opportunities that we might not have seen in more traditional news or data sources.</p>
+        <p class="testi-p"><i>DealFunnel</i> offers insightful content about innovative firms in the industry, allowing us to keep abreast of M&A and capital raises in the US and globally. The platform presents Fintech opportunities that we might not have seen in more traditional news or data sources.</p>
          <img src="https://filesforfintech.s3.amazonaws.com/EvolveCapital.png" alt="">
 
         <div class="details">
@@ -69,7 +69,7 @@
     <div class="card">
       <div class="layer"></div>
       <div class="content">
-        <p>We love the newsletter. It is the best out there. It is not even close.
+        <p class="testi-p">We love the newsletter. It is the best out there. It is not even close.
         </p>
         <div class="image">
          <img class="images"  src="https://upload.wikimedia.org/wikipedia/commons/2/28/Female_portrait_placeholder_cropped.jpg" alt="">
@@ -371,7 +371,7 @@ box-shadow: 0px 1px 5px -3px #474747 !important;
 .intro-p {
     padding: 20px;
     margin: auto;
-    max-width: 1295px;
+    max-width: 671px;
     display: flow-root;
     color: #474747 ;
     line-height: 1.9;
@@ -445,5 +445,10 @@ border-radius: 20px;
 .micro-txt {
   font-size: 10px;
   margin-top: -12px;
+  letter-spacing: 0.5px;
+}
+.testi-p {
+  text-align: justify;
+  letter-spacing: 0.3px;
 }
 </style>
