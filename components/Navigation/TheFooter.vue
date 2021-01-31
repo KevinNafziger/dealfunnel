@@ -52,8 +52,12 @@ export default {
   color: #ffffff;
   bottom: 0px;
   position: fixed;
+  border-radius:3px;
+  margin-left:auto;
+  margin-right:auto;
   text-align: center;
   z-index: 9;
+  box-shadow: 0px 0px 14px -3px #4f81bd;
 }
 .micro-txt {
   font-size: 10px;
