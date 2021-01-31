@@ -143,6 +143,9 @@ body{
   .aware-card {
   max-width: 1000px;
   margin: auto;
+  padding:20px;
+  width:90%;
+  border-radius: 3px;
   box-shadow: 0px 0px 10px -5px;
   background-color: #ffffff;
   }
