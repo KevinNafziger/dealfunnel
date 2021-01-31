@@ -20,7 +20,7 @@
       </div>
 
       <div class="col-reports-div">
-          <a v-if="loggedIn" href="lendingcontent.pdf" target="_blank">
+          <a v-if="loggedIn" href="lendingcontent.pdf" >
             <div class="col-report" id="myReportPdfButton">
               <span class="mdi mdi-pdf-box "></span>
             </div>
@@ -30,7 +30,7 @@
               <span class="mdi mdi-eye "></span>
             </div>
           </a>
-          <nuxt-link title="Please Login to view PDF" v-else to="/login">
+          <nuxt-link title="Please Login to view PDF" target="_blank" v-else to="/login">
             <span class="mdi mdi-key"></span><br>
             for PDF loggin
           </nuxt-link>
