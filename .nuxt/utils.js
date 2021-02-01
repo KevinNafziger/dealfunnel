@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import { normalizeURL } from '@nuxt/ufo'
 
 // window.{{globals.loadedCallback}} hook
 // Useful for jsdom testing or plugins (https://github.com/tmpvar/jsdom#dealing-with-asynchronous-script-loading)
@@ -301,7 +302,7 @@ export function getLocation (base, mode) {
 
   const fullPath = (path || '/') + window.location.search + window.location.hash
 
-  return encodeURI(fullPath)
+  return normalizeURL(fullPath)
 }
 
 // Imported from path-to-regexp

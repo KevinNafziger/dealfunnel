@@ -24,7 +24,7 @@
     "firebase": "^8.2.0",
     "install": "^0.13.0",
     "npm": "^6.14.9",
-    "nuxt": "^2.14.9",
+    "nuxt": "^2.14.12",
     "nuxtjs-mdi-font": "^1.0.2",
     "v-tippy": "^2.0.0",
     "vue-material": "^1.0.0-beta-15",

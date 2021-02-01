@@ -1,4 +1,4 @@
- 
+
 
 
 import { firestorePlugin} from "vuefire";
@@ -26,7 +26,7 @@ Vue.use(firestorePlugin);
 if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig);
 
-  
+
 } else {
   firebase.app();
 }

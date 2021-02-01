@@ -2,134 +2,115 @@
   {
     "name": "about",
     "path": "/about",
-    "component": "C:\\\\dfish4\\\\dealfunnel\\\\pages\\\\about\\\\index.vue",
-    "chunkName": "pages/about/index",
-    "_name": "_72e4327a"
+    "component": "/mnt/c/users/dell/apps/dealfunnel/pages/about/index.vue",
+    "chunkName": "pages/about/index"
   },
   {
     "name": "builder",
     "path": "/builder",
-    "component": "C:\\\\dfish4\\\\dealfunnel\\\\pages\\\\builder\\\\index.vue",
-    "chunkName": "pages/builder/index",
-    "_name": "_d9f8d328"
+    "component": "/mnt/c/users/dell/apps/dealfunnel/pages/builder/index.vue",
+    "chunkName": "pages/builder/index"
   },
   {
     "name": "companies",
     "path": "/companies",
-    "component": "C:\\\\dfish4\\\\dealfunnel\\\\pages\\\\companies\\\\index.vue",
-    "chunkName": "pages/companies/index",
-    "_name": "_05b79e28"
+    "component": "/mnt/c/users/dell/apps/dealfunnel/pages/companies/index.vue",
+    "chunkName": "pages/companies/index"
   },
   {
     "name": "data",
     "path": "/data",
-    "component": "C:\\\\dfish4\\\\dealfunnel\\\\pages\\\\data\\\\index.vue",
-    "chunkName": "pages/data/index",
-    "_name": "_7e3457ba"
+    "component": "/mnt/c/users/dell/apps/dealfunnel/pages/data/index.vue",
+    "chunkName": "pages/data/index"
   },
   {
     "name": "login",
     "path": "/login",
-    "component": "C:\\\\dfish4\\\\dealfunnel\\\\pages\\\\login\\\\index.vue",
-    "chunkName": "pages/login/index",
-    "_name": "_4910a51e"
+    "component": "/mnt/c/users/dell/apps/dealfunnel/pages/login/index.vue",
+    "chunkName": "pages/login/index"
   },
   {
     "name": "logout",
     "path": "/logout",
-    "component": "C:\\\\dfish4\\\\dealfunnel\\\\pages\\\\logout\\\\index.vue",
-    "chunkName": "pages/logout/index",
-    "_name": "_5a63f4fa"
+    "component": "/mnt/c/users/dell/apps/dealfunnel/pages/logout/index.vue",
+    "chunkName": "pages/logout/index"
   },
   {
     "name": "news",
     "path": "/news",
-    "component": "C:\\\\dfish4\\\\dealfunnel\\\\pages\\\\news\\\\index.vue",
-    "chunkName": "pages/news/index",
-    "_name": "_20f5d55a"
+    "component": "/mnt/c/users/dell/apps/dealfunnel/pages/news/index.vue",
+    "chunkName": "pages/news/index"
   },
   {
     "name": "newsletters",
     "path": "/newsletters",
-    "component": "C:\\\\dfish4\\\\dealfunnel\\\\pages\\\\newsletters\\\\index.vue",
-    "chunkName": "pages/newsletters/index",
-    "_name": "_76c97f4d"
+    "component": "/mnt/c/users/dell/apps/dealfunnel/pages/newsletters/index.vue",
+    "chunkName": "pages/newsletters/index"
   },
   {
     "name": "posts",
     "path": "/posts",
-    "component": "C:\\\\dfish4\\\\dealfunnel\\\\pages\\\\posts\\\\index.vue",
-    "chunkName": "pages/posts/index",
-    "_name": "_6851db18"
+    "component": "/mnt/c/users/dell/apps/dealfunnel/pages/posts/index.vue",
+    "chunkName": "pages/posts/index"
   },
   {
     "name": "raises",
     "path": "/raises",
-    "component": "C:\\\\dfish4\\\\dealfunnel\\\\pages\\\\raises\\\\index.vue",
-    "chunkName": "pages/raises/index",
-    "_name": "_a7c9f634"
+    "component": "/mnt/c/users/dell/apps/dealfunnel/pages/raises/index.vue",
+    "chunkName": "pages/raises/index"
   },
   {
     "name": "register",
     "path": "/register",
-    "component": "C:\\\\dfish4\\\\dealfunnel\\\\pages\\\\register\\\\index.vue",
-    "chunkName": "pages/register/index",
-    "_name": "_d48133ec"
+    "component": "/mnt/c/users/dell/apps/dealfunnel/pages/register/index.vue",
+    "chunkName": "pages/register/index"
   },
   {
     "name": "reports",
     "path": "/reports",
-    "component": "C:\\\\dfish4\\\\dealfunnel\\\\pages\\\\reports\\\\index.vue",
-    "chunkName": "pages/reports/index",
-    "_name": "_659335c8"
+    "component": "/mnt/c/users/dell/apps/dealfunnel/pages/reports/index.vue",
+    "chunkName": "pages/reports/index"
   },
   {
     "name": "subscription",
     "path": "/subscription",
-    "component": "C:\\\\dfish4\\\\dealfunnel\\\\pages\\\\subscription\\\\index.vue",
-    "chunkName": "pages/subscription/index",
-    "_name": "_e83f7c60"
+    "component": "/mnt/c/users/dell/apps/dealfunnel/pages/subscription/index.vue",
+    "chunkName": "pages/subscription/index"
   },
   {
     "name": "tours-builderpreview",
     "path": "/tours/builderpreview",
-    "component": "C:\\\\dfish4\\\\dealfunnel\\\\pages\\\\tours\\\\builderpreview.vue",
-    "chunkName": "pages/tours/builderpreview",
-    "_name": "_7a63b063"
+    "component": "/mnt/c/users/dell/apps/dealfunnel/pages/tours/builderpreview.vue",
+    "chunkName": "pages/tours/builderpreview"
   },
   {
     "name": "tours-reports",
     "path": "/tours/reports",
-    "component": "C:\\\\dfish4\\\\dealfunnel\\\\pages\\\\tours\\\\reports.vue",
-    "chunkName": "pages/tours/reports",
-    "_name": "_354a9219"
+    "component": "/mnt/c/users/dell/apps/dealfunnel/pages/tours/reports.vue",
+    "chunkName": "pages/tours/reports"
   },
   {
     "name": "companies-id",
     "path": "/companies/:id",
-    "component": "C:\\\\dfish4\\\\dealfunnel\\\\pages\\\\companies\\\\_id\\\\index.vue",
-    "chunkName": "pages/companies/_id/index",
-    "_name": "_1589cfae"
+    "component": "/mnt/c/users/dell/apps/dealfunnel/pages/companies/_id/index.vue",
+    "chunkName": "pages/companies/_id/index"
   },
   {
     "name": "newsletters-id",
     "path": "/newsletters/:id",
-    "component": "C:\\\\dfish4\\\\dealfunnel\\\\pages\\\\newsletters\\\\_id\\\\index.vue",
-    "chunkName": "pages/newsletters/_id/index",
-    "_name": "_cae95426"
+    "component": "/mnt/c/users/dell/apps/dealfunnel/pages/newsletters/_id/index.vue",
+    "chunkName": "pages/newsletters/_id/index"
   },
   {
     "name": "posts-id",
     "path": "/posts/:id",
-    "component": "C:\\\\dfish4\\\\dealfunnel\\\\pages\\\\posts\\\\_id\\\\index.vue",
-    "chunkName": "pages/posts/_id/index",
-    "_name": "_fee2b9b4"
+    "component": "/mnt/c/users/dell/apps/dealfunnel/pages/posts/_id/index.vue",
+    "chunkName": "pages/posts/_id/index"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "C:\\\\dfish4\\\\dealfunnel\\\\pages\\\\index.vue",
-    "chunkName": "pages/index",
-    "_name": "_7cb743cd"
+    "component": "/mnt/c/users/dell/apps/dealfunnel/pages/index.vue",
+    "chunkName": "pages/index"
   }
 ]
