@@ -20,16 +20,15 @@
       <ul class="nav-list">
         <li v-if="showLogOutBtn" class="nav-item"><nuxt-link to="/logout">Logout</nuxt-link></li>
         <li class="nav-item"><nuxt-link to="/"><span class="mdi mdi-home"></span></nuxt-link></li>
-        <li class="nav-item"><nuxt-link v-if="(this.loggedIn)" to="/posts">Articles</nuxt-link></li>
+        <li  class="nav-item"><nuxt-link v-show="(this.loggedIn)" to="/posts">Articles</nuxt-link></li>
         <li class="nav-item"><nuxt-link to="/news">News</nuxt-link></li>
-        <li class="nav-item"><nuxt-link to="/newsletters">Newsletters</nuxt-link></li>
+        <li v-show="(this.loggedIn)" class="nav-item"><nuxt-link v-show="(this.loggedIn)"to="/newsletters">Newsletters</nuxt-link></li>
         <li class="nav-item"><nuxt-link to="/reports">Reports</nuxt-link></li>
         <li class="nav-item"><nuxt-link to="/builder">Builder</nuxt-link></li>
         <li class="nav-item"><nuxt-link to="/raises">Raises</nuxt-link></li>
-        <li class="nav-item"><nuxt-link to="/companies">Companies</nuxt-link></li>
-        <li class="nav-item"><nuxt-link v-if="(this.loggedIn)" to="/data">Data</nuxt-link></li>
+        <li v-show="(this.loggedIn)"  class="nav-item"><nuxt-link v-show="(this.loggedIn)"  to="/companies">Companies</nuxt-link></li>
+        <li class="nav-item"><nuxt-link v-show="(this.loggedIn)" to="/data">Data</nuxt-link></li>
         <li v-if="!(this.loggedIn)" class="nav-item"><nuxt-link to="/login">Login</nuxt-link></li>
-        <li v-if="!(this.loggedIn)" class="nav-item"><nuxt-link to="/register">Register</nuxt-link></li>
          <li style="display:content;" v-if="this.loggedIn">
              <i style="place-self: center;color:#b9cfe6">signed in:<b>{{email}}</b></i>
          </li>
