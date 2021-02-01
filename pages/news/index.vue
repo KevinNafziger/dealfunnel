@@ -421,9 +421,12 @@ export default {
 </script>
 
 <style scoped>
+#search-bar {
+  text-align: -webkit-center !important;
+}
 .w-container-2 {
   background: #f1f1f1fa;
-  padding-top: 20px;  
+  padding-top: 20px;
 }
  .search-bar-div {
        text-align: center;

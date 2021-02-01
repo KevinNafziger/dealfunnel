@@ -1,5 +1,5 @@
  <template>
- <div style="-webkit-box-pack: center; margin:auto !important;">
+ <div id="search-bar" style="-webkit-box-pack: center; margin:auto !important;">
   <div class="search-bar-div">
     <div class="search-div">
       <input    v-model="searchMessage" style="margin-right: 10px" width="100%" class="text-field w-input w-col w-col-6" placeholder="search content">

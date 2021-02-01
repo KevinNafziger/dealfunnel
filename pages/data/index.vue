@@ -371,6 +371,9 @@ async fetch({store}) {
 }
 </script>
 <style  scoped>
+#search-bar {
+  text-align: -webkit-center !important;
+}
 a {
   box-shadow:none;
 }

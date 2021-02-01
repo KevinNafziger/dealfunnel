@@ -1,10 +1,10 @@
 <template>
- <div>
+ <div id="search-bar">
     <div class="search-bar-div">
 
        <div class="search-div">
 
-         <input 
+         <input
      type="text"  name="term" id="term"  v-model="searchMessage" style="margin-right: 10px" width="100%" class="text-field w-input w-col w-col-6" placeholder="search  content">
 
          <button content="Click to search"
