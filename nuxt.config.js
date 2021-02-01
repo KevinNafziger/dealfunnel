@@ -10,9 +10,8 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'link', type: 'stylesheet', href: 'https://cdn.materialdesignicons.com/5.5.55/css/materialdesignicons.min.css' },
-      { rel: 'link', type: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/vuetify/2.3.17/vuetify.css'},
       { rel: 'link', type: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons' } ,
-      { rel: 'link', type: 'stylesheet', href: 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' } 
+      { rel: 'link', type: 'stylesheet', href: 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' }
     ]
   },
 
@@ -38,7 +37,6 @@ export default {
     // https://go.nuxtjs.dev/bootstrap
     'bootstrap-vue/nuxt',
     '@nuxtjs/axios',
-    '@nuxtjs/vuetify',
     'nuxtjs-mdi-font',
 
     ],
@@ -53,7 +51,7 @@ export default {
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
   }
-  
+
 }
 // nuxt.config.js
 module.exports = {

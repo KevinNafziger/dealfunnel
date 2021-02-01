@@ -87,7 +87,7 @@
 <script>
 
 import Vue from 'vue';
-import Vuetify from 'vuetify';
+//import Vuetify from 'vuetify';
  export default {
  	name: 'Postsys',
  	props: ["posts", "board"],

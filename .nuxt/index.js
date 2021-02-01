@@ -13,10 +13,9 @@ import { createStore } from './store.js'
 
 /* Plugins */
 
-import nuxt_plugin_plugin_73ca671f from 'nuxt_plugin_plugin_73ca671f' // Source: ./components/plugin.js (mode: 'all')
-import nuxt_plugin_plugin_43df6da2 from 'nuxt_plugin_plugin_43df6da2' // Source: ./vuetify/plugin.js (mode: 'all')
-import nuxt_plugin_bootstrapvue_753b3c38 from 'nuxt_plugin_bootstrapvue_753b3c38' // Source: ./bootstrap-vue.js (mode: 'all')
-import nuxt_plugin_axios_04ef08b5 from 'nuxt_plugin_axios_04ef08b5' // Source: ./axios.js (mode: 'all')
+import nuxt_plugin_plugin_5e2cc8fc from 'nuxt_plugin_plugin_5e2cc8fc' // Source: ./components/plugin.js (mode: 'all')
+import nuxt_plugin_bootstrapvue_535b8b7e from 'nuxt_plugin_bootstrapvue_535b8b7e' // Source: ./bootstrap-vue.js (mode: 'all')
+import nuxt_plugin_axios_d950e3dc from 'nuxt_plugin_axios_d950e3dc' // Source: ./axios.js (mode: 'all')
 import nuxt_plugin_firebase_491a0ea0 from 'nuxt_plugin_firebase_491a0ea0' // Source: ../plugins/firebase (mode: 'all')
 import nuxt_plugin_vuematerial_11e89da7 from 'nuxt_plugin_vuematerial_11e89da7' // Source: ../plugins/vue-material (mode: 'all')
 
@@ -78,7 +77,7 @@ async function createApp(ssrContext, config = {}) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"title":"DealFunnel","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":""}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"},{"rel":"link","type":"stylesheet","href":"https:\u002F\u002Fcdn.materialdesignicons.com\u002F5.5.55\u002Fcss\u002Fmaterialdesignicons.min.css"},{"rel":"link","type":"stylesheet","href":"https:\u002F\u002Fcdnjs.cloudflare.com\u002Fajax\u002Flibs\u002Fvuetify\u002F2.3.17\u002Fvuetify.css"},{"rel":"link","type":"stylesheet","href":"https:\u002F\u002Ffonts.googleapis.com\u002Ficon?family=Material+Icons"},{"rel":"link","type":"stylesheet","href":"https:\u002F\u002Fmaxcdn.bootstrapcdn.com\u002Ffont-awesome\u002F4.7.0\u002Fcss\u002Ffont-awesome.min.css"},{"rel":"stylesheet","type":"text\u002Fcss","href":"https:\u002F\u002Ffonts.googleapis.com\u002Fcss?family=Roboto:100,300,400,500,700,900&display=swap"},{"rel":"stylesheet","type":"text\u002Fcss","href":"https:\u002F\u002Fcdn.jsdelivr.net\u002Fnpm\u002F@mdi\u002Ffont@latest\u002Fcss\u002Fmaterialdesignicons.min.css"}],"style":[],"script":[]},
+    head: {"title":"DealFunnel","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":""}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"},{"rel":"link","type":"stylesheet","href":"https:\u002F\u002Fcdn.materialdesignicons.com\u002F5.5.55\u002Fcss\u002Fmaterialdesignicons.min.css"},{"rel":"link","type":"stylesheet","href":"https:\u002F\u002Ffonts.googleapis.com\u002Ficon?family=Material+Icons"},{"rel":"link","type":"stylesheet","href":"https:\u002F\u002Fmaxcdn.bootstrapcdn.com\u002Ffont-awesome\u002F4.7.0\u002Fcss\u002Ffont-awesome.min.css"}],"style":[],"script":[]},
 
     store,
     router,
@@ -207,20 +206,16 @@ async function createApp(ssrContext, config = {}) {
   }
   // Plugin execution
 
-  if (typeof nuxt_plugin_plugin_73ca671f === 'function') {
-    await nuxt_plugin_plugin_73ca671f(app.context, inject)
+  if (typeof nuxt_plugin_plugin_5e2cc8fc === 'function') {
+    await nuxt_plugin_plugin_5e2cc8fc(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_plugin_43df6da2 === 'function') {
-    await nuxt_plugin_plugin_43df6da2(app.context, inject)
+  if (typeof nuxt_plugin_bootstrapvue_535b8b7e === 'function') {
+    await nuxt_plugin_bootstrapvue_535b8b7e(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_bootstrapvue_753b3c38 === 'function') {
-    await nuxt_plugin_bootstrapvue_753b3c38(app.context, inject)
-  }
-
-  if (typeof nuxt_plugin_axios_04ef08b5 === 'function') {
-    await nuxt_plugin_axios_04ef08b5(app.context, inject)
+  if (typeof nuxt_plugin_axios_d950e3dc === 'function') {
+    await nuxt_plugin_axios_d950e3dc(app.context, inject)
   }
 
   if (typeof nuxt_plugin_firebase_491a0ea0 === 'function') {

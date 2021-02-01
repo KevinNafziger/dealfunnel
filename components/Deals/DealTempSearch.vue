@@ -30,8 +30,8 @@
 
 <script>
 
-  import 'vuetify/dist/vuetify.min.css';
-  import Vuetify from 'vuetify';
+  //import 'vuetify/dist/vuetify.min.css';
+  //import Vuetify from 'vuetify';
 
    export default {
    name: 'DealTempSearch',

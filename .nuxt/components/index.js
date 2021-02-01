@@ -1,12 +1,12 @@
-export { default as DealTempSearch } from '../../components/Deals/DealTempSearch.vue'
-export { default as CompanyTempSearch } from '../../components/Company/CompanyTempSearch.vue'
+export { default as DataTempSearch } from '../../components/Data/DataTempSearch.vue'
 export { default as Postsys } from '../../components/Builder/Postsys.vue'
 export { default as Searchbar } from '../../components/Builder/Searchbar.vue'
-export { default as Board } from '../../components/Draggable/Board.vue'
-export { default as Card } from '../../components/Draggable/Card.vue'
-export { default as DataTempSearch } from '../../components/Data/DataTempSearch.vue'
+export { default as CompanyTempSearch } from '../../components/Company/CompanyTempSearch.vue'
 export { default as DynamicContent } from '../../components/Grid/DynamicContent.vue'
 export { default as LettersList } from '../../components/Letters/LettersList.vue'
+export { default as DealTempSearch } from '../../components/Deals/DealTempSearch.vue'
+export { default as Board } from '../../components/Draggable/Board.vue'
+export { default as Card } from '../../components/Draggable/Card.vue'
 export { default as Burger } from '../../components/Navigation/Burger.vue'
 export { default as Mobilebar } from '../../components/Navigation/Mobilebar.vue'
 export { default as TheFooter } from '../../components/Navigation/TheFooter.vue'
@@ -18,15 +18,15 @@ export { default as RaiseTempSearch } from '../../components/Raises/RaiseTempSea
 export { default as Sidebar } from '../../components/Sidebar/Sidebar.vue'
 export { default as Visits } from '../../components/Visits/Visits.vue'
 
-export const LazyDealTempSearch = import('../../components/Deals/DealTempSearch.vue' /* webpackChunkName: "components/deal-temp-search" */).then(c => c.default || c)
-export const LazyCompanyTempSearch = import('../../components/Company/CompanyTempSearch.vue' /* webpackChunkName: "components/company-temp-search" */).then(c => c.default || c)
+export const LazyDataTempSearch = import('../../components/Data/DataTempSearch.vue' /* webpackChunkName: "components/data-temp-search" */).then(c => c.default || c)
 export const LazyPostsys = import('../../components/Builder/Postsys.vue' /* webpackChunkName: "components/postsys" */).then(c => c.default || c)
 export const LazySearchbar = import('../../components/Builder/Searchbar.vue' /* webpackChunkName: "components/searchbar" */).then(c => c.default || c)
-export const LazyBoard = import('../../components/Draggable/Board.vue' /* webpackChunkName: "components/board" */).then(c => c.default || c)
-export const LazyCard = import('../../components/Draggable/Card.vue' /* webpackChunkName: "components/card" */).then(c => c.default || c)
-export const LazyDataTempSearch = import('../../components/Data/DataTempSearch.vue' /* webpackChunkName: "components/data-temp-search" */).then(c => c.default || c)
+export const LazyCompanyTempSearch = import('../../components/Company/CompanyTempSearch.vue' /* webpackChunkName: "components/company-temp-search" */).then(c => c.default || c)
 export const LazyDynamicContent = import('../../components/Grid/DynamicContent.vue' /* webpackChunkName: "components/dynamic-content" */).then(c => c.default || c)
 export const LazyLettersList = import('../../components/Letters/LettersList.vue' /* webpackChunkName: "components/letters-list" */).then(c => c.default || c)
+export const LazyDealTempSearch = import('../../components/Deals/DealTempSearch.vue' /* webpackChunkName: "components/deal-temp-search" */).then(c => c.default || c)
+export const LazyBoard = import('../../components/Draggable/Board.vue' /* webpackChunkName: "components/board" */).then(c => c.default || c)
+export const LazyCard = import('../../components/Draggable/Card.vue' /* webpackChunkName: "components/card" */).then(c => c.default || c)
 export const LazyBurger = import('../../components/Navigation/Burger.vue' /* webpackChunkName: "components/burger" */).then(c => c.default || c)
 export const LazyMobilebar = import('../../components/Navigation/Mobilebar.vue' /* webpackChunkName: "components/mobilebar" */).then(c => c.default || c)
 export const LazyTheFooter = import('../../components/Navigation/TheFooter.vue' /* webpackChunkName: "components/the-footer" */).then(c => c.default || c)

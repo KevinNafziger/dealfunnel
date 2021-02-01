@@ -13,8 +13,6 @@ import '../node_modules/vue-material/dist/vue-material.min.css'
 
 import '../node_modules/@mdi/font/css/materialdesignicons.css'
 
-import '../node_modules/vuetify/dist/vuetify.css'
-
 import _6f6c098b from '../layouts/default.vue'
 import _f2bfdd06 from '../layouts/raises.vue'
 

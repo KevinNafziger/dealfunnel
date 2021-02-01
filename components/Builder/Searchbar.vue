@@ -45,8 +45,8 @@
 
 <script>
 import {mapState} from 'vuex';
-import 'vuetify/dist/vuetify.min.css';
-import Vuetify from 'vuetify';
+//import 'vuetify/dist/vuetify.min.css';
+//import Vuetify from 'vuetify';
 import VueTippy, { TippyComponent } from "vue-tippy";
 export default {
   name: 'Searchbar',

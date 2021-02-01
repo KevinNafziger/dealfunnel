@@ -1,15 +1,9 @@
 {
-  "DealTempSearch": {
-    "description": "Auto imported from /components/Deals/DealTempSearch.vue"
+  "DataTempSearch": {
+    "description": "Auto imported from /components/Data/DataTempSearch.vue"
   },
-  "LazyDealTempSearch": {
-    "description": "Auto imported from /components/Deals/DealTempSearch.vue"
-  },
-  "CompanyTempSearch": {
-    "description": "Auto imported from /components/Company/CompanyTempSearch.vue"
-  },
-  "LazyCompanyTempSearch": {
-    "description": "Auto imported from /components/Company/CompanyTempSearch.vue"
+  "LazyDataTempSearch": {
+    "description": "Auto imported from /components/Data/DataTempSearch.vue"
   },
   "Postsys": {
     "description": "Auto imported from /components/Builder/Postsys.vue"
@@ -23,23 +17,11 @@
   "LazySearchbar": {
     "description": "Auto imported from /components/Builder/Searchbar.vue"
   },
-  "Board": {
-    "description": "Auto imported from /components/Draggable/Board.vue"
+  "CompanyTempSearch": {
+    "description": "Auto imported from /components/Company/CompanyTempSearch.vue"
   },
-  "LazyBoard": {
-    "description": "Auto imported from /components/Draggable/Board.vue"
-  },
-  "Card": {
-    "description": "Auto imported from /components/Draggable/Card.vue"
-  },
-  "LazyCard": {
-    "description": "Auto imported from /components/Draggable/Card.vue"
-  },
-  "DataTempSearch": {
-    "description": "Auto imported from /components/Data/DataTempSearch.vue"
-  },
-  "LazyDataTempSearch": {
-    "description": "Auto imported from /components/Data/DataTempSearch.vue"
+  "LazyCompanyTempSearch": {
+    "description": "Auto imported from /components/Company/CompanyTempSearch.vue"
   },
   "DynamicContent": {
     "description": "Auto imported from /components/Grid/DynamicContent.vue"
@@ -52,6 +34,24 @@
   },
   "LazyLettersList": {
     "description": "Auto imported from /components/Letters/LettersList.vue"
+  },
+  "DealTempSearch": {
+    "description": "Auto imported from /components/Deals/DealTempSearch.vue"
+  },
+  "LazyDealTempSearch": {
+    "description": "Auto imported from /components/Deals/DealTempSearch.vue"
+  },
+  "Board": {
+    "description": "Auto imported from /components/Draggable/Board.vue"
+  },
+  "LazyBoard": {
+    "description": "Auto imported from /components/Draggable/Board.vue"
+  },
+  "Card": {
+    "description": "Auto imported from /components/Draggable/Card.vue"
+  },
+  "LazyCard": {
+    "description": "Auto imported from /components/Draggable/Card.vue"
   },
   "Burger": {
     "description": "Auto imported from /components/Navigation/Burger.vue"
