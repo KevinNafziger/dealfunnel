@@ -3,9 +3,9 @@
 
 <div>
   <br>
-    <div data-v-50f93fd9="" >
-      <div data-v-50f93fd9="" class="content"><br>
-        <h2 data-v-50f93fd9="">Builder</h2>
+    <div >
+      <div class="content"><br>
+        <h2 >Builder</h2>
       <nuxt-link to="/tours/builderpreview">
         <tippy to="Buildpre">
         Builder Preview
@@ -111,7 +111,7 @@ export default {
   Board,
    Card,
    draggable,
-   Vuetify,
+   //Vuetify,
    postsys,
    Searchbar,
  },
