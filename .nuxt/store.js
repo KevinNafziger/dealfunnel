@@ -20,7 +20,6 @@ let store = {};
   resolveStoreModules(require('..\\store\\auth.js'), 'auth.js')
   resolveStoreModules(require('..\\store\\boards.js'), 'boards.js')
   resolveStoreModules(require('..\\store\\company.js'), 'company.js')
-  resolveStoreModules(require('..\\store\\deals.js'), 'deals.js')
   resolveStoreModules(require('..\\store\\news.js'), 'news.js')
   resolveStoreModules(require('..\\store\\posts.js'), 'posts.js')
   resolveStoreModules(require('..\\store\\raise.js'), 'raise.js')
@@ -35,7 +34,6 @@ let store = {};
       '..\\store\\auth.js',
       '..\\store\\boards.js',
       '..\\store\\company.js',
-      '..\\store\\deals.js',
       '..\\store\\news.js',
       '..\\store\\posts.js',
       '..\\store\\raise.js',
