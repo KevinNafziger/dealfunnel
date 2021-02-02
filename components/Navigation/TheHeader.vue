@@ -203,7 +203,7 @@ export default {
    font-family: 'Lato'
  }
 
- @media  (min-width:790px) {
+ @media  (min-width:1400px) {
    .burger {
      display:none !important;
    }
