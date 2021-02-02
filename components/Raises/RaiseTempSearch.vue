@@ -66,6 +66,9 @@
 
 
   <style scoped>
+  .search-bar-div {
+    text-align: -webkit-center;
+  }
   a {
     text-decoration: none !important;
   }
@@ -79,7 +82,9 @@
   .w-col-8 {
       width: 80% !important;
   }
-
+ #term {
+   margin: inherit;
+ }
   }
   .search-div {
     position: sticky;
@@ -167,5 +172,8 @@
   }
   h3, h2 {
     color: #4f81bd !important;
+  }
+  .tag-search-div {
+    justify-content: center;
   }
   </style>

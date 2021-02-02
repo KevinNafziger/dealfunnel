@@ -229,6 +229,9 @@
 .w-col-8 {
     width: 80% !important;
 }
+.tag-search-div {
+  justify-content: center;
+}
 a {
   text-decoration: none !important;
 }
