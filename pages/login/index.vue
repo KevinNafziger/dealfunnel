@@ -1,7 +1,7 @@
 <template>
   <div class="md-layout md-alignment-center-center" style="height: 100vh;">
 
-    <md-card class="md-layout-item md-size-50">
+    <md-card class=" lok md-layout-item md-size-50">
       <div class="col s12 m8 offset-m2">
         <div class="login card-panel green white-text center">
 
@@ -68,6 +68,10 @@ export default {
 .btn {
   background: #4f81bd;
   color: #ffffff;
+  margin-bottom: 20px;
+}
+submit {
+
 }
 input {
   width: 95%;
@@ -85,6 +89,9 @@ h3 {
 label, md-button {
   margin-top:20px !important;
   margin-bottom:20px !important;
+}
+.lok {
+      margin-top: -150px;
 }
 .md-card {
   background: #ffffff;
