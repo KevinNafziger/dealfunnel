@@ -4,7 +4,7 @@
     <head>
 
     </head>
-   <body>
+   <body><br>
      <p>Stripe registratin developtment in progress</p>
      <form action="/process-payment" method="POST">
     <stripe-checkout
@@ -20,8 +20,12 @@
 width: 80%;
 text-align:center;
 margin:auto;
+text-align-last: center;
 }
-
+form {
+  border-radius: 10px;
+  padding:5px;
+}
 </style>
 
 
