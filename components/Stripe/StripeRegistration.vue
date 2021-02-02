@@ -1,7 +1,7 @@
 <template>
   <div >
 
-     <p>Stripe registratin developtment in progress</p>
+     <p>Stripe registration development in progress</p>
      <form action="/process-payment" method="POST">
     <stripe-checkout class="plan__cta-link plan__cta-link--active"
         stripe-key="pk_live_XfWHUi5ZgIVMcDsaWQDMHFCa"
