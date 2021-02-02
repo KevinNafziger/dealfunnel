@@ -124,7 +124,7 @@ export default {
   margin: 0 10px;
   font-size: 1.3rem;
   width:auto;
-  max-width: 150px !important;
+  max-width: 120px !important;
   float: left;
   position: relative !important;
   left: 0px;
@@ -146,7 +146,7 @@ export default {
   margin: 0 10px;
   font-size: 1.3rem;
   width:auto;
-  max-width: 250px;
+  max-width: 200px;
   float: left;
   position: absolute;
   left: 0px;
