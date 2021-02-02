@@ -32,8 +32,6 @@
       </form>
     </md-card>
 
-    <StripeRegistration/>
-
   </div>
 </template>
 
@@ -43,7 +41,6 @@ import { firestorePlugin} from "vuefire";
 import Vue from "vue";
 import firebase from "firebase/app";
 import  "firebase/auth";
-import StripeRegistration from "@/components/Stripe/StripeRegistration"
 import "firebase/firestore";
 Vue.use(firestorePlugin)
 
@@ -54,9 +51,6 @@ export default {
       password: "",
       errorMsg: '',
     }),
-    components: {
-      StripeRegistration
-    },
 
   methods: {
 

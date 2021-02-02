@@ -1,8 +1,6 @@
 <template>
-
+<body>
 <section class="pricing">
-
-
      <article class="plan__item plan__item--active">
        <ul class="plan__feature-list">
          <li class="plan__feature-item"></li>
@@ -16,8 +14,7 @@
          <li class="plan__feature-item">-<i>DealFunnel</i> support<span class="accent-2"></span></li>
          <li class="plan__feature-item"><span class="accent-2"></span></li>
        </ul>
-
-       <a href="#" class="plan__cta-link plan__cta-link--active">Get Started</a>
+<StripeRegistration/>
      </article>
     <!-- <article class="plan__item">
        <div class="plan__header">
@@ -35,16 +32,21 @@
        <a href="#" class="plan__cta-link">Get Started</a>
      </article> -->
    </div>
-
  </article>
-
 </section>
-
+</body>
 </template>
 
 
 <script>
 
+import StripeRegistration from "@/components/Stripe/StripeRegistration"
+ export default {
+   name: 'subscription',
+   components: {
+     StripeRegistration
+   }
+ }
 </script>
 
 
@@ -96,6 +98,7 @@ a {
 .pricing {
   text-align: center;
   margin: 0 1em;
+  padding: 10px;
 }
 .pricing__title{
   margin-top:5vw;
