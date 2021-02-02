@@ -623,4 +623,8 @@ ul {
   .sectionnix {
     margin-bottom: 200px;
   }
+  .paragraph-19 {
+      letter-spacing: 1.3px;
+      line-height: 29px;
+  }
 </style>
