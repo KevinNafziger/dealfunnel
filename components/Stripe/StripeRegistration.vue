@@ -8,7 +8,7 @@
      <p>Stripe registratin developtment in progress</p>
      <form action="/process-payment" method="POST">
     <stripe-checkout
-        stripe-key="my-stripe-key"
+        stripe-key="sk_test_yFPvhxz3yjT8Du6RhdOAoZyE"
         product="product">
     </stripe-checkout>
 </form>
