@@ -1,4 +1,10 @@
 {
+  "DataTempSearch": {
+    "description": "Auto imported from /components/Data/DataTempSearch.vue"
+  },
+  "LazyDataTempSearch": {
+    "description": "Auto imported from /components/Data/DataTempSearch.vue"
+  },
   "Postsys": {
     "description": "Auto imported from /components/Builder/Postsys.vue"
   },
@@ -11,11 +17,17 @@
   "LazySearchbar": {
     "description": "Auto imported from /components/Builder/Searchbar.vue"
   },
-  "DealTempSearch": {
-    "description": "Auto imported from /components/Deals/DealTempSearch.vue"
+  "CompanyTempSearch": {
+    "description": "Auto imported from /components/Company/CompanyTempSearch.vue"
   },
-  "LazyDealTempSearch": {
-    "description": "Auto imported from /components/Deals/DealTempSearch.vue"
+  "LazyCompanyTempSearch": {
+    "description": "Auto imported from /components/Company/CompanyTempSearch.vue"
+  },
+  "DynamicContent": {
+    "description": "Auto imported from /components/Grid/DynamicContent.vue"
+  },
+  "LazyDynamicContent": {
+    "description": "Auto imported from /components/Grid/DynamicContent.vue"
   },
   "Board": {
     "description": "Auto imported from /components/Draggable/Board.vue"
@@ -29,29 +41,17 @@
   "LazyCard": {
     "description": "Auto imported from /components/Draggable/Card.vue"
   },
-  "CompanyTempSearch": {
-    "description": "Auto imported from /components/Company/CompanyTempSearch.vue"
-  },
-  "LazyCompanyTempSearch": {
-    "description": "Auto imported from /components/Company/CompanyTempSearch.vue"
-  },
-  "DataTempSearch": {
-    "description": "Auto imported from /components/Data/DataTempSearch.vue"
-  },
-  "LazyDataTempSearch": {
-    "description": "Auto imported from /components/Data/DataTempSearch.vue"
-  },
   "LettersList": {
     "description": "Auto imported from /components/Letters/LettersList.vue"
   },
   "LazyLettersList": {
     "description": "Auto imported from /components/Letters/LettersList.vue"
   },
-  "DynamicContent": {
-    "description": "Auto imported from /components/Grid/DynamicContent.vue"
+  "DealTempSearch": {
+    "description": "Auto imported from /components/Deals/DealTempSearch.vue"
   },
-  "LazyDynamicContent": {
-    "description": "Auto imported from /components/Grid/DynamicContent.vue"
+  "LazyDealTempSearch": {
+    "description": "Auto imported from /components/Deals/DealTempSearch.vue"
   },
   "Burger": {
     "description": "Auto imported from /components/Navigation/Burger.vue"
@@ -95,12 +95,6 @@
   "LazyPostTempSearch": {
     "description": "Auto imported from /components/Posts/PostTempSearch.vue"
   },
-  "RaiseTempSearch": {
-    "description": "Auto imported from /components/Raises/RaiseTempSearch.vue"
-  },
-  "LazyRaiseTempSearch": {
-    "description": "Auto imported from /components/Raises/RaiseTempSearch.vue"
-  },
   "Sidebar": {
     "description": "Auto imported from /components/Sidebar/Sidebar.vue"
   },
@@ -112,5 +106,11 @@
   },
   "LazyVisits": {
     "description": "Auto imported from /components/Visits/Visits.vue"
+  },
+  "RaiseTempSearch": {
+    "description": "Auto imported from /components/Raises/RaiseTempSearch.vue"
+  },
+  "LazyRaiseTempSearch": {
+    "description": "Auto imported from /components/Raises/RaiseTempSearch.vue"
   }
 }
