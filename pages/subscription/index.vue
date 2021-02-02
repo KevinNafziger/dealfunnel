@@ -6,8 +6,10 @@
          <li class="plan__feature-item"></li>
        </ul>
        <ul class="plan__feature-list">
-        <li class="plan__feature-item">A subscription to <span class="accent-2"><i>DealFunnel</i> </span> is $79.99 a month.<br></li>
-         <li class="plan__feature-item"><br><span class="accent-2"><b>A subscription includes:</b></span></li>
+        <li class="plan__feature-item">A subscription to <span class="accent-2"><i>DealFunnel</i> </span> is <h6>
+          <br><b>$79.99 a month.</b></h6><br></li>
+         <li class="plan__feature-item"><br>
+           <span class="accent-2"><b>A subscription includes:</b></span></li>
         <li class="plan__feature-item">-The
        <span class="accent-2"><i>DealFunnel</i> newsletter</span></li>
          <li class="plan__feature-item"><i><span class="accent-2">-DealFunnel Online</span></i></li>
@@ -66,6 +68,8 @@ b {
 }
 ul {
   padding: 0;
+  letter-spacing: 1px;
+line-height: 14px;
 }
 li {
   list-style: none;
