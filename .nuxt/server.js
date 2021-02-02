@@ -288,6 +288,6 @@ export default async (ssrContext) => {
 
   // Call beforeNuxtRender methods & add store state
   await beforeRender()
-
+app.set('port', process.env.PORT || 3000);
   return _app
 }
