@@ -474,6 +474,10 @@ export default {
     font-size: smaller;
     color: #474747;
 }
+ul.w-list-unstyled {
+    text-align: -webkit-center;
+}
+
    #megamenu3 {
      top:46px !important;
    }
@@ -496,7 +500,7 @@ export default {
    }
   @media screen and (max-width:1400px) {
     #examples{
-        width:49% !important;
+        width:48% !important;
         height: 650px !important;
     }
   }
@@ -531,11 +535,11 @@ export default {
     margin: auto;
 }
 #examples {
+    margin: 0px 10px;
+    width: 32%;
     display: inline-table;
     background-color: #fff;
     opacity: .95;
-    margin: 0px, auto;
-    width: 33%;
     border-radius: 10px;
     min-height: 620px;
     background: linear-gradient(45deg,#f7f9fb,#fff);
