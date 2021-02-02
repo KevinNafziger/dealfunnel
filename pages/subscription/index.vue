@@ -7,10 +7,10 @@
        </ul>
        <ul class="plan__feature-list">
         <li class="plan__feature-item"><span class="A">A</span> subscription to <span class="accent-2"><i>DealFunnel</i> </span> is <h6>
-          <br><b>$79.99 a month.</b></h6><br></li>
+          <br><br><b>$79.99 a month.</b></h6><br></li>
          <li class="plan__feature-item"><br>
            <span class="accent-2"><b>A subscription includes:</b></span></li>
-        <li class="plan__feature-item">-The
+        <br><li class="plan__feature-item">-The
        <span class="accent-2"><i>DealFunnel</i> newsletter</span></li>
          <li class="plan__feature-item"><i><span class="accent-2">-DealFunnel Online</span></i></li>
          <li class="plan__feature-item">-<i>DealFunnel</i> support<span class="accent-2"></span></li>
@@ -68,7 +68,7 @@ import StripeRegistration from "@/components/Stripe/StripeRegistration"
       font-family: monospace;
 }
 b {
-  color: #465261;
+  color: #4f81bd;
 }
 ul {
   padding: 0;
@@ -165,6 +165,7 @@ a {
   justify-content: space-between;
   max-width: 600px;
   background: #ffffff;
+  color: dimgray;
 }
 .plan__item--active {
   box-shadow: 0 0 55px rgba(80,80,80,0.25);
