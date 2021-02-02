@@ -12,12 +12,12 @@
               </label>
              </div>
             <div class="input-field">
-              <span class="mdi mdi-email"></span>
+              <span  class="mdi mdi-email"></span>
               <input type="email" id="email" v-model="email"><br>
 
             </div><br><br>
             <div class="input-field">
-              <span class="mdi mdi-key"></span>
+              <span  class="mdi mdi-key"></span>
               <input type="password" id="password" v-model="password"><br>
 
             </div><br><br>
@@ -70,12 +70,11 @@ export default {
   color: #ffffff;
   margin-bottom: 20px;
 }
-submit {
 
-}
 input {
   width: 95%;
   height: 40px !important;
+  border-radius:3px;
 }
 form {
   margin:auto;

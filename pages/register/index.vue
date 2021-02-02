@@ -1,7 +1,7 @@
 <template>
   <div class="md-layout md-alignment-center-center" style="height: 100vh;">
 
-    <md-card class="md-layout-item md-size-50">
+    <md-card class="lok md-layout-item md-size-50">
 
 
       <!-- Register Form -->
