@@ -18,6 +18,7 @@
            <i style="place-self: center;color:#b9cfe6">signed in: <b> {{email}}</b></i>
        </li>
     </ul>
+
   </Mobilebar>
   <img src="dealfunnelwhite.png" class="logo"/>
     <div class="navigation-items">
@@ -148,7 +149,7 @@ export default {
   width:auto;
   max-width: 200px;
   float: left;
-  position: absolute;
+  position: absolute !important;
   left: 0px;
 }
 .logo a {
