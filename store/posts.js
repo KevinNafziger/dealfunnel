@@ -124,7 +124,7 @@ export const mutations = {
   initBlock(state, data) {
 
     var blockLength = data.length;
-    bockLength--;
+    blockLength--;
     state.block1 = data.slice(0, 50);
     state.block2 = data.slice(50,100);
     state.block3 = data.slice(100, 150);
@@ -277,8 +277,9 @@ export const mutations = {
    setBlockNextNoFetch(state) {
 
     if (state.activeView =='Articles') {
-
-     
+        var temp = state.blkArtPage;
+        temp++; 
+        state.blkArtPage = temp;
         state.activeArticleTab = 'Blockchain';
         state.firstArtLoad = false;
       
@@ -303,7 +304,8 @@ export const mutations = {
   
     else if  (state.activeView =='Builder') {
        var temp = state.blkBuildPage;
-       temp++
+       temp++;
+       state.blkBuildPage = temp;
        state.activeBuildTab = 'Blockchain';
        state.firstBuildLoad = false;
 
@@ -408,7 +410,6 @@ export const mutations = {
       
 
     },
-
 
 
    setInsurPrevious(state) {

@@ -5,7 +5,7 @@
     <Mobilebar>
       <ul class="sidebar-panel-nav">
       <li class="nav-item"><nuxt-link to="/"><span class="mdi mdi-home"></span></nuxt-link></li>
-      <li class="nav-item"><nuxt-link to="/posts">Articles</nuxt-link></li>
+      <li v-show="(this.loggedIn)" class="nav-item"><nuxt-link v-show="(this.loggedIn)"to="/posts">Articles</nuxt-link></li>
       <li class="nav-item"><nuxt-link to="/news">News</nuxt-link></li>
       <li class="nav-item"><nuxt-link  v-show="(this.loggedIn)" to="/newsletters">Newsletters</nuxt-link></li>
       <li class="nav-item"><nuxt-link to="/reports">Reports</nuxt-link></li>
@@ -77,7 +77,7 @@ export default {
 
   email() {
 
-      if (!this.loggedIn) {
+      if (!(this.loggedIn)) {
         return '';
       }
 
