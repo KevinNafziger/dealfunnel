@@ -2,8 +2,10 @@
 <template>
   <body>
    <div class="article-view-div"><br>
-     <nuxt-link to="/posts"><br>
-   <span class="mdi mdi-arrow-left"></span>Back</nuxt-link>
+     <center><nuxt-link class="gardient-button" to="/posts"><br>
+   <span class="mdi mdi-arrow-left">
+   </span>Back
+ </nuxt-link></center>
   <h1  class=' article-view-t' style='margin-bottom:60px; text-indent:-.1pt;
   line-height:109%;'><b><span v-if="!(post.title === undefined)" style='line-height:109%; margin-left: 3%; font-size:16pt;'>{{post.title }}</span></b></h1>
    <br>
@@ -79,6 +81,26 @@ export default {
 </script>
 
 <style scoped>
+.gardient-button {
+    display: inline-flex;
+    background-image: linear-gradient(200deg, #4F81BD 10%, #4F81BD 39%, #8ab4f8 80%);
+    background-size: 400% 400% !important;
+    animation: gradient 15s ease infinite !important;
+    width: auto !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    border-radius: 10px !important;
+    border: none !important;
+    padding: 5px 10px !important;
+    font-family: poppins !important;
+    color: #ffffff !important;
+    font-size: 9px !important;
+    transition: 0.3s;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 16px !important;
+    box-shadow: 0px 1px 10px -3px #474747 !important;
+}
 .article-view-div{
   width: 90%;
   margin: auto;
