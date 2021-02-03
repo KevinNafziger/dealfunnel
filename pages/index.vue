@@ -406,9 +406,6 @@ p.MsoNormal {
 h2 {
     color: #4f81bd !important;
 }
-b {
-  color:#4f81bd;
-}
 .images {
   width: auto;
 margin: 0px;
