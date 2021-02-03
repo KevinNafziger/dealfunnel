@@ -132,7 +132,7 @@ export default {
   transition:1s;
  }
 }
-@media screen and (max-width: 990px){
+@media screen and (max-width: 1200px){
 .logo {
   display: none;
  }
