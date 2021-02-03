@@ -25,9 +25,9 @@
   v-tippy="{ placement : 'bottom' }" id="oki" class="mdi mdi-file-excel" style="margin:20px;font-size: 34px;"></span></center><br>
   </a>
 
-  <nuxt-link title="Please Login to view PDF"  v-else to="/login">
+  <nuxt-link title="Please Login to export data to Excel"  v-else to="/login">
     <span class="mdi mdi-login-color mdi-key"></span><br>
-    Login for Excel
+    Login to export data
   </nuxt-link></center><br>
 </div>
   <div class="draft-div">
