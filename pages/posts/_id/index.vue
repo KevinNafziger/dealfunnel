@@ -1,44 +1,28 @@
 
 <template>
-<div>
-<div class="WordSection1">
-    <p class=MsoNormal style='margin-top:0in;margin-right:0in;margin-bottom:0in;
-    margin-left:.5pt;text-indent:-.5pt;line-height:109%'><span style='font-size:
-    22.0pt;line-height:109%'></span></p>
-</div>
-
-<span style='font-size:22.0pt;line-height:109%;font-family:"Calibri",sans-serif;
-color:black'><br clear=all style='page-break-before:auto'>
-</span>
-
-<div class="MsoNormal"
- style="margin-right:5%;margin-bottom:15%;
-margin-left:5%;line-height:109%;">
-
-
-  <p  class='MsoNormal' style='margin-top:70px;margin-bottom:60px; text-indent:-.1pt;
-  line-height:109%;'><b><span v-if="!(post.title === undefined)" style='line-height:109%; margin-left: 3%; font-size:16pt;'>{{post.title }}</span></b></p>
-
-   <span style="display:inline-block;width:45%;text-align:center;float:left; margin:1%;">  
-    <div v-html="firsthalf(post)" ></div>
+  <body>
+   <div class="article-view-div"><br>
+  <h1  class=' article-view-t' style='margin-bottom:60px; text-indent:-.1pt;
+  line-height:109%;'><b><span v-if="!(post.title === undefined)" style='line-height:109%; margin-left: 3%; font-size:16pt;'>{{post.title }}</span></b></h1>
+   <br>
+   <span class="intro-p" style="display:inline-block;width:48%;text-align:justify;float:left;">
+    <div  v-html="firsthalf(post)" ></div>
    </span>
-   <span style="display:inline-block;width:45%; text-align:center;float:right; margin:1%;">  
+   <span class="intro-p"  style="display:inline-block;width:48%; text-align:justify;float:right;">
     <div v-html="partofsecond(post)" ></div>
 
     <p v-if="!(post.logo_url==null)" class=MsoNormal style='margin-bottom:0in; margin-top:01in;'><img width=261 height=154
         id="Picture 389" :src="post.logo_url"></p>
    </span>
  </div>
-<section style="margin-bottom:100px;"></section>
-
-</div>
+</body>
 </template>
 <script>
 import {mapState} from 'vuex';
 export default {
   computed: {
   ...mapState({
-  
+
           activeArtInfo: state =>  state.posts.activeArtInfo,
           activeView:  state => state.posts.activeView,
           activeDataInfo: state => state.posts.activeDataInfo,
@@ -53,18 +37,18 @@ export default {
         else if (this.activeView == "Data") {
              return this.activeDataInfo;
         }
-        
+
         else {
              return this.activeArtInfo;
          }
 
-    }, 
+    },
     post() {
-    
+
         return this.posts.find(p => p.id == this.$route.params.id)
     }
  },
- 
+
     methods:  {
     firsthalf(item) {
 
@@ -75,14 +59,14 @@ export default {
 
     secondhalf(tree) {
 
-      return tree.blog_entry.slice(tree.blog_entry.length /2,tree.blog_entry.length); 
+      return tree.blog_entry.slice(tree.blog_entry.length /2,tree.blog_entry.length);
 
     },
 
     partofsecond(tree) {
 
       var added_string = this.secondhalf(tree).indexOf('/p>');
-      return tree.blog_entry.slice(tree.blog_entry.length /2 + added_string + 4,tree.blog_entry.length);  
+      return tree.blog_entry.slice(tree.blog_entry.length /2 + added_string + 4,tree.blog_entry.length);
 
     }
 
@@ -90,9 +74,27 @@ export default {
 
 
 };
-</script> 
+</script>
 
 <style scoped>
+.article-view-div{
+  width: 90%;
+  margin: auto;
+  max-width: 1200px;
+}
+ .article-view-t {
+   text-align:center;
+ }
+ .intro-p {
+     padding: 20px;
+     margin: auto;
+     max-width: 671px;
+     display: flow-root;
+     color: #474747 ;
+     line-height: 1.9;
+     letter-spacing: 0.6px;
+     transition: 1s;
+ }
 
  @font-face
   {font-family:"Cambria Math";
