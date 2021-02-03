@@ -349,6 +349,9 @@ h2 {
   text-align: -webkit-center!important;
 
 }
+.sumary {
+  margin-top:20px;
+}
 .text-field {
   text-align: -webkit-center !important;
   text-align-last: center;

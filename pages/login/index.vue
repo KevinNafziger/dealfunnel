@@ -1,5 +1,5 @@
 <template>
-  <div class="md-layout md-alignment-center-center" style="height: 100vh;">
+  <div class="md-layout md-alignment-center-center" style=" margin:auto; max-width: 900px; height: 100vh;">
 
     <md-card class=" lok md-layout-item md-size-50">
       <div class="col s12 m8 offset-m2">
