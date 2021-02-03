@@ -96,7 +96,7 @@ export default {
     color: #ffffff !important;
     font-size: 9px !important;
     transition: 0.3s;
-        align-items: center;
+    align-items: center;
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: 16px !important;
