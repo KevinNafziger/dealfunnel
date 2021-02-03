@@ -18,6 +18,7 @@
            <i style="place-self: center;color:#b9cfe6">signed in: <b> {{email}}</b></i>
        </li>
     </ul>
+
   </Mobilebar>
   <img src="dealfunnelwhite.png" class="logo"/>
     <div class="navigation-items">
@@ -131,7 +132,7 @@ export default {
   transition:1s;
  }
 }
-@media screen and (max-width: 990px){
+@media screen and (max-width: 1200px){
 .logo {
   display: none;
  }
@@ -148,7 +149,7 @@ export default {
   width:auto;
   max-width: 200px;
   float: left;
-  position: absolute;
+  position: absolute !important;
   left: 0px;
 }
 .logo a {
@@ -186,12 +187,14 @@ export default {
   text-decoration: none;
   color: white;
   padding:5px;
+  margin:10px auto;
+  text-align: center;
 }
 
 .nav-item a:hover,
 .nav-item a:active,
 .nav-item a.nuxt-link-active {
-    box-shadow: 0px 0px 5px 0px #ffffff;
+    box-shadow: 0px 0px 20px -5px #80b9ff;
     border-radius: 3px;
 }
 
