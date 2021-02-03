@@ -1,4 +1,4 @@
-import allNews from '~/static/news.json';
+import allNews from '~/data/news.json';
 
 export const state = () => ({
   insurtech: [],
@@ -222,7 +222,7 @@ export const mutations = {
 
      var temp = state.blkNewsPage;
      temp++; 
-  
+     state.blkNewsPage = temp;
    	 state.activeNewsInfo = data;
    	 state.activeNewsTab = 'Blockchain';
      state.firstNewsLoad = false;
@@ -273,7 +273,6 @@ export const mutations = {
      	else if (temp == 13) {
      	   	 state.block13 = data;	
      	}
-      state.blkNewsPage = temp;
 
    },
 

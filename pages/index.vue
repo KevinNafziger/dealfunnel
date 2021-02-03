@@ -6,7 +6,7 @@
   </center>
   <br>
 <div class="aware-card">
-  <h1 style="border-radius:3px; margin-bottom: 0px; opacity: 1; transform: translateX(0px) translateY(0px) translateZ(0px);" class="intro-title">Newsletters, data, and reports <br>
+  <h1 style="border-radius:3px; margin-bottom: 0px; opacity: 1; transform: translateX(0px) translateY(0px) translateZ(0px);" class="intro-title">Newsletters, data and reports <br>
   </h1><br>
   <p class="MsoNormal">
   <span class="intro-p">

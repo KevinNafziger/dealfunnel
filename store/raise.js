@@ -1,4 +1,4 @@
-import allRaises from '~/static/raises.json';
+import allRaises from '~/data/raises.json';
 export const state = () => ({
  allRaises: [],
  activeTab: 'All', 

@@ -1,4 +1,4 @@
-import allCompanies from '~/static/company.json';
+import allCompanies from '~/data/company';
 export const state = () => ({
 	
   insurtech: [],
