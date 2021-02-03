@@ -1,4 +1,4 @@
-import allNews from '~/data/news.json';
+import allNews from '~/data/news';
 
 export const state = () => ({
   insurtech: [],
@@ -280,6 +280,7 @@ export const mutations = {
 
    	 var temp = state.payNewsPage;
    	 temp++ ;
+     state.payNewsPage = temp;
    	 state.activeNewsInfo = data;
      state.firstNewsLoad = false;
      state.activeNewsTab = 'Payments';
@@ -296,7 +297,6 @@ export const mutations = {
 	    else if (temp ==5) {
 	   	   	 state.pay5= data;	
 	   	}
-     state.payNewsPage = temp; 
    },
 
    setInsurPrevious(state) {
