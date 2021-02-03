@@ -19,17 +19,17 @@
 
   <RaiseTempSearch></RaiseTempSearch> <br>
 
-
-  <a v-if="this.loggedIn" href="https://fintechhorizonsmedia.com/fintechraises.xlsx"
-   >
+<div class="col-reports-div"><center>
+  <a  v-if="loggedIn" href="https://fintechhorizonsmedia.com/fintechraises.xlsx">
     <center><span content="export to Excel"
   v-tippy="{ placement : 'bottom' }" id="oki" class="mdi mdi-file-excel" style="margin:20px;font-size: 34px;"></span></center><br>
   </a>
-  <nuxt-link v-if="!(this.loggedIn)" :to="'/login/'"  >
-    <center><span content="export to Excel"
-  v-tippy="{ placement : 'bottom' }" id="oki" class="mdi mdi-file-excel" style="margin:20px;font-size: 34px;"></span></center><br>
-  </nuxt-link>
 
+  <nuxt-link title="Please Login to view PDF"  v-else to="/login">
+    <span class="mdi mdi-login-color mdi-key"></span><br>
+    Login for Excel
+  </nuxt-link></center><br>
+</div>
   <div class="draft-div">
     <table class="table-striped" width="100%">
       <thead class="fixed-head">
@@ -592,7 +592,15 @@
     margin-right: auto;
 
   }
+  .mdi-login-color {
+    color:#4f81bd !important;
 
+  }
+  .col-reports-div {
+    display: contents !important;
+    place-self: center;
+    width: fit-content;
+  }
   .title {
 
     text-align: -webkit-center;
