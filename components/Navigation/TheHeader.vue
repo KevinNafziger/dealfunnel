@@ -187,12 +187,14 @@ export default {
   text-decoration: none;
   color: white;
   padding:5px;
+  margin:10px auto;
+  text-align: center;
 }
 
 .nav-item a:hover,
 .nav-item a:active,
 .nav-item a.nuxt-link-active {
-    box-shadow: 0px 0px 5px 0px #ffffff;
+    box-shadow: 0px 0px 20px -5px #80b9ff;
     border-radius: 3px;
 }
 
