@@ -504,6 +504,12 @@ ul.w-list-unstyled {
         height: 650px !important;
     }
   }
+  @media screen and (max-width:900px) {
+    #examples{
+        width:100% !important;
+        height: 650px !important;
+    }
+  }
   @media screen and (max-width:1000px) {
     #examples{
         width:100% !important;
