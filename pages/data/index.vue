@@ -360,6 +360,7 @@ computed: {
 },
  created() {
 
+     this.$store.dispatch("posts/setView", "Data"); 
      this.$nuxt.$on("getCategory", (category) => this.getbyCategory(category));
      this.$nuxt.$on("changePage", (direction) => this.changePage(direction));
       this.$nuxt.$on("submitSearch", (topic) => this.submitSearch(topic));

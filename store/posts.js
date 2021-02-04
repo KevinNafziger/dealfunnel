@@ -1,4 +1,4 @@
-import allPosts from '~/data/data.json';
+import allPosts from '~/data/data';
 export const state = () => ({
   pages: [],
   insurtech: [],

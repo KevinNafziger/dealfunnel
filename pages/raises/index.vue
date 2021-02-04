@@ -225,6 +225,7 @@
 
     created() {
 
+      this.$store.dispatch("posts/setView", "Raises");
        this.$nuxt.$on("getCategory", (category) => this.getbyCategory(category));
        this.$nuxt.$on("submitSearch", (topic) => this.submitSearch(topic));
 

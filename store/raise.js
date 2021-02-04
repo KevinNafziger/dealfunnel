@@ -307,12 +307,12 @@ export const mutations = {
 
    raisesbyTopic: (state, topic ) => {
 
-          return state.allRaises.filter(function(elem,topic) {
-                return (elem.group1.toLowerCase()  == 
-                  topic || elem.group2.toLowerCase()  == topic)
-                });
+        return state.allRaises.filter(function(elem,topic) {
+              return (elem.group1.toLowerCase()  == 
+                topic || elem.group2.toLowerCase()  == topic)
+              });
 
-          }  
+        }  
   
       
     }

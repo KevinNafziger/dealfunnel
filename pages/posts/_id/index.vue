@@ -26,8 +26,12 @@ export default {
   computed: {
     to () {
         if (this.client || !this.$routerHistory || !this.$routerHistory.hasPrevious()) {
-            // probably ssr, or hasn't navigated yet.
-            return { path: '/' };
+            if (this.activeView =="Articles") {
+                return { path: '/posts' };
+            }
+            else if (this.activeView =="Data"){
+                  return { path: '/data' };
+            }   
         }
 
         return { path: this.$routerHistory.previous().path };
