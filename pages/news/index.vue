@@ -1,9 +1,8 @@
 <template>
+
 <div width="100%" class="w-container-2">
-
-  <div id="top" class="sectionix"><div class="title"><div class="content"><br data-v-69296181="">
-
-    <h2 >News <i style="font-size: 13px; text-align:right; margin-left:3px;">{{ filterMessage }}</i></h2>
+  <div id="top" class="sectionix"><div class="title"><div  class="content">
+    <h2>News <i style="font-size: 13px; text-align:right; margin-left:3px;">{{ filterMessage }}</i></h2>
 
   </div></div></div>
 
@@ -633,4 +632,5 @@ ul {
       letter-spacing: 1.3px;
       line-height: 29px;
   }
+
 </style>

@@ -1,7 +1,7 @@
 <template>
 <div>
-        <div data-v-69296181="" id="top" ><div data-v-69296181="" class="title"><div data-v-69296181="" class="content"><br data-v-69296181=""> <h2 data-v-69296181="">Companies
-
+        <div data-v-69296181="" id="top" ><div data-v-69296181="" class="title"><div data-v-69296181="" class="content"><br data-v-69296181="">
+          <h2 data-v-69296181="">Companies
         <i style="font-size: 13px; text-align:right; margin-left:3px;">{{ filterMessage}} </i>
         </h2></div></div></div>
 
@@ -157,7 +157,8 @@ methods: {
   },
 
   computed: {
-  ...mapState({
+
+      ...mapState({
       firstLoad: state => state.company.firstLoad,
       companies: state => state.company.activeInfo,
       activeTab: state => state.company.activeTab,
@@ -409,7 +410,6 @@ ol, ul, dl {
     margin-bottom: 1rem !important;
     display: inherit !important;
 }
-
 .gardient-button {
    background-image: linear-gradient(200deg, #ffffff 10%, #ffffff 39%, #ffffff 80%);
    background-size: 400% 400% !important;

@@ -2,10 +2,9 @@
 <template>
   <body>
    <div class="article-view-div"><br>
-     <center><nuxt-link class="gardient-button" to="/posts"><br>
-   <span class="mdi mdi-arrow-left">
-   </span>Back
- </nuxt-link></center>
+     <center><nuxt-link class="gardient-back-button" :to="to">
+           &#8592; Back
+       </nuxt-link></center>
   <h1  class=' article-view-t' style='margin-bottom:60px; text-indent:-.1pt;
   line-height:109%;'><b><span v-if="!(post.title === undefined)" style='line-height:109%; margin-left: 3%; font-size:16pt;'>{{post.title }}</span></b></h1>
    <br>
@@ -25,6 +24,14 @@
 import {mapState} from 'vuex';
 export default {
   computed: {
+    to () {
+        if (this.client || !this.$routerHistory || !this.$routerHistory.hasPrevious()) {
+            // probably ssr, or hasn't navigated yet.
+            return { path: '/' };
+        }
+
+        return { path: this.$routerHistory.previous().path };
+    },
   ...mapState({
 
           activeArtInfo: state =>  state.posts.activeArtInfo,
@@ -81,7 +88,7 @@ export default {
 </script>
 
 <style scoped>
-.gardient-button {
+.gardient-back-button {
     display: inline-flex;
     background-image: linear-gradient(200deg, #4F81BD 10%, #4F81BD 39%, #8ab4f8 80%);
     background-size: 400% 400% !important;
@@ -120,5 +127,25 @@ export default {
      letter-spacing: 0.6px;
      transition: 1s;
  }
-
+ .gardient-back-button {
+     display: inline-flex;
+     float:left;
+     background-image: linear-gradient(200deg, #4F81BD 10%, #4F81BD 39%, #8ab4f8 80%);
+     background-size: 400% 400% !important;
+     animation: gradient 15s ease infinite !important;
+     width: auto !important;
+     margin-left: 20px !important;
+     margin-right: auto !important;
+     border-radius: 5px !important;
+     border: none !important;
+     padding: 5px 10px !important;
+     font-family: poppins !important;
+     color: #ffffff !important;
+     font-size: 12px !important;
+     transition: 0.3s;
+     align-items: center;
+     margin-top: 5px;
+     margin-bottom: 20px;
+     box-shadow: 0px 1px 10px -3px #474747 !important;
+ }
 </style>
