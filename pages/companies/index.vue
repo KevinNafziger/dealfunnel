@@ -183,7 +183,9 @@ methods: {
    },
 
    async fetch({store}) {
+      if (this.firstLoad) {
       await store.dispatch("company/setLend", "fromLoad");
+      }
    },
 };
 

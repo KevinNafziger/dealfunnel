@@ -333,9 +333,12 @@ export const mutations = {
 						  commit("setLend", res.data);
 			         })
 				}
-			   else if (this.pastInit || origin == "notFromLoad") {
+			   else if (this.pastInit && origin == "notFromLoad") {
 			   		commit("setLendNoFetch");
 			   } 
+			   else {
+			   	
+			   }
   		    },
 
   		   async setBank({ commit }) {
