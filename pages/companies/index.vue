@@ -175,6 +175,7 @@ methods: {
 
   created() {
 
+     this.$store.dispatch("posts/setView", "Companies");
      this.$nuxt.$on("getCategory", (category) => this.getbyCategory(category));
      this.$nuxt.$on("submitSearch", (topic) => this.submitSearch(topic));
      this.$nuxt.$on("changePage", (direction) => this.changePage(direction));

@@ -212,16 +212,19 @@ import {mapState} from 'vuex';
 
     computed: {
       to () {
-          if (this.client || !this.$routerHistory || !this.$routerHistory.hasPrevious()) {
-              // probably ssr, or hasn't navigated yet.
-              return { path: '/' };
-          }
-
-          return { path: this.$routerHistory.previous().path };
+        if (this.client || !this.$routerHistory || !this.$routerHistory.hasPrevious()) {
+            if (this.activeView =="Raises") {
+                return { path: '/raises' };
+            }
+            else if (this.activeView =="Companies"){
+                  return { path: '/companies' };
+            }   
+        }
       },
   ...mapState({
         starter: state => state.company.lending,
         active: state =>  state.company.activeInfo,
+        activeView:  state => state.posts.activeView,
         first: state => state.company.firstLoad,
         allCompanies:  state => state.company.allCompanies,
         allPosts: state => state.allPosts
