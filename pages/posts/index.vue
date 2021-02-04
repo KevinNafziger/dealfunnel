@@ -271,7 +271,9 @@ export default {
   async fetch({store}) {
 
        store.dispatch("posts/setView", "Articles");
+       if (this.firstArtLoad) {
        await store.dispatch("posts/nuxtServerInit");
+       }
 
   },
 
