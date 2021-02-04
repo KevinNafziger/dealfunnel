@@ -137,7 +137,7 @@ export default {
   display: none;
  }
 }
-@media screen and (max-width: 760px){
+@media screen and (max-width: 770px){
 .logo {
   display: block !important;
  }
@@ -206,7 +206,7 @@ export default {
    font-family: 'Lato'
  }
 
- @media  (min-width:1400px) {
+ @media  (min-width:800px) {
    .burger {
      display:none !important;
    }
