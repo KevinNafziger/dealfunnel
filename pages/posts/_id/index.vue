@@ -81,7 +81,7 @@ export default {
 </script>
 
 <style scoped>
-.gardient-button {
+.gardient-back-button {
     display: inline-flex;
     background-image: linear-gradient(200deg, #4F81BD 10%, #4F81BD 39%, #8ab4f8 80%);
     background-size: 400% 400% !important;

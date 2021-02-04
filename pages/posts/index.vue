@@ -3,7 +3,9 @@
 
   <center>
     <div data-v-69296181="" id="top" class="sectionix"><div data-v-69296181="" class="title"><div data-v-69296181="" class="content"><br data-v-69296181="">
-
+      <nuxt-link class="gardient-back-button" :to="to">
+            &#8592; Back
+        </nuxt-link>
       <h2 data-v-69296181="">Articles<i style="font-size: 13px; text-align:right; margin-left:3px;">{{ filterMessage }}</i></h2>
 
     </div></div></div>
@@ -210,6 +212,14 @@ export default {
   },
 
   computed: {
+    to () {
+        if (this.client || !this.$routerHistory || !this.$routerHistory.hasPrevious()) {
+            // probably ssr, or hasn't navigated yet.
+            return { path: '/' };
+        }
+
+        return { path: this.$routerHistory.previous().path };
+    },
   ...mapState({
           starter: state => state.posts.post1,
           activeTab: state => state.posts.activeArtTab,
@@ -361,5 +371,26 @@ h2 {
 }
 input.text-field {
       width: 20%;
+}
+.gardient-back-button {
+    display: inline-flex;
+    float:left;
+    background-image: linear-gradient(200deg, #4F81BD 10%, #4F81BD 39%, #8ab4f8 80%);
+    background-size: 400% 400% !important;
+    animation: gradient 15s ease infinite !important;
+    width: auto !important;
+    margin-left: 20px !important;
+    margin-right: auto !important;
+    border-radius: 5px !important;
+    border: none !important;
+    padding: 5px 10px !important;
+    font-family: poppins !important;
+    color: #ffffff !important;
+    font-size: 12px !important;
+    transition: 0.3s;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0px 1px 10px -3px #474747 !important;
 }
 </style>
