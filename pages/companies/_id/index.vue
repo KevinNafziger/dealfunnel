@@ -4,6 +4,9 @@
 
 <template>
 <div class="main-div">
+  <center><nuxt-link class="gardient-back-button" :to="to">
+        &#8592; Back
+    </nuxt-link></center>
   <div class="col-A">
     <div v-if="!(item.logo_item=='')" class="col-sm-5">
         <img v-if="item.logo_item" class="nuxt__build_indicator2" :src="item.logo_item">
@@ -208,6 +211,14 @@ import {mapState} from 'vuex';
      },
 
     computed: {
+      to () {
+          if (this.client || !this.$routerHistory || !this.$routerHistory.hasPrevious()) {
+              // probably ssr, or hasn't navigated yet.
+              return { path: '/' };
+          }
+
+          return { path: this.$routerHistory.previous().path };
+      },
   ...mapState({
         starter: state => state.company.lending,
         active: state =>  state.company.activeInfo,
@@ -231,16 +242,16 @@ import {mapState} from 'vuex';
         return this.item.id;
     },
 
-  
+
 
     item() {
 
            if (this.allCompanies) {
               return  this.allCompanies.find(p => p.id == this.$route.params.id)
-           } 
+           }
            else {
               return this.starter.find(p => p.id == this.$route.params.id) }
-           }        
+           }
    },
 
    async asyncData({params, $axios }) {
@@ -566,5 +577,26 @@ h3 {
   text-align:center;
   padding:10px;
 
+}
+.gardient-back-button {
+    display: inline-flex;
+    float:left;
+    background-image: linear-gradient(200deg, #4F81BD 10%, #4F81BD 39%, #8ab4f8 80%);
+    background-size: 400% 400% !important;
+    animation: gradient 15s ease infinite !important;
+    width: auto !important;
+    margin-left: 20px !important;
+    margin-right: auto !important;
+    border-radius: 5px !important;
+    border: none !important;
+    padding: 5px 10px !important;
+    font-family: poppins !important;
+    color: #ffffff !important;
+    font-size: 12px !important;
+    transition: 0.3s;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0px 1px 10px -3px #474747 !important;
 }
 </style>

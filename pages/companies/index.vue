@@ -1,9 +1,6 @@
 <template>
 <div>
         <div data-v-69296181="" id="top" ><div data-v-69296181="" class="title"><div data-v-69296181="" class="content"><br data-v-69296181="">
-          <nuxt-link class="gardient-back-button" :to="to">
-                &#8592; Back
-            </nuxt-link><br>
           <h2 data-v-69296181="">Companies
         <i style="font-size: 13px; text-align:right; margin-left:3px;">{{ filterMessage}} </i>
         </h2></div></div></div>
@@ -160,15 +157,8 @@ methods: {
   },
 
   computed: {
-    to () {
-        if (this.client || !this.$routerHistory || !this.$routerHistory.hasPrevious()) {
-            // probably ssr, or hasn't navigated yet.
-            return { path: '/' };
-        }
 
-        return { path: this.$routerHistory.previous().path };
-    },
-  ...mapState({
+      ...mapState({
       firstLoad: state => state.company.firstLoad,
       companies: state => state.company.activeInfo,
       activeTab: state => state.company.activeTab,
@@ -420,29 +410,6 @@ ol, ul, dl {
     margin-bottom: 1rem !important;
     display: inherit !important;
 }
-
-.gardient-back-button {
-    display: inline-flex;
-    float:left;
-    background-image: linear-gradient(200deg, #4F81BD 10%, #4F81BD 39%, #8ab4f8 80%);
-    background-size: 400% 400% !important;
-    animation: gradient 15s ease infinite !important;
-    width: auto !important;
-    margin-left: 20px !important;
-    margin-right: auto !important;
-    border-radius: 5px !important;
-    border: none !important;
-    padding: 5px 10px !important;
-    font-family: poppins !important;
-    color: #ffffff !important;
-    font-size: 12px !important;
-    transition: 0.3s;
-    align-items: center;
-    margin-top: 15px;
-    margin-bottom: 20px;
-    box-shadow: 0px 1px 10px -3px #474747 !important;
-}
-
 .gardient-button {
    background-image: linear-gradient(200deg, #ffffff 10%, #ffffff 39%, #ffffff 80%);
    background-size: 400% 400% !important;
