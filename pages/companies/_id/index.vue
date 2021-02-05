@@ -213,10 +213,10 @@ import {mapState} from 'vuex';
     computed: {
       to () {
         if (this.client || !this.$routerHistory || !this.$routerHistory.hasPrevious()) {
-            if (this.activeView =="Raises") {
+            if (this.activeView=="Raises") {
                 return { path: '/raises' };
             }
-            else if (this.activeView =="Companies"){
+            else if (this.activeView=="Companies"){
                   return { path: '/companies' };
             }   
         }
