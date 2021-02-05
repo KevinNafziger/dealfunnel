@@ -44,7 +44,7 @@
              <tippy to="externalTrigger">
          Click to close view
      </tippy>
-            <button  v-show="this.showModal" v-on:click="toggleModal()" class="gardient-button b-lr-s">
+            <button  v-show="this.showModal" v-on:click="toggleModal()" class="gardient-view-button b-lr-s">
               <span name="externalTrigger" class="mdi mdi-file-eye"></span>
             Close View
             </button>
@@ -61,7 +61,7 @@
               <tippy to="Openview">
               Open PDf Preview
               </tippy>
-              <button name="Openview" v-on:click="toggleModal()" class="gardient-button b-lr-s">
+              <button name="Openview" v-on:click="toggleModal()" class="gardient-view-button b-lr-s">
               <span class="mdi mdi-file-eye"></span>
               View
               </button>
@@ -69,11 +69,11 @@
               <tippy v-if="loggedIn" to="getPdf">
               Download pdf
               </tippy>
-              <button v-if="loggedIn" name="getPdf" v-on:click="generateReport()" class="gardient-button b-lr-s">
+              <button v-if="loggedIn" name="getPdf" v-on:click="generateReport()" class="gardient-view-button b-lr-s">
               <span class="mdi mdi-pdf-box"></span>
               PDF
               </button>
-               <nuxt-link v-else to="/login">  <span class="mdi mdi-pdf-box"></span>Login to create PDF</nuxt-link>
+               <nuxt-link class="gardient-view-button b-lr-s" v-else to="/login">  <span class="mdi mdi-pdf-box"></span>Login to create PDF</nuxt-link>
             </div>
              <card v-for="myboard in myboards" :id="myboard.id" :key="myboard.id" draggable="true" class="list-group-item">
                 <h3>  {{ myboard.title }} </h3>
@@ -395,6 +395,29 @@ img {
 }
 h2 {
       text-align: -webkit-center;
+}
+.gardient-view-button {
+    display: grid;
+    background-image: linear-gradient(200deg, #4F81BD 10%, #4F81BD 39%, #8ab4f8 80%);
+    background-size: 400% 400% !important;
+    animation: gradient 15s ease infinite !important;
+    width: fit-content !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    border-radius: 10px !important;
+    border: none !important;
+    padding: 10px 20px !important;
+    font-family: poppins !important;
+    color: #ffffff !important;
+    font-size: 12px !important;
+    transition: 0.3s;
+    margin-top: 14px;
+    margin-bottom: 10px;
+    box-shadow: 0px 1px 10px -3px #474747 !important;
+}
+.builder-btns {
+  display: inline-flex;
+  text-align: center;
 }
 .date-tag {
   background: #69737b3d;
