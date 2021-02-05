@@ -21,8 +21,8 @@
               <input type="password" id="password" v-model="password"><br>
 
             </div><br><br>
-            <button  v-on:click="login" class="btn btn-large btn-extended grey lighten-4 black-text">Login</button>
-          </form>
+            <button  v-on:click="login" class="btn login-btn btn-large btn-extended grey lighten-4 black-text">Login</button>
+          </form><br><br>
         </div>
       </div>
   </md-card>
@@ -64,7 +64,7 @@ export default {
   }
 };
 </script>
-<style>
+<style scoped>
 .btn {
   background: #4f81bd;
   color: #ffffff;
@@ -75,6 +75,9 @@ input {
   width: 95%;
   height: 40px !important;
   border-radius:3px;
+}
+.login-btn {
+  margin-bottom: 20px;
 }
 form {
   margin:auto;
