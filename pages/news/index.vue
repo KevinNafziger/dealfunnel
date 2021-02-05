@@ -478,6 +478,7 @@ export default {
 }
 ul.w-list-unstyled {
     text-align: -webkit-center;
+    padding: 0px !important;
 }
 
    #megamenu3 {
@@ -510,6 +511,11 @@ ul.w-list-unstyled {
     #examples{
         width:100% !important;
         height: 650px !important;
+    }
+    ul.w-list-unstyled {
+      width: 90% !important;
+      padding: 0px !important;
+      margin:auto !important;
     }
   }
   @media screen and (max-width:1000px) {
