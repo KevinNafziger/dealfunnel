@@ -3,16 +3,16 @@
 
 <div>
   <br>
-    <div >
-      <div class="content"><br>
-        <h2 >Builder</h2>
+    <div>
+      <div class="content">
+        <h2 style="padding-top:10px;" >Builder</h2>
       <nuxt-link to="/tours/builderpreview">
         <tippy to="Buildpre">
         Builder Preview
-        </tippy>
-        <span name="Buildpre" class="mdi mdi-help"></span>
+      </tippy><br>
+        <span name="Buildpre" class="mdi mdi-help"><br></span>
       </nuxt-link>
-      </div>
+    </div>
     </div>
     <br><br>
 
@@ -26,7 +26,7 @@
             <h2 style="inline-block"> Articles <i style="font-size: 13px; text-align:right">{{ filterMessage }}</i></h2>
             </div>
            <Board id="board-2">
-             <Searchbar/>
+             <center><Searchbar/></center>
 
              <card v-for="post in posts" :id="post.id" :key="post.id" draggable="true" class="list-group-item">
                     <h3>  {{ post.title }} </h3>
