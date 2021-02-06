@@ -218,7 +218,13 @@ import {mapState} from 'vuex';
             }
             else if (this.activeView=="Companies"){
                   return { path: '/companies' };
-            }   
+            } 
+            else {
+               return { path: '/companies' };
+            }  
+        }
+        else {
+          return { path: '/companies' };
         }
       },
   ...mapState({
