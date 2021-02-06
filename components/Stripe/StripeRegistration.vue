@@ -1,13 +1,19 @@
 <template>
   <div >
 
-     <p>Stripe registration development in progress</p>
-     <form action="/process-payment" method="POST">
-    <stripe-checkout class="plan__cta-link plan__cta-link--active"
-        stripe-key="pk_live_XfWHUi5ZgIVMcDsaWQDMHFCa"
-        product="product">
-    </stripe-checkout>
-    </form>
+     <p>Stripe development in progress</p>
+     <div>
+       <stripe-checkout class="plan__cta-link plan__cta-link--active"
+      ref="checkoutRef"
+      mode="subscription"
+      :stripeKey="publishableKey"
+      :line-items="lineItems"
+      :success-url="successURL"
+      :cancel-url="cancelURL"
+      @loading="v => loading = v"
+    />
+        <button @click="submit">Subscribe!</button>
+    </div>
   </div>
 </template>
 <style>
@@ -33,13 +39,33 @@ form {
 
 <script>
 
-import { StripeCheckout } from 'vue-stripe'
+import { StripeCheckout } from 'vue-stripe';
 
 export default {
  name: 'StripeRegistration',
  components: {
-      'stripe-checkout': StripeCheckout
+      'stripe-checkout': StripeCheckout,
+  },
+data () {
+    return {
+      publishableKey: 'pk_test_iieOiqRaTPCJXE51kinOoPE0',
+      loading: false,
+      lineItems: [
+        {
+          price: 'price_1IHKUuIUxqRwvzPZeKF9myDq', // The id 
+          quantity: 1,
+        },
+      ],
+      successURL: 'localhost:3000/process-payment',
+      cancelURL: 'localhost:3000/process-payment',
+    }
+  },
+methods: {
+  submit()  {
+    this.$stripe.checkoutRef.redirectToCheckout();
   }
+},
 
 }
 </script>
+
