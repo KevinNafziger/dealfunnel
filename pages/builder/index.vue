@@ -1,9 +1,6 @@
 
 <template>
-
-<div>
-  <br>
-    <div>
+  <div>
       <div class="content">
         <h2 style="padding-top:10px;" >Builder</h2>
       <nuxt-link to="/tours/builderpreview">
@@ -13,9 +10,6 @@
         <span name="Buildpre" class="mdi mdi-help"><br></span>
       </nuxt-link>
     </div>
-    </div>
-    <br><br>
-
     <main class="flexbox">
 
 
@@ -822,6 +816,7 @@ flex: 1 1 200px;
   background: #ffffff;
   border-radius: 10px;
   box-shadow: 0px 0px 12px -10px;
+  height:600px;
 }
 
 .right-side {
@@ -834,6 +829,7 @@ flex: 1 1 200px;
   background: #ffffff;
   border-radius: 10px;
   box-shadow: 0px 0px 12px -10px;
+  height:600px;
 }
 
  #board-right {
