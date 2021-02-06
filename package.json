@@ -15,7 +15,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@nuxt/http": "^0.6.0",
-    "@nuxtjs/axios": "^5.12.2",
+    "@nuxtjs/axios": "^5.13.0",
     "@nuxtjs/feed": "^2.0.0",
     "@nuxtjs/firebase": "^7.1.2",
     "@nuxtjs/robots": "^2.4.2",
@@ -27,7 +27,9 @@
     "install": "^0.13.0",
     "npm": "^6.14.9",
     "nuxt": "^2.14.12",
+    "nuxt-stripe-module": "^3.0.1",
     "nuxtjs-mdi-font": "^1.0.2",
+    "stripe": "^8.134.0",
     "v-tippy": "^2.0.0",
     "vue-material": "^1.0.0-beta-15",
     "vue-resource": "^1.5.1",

@@ -16,7 +16,11 @@
          <li class="plan__feature-item">-<i>DealFunnel</i> support<span class="accent-2"></span></li>
          <li class="plan__feature-item"><span class="accent-2"></span></li>
        </ul>
-<StripeRegistration/>
+ <button
+    @click="checkout"
+    role="link">
+        Purchase this package
+    </button>
      </article>
     <!-- <article class="plan__item">
        <div class="plan__header">
@@ -42,15 +46,18 @@
 
 <script>
 
-import StripeRegistration from "@/components/Stripe/StripeRegistration"
- export default {
-   name: 'subscription',
-   components: {
-     StripeRegistration
-   }
- }
+    import stripeCheckoutMixin from '@/mixins/stripeCheckoutMixin';
+    export default {
+        mixins: [stripeCheckoutMixin],
+        data () { 
+      return {
+          price: 'price_1IHxuYIUxqRwvzPZX8au5ouJ',
+          successUrl: 'https://dfunnel.herokuapp.com/process-payment',
+          cancelUrl: 'https://dfunnel.herokuapp.com/'
+         }
+        }
+    }
 </script>
-
 
  <style>
  @import url("https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap");

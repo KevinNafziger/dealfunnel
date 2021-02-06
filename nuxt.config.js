@@ -38,11 +38,14 @@ export default {
     'bootstrap-vue/nuxt',
     '@nuxtjs/axios',
     'nuxtjs-mdi-font',
-
+    'nuxt-stripe-module', 
     ],
     axios: {
     baseURL: process.env.BASE_URL || 'https://fintechhorizonsmedia.com/api/v1',
     },
+    stripe: {
+    publishableKey: 'pk_test_iieOiqRaTPCJXE51kinOoPE0',
+     },
 
     env: {
       fbAPIKey: process.env.FB_KEY || 'AIzaSyBzUEYv2IKnQURUERVEH4g_-3OO4XSfWSY'
