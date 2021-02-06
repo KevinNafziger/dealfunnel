@@ -379,23 +379,18 @@ export const mutations = {
 
 
            async setComp2({ commit }) {
-
 				commit("setComp2" );
 		   },
 
 		   async setComp3({ commit }) {
-
 				commit("setComp3" );
 		   },
 
 	      async setComp4({ commit }) {
-
 				commit("setComp4" );
 		   },
 		   
-
            async setComp1({ commit }) {
-
 				commit("setComp1" );
 		   },
 

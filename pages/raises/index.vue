@@ -161,7 +161,7 @@
           case 'All':
              this.sortBy = "";
              this.$store.dispatch("raise/setActiveTab", "All");
-             this.$store.dispatch("raise/setRaiseInfo", this.allRaises);
+             this.$store.dispatch("raise/setAll", this.allRaises);
              break;
 
           }

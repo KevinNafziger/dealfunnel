@@ -162,7 +162,7 @@ methods: {
       firstLoad: state => state.company.firstLoad,
       companies: state => state.company.activeInfo,
       activeTab: state => state.company.activeTab,
-      page: state => state.posts.activePage,
+      page: state => state.company.activePage,
 
    }),
 
