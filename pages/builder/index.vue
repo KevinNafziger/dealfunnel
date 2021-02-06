@@ -816,7 +816,7 @@ flex: 1 1 200px;
   background: #ffffff;
   border-radius: 10px;
   box-shadow: 0px 0px 12px -10px;
-  height:600px;
+  height:500px;
 }
 
 .right-side {
@@ -829,7 +829,7 @@ flex: 1 1 200px;
   background: #ffffff;
   border-radius: 10px;
   box-shadow: 0px 0px 12px -10px;
-  height:600px;
+  height:500px;
 }
 
  #board-right {
