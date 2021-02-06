@@ -163,7 +163,7 @@ export default {
      },
      showNextBlkBtn() {
 
-        if (this.blkPage <=5 && (this.activeTab == 'Blockchain'))
+        if (this.blkPage <4 && (this.activeTab == 'Blockchain'))
         {
            return true;
         }

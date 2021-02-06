@@ -86,10 +86,73 @@ export const state = () => ({
 
 export const mutations = {
 
- 
+
+   incrementPage(state) {
+
+    if (state.numNewsPage<23) {
+      state.numNewsPage++;
+    }
+
+   },
+
+
+   decrementPage(state) {
+
+      if (state.numNewsPage>1) {
+         state.numNewsPage--;
+      }
+
+   },
+
+  incrementIns(state) {
+
+    if (state.insNewsPage<4) {
+      state.insNewsPage++;
+    }
+
+   },
+
+  decrementIns(state) {
+
+    if (state.insNewsPage>1) {
+      state.insNewsPage--;
+    }
+   },
+
+   decrementBlock(state) {
+
+      if (state.blkNewsPage>1) {
+         state.blkNewsPage--;
+      }
+
+   },
+
+  incrementBlock(state) {
+
+    if (state.blkNewsPage<13) {
+      state.blkNewsPage++;
+    }
+
+   },
+
+  decrementPay(state) {
+
+      if (state.payNewsPage>1) {
+         state.payNewsPage--;
+      }
+   },
+
+  incrementPay(state) {
+
+    if (state.payNewsPage<5) {
+      state.payNewsPage++;
+    }
+
+   },
+
    initInsur(state, data) {
 
-      var insurLength = data.length;
+      let insurLength = data.length;
       insurLength--;
       state.insur1 = data.slice(0, 200);
       state.insur2 = data.slice(200,400);
@@ -105,7 +168,8 @@ export const mutations = {
 
    initBlock(state, data) {
 
-     var blockLength = data.length;
+      state.blkNewsPage = 1;
+      let blockLength = data.length;
       blockLength--;
       state.block1 = data.slice(0, 200);
       state.block2 = data.slice(200,400);
@@ -128,14 +192,14 @@ export const mutations = {
 
     initPay(state, data) {
 
-      var payLength = data.length;
+      let payLength = data.length;
       payLength--;
       state.pay1 = data.slice(0, 200);
       state.pay2 = data.slice(200,400);
       state.pay3 = data.slice(400, 600);
       state.pay4 = data.slice(600, 800);
       state.pay5 = data.slice(800, payLength);
-
+      state.payNewsPage =1;
       state.activeNewsInfo = data.slice(0, 200);
       state.activeNewsTab = 'Payments';
       state.firstNewsLoad =false;
@@ -145,7 +209,7 @@ export const mutations = {
     setAllNews(state, data) {
 
       state.allNews = data;
-      var newsLength = data.length;
+      let newsLength = data.length;
       newsLength--;
       state.activeNewsInfo = data.slice(0, 200);
       state.news1 = data.slice(0, 200);
@@ -174,18 +238,18 @@ export const mutations = {
       state.activeNewsTab = 'All';
       state.firstNewsLoad = false;
       state.numNewsPage =1;
-
    
     },
 
     setSector(state, data) {
-    
+
      state.activeNewsInfo = data;
      state.firstNewsLoad = false;
      state.numNewsPage=1;
      state.blkNewsPage=1;
      state.insNewsPage=1;
-     state.payNewsPage=1;        
+     state.payNewsPage=1;  
+
     },
 
    setTabForSector (state, sector) {
@@ -194,8 +258,7 @@ export const mutations = {
 
    setInsurNext(state, data) {
 
-   	 var temp = state.insNewsPage;
-   	 temp++;
+   	 let temp = state.insNewsPage;
    	 state.activeNewsInfo = data;
    	 state.activeNewsTab = 'Insurtech';
      state.firstNewsLoad = false;
@@ -212,17 +275,14 @@ export const mutations = {
 	   	   state.insur4 = data;	
 	    }
 
-	    else if (temp == 5) {
+	   else if (temp == 5) {
 	   	   state.insur5= data;	
 	   	}
-   	state.insNewsPage = temp;
    },
 
    setBlockNext(state, data) {
 
-     var temp = state.blkNewsPage;
-     temp++; 
-     state.blkNewsPage = temp;
+     let temp = state.blkNewsPage;
    	 state.activeNewsInfo = data;
    	 state.activeNewsTab = 'Blockchain';
      state.firstNewsLoad = false;
@@ -230,46 +290,36 @@ export const mutations = {
        if (temp == 2) {
      		 state.block2 =  data;
        }
-
    	   else if (temp == 3)	{
      	   	 state.block3 =  data;
        }
-
      	 else if (temp == 4) {
      	   	 state.block4 =  data;	
        }
-
        else if (temp ==5) {
      	   	 state.block5= data;	
      	 }
-
      	 else if (temp ==6) {
      	   	 state.block6 =  data;	
      	 }
-
      	 else if (temp== 7) {
      	   	 state.block7 =  data;	
      	 }
-     	
        else if (temp ==8) {
      	   	 state.block8 =  data;	
      	 }
-
        else if (temp == 9) {
      	   	 state.block9 =  data;	
-     	}
+     	 }
      	else if (temp == 10) {	  
      	   	 state.block10 = data;	
-     	}
-
+     	 }
      	else if (temp == 11) {
      	   	 state.block11 = data;	
      	}
-
      	else if (temp == 12) {
      	   	 state.block12= data;	
      	}
-
      	else if (temp == 13) {
      	   	 state.block13 = data;	
      	}
@@ -279,143 +329,112 @@ export const mutations = {
    setPayNext(state, data) {
 
    	 var temp = state.payNewsPage;
-   	 temp++ ;
-     state.payNewsPage = temp;
    	 state.activeNewsInfo = data;
      state.firstNewsLoad = false;
      state.activeNewsTab = 'Payments';
 
-	  if (temp == 2) {
-	   		 state.pay2 =data;
-	     }
-	 	else if (temp == 3)	{
-	   	   	 state.pay3 =  data;
-	    }
-	   	else if (temp == 4) {
-	   	   	 state.pay4 =  data;	
-	    }
-	    else if (temp ==5) {
-	   	   	 state.pay5= data;	
-	   	}
+	   if (temp == 2) {
+	   	state.pay2 =data;
+	   }
+	   else if (temp == 3)	{
+	   	 state.pay3 =  data;
+	   }
+	   else if (temp == 4) {
+	    state.pay4 =  data;	
+	   }
+	   else if (temp ==5) {
+	    state.pay5= data;	
+	   }
    },
 
    setInsurPrevious(state) {
 
-   	 var temp = state.insNewsPage;
-   	 temp--	;
+   	 let temp = state.insNewsPage;
    	 state.activeNewsTab = 'Insurtech';
      state.firstNewsLoad = false;
 
 		if (temp == 1) {
-
 	    state.activeNewsInfo = state.insur1;
 	  }
 	 
-   	else if (temp == 2)	{
-	   	   	 
+   	else if (temp == 2)	{   	   	 
 	    state.activeNewsInfo = state.insur2;
 	  }
 
 	  else if (temp == 3) {
-	   
      	state.activeNewsInfo = state.insur3;
 	  }
 
 	  else if (temp == 4) { 	   	 
-	      	 state.activeNewsInfo = state.insur4;	
+	    state.activeNewsInfo = state.insur4;	
 	  }
-    state.insNewsPage = temp;
    },
 
    setBlockPrevious(state) {
 
-   	 var temp = state.blkNewsPage;
-   	 temp--;
+   	 let temp = state.blkNewsPage;
    	 state.activeNewsTab = 'Blockchain';
      state.firstNewsLoad = false;
 
      if (temp == 1) {
-
      	state.activeNewsInfo = state.block1;
      }
      else if (temp == 2) {
-   		
    		state.activeNewsInfo = state.block2;
      }
- 	  else if (temp == 3)	{
-   	   	
+ 	   else if (temp == 3)	{
    	   	state.activeNewsInfo = state.block3;
      }
    	 else if (temp == 4) {
-   	  	
    	  	state.activeNewsInfo = state.block4;
      }
      else if (temp == 5) {
-   	   	
    	   	state.activeNewsInfo = state.block5;	
    	 }
    	 else if (temp ==6) {
-   	   	
    	   	state.activeNewsInfo = state.block6;
    	 }
    	 else if (temp == 7) {
-   	   	
-   	   	 state.activeNewsInfo = state.block7;	
+   	   	state.activeNewsInfo = state.block7;	
    	 }
    	 else if (temp ==8) {
-   	   	
    	   	state.activeNewsInfo = state.block8; 	
-   	}
-    else if (temp == 9) {
-   	   	
+   	 }
+     else if (temp == 9) {
    	   	state.activeNewsInfo = state.block9; 	
-   	}
-   	else if (temp == 10) {	  
-   	   	
+   	 }
+   	 else if (temp == 10) {	  
    	   	state.activeNewsInfo = state.block10; 	
-   	}
-   	else if (temp == 11) {
-   	   	
+   	 }
+   	 else if (temp == 11) {
    	   	state.activeNewsInfo = state.block11; 	
-   	}
-   	else if (temp ==12) {
-   	   	
+   	 }
+   	 else if (temp ==12) {
    	   	state.activeNewsInfo = state.block12;
    	 }
-   	else if (temp ==13) {
-   	   	
+   	 else if (temp ==13) {
    	   	state.activeNewsInfo = state.block13; 
    	  }
-   	 state.blkNewsPage = temp;
    },
 
    setPayPrevious(state) {
 
-   	  var temp = state.payNewsPage;
-   	  temp--;
-      state.firstNewsLoad = false;
-     state.activeNewsTab = 'Payments';
+   	let temp = state.payNewsPage;
+    state.firstNewsLoad = false;
+    state.activeNewsTab = 'Payments';
 
    	if (temp == 1) {
-	  	 
 	   	 state.activeNewsInfo = state.pay1;
 	   }
-
 	 else if (temp == 2)	{
-
 	   	  state.activeNewsInfo = state.pay2;
 	  }
-
 	  else if (temp == 3) {
-
 	   	  state.activeNewsInfo = state.pay3;
 	  }
-
 	  else if (temp == 4) {
-	   	   
 	   	  state.activeNewsInfo = state.pay4;	
 	  }
-    state.payNewsPage = temp;
    },
 
   setBlock(state, data){
@@ -428,7 +447,7 @@ export const mutations = {
    },
 
    setPay(state, data){
-
+     state.payNewsPage =1;
    	 state.pay1 = data;
      state.activeNewsInfo = data;
   	 state.activeNewsTab = 'Payments';	
@@ -438,7 +457,7 @@ export const mutations = {
 
 
    setInsur(state, data){
-
+     state.insNewsPage =1;
    	 state.insur1 = data;
      state.activeNewsInfo = data;
   	 state.activeNewsTab = 'Insurtech';	
@@ -590,376 +609,155 @@ export const mutations = {
 
   	},
 
-    setPrevious(state) {
-
-    var temp = state.numNewsPage;
-    temp--;
-
-	  
-   	 state.activeNewsTab = 'All';
-   	 state.firstNewsLoad = false;
-
-    if (temp == 1) {
-      state.activeNewsInfo = state.news1;
-     }
-    else if (temp == 2) {
-      state.activeNewsInfo = state.news2;
-
-    }
-
-    else if (temp == 3) {
-      state.activeNewsInfo = state.news3;
-    }
-
-    else if (temp == 4) {
-        
-      state.activeNewsInfo = state.news4;
-    
-    }
-    
-    else if (temp == 5) {
-      state.activeNewsInfo = state.news5;
-    }
-
-    else if (temp == 6) {
-      state.activeNewsInfo = state.news6;      
-    }
-    else if (temp == 7) {
-        
-      state.activeNewsInfo = state.news7;
-    }
-    else if (temp == 8) {
-      state.activeNewsInfo = state.news8;
-     }
-     
-    else if (temp ==9) {
-        
-      state.activeNewsInfo = state.news9;
-      state.numNewsPage = 9;  
-    
-    }
-    
-    else if (temp == 10) {
-      state.activeNewsInfo = state.news10;
-    }
-    
-    else if (temp == 11) {    
-        
-      state.activeNewsInfo = state.news11;
-    }
-    
-    else if (temp == 12) {
-        
-      state.activeNewsInfo = state.news12;
-
-    }
-    
-    else if (temp == 13) {
-    
-      state.activeNewsInfo = state.news13;
-    }
-    else if (temp ==14) {
-      state.activeNewsInfo = state.news14; 
-    }
-    else if (temp==15) {     
-
-      state.activeNewsInfo = state.news15; 
-    }
-
-    else if (temp==16) {
-      state.activeNewsInfo = state.news16;
-    
-    }
-    else if (temp ==17) { 
-      state.activeNewsInfo = state.news17; 
-    }
-   
-   else if (temp == 18) {
-    state.activeNewsInfo = state.news18; 
-   }
-   
-   else if (temp == 19) {
-        
-    state.activeNewsInfo = state.news19; 
-   }
-  
-   else if (temp == 20) {
-        
-    state.activeNewsInfo = state.news20; 
-   
-   }
-  
-   else if (temp == 21) {
-    state.activeNewsInfo = state.news21; 
-
-   }
- 
-   else if (temp == 22) {
-
-    state.activeNewsInfo = state.news22; 
-
-   }
-   
-   else if (temp == 23) {
-
-    state.activeNewsInfo = state.news23; 
-  }
- 	  state.numNewsPage = temp;
-    },
-
     setNextAndFetch(state, data) {
-
-     var temp = state.numNewsPage;
-     temp++
       
+      let temp = state.numNewsPage;
   		state.activeNewsInfo = data;
   		state.activeNewsTab = 'All';
   		state.firstNewsLoad = false; 
+
       if (temp==2) {
-          state.news2 = state.activeNewsInfo;
-          state.numNewsPage = 2;
-       }
-       else if (temp == 3) {
-      
-        state.news3 =state.activeNewsInfo;
-        state.numNewsPage = 3;
-
-       }
-       else if (temp == 4) {
-        
-        state.news4= state.activeNewsInfo;
-        state.numNewsPage = 4;
-       }
-       else if (temp == 5) {
-        
-       state.news5= state.activeNewsInfo;
-       state.numNewsPage = 5;
-       }
-
-       else if (temp == 6) { 
-       
-       state.news6 =state.activeNewsInfo;  
-       state.numNewsPage = 6;
-     
+        state.news2 =state.activeNewsInfo;
       }
-       else if (temp == 7) {
-        
-      state.news7 = state.activeNewsInfo;
-      state.numNewsPage = 7;
-     
+      else if (temp == 3) {
+        state.news3 =state.activeNewsInfo;
+      }
+      else if (temp == 4) {
+        state.news4 =state.activeNewsInfo;
+      }
+      else if (temp == 5) {
+        state.news5=state.activeNewsInfo;
+      }
+      else if (temp == 6) { 
+        state.news6= state.activeNewsInfo;  
        }
+     else if (temp == 7) { 
+        state.news7=state.activeNewsInfo;
+      }
      else if (temp == 8) {  
-
-      state.news8= state.activeNewsInfo;
-      state.numNewsPage = 8; 
-     
+       state.news8 =state.activeNewsInfo;
+      }
+     else if (temp==9) {   
+      state.news9=state.activeNewsInfo;   
      }
-     else if (temp ==9) {   
-      state.news9=state.activeNewsInfo;
-      state.numNewsPage = 9;  
-     
-     }
-    
      else if (temp == 10) { 
-     
-      state.news10= state.activeNewsInfo;
-      state.numNewsPage = 10;  
-     
+      state.news10 =state.activeNewsInfo; 
      }
-
      else if (temp == 11) {       
-
-      state.news11=state.activeNewsInfo;
-      state.numNewsPage = 11;
-
+      state.news11 =state.activeNewsInfo;
      }
-
      else if (temp == 12) {
-
-      state.news12=state.activeNewsInfo;
-      state.numNewsPage = 12;
-
+      state.news12 = state.activeNewsInfo;
      }
-
      else if (temp == 13) {
-
-      state.news13= state.activeNewsInfo;
-      state.numNewsPage = 13;
+      state.news13 = state.activeNewsInfo;
      }
-
      else if (temp == 14) {
-      state.news14=state.activeNewsInfo; 
-      state.numNewsPage = 14;
+      state.news14 = state.activeNewsInfo ; 
      }
-
      else if (temp == 15) {     
-       state.news15= state.activeNewsInfo; 
-      state.numNewsPage = 15;
+      state.news15 = state.activeNewsInfo; 
      }
-
-    else if (temp == 16) {
-     state.news16=state.activeNewsInfo;
-      state.numNewsPage = 16; 
-    }
-    else if (temp ==17) {
-      state.news17=state.activeNewsInfo;
-      state.numNewsPage = 17; 
-    }
+     else if (temp == 16) {
+      state.news16 = state.activeNewsInfo ;
+     }
+     else if (temp ==17) {
+      state.news17 = state.activeNewsInfo ;
+     }
     else if (temp == 18) {
-      state.news18= state.activeNewsInfo;
-      state.numNewsPage = 18; 
-    }
+      state.news18 = state.activeNewsInfo;
+     }
     else if (temp == 19) {
-      state.news19= state.activeNewsInfo; 
-      state.numNewsPage = 19;
-   }
-   else if (temp == 20) {
-     state.news20= state.activeNewsInfo; 
-     state.numNewsPage = 20;
-   }
+      state.news19 =  state.activeNewsInfo; 
+     }
+    else if (temp == 20) {
+      state.news20 = state.activeNewsInfo; 
+    }
    else if (temp == 21) { 
-     state.news21= state.activeNewsInfo; 
-     state.numNewsPage = 21;
-   }
+      state.news21 = state.activeNewsInfo; 
+    }
    else if (temp == 22) {
-    state.news22= state.activeNewsInfo; 
-    state.numNewsPage = 22;
+     state.news22 = state.activeNewsInfo; 
    }
    else if (temp == 23) {
-    state.news23= state.activeNewsInfo; 
-    state.numNewsPage = 23; 
+     state.news23 = state.activeNewsInfo;  
    } 
-
-     },
-
-    setNextNoFetch(state){
  
-     var temp = state.numNewsPage;
-     temp++
+  },
+
+  setNoFetch(state){
+ 
+     let temp = state.numNewsPage;
+     console.log('temp mutations' + temp)
      state.activeNewsTab = 'All';
      state.firstNewsLoad = false;
 
        if (temp==2) {
-          state.activeNewsInfo= state.news2;
-          state.numNewsPage = 2;
+        state.activeNewsInfo= state.news2;
        }
        else if (temp == 3) {
-      
-        state.activeNewsInfo = state.news3;
-        state.numNewsPage = 3;
-
+         state.activeNewsInfo = state.news3;
        }
        else if (temp == 4) {
-        
-        state.activeNewsInfo = state.news4;
-        state.numNewsPage = 4;
+         state.activeNewsInfo = state.news4;
        }
        else if (temp == 5) {
-        
-       state.activeNewsInfo = state.news5;
-       state.numNewsPage = 5;
+         state.activeNewsInfo = state.news5;
        }
-
-      else if (temp == 6) { 
-      state.activeNewsInfo = state.news6;  
-      state.numNewsPage = 6;
-     
-     }
-     else if (temp == 7) {
-        
-      state.activeNewsInfo = state.news7;
-      state.numNewsPage = 7;
-     
-     }
-     else if (temp == 8) {  
-
-      state.activeNewsInfo = state.news8;
-      state.numNewsPage = 8; 
-     
-     }
-     else if (temp ==9) {   
-      state.activeNewsInfo = state.news9;
-      state.numNewsPage = 9;  
-     
-     }
-    
-     else if (temp == 10) { 
-     
-      state.activeNewsInfo = state.news10;
-      state.numNewsPage = 10;  
-     
-     }
-
-     else if (temp == 11) {       
-
-      state.activeNewsInfo = state.news11;
-      state.numNewsPage = 11;
-
-     }
-
-     else if (temp == 12) {
-
-      state.activeNewsInfo = state.news12;
-      state.numNewsPage = 12;
-
-     }
-
-     else if (temp == 13) {
-
-      state.activeNewsInfo = state.news13;
-      state.numNewsPage = 13;
-     }
-
-     else if (temp == 14) {
-      state.activeNewsInfo = state.news14; 
-      state.numNewsPage = 14;
-     }
-
-     else if (temp == 15) {     
-      state.activeNewsInfo = state.news15; 
-      state.numNewsPage = 15;
-     }
-
-     else if (temp == 16) {
-      state.activeNewsInfo = state.news16;
-      state.numNewsPage = 16; 
+       else if (temp == 6) { 
+         state.activeNewsInfo = state.news6;  
+       }
+     else if (temp == 7) { 
+        state.activeNewsInfo = state.news7;
       }
-
-    else if (temp ==17) {
-      state.activeNewsInfo = state.news17;
-      state.numNewsPage = 17; 
-    }
-
+     else if (temp == 8) {  
+        state.activeNewsInfo = state.news8;
+      }
+     else if (temp ==9) {   
+        state.activeNewsInfo = state.news9;   
+     }
+     else if (temp == 10) { 
+        state.activeNewsInfo = state.news10; 
+     }
+     else if (temp == 11) {       
+        state.activeNewsInfo = state.news11;
+     }
+     else if (temp == 12) {
+        state.activeNewsInfo = state.news12;
+     }
+     else if (temp == 13) {
+        state.activeNewsInfo = state.news13;
+     }
+     else if (temp == 14) {
+        state.activeNewsInfo = state.news14; 
+     }
+     else if (temp == 15) {     
+        state.activeNewsInfo = state.news15; 
+     }
+     else if (temp == 16) {
+        state.activeNewsInfo = state.news16;
+     }
+     else if (temp ==17) {
+        state.activeNewsInfo = state.news17;
+     }
     else if (temp == 18) {
-      state.activeNewsInfo = state.news18;
-      state.numNewsPage = 18; 
-    }
-
+        state.activeNewsInfo = state.news18;
+     }
     else if (temp == 19) {
-      state.activeNewsInfo = state.news19; 
-      state.numNewsPage = 19;
+        state.activeNewsInfo = state.news19; 
+     }
+    else if (temp == 20) {
+       state.activeNewsInfo = state.news20; 
     }
-
-   else if (temp == 20) {
-     state.activeNewsInfo = state.news20; 
-     state.numNewsPage = 20;
-   }
-
    else if (temp == 21) { 
-     state.activeNewsInfo = state.news21; 
-     state.numNewsPage = 21;
-   }
-
+       state.activeNewsInfo = state.news21; 
+    }
    else if (temp == 22) {
-    state.activeNewsInfo = state.news22; 
-    state.numNewsPage = 22;
+      state.activeNewsInfo = state.news22; 
    }
-
    else if (temp == 23) {
-    state.activeNewsInfo = state.news23; 
-    state.numNewsPage = 23; 
-   }
-     
+      state.activeNewsInfo = state.news23;  
+   } 
   },
 
   setLast(state) {
@@ -972,12 +770,21 @@ export const mutations = {
     },
 
 
- 	 set(state, page) {
+ 	 setFirst(state, page) {
 
-		state.activeNewsInfo = state.news1;
+	  state.activeNewsInfo = page;
+    state.news1 = page;
 		state.numNewsPage = 1;
 		state.firstNewsLoad = false; 
 	 },
+
+   set(state) {
+
+    state.activeNewsInfo = state.news1;
+    state.numNewsPage = 1;
+    state.firstNewsLoad = false; 
+
+   },
 
 	 setInsurNoFetch(state){
 
@@ -995,11 +802,12 @@ export const mutations = {
 			
 	  },
 
-  	setPayNoFetch(state) {
+   setPayNoFetch(state) {
   		
   		 state.activeNewsInfo = state.payments;
   		 state.activeNewsTab = 'Payments';	
   		 state.firstNewsLoad = false;
+
   	},
 
 	 setLendNoFetch(state) {
@@ -1044,7 +852,6 @@ export const mutations = {
   		state.activeNewsInfo = state.regtech;
   		state.activeNewsTab ='RegTech';	
   		state.firstNewsLoad = false;
-
 	 },
 
 	 setRemitNoFetch(state) {
@@ -1114,13 +921,15 @@ export const mutations = {
 		  state.activeNewsInfo = state.personalfinance;
 		  state.activeNewsTab ='PersonalFinance';	
 		  state.firstNewsLoad =false;
+
 	 },
 
    submitSearch(state, data) {
 
       state.activeNewsInfo = data;
-      state.firstNewsLoad = false;     
-    },
+      state.firstNewsLoad = false;  
+
+   },
 
     setSearchTab(state, topic) {
       state.activeNewsTab = topic ;
@@ -1521,47 +1330,43 @@ export const mutations = {
   		    
   		  },
 
-  		 async goPrevious({ commit }, pageVal ) {
-		      commit("setPrevious");  		 
+  		 async goPrevious({ commit }) {
+		      commit("setNoFetch");  		 
   		 },
 
       async goNext( {commit}, pagey) {
 
 			  if (!this.allNewsFetched) {
-			 
-          var temp = pagey;
-          temp++ ;
+          let temp = pagey;
 		      await this.$axios.get('/links?page=' + temp)
                 .then( res => {
 				       commit("setNextAndFetch", res.data)	  
 		       })               
 		    }	
        else {
-           commit("setNextNoFetch");
+           commit("setNoFetch");
        }         
   		 
   	  },
 
-  	  async setBlockPrevious({ commit }, page ) {
+  	  async setBlockPrevious({ commit }) {
 		    commit("setBlockPrevious");
   	  },
 
   	  async setBlockNext( {commit}, page) {
-  			 var temp = page;
-  			 temp++ ;
+  			 let temp = page;
   			 await this.$axios.get('/links?blk=' + temp)
              .then( res => {
   				 commit("setBlockNext", res.data)	  
   			 })               
 		  },	 
   		 
-     async setPayPrevious({ commit }, page ) {
+     async setPayPrevious({ commit }) {
         commit("setPayPrevious");		 
      },
 
      async setPayNext( {commit}, page) {
-  		 	 var temp = page;
-			   temp++ ;
+  		 	 let temp = page;
 			   await this.$axios.get('/links?pay=' + temp)
                 .then( res => {
 					commit("setPayNext", res.data)	  
@@ -1585,13 +1390,13 @@ export const mutations = {
     setSectorTab( {commit}, sector) {
       commit("setTabForSector", sector)    
     },
-  	async setInsurPrevious({ commit }, page ) {
+
+  	async setInsurPrevious({ commit }) {
 		   commit("setInsurPrevious");
   	},
 
   	async setInsurNext( {commit}, page) {
   			var temp = page;
-  			temp++ ; 
   			await this.$axios.get('/links?ins=' + temp)
                   .then( res => {
   					commit("setInsurNext", res.data)	  
@@ -1624,7 +1429,7 @@ export const mutations = {
 
               return this.$axios.$get("/links?page=1")
               .then(data => {
-                vuexContext.commit("set", data);
+                vuexContext.commit("setFirst", data);
               })
   		    }
 		      else  {

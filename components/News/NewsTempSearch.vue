@@ -152,7 +152,7 @@
 
      showNextInsBtn() {
 
-        if (this.activeTab == 'Insurtech')
+        if (this.activeTab == 'Insurtech'  && (this.insPage <4))
         {
            return true;
         }
@@ -202,7 +202,7 @@
 
       showNextPayBtn() {
 
-        if (this.activeTab == 'Payments')
+        if (this.activeTab == 'Payments' && (this.payPage <5))
         {
            return true;
         }

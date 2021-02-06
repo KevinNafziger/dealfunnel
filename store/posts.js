@@ -123,7 +123,7 @@ export const mutations = {
  
   initBlock(state, data) {
 
-    var blockLength = data.length;
+    let blockLength = data.length;
     blockLength--;
     state.block1 = data.slice(0, 50);
     state.block2 = data.slice(50,100);
@@ -147,7 +147,7 @@ export const mutations = {
 
    initInsur(state, data) {
 
-      var insurLength = data.length;
+      let insurLength = data.length;
       insurLength--;
       state.insur1 = data.slice(0, 50);
       state.insur2 = data.slice(50,100);
@@ -171,8 +171,6 @@ export const mutations = {
 
    },
 
-
-
   setInsur(state, data) {
 
     state.insur1 = data; 
@@ -193,12 +191,11 @@ export const mutations = {
   },
    
 
-
    setInsurNext(state, data) {
 
     if (state.activeView =='Articles') {
-     state.insArtPage++ ;
-     var temp = state.insArtPage;
+      state.insArtPage++ ;
+       var temp = state.insArtPage;
      state.activeArtInfo = data;
      state.activeArtTab = 'Insurtech';
      state.firstArtLoad = false;
@@ -223,7 +220,7 @@ export const mutations = {
       else if (temp == 5) {
            state.insur5= data;  
       }
-     
+  
    },
 
 
@@ -285,7 +282,7 @@ export const mutations = {
       
         if (temp == 2) {
             state.activeArtInfo= state.block2;
-           state.blkArticlePage=2 ;
+            state.blkArticlePage=2 ;
         }
 
         else if (temp == 3)  {
@@ -327,7 +324,6 @@ export const mutations = {
 
 
    setInsurNextNoFetch(state) {
-
 
     if (state.activeView =='Articles') {
 
@@ -1238,7 +1234,7 @@ export const mutations = {
 
    },
 
-    setReg(state, data){
+    setReg(state, data) {
 
    	 state.regtech = data;
 
@@ -1352,44 +1348,35 @@ export const mutations = {
              state.activeBuildInfo = state.post1;
              state.numBuildPage = 1;
           }
-
           else if (temp == 2) {
              state.activeBuildInfo = state.post2;
              state.numBuildPage = 2;
           }
-
           else if (temp == 3) {
              state.activeBuildInfo = state.post3;
              state.numBuildPage = 3;
           }
-
           else if (temp == 4) {
              state.activeBuildInfo = state.post4;
              state.numBuildPage = 4;
           }
-
           else if (temp == 5) {
              state.activeBuildInfo = state.post5;
              state.numBuildPage = 5;
           }
-
           else if (temp == 6) {
-
              state.activeBuildInfo = state.post6;
              state.numBuildPage = 6;
           }
           else if (temp == 7) {
-
              state.activeBuildInfo = state.post7;
              state.numBuildPage = 7;
           }
           else if (temp == 8){
-
              state.activeBuildInfo = state.post8;
              state.numBuildPage = 8;
           }
           else if (temp == 9) {
-
              state.activeBuildInfo = state.post9;
              state.numBuildPage = 9;
           }
@@ -1408,51 +1395,38 @@ export const mutations = {
           
           var temp = state.numArtPage;
           temp--;
-          state.numArtPage = temp;
+          if (temp >= 1) {
+             state.numArtPage = temp;
+          }
 
           if (temp==1) {
              state.activeArtInfo = state.post1;
           }
           else if (temp == 2) {
              state.activeArtInfo = state.post2;
-  
           }
           else if (temp == 3) {
              state.activeArtInfo = state.post3;
-     
           }
           else if (temp == 4) {
              state.activeArtInfo = state.post4;
- 
           }
           else if (temp == 5) {
-
              state.activeArtInfo = state.post5;
-       
           }
-
           else if (temp == 6) {
-
-             state.activeBuildInfo = state.post6;
-
+             state.activeArtInfo = state.post6;
           }
-
           else if (temp == 7) {
-
              state.activeArtInfo = state.post7;
-
           }
           else if (temp == 8) {
-             state.activeArtInfo = state.post8;
-      
+             state.activeArtInfo = state.post8;    
           }
           else if (temp == 9) {
-
              state.activeArtInfo = state.post9;
-      
           }
           else if (temp == 10) {
-
              state.activeArtInfo = state.post10;
           }
   	   		break;
@@ -1463,58 +1437,36 @@ export const mutations = {
           state.firstDataLoad = false;
           var temp = state.dataPage;
           temp--;
+          state.dataPage = temp;
           if (temp==1) {
-
-             state.activeDataInfo = state.post1;
-        
+             state.activeDataInfo = state.post1;      
           }
-
           else if (temp == 2) {
              state.activeDataInfo = state.post2;
-          
           }
-
           else if (temp == 3) {
-
-             state.activeDataInfo = state.post3;
-        
+             state.activeDataInfo = state.post3;        
           }
-
           else if (temp == 4) {
-          
              state.activeDataInfo = state.post4;
-          
           }
-
           else if (temp == 5) {
-
             state.activeDataInfo = state.post5;
-            
           }
-          
           else if (temp == 6) {
-
-             state.activeDataInfo = state.post6;
-            
+            state.activeDataInfo = state.post6;
           }
           else if (temp == 7) {
-
-             state.activeDataInfo = state.post7;
-            
+            state.activeDataInfo = state.post7;
           }
           else if (temp == 8) {
-
-             state.activeDataInfo = state.post8;
-           
+            state.activeDataInfo = state.post8;
           }
           else if (temp == 9) {
-
-             state.activeDataInfo = state.post9;
-           
+            state.activeDataInfo = state.post9;
           }
           else if (temp == 10) {
-
-             state.activeDataInfo = state.post10;
+            state.activeDataInfo = state.post10;
           }
           break;
   	   	 
@@ -1583,110 +1535,81 @@ export const mutations = {
   	   		break;
   	   
         case "Articles":
-        var temp = state.numArtPage;
-        temp++;
-        state.activeArtInfo = data;
+         var temp = state.numArtPage;
+         temp++;
+         state.numArtPage = temp;
+         state.activeArtInfo = data;
+         
          if (temp==1) {
-             state.post1 =state.activeArtInfo;
-            state.numArtPage =1;
+            state.post1 =state.activeArtInfo;
+         }
+         else if (temp == 2) {
+            state.post2 =state.activeArtInfo;
           }
-          
-          else if (temp == 2) {
-
-             state.post2 =state.activeArtInfo;
-             state.numArtPage =2;
+         else if (temp == 3) {
+            state.post3= state.activeArtInfo;
           }
-          else if (temp == 3) {
-             state.post3= state.activeArtInfo;
-             state.numArtPage =3;
-          }
-          else if (temp == 4) {
+         else if (temp == 4) {
             state.post4=state.activeArtInfo;
-            state.numArtPage =4;
-          }
-          else if (temp == 5)
-          {
-            state.post5= state.activeArtInfo;
-            state.numArtPage =5;
-          }
-          else if (temp == 6)
-          {
-             state.post6= state.activeArtInfo;
-             state.numArtPage =6;
-          }
-          else if (temp == 7)
-          {
-             state.post7=state.activeArtInfo;
-              state.numArtPage =7;
-          }
-          else if (temp == 8)
-          {
-             state.post8= state.activeArtInfo;
-             state.numArtPage =8;
-          }
-          else if (temp == 9)
-          {
-             state.post9= state.activeArtInfo;
-             state.numArtPage = 9 ;
-          }
-          else if (temp == 10)
-          {
-             state.post10 =state.activeArtInfo;
-             state.numArtPage = 10; 
-          }
-        state.activeArtTab = 'Page';
-        state.firstArtLoad =false;  
-        break;
+         }
+         else if (temp == 5) {
+          state.post5= state.activeArtInfo;
+         }
+         else if (temp == 6) {
+          state.post6= state.activeArtInfo;
+         }
+         else if (temp == 7) {
+          state.post7=state.activeArtInfo;
+         }
+         else if (temp == 8) {
+          state.post8= state.activeArtInfo;
+         }
+         else if (temp == 9) {
+          state.post9= state.activeArtInfo;
+         }
+         else if (temp == 10) {
+          state.post10 =state.activeArtInfo;
+         }
+         
+         state.activeArtTab = 'Page';
+         state.firstArtLoad =false;  
+         break;
 
         case "Data":
       
           var temp = state.dataPage;
           state.activeDataInfo = data;
           temp++;
+          state.dataPage = temp;
           if (temp==1){
-             state.post1=state.activeDataInfo;
-            state.dataPage =1;
+            state.post1=state.activeDataInfo;
           }
           else if (temp == 2) {
              state.post2 =state.activeDataInfo;
-             state.dataPage =2;
           }
           else if (temp == 3) {
             state.post3=state.activeDataInfo;
-            state.dataPage =3;
           }
           else if (temp == 4) {
             state.post4= state.activeDataInfo;
-            state.dataPage =4;
           }
-          else if (temp == 5)
-          {
+          else if (temp == 5) {
             state.post5 =state.activeDataInfo;
-            state.dataPage =5;
           }
-          else if (temp == 6)
-          {
+          else if (temp == 6) {
               state.post6= state.activeDataInfo;
           }
-          else if (temp == 7)
-          {
+          else if (temp == 7) {
              state.post7= state.activeDataInfo;
-             state.dataPage =7;
           }
-          else if (temp == 8)
-          {
+          else if (temp == 8) {
              state.post8= state.activeDataInfo;
-             state.dataPage =8;
           }
-          else if (temp == 9)
-          {
+          else if (temp == 9) {
              state.post9= state.activeDataInfo;
-             state.dataPage = 9 ;
           }
-          else if (temp == 10)
-          {
-            state.post10=state.activeDataInfo;
-            state.dataPage = 10; 
+          else if (temp == 10) {
+            state.post10=state.activeDataInfo; 
           }
           
           state.activeDataTab = 'Page';
@@ -2054,7 +1977,7 @@ export const mutations = {
 
 		switch(state.activeView) {
 
-   	   	  case "Builder":
+   	   case "Builder":
 		     state.activeBuildInfo = state.bootstrapped;
 		     state.activeBuildTab = 'Bootstrapped';	
 		     state.firstBuildLoad = false;
@@ -2074,7 +1997,7 @@ export const mutations = {
 
 		switch(state.activeView) {
 
-   	   	  case "Builder":
+   	   case "Builder":
 		     state.activeBuildInfo = state.spinoffs;
 		     state.activeBuildTab = 'Spin-offs';	
 		     state.firstBuildLoad = false;
@@ -2094,7 +2017,7 @@ export const mutations = {
 
 		switch(state.activeView) {
 
-   	   	  case "Builder":
+   	  case "Builder":
 		     state.activeBuildInfo = state.growthequity;
 		     state.activeBuildTab = 'Growth Equity';	
 		     state.firstBuildLoad = false;
@@ -2114,7 +2037,7 @@ export const mutations = {
 
 		switch(state.activeView) {
 
-   	   	  case "Builder":
+   	   case "Builder":
 		     state.activeBuildInfo = state.capitalmarkets;
 		     state.activeBuildTab = 'Capital Markets';	
 		     state.firstBuildLoad = false;
@@ -2134,7 +2057,7 @@ export const mutations = {
 
 		switch(state.activeView) {
 
-   	   	  case "Builder":
+   	   case "Builder":
 		     state.activeBuildInfo = state.wealthtech;
 		     state.activeBuildTab = 'WealthTech';	
 		     state.firstBuildLoad = false;
@@ -2154,7 +2077,7 @@ export const mutations = {
 
 		switch(state.activeView) {
 
-   	   	  case "Builder":
+   	   case "Builder":
 		     state.activeBuildInfo = state.realestate;
 		     state.activeBuildTab = 'Real Estate';	
 		     state.firstBuildLoad = false;
@@ -2174,7 +2097,7 @@ export const mutations = {
 
 		switch(state.activeView) {
 
-   	   	  case "Data":
+   	   case "Data":
 		     state.activeDataInfo = state.Q320;
 		     state.activeDataTab = 'Next Raise: Q320';	
 		     state.firstDataLoad = false;
@@ -2187,7 +2110,7 @@ export const mutations = {
 
 		switch(state.activeView) {
 
-   	   	  case "Data":
+   	   case "Data":
 		     state.activeDataInfo = state.Q420;
 		     state.activeDataTab = 'Next Raise: Q420';	
 		     state.firstDataLoad = false;
@@ -2200,7 +2123,7 @@ export const mutations = {
 
 		switch(state.activeView) {
 
-   	   	  case "Data":
+   	   case "Data":
 		     state.activeDataInfo = state.Q121;
 		     state.activeDataTab = 'Next Raise: Q121';	
 		     state.firstDataLoad = false;
@@ -2313,7 +2236,7 @@ export const mutations = {
 
 		switch(state.activeView) {
 
-   	   	  case "Data":
+   	   case "Data":
 		     state.activeDataInfo = state.fiftytohundred;
 		     state.activeDataTab = 'Next Raise $50m to $100m';	
 		     state.firstDataLoad = false;
@@ -2325,7 +2248,7 @@ export const mutations = {
 
 		switch(state.activeView) {
 
-   	   	  case "Data":
+   	   case "Data":
 		     state.activeDataInfo = state.hundredplus;
 		     state.activeDataTab = 'Next Raise: $100m plus';	
 		     state.firstDataLoad = false;
@@ -2338,7 +2261,7 @@ export const mutations = {
 
     switch(state.activeView) {
 
-          case "Data":
+      case "Data":
          state.activeDataInfo = state.canada;
          state.activeDataTab = 'Canada';  
          state.firstDataLoad = false;
@@ -2350,7 +2273,7 @@ export const mutations = {
 
     switch(state.activeView) {
 
-          case "Data":
+       case "Data":
          state.activeDataInfo = state.latin;
          state.activeDataTab = 'Latin America';  
          state.firstDataLoad = false;
@@ -2362,7 +2285,7 @@ export const mutations = {
 
     switch(state.activeView) {
 
-          case "Data":
+      case "Data":
          state.activeDataInfo = state.carribean;
          state.activeDataTab = 'Carribean';  
          state.firstDataLoad = false;
@@ -2374,7 +2297,7 @@ export const mutations = {
 
     switch(state.activeView) {
 
-          case "Data":
+      case "Data":
          state.activeDataInfo = state.europe;
          state.activeDataTab = 'Europe';  
          state.firstDataLoad = false;
@@ -2386,7 +2309,7 @@ export const mutations = {
 
     switch(state.activeView) {
 
-          case "Data":
+      case "Data":
          state.activeDataInfo = state.asia;
          state.activeDataTab = 'Asia';  
          state.firstDataLoad = false;
@@ -2398,7 +2321,7 @@ export const mutations = {
 
     switch(state.activeView) {
 
-          case "Data":
+      case "Data":
          state.activeDataInfo = state.oceania;
          state.activeDataTab = 'Oceania';  
          state.firstDataLoad = false;
@@ -2422,7 +2345,7 @@ export const mutations = {
 
     switch(state.activeView) {
 
-          case "Data":
+      case "Data":
          state.activeDataInfo = state.nyc;
          state.activeDataTab = 'New York City';  
          state.firstDataLoad = false;
@@ -2434,7 +2357,7 @@ export const mutations = {
 
     switch(state.activeView) {
 
-          case "Data":
+      case "Data":
          state.activeDataInfo = state.midatlantic;
          state.activeDataTab = 'Mid-Atlantic';  
          state.firstDataLoad = false;
@@ -2556,7 +2479,7 @@ export const mutations = {
 
     switch(state.activeView) {
 
-          case "Data":
+        case "Data":
          state.activeDataInfo = state.socal;
          state.activeDataTab = 'SoCal';  
          state.firstDataLoad = false;
@@ -2569,7 +2492,7 @@ export const mutations = {
 
 		switch(state.activeView) {
 
-   	   	  case "Builder":
+   	   case "Builder":
 		     state.activeBuildInfo = state.AI;
 		     state.activeBuildTab = 'Artificial Intelligence';	
 		     state.firstBuildLoad = false;
@@ -2681,8 +2604,8 @@ export const mutations = {
    setAllPosts(state, data) {
 
       state.allPosts = data;
-      var PostsLength = data.length;
-      PostsLength--;
+      let postsLength = data.length;
+      postsLength--;
       state.post1 = data.slice(0, 50);
       state.post2 = data.slice(50, 100);
       state.post3 = data.slice(100, 150);
@@ -2692,7 +2615,7 @@ export const mutations = {
       state.post7 = data.slice(300, 350);
       state.post8 = data.slice(350, 400);
       state.post9 = data.slice(400, 450);
-      state.post10 = data.slice(450, PostsLength);
+      state.post10 = data.slice(450, postsLength);
    }
 	 
  }
@@ -2704,10 +2627,10 @@ export const mutations = {
 
         if (!this.allPostsLoaded) {
 
-    		await this.$axios.get('/posts?ins=1')
+    		   await this.$axios.get('/posts?ins=1')
                		.then(res => {
-              			commit("setInsur", res.data);
-             		})
+           	commit("setInsur", res.data);
+           	})
     
       	}
         
@@ -2763,6 +2686,7 @@ export const mutations = {
 					  commit("setLend", res.data);
 		         })
 			}
+
       else if (this.allPostsLoaded) {
           commit("setLend", this.postsbyGrouping('lending'));
       } 
@@ -2783,41 +2707,39 @@ export const mutations = {
 					  commit("setReg", res.data);
 		         })
 			}
-      else if (this.allPostsLoaded) {
 
-              commit("setReg", this.postsbyGrouping('regtech'));
-          
+      else if (this.allPostsLoaded) {
+          commit("setReg", this.postsbyGrouping('regtech'));    
       } 
-		   else
-		   {
-				    commit("setRegNoFetch");
-		   }
+
+		  else {
+				  commit("setRegNoFetch");
+		  }
   		 
   	},
 
 
   	async setVal({ commit }) {
 
-			   if (!this.valPostsFetched)
-			   {	
-	  	       		await this.$axios.get('/posts?tag=Valuation')
+			   if (!this.valPostsFetched) {
+
+	  	     		await this.$axios.get('/posts?tag=Valuation')
 	           			.then(res => {
 						  commit("setVal", res.data);
 			         })
-				}
-			   else
-			   {
+				 }
+
+			   else {
 					   commit("setValNoFetch");
 			   }
-  		 
   	},
 
   		
     async setSpin({ commit }) {
 
-			   if (!this.spinPostsFetched)
-			   {	
-	  	       		await this.$axios.get('posts?tag=Spin-Out')
+			   if (!this.spinPostsFetched) {
+
+	  	     		await this.$axios.get('posts?tag=Spin-Out')
 	           			.then(res => {
 						  commit("setSpin", res.data);
 			         })
@@ -2841,61 +2763,57 @@ export const mutations = {
 				 }
 
 			   else {
-					commit("setBootNoFetch");
+					 commit("setBootNoFetch");
 			   }
   		 
   	},
 
   	async setMergers({ commit }) {
 
-			   if (!this.mergerPostsFetched)
-			   {	
-	  	       		await this.$axios.get('posts?tag=M%26A')
+			   if (!this.mergerPostsFetched) {
+
+	  	     		await this.$axios.get('posts?tag=M%26A')
 	           			.then(res => {
 						  commit("setMergers", res.data);
 			         })
 				 }
 
 			   else {
-					commit("setMergersnoFetch");
+				  	commit("setMergersnoFetch");
 			   }
   		 
   	 },
 
   	 async setGrowth({ commit }) {
 
-  			   if (!this.growthPostsFetched || !this.allPostsLoaded)
-  			   {	
-  	  	       	await this.$axios.get('/posts?next_round=Growth+Capital')
-  	           			.then(res => {
-  						  commit("setGrowth", res.data);
+  			 if (!this.growthPostsFetched || !this.allPostsLoaded) {
+
+  	  	     	await this.$axios.get('/posts?next_round=Growth+Capital')
+  	         			.then(res => {
+  					  commit("setGrowth", res.data);
   			         })
-  				 }
-
-           else if (this.allPostsLoaded) {
-
-              commit("setGrowth", this.postsbyNextRound('Growth Capital'));
-          
+  			 }
+         else if (this.allPostsLoaded) {
+            commit("setGrowth", this.postsbyNextRound('Growth Capital'));
           } 
-
-  			   else
-  			   {
-  					   commit("setGrowthNoFetch");
+  			 
+         else {
+  					 commit("setGrowthNoFetch");
   			   }
   		 
   		},
 
   		async setAdvisors({ commit }) {
 
-  			   if (!this.advisorPostsFetched)
-  			   {	
-  	  	       		await this.$axios.get('posts?advisors=Advisory')
+  			   if (!this.advisorPostsFetched) {
+
+  	  	     		await this.$axios.get('posts?advisors=Advisory')
   	           			.then(res => {
   						  commit("setAdvisors", res.data);
   			         })
   				 }
-  			   else
-  			   {
+
+  			   else {
   					commit("setAdvisorsNoFetch");
   			   }
   		 
@@ -2912,20 +2830,19 @@ export const mutations = {
 
   		  async setAI({ commit }) {
 		    
-  		    if (!this.AIPostsFetched || !this.allPostsLoaded)
-  		   	{	
+  		    if (!this.AIPostsFetched || !this.allPostsLoaded) {
+
     	    		await this.$axios.get('/posts?grouping=AI')
              			.then(res => {
-            			commit("setAI", res.data);
+          		commit("setAI", res.data);
   			 	})
   		   	}
-          else if (this.allPostsLoaded) {
-
-              commit("setAI", this.postsbyGrouping('ai'));
           
+          else if (this.allPostsLoaded) {
+              commit("setAI", this.postsbyGrouping('ai'));
           }  
+
   		   	else {
-  				
   				    commit("setAINoFetch" );
   		    }
   		 
@@ -2934,22 +2851,19 @@ export const mutations = {
 
   		  async setHealth({ commit }) {
 		    
-  		    if (!this.healthPostsFetched || !this.allPostsLoaded)
-  		   	{	
+  		    if (!this.healthPostsFetched || !this.allPostsLoaded) {
+
     	    		await this.$axios.get('/posts?grouping=HealthTech')
              			.then(res => {
-            			commit("setHealth", res.data);
+          		commit("setHealth", res.data);
   			 	     });
           }
 
           else if (this.allPostsLoaded) {
-
               commit("setHealth", this.postsbyGrouping('healthtech'));
-          
           } 
   		   	
           else {
-  				
   				    commit("setHealthNoFetch" );
   		    }
     		 
@@ -2957,8 +2871,8 @@ export const mutations = {
 
   		  async setCapital({ commit }) {
 		    
-  		    if (!this.capitalPostsFetched || !this.allPostsLoaded)
-  		   	{	
+  		    if (!this.capitalPostsFetched || !this.allPostsLoaded) {
+
     	    		await this.$axios.get('/posts?grouping=CapitalMarkets')
              			.then(res => {
             			commit("setCapital", res.data);
@@ -2966,13 +2880,10 @@ export const mutations = {
           }
 
   		    else if (this.allPostsLoaded) {
-
               commit("setCapital", this.postsbyGrouping('capitalmarkets'));
-          
           } 
 
   		    else {
-  				
   				    commit("setCapitalNoFetch" );
   		    }
   		 
@@ -2980,31 +2891,28 @@ export const mutations = {
 
   		  async setWealth({ commit }) {
 		    
-  		    if (!this.wealthPostsFetched || !this.allPostsLoaded)
-  		   	{	
+  		    if (!this.wealthPostsFetched || !this.allPostsLoaded) {
+
     	    		await this.$axios.get('/posts?grouping=WealthTech')
              			.then(res => {
-            			commit("setWealth", res.data);
+          		commit("setWealth", res.data);
   			 	     });
   		   	} 
 
           else if (this.allPostsLoaded) {
-
               commit("setWealth", this.postsbyGrouping('wealthtech'));
-          
           }
 
   		   	else {
-  				
-  				commit("setWealthNoFetch" );
+  				   commit("setWealthNoFetch" );
   		    }
     		 
   		  },
 
   		  async setReal({ commit }) {
 		    
-  		    if (!this.realPostsFetched || !this.allPostsLoaded)
-  		   	{	
+  		    if (!this.realPostsFetched || !this.allPostsLoaded) {
+
     	    		await this.$axios.get('/posts?grouping=RealEstate')
              			.then(res => {
             			commit("setReal", res.data);
@@ -3012,13 +2920,10 @@ export const mutations = {
   		   	}
 
           else if (this.allPostsLoaded) {
-
               commit("setReal", this.postsbyGrouping('realestate'));
-          
           }
 
   		   	else {
-  				
   				    commit("setRealNoFetch" );
   		    }  
   		 
@@ -3027,21 +2932,19 @@ export const mutations = {
 
   		  async setQ121({ commit }) {
 		    
-  		    if (!this.allPostsLoaded || !this.Q121PostsFetched)
-  		   	{	
+  		    if (!this.allPostsLoaded || !this.Q121PostsFetched) {
+
     	    		await this.$axios.get('/posts?quarter=Q121')
              			.then(res => {
-            			commit("setQ121", res.data);
+          		commit("setQ121", res.data);
   			 	     });
   		   	}
 
           else if (this.allPostsLoaded) {
-
               commit("setQ121", this.postsbyQuarter('Q121'));
-          
           }
+
   		   	else {
-  				
   				    commit("setQ121NoFetch" );
   		    }
   		 
@@ -3050,8 +2953,8 @@ export const mutations = {
 
   		  async setQ221({ commit }) {
 		    
-  		    if (!this.allPostsLoaded || !this.Q221PostsFetched)
-  		   	{	
+  		    if (!this.allPostsLoaded || !this.Q221PostsFetched) {
+
     	    		await this.$axios.get('/posts?quarter=Q221')
              			.then(res => {
             			commit("setQ221", res.data);
@@ -3059,13 +2962,10 @@ export const mutations = {
   		   	}
 
           else if (this.allPostsLoaded) {
-
               commit("setQ221", this.postsbyQuarter('Q221'));
-          
           }
 
   		   	else {
-  				
   				    commit("setQ221NoFetch" );
   		    }
   		 
@@ -3073,42 +2973,39 @@ export const mutations = {
 
   		  async setQ321({ commit }) {
 		    
-  		    if (!this.allPostsLoaded || !this.Q321PostsFetched)
-  		   	{	
+  		    if (!this.allPostsLoaded || !this.Q321PostsFetched) {
+
     	    		await this.$axios.get('/posts?quarter=Q321')
              			.then(res => {
-            			commit("setQ321", res.data);
+          		commit("setQ321", res.data);
   			 	    });
   		   	}
-          else if (this.allPostsLoaded) {
-
-              commit("setQ321", this.postsbyQuarter('Q321'));
           
+          else if (this.allPostsLoaded) {
+              commit("setQ321", this.postsbyQuarter('Q321'));
           }
+
   		   	else {
-  				
   				    commit("setQ321NoFetch" );
   		    }
   		 
   		  },
 
-
   		  async setQ421({ commit }) {
 		    
-  		    if (!this.allPostsLoaded || !this.Q421PostsFetched)
-  		   	{	
+  		    if (!this.allPostsLoaded || !this.Q421PostsFetched) {
+
     	    		await this.$axios.get('/posts?quarter=Q421')
              			.then(res => {
-            			commit("setQ421", res.data);
+          		commit("setQ421", res.data);
   			 	})
   		   	}
+
           else if (this.allPostsLoaded) {
-          
               commit("setQ421", this.postsbyQuarter('Q421'))
           }
-          
-          else {
-  			
+      
+          else {	
   				    commit("setQ421NoFetch" );
   		    }
   		 
@@ -3117,238 +3014,208 @@ export const mutations = {
 
  		  async setQ420({ commit }) {
 	    
-		    if (!this.allPostsLoaded || !this.Q420PostsFetched)
-  		   	{	
-    	    		await this.$axios.get('/posts?quarter=Q420')
-             			.then(res => {
-            			commit("setQ420", res.data);
+		    if (!this.allPostsLoaded || !this.Q420PostsFetched) {
+
+    	  	await this.$axios.get('/posts?quarter=Q420')
+        		.then(res => {
+        	commit("setQ420", res.data);
   			 	})
-  		   	}
+  		   }
+        
+        else if (this.allPostsLoaded) {
+           commit("setQ420", this.postsbyQuarter('Q420'));
+        }
 
-       else if (this.allPostsLoaded) {
-
-              commit("setQ420", this.postsbyQuarter('Q420'));
-          
-          }
-
-  		   	else {
-  				
+  		  else {	
   				commit("setQ420NoFetch" );
-  		    }
+  		  }
   		 
-  		  },
+  		},
 
 
-  		  async setQ320({ commit }) {
+  		async setQ320({ commit }) {
 		    
-  		    if (!this.allPostsLoaded || !this.Q320PostsFetched)
-  		   	{	
-    	    		await this.$axios.get('/posts?quarter=Q320')
-             			.then(res => {
-            			commit("setQ320", res.data);
+  		  if (!this.allPostsLoaded || !this.Q320PostsFetched) {
+
+    	  		await this.$axios.get('/posts?quarter=Q320')
+         			.then(res => {
+        		commit("setQ320", res.data);
   			 	})
+  		   } 
+          
+         else if (this.allPostsLoaded) {
+            commit("setQ320", this.postsbyQuarter('Q320'));  
+         }
+
+  		   else {	
+  				  commit("setQ320NoFetch" );
+  		   }
+  		 
+  		},
+
+
+  		async set0to1({ commit }) {
+		    
+  		   if (!this.zerotoonePostsFetched || !this.allPostsLoaded ) {
+
+    	   	 await this.$axios.get('/posts?amount=%240+to+%241+million')
+         			.then(res => {
+         	 commit("set0to1", res.data);
+  			 	 })
   		   	} 
-          
-          else if (this.allPostsLoaded) {
-
-              commit("setQ320", this.postsbyQuarter('Q320'));
-          
-          }
-
-  		   	else {
-  				
-  				    commit("setQ320NoFetch" );
-  		    }
-  		 
-  		  },
-
-
-  		  async set0to1({ commit }) {
-		    
-  		    if (!this.zerotoonePostsFetched || !this.allPostsLoaded )
-  		   	{	
-    	    		await this.$axios.get('/posts?amount=%240+to+%241+million')
-             			.then(res => {
-            			commit("set0to1", res.data);
-  			 	})
-  		   	} 
-
-          else if (this.allPostsLoaded) {
-
-              commit("set0to1", this.postsbyAmount('$0 to $1 million'));
-          
-          }
-
-  		   	else {
-  				
-  				    commit("set0to1NoFetch" );
-  		    }
-  		 
-  		  },
-
-
-  		  async set1to5({ commit }) {
-		    
-  		    if (!this.onetofivePostsFetched || !this.allPostsLoaded)
-  		   	{	
-    	    		await this.$axios.get('/posts?amount=%241+million+to+%245+million')
-             			.then(res => {
-            			commit("set1to5", res.data);
-  			 	})
-          }
 
          else if (this.allPostsLoaded) {
-
-              commit("set1to5", this.postsbyAmount('$1 million to $5 million'));
-          
+            commit("set0to1", this.postsbyAmount('$0 to $1 million')); 
           }
+
+  	   	else {				
+  				  commit("set0to1NoFetch" );
+  		  }
+  		 
+  		},
+
+
+  		async set1to5({ commit }) {
+		    
+  		  if (!this.onetofivePostsFetched || !this.allPostsLoaded) {
+
+    	  		await this.$axios.get('/posts?amount=%241+million+to+%245+million')
+         			.then(res => {
+        		commit("set1to5", res.data);
+  			 	  })
+         }
+
+         else if (this.allPostsLoaded) {
+            commit("set1to5", this.postsbyAmount('$1 million to $5 million'));
+         }
   		   	
-  		   	else {
-  				
-  				    commit("set1to5NoFetch" );
-  		    }
+  		   else {
+  			   commit("set1to5NoFetch" );
+  		   }
     		 
-  		  },
+  		},
 
-        async set5to10({ commit }) {
+      async set5to10({ commit }) {
         
-          if (!this.fivetotenPostsFetched || !this.allPostsLoaded)
-          { 
-              await this.$axios.get('/posts?amount=%245+million+to+%2410+million')
-                  .then(res => {
-                  commit("set5to10", res.data);
-          })
-          } 
+        if (!this.fivetotenPostsFetched || !this.allPostsLoaded) {
 
-          else if (this.allPostsLoaded) {
+            await this.$axios.get('/posts?amount=%245+million+to+%2410+million')
+              .then(res => {
+            commit("set5to10", res.data);
+            })
+        } 
 
-              commit("set5to10", this.postsbyAmount('$5 million to $10 million'));
-          
-          }
+        else if (this.allPostsLoaded) {
+            commit("set5to10", this.postsbyAmount('$5 million to $10 million'));
+        }
 
-          else {
-          
-          commit("set5to10NoFetch" );
-
-          }
+        else {
+            commit("set5to10NoFetch" );
+        }
          
-        },
+      },
 
 
-  		  async set10to20({ commit }) {
+  		async set10to20({ commit }) {
 		    
-  		    if (!this.tentotwentyPostsFetched || !this.allPostsLoaded)
-  		   	{	
+  		  if (!this.tentotwentyPostsFetched || !this.allPostsLoaded) {
+
     	    		await this.$axios.get('/posts?amount=%2410+million+to+%2420+million')
-             			.then(res => {
-            			commit("set10to20", res.data);
-  			 	})
-  		   	} 
+            			.then(res => {
+         			commit("set10to20", res.data);
+  			    	})
+  		   } 
 
-          else if (this.allPostsLoaded) {
+        else if (this.allPostsLoaded) {
+            commit("set10to20", this.postsbyAmount('$10 million to $20 million'));
+        }
 
-              commit("set10to20", this.postsbyAmount('$10 million to $20 million'));
-          
-          }
-
-  		   	else {
-  				
-  				commit("set10to20NoFetch" );
-  		    }
+  		  else {	
+  				  commit("set10to20NoFetch" );
+  		  }
     		 
-  		  },
+  		},
 
 
-  		  async set20to50({ commit }) {
+  		async set20to50({ commit }) {
 		    
-  		    if (!this.twentytofiftyPostsFetched || !this.allPostsLoaded)
-  		   	{	
-    	    		await this.$axios.get('/posts?amount=%2420+million+to+%2450+million')
-             			.then(res => {
-            			commit("set20to50", res.data);
-  			 	})
-  		   	} 
-          else if (this.allPostsLoaded) {
+  		   if (!this.twentytofiftyPostsFetched || !this.allPostsLoaded) {
 
+    	  		await this.$axios.get('/posts?amount=%2420+million+to+%2450+million')
+         			.then(res => {
+       			commit("set20to50", res.data);
+  			 	  })
+  		   	}
+
+          else if (this.allPostsLoaded) {
               commit("set20to50", this.postsbyAmount('$20 million to $50 million'));
-          
           }
   		   	else {
-  				
   				    commit("set20to50NoFetch" );
   		    }
     		 
-  		  },
+  		},
 
-  		  async set50to100({ commit }) {
+  		async set50to100({ commit }) {
 		    
-  		    if (!this.fiftytohundedPostsFetched || !this.allPostsLoaded)
-  		   	{	
-    	    		await this.$axios.get('/posts?amount=%2450+million+to+%24100+million')
-             			.then(res => {
-            			commit("set50to100", res.data);
-  			 	})
-  		   	} 
+  		  if (!this.fiftytohundedPostsFetched || !this.allPostsLoaded) {
 
-          else if (this.allPostsLoaded) {
+    	  		await this.$axios.get('/posts?amount=%2450+million+to+%24100+million')
+         			.then(res => {
+            commit("set50to100", res.data);
+  			 	  })
+  		   } 
 
-              commit("set50to100", this.postsbyAmount('$50 million to $100 million'));
-          
-          }
+        else if (this.allPostsLoaded) {
+            commit("set50to100", this.postsbyAmount('$50 million to $100 million'));  
+        }
 
-  		   	else {
-  				
-  				commit("set50to100NoFetch" );
-  		    }
+  		  else {	
+  				  commit("set50to100NoFetch" );
+  		  }
   		 
-  		  },
+  	  },
 
 
-  		  async set100plus({ commit }) {
+  		async set100plus({ commit }) {
 		    
-  		    if (!this.hundedplusPostsFetched || !this.allPostsLoaded)
-  		   	{	
-    	    		await this.$axios.get('/posts?amount=%24100+million+plus')
-             			.then(res => {
-            			commit("set100plus", res.data);
-  			 	})
-  		   	} 
-          else if (this.allPostsLoaded) {
+  		  if (!this.hundedplusPostsFetched || !this.allPostsLoaded) {
 
-              commit("set100plus", this.postsbyAmount('$100 million plus'));
-          
-          }
+    	  		await this.$axios.get('/posts?amount=%24100+million+plus')
+         			.then(res => {
+        		commit("set100plus", res.data);
+  			 	  })
+  		  }
 
-  		   	else {
-  				
-  				commit("set100plusNoFetch" );
-  		    }
+        else if (this.allPostsLoaded) {
+            commit("set100plus", this.postsbyAmount('$100 million plus'));
+        }
+
+  		  else {
+    				commit("set100plusNoFetch" );
+  		  }
     		 
-  		  },
+  		},
 
-        async setLatin({ commit }) {
+      async setLatin({ commit }) {
         
-          if (!this.latinPostsFetched || !this.allPostsLoaded)
-          { 
+          if (!this.latinPostsFetched || !this.allPostsLoaded) {
+
               await this.$axios.get('/posts?region=LatinAmerica')
                   .then(res => {
-                  commit("setLatin", res.data);
-          })
+              commit("setLatin", res.data);
+              })
           }
           
           else if (this.allPostsLoaded) {
-
-              commit("setLatin", this.postsbyRegion('LatinAmerica'));
-          
+            commit("setLatin", this.postsbyRegion('LatinAmerica'));
           }
 
           else {
-          
-              commit("setLatinNoFetch" );
+            commit("setLatinNoFetch" );
           }
        
         },
-
 
         async setCanada({ commit }) {
         
@@ -3361,13 +3228,10 @@ export const mutations = {
           } 
 
           else if (this.allPostsLoaded) {
-
               commit("setCanada", this.postsbyRegion('Canada'));
-          
           }
 
-          else {
-          
+          else {          
           commit("setCanadaNoFetch" );
           }
        
@@ -3384,14 +3248,11 @@ export const mutations = {
           } 
 
           else if (this.allPostsLoaded) {
-
               commit("setSouth", this.postsbyRegion('South'));
-          
           } 
 
           else {
-          
-          commit("setSouthNoFetch" );
+             commit("setSouthNoFetch" );
           }
        
         },
@@ -3400,20 +3261,18 @@ export const mutations = {
         
           if (!this.newenglandPostsFetched || !this.allPostsLoaded)
           { 
-              await this.$axios.get('/posts?region=NewEngland')
+            await this.$axios.get('/posts?region=NewEngland')
                   .then(res => {
-                  commit("setNewEngland", res.data);
-          })
+            commit("setNewEngland", res.data);
+            })
           }
 
           else if (this.allPostsLoaded) {
-
-              commit("setNewEngland", this.postsbyRegion('NewEngland'));
-          
+            commit("setNewEngland", this.postsbyRegion('NewEngland'));
           }
 
           else {
-              commit("setNewEnglandNoFetch" );
+            commit("setNewEnglandNoFetch" );
           }
          
         },
@@ -3429,12 +3288,9 @@ export const mutations = {
           } 
 
           else if (this.allPostsLoaded) {
-
               commit("setSoutheast", this.postsbyRegion('SouthEast'));
-          
           }  
           else {
-          
               commit("setSoutheastNoFetch" );
           }
        
@@ -3450,12 +3306,10 @@ export const mutations = {
           })
           }
           else if (this.allPostsLoaded) {
-
               commit("setSocal", this.postsbyRegion('SoCal'));
-          
           } 
+
           else {
-          
               commit("setSocalNoFetch" );
           }
        
@@ -3470,14 +3324,13 @@ export const mutations = {
                   commit("setSilicon", res.data);
           })
           }
-          else if (this.allPostsLoaded) {
 
+          else if (this.allPostsLoaded) {
               commit("setSilicon", this.postsbyRegion('SiliconValley'));
-          
           }  
+
           else {
-          
-          commit("setSiliconNoFetch" );
+             commit("setSiliconNoFetch" );
           }
        
         },
@@ -3491,14 +3344,13 @@ export const mutations = {
                   commit("setMidwest", res.data);
           })
           }
-          else if (this.allPostsLoaded) {
 
+          else if (this.allPostsLoaded) {
               commit("setMidwest", this.postsbyRegion('MidWest'));
-          
-          }   
+          }
+
           else {
-          
-          commit("setMidwestNoFetch" );
+              commit("setMidwestNoFetch" );
           }
        
         },
@@ -3512,14 +3364,13 @@ export const mutations = {
                   commit("setMidatlantic", res.data);
           })
           } 
-          else if (this.allPostsLoaded) {
 
+          else if (this.allPostsLoaded) {
               commit("setMidatlantic", this.postsbyRegion('MidAtlantic'));
-          
           } 
+
           else {
-          
-          commit("setMidatlanticNoFetch" );
+             commit("setMidatlanticNoFetch" );
           }
        
         },
@@ -3537,10 +3388,9 @@ export const mutations = {
          else if (this.allPostsLoaded) {
               commit("setRocky", this.postsbyRegion('RockyMountains'));
           } 
-
-          else {
-          
-          commit("setRockyNoFetch" );
+         
+         else { 
+              commit("setRockyNoFetch" );
           }
        
         },
@@ -3554,15 +3404,14 @@ export const mutations = {
                   commit("setPacific", res.data);
           })
           } 
-          else if (this.allPostsLoaded) {
 
+          else if (this.allPostsLoaded) {
               commit("setPacific", this.postsbyRegion('PacNorthWest'));
-          
           }
+
           else {
-          
-          commit("setPacificNoFetch" );
-        }
+             commit("setPacificNoFetch" );
+          }
         },
 
         async setSouthwest({ commit }) {
@@ -3574,14 +3423,12 @@ export const mutations = {
                   commit("setSouthwest", res.data);
           })
           }
-          else if (this.allPostsLoaded) {
 
+          else if (this.allPostsLoaded) {
               commit("setSouthwest", this.postsbyRegion('Southwest'));
-          
           }
           else {
-          
-          commit("setSouthwestNoFetch" );
+              commit("setSouthwestNoFetch" );
           }
        
         },
@@ -3595,14 +3442,13 @@ export const mutations = {
                   commit("setNYC", res.data);
           })
           }
-          else if (this.allPostsLoaded) {
 
+          else if (this.allPostsLoaded) {
               commit("setNYC", this.postsbyRegion('SiliconAlleyNYC'));
-          
           }
+
           else {
-          
-          commit("setNYCNoFetch" );
+              commit("setNYCNoFetch" );
           }
        
         },
@@ -3618,13 +3464,10 @@ export const mutations = {
           }
 
           else if (this.allPostsLoaded) {
-
               commit("setME", this.postsbyRegion('MiddleEast'));
-          
           }
 
           else {
-          
               commit("setMENoFetch" );
           }
        
@@ -3637,17 +3480,16 @@ export const mutations = {
           { 
               await this.$axios.get('/posts?region=Oceania')
                   .then(res => {
-                  commit("setOceania", res.data);
-          })
+              commit("setOceania", res.data);
+              })
           } 
-          else if (this.allPostsLoaded) {
 
+          else if (this.allPostsLoaded) {
               commit("setOceania", this.postsbyRegion('Oceania'));
-          
           }
+
           else {
-          
-          commit("setOceaniaNoFetch" );
+            commit("setOceaniaNoFetch" );
           }
        
         },
@@ -3662,14 +3504,13 @@ export const mutations = {
                   commit("setCarribean", res.data);
           })
           } 
-          else if (this.allPostsLoaded) {
 
+          else if (this.allPostsLoaded) {
                 commit("setCarribean", this.postsbyRegion('Caribbean'));
-            
-            }
+          }
+
           else {
-          
-              commit("setCarribeanNoFetch" );
+               commit("setCarribeanNoFetch" );
           }
          
         },
@@ -3745,82 +3586,67 @@ export const mutations = {
   		 
   		 },
 
-  		 async goNext( {commit}, pageVal) {
-    			   commit("setNextNoFetch");
-
+  		 async goNext( {commit}) {
+    	   commit("setNextNoFetch");
       },
-  		 async setSearchTab( {commit}, topic) {
 
-          		commit("setSearchTab", topic);
-      	 
-      	 },
+  		async setSearchTab( {commit}, topic) {
+      		commit("setSearchTab", topic);
+      },
 
-  		 async submitSearch( {commit}, topic) {
+  		async submitSearch( {commit}, topic) {
 			
-  			await this.$axios.get('/posts?term=' + topic)
+  			 await this.$axios.get('/posts?term=' + topic)
              .then( res => {
-            		commit("submitSearch", res.data)
-        	 	})
+         commit("submitSearch", res.data)
+         })
 
-  		 },	
+  		},	
 
-  		 async goLast( {commit}) {
-          		
-          		commit("setLast");
-  		 },	
+  		async goLast( {commit}) {    		
+         commit("setLast");
+  		},	
 
-  		 async nuxtServerInit(vuexContext, context) {
+  		async nuxtServerInit(vuexContext, context) {
 		   
-         if (!this.firstPostsFetched)
-         {
+         if (!this.firstPostsFetched) {
+
              await this.$axios.$get("/posts?page=1")
                 .then(data => {
-                  vuexContext.commit("set", data);
-                })
-  		 
-          }
-        else {
-
+             vuexContext.commit("set", data);
+             })
+         }
+         else {
             vuexContext.commit("setLast");
-        }
+         }
 
-       },
+      },
 
-	     setView({commit}, view) {
-
-	      		commit("setView", view);
+	    setView({commit}, view) {
+	      	commit("setView", view);
 	    },
 
-
-       async setBlockPrevious({ commit }, page ) {
-  
+      async setBlockPrevious({ commit }) {  
           commit("setBlockPrevious");
-       
-       },
+      },
 
       async setNewsletters( {commit}, page) {
 
-
         if (!this.newslettersFetched) {
  
-            await this.$axios.get('/posts?storytype=Newsletter')
-                    .then( res => {
-              commit("setNewsletters", res.data)    
-             })  
+          await this.$axios.get('/posts?storytype=Newsletter')
+              .then( res => {
+          commit("setNewsletters", res.data)    
+          })  
+        } 
 
-         } 
-
-         else {
-              
-              commit("setNewslettersNoFetch")  
-         }            
+        else {      
+           commit("setNewslettersNoFetch")  
+        }            
     
-       },  
+      },  
        
-
-
-
-       async setBlockNext( {commit}, page) {
+      async setBlockNext( {commit}, page) {
 
         if (!this.firstPostsFetched) {
 
@@ -3829,42 +3655,32 @@ export const mutations = {
 
             await this.$axios.get('/posts?blk=' + temp)
                     .then( res => {
-              commit("setBlockNext", res.data)    
-             })  
-
+            commit("setBlockNext", res.data)    
+            })  
          } 
 
-         else {
-              
-              commit("setBlockNextNoFetch")  
-
+         else {        
+            commit("setBlockNextNoFetch")  
          }            
     
-       },  
+      },  
        
+      async setBankPrevious({ commit }, page ) {
+         commit("setBankPrevious");
+      },
 
-       async setBankPrevious({ commit }, page ) {
-  
-       commit("setBankPrevious");
-       
-       },
-
-       async setBankNext( {commit}, page) {
+      async setBankNext( {commit}, page) {
 
         var temp = page;
         temp++ ;
-    
         await this.$axios.get('/posts?bnk=' + temp)
-                .then( res => {
-          commit("setBankNext", res.data)    
-         })               
-       
-        },
+            .then( res => {
+        commit("setBankNext", res.data)    
+        })                
+       },
 
        async setInsurPrevious({ commit }, page ) {
-  
-       commit("setInsurPrevious");
-       
+         commit("setInsurPrevious");
        },
 
        async setInsurNext( {commit}, page) {
@@ -3872,24 +3688,20 @@ export const mutations = {
           if (!this.firstPostsFetched) {
 
             var temp = page;
-            temp++ ;
-              
             await this.$axios.get('/posts?ins=' + temp)
                       .then( res => {
-                commit("setInsurNext", res.data)    
-               })  
-           }
-           else {
-               commit("setInsurNextNoFetch") 
-           }
+            commit("setInsurNext", res.data)    
+            })  
+          }
+          
+          else {
+            commit("setInsurNextNoFetch") 
+          }
 
-
-        },   
+       },   
 
         async setAllPosts ( {commit}) {
-
            commit("setAllPosts", allPosts); 
-
         }
        
 
@@ -3901,15 +3713,15 @@ export const mutations = {
       return state.post1;
 	   },
 
-	   payPostsFetched(state) {
+	  payPostsFetched(state) {
 
-  		  if (state.payments.length){
-          return true;
-        } 
+      if (state.payments.length){
+        return true;
+      } 
 
-        else {
-          return false;
-        }
+      else {
+       return false;
+      }
 	  },
 
 	  blockPostsFetched(state) {
@@ -3939,7 +3751,6 @@ export const mutations = {
 	  bankPostsFetched(state) {
 
       if (state.banking.length) {
-
         return true;
       } 
 
@@ -3954,7 +3765,6 @@ export const mutations = {
 	  	if (state.AI.length) {
         return true;
       } 
-
       else {
         return false;
       }
@@ -3965,10 +3775,8 @@ export const mutations = {
 	  insurPostsFetched(state) {
 		 
       if (state.insurtech.length) {
-
         return true;
       } 
-
       else {
         return false;
       }
@@ -3981,7 +3789,6 @@ export const mutations = {
 	    if (state.lending.length) {
         return true;
       } 
-
       else {
         return false;
       }
@@ -3993,7 +3800,6 @@ export const mutations = {
       if (state.regtech.length) {
         return true;
       } 
-
       else {
         return false;
       }
@@ -4002,10 +3808,9 @@ export const mutations = {
 
 	  healthPostsFetched(state)  {
 	
-     if (state.healthtech.length) {
+      if (state.healthtech.length) {
         return true;
       } 
-
       else {
         return false;
       }
@@ -4017,7 +3822,6 @@ export const mutations = {
       if (!(state.post1.length)) {
         return false;
       } 
-
       else {
         return true;
       }
@@ -4029,7 +3833,6 @@ export const mutations = {
 		  if (state.wealthtech.length) {
         return true;
       } 
-
       else {
         return false;
       }
@@ -4041,7 +3844,6 @@ export const mutations = {
       if (state.newsletters.length) {
         return true;
       } 
-
       else {
         return false;
       }
@@ -4053,7 +3855,6 @@ export const mutations = {
 	    if (state.advisors.length) {
         return true;
       } 
-
       else {
         return false;
       }
@@ -4065,11 +3866,9 @@ export const mutations = {
       if (state.capitalmarkets.length) {
         return true;
       } 
-
       else {
         return false;
       } 
-
 
 	  },
 
@@ -4078,7 +3877,6 @@ export const mutations = {
 		  if (state.realestate.length) {
         return true;
       } 
-
       else {
         return false;
       }
@@ -4090,7 +3888,6 @@ export const mutations = {
 		  if (state.valuation.length) {
         return true;
       } 
-
       else {
         return false;
       }
@@ -4099,12 +3896,11 @@ export const mutations = {
 
 	  mergerPostsFetched(state) {
 	
-		 if (state.mergers.length){
+		  if (state.mergers.length){
         return true;
-     } 
-
+      } 
       else {
-        return false;
+       return false;
       }
 	  
     },
@@ -4114,7 +3910,6 @@ export const mutations = {
 		  if (state.spinoffs.length) {
         return true;
       } 
-
       else {
         return false;
       }
@@ -4126,7 +3921,6 @@ export const mutations = {
       if (state.firstArtLoad == true){
         return true;
       } 
-
       else {
         return false;
       }
@@ -4143,7 +3937,6 @@ export const mutations = {
 	    if (state.growthequity.length) {
         return true;
       } 
-
       else {
         return false;
       }
@@ -4187,22 +3980,19 @@ export const mutations = {
 	 	 if (state.Q320.length) {
         return true;
      } 
-
      else {
-          return false;
-        }
-	  },
+        return false;
+     }
+   },
 
 	 Q420PostsFetched(state) {
 
       if (state.Q420.length) {
         return true;
       } 
-
       else {
         return false;
       }
-
 	 },
 	 
 	 Q121PostsFetched(state) {
@@ -4210,23 +4000,19 @@ export const mutations = {
 	    if (state.Q121.length) {
         return true;
       } 
-
       else {
         return false;
       }
-
 	 },
 	 
 	  Q221PostsFetched(state) {
 
       if (state.Q221.length) {
         return true;
-      } 
-      
+      }   
       else {
         return false;
       }
-	 	
 	  },
 	 
 	 Q321PostsFetched(state) {
@@ -4234,19 +4020,16 @@ export const mutations = {
 	    if (state.Q321.length){
         return true;
       } 
-
       else {
         return false;
       }
-
-	 },
+ 	 },
 	 
 	 Q421PostsFetched(state) {
 
 	 	  if (state.Q421.length) {
         return true;
       } 
-
       else {
         return false;
       }
@@ -4257,11 +4040,9 @@ export const mutations = {
 	 	  if (state.zerotoone.length){
         return true;
       } 
-
       else {
         return false;
       }
-
 	 },
 
 	 onetofivePostsFetched(state) {
@@ -4269,23 +4050,19 @@ export const mutations = {
 	 	  if (state.onetofive.length) {
         return true;
       }
-
       else {
         return false;
       }
-
 	 },
 
   fivetotenPostsFetched(state) {
 
-    if (state.fivetoten.length) {
+     if (state.fivetoten.length) {
       return true;
-    } 
-
-    else {
+     } 
+     else {
       return false;
-    }
-
+     }
    },
 
 	 tentotwentyPostsFetched(state) {
@@ -4294,11 +4071,9 @@ export const mutations = {
       {
         return true;
       }
-
       else {
         return false;
       }
-
 	 },
 
 	 twentytofiftyPostsFetched(state) {
@@ -4306,11 +4081,9 @@ export const mutations = {
       if (state.twentytofifty.length) {
         return true;
       } 
-
       else {
         return false;
       }
-
 	 },
 
 	 fiftytohundredPostsFetched(state) {
@@ -4318,11 +4091,9 @@ export const mutations = {
       if (state.fiftytohundred.length){
         return true;
       } 
-
       else {
         return false;
       }
-
 	 },
 
 	 hundredplusPostsFetched(state) {
@@ -4330,12 +4101,10 @@ export const mutations = {
 	   if (state.hundredplus.length) {
         return true;
       } 
-
      else {
         return false;
       }
-
-	  },
+	 },
 
 
    latinPostsFetched(state) {
@@ -4343,11 +4112,9 @@ export const mutations = {
       if (state.latin.length) {
         return true;
       } 
-
       else {
         return false;
-      }
-   
+      }  
    },
 
    europePostsFetched(state) {
@@ -4355,36 +4122,29 @@ export const mutations = {
       if (state.europe.length) {
         return true;
       } 
-
       else {
         return false;
-      }
-   
-   },
+      }  
+    },
 
    canadaPostsFetched(state) {
 
      if (state.canada.length){
         return true;
-      } 
-
-    else {
+     } 
+     else {
         return false;
       }
+    },
 
-   },
-
-  nycPostsFetched(state) {
+   nycPostsFetched(state) {
 
       if (state.nyc.length){
-
         return true;
       } 
-
       else {
         return false;
-      }
-     
+      }  
    },
 
    southPostsFetched (state) {
@@ -4392,11 +4152,9 @@ export const mutations = {
       if (state.south.length) {
         return true;
       } 
-
       else {
         return false;
       } 
-
    },
 
    southwestPostsFetched (state) {
@@ -4404,11 +4162,9 @@ export const mutations = {
       if (state.southwest.length) {
         return true;
       } 
-
       else {
         return false;
       }
-
    },
 
    southeastPostsFetched (state) {
@@ -4416,24 +4172,19 @@ export const mutations = {
       if (state.southeast.length) {
         return true;
       } 
-
       else {
         return false;
       }
-
    },
 
    midwestPostsFetched (state) {
 
      if (state.midwest.length){
-
         return true;
-      } 
-
+     } 
      else {
         return false;
-      }
-
+     }
    },
 
    carribeanPostsFetched (state) {
@@ -4441,11 +4192,9 @@ export const mutations = {
       if (state.carribean.length) {
           return true;
       } 
-
       else {
           return false;
       } 
-
    },
 
    africaPostsFetched (state) {
@@ -4453,11 +4202,9 @@ export const mutations = {
      if (state.africa.length) {
         return true;
       } 
-
       else {
         return false;
       }
-
    },
 
 
@@ -4466,11 +4213,9 @@ export const mutations = {
       if (state.asia.length) {
         return true;
       } 
-
       else {
         return false;
       }
-
    },
 
    oceaniaPostsFetched (state) {
@@ -4478,11 +4223,9 @@ export const mutations = {
      if (state.oceania.length) {
         return true;
       } 
-
       else {
         return false;
       }
-
    },
 
    mePostsFetched (state) {
@@ -4490,36 +4233,29 @@ export const mutations = {
       if (state.mideast.length) {
         return true;
       } 
-
       else {
         return false;
       }
-
    },
 
    rockyPostsFetched (state) {
 
       if (state.rocky.length){
-
         return true;
       } 
-
       else {
         return false;
       }
-
    },
 
    pacificPostsFetched(state) {
 
-    if (state.pacific.length) {
+     if (state.pacific.length) {
       return true;
-    } 
-
-    else {
+     } 
+     else {
       return false;
-    }
-
+     }
    },
 
   socalPostsFetched(state) {
@@ -4527,11 +4263,9 @@ export const mutations = {
       if (state.socal.length) {
         return true;
       } 
-
       else {
         return false;
       }
-
    },
 
   siliconPostsFetched(state) {
@@ -4539,24 +4273,19 @@ export const mutations = {
       if (state.silicon.length) {
         return true;
       } 
-
       else {
         return false;
       }
-
    },
 
   newenglandPostsFetched(state) {
 
     if (state.newengland.length) {
-
       return true;
     } 
-
     else {
       return false;
     }
-
   },
 
   midatlanticPostsFetched(state) {
@@ -4564,35 +4293,29 @@ export const mutations = {
     if (state.midatlantic.length) {
       return true;
     } 
-
     else {
       return false;
     }
-
-   },
+  },
  
    allPostsLoaded(state) {
 
       if (!(state.allPosts.length)) {
         return false;
       }
-
       else {
         return true;
       }
-  
-    },
+   },
 
    totalAllPosts(state) {
 
       if (!(state.allPosts.length == undefined)) {
         return state.allPosts.length;
       }
-
       else {
         return 0;
       }
-
     },
 
     postsbyQuarter: (state, quarter ) => {
@@ -4607,15 +4330,13 @@ export const mutations = {
       return state.allPosts.filter(function(elem, region) {
             return elem.region == region ;
       });
-
-     },
+    },
 
     postsbyAmount: (state, amount ) => {
 
       return state.allPosts.filter(function(elem, amount) {
             return elem.amount == amount ;
       });
-
      },
 
      postsbyNextRound: (state, next_round ) => {
@@ -4636,24 +4357,21 @@ export const mutations = {
 
 	   prevArryVal(state) {
 
-  	 if (this.activeView == "Articles") {
+  	   if (this.activeView == "Articles") {
   	 		var val = this.activeArtPage();
-  	 }
-
-  	 else if (this.activeView == "Builder") {
+  	   }
+  	   else if (this.activeView == "Builder") {
   	 		var val = this.activeBuildPage();
-  	 }
-
-     else {
+  	   }
+       
+       else {
         var val = this.dataPage();
-      }
+       }
 	
   		val--;
-
   		if (val>= 0) {
   			return val;
   		}
-		
       else {
 			  return 0;
 		  }

@@ -264,17 +264,17 @@ export default {
        switch(direction) {
 
          case 'Previous':
-            var page = this.numPage;
-            this.$store.dispatch("news/goPrevious", page);
+            this.$store.commit("news/decrementPage");
+            this.$store.dispatch("news/goPrevious");
             break;
 
           case 'Next':
-            var page = this.numPage;
+            this.$store.commit("news/incrementPage");
+            let page = this.numPage;
             this.$store.dispatch("news/goNext", page);
             break;
 
           case 'Last':
-            var page = this.numPage;
             this.$store.dispatch("news/goLast");
             break;
          }
@@ -285,13 +285,15 @@ export default {
        switch(direction) {
 
          case 'Previous':
-            var page = this.payPage;
-            this.$store.dispatch("news/setPayPrevious", page);
+          
+            this.$store.commit("news/decrementPay");
+            this.$store.dispatch("news/setPayPrevious");
             break;
 
           case 'Next':
-            var page = this.payPage;
-            this.$store.dispatch("news/setPayNext", page);
+            this.$store.commit("news/incrementPay");
+            let page2 = this.payPage;
+            this.$store.dispatch("news/setPayNext", page2);
             break;
          }
      },
@@ -301,12 +303,13 @@ export default {
        switch(direction) {
 
          case 'Previous':
-            var page = this.insPage;
-            this.$store.dispatch("news/setInsurPrevious", page);
+            this.$store.commit("news/decrementIns");
+            this.$store.dispatch("news/setInsurPrevious");
             break;
 
           case 'Next':
-            var page = this.insPage;
+            this.$store.commit("news/incrementIns");
+            let page = this.insPage;
             this.$store.dispatch("news/setInsurNext", page);
             break;
          }
@@ -325,16 +328,16 @@ export default {
 
          case 'Previous':
 
-            var page = this.blkPage;
-
-            this.$store.dispatch("news/setBlockPrevious", page);
+            let page1 = this.blkPage;
+            this.$store.commit("news/decrementBlock");
+            this.$store.dispatch("news/setBlockPrevious", page1);
             break;
 
           case 'Next':
 
-            var page = this.blkPage;
-
-            this.$store.dispatch("news/setBlockNext", page);
+            let page2 = this.blkPage;
+            this.$store.commit("news/incrementBlock");
+            this.$store.dispatch("news/setBlockNext", page2);
             break;
         }
      }
