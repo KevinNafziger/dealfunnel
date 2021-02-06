@@ -39,8 +39,7 @@
          Click to close view
      </tippy>
             <button  v-show="this.showModal" v-on:click="toggleModal()" class="gardient-view-button b-lr-s">
-              <span name="externalTrigger" class="mdi mdi-file-eye"></span>
-            Close View
+              <span name="externalTrigger" class="mdi mdi-close"></span>
             </button>
           <br><br><br>
 
@@ -383,6 +382,16 @@ export default {
   },
 }
 </script>
+<style>
+ul, ol, .featuredsidemenu{
+  padding: 0px !important;
+}
+.article-card {
+  height: auto !important;
+  width: 100%;
+  margin: auto !important;
+}
+</style>
 
 <style scoped>
 img {
