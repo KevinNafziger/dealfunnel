@@ -227,12 +227,11 @@ a {
 }
 .search-div {
   position: sticky;
-    display: contents;
+    display: inline-flex;
     height: 30px;
     border-radius: 3px;
-    margin-left: 20px;
-    margin-right: 70px;
     margin-bottom: 30px;
+
 }
    .tagbtn {
    background-color: #4f81bd !important;
