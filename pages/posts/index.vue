@@ -32,21 +32,21 @@ export default {
        switch(direction) {
 
           case 'Previous':
-             var page = this.numPage;
+            var page = this.numPage;
             this.$store.dispatch("posts/setView", "Articles");
-             this.$store.dispatch("posts/goPrevious", page);
-             break;
+            this.$store.dispatch("posts/goPrevious", page);
+            break;
 
           case 'Next':
-             var page = this.numPage;
+            var page = this.numPage;
             this.$store.dispatch("posts/setView", "Articles");
-             this.$store.dispatch("posts/goNext", page);
-             break;
+            this.$store.dispatch("posts/goNext", page);
+            break;
 
           case 'Last':
             this.$store.dispatch("posts/setView", "Articles");
             this.$store.dispatch("posts/goLast");
-           break;
+            break;
        }
 
     },
@@ -88,12 +88,11 @@ export default {
             this.$store.dispatch("posts/setInsurPrevious", page);
             break;
 
-          case 'Next':
+         case 'Next':
             var page = this.insPage;
             this.$store.dispatch("posts/setView", "Articles");
             this.$store.dispatch("posts/setInsurNext", page);
             break;
-
          }
      },
 
@@ -107,12 +106,11 @@ export default {
             this.$store.dispatch("posts/setBlockPrevious", page);
             break;
 
-          case 'Next':
+         case 'Next':
             var page = this.blkPage;
             this.$store.dispatch("posts/setView", "Articles");
             this.$store.dispatch("posts/setBlockNext", page);
             break;
-
         }
      },
 
@@ -131,7 +129,7 @@ export default {
          break;
 
       case 'Lending':
-        this.$store.dispatch("posts/setView", "Articles");
+         this.$store.dispatch("posts/setView", "Articles");
          this.$store.dispatch("posts/setLend");
          break;
 
@@ -225,10 +223,10 @@ export default {
 
        if (this.activeTab == 'Page') {
         return this.activeTab + ' ' +  this.numPage;
-      }
+       }
 
-      else if (this.activeTab == 'Blockchain') {
-        return this.activeTab + ' ' + 'page' + ' ' + this.blkPage;
+       else if (this.activeTab == 'Blockchain') {
+         return this.activeTab + ' ' + 'page' + ' ' + this.blkPage;
       }
 
       else if (this.activeTab == 'Banking') {
@@ -244,15 +242,13 @@ export default {
       }
 
       else {
-
         return this.activeTab;
       }
 
     },
 
     loadedPosts() {
-
-          return this.activeArtInfo;
+        return this.activeArtInfo;
     }
 
   },

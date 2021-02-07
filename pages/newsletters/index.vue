@@ -1,14 +1,13 @@
 
 <template>
-<div style="padding-top:20px;">
-<div data-v-31683ab5="" data-v-50f93fd9=""><div data-v-31683ab5="" data-v-50f93fd9="" class="content"><br data-v-31683ab5="" data-v-50f93fd9=""> <h2 data-v-31683ab5="" data-v-50f93fd9="">Newsletters</h2></div></div>
-
+  <div style="padding-top:20px;">
+  <div data-v-31683ab5="" data-v-50f93fd9=""><div data-v-31683ab5="" data-v-50f93fd9="" class="content"><br data-v-31683ab5="" data-v-50f93fd9=""> <h2 data-v-31683ab5="" data-v-50f93fd9="">Newsletters</h2></div></div>
 
   <div class="posts-page">
        <LettersList :letters="letters" :board="letters" />
   </div>
 
-</div>
+  </div>
 </template>
 
 
@@ -19,11 +18,11 @@ export default {
 
   computed: {
   ...mapState({
-          allLetters: state =>  state.posts.newsletters,
+        allLetters: state =>  state.posts.newsletters,
     }),
 
     letters() {
-          return this.allLetters;
+        return this.allLetters;
     },
 
     letter() {

@@ -1,15 +1,12 @@
 <template>
   <body>
   <div><center><br>
-    <h3>Thank you for subscribing to DealFunnel, home of the <i>'Big Fintech Newsletter'</i></h3>
-    <h4> Below please specify the email address  for receiving the newsletter. Also specify a password for accessing dealfunnel online.  You can login to dealfunnel using the email and password you specify below. </h4>
+    <h3>Thank you for subscribing to <i>DealFunnel</i></h3>
+    <h4>Enter the email address where you wish to receive the newsletter below. Also choose a password, which you can use in conjunction with your email to access <i>DealFunnel Online</i>. </h4>
   <br></center></div>
   <div class="md-layout md-alignment-center-center" style="height: 100vh;">
 
     <md-card class="lok md-layout-item md-size-50">
-
-
- 
 
       <form @submit.prevent="registerUser">
         <md-card-header>
