@@ -1,26 +1,30 @@
 <template>
 <body>
-<section class="pricing">
+  <section class="subs-card">
      <article class="plan__item plan__item--active">
        <ul class="plan__feature-list">
          <li class="plan__feature-item"></li>
        </ul>
        <ul class="plan__feature-list">
-        <li class="plan__feature-item"><span class="A">A</span> subscription to <span class="accent-2"><i>DealFunnel</i> </span> is <h6>
-          <br><br><b>$79.99 a month.</b></h6><br></li>
-         <li class="plan__feature-item"><br>
-           <span class="accent-2"><b>A subscription includes:</b></span></li>
-        <br><li class="plan__feature-item">-The
+        <li class="plan__title  plan__feature-item">
+          <span class="A">A</span> subscription to
+          <span class="accent-2"><br><br><br><br>
+            <center><b>DealFunnel</b></center> </span><br><br><br>
+            <h6><center><b>Price: $79.99 a month.</b></center></h6><br></li>
+            <li class="plan__feature-item"><br>
+           <hr>
+          <center> <h6>A subscription includes:</h6> </center></li>
+
+        <br><li class="plan__feature-item">- The
        <span class="accent-2"><i>DealFunnel</i> newsletter</span></li>
-         <li class="plan__feature-item"><i><span class="accent-2">-DealFunnel Online</span></i></li>
-         <li class="plan__feature-item">-<i>DealFunnel</i> support<span class="accent-2"></span></li>
+         <li class="plan__feature-item">-<i><span class="accent-2"> DealFunnel Online</span></i></li>
+         <li class="plan__feature-item">-<i> DealFunnel</i> support<span class="accent-2"></span></li>
          <li class="plan__feature-item"><span class="accent-2"></span></li>
+          <hr>
        </ul>
- <button
-    @click="checkout"
-    role="link">
+  <button class="pricing plan-item plan__cta-link" @click="checkout" role="link">
         Purchase this package
-    </button>
+  </button>
      </article>
     <!-- <article class="plan__item">
        <div class="plan__header">
@@ -49,7 +53,7 @@
     import stripeCheckoutMixin from '@/mixins/stripeCheckoutMixin';
     export default {
         mixins: [stripeCheckoutMixin],
-        data () { 
+        data () {
       return {
           price: 'price_1IHxuYIUxqRwvzPZX8au5ouJ',
           successUrl: 'https://dfunnel.herokuapp.com/process-payment',
@@ -63,7 +67,6 @@
  @import url("https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap");
 
 
-
 .accent-1 {
   color: var(--accent-1);
 }
@@ -71,7 +74,7 @@
   color: var(--accent-2);
 }
 .A {
-  font-size: 20px;
+  font-size: 39px;
       font-family: monospace;
 }
 b {
@@ -83,12 +86,18 @@ ul {
 line-height: 14px;
 font-family: monospace;
 }
+button {
+ border: none !important;
+}
 li {
   list-style: none;
 }
 a {
   color: unset;
   text-decoration: unset;
+}
+.subs-card {
+  padding-top:100px;
 }
 .cupon-link {
   color: #78b962 !important;
@@ -113,8 +122,11 @@ a {
 }
 .pricing {
   text-align: center;
-  margin: 0 1em;
+  margin: 1em 1em;
   padding: 10px;
+}
+.plan__item {
+  margin-top:0px !important;
 }
 .pricing__title{
   margin-top:5vw;
@@ -176,12 +188,13 @@ a {
 }
 .plan__item--active {
   box-shadow: 0 0 55px rgba(80,80,80,0.25);
-  height: 450px;
+  height: auto;
 }
 .plan__title {
   color: #4f81bd ;
   margin-bottom: 3vw;
   margin-top: 3vw;
+  font-size: 28px;
 }
 .plan__price {
   font-size: 2.5em;
@@ -191,11 +204,12 @@ a {
   font-size: 1rem;
 }
 .plan__cta-link {
-  color: var(--accent-1);
-  padding: 1em 5em;
-  border-radius: 0 0 var(--radius) var(--radius);
+  color: #ffffff ;
+  padding: 1em 5em ;
+  border-radius: 0 0 var(--radius) var(--radius) ;
   text-decoration: none !important;
   box-shadow: 0px 0px 10px -5px  #4f81bd  !important;
+  background-color: #4f81bd;
 }
 
 .plan__cta-link:hover {
@@ -236,6 +250,11 @@ a {
   background: #eee;
   font-weight: bold;
   padding: 2px 4px;
+}
+.body {
+  height: 100%;
+  display: flow-root;
+  margin-top: 0px;
 }
 
 @media only screen and (min-width:618px) and (max-width: 900px) {
