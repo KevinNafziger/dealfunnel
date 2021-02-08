@@ -1,10 +1,15 @@
 <template>
   <body>
   <div><center><br>
-    <h3>Thank you for subscribing to <i>DealFunnel</i></h3>
-    <h4>Enter the email address where you wish to receive the newsletter below. Also choose a password, which you can use in conjunction with your email to access <i>DealFunnel Online</i>. </h4>
+    <h4>Thank you for subscribing to <i>DealFunnel</i></h4><br>
+    <div class="T-T-B">
+    <h6>"Enter the email address where you wish to receive the newsletter below.
+      Also choose a password, which you can use in conjunction with your email
+      to access <i>DealFunnel Online</i>."
+    </h6>
+  </div>
   <br></center></div>
-  <div class="md-layout md-alignment-center-center" style="height: 100vh;">
+  <div class="md-layout md-alignment-center-center" >
 
     <md-card class="lok md-layout-item md-size-50">
 
@@ -17,13 +22,13 @@
             {{errorMsg}} <br>
           </label>
           <md-field md-clearable>
-            <span class="mdi mdi-email">Email</span>
-            <md-input type="email" name="email" id="email" autocomplete="email" v-model="email" />
+            <span title="Enter email" class="mdi mdi-email"></span>
+            <md-input title="Enter email" type="email" name="email" id="email" autocomplete="email" v-model="email" />
           </md-field>
 
           <md-field>
-              <span class="mdi mdi-key">Password</span>
-            <md-input type="password" name="password" id="password" autocomplete="password" v-model="password" />
+              <span title="Enter password" class="mdi mdi-key"></span>
+            <md-input title="Enter password" type="password" name="password" id="password" autocomplete="password" v-model="password" />
           </md-field>
         </md-card-content>
 
@@ -81,18 +86,32 @@ export default {
 </script>
 
 <style>
+
+h4 {
+ color:  #4f81bd;
+ margin-top:20px;
+}
+h6 {
+  line-height: 2;
+  color: #474747;
+}
 form {
   margin:auto;
   max-width: 700px;
   display: grid;
 }
-h3 {
-  text-align: center;
-  margin: 20px;
-}
 label, md-button {
   margin-top:20px !important;
   margin-bottom:20px !important;
+}
+.T-T-B {
+  text-align: justify;
+  margin-top:100px;
+  margin-bottom:100px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 600px;
+  padding-top:20px;
 }
 .md-button {
   background-color: blue;
