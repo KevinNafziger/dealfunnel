@@ -45,8 +45,6 @@ export const mutations = {
     state.activeInfo = state.allCompanies.slice(0, 500);  
     state.activeTab = "All";
     state.firstLoad = false;
-    state.activePage = 1;
-
    },
 
 
@@ -173,7 +171,7 @@ export const mutations = {
 
 	  state.activeInfo = state.allCompanies.slice(500,1000);
 	  state.activeTab ='All page 2';
-	  state.activePage = 2;	
+	  state.activePage =2;	
 	  state.firstLoad = false;
 	 
 	 },

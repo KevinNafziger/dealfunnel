@@ -88,7 +88,6 @@ import postsys from '@/components/Builder/Postsys';
 import Searchbar from '@/components/Builder/Searchbar';
 import draggable from 'vuedraggable';
 import { tippy } from "vue-tippy";
-//import Vuetify from 'vuetify';
 import VueSidebarMenu from 'vue-sidebar-menu'
 import VueTippy, { TippyComponent } from "vue-tippy";
 import {mapState, mapMutations} from 'vuex';

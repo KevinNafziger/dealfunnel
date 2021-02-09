@@ -19,9 +19,11 @@ export const mutations = {
       state.myboardArry.push(item);
     } 
   }, 
+
   remove(state, { todo }) {
     state.myboard.splice(state.list.indexOf(todo), 1)
   },
+  
   toggle(state)  {
     state.showModal = !state.showModal;
   }

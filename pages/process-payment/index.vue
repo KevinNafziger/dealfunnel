@@ -1,12 +1,10 @@
 <template>
   <body>
-  <div><center><br>
-    <h4>Thank you for subscribing to <i>DealFunnel</i></h4><br>
+  <div><center><br><br><br>
+    <h4>Thank you for subscribing.</h4>
     <div class="T-T-B">
-    <h6>"Enter the email address where you wish to receive the newsletter below.
-      Also choose a password, which you can use in conjunction with your email
-      to access <i>DealFunnel Online</i>."
-    </h6>
+    <h4>Please enter the email where you want to receive <i>The Big Fintech Newsletter</i> and choose a password below. You can also use this email and password to login to <i>DealFunnel Online</i>.  
+    </h4>
   </div>
   <br></center></div>
   <div class="md-layout md-alignment-center-center" >
@@ -15,19 +13,19 @@
 
       <form @submit.prevent="registerUser">
         <md-card-header>
-          <h3>Register</h3>
+          <h5>Enter email, choose password</h5>
         </md-card-header>
         <md-card-content>
           <label style="color:red" v-show="!(errorMsg =='')">
             {{errorMsg}} <br>
           </label>
           <md-field md-clearable>
-            <span title="Enter email" class="mdi mdi-email"></span>
+            <span title="Enter email (for receving newsletter)" class="mdi mdi-email kfield">Email   </span>
             <md-input title="Enter email" type="email" name="email" id="email" autocomplete="email" v-model="email" />
           </md-field>
 
           <md-field>
-              <span title="Enter password" class="mdi mdi-key"></span>
+              <span title="Enter password (use to access online archive)" class="mdi mdi-key kfield">Password   </span>
             <md-input title="Enter password" type="password" name="password" id="password" autocomplete="password" v-model="password" />
           </md-field>
         </md-card-content>
@@ -89,7 +87,7 @@ export default {
 
 h4 {
  color:  #4f81bd;
- margin-top:20px;
+ margin-top:14px;
 }
 h6 {
   line-height: 2;
@@ -106,13 +104,18 @@ label, md-button {
 }
 .T-T-B {
   text-align: justify;
-  margin-top:100px;
-  margin-bottom:100px;
+  margin-top:10px;
+  margin-bottom:40px;
   margin-left: auto;
   margin-right: auto;
   max-width: 600px;
-  padding-top:20px;
+  padding-top:10px;
 }
+
+.kfield {
+   margin-right:5px;
+}
+
 .md-button {
   background-color: blue;
 }
