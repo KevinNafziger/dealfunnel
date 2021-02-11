@@ -1,14 +1,15 @@
 <template>
-  <div>
+  <body>
     <div class="container">
       <div class="row">
-        <div class="col s12 m8 offset-m2">
+        <div style="margin-top:100px;" class="col s12 m8 offset-m2">
          <br><br>
           <center><p>Thank you for reading <i>DealFunnel</i>.</p></center>
         </div>
-      </div> 
+      </div>
+      <center><img style="margin-top:100px;;text-align:center;background:#4f81bd;border-radius:10px;" src="http://localhost:3000/dealfunnelwhite.png"></img></center>
     </div>
-  </div>
+  </body>
 </template>
 
 
