@@ -5,9 +5,7 @@
     <div class="sectionix" id="top">
        <div class="title">
           <div class="content">
-
-            <br>
-            <h2>Raises
+            <h2 style="margin-top:20px; padding-top:20px">Raises
                 <i style="font-size: 13px; text-align:right; margin-left:3px;">{{ filterMessage}}
                 </i>
             </h2>
