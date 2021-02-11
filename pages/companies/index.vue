@@ -1,7 +1,7 @@
 <template>
 <div>
-        <div data-v-69296181="" id="top" ><div data-v-69296181="" class="title"><div data-v-69296181="" class="content"><br data-v-69296181="">
-          <h2 data-v-69296181="">Companies
+        <div id="top" ><div class="title"><div class="content">
+          <h2 style="margin-top:20px; padding-top:20px;">Companies
         <i style="font-size: 13px; text-align:right; margin-left:3px;">{{ filterMessage}} </i>
         </h2></div></div></div>
 
