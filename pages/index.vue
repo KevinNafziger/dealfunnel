@@ -90,13 +90,13 @@
 </template>
 <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-E4W12WNDD6"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VRX67904FJ"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-E4W12WNDD6');
+  gtag('config', 'G-VRX67904FJ');
 </script>
 <script>
 import {mapState, mapMutations} from 'vuex';
