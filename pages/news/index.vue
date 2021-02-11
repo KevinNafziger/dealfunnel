@@ -502,6 +502,7 @@ ul.w-list-unstyled {
     #examples{
         width:48% !important;
         height: 650px !important;
+        margin: 10px auto !important;
     }
   }
   @media screen and (max-width:900px) {
