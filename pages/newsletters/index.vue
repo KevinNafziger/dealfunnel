@@ -1,7 +1,11 @@
 
 <template>
-  <div style="padding-top:20px;">
-  <div data-v-31683ab5="" data-v-50f93fd9=""><div data-v-31683ab5="" data-v-50f93fd9="" class="content"><br data-v-31683ab5="" data-v-50f93fd9=""> <h2 data-v-31683ab5="" data-v-50f93fd9="">Newsletters</h2></div></div>
+  <div>
+
+    <div class="content">
+      <h2 style="margin-top:20px;padding-top:10px;" >Builder</h2>
+
+  </div>
 
   <div class="posts-page">
        <LettersList :letters="letters" :board="letters" />
@@ -40,6 +44,18 @@ export default {
 </script>
 
 <style scoped>
+.content {
+  text-align:center;
+  background: #ffffffc7;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px -3px gray !important;
+  max-width: 1200px ;
+  width:auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
 .art-rows {
   display: inline-flex !important;
 }
