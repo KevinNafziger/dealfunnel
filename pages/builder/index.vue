@@ -6,7 +6,7 @@
       <nuxt-link to="/tours/builderpreview">
         <tippy to="Buildpre">
         Builder Preview
-      </tippy><br>
+      </tippy>
         <span name="Buildpre" class="mdi mdi-help"><br></span>
       </nuxt-link>
     </div>
