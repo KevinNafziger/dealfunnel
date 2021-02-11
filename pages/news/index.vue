@@ -1,14 +1,12 @@
 <template>
 
 <div width="100%" class="w-container-2">
-  <div id="top" class="sectionix"><div class="title">
-    <div  class="content">
-    <h2>News
+  <div class="content">
+      <h2 >News
       <i style="font-size: 13px; text-align:right; margin-left:3px;">
         {{ filterMessage }}</i>
       </h2>
-
-  </div></div></div>
+  </div>
 
   <NewsTempSearch></NewsTempSearch>
 
@@ -17,8 +15,6 @@
         <div class="w-col w-col-9">
 
           <ul class="w-list-unstyled">
-
-
             <li v-for="link in links" id="examples" style="text-align: center; margin-bottom: 20px;" class="list-item-9 featuredsidemenu">
 
               <span class="datetag tl-c" style="margin-left:20px">
@@ -32,9 +28,7 @@
                 <em>
                 <span style="margin-right:15px">
                    <a :href="link.url"  target="_blank" style="color:#4286ff">  {{link.publication}} </a>
-
                 <br>
-
         <br>
         <div id="myCompanyTag" v-if="showCompany" class="mdi mdi-domain mdi-24px plain"> <nuxt-link v-if="showCompany" :to="'/companies/' + link.company_id "> {{link.company.name}}  </nuxt-link>
         </div>
@@ -285,7 +279,7 @@ export default {
        switch(direction) {
 
          case 'Previous':
-          
+
             this.$store.commit("news/decrementPay");
             this.$store.dispatch("news/setPayPrevious");
             break;
@@ -646,5 +640,7 @@ ul {
   }
 .content {
   padding-top:10px;
+  text-align:center;
+  margin-bottom: 20px;
 }
 </style>

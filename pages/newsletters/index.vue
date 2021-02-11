@@ -3,8 +3,8 @@
   <div>
 
     <div class="content">
-      <h2 style="color:#4f81bd;margin-top:20px;padding-top:10px;" >Newsletters</h2>
-
+      <h2 style="color:#4f81bd; margin-top:20px; padding-top:10px;">
+        Newsletters</h2>
   </div>
 
   <div class="posts-page">
