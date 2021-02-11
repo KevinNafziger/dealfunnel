@@ -1,5 +1,9 @@
 <template>
   <div class="home-page">
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MH653XG"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
   <section style="margin-bottom:30px;">
   </section>
   <center>
