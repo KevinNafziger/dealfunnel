@@ -1,6 +1,7 @@
 <template>
 <div>
-  <div data-v-69296181="" id="top" ><div data-v-69296181="" class="title"><div data-v-69296181="" class="content"><br data-v-69296181=""> <h2 data-v-69296181="">Article Data<i style="font-size: 13px; text-align:right; margin-left:3px;">{{ filterMessage }}</i></h2></div></div></div>
+  <div id="top"><div class="title"><div class="content">
+   <h2 style="margin-top:20px;padding-top:20px;">Article Data<i style="font-size: 13px; text-align:right; margin-left:3px;">{{ filterMessage }}</i></h2></div></div></div>
   <text class="headcomname">
     Article Data
   </text>
@@ -360,7 +361,7 @@ computed: {
 },
  created() {
 
-     this.$store.dispatch("posts/setView", "Data"); 
+     this.$store.dispatch("posts/setView", "Data");
      this.$nuxt.$on("getCategory", (category) => this.getbyCategory(category));
      this.$nuxt.$on("changePage", (direction) => this.changePage(direction));
       this.$nuxt.$on("submitSearch", (topic) => this.submitSearch(topic));
