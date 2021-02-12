@@ -2,11 +2,11 @@
 <template>
   <div>
       <div class="content">
-        <h2 style="padding-top:10px;" >Builder</h2>
+        <h2 style="margin-top:20px;padding-top:10px;" >Builder</h2>
       <nuxt-link to="/tours/builderpreview">
         <tippy to="Buildpre">
         Builder Preview
-      </tippy><br>
+      </tippy>
         <span name="Buildpre" class="mdi mdi-help"><br></span>
       </nuxt-link>
     </div>
