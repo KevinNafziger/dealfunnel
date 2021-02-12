@@ -7,11 +7,10 @@
        </ul>
        <ul class="plan__feature-list">
         <li class="plan__title  plan__feature-item">
-          <span class="A">A</span> subscription to
-          <span class="accent-2"><br><br><br><br>
-            <center><b>DealFunnel</b></center> </span><br><br><br>
-            <h6><center><b>Price: $79.99 a month.</b></center></h6><br></li>
-            <li class="plan__feature-item"><br>
+          <h6><center> A subscription to
+            <i>DealFunnel</i></center> <br>
+        <center> is $79.99 a month.</center></h6></li>
+            <li class="plan__feature-item">
            <hr>
           <center> <h6>A subscription includes:</h6> </center></li>
 
@@ -23,7 +22,7 @@
           <hr>
        </ul>
   <button class="pricing plan-item plan__cta-link" @click="checkout" role="link">
-        Purchase this package
+        Purchase
   </button>
      </article>
     <!-- <article class="plan__item">
