@@ -3,7 +3,7 @@
   <div><center><br><br><br>
     <h4>Thank you for subscribing to <i>DealFunnel</i>.</h4>
     <div class="T-T-B">
-    <h4>Please enter your email address and choose a password. The email is for where you will receive <i>The Big Fintech Newsletter</i>. The password is used, along with your email address, to login to <i>DealFunnel Online.</i>   
+    <h4>Please enter your email address and choose a password. The email you enter below is where you will receive <i>The Big Fintech Newsletter</i>. You can use the password you choose, along with this email address, to login to <i>DealFunnel Online.</i>   
     </h4>
   </div>
   <br></center></div>

@@ -54,9 +54,10 @@
         mixins: [stripeCheckoutMixin],
         data () {
       return {
-          price: process.env.VUE_APP_STRIPE_PRICE_ID,
+          price: process.env.stripePRICEID,
           successUrl: 'https://www.dealfunnel.net/process-payment',
-          cancelUrl: 'https://www.dealfunnel.net/process-payment'
+          cancelUrl: 'https://www.dealfunnel.net/process-payment',
+      authorization: 'Bearer' + process.env.stripeSECRET,
          }
         }
     }

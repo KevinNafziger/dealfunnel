@@ -1,3 +1,4 @@
+
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
@@ -43,14 +44,19 @@ export default {
     axios: {
     baseURL: process.env.BASE_URL || 'https://fintechhorizonsmedia.com/api/v1',
     },
+
+    
     stripe: {
     publishableKey: 'pk_live_XfWHUi5ZgIVMcDsaWQDMHFCa',
      },
+   
+    
 
     env: {
       fbAPIKey: process.env.FB_KEY || 'AIzaSyBzUEYv2IKnQURUERVEH4g_-3OO4XSfWSY',
       stripePRICEID: process.env.STRIPE_PRICE_ID,
       stripePUBLIC: process.env.STRIPE_PUBLIC_KEY,
+
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)

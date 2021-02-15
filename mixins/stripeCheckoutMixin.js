@@ -11,7 +11,8 @@ export default {
       ],
       successUrl: this.successUrl,
       cancelUrl: this.cancelUrl,
-      mode: "subscription"
+      mode: "subscription",
+  
         })
         .then(function(result) {
           if (result.error) {
@@ -22,7 +23,7 @@ export default {
     }
   },
   mounted() {
-    let stripeKey = process.env.VUE_APP_STRIPE_PUBLIC_KEY;
+    var stripeKey = process.env.stripePUBLIC;
     this.stripe = Stripe(stripeKey);
   }
 }
