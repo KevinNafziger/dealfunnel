@@ -22,7 +22,7 @@ export default {
     }
   },
   mounted() {
-    let testKey = process.env.STRIPE_PUBLIC_KEY ;
-    this.stripe = Stripe(testKey);
+    let stripeKey = process.env.STRIPE_PUBLIC_KEY;
+    this.stripe = Stripe(stripeKey);
   }
 }
