@@ -294,6 +294,8 @@ a {
   margin-top: 10px !important;
   margin-bottom: 10px !important;
   display: inline-flex;
+  text-decoration: none !important;
+  box-shadow: 0px 0px 5px -1px gray !important;
 }
 .gardient-button {
   margin-top:10px;

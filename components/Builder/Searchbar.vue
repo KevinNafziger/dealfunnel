@@ -277,7 +277,8 @@ a {
   margin-bottom: 10px !important;
   display: inline-flex;
   margin-left: 3px;
-    margin-right: 3px;
+  margin-right: 3px;
+  box-shadow: 0px 0px 5px -1px gray !important;
 }
 .gardient-button {
   margin-top:10px;

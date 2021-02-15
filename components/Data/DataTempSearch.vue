@@ -141,6 +141,7 @@ computed: {
    color: white !important;
    padding: 1px 5px;
    border-radius: 10px;
+   box-shadow: 0px 0px 5px -1px gray !important;
  }
 .text-field{
   height: 30px !important;
