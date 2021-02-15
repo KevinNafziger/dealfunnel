@@ -140,6 +140,9 @@
     margin-bottom: 10px !important;
     display: inline-flex;
   }
+  .tagbtn:active {
+    background: #474747 !important;
+  }
   .gardient-button {
     margin-top:10px;
     background: #4f81bd !important;

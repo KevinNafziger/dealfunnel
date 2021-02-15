@@ -308,4 +308,7 @@ input {
 h3, h2 {
   color: #4f81bd !important;
 }
+.tagbtn:active {
+  background: #474747 !important;
+}
 </style>
