@@ -22,7 +22,7 @@ export default {
     }
   },
   mounted() {
-    let stripeKey = process.env.STRIPE_PUBLIC_KEY;
+    let stripeKey = process.env.VUE_APP_STRIPE_PUBLIC_KEY;
     this.stripe = Stripe(stripeKey);
   }
 }

@@ -54,7 +54,7 @@
         mixins: [stripeCheckoutMixin],
         data () {
       return {
-          price: process.env.stripePRICEID,
+          price: process.env.VUE_APP_STRIPE_PRICE_ID,
           successUrl: 'https://www.dealfunnel.net/process-payment',
           cancelUrl: 'https://www.dealfunnel.net/process-payment'
          }
