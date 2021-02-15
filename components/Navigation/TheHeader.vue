@@ -200,7 +200,6 @@ export default {
   background:#4f71bd;
   box-shadow: inset 0px 0px 10px -5px #2f2f2f !important;
   border-radius:5px;
-  padding:5px;
 }
 
 
