@@ -44,7 +44,7 @@ export default {
     baseURL: process.env.BASE_URL || 'https://fintechhorizonsmedia.com/api/v1',
     },
     stripe: {
-    secretkey: process.env.STRIPE_SECRET_KEY ,
+    publishableKey: 'pk_live_XfWHUi5ZgIVMcDsaWQDMHFCa',
      },
 
     env: {
