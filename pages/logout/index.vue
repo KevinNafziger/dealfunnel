@@ -4,7 +4,7 @@
       <div class="row">
         <div style="margin-top:100px;" class="col s12 m8 offset-m2">
          <br><br>
-          <center><p>Thank you for visiting<i>DealFunnel.net</i>.</p></center>
+          <center><p>Thank you for visiting <i>DealFunnel.net</i>.</p></center>
         </div>
       </div>
       <center><img style="margin-top:100px;padding:3px;text-align:center;background:#4f81bd;border-radius:10px;" src="http://localhost:3000/dealfunnelwhite.png"></img></center>
