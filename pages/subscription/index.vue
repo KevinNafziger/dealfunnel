@@ -54,9 +54,9 @@
         mixins: [stripeCheckoutMixin],
         data () {
       return {
-          price: 'price_1IHxuYIUxqRwvzPZX8au5ouJ',
-          successUrl: 'https://dfunnel.herokuapp.com/process-payment',
-          cancelUrl: 'https://dfunnel.herokuapp.com/'
+          price: process.env.STRIPE_PRICE_ID ||  'price_1IHxuYIUxqRwvzPZX8au5ouJ',
+          successUrl: 'https://www.dealfunnel.net/process-payment',
+          cancelUrl: 'https://www.dealfunnel.net/process-payment'
          }
         }
     }

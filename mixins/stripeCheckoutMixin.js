@@ -22,6 +22,7 @@ export default {
     }
   },
   mounted() {
-    this.stripe = Stripe('pk_test_iieOiqRaTPCJXE51kinOoPE0');
+    let testKey = process.env.STRIPE_TEST_PUBLIC || 'pk_test_iieOiqRaTPCJXE51kinOoPE0';
+    this.stripe = Stripe(testKey);
   }
 }

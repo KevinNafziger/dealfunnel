@@ -1,9 +1,9 @@
 <template>
   <body>
   <div><center><br><br><br>
-    <h4>Thank you for subscribing.</h4>
+    <h4>Thank you for subscribing to <i>DealFunnel</i>.</h4>
     <div class="T-T-B">
-    <h4>Please enter the email where you want to receive <i>The Big Fintech Newsletter</i> and choose a password below. You can also use this email and password to login to <i>DealFunnel Online</i>.  
+    <h4>Please enter your email address and choose a password. The email is for where you will receive <i>The Big Fintech Newsletter</i>. The password is used, along with your email address, to login to <i>DealFunnel Online.</i>   
     </h4>
   </div>
   <br></center></div>
