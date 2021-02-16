@@ -75,7 +75,6 @@
           </Board>
       </div>
   </main>
-  <p style="background:white; border-radius:5px;" class="alpha">DealFunnel 2021</p>
   <br>
 </div>
 </template>
