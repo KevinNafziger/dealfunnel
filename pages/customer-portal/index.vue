@@ -1,7 +1,7 @@
 <template>
   <div class="about-page">
-    <p>Our customer portal, for update your account information, will be available shortly. </p>
-    <p>In the meantime, if you need need to update your account information or would like to cancel your subscription, please email us at <i>info@fintechhorizonsmedia.com</i> or call our support line at 480-438-5302 and we can assist you in updating the status of your account. </p>
+    <p>Our customer portal for updating your account information, will be available shortly. </p>
+    <p>In the meantime, if you need to update your account information or would like to cancel your subscription, email us at <i>info@fintechhorizonsmedia.com</i> or call us at 480-438-5302 to update your account information.</p>
   </div>
  </template>
  <style scoped>
