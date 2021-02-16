@@ -114,7 +114,7 @@ button.btn.btn-large.btn-extended.grey.lighten-4.black-text {
   display: block;
 }
 .md-field {
-  background-color: #47474747 !important;
+  background-color: rgb(232, 240, 254) !important;
   border-radius: 5px;
   padding:5px;
 }
