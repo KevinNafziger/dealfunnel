@@ -1,5 +1,5 @@
 <template>
-<body>
+<body style="margin-bottom:100px;">
   <section class="subs-card">
      <article class="plan__item plan__item--active">
        <ul class="plan__feature-list">
@@ -97,7 +97,7 @@ a {
   text-decoration: unset;
 }
 .subs-card {
-  padding-top:100px;
+  padding-top:50px;
 }
 .cupon-link {
   color: #78b962 !important;
@@ -173,7 +173,7 @@ a {
   margin: 1.5em 0;
 }
 .plan__item {
-  --radius: 10px;
+  --radius: 9px;
   border-radius: var(--radius);
   box-shadow: 1px 2px 15px rgba(80,80,80,0.12);
   margin-top: 6vw;
@@ -234,10 +234,10 @@ a {
   text-decoration-color: var(--accent-2);
 }
 .plans__special-offer {
-    margin-top: 5vw;
+    margin-top: 4vw;
 }
 .currency {
-  margin: 2em var(--margin-x);
+  margin: 1.5em var(--margin-x);
   display: grid;
   justify-content: flex-end;
   grid-gap: .5em;
@@ -252,7 +252,7 @@ a {
   padding: 2px 4px;
 }
 .body {
-  height: 100%;
+  height: 90%;
   display: flow-root;
   margin-top: 0px;
 }
