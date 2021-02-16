@@ -15,11 +15,12 @@
 <style scoped>
 
 .text-block-20 {
-
       border-radius: 10px;
  }
 
-
+body {
+  background: rgba(241,241,241,0.98039);
+}
  .gardient-button {
      display: grid;
      background-image: linear-gradient(200deg, #4F81BD 10%, #4F81BD 39%, #8ab4f8 80%);
@@ -78,7 +79,8 @@ h2 {
 
 
 .card {
-  color: white;
+  background-color: #ffffff !important;
+  color: #ffffff;
   max-width: 900px;
   margin-left: auto;
   margin-top:200px;
@@ -87,6 +89,7 @@ h2 {
   height: 300px;
   border-radius: 10px;
   text-align: center;
+  box-shadow: 0px 0px 10px -8px gray;
 }
 .center {
   align-items:center;

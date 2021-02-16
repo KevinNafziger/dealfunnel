@@ -196,8 +196,10 @@ export default {
 .nav-item a:hover,
 .nav-item a:active,
 .nav-item a.nuxt-link-active {
-    box-shadow: 0px 0px 20px -5px #80b9ff;
-    border-radius: 3px;
+  text-decoration: none !important;
+  background:#4f71bd;
+  box-shadow: inset 0px 0px 10px -5px #2f2f2f !important;
+  border-radius:5px;
 }
 
 
