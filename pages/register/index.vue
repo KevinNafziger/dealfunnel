@@ -15,12 +15,12 @@
             {{errorMsg}} <br>
           </label>
           <md-field md-clearable>
-            <span class="mdi mdi-email"></span>
+            <span class="mdi-inputs mdi mdi-email"></span>
             <md-input type="email" name="email" id="email" autocomplete="email" v-model="email" />
           </md-field>
 
           <md-field>
-              <span class="mdi mdi-key"></span>
+              <span class="mdi-inputs mdi mdi-key"></span>
             <md-input type="password" name="password" id="password" autocomplete="password" v-model="password" />
           </md-field>
         </md-card-content>
@@ -91,6 +91,10 @@ label, md-button {
   margin-top:20px !important;
   margin-bottom:20px !important;
 }
+.mdi-inputs {
+  font-size: 20px;
+  padding:5px;
+}
 .md-button {
   background-color: blue;
 }
@@ -103,5 +107,15 @@ button.btn.btn-large.btn-extended.grey.lighten-4.black-text {
 .md-button {
     background-color: #4f81bd;
     color: #ffffff;
+}
+.md-card, .lok {
+  background-color: #ffffff !important;
+  min-width:300px !important;
+  display: block;
+}
+.md-field {
+  background-color: #47474747 !important;
+  border-radius: 5px;
+  padding:5px;
 }
 </style>
