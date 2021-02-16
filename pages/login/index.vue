@@ -88,6 +88,12 @@ h3 {
   text-align: center;
   margin: 20px;
 }
+label {
+  margin-top: 20px !important;
+    margin-bottom: 20px !important;
+    font-style: italic;
+    color: #989898;
+}
 label, md-button {
   margin-top:20px !important;
   margin-bottom:20px !important;
