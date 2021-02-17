@@ -1,9 +1,29 @@
 <template>
   <div class="about-page">
-    <p>Our customer portal for updating your account information, will be available shortly. </p>
-    <p>In the meantime, if you need to update your account information or would like to cancel your subscription, email us at <i>info@fintechhorizonsmedia.com</i> or call us at 480-438-5302 to update your account information.</p>
+    <p></p>
   </div>
  </template>
+<script>
+import firebase from 'firebase';
+import { firestorePlugin} from "vuefire";
+import Vue from "vue";
+import  "firebase/auth";
+import "firebase/firestore";
+Vue.use(firestorePlugin)
+export default {
+  async fetch() {
+
+  const functionRef = firebase
+  .app()
+  .functions('us-central1')
+  .httpsCallable('ext-firestore-stripe-subscriptions-createPortalLink');
+const { data } = await functionRef({ returnUrl:  'https://www.dealfunnel.net/process-payment' });
+ window.location.assign(data.url);
+  },
+
+}
+</script>
+
  <style scoped>
 .about-page {
   text-align: center;
