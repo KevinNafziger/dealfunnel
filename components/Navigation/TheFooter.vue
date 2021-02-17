@@ -28,7 +28,9 @@ export default {
   width: 33.33% ;
 }
 
-
+.mdi-mail{
+  color:#ffffff;
+}
 .social-media-links {
     width: 19%;
     display: inline-flex;
