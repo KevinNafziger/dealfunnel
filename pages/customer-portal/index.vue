@@ -17,7 +17,7 @@ export default {
   .app()
   .functions('us-central1')
   .httpsCallable('ext-firestore-stripe-subscriptions-createPortalLink');
-const { data } = await functionRef({ returnUrl:  'https://www.dealfunnel.net/process-payment' });
+const { data } = await functionRef({ returnUrl:  window.location.origin });
  window.location.assign(data.url);
   },
 
