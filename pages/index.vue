@@ -1,119 +1,3 @@
-<template>
-  <div class="home-page">
-  <section style="margin-bottom:30px;">
-  </section>
-  <center>
-  </center>
-  <br>
-<div class="aware-card">
-  <h1 style="border-radius:3px; margin-bottom: 0px; opacity: 1; transform: translateX(0px) translateY(0px) translateZ(0px);" class="intro-title">Newsletters, data and reports <br>
-  </h1><br>
-  <p class="MsoNormal">
-  <span class="intro-p">
-    DealFunnel features articles, reports, searchable datasets and our popular biweekly <i>Big Fintech Newsletter.</i> Our newsletter has grown and added new coverage areas over time. It still has "Big Fintech" in its title, but its focus now encompasses technology businesses serving the financial services industry and beyond.
-    This includes companies in Blockchain, DLT and Crypto as well as in HealthTech, Artificial Intelligence, LegalTech, and Cybersecurity.
-  </span>
-  </p>
-  <p class="intro-p" >
-  <b>Exceptional</b> –
-  <span class="SpellE"><i>The Big Fintech Newsletter</i> </span>
-  is beloved by dealmakers including investment bankers, partners and associates of venture capital firms, industry attorneys, PE practitioners and corporate executives. The newsletter's core mission remains constant: to summarize every M&A deal, capital raise, growth investment, divestiture, public offering and token sale for every featured category and subcategory within the newsletter's areas of focus, and to deliver that summary in an email to subscribers each Tuesday and Thursday at or before 8am ET. Beyond this core focus, each newsletter highlights information for generating new business opportunities and for staying abreast of news on management changes, company pivots, reported M&A rumors, busted deals and regulatory developments. Each newsletter typically also includes a link to a <i>DealFunnel</i> propietary report or article or includes the full text of an article or articles within the newsletter body. Subscribers also get access to all content from current and prior newsletters through <i>DealFunnel Online</i>.
-  </p>
-  <p class="intro-p"><b>Data Driven</b>–<span class="SpellE"></span>
-  <i>DealFunnel</i> subscribers also receive online access to searchable datasets on capital raises, companies and articles derived from those sections in the newsletter. The data can be exported to <i>Excel</i> and other spreadsheet programs.
-  <span style="mso-spacerun:yes"></span>
-  </p>
-  <p class="intro-p" ><b>Multi-channel support </b>–<span class="SpellE"></span>
-  The <i>DealFunnel</i> team is here to help answer your questions. You can contact us by email,
-  phone or join our Slack channel.
-  <span style="mso-spacerun:yes"></span>
-  </p>
-  <p class="intro-p">
-  <b>Propietary Content</b>–<span class="SpellE"></span>
-  <i>DealFunnel Online</i> gives readers access to all of the propietary content from <i>the Big Fintech Newsletter.</i>
-  This propietary content includes reports on trending topics along with sets of auto-generated reports which include all of the company-related articles and capital raise data for that topic. <i>DealFunnel's</i> auto-generated reports are grouped by strategic action, size of expected raise, timing of expected raise, geography, subsector, and by broader categories such as 'Blockchain', 'Insurtech', 'Payments', 'AI', 'Lending' and 'OpenBanking. <i>DealFunnel</i> reports aggregate all of <i>DealFunnel's</i> own company-specific intelligence on that topic, derived from interviews with an executive or executives at the featured company.
-  Our reports can generate a "wow" from some readers when they see the sheer volume of company-specific intelligence they provide.
-  <i>DealFunnel</i> reports aren't designed to provide a quick overview but to serve practitioners who want to review a large amount of company-specific intelligence related to a topic in a single document. A <i>DealFunnel</i> report starts with a summary view highlighting the most actionable parts of each featured article. From this view, readers can scan all leads on a topic in order to quickly discover only those most relevant to them.
-  </p>
-  <p class="intro-p"><b>Value Proposition</b>–<span></span>
-  <i>DealFunnel</i> provides two main sources of value to subscribers. The first is a comprehensive summary of all equity raises, M&A, public offerings and token sales within our core focus areas, contained in our newsletter and delivered every Tuesday and Thursday morning. Readers trust <i>DealFunnel</i> for a complete, accurate account of strategic transactions for all featured categories in our newsletter's core areas. We built this trust by consistently delivering a complete, reliable summary of financial transactions in each and every newsletter. Readers know they can rely on our newsletter to form their own picture of change and can also utilize the complete transactions summary to provide useful insights to their clients. <i>DealFunnel</i> propietary reports and articles, featured in the newsletter and through <i>DealFunnel Online</i>, offer another key source of value to subscribers. <i>DealFunnel's</i> propietary content serves as a rich repository of primary source leads on forward-looking company strategy that are rarely available in other publications.
-  <i>The Big Fintech Newsletter</i> arrives in your inbox every Tuesday and Thursday morning. It is easy-to-read and designed so you can quickly absorb the information you need and go on with your day, armed with new insights on how your industry is changing. Capturing even a subset of the newsletter's information on your own would require hours of alternating between feeds, blogs, online news portals, corporate websites and online trade publications. The newsletter also highlights new revenue opportunities from our propietary reports and articles and subscribers also get complete access to <i>DealFunnel Online</i> and all of its searchable datasets and propietary content.
-  A subscription to <i>DealFunnel</i> is $79.99 a month. To subscribe, or to learn more about what is included in a <i>DealFunnel</i> subscription, click on <i>Plan Details</i>.
-  </p>
-  <nuxt-link class="gardient-button" to="/subscription">Plan Details</nuxt-link>
-  <p class="intro-p"><b>Team</b>–<span></span>
-    <i>DealFunnel</i> is the lead publication of <i>Fintech Horizons Media</i>, a news organization founded by deal information specialists. The <i>DealFunnel</i> team includes Kevin Nafziger, CEO and Co-founder; Ben Koconis, Editor and Co-founder; Rebecca Wenzel, Americas Editor; Abraham Felix, Head of IT; and Berenice Cabellero, Head of Research.
-  </p>
-</div>
-<!-- Girl Image
-<img class="img-G" width="300px;" src="https://firebasestorage.googleapis.com/v0/b/deal-funnel.appspot.com/o/deal%20funnel%20web%20stock%2Fsada.png?alt=media&amp;token=dad23bb5-f65c-414d-807e-372dee5a5522">
-
-
-  <!-- Testimonials -->
-  <div class="testimonials">
-    <!-- CARD 1 START-->
-    <div class="card">
-      <div class="layer"></div>
-      <div class="content">
-        <p class="testi-p"><i>DealFunnel</i> offers insightful content about innovative firms in the industry, allowing us to keep abreast of M&A and capital raises in the US and globally. The platform presents Fintech opportunities that we might not have seen in more traditional news or data sources.</p>
-         <img src="https://filesforfintech.s3.amazonaws.com/EvolveCapital.png" alt="">
-
-        <div class="details">
-          <h2>
-            <a href="https://www.evolve-capital.com/">Evolve Capital Partners</a><br>
-            <span></span>
-          </h2>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="layer"></div>
-      <div class="content">
-        <p class="testi-p">We love the newsletter. It is the best out there. It is not even close.
-        </p>
-        <div class="image">
-         <img class="images"  src="https://upload.wikimedia.org/wikipedia/commons/2/28/Female_portrait_placeholder_cropped.jpg" alt="">
-        </div>
-        <div class="details">
-          <h2>
-            Head of Research, CVC Firm<br>
-            <span></span>
-          </h2>
-        </div>
-      </div>
-    </div>
-    <!-- CARD 3 end-->
-  </div>
-
-
-</div>
-</template>
-
-<script>
-import '/plugins/vue-gtag.js'
-import  "firebase/auth";
-import firebase from 'firebase';
-import {mapState, mapMutations} from 'vuex';
-export default {
-
-computed: {
-    ...mapState({
-          loadedPosts: pages => state.Post1,
-          //post:  state.posts.post
-
-      }),
-   },
-
-//asyncData ({ userAgent }) {
-  //  return {
-    //  userAgent
-//}
-//},
-
-}
-
-</script>
-
 <style scoped>
 
 .p-class-j {
@@ -449,3 +333,122 @@ border-radius: 20px;
   letter-spacing: 0.3px;
 }
 </style>
+
+<template>
+  <div class="home-page">
+  <section style="margin-bottom:30px;">
+  </section>
+  <center>
+  </center>
+  <br>
+<div class="aware-card">
+  <h1 style="border-radius:3px; margin-bottom: 0px; opacity: 1; transform: translateX(0px) translateY(0px) translateZ(0px);" class="intro-title">Newsletters, data and reports <br>
+  </h1><br>
+  <p class="MsoNormal">
+  <span class="intro-p">
+    DealFunnel features articles, reports, searchable datasets and our popular biweekly <i>Big Fintech Newsletter.</i> Our newsletter has grown and added new coverage areas over time. It still has "Big Fintech" in its title, but its focus now encompasses technology businesses serving the financial services industry and beyond.
+    This includes companies in Blockchain, DLT and Crypto as well as in HealthTech, Artificial Intelligence, LegalTech, and Cybersecurity.
+  </span>
+  </p>
+  <p class="intro-p" >
+  <b>Exceptional</b> –
+  <span class="SpellE"><i>The Big Fintech Newsletter</i> </span>
+  is beloved by dealmakers including investment bankers, partners and associates of venture capital firms, industry attorneys, PE practitioners and corporate executives. The newsletter's core mission remains constant: to summarize every M&A deal, capital raise, growth investment, divestiture, public offering and token sale for every featured category and subcategory within the newsletter's areas of focus, and to deliver that summary in an email to subscribers each Tuesday and Thursday at or before 8am ET. Beyond this core focus, each newsletter highlights information for generating new business opportunities and for staying abreast of news on management changes, company pivots, reported M&A rumors, busted deals and regulatory developments. Each newsletter typically also includes a link to a <i>DealFunnel</i> propietary report or article or includes the full text of an article or articles within the newsletter body. Subscribers also get access to all content from current and prior newsletters through <i>DealFunnel Online</i>.
+  </p>
+  <p class="intro-p"><b>Data Driven</b>–<span class="SpellE"></span>
+  <i>DealFunnel</i> subscribers also receive online access to searchable datasets on capital raises, companies and articles derived from those sections in the newsletter. The data can be exported to <i>Excel</i> and other spreadsheet programs.
+  <span style="mso-spacerun:yes"></span>
+  </p>
+  <p class="intro-p" ><b>Multi-channel support </b>–<span class="SpellE"></span>
+  The <i>DealFunnel</i> team is here to help answer your questions. You can contact us by email,
+  phone or join our Slack channel.
+  <span style="mso-spacerun:yes"></span>
+  </p>
+  <p class="intro-p">
+  <b>Propietary Content</b>–<span class="SpellE"></span>
+  <i>DealFunnel Online</i> gives readers access to all of the propietary content from <i>the Big Fintech Newsletter.</i>
+  This propietary content includes reports on trending topics along with sets of auto-generated reports which include all of the company-related articles and capital raise data for that topic. <i>DealFunnel's</i> auto-generated reports are grouped by strategic action, size of expected raise, timing of expected raise, geography, subsector, and by broader categories such as 'Blockchain', 'Insurtech', 'Payments', 'AI', 'Lending' and 'OpenBanking. <i>DealFunnel</i> reports aggregate all of <i>DealFunnel's</i> own company-specific intelligence on that topic, derived from interviews with an executive or executives at the featured company.
+  Our reports can generate a "wow" from some readers when they see the sheer volume of company-specific intelligence they provide.
+  <i>DealFunnel</i> reports aren't designed to provide a quick overview but to serve practitioners who want to review a large amount of company-specific intelligence related to a topic in a single document. A <i>DealFunnel</i> report starts with a summary view highlighting the most actionable parts of each featured article. From this view, readers can scan all leads on a topic in order to quickly discover only those most relevant to them.
+  </p>
+  <p class="intro-p"><b>Value Proposition</b>–<span></span>
+  <i>DealFunnel</i> provides two main sources of value to subscribers. The first is a comprehensive summary of all equity raises, M&A, public offerings and token sales within our core focus areas, contained in our newsletter and delivered every Tuesday and Thursday morning. Readers trust <i>DealFunnel</i> for a complete, accurate account of strategic transactions for all featured categories in our newsletter's core areas. We built this trust by consistently delivering a complete, reliable summary of financial transactions in each and every newsletter. Readers know they can rely on our newsletter to form their own picture of change and can also utilize the complete transactions summary to provide useful insights to their clients. <i>DealFunnel</i> propietary reports and articles, featured in the newsletter and through <i>DealFunnel Online</i>, offer another key source of value to subscribers. <i>DealFunnel's</i> propietary content serves as a rich repository of primary source leads on forward-looking company strategy that are rarely available in other publications.
+  <i>The Big Fintech Newsletter</i> arrives in your inbox every Tuesday and Thursday morning. It is easy-to-read and designed so you can quickly absorb the information you need and go on with your day, armed with new insights on how your industry is changing. Capturing even a subset of the newsletter's information on your own would require hours of alternating between feeds, blogs, online news portals, corporate websites and online trade publications. The newsletter also highlights new revenue opportunities from our propietary reports and articles and subscribers also get complete access to <i>DealFunnel Online</i> and all of its searchable datasets and propietary content.
+  A subscription to <i>DealFunnel</i> is $79.99 a month. To subscribe, or to learn more about what is included in a <i>DealFunnel</i> subscription, click on <i>Plan Details</i>.
+  </p>
+  <nuxt-link class="gardient-button" to="/subscription">Plan Details</nuxt-link>
+  <p class="intro-p"><b>Team</b>–<span></span>
+    <i>DealFunnel</i> is the lead publication of <i>Fintech Horizons Media</i>, a news organization founded by deal information specialists. The <i>DealFunnel</i> team includes Kevin Nafziger, CEO and Co-founder; Ben Koconis, Editor and Co-founder; Rebecca Wenzel, Americas Editor; Abraham Felix, Head of IT; and Berenice Cabellero, Head of Research.
+  </p>
+</div>
+<!-- Girl Image
+<img class="img-G" width="300px;" src="https://firebasestorage.googleapis.com/v0/b/deal-funnel.appspot.com/o/deal%20funnel%20web%20stock%2Fsada.png?alt=media&amp;token=dad23bb5-f65c-414d-807e-372dee5a5522">
+
+
+  <!-- Testimonials -->
+  <div class="testimonials">
+    <!-- CARD 1 START-->
+    <div class="card">
+      <div class="layer"></div>
+      <div class="content">
+        <p class="testi-p"><i>DealFunnel</i> offers insightful content about innovative firms in the industry, allowing us to keep abreast of M&A and capital raises in the US and globally. The platform presents Fintech opportunities that we might not have seen in more traditional news or data sources.</p>
+         <img src="https://filesforfintech.s3.amazonaws.com/EvolveCapital.png" alt="">
+
+        <div class="details">
+          <h2>
+            <a href="https://www.evolve-capital.com/">Evolve Capital Partners</a><br>
+            <span></span>
+          </h2>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="layer"></div>
+      <div class="content">
+        <p class="testi-p">We love the newsletter. It is the best out there. It is not even close.
+        </p>
+        <div class="image">
+         <img class="images"  src="https://upload.wikimedia.org/wikipedia/commons/2/28/Female_portrait_placeholder_cropped.jpg" alt="">
+        </div>
+        <div class="details">
+          <h2>
+            Head of Research, CVC Firm<br>
+            <span></span>
+          </h2>
+        </div>
+      </div>
+    </div>
+    <!-- CARD 3 end-->
+  </div>
+
+
+</div>
+</template>
+
+<script>
+import Vue from 'vue';
+import Vue2TouchEvents from 'vue2-touch-events';
+import '/plugins/vue-gtag.js';
+import  "firebase/auth";
+import firebase from 'firebase';
+import {mapState, mapMutations} from 'vuex';
+Vue.use(Vue2TouchEvents);
+export default {
+
+computed: {
+    ...mapState({
+          loadedPosts: pages => state.Post1,
+          //post:  state.posts.post
+
+      }),
+   },
+
+//asyncData ({ userAgent }) {
+  //  return {
+    //  userAgent
+//}
+//},
+
+}
+
+</script>

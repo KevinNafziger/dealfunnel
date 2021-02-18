@@ -40,6 +40,7 @@
     "vue-sidebar-menu": "^4.7.4",
     "vue-stripe": "^0.1.52",
     "vue-tippy": "^4.7.2",
+    "vue2-touch-events": "^3.2.0",
     "vuedraggable": "^2.24.3",
     "vuefire": "^2.2.5"
   },
