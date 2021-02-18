@@ -76,6 +76,9 @@
   font-size: 39px;
       font-family: monospace;
 }
+article {
+  margin-bottom: 20px;
+}
 b {
   color: #4f81bd;
 }
