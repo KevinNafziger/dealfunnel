@@ -239,7 +239,7 @@ a {
          <li class="plan__feature-item"><span class="accent-2"></span></li>
           <hr>
        </ul>
-  <button class="pricing plan-item plan__cta-link" onclick="checkout" role="link">
+  <button class="pricing plan-item plan__cta-link" @click="checkout" role="link">
         Purchase
   </button>
      </article>
