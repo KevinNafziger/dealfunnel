@@ -1,6 +1,8 @@
 <template>
 <body style="margin-bottom:100px;">
+
   <section class="subs-card">
+    <v-card>
      <article class="plan__item plan__item--active">
        <ul class="plan__feature-list">
          <li class="plan__feature-item"></li>
@@ -26,6 +28,7 @@
         Purchase
   </button>
      </article>
+   </v-card>
     <!-- <article class="plan__item">
        <div class="plan__header">
          <h2 class="plan__title">Enterprise</h2>
@@ -76,6 +79,7 @@
   font-size: 39px;
       font-family: monospace;
 }
+
 article {
   margin-bottom: 20px;
 }
@@ -100,6 +104,16 @@ a {
 }
 .subs-card {
   padding-top:50px;
+}
+/* iphone Portrait */
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    .subs-card {
+      padding-top:0px !important;
+    }
 }
 .cupon-link {
   color: #78b962 !important;
