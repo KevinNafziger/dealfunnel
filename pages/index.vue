@@ -52,7 +52,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- Girl Image
 <img class="img-G" width="300px;" src="https://firebasestorage.googleapis.com/v0/b/deal-funnel.appspot.com/o/deal%20funnel%20web%20stock%2Fsada.png?alt=media&amp;token=dad23bb5-f65c-414d-807e-372dee5a5522">
 
-
+<DynamicComponent></DynamicComponent>
   <!-- Testimonials -->
   <div class="testimonials">
     <!-- CARD 1 START-->
@@ -111,6 +111,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </script>
 <script>
 import {mapState, mapMutations} from 'vuex';
+import DynamicComponent from '@/components/Grid/DynamicContent';
 export default {
 
 computed: {
