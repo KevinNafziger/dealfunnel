@@ -54,6 +54,7 @@ export default {
           response => {
             this.$store.dispatch("auth/setEmail", response.user.email);
             this.$router.push('/posts');
+            this.$gtag.event('login_with_email', { method: 'Google' })
           },
           err => {
             this.errorMsg = err.message;

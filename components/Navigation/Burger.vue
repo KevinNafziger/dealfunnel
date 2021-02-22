@@ -1,33 +1,3 @@
-<template>
-    <div id="burger"
-         :class="{ 'active' : isBurgerActive }"
-         @click.prevent="toggle">
-        <slot>
-            <button type="button" class="burger-button" title="Menu">
-                <span class="hidden">Toggle menu</span>
-                <span class="burger-bar burger-bar--1"></span>
-                <span class="burger-bar burger-bar--2"></span>
-                <span class="burger-bar burger-bar--3"></span>
-            </button>
-        </slot>
-    </div>
-</template>
-<script>
-    import { store, mutations } from '@/store/store.js'
-
-    export default {
-        computed: {
-            isBurgerActive() {
-                return store.isNavOpen
-            }
-        },
-        methods: {
-            toggle() {
-                mutations.toggleNav()
-            }
-        }
-    }
-</script>
 <style>
    .hidden {
         visibility: hidden;
@@ -109,3 +79,36 @@
         transform: rotate(-45deg)
     }
 </style>
+
+<template>
+    <div id="burger"
+         :class="{ 'active' : isBurgerActive }"
+         v-touch-class="'active'"
+         v-touch:tap="toggle"
+         >
+        <slot>
+            <button type="button" class="burger-button" title="Menu">
+                <span class="hidden">Toggle menu</span>
+                <span class="burger-bar burger-bar--1"></span>
+                <span class="burger-bar burger-bar--2"></span>
+                <span class="burger-bar burger-bar--3"></span>
+            </button>
+        </slot>
+    </div>
+</template>
+<script>
+    import { store, mutations } from '@/store/store.js'
+
+    export default {
+        computed: {
+            isBurgerActive() {
+                return store.isNavOpen
+            }
+        },
+        methods: {
+            toggle() {
+                mutations.toggleNav()
+            }
+        }
+    }
+</script>
