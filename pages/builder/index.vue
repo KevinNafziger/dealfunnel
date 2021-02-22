@@ -80,6 +80,7 @@
 </template>
 
 <script>
+
 import Vue from 'vue';
 import Board from '@/components/Draggable/Board';
 import Card from '@/components/Draggable/Card';

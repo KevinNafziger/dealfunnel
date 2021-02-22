@@ -1,14 +1,13 @@
-<<<<<<< HEAD
+
 <template>
   <div class="home-page">
-    <!-- Google Tag Manager (noscript) -->
+
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MH653XG"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+
   <section style="margin-bottom:30px;">
   </section>
-  <center>
-  </center>
+
   <br>
 <div class="aware-card">
   <h1 style="border-radius:3px; margin-bottom: 0px; opacity: 1; transform: translateX(0px) translateY(0px) translateZ(0px);" class="intro-title">Newsletters, data and reports <br>
@@ -50,8 +49,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <i>DealFunnel</i> is the lead publication of <i>Fintech Horizons Media</i>, a news organization founded by deal information specialists. The <i>DealFunnel</i> team includes Kevin Nafziger, CEO and Co-founder; Ben Koconis, Editor and Co-founder; Rebecca Wenzel, Americas Editor; Abraham Felix, Head of IT; and Berenice Cabellero, Head of Research.
   </p>
 </div>
+
+<Content/>
+
+
 <!-- Girl Image
 <img class="img-G" width="300px;" src="https://firebasestorage.googleapis.com/v0/b/deal-funnel.appspot.com/o/deal%20funnel%20web%20stock%2Fsada.png?alt=media&amp;token=dad23bb5-f65c-414d-807e-372dee5a5522">
+-->
 
 
   <!-- Testimonials -->
@@ -89,32 +93,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <!-- CARD 3 end-->
   </div>
-
-
 </div>
+
 </template>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MH653XG');</script>
-<!-- End Google Tag Manager -->
-<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VRX67904FJ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-VRX67904FJ');
-</script>
 <script>
+import Vue from 'vue';
 import {mapState, mapMutations} from 'vuex';
-import DynamicComponent from '@/components/Grid/DynamicContent';
-export default {
+import Content from '@/components/Grid/content';
 
+export default {
 computed: {
     ...mapState({
           loadedPosts: pages => state.Post1,
@@ -133,8 +121,6 @@ computed: {
 
 </script>
 
-=======
->>>>>>> 0bb11471c3e8070d19e5069677211c6c42b1d6c0
 <style scoped>
 
 .p-class-j {
@@ -518,6 +504,8 @@ border-radius: 20px;
     <i>DealFunnel</i> is the lead publication of <i>Fintech Horizons Media</i>, a news organization founded by deal information specialists. The <i>DealFunnel</i> team includes Kevin Nafziger, CEO and Co-founder; Ben Koconis, Editor and Co-founder; Rebecca Wenzel, Americas Editor; Abraham Felix, Head of IT; and Berenice Cabellero, Head of Research.
   </p>
 </div>
+
+<Content/>
 <!-- Girl Image
 <img class="img-G" width="300px;" src="https://firebasestorage.googleapis.com/v0/b/deal-funnel.appspot.com/o/deal%20funnel%20web%20stock%2Fsada.png?alt=media&amp;token=dad23bb5-f65c-414d-807e-372dee5a5522">
 
@@ -563,15 +551,14 @@ border-radius: 20px;
 </template>
 
 <script>
+import Content from '@/components/Grid/content';
 import Vue from 'vue';
 import Vue2TouchEvents from 'vue2-touch-events';
 import '/plugins/vue-gtag.js';
 import  "firebase/auth";
 import firebase from 'firebase';
 import {mapState, mapMutations} from 'vuex';
-Vue.use(Vue2TouchEvents);
 export default {
-
 computed: {
     ...mapState({
           loadedPosts: pages => state.Post1,

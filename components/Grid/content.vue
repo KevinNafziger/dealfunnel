@@ -1,5 +1,6 @@
 <template>
   <div class="exespotbody">
+    <center><h2> Dealfunnel Insigths</h2></center><br>
   <div class="grid">
 
   <!--  <a v-for="(news,index) in newsList" v-bind:key="news.id" href="" class="module" style="display:flex;text-decoration:none;color:#14a0fd;">
@@ -12,7 +13,8 @@
     <!-- single news Block for news -->
   <a v-bind:key="newsList[0].id" href="" class="module" style="display:flex;text-decoration:none;color:#14a0fd;">
      <div>
-       <img  src="https://fintechapp.s3.us-east-2.amazonaws.com/y2qYjf8e2hp8z5yrgyfxF2NN?response-content-disposition=inline%3B%20filename%3D%22BoxLogo.png%22%3B%20filename%2A%3DUTF-8%27%27BoxLogo.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJG6DG75G7BXQ3XUA%2F20210115%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210115T192217Z&X-Amz-Expires=518400&X-Amz-SignedHeaders=host&X-Amz-Signature=26b742c676a7fc0854c1efa0c81bf60e9239bc5068606262b3b1eab0f7a21245">
+      <!-- <img  src="https://fintechapp.s3.us-east-2.amazonaws.com/y2qYjf8e2hp8z5yrgyfxF2NN?response-content-disposition=inline%3B%20filename%3D%22BoxLogo.png%22%3B%20filename%2A%3DUTF-8%27%27BoxLogo.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJG6DG75G7BXQ3XUA%2F20210115%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210115T192217Z&X-Amz-Expires=518400&X-Amz-SignedHeaders=host&X-Amz-Signature=26b742c676a7fc0854c1efa0c81bf60e9239bc5068606262b3b1eab0f7a21245">
+      -->
        <p> {{ newsList[0].description }} </p>
      </div>
    </a>
@@ -21,8 +23,10 @@
    <!-- single news Block for comapnies-->
  <a v-bind:key="companyList[0].id" href="" class="module" style="display:flex;text-decoration:none;color:#14a0fd;">
     <div>
-      <img  src="https://fintechapp.s3.us-east-2.amazonaws.com/y2qYjf8e2hp8z5yrgyfxF2NN?response-content-disposition=inline%3B%20filename%3D%22BoxLogo.png%22%3B%20filename%2A%3DUTF-8%27%27BoxLogo.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJG6DG75G7BXQ3XUA%2F20210115%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210115T192217Z&X-Amz-Expires=518400&X-Amz-SignedHeaders=host&X-Amz-Signature=26b742c676a7fc0854c1efa0c81bf60e9239bc5068606262b3b1eab0f7a21245">
-      <p> {{ companyList[0].description }} </p>
+    <!--  <img  src="https://fintechapp.s3.us-east-2.amazonaws.com/y2qYjf8e2hp8z5yrgyfxF2NN?response-content-disposition=inline%3B%20filename%3D%22BoxLogo.png%22%3B%20filename%2A%3DUTF-8%27%27BoxLogo.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJG6DG75G7BXQ3XUA%2F20210115%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210115T192217Z&X-Amz-Expires=518400&X-Amz-SignedHeaders=host&X-Amz-Signature=26b742c676a7fc0854c1efa0c81bf60e9239bc5068606262b3b1eab0f7a21245">
+    -->
+    <h3> {{ companyList[0].name }} </h3> <br>
+    <p> {{ companyList[0].description }} </p>
     </div>
   </a>
   <!-- End of single news Block -->
@@ -30,9 +34,10 @@
   <!-- single news Block for data-->
 <a v-bind:key="dataList[0].id" href="" class="module" style="display:flex;text-decoration:none;color:#14a0fd;">
    <div>
-     <img  src="https://fintechapp.s3.us-east-2.amazonaws.com/y2qYjf8e2hp8z5yrgyfxF2NN?response-content-disposition=inline%3B%20filename%3D%22BoxLogo.png%22%3B%20filename%2A%3DUTF-8%27%27BoxLogo.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJG6DG75G7BXQ3XUA%2F20210115%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210115T192217Z&X-Amz-Expires=518400&X-Amz-SignedHeaders=host&X-Amz-Signature=26b742c676a7fc0854c1efa0c81bf60e9239bc5068606262b3b1eab0f7a21245">
+    <!-- <img  src="https://fintechapp.s3.us-east-2.amazonaws.com/y2qYjf8e2hp8z5yrgyfxF2NN?response-content-disposition=inline%3B%20filename%3D%22BoxLogo.png%22%3B%20filename%2A%3DUTF-8%27%27BoxLogo.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJG6DG75G7BXQ3XUA%2F20210115%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210115T192217Z&X-Amz-Expires=518400&X-Amz-SignedHeaders=host&X-Amz-Signature=26b742c676a7fc0854c1efa0c81bf60e9239bc5068606262b3b1eab0f7a21245">
+    -->
      <p> {{ dataList[0].title }} </p>
-     <!-- <p v-html="dataList[0].blog_entry"> </p> --> 
+     <!-- <p v-html="dataList[0].blog_entry"> </p> -->
      <p> {{ dataList[0].author.name }} </p>
      <p> {{ dataList[0].author.title}} </p>
    </div>
@@ -57,6 +62,7 @@ import newsData from "@/static/news.json";
 import companyData from "@/static/company.json";
 import dataData from "@/static/data.json";
 export default {
+  name: 'content',
   data() {
     return {
       newsList: newsData, // to avoid ambiguity in v-for
@@ -73,6 +79,9 @@ img {
   width: 100px;
   margin:20px;
   border-radius: 20px;
+}
+h2 {
+  color: #4f81bd;
 }
 .module {
     background: white;
@@ -104,14 +113,18 @@ img {
     flex-wrap: wrap;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-auto-rows: minmax(150px, auto);
-    grid-gap: 1em;
-    max-width: 80%;
+    grid-gap: 2em;
+    max-width: 1000px !important;
+    width: 90%;
     margin-left:auto;
     margin-right:auto;
     margin-bottom: 50px;
 
 }
-
+.exespotbody{
+  margin-top:100px;
+  max-wdth: 1000px;
+}
 @media screen and (max-width:1400px) {
   .grid {
     max-width: 600px;
