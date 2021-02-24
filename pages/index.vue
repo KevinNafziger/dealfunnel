@@ -385,7 +385,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </p>
 </div>
 
-<Content/>
+<Item/>
 <StoriesSpotlight/>
 <!-- Girl Image
 <img class="img-G" width="300px;" src="https://firebasestorage.googleapis.com/v0/b/deal-funnel.appspot.com/o/deal%20funnel%20web%20stock%2Fsada.png?alt=media&amp;token=dad23bb5-f65c-414d-807e-372dee5a5522">
@@ -433,7 +433,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>
 import Vue from 'vue';
 import {mapState, mapMutations} from 'vuex';
-import Content from '@/components/Grid/content';
+import Item from '@/components/Grid/Item';
 
 export default {
 computed: {
@@ -502,7 +502,7 @@ computed: {
   </p>
 </div>
 <StoriesSpotlight/>
-<Content/>
+<MyItem/>
 <!-- Girl Image
 <img class="img-G" width="300px;" src="https://firebasestorage.googleapis.com/v0/b/deal-funnel.appspot.com/o/deal%20funnel%20web%20stock%2Fsada.png?alt=media&amp;token=dad23bb5-f65c-414d-807e-372dee5a5522">
 
@@ -548,7 +548,7 @@ computed: {
 </template>
 
 <script>
-import Content from '@/components/Grid/content';
+import MyItem from '@/components/Grid/MyItem';
 import StoriesSpotlight from '@/components/Grid/StoriesSpotlight';
 import Vue from 'vue';
 import Vue2TouchEvents from 'vue2-touch-events';
