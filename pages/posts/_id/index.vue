@@ -1,6 +1,77 @@
 
+<style scoped>
+.space {
+  height: 200px;
+}
+.post-body {
+  padding-bottom: 100px;
+  height: 100%;
+  display: flex;
+}
+.gardient-back-button {
+    display: inline-flex;
+    background-image: linear-gradient(200deg, #4F81BD 10%, #4F81BD 39%, #8ab4f8 80%);
+    background-size: 400% 400% !important;
+    animation: gradient 15s ease infinite !important;
+    width: auto !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    border-radius: 10px !important;
+    border: none !important;
+    padding: 5px 10px !important;
+    font-family: poppins !important;
+    color: #ffffff !important;
+    font-size: 9px !important;
+    transition: 0.3s;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 16px !important;
+    box-shadow: 0px 1px 10px -3px #474747 !important;
+}
+.article-view-div{
+  width: 90%;
+  margin: auto;
+  max-width: 1200px;
+  color: #4f81bd;
+  padding-top:20px;
+}
+ .article-view-t {
+   text-align:center;
+ }
+  .intro-p{
+     padding: 20px;
+     margin: auto;
+     max-width: 671px;
+     display: flow-root;
+     line-height: 1.9;
+     letter-spacing: 0.6px;
+     transition: 1s;
+ }
+ .gardient-back-button {
+     display: inline-flex;
+     float:left;
+     background-image: linear-gradient(200deg, #4F81BD 10%, #4F81BD 39%, #8ab4f8 80%);
+     background-size: 400% 400% !important;
+     animation: gradient 15s ease infinite !important;
+     width: auto !important;
+     margin-left: 20px !important;
+     margin-right: auto !important;
+     border-radius: 5px !important;
+     border: none !important;
+     padding: 5px 10px !important;
+     font-family: poppins !important;
+     color: #ffffff !important;
+     font-size: 12px !important;
+     transition: 0.3s;
+     align-items: center;
+     margin-top: 5px;
+     margin-bottom: 20px;
+     box-shadow: 0px 1px 10px -3px #474747 !important;
+ }
+</style>
 <template>
-  <body>
+  <body class="post-body">
    <div class="article-view-div"><br>
      <center><nuxt-link class="gardient-back-button" :to="to">
            &#8592; Back
@@ -18,6 +89,7 @@
         id="Picture 389" :src="post.logo_url"></p>
    </span>
  </div>
+ 
 </body>
 </template>
 <script>
@@ -31,7 +103,7 @@ export default {
             }
             else if (this.activeView =="Data"){
                   return { path: '/data' };
-            }   
+            }
         }
 
         return { path: this.$routerHistory.previous().path };
@@ -90,66 +162,3 @@ export default {
 
 };
 </script>
-
-<style scoped>
-.gardient-back-button {
-    display: inline-flex;
-    background-image: linear-gradient(200deg, #4F81BD 10%, #4F81BD 39%, #8ab4f8 80%);
-    background-size: 400% 400% !important;
-    animation: gradient 15s ease infinite !important;
-    width: auto !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    border-radius: 10px !important;
-    border: none !important;
-    padding: 5px 10px !important;
-    font-family: poppins !important;
-    color: #ffffff !important;
-    font-size: 9px !important;
-    transition: 0.3s;
-    align-items: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-size: 16px !important;
-    box-shadow: 0px 1px 10px -3px #474747 !important;
-}
-.article-view-div{
-  width: 90%;
-  margin: auto;
-  max-width: 1200px;
-  color: #4f81bd;
-}
- .article-view-t {
-   text-align:center;
- }
-  .intro-p{
-     padding: 20px;
-     margin: auto;
-     max-width: 671px;
-     display: flow-root;
-     line-height: 1.9;
-     letter-spacing: 0.6px;
-     transition: 1s;
- }
- .gardient-back-button {
-     display: inline-flex;
-     float:left;
-     background-image: linear-gradient(200deg, #4F81BD 10%, #4F81BD 39%, #8ab4f8 80%);
-     background-size: 400% 400% !important;
-     animation: gradient 15s ease infinite !important;
-     width: auto !important;
-     margin-left: 20px !important;
-     margin-right: auto !important;
-     border-radius: 5px !important;
-     border: none !important;
-     padding: 5px 10px !important;
-     font-family: poppins !important;
-     color: #ffffff !important;
-     font-size: 12px !important;
-     transition: 0.3s;
-     align-items: center;
-     margin-top: 5px;
-     margin-bottom: 20px;
-     box-shadow: 0px 1px 10px -3px #474747 !important;
- }
-</style>
