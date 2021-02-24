@@ -15,11 +15,9 @@
    -->
      <img :src="dataList.find(item => item.id === 321).logo_url">  </img>
      <h6> {{ dataList.find(item => item.id === 321).title }} </h6>
+     <hr>
      <p> {{ dataList.find(item => item.id === 321).fact}} </p>
      <!-- <p v-html="dataList[0].blog_entry"> </p> -->
-     <hr>
-     <p class="mdi mdi-account"> {{ dataList.find(item => item.id === 321).author.name }} </p>
-     <p> {{ dataList.find(item => item.id === 321).author.title}} </p>
     </div>
 </a>
 <a
@@ -33,11 +31,9 @@
    -->
      <img :src="dataList.find(item => item.id === 1169).logo_url">  </img>
      <h6> {{ dataList.find(item => item.id === 1169).title }} </h6>
+     <hr>
      <p> {{ dataList.find(item => item.id === 1169).fact}} </p>
      <!-- <p v-html="dataList[0].blog_entry"> </p> -->
-     <hr>
-     <p class="mdi mdi-account"> {{ dataList.find(item => item.id === 1169).author.name }} </p>
-     <p> {{ dataList.find(item => item.id === 1169).author.title}} </p>
     </div>
 </a>
 <!-- story blocks END-->
