@@ -65,95 +65,71 @@ h2 {
     <center><h2> Content Spotlight </h2></center><br>
   <div class="Fgrid">
 
-
-
-  <!-- single news Block for data-->
  <a
-     v-bind:key="dataList[124].id"
-     :href="`posts/${dataList[124].id}`"
+     v-bind:key="dataList.id"
+     :href="`posts/${dataList.find(item => item.id === 124).id}`"
      class="Gmodule"
      style="display:flex;text-decoration:none;color:#14a0fd;"
    >
    <div>
-  
-    <img :src="dataList[124].logo_url">  </img>
-      <h6> {{ dataList[124].title }} </h6>
+
+    <img :src="dataList.find(item => item.id === 124).logo_url">  </img>
+      <h6> {{ dataList.find(item => item.id === 124).title }} </h6>
        <!-- <p v-html="dataList[0].blog_entry"> </p> -->
        <hr>
    </div>
  </a>
- <!-- End of single news Block -->
- <!-- single news Block for data-->
  <a
-   v-bind:key="dataList[0].id"
-   :href="`posts/${dataList[0].id}`"
+   v-bind:key="dataList.id"
+   :href="`posts/${dataList.find(item => item.id === 122).id}`"
    class="Gmodule"
    style="display:flex;text-decoration:none;color:#14a0fd;"
 >
   <div>
-
-   <img :src="dataList[0].logo_url">  </img>
-     <h6> {{ dataList[0].title }} </h6>
+   <img :src="dataList.find(item => item.id === 122).logo_url">  </img>
+     <h6> {{ dataList.find(item => item.id === 122).title }} </h6>
     <!-- <p v-html="dataList[0].blog_entry"> </p> -->
     <hr>
-
   </div>
 </a>
-<!-- End of single news Block -->
-<!-- single news Block for data-->
 <a
-v-bind:key="dataList[1].id"
-:href="`posts/${dataList[1].id}`"
+v-bind:key="dataList.id"
+:href="`posts/${dataList.find(item => item.id === 1211).id}`"
 class="Gmodule"
 style="display:flex;text-decoration:none;color:#14a0fd;">
  <div>
-  <img :src="dataList[1].logo_url">  </img>
-    <h6> {{ dataList[1].title }} </h6>
+  <img :src="dataList.find(item => item.id === 1211).logo_url">  </img>
+    <h6> {{ dataList.find(item => item.id === 1211).title }} </h6>
+    <hr>
+   <!-- <p v-html="dataList[0].blog_entry"> </p> -->
+ </div>
+</a>
+<a
+v-bind:key="dataList.id"
+:href="`posts/${dataList.find(item => item.id === 420).id}`"
+class="Gmodule"
+style="display:flex;text-decoration:none;color:#14a0fd;">
+ <div>
+
+  <img :src="dataList.find(item => item.id === 420).logo_url">  </img>
+    <h6> {{dataList.find(item => item.id === 420).title }} </h6>
     <hr>
    <!-- <p v-html="dataList[0].blog_entry"> </p> -->
 
  </div>
 </a>
-<!-- End of single news Block -->
-<!-- single news Block for data-->
-<a
-v-bind:key="dataList[2].id"
-:href="`posts/${dataList[2].id}`"
-class="Gmodule"
-style="display:flex;text-decoration:none;color:#14a0fd;">
- <div>
-  
-  <img :src="dataList[3].logo_url">  </img>
-    <h6> {{ dataList[3].title }} </h6>
-    <hr>
-   <!-- <p v-html="dataList[0].blog_entry"> </p> -->
-
- </div>
-</a>
-<!-- End of single news Block -->
-<!-- single news Block for data-->
-<a v-bind:key="dataList[4].id"
-:href="`posts/${dataList[4].id}`"
+<a v-bind:key="dataList.id"
+:href="`posts/${dataList.find(item => item.id === 1421).id}`"
 class="Gmodule"
 style="display:flex;text-decoration:none;color:#14a0fd;">
  <div>
 
-    <img v-bind:src="dataList[4].logo_url">
-    <h6> {{ dataList[4].title }} </h6>
+    <img v-bind:src="dataList.find(item => item.id === 1421).logo_url">
+    <h6> {{ dataList.find(item => item.id === 1421).title }} </h6>
     <hr>
- 
-
-
  </div>
 </a>
-<!-- End of single news Block -->
-
-  <!--  <a class="module" style="display:flex;text-decoration:none;color:#14a0fd; ">
-      <div>
-        <img style="height:auto ;width:220px;" src="https://filesforfintech.s3.amazonaws.com/images/pig+sauce/1+Go+to+conference.png">
-        <p> Events</p>
-      </div>
-    </a> -->
+<!-- End of Block -->
   </div>
 
   </div>
