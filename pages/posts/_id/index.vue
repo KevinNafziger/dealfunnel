@@ -6,7 +6,8 @@
 .post-body {
   padding-bottom: 100px;
   height: 100%;
-  display: flex;
+  display: grid;
+  width: auto;
 }
 .gardient-back-button {
     display: inline-flex;
@@ -89,7 +90,7 @@
         id="Picture 389" :src="post.logo_url"></p>
    </span>
  </div>
- 
+
 </body>
 </template>
 <script>
