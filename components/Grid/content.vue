@@ -108,7 +108,7 @@ h2 {
       <h6> {{ dataList[137].title }} </h6>
        <!-- <p v-html="dataList[0].blog_entry"> </p> -->
        <hr>
-       <p> {{ dataList[137].author.name }} </p>
+       <p class="mdi mdi-account"> {{ dataList[137].author.name }} </p>
        <p> {{ dataList[137].author.title}} </p>
    </div>
  </a>
@@ -127,7 +127,7 @@ h2 {
      <h6> {{ dataList[0].title }} </h6>
     <!-- <p v-html="dataList[0].blog_entry"> </p> -->
     <hr>
-   <p> {{ dataList[0].author.name }} </p>
+   <p class="mdi mdi-account"> {{ dataList[0].author.name }} </p>
     <p> {{ dataList[0].author.title}} </p>
   </div>
 </a>
@@ -145,7 +145,7 @@ style="display:flex;text-decoration:none;color:#14a0fd;">
     <h6> {{ dataList[13].title }} </h6>
     <hr>
    <!-- <p v-html="dataList[0].blog_entry"> </p> -->
-  <p> {{ dataList[13].author.name }} </p>
+  <p class="mdi mdi-account"> {{ dataList[13].author.name }} </p>
    <p> {{ dataList[13].author.title}} </p>
  </div>
 </a>
@@ -163,7 +163,7 @@ style="display:flex;text-decoration:none;color:#14a0fd;">
     <h6> {{ dataList[78].title }} </h6>
     <hr>
    <!-- <p v-html="dataList[0].blog_entry"> </p> -->
-  <p> {{ dataList[78].author.name }} </p>
+  <p class="mdi mdi-account">  {{ dataList[78].author.name }} </p>
    <p> {{ dataList[78].author.title}} </p>
  </div>
 </a>
@@ -181,7 +181,7 @@ style="display:flex;text-decoration:none;color:#14a0fd;">
     <hr>
    <!-- <p v-html="dataList[0].blog_entry"> </p> -->
 
-  <p> {{ dataList[100].author.name }} </p>
+  <p class="mdi mdi-account"> {{ dataList[100].author.name }} </p>
    <p> {{ dataList[100].author.title}} </p>
  </div>
 </a>

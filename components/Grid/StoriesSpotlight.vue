@@ -18,7 +18,7 @@
      <p> {{dataList[486].fact}} </p>
      <!-- <p v-html="dataList[0].blog_entry"> </p> -->
      <hr>
-     <p> {{ dataList[486].author.name }} </p>
+     <p class="mdi mdi-account"> {{ dataList[486].author.name }} </p>
      <p> {{ dataList[486].author.title}} </p>
     </div>
 </a>
