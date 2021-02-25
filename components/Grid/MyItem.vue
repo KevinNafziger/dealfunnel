@@ -1,4 +1,4 @@
-<style>
+<style scoped>
 img {
   heigth: auto;
   width: 100px;
