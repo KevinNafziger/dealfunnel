@@ -1,5 +1,6 @@
 <style scoped>
 img {
+  max-height: 100px;
   heigth: auto;
   width: 100px;
   margin:20px;

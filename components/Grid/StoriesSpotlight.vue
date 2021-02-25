@@ -2,6 +2,7 @@
 <style scoped>
 img {
   heigth: auto;
+  max-height: 100px;
   width: 100px;
   margin:20px;
   border-radius: 20px;
