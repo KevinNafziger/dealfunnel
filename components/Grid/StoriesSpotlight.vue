@@ -80,7 +80,7 @@ h2 {
      <img :src="dataList.find(item => item.id === 321).logo_url">  </img>
      <h6> {{ dataList.find(item => item.id === 321).title }} </h6>
      <hr>
-     <p> {{ dataList.find(item => item.id === 321).fact.substring(0,150)}} </p>
+     <p> {{ dataList.find(item => item.id === 321).fact.substring(0,120)}} </p>
      <!-- <p v-html="dataList[0].blog_entry"> </p> -->
     </div>
 </a>
@@ -96,7 +96,7 @@ h2 {
      <img :src="dataList.find(item => item.id === 1169).logo_url">  </img>
      <h6> {{ dataList.find(item => item.id === 1169).title }} </h6>
      <hr>
-     <p> {{ dataList.find(item => item.id === 1169).fact.substring(0,150)}} </p>
+     <p> {{ dataList.find(item => item.id === 1169).fact.substring(0,120)}} </p>
      <!-- <p v-html="dataList[0].blog_entry"> </p> -->
     </div>
 </a>
@@ -112,7 +112,7 @@ h2 {
      <img :src="dataList.find(item => item.id === 1120).logo_url">  </img>
      <h6> {{ dataList.find(item => item.id === 1120).title }} </h6>
      <hr>
-     <p> {{ dataList.find(item => item.id === 1120).fact.substring(0,150)}} </p>
+     <p> {{ dataList.find(item => item.id === 1120).fact.substring(0,120)}} </p>
      <!-- <p v-html="dataList[0].blog_entry"> </p> -->
     </div>
 </a>
@@ -128,7 +128,7 @@ h2 {
      <img :src="dataList.find(item => item.id === 1561).logo_url">  </img>
      <h6> {{ dataList.find(item => item.id === 1561).title }} </h6>
      <hr>
-     <p> {{ dataList.find(item => item.id === 1561).fact.substring(0,150)}} </p> 
+     <p> {{ dataList.find(item => item.id === 1561).fact.substring(0,120)}} </p>
      <!-- <p v-html="dataList[0].blog_entry"> </p> -->
     </div>
 </a>
