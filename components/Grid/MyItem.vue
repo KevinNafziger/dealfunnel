@@ -95,12 +95,12 @@ h2 {
 </a>
 <a
 v-bind:key="dataList.id"
-:href="`posts/${dataList.find(item => item.id === 1061).id}`"
+:href="`posts/${dataList.find(item => item.id === 1012).id}`"
 class="Gmodule"
 style="display:flex;text-decoration:none;color:#14a0fd;">
  <div>
-  <img :src="dataList.find(item => item.id === 1061).logo_url">  </img>
-    <h6> {{ dataList.find(item => item.id === 1061).title }} </h6>
+  <img :src="dataList.find(item => item.id === 1012).logo_url">  </img>
+    <h6> {{ dataList.find(item => item.id === 1012).title }} </h6>
     <hr>
    <!-- <p v-html="dataList[0].blog_entry"> </p> -->
  </div>
