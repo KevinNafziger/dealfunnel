@@ -68,7 +68,7 @@ h2 {
 
  <a
      v-bind:key="dataList.id"
-     :href="`posts/${dataList.find(item => item.id === 25).id}`"
+     :href="`posts/${dataList.find(item => item.id === 1061).id}`"
      class="Gmodule"
      style="display:flex;text-decoration:none;color:#14a0fd;"
    >
@@ -82,7 +82,7 @@ h2 {
  </a>
  <a
    v-bind:key="dataList.id"
-   :href="`posts/${dataList.find(item => item.id === 122).id}`"
+   :href="`posts/${dataList.find(item => item.id === 1601).id}`"
    class="Gmodule"
    style="display:flex;text-decoration:none;color:#14a0fd;"
 >
@@ -107,7 +107,7 @@ style="display:flex;text-decoration:none;color:#14a0fd;">
 </a>
 <a
 v-bind:key="dataList.id"
-:href="`posts/${dataList.find(item => item.id === 420).id}`"
+:href="`posts/${dataList.find(item => item.id === 411).id}`"
 class="Gmodule"
 style="display:flex;text-decoration:none;color:#14a0fd;">
  <div>
@@ -120,7 +120,7 @@ style="display:flex;text-decoration:none;color:#14a0fd;">
  </div>
 </a>
 <a v-bind:key="dataList.id"
-:href="`posts/${dataList.find(item => item.id === 1421).id}`"
+:href="`posts/${dataList.find(item => item.id === 864).id}`"
 class="Gmodule"
 style="display:flex;text-decoration:none;color:#14a0fd;">
  <div>
