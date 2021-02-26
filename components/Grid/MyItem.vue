@@ -68,14 +68,14 @@ h2 {
 
  <a
      v-bind:key="dataList.id"
-     :href="`posts/${dataList.find(item => item.id === 124).id}`"
+     :href="`posts/${dataList.find(item => item.id === 25).id}`"
      class="Gmodule"
      style="display:flex;text-decoration:none;color:#14a0fd;"
    >
    <div>
 
-    <img :src="dataList.find(item => item.id === 124).logo_url">  </img>
-      <h6> {{ dataList.find(item => item.id === 124).title }} </h6>
+    <img :src="dataList.find(item => item.id === 1061).logo_url">  </img>
+      <h6> {{ dataList.find(item => item.id === 1061).title }} </h6>
        <!-- <p v-html="dataList[0].blog_entry"> </p> -->
        <hr>
    </div>
@@ -87,20 +87,20 @@ h2 {
    style="display:flex;text-decoration:none;color:#14a0fd;"
 >
   <div>
-   <img :src="dataList.find(item => item.id === 122).logo_url">  </img>
-     <h6> {{ dataList.find(item => item.id === 122).title }} </h6>
+   <img :src="dataList.find(item => item.id === 1601).logo_url">  </img>
+     <h6> {{ dataList.find(item => item.id === 1601).title }} </h6>
     <!-- <p v-html="dataList[0].blog_entry"> </p> -->
     <hr>
   </div>
 </a>
 <a
 v-bind:key="dataList.id"
-:href="`posts/${dataList.find(item => item.id === 1211).id}`"
+:href="`posts/${dataList.find(item => item.id === 1061).id}`"
 class="Gmodule"
 style="display:flex;text-decoration:none;color:#14a0fd;">
  <div>
-  <img :src="dataList.find(item => item.id === 1211).logo_url">  </img>
-    <h6> {{ dataList.find(item => item.id === 1211).title }} </h6>
+  <img :src="dataList.find(item => item.id === 1061).logo_url">  </img>
+    <h6> {{ dataList.find(item => item.id === 1061).title }} </h6>
     <hr>
    <!-- <p v-html="dataList[0].blog_entry"> </p> -->
  </div>
@@ -112,8 +112,8 @@ class="Gmodule"
 style="display:flex;text-decoration:none;color:#14a0fd;">
  <div>
 
-  <img :src="dataList.find(item => item.id === 420).logo_url">  </img>
-    <h6> {{dataList.find(item => item.id === 420).title }} </h6>
+  <img :src="dataList.find(item => item.id === 411).logo_url">  </img>
+    <h6> {{dataList.find(item => item.id === 411).title }} </h6>
     <hr>
    <!-- <p v-html="dataList[0].blog_entry"> </p> -->
 
@@ -125,8 +125,8 @@ class="Gmodule"
 style="display:flex;text-decoration:none;color:#14a0fd;">
  <div>
 
-    <img v-bind:src="dataList.find(item => item.id === 1421).logo_url">
-    <h6> {{ dataList.find(item => item.id === 1421).title }} </h6>
+    <img v-bind:src="dataList.find(item => item.id === 864).logo_url">
+    <h6> {{ dataList.find(item => item.id === 864).title }} </h6>
     <hr>
  </div>
 </a>
