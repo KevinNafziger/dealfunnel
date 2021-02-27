@@ -65,7 +65,7 @@ h2 {
 
 <template>
   <div class="exespotbody">
-    <center><h2> Stories Spotlight </h2></center><br>
+    <center><h2> Company Spotlight </h2></center><br>
   <div class="Fgrid">
 
  <!-- story blocks start-->

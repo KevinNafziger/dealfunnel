@@ -63,7 +63,7 @@ h2 {
 
 <template>
   <div class="exespotbody">
-    <center><h2> Content Spotlight </h2></center><br>
+    <center><h2> Story Spotlight </h2></center><br>
   <div class="Fgrid">
 
  <a
@@ -82,13 +82,13 @@ h2 {
  </a>
  <a
    v-bind:key="dataList.id"
-   :href="`posts/${dataList.find(item => item.id === 1601).id}`"
+   :href="`posts/${dataList.find(item => item.id === 1511).id}`"
    class="Gmodule"
    style="display:flex;text-decoration:none;color:#14a0fd;"
 >
   <div>
-   <img :src="dataList.find(item => item.id === 1601).logo_url">  </img>
-     <h6> {{ dataList.find(item => item.id === 1601).title }} </h6>
+   <img :src="dataList.find(item => item.id === 1511).logo_url">  </img>
+     <h6> {{ dataList.find(item => item.id === 1511).title }} </h6>
     <!-- <p v-html="dataList[0].blog_entry"> </p> -->
     <hr>
   </div>

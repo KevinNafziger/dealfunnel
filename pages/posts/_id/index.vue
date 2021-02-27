@@ -105,6 +105,10 @@ export default {
             else if (this.activeView =="Data"){
                   return { path: '/data' };
             }
+            else
+            {
+                  return { path: '/posts' };
+            }
         }
 
         return { path: this.$routerHistory.previous().path };
