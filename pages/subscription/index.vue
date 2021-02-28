@@ -224,17 +224,16 @@ a {
        </ul>
        <ul class="plan__feature-list">
         <li class="plan__title  plan__feature-item">
-            <h6> <center> A subscription to
-            <i>DealFunnel</i></center> <br>
-            <center> is $79.99 a month. </center>
+            <h6> <center> Details coming soon <i></i></center> <br>
+            <center> </center>
           </h6>
         </li>
         <li class="plan__feature-item">
         <hr>
-        <center> <h6>A subscription includes:</h6> </center></li>
+        <center> <h6></h6> </center></li>
         <br><li class="plan__feature-item">- The
        <span class="accent-2"><i>DealFunnel</i> newsletter</span></li>
-         <li class="plan__feature-item">-<i><span class="accent-2"> DealFunnel Online</span></i></li>
+         <li class="plan__feature-item">-<i><span class="accent-2"> </span></i></li>
          <li class="plan__feature-item">-<i> DealFunnel</i> support<span class="accent-2"></span></li>
          <li class="plan__feature-item"><span class="accent-2"></span></li>
           <hr>
