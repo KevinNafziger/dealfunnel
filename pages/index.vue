@@ -492,7 +492,7 @@ computed: {
   </p>
   <nuxt-link class="gardient-button" to="/subscription">Plan Details</nuxt-link>
   <p class="intro-p"><b>Team</b>–<span></span>
-    <i> Horizons LA</i> is a publication of <i>Fintech Horizons Media</i>, a news organization founded by information specialists from the US and Latin America. The team includes Kevin Nafziger, CEO and Co-founder; Rebecca Wenzel, Americas Editor; Abraham Felix, Head of IT; and Berenice Cabellero, Head of Research.
+    <i> Horizons LA</i> is a publication of <i>Fintech Horizons Media</i>, a news organization founded by information specialists from the US and Latin America. The team includes Kevin Nafziger, CEO and Co-founder; Berenice Cabellero, Head of Research; Abraham Felix, Head of IT; and Rebecca Wenzel, Americas Editor.
   </p>
 </div>
 <StoriesSpotlight/>
