@@ -349,35 +349,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </h1><br>
   <p class="MsoNormal">
   <span class="intro-p">
-    DealFunnel features articles, reports, searchable datasets and our popular biweekly <i>Big Fintech Newsletter.</i> Our newsletter has grown and added new coverage areas over time. It still has "Big Fintech" in its title, but its focus now encompasses technology businesses serving the financial services industry and beyond.
-    This includes companies in Blockchain, DLT and Crypto as well as in HealthTech, Artificial Intelligence, LegalTech, and Cybersecurity.
+    <i>Fintech Horizons Latin America</i> features articles, reports, searchable datasets and a popular biweekly newsletter.</i> Overtime, our focus has grown beyond Fintech, and now encompasses technology businesses serving the financial services industry and beyond.     This includes companies in Blockchain, DLT and Crypto as well as in HealthTech, Artificial Intelligence, LegalTech, and Cybersecurity.
   </span>
   </p>
   <p class="intro-p" >
   <b>Exceptional</b> –
-  <span class="SpellE"><i>The Big Fintech Newsletter</i> </span>
-  is beloved by dealmakers including investment bankers, partners and associates of venture capital firms, industry attorneys, PE practitioners and corporate executives. The newsletter's core mission remains constant: to summarize every M&A deal, capital raise, growth investment, divestiture, public offering and token sale for every featured category and subcategory within the newsletter's areas of focus, and to deliver that summary in an email to subscribers each Tuesday and Thursday at or before 8am ET. Beyond this core focus, each newsletter highlights information for generating new business opportunities and for staying abreast of news on management changes, company pivots, reported M&A rumors, busted deals and regulatory developments. Each newsletter typically also includes a link to a <i>DealFunnel</i> propietary report or article or includes the full text of an article or articles within the newsletter body. Subscribers also get access to all content from current and prior newsletters through <i>DealFunnel Online</i>.
+  <span class="SpellE"><i>Fintech Horizons' Latin America</i> </span>
+  is beloved by dealmakers including investment bankers, partners and associates of venture capital firms, industry attorneys, PE practitioners and corporate executives. T.
   </p>
   <p class="intro-p"><b>Data Driven</b>–<span class="SpellE"></span>
-  <i>DealFunnel</i> subscribers also receive online access to searchable datasets on capital raises, companies and articles derived from those sections in the newsletter. The data can be exported to <i>Excel</i> and other spreadsheet programs.
+  <i>DealFunnel</i> subscribers also receive online access to searchable datasets on capital raises, companies and articles. The data can be exported to <i>Excel</i> and other spreadsheet programs.
   <span style="mso-spacerun:yes"></span>
   </p>
   <p class="intro-p" ><b>Multi-channel support </b>–<span class="SpellE"></span>
-  The <i>DealFunnel</i> team is here to help answer your questions. You can contact us by email,
+  The <i>Fintech Horizons</i> team is here to help answer your questions. You can contact us by email,
   phone or join our Slack channel.
   <span style="mso-spacerun:yes"></span>
   </p>
   <p class="intro-p">
   <b>Propietary Content</b>–<span class="SpellE"></span>
-  <i>DealFunnel Online</i> gives readers access to all of the propietary content from <i>the Big Fintech Newsletter.</i>
-  This propietary content includes reports on trending topics along with sets of auto-generated reports which include all of the company-related articles and capital raise data for that topic. <i>DealFunnel's</i> auto-generated reports are grouped by strategic action, size of expected raise, timing of expected raise, geography, subsector, and by broader categories such as 'Blockchain', 'Insurtech', 'Payments', 'AI', 'Lending' and 'OpenBanking. <i>DealFunnel</i> reports aggregate all of <i>DealFunnel's</i> own company-specific intelligence on that topic, derived from interviews with an executive or executives at the featured company.
+  <i>Horizons Online</i> gives readers access to all of <i>Fintech Horizons'</i> propietary content</i>
+  This propietary content includes reports on trending topics along with sets of auto-generated reports which include all of the company-related articles and capital raise data for that topic. These auto-generated reports are grouped by strategic action, size of expected raise, timing of expected raise, geography, subsector, and by broader categories such as 'Blockchain', 'Insurtech', 'Payments', 'AI', 'Lending' and 'OpenBanking. <i>Fintech Horizons</i> reports aggregate all of <i>FHMS's</i> own company-specific intelligence on that topic, derived from interviews with an executive or executives at the featured company.
   Our reports can generate a "wow" from some readers when they see the sheer volume of company-specific intelligence they provide.
-  <i>DealFunnel</i> reports aren't designed to provide a quick overview but to serve practitioners who want to review a large amount of company-specific intelligence related to a topic in a single document. A <i>DealFunnel</i> report starts with a summary view highlighting the most actionable parts of each featured article. From this view, readers can scan all leads on a topic in order to quickly discover only those most relevant to them.
+  These reports aren't designed to provide a quick overview but to serve practitioners who want to review a large amount of company-specific intelligence related to a topic in a single document. A <i>FHM</i> report starts with a summary view highlighting the most actionable parts of each featured article. From this view, readers can scan all leads on a topic in order to quickly discover only those most relevant to them.
   </p>
-  <p class="intro-p"><b>Value Proposition</b>–<span></span>
-  <i>DealFunnel</i> provides two main sources of value to subscribers. The first is a comprehensive summary of all equity raises, M&A, public offerings and token sales within our core focus areas, contained in our newsletter and delivered every Tuesday and Thursday morning. Readers trust <i>DealFunnel</i> for a complete, accurate account of strategic transactions for all featured categories in our newsletter's core areas. We built this trust by consistently delivering a complete, reliable summary of financial transactions in each and every newsletter. Readers know they can rely on our newsletter to form their own picture of change and can also utilize the complete transactions summary to provide useful insights to their clients. <i>DealFunnel</i> propietary reports and articles, featured in the newsletter and through <i>DealFunnel Online</i>, offer another key source of value to subscribers. <i>DealFunnel's</i> propietary content serves as a rich repository of primary source leads on forward-looking company strategy that are rarely available in other publications.
-  <i>The Big Fintech Newsletter</i> arrives in your inbox every Tuesday and Thursday morning. It is easy-to-read and designed so you can quickly absorb the information you need and go on with your day, armed with new insights on how your industry is changing. Capturing even a subset of the newsletter's information on your own would require hours of alternating between feeds, blogs, online news portals, corporate websites and online trade publications. The newsletter also highlights new revenue opportunities from our propietary reports and articles and subscribers also get complete access to <i>DealFunnel Online</i> and all of its searchable datasets and propietary content.
-  A subscription to <i>DealFunnel</i> is $79.99 a month. To subscribe, or to learn more about what is included in a <i>DealFunnel</i> subscription, click on <i>Plan Details</i>.
+  <p class="intro-p"><b>
   </p>
   <nuxt-link class="gardient-button" to="/subscription">Plan Details</nuxt-link>
   <p class="intro-p"><b>Team</b>–<span></span>
@@ -466,39 +462,37 @@ computed: {
   </h1><br>
   <p class="MsoNormal">
   <span class="intro-p">
-    DealFunnel features articles, reports, searchable datasets and our popular biweekly <i>Big Fintech Newsletter.</i> Our newsletter has grown and added new coverage areas over time. It still has "Big Fintech" in its title, but its focus now encompasses technology businesses serving the financial services industry and beyond.
-    This includes companies in Blockchain, DLT and Crypto as well as in HealthTech, Artificial Intelligence, LegalTech, and Cybersecurity.
+    <i>Horizons LA</i> features articles, reports, and data on fast growing companies in Latin America. While our original focus was Fintech, our coverage has expanded to encompass technology businesses serving the financial services industry and beyond. This includes companies in Blockchain, DLT and Crypto as well as in HealthTech, Artificial Intelligence, LegalTech, and Cybersecurity.
   </span>
   </p>
   <p class="intro-p" >
   <b>Exceptional</b> –
-  <span class="SpellE"><i>The Big Fintech Newsletter</i> </span>
-  is beloved by dealmakers including investment bankers, partners and associates of venture capital firms, industry attorneys, PE practitioners and corporate executives. The newsletter's core mission remains constant: to summarize every M&A deal, capital raise, growth investment, divestiture, public offering and token sale for every featured category and subcategory within the newsletter's areas of focus, and to deliver that summary in an email to subscribers each Tuesday and Thursday at or before 8am ET. Beyond this core focus, each newsletter highlights information for generating new business opportunities and for staying abreast of news on management changes, company pivots, reported M&A rumors, busted deals and regulatory developments. Each newsletter typically also includes a link to a <i>DealFunnel</i> propietary report or article or includes the full text of an article or articles within the newsletter body. Subscribers also get access to all content from current and prior newsletters through <i>DealFunnel Online</i>.
+  <span class="SpellE"><i>Horizons LA</i> </span>
+  is beloved by executives in Latin America and across the globe as well as by dealmakers and practitioners including investment bankers, partners and associates of venture capital firms, industry attorneys, PE practitioners and economists. 
   </p>
   <p class="intro-p"><b>Data Driven</b>–<span class="SpellE"></span>
-  <i>DealFunnel</i> subscribers also receive online access to searchable datasets on capital raises, companies and articles derived from those sections in the newsletter. The data can be exported to <i>Excel</i> and other spreadsheet programs.
+  <i>Horizons LA</i> members receive online access to searchable data on capital raises, companies and articles. The data can be exported to <i>Excel</i> and other spreadsheet programs.
   <span style="mso-spacerun:yes"></span>
   </p>
   <p class="intro-p" ><b>Multi-channel support </b>–<span class="SpellE"></span>
-  The <i>DealFunnel</i> team is here to help answer your questions. You can contact us by email,
+  The <i>Horizons LA</i> team is here to help. You can contact us by email,
   phone or join our Slack channel.
   <span style="mso-spacerun:yes"></span>
   </p>
   <p class="intro-p">
   <b>Propietary Content</b>–<span class="SpellE"></span>
-  <i>DealFunnel Online</i> gives readers access to all of the propietary content from <i>the Big Fintech Newsletter.</i>
-  This propietary content includes reports on trending topics along with sets of auto-generated reports which include all of the company-related articles and capital raise data for that topic. <i>DealFunnel's</i> auto-generated reports are grouped by strategic action, size of expected raise, timing of expected raise, geography, subsector, and by broader categories such as 'Blockchain', 'Insurtech', 'Payments', 'AI', 'Lending' and 'OpenBanking. <i>DealFunnel</i> reports aggregate all of <i>DealFunnel's</i> own company-specific intelligence on that topic, derived from interviews with an executive or executives at the featured company.
+  <i>Horizons LA</i> members receive online acccess to all of FHM's propietary content.</i>
+  This propietary content includes reports on trending topics along with sets of auto-generated reports which include all of the company-related articles and capital raise data for that topic. <i>FHM's</i> auto-generated reports are grouped by strategic action, size of expected raise, timing of expected raise, geography, subsector, and by broader categories such as 'Blockchain', 'Insurtech', 'Payments', 'AI', 'Lending' and 'OpenBanking. <i>FHM</i> reports aggregate all of <i>FHM's</i> own company-specific intelligence on that topic, derived from interviews with an executive or executives at the featured company.
   Our reports can generate a "wow" from some readers when they see the sheer volume of company-specific intelligence they provide.
-  <i>DealFunnel</i> reports aren't designed to provide a quick overview but to serve practitioners who want to review a large amount of company-specific intelligence related to a topic in a single document. A <i>DealFunnel</i> report starts with a summary view highlighting the most actionable parts of each featured article. From this view, readers can scan all leads on a topic in order to quickly discover only those most relevant to them.
+  <i>FHM </i> reports aren't designed to provide a quick overview but to serve practitioners who want to review a large amount of company-specific intelligence related to a topic in a single document. 
   </p>
   <p class="intro-p"><b>Value Proposition</b>–<span></span>
-  <i>DealFunnel</i> provides two main sources of value to subscribers. The first is a comprehensive summary of all equity raises, M&A, public offerings and token sales within our core focus areas, contained in our newsletter and delivered every Tuesday and Thursday morning. Readers trust <i>DealFunnel</i> for a complete, accurate account of strategic transactions for all featured categories in our newsletter's core areas. We built this trust by consistently delivering a complete, reliable summary of financial transactions in each and every newsletter. Readers know they can rely on our newsletter to form their own picture of change and can also utilize the complete transactions summary to provide useful insights to their clients. <i>DealFunnel</i> propietary reports and articles, featured in the newsletter and through <i>DealFunnel Online</i>, offer another key source of value to subscribers. <i>DealFunnel's</i> propietary content serves as a rich repository of primary source leads on forward-looking company strategy that are rarely available in other publications.
-  <i>The Big Fintech Newsletter</i> arrives in your inbox every Tuesday and Thursday morning. It is easy-to-read and designed so you can quickly absorb the information you need and go on with your day, armed with new insights on how your industry is changing. Capturing even a subset of the newsletter's information on your own would require hours of alternating between feeds, blogs, online news portals, corporate websites and online trade publications. The newsletter also highlights new revenue opportunities from our propietary reports and articles and subscribers also get complete access to <i>DealFunnel Online</i> and all of its searchable datasets and propietary content.
-  A subscription to <i>DealFunnel</i> is $79.99 a month. To subscribe, or to learn more about what is included in a <i>DealFunnel</i> subscription, click on <i>Plan Details</i>.
+  The Fintech Revolution is creating greater economic growth and opportunity across Latin America. <i>Horizons LA</i> showcases companies that are driving that innovation. <i>Horizons LA</i> also features propietary reports, data, and articles that serve as a rich repository of information to executives, industry professionals and investors. 
+ 
   </p>
   <nuxt-link class="gardient-button" to="/subscription">Plan Details</nuxt-link>
   <p class="intro-p"><b>Team</b>–<span></span>
-    <i>DealFunnel</i> is the lead publication of <i>Fintech Horizons Media</i>, a news organization founded by deal information specialists. The <i>DealFunnel</i> team includes Kevin Nafziger, CEO and Co-founder; Ben Koconis, Editor and Co-founder; Rebecca Wenzel, Americas Editor; Abraham Felix, Head of IT; and Berenice Cabellero, Head of Research.
+    <i> Horizons LA</i> is a publication of <i>Fintech Horizons Media</i>, a news organization founded by information specialists from the US and Latin America. The team includes Kevin Nafziger, CEO and Co-founder; Rebecca Wenzel, Americas Editor; Abraham Felix, Head of IT; and Berenice Cabellero, Head of Research.
   </p>
 </div>
 <StoriesSpotlight/>
@@ -513,7 +507,7 @@ computed: {
     <div class="card">
       <div class="layer"></div>
       <div class="content">
-        <p class="testi-p"><i>DealFunnel</i> offers insightful content about innovative firms in the industry, allowing us to keep abreast of M&A and capital raises in the US and globally. The platform presents Fintech opportunities that we might not have seen in more traditional news or data sources.</p>
+        <p class="testi-p"><i>Fintech Horizons</i> offers insightful content about innovative firms in the industry, allowing us to keep abreast of M&A and capital raises in the US and globally. The platform presents Fintech opportunities that we might not have seen in more traditional news or data sources.</p>
          <img src="https://filesforfintech.s3.amazonaws.com/EvolveCapital.png" alt="">
 
         <div class="details">
@@ -565,12 +559,11 @@ computed: {
       }),
    },
 
-//asyncData ({ userAgent }) {
-  //  return {
-    //  userAgent
-//}
-//},
+  async fetch({store}) {
 
+       store.dispatch("posts/setView", "Front");
+
+  },
 }
 
 </script>

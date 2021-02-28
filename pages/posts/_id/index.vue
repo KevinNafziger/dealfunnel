@@ -100,14 +100,14 @@ export default {
     to () {
         if (this.client || !this.$routerHistory || !this.$routerHistory.hasPrevious()) {
             if (this.activeView =="Articles") {
-                return { path: '/posts' };
+                return { path: '/' };
             }
             else if (this.activeView =="Data"){
                   return { path: '/data' };
             }
             else
             {
-                  return { path: '/posts' };
+                  return { path: '/' };
             }
         }
 
