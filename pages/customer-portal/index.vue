@@ -4,21 +4,13 @@
   </div>
  </template>
 <script>
-import firebase from 'firebase';
-import { firestorePlugin} from "vuefire";
-import Vue from "vue";
-import  "firebase/auth";
-import "firebase/firestore";
-Vue.use(firestorePlugin)
-export default {
-  async fetch() {
 
-  const functionRef = firebase
-  .app()
-  .functions('us-central1')
-  .httpsCallable('ext-firestore-stripe-subscriptions-createPortalLink');
-const { data } = await functionRef({ returnUrl:  window.location.origin });
- window.location.assign(data.url);
+export default {
+  async data() {
+    //const stripe = 
+    //require('stripe')('sk_test_yFPvhxz3yjT8Du6RhdOAoZyE');
+    //const customers = await stripe.customers.list();
+    //return {customers};
   },
 
 }
