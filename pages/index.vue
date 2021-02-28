@@ -483,8 +483,7 @@ computed: {
   <b>Propietary Content</b>–<span class="SpellE"></span>
   <i>Horizons LA</i> members receive online acccess to all of FHM's propietary content.</i>
   This propietary content includes reports on trending topics along with sets of auto-generated reports which include all of the company-related articles and capital raise data for that topic. <i>FHM's</i> auto-generated reports are grouped by strategic action, size of expected raise, timing of expected raise, geography, subsector, and by broader categories such as 'Blockchain', 'Insurtech', 'Payments', 'AI', 'Lending' and 'OpenBanking. <i>FHM</i> reports aggregate all of <i>FHM's</i> own company-specific intelligence on that topic, derived from interviews with an executive or executives at the featured company.
-  Our reports can generate a "wow" from some readers when they see the sheer volume of company-specific intelligence they provide.
-  <i>FHM </i> reports aren't designed to provide a quick overview but to serve practitioners who want to review a large amount of company-specific intelligence related to a topic in a single document. 
+  Our reports can generate a "wow" from some readers when they see the sheer volume of company-specific intelligence they provide. <i>FHM </i> reports aren't designed to provide a quick overview but to serve practitioners who want to review a large amount of company-specific intelligence related to a topic in a single document. 
   </p>
   <p class="intro-p"><b>Value Proposition</b>–<span></span>
   The Fintech Revolution is creating greater economic growth and opportunity across Latin America. <i>Horizons LA</i> showcases companies that are driving that innovation. <i>Horizons LA</i> also features propietary reports, data, and articles that serve as a rich repository of information to executives, industry professionals and investors. 
@@ -492,7 +491,7 @@ computed: {
   </p>
   <nuxt-link class="gardient-button" to="/subscription">Plan Details</nuxt-link>
   <p class="intro-p"><b>Team</b>–<span></span>
-    <i> Horizons LA</i> is a publication of <i>Fintech Horizons Media</i>, a news organization founded by information specialists from the US and Latin America. The team includes Kevin Nafziger, CEO and Co-founder; Rebecca Wenzel, Americas Editor; Abraham Felix, Head of IT; and Berenice Cabellero, Head of Research.
+    <i> Horizons LA</i> is a publication of <i>Fintech Horizons Media</i>, a news organization founded by information specialists from the US and Latin America. The team includes Kevin Nafziger, CEO and Co-founder; Berenice Cabellero, Head of Research; Abraham Felix, Head of IT; and Rebecca Wenzel, Americas Editor.
   </p>
 </div>
 <StoriesSpotlight/>
