@@ -78,7 +78,7 @@ h2 {
       <h6> {{ dataList.find(item => item.id === 1061).title }} </h6>
        <!-- <p v-html="dataList[0].blog_entry"> </p> -->
        <hr>
-        <p> {{ dataList.find(item => item.id === 1061).interest.substring(0,194)}} </p>
+        <p> {{ dataList.find(item => item.id === 1061).interest.substring(0,167)}} </p>
    </div>
  </a>
  <a
@@ -118,7 +118,7 @@ style="display:flex;text-decoration:none;color:#14a0fd;">
   <img :src="dataList.find(item => item.id === 411).logo_url">  </img>
     <h6> {{dataList.find(item => item.id === 411).title }} </h6>
     <hr>
-     <p> {{ dataList.find(item => item.id === 411).interest.substring(0,115)}} </p>
+     <p> {{ dataList.find(item => item.id === 411).interest.substring(0,124)}} </p>
    <!-- <p v-html="dataList[0].blog_entry"> </p> -->
 
  </div>

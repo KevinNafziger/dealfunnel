@@ -79,7 +79,9 @@
        </nuxt-link></center>
   <h1  class=' article-view-t' style='margin-bottom:60px; text-indent:-.1pt;
   line-height:109%;'><b><span v-if="!(post.title === undefined)" style='line-height:109%; margin-left: 3%; font-size:16pt;'>{{post.title }}</span></b></h1>
-   <br>
+   <span style='margin-left:3%;' v-if="!(post.created_date==null)" class="post-info"><a class="datetag">{{post.created_date}}</a>
+  </span>
+  <br>
    <span class="intro-p" style="display:inline-block;width:48%;text-align:justify;float:left;">
     <div  v-html="firsthalf(post)" ></div>
    </span>
