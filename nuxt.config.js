@@ -52,9 +52,9 @@ export default {
    
     env: {
       fbAPIKey: process.env.FB_KEY || 'AIzaSyBzUEYv2IKnQURUERVEH4g_-3OO4XSfWSY',
-      stripePRICEID: process.env.STRIPE_PRICE_ID,
-      stripePUBLIC: process.env.STRIPE_PUBLIC_KEY,
-      stripeSECRET: process.env.STRIPE_SECRET_KEY,
+     // stripePRICEID: process.env.STRIPE_PRICE_ID,
+     // stripePUBLIC: process.env.STRIPE_PUBLIC_KEY,
+     // stripeSECRET: process.env.STRIPE_SECRET_KEY,
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
