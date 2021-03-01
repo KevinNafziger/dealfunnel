@@ -78,26 +78,10 @@ h2 {
    <div>
    <!-- <img  src="https://fintechapp.s3.us-east-2.amazonaws.com/y2qYjf8e2hp8z5yrgyfxF2NN?response-content-disposition=inline%3B%20filename%3D%22BoxLogo.png%22%3B%20filename%2A%3DUTF-8%27%27BoxLogo.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJG6DG75G7BXQ3XUA%2F20210115%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210115T192217Z&X-Amz-Expires=518400&X-Amz-SignedHeaders=host&X-Amz-Signature=26b742c676a7fc0854c1efa0c81bf60e9239bc5068606262b3b1eab0f7a21245">
    -->
-     <img :src="dataList.find(item => item.id === 321).logo_url">  </img>
-     <h6> {{ dataList.find(item => item.id === 321).title }} </h6>
+     <img :src="dataList.find(item => item.id === 815).logo_url">  </img>
+     <h6> {{ dataList.find(item => item.id === 815).title }} </h6>
      <hr>
-     <p> {{ dataList.find(item => item.id === 321).fact.substring(0,120)}} </p>
-     <!-- <p v-html="dataList[0].blog_entry"> </p> -->
-    </div>
-</a>
-<a
-   v-bind:key="dataList.id"
-   :href="`posts/${dataList.find(item => item.id === 1169).id}`"
-   class="Gmodule"
-   style="display:flex;text-decoration:none;color:#14a0fd;"
-   >
-   <div>
-   <!-- <img  src="https://fintechapp.s3.us-east-2.amazonaws.com/y2qYjf8e2hp8z5yrgyfxF2NN?response-content-disposition=inline%3B%20filename%3D%22BoxLogo.png%22%3B%20filename%2A%3DUTF-8%27%27BoxLogo.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJG6DG75G7BXQ3XUA%2F20210115%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210115T192217Z&X-Amz-Expires=518400&X-Amz-SignedHeaders=host&X-Amz-Signature=26b742c676a7fc0854c1efa0c81bf60e9239bc5068606262b3b1eab0f7a21245">
-   -->
-     <img :src="dataList.find(item => item.id === 1169).logo_url">  </img>
-     <h6> {{ dataList.find(item => item.id === 1169).title }} </h6>
-     <hr>
-     <p> {{ dataList.find(item => item.id === 1169).fact.substring(0,120)}} </p>
+     <p> {{ dataList.find(item => item.id === 815).fact.substring(0,132)}} </p>
      <!-- <p v-html="dataList[0].blog_entry"> </p> -->
     </div>
 </a>
@@ -129,10 +113,59 @@ h2 {
      <img :src="dataList.find(item => item.id === 1561).logo_url">  </img>
      <h6> {{ dataList.find(item => item.id === 1561).title }} </h6>
      <hr>
-     <p> {{ dataList.find(item => item.id === 1561).fact.substring(0,120)}} </p>
+     <p> {{ dataList.find(item => item.id === 1561).fact.substring(0,136)}} </p>
      <!-- <p v-html="dataList[0].blog_entry"> </p> -->
     </div>
 </a>
+<a
+   v-bind:key="dataList.id"
+   :href="`posts/${dataList.find(item => item.id === 678).id}`"
+   class="Gmodule"
+   style="display:flex;text-decoration:none;color:#14a0fd;"
+   >
+   <div>
+   <!-- <img  src="https://fintechapp.s3.us-east-2.amazonaws.com/y2qYjf8e2hp8z5yrgyfxF2NN?response-content-disposition=inline%3B%20filename%3D%22BoxLogo.png%22%3B%20filename%2A%3DUTF-8%27%27BoxLogo.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJG6DG75G7BXQ3XUA%2F20210115%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210115T192217Z&X-Amz-Expires=518400&X-Amz-SignedHeaders=host&X-Amz-Signature=26b742c676a7fc0854c1efa0c81bf60e9239bc5068606262b3b1eab0f7a21245">
+   -->
+     <img :src="dataList.find(item => item.id === 678).logo_url">  </img>
+     <h6> {{ dataList.find(item => item.id === 678).title }} </h6>
+     <hr>
+     <p> {{ dataList.find(item => item.id === 678).interest.substring(0,170)}} </p>
+     <!-- <p v-html="dataList[0].blog_entry"> </p> -->
+    </div>
+</a>
+<a
+   v-bind:key="dataList.id"
+   :href="`posts/${dataList.find(item => item.id === 1040).id}`"
+   class="Gmodule"
+   style="display:flex;text-decoration:none;color:#14a0fd;"
+   >
+   <div>
+   <!-- <img  src="https://fintechapp.s3.us-east-2.amazonaws.com/y2qYjf8e2hp8z5yrgyfxF2NN?response-content-disposition=inline%3B%20filename%3D%22BoxLogo.png%22%3B%20filename%2A%3DUTF-8%27%27BoxLogo.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJG6DG75G7BXQ3XUA%2F20210115%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210115T192217Z&X-Amz-Expires=518400&X-Amz-SignedHeaders=host&X-Amz-Signature=26b742c676a7fc0854c1efa0c81bf60e9239bc5068606262b3b1eab0f7a21245">
+   -->
+     <img :src="dataList.find(item => item.id === 1040).logo_url">  </img>
+     <h6> {{ dataList.find(item => item.id === 1040).title }} </h6>
+     <hr>
+     <p> {{ dataList.find(item => item.id === 1040).interest.substring(0,209)}} </p>
+     <!-- <p v-html="dataList[0].blog_entry"> </p> -->
+    </div>
+</a>
+<a
+   v-bind:key="dataList.id"
+   :href="`posts/${dataList.find(item => item.id === 1601).id}`"
+   class="Gmodule"
+   style="display:flex;text-decoration:none;color:#14a0fd;"
+   >
+   <div>
+   <!-- <img  src="https://fintechapp.s3.us-east-2.amazonaws.com/y2qYjf8e2hp8z5yrgyfxF2NN?response-content-disposition=inline%3B%20filename%3D%22BoxLogo.png%22%3B%20filename%2A%3DUTF-8%27%27BoxLogo.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJG6DG75G7BXQ3XUA%2F20210115%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210115T192217Z&X-Amz-Expires=518400&X-Amz-SignedHeaders=host&X-Amz-Signature=26b742c676a7fc0854c1efa0c81bf60e9239bc5068606262b3b1eab0f7a21245">
+   -->
+     <img :src="dataList.find(item => item.id === 1601).logo_url">  </img>
+     <h6> {{ dataList.find(item => item.id === 1601).title }} </h6>
+     <hr>
+     <p> {{ dataList.find(item => item.id === 1601).interest.substring(0,300)}} </p>
+     <!-- <p v-html="dataList[0].blog_entry"> </p> -->
+    </div>
+</a>
+
 <!-- story blocks END-->
 
 
