@@ -1917,7 +1917,7 @@ export default {
       display: inline-table;
       align-items: center;
       justify-content: center;
-      height: 350px;
+      height: 150px;
       padding:15px;
       border-radius: 10px;
       -webkit-box-shadow: 0px 0px 25px -16px rgba(161,161,161,1);
