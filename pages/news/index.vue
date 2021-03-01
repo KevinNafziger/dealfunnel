@@ -638,6 +638,7 @@ ul {
   .paragraph-19 {
       letter-spacing: 1.3px;
       line-height: 29px;
+      margin-bottom:30px;
   }
 .content {
   padding-top:10px;

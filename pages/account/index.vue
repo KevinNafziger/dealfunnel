@@ -1,17 +1,3 @@
-
-<template>
-  <body>
-    <br>
-    <div class="card">
-      <div class="center">
- 	      <nuxt-link title="click to manage billing" class="nuxt-link mdi mdi-account-circle-outline mdi-24px gardient-button" to="/customer-portal">
-       	<br> Manage billing</nuxt-link>
-      </div>
-    </div>
-  </body>
-</template>
-<script>
-</script>
 <style scoped>
 
 .text-block-20 {
@@ -19,7 +5,8 @@
  }
 
 body {
-  background: rgba(241,241,241,0.98039);
+  background: #ffffff;
+  display: flow-root;
 }
  .gardient-button {
      display: grid;
@@ -100,3 +87,16 @@ h2 {
 }
 
 </style>
+
+<template>
+  <body>
+    <div class="card">
+      <div class="center">
+ 	      <nuxt-link title="click to manage billing" class="nuxt-link mdi mdi-account-circle-outline mdi-24px gardient-button" to="/customer-portal">
+       	<br> Manage billing</nuxt-link>
+      </div>
+    </div>
+  </body>
+</template>
+<script>
+</script>
