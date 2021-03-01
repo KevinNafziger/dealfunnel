@@ -265,16 +265,19 @@ a {
 
 <script>
 
-    import stripeCheckoutMixin from '@/mixins/stripeCheckoutMixin';
-    export default {
-        mixins: [stripeCheckoutMixin],
-        data () {
-      return {
-          price: process.env.stripePRICEID,
-          successUrl: 'https://www.dealfunnel.net/process-payment',
-          cancelUrl: 'https://www.dealfunnel.net/process-payment',
-      authorization: 'Bearer' + process.env.stripeSECRET,
-         }
-        }
-    }
+    //import stripeCheckoutMixin from '@/mixins/
+    //stripeCheckoutMixin';
+    //export default {
+      //  mixins: [stripeCheckoutMixin],
+       // data () {
+      //return {
+        //  price: process.env.stripePRICEID,
+         // successUrl: 'https://www.dealfunnel.net/
+         //process-payment',
+         // cancelUrl: 'https://www.dealfunnel.net/
+         //process-payment',
+      //authorization: 'Bearer' + process.env.stripeSECRET,
+      //   }
+       // }
+   // }
 </script>
