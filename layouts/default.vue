@@ -10,7 +10,7 @@
 <script>
 import TheHeader from '@/components/Navigation/TheHeader';
 import TheFooter from '@/components/Navigation/TheFooter';
-import Visits from '@/components/Visits/Visits';
+
 
 
 export default {
@@ -20,7 +20,6 @@ export default {
 
   components: {
   TheHeader,
-  Visits,
   TheFooter
   },
 
