@@ -558,11 +558,6 @@ computed: {
       }),
    },
 
-  async fetch({store}) {
-
-       store.dispatch("posts/setView", "Front");
-
-  },
 }
 
 </script>
