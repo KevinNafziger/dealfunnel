@@ -6,12 +6,12 @@
 <script>
 
 export default {
-  async data() {
+  //async data() {
     //const stripe = 
     //require('stripe')('sk_test_yFPvhxz3yjT8Du6RhdOAoZyE');
     //const customers = await stripe.customers.list();
     //return {customers};
-  },
+  //},
 
 }
 </script>
