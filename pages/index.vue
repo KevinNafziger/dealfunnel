@@ -11,13 +11,13 @@
   </h1><br>
   <p class="MsoNormal">
   <span class="intro-p">
-    <i>Horizons LA</i> features articles, reports, and data on fast growing companies in Latin America. While our original focus was Fintech, our coverage has expanded to encompass technology businesses serving the financial services industry and beyond. This includes companies in Blockchain, DLT and Crypto as well as in HealthTech, Artificial Intelligence, LegalTech, and Cybersecurity.
+    <i>Horizons LA</i> features articles, reports, and data on fast growing companies in Latin America. While we primarily cover Fintech, our coverage has expanded to encompass technology businesses serving the financial services industry and beyond. This includes companies in Blockchain, DLT and Crypto as well as in HealthTech, Artificial Intelligence, LegalTech, and Cybersecurity.
   </span>
   </p>
   <p class="intro-p" >
   <b>Exceptional</b> –
   <span class="SpellE"><i>Horizons LA</i> </span>
-  is beloved by executives in Latin America and across the globe as well as by dealmakers and practitioners including investment bankers, partners and associates of venture capital firms, industry attorneys, PE practitioners and economists. 
+  is beloved by executives, dealmakers and practitioners including investment bankers, partners and associates of venture capital firms, industry attorneys, PE practitioners and economists. 
   </p>
   <p class="intro-p"><b>Data Driven</b>–<span class="SpellE"></span>
   <i>Horizons LA</i> members receive online access to searchable data on capital raises, companies and articles. The data can be exported to <i>Excel</i> and other spreadsheet programs.
@@ -30,13 +30,12 @@
   </p>
   <p class="intro-p">
   <b>Propietary Content</b>–<span class="SpellE"></span>
-  <i>Horizons LA</i> members receive online acccess to all of FHM's propietary content.</i>
-  This propietary content includes reports on trending topics along with sets of auto-generated reports which include all of the company-related articles and capital raise data for that topic. <i>FHM's</i> auto-generated reports are grouped by strategic action, size of expected raise, timing of expected raise, geography, subsector, and by broader categories such as 'Blockchain', 'Insurtech', 'Payments', 'AI', 'Lending' and 'OpenBanking. <i>FHM</i> reports aggregate all of <i>FHM's</i> own company-specific intelligence on that topic, derived from interviews with an executive or executives at the featured company.
+  <i>Horizons LA</i> members receive online acccess to all FHM propietary content.</i>
+  This  includes reports on trending topics along with sets of auto-generated reports which include all of the company-related articles and capital raise data for that topic. <i>FHM's</i> auto-generated reports are grouped by strategic action, size of expected raise, timing of expected raise, geography, subsector, and by broader categories such as 'Blockchain', 'Insurtech', 'Payments', 'AI', 'Lending' and 'OpenBanking. <i>FHM</i> reports aggregate all of <i>FHM's</i> own company-specific intelligence on that topic, derived from interviews with an executive or executives at the featured company.
   Our reports can generate a "wow" from some readers when they see the sheer volume of company-specific intelligence they provide. <i>FHM </i> reports aren't designed to provide a quick overview but to serve practitioners who want to review a large amount of company-specific intelligence related to a topic in a single document. 
   </p>
   <p class="intro-p"><b>Value Proposition</b>–<span></span>
-  The Fintech Revolution is creating greater economic growth and opportunity across Latin America. <i>Horizons LA</i> showcases companies that are driving that innovation. <i>Horizons LA</i> also features propietary reports, data, and articles that serve as a rich repository of information to executives, industry professionals and investors. 
- 
+  The Fintech Revolution is fueling greater economic growth across Latin America. <i>Horizons LA</i> showcases companies driving that growth. Additionally, <i>Horizons LA</i>  features propietary reports, data, and articles that serve as a rich repository of information to executives, practitioners, and dealmakers. 
   </p>
   <nuxt-link class="gardient-button" to="/subscription">Plan Details</nuxt-link>
   <p class="intro-p"><b>Team</b>–<span></span>
