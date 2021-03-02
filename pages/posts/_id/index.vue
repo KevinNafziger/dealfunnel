@@ -102,14 +102,14 @@ export default {
     to () {
         if (this.client || !this.$routerHistory || !this.$routerHistory.hasPrevious()) {
             if (this.activeView =="Articles") {
-                return { path: '/' };
+                return '/';
             }
             else if (this.activeView =="Data"){
-                  return { path: '/data' };
+                  return '/data' ;
             }
             else
             {
-                  return { path: '/' };
+                  return '/' ;
             }
         }
 
