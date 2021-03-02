@@ -10,19 +10,42 @@ let store = {};
 (function updateModules () {
   // If store is an exported method = classic mode (deprecated)
 
+  if (typeof store === 'function') {
+    return console.warn('Classic mode for store/ is deprecated and will be removed in Nuxt 3.')
+  }
+
   // Enforce store modules
   store.modules = store.modules || {}
 
-  resolveStoreModules(require('../store/auth.js'), 'auth.js')
-  resolveStoreModules(require('../store/boards.js'), 'boards.js')
-  resolveStoreModules(require('../store/company.js'), 'company.js')
-  resolveStoreModules(require('../store/news.js'), 'news.js')
-  resolveStoreModules(require('../store/posts.js'), 'posts.js')
-  resolveStoreModules(require('../store/raise.js'), 'raise.js')
-  resolveStoreModules(require('../store/store.js'), 'store.js')
-  resolveStoreModules(require('../store/visits.js'), 'visits.js')
+  resolveStoreModules(require('..\\store\\auth.js'), 'auth.js')
+  resolveStoreModules(require('..\\store\\boards.js'), 'boards.js')
+  resolveStoreModules(require('..\\store\\company.js'), 'company.js')
+  resolveStoreModules(require('..\\store\\news.js'), 'news.js')
+  resolveStoreModules(require('..\\store\\posts.js'), 'posts.js')
+  resolveStoreModules(require('..\\store\\raise.js'), 'raise.js')
+  resolveStoreModules(require('..\\store\\store.js'), 'store.js')
+  resolveStoreModules(require('..\\store\\visits.js'), 'visits.js')
 
   // If the environment supports hot reloading...
+
+  if (process.client && module.hot) {
+    // Whenever any Vuex module is updated...
+    module.hot.accept([
+      '..\\store\\auth.js',
+      '..\\store\\boards.js',
+      '..\\store\\company.js',
+      '..\\store\\news.js',
+      '..\\store\\posts.js',
+      '..\\store\\raise.js',
+      '..\\store\\store.js',
+      '..\\store\\visits.js',
+    ], () => {
+      // Update `root.modules` with the latest definitions.
+      updateModules()
+      // Trigger a hot update in the store.
+      window.$nuxt.$store.hotUpdate(store)
+    })
+  }
 })()
 
 // createStore

@@ -13,11 +13,11 @@ import { createStore } from './store.js'
 
 /* Plugins */
 
-import nuxt_plugin_plugin_5e2cc8fc from 'nuxt_plugin_plugin_5e2cc8fc' // Source: ./components/plugin.js (mode: 'all')
-import nuxt_plugin_bootstrapvue_535b8b7e from 'nuxt_plugin_bootstrapvue_535b8b7e' // Source: ./bootstrap-vue.js (mode: 'all')
-import nuxt_plugin_axios_d950e3dc from 'nuxt_plugin_axios_d950e3dc' // Source: ./axios.js (mode: 'all')
-import nuxt_plugin_firebase_491a0ea0 from 'nuxt_plugin_firebase_491a0ea0' // Source: ../plugins/firebase (mode: 'all')
-import nuxt_plugin_vuematerial_11e89da7 from 'nuxt_plugin_vuematerial_11e89da7' // Source: ../plugins/vue-material (mode: 'all')
+import nuxt_plugin_plugin_c36c5f20 from 'nuxt_plugin_plugin_c36c5f20' // Source: .\\components\\plugin.js (mode: 'all')
+import nuxt_plugin_bootstrapvue_8cc9f07c from 'nuxt_plugin_bootstrapvue_8cc9f07c' // Source: .\\bootstrap-vue.js (mode: 'all')
+import nuxt_plugin_axios_dc3b26da from 'nuxt_plugin_axios_dc3b26da' // Source: .\\axios.js (mode: 'all')
+import nuxt_plugin_firebase_491a0ea0 from 'nuxt_plugin_firebase_491a0ea0' // Source: ..\\plugins\\firebase (mode: 'all')
+import nuxt_plugin_vuematerial_11e89da7 from 'nuxt_plugin_vuematerial_11e89da7' // Source: ..\\plugins\\vue-material (mode: 'all')
 
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
@@ -206,16 +206,16 @@ async function createApp(ssrContext, config = {}) {
   }
   // Plugin execution
 
-  if (typeof nuxt_plugin_plugin_5e2cc8fc === 'function') {
-    await nuxt_plugin_plugin_5e2cc8fc(app.context, inject)
+  if (typeof nuxt_plugin_plugin_c36c5f20 === 'function') {
+    await nuxt_plugin_plugin_c36c5f20(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_bootstrapvue_535b8b7e === 'function') {
-    await nuxt_plugin_bootstrapvue_535b8b7e(app.context, inject)
+  if (typeof nuxt_plugin_bootstrapvue_8cc9f07c === 'function') {
+    await nuxt_plugin_bootstrapvue_8cc9f07c(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_axios_d950e3dc === 'function') {
-    await nuxt_plugin_axios_d950e3dc(app.context, inject)
+  if (typeof nuxt_plugin_axios_dc3b26da === 'function') {
+    await nuxt_plugin_axios_dc3b26da(app.context, inject)
   }
 
   if (typeof nuxt_plugin_firebase_491a0ea0 === 'function') {

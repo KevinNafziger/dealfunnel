@@ -3,17 +3,18 @@ import Vue from 'vue'
 import { getMatchedComponentsInstances, getChildrenComponentInstancesUsingFetch, promisify, globalHandleError, urlJoin, sanitizeComponent } from './utils'
 import NuxtError from './components/nuxt-error.vue'
 import NuxtLoading from './components/nuxt-loading.vue'
+import NuxtBuildIndicator from './components/nuxt-build-indicator'
 
-import '../node_modules/bootstrap/dist/css/bootstrap.css'
+import '..\\node_modules\\bootstrap\\dist\\css\\bootstrap.css'
 
-import '../node_modules/bootstrap-vue/dist/bootstrap-vue.css'
+import '..\\node_modules\\bootstrap-vue\\dist\\bootstrap-vue.css'
 
-import '../node_modules/vue-material/dist/vue-material.min.css'
+import '..\\node_modules\\vue-material\\dist\\vue-material.min.css'
 
-import '../node_modules/@mdi/font/css/materialdesignicons.css'
+import '..\\node_modules\\@mdi\\font\\css\\materialdesignicons.css'
 
-import _6f6c098b from '../layouts/default.vue'
-import _f2bfdd06 from '../layouts/raises.vue'
+import _6f6c098b from '..\\layouts\\default.vue'
+import _f2bfdd06 from '..\\layouts\\raises.vue'
 
 const layouts = { "_default": sanitizeComponent(_6f6c098b),"_raises": sanitizeComponent(_f2bfdd06) }
 
@@ -50,7 +51,7 @@ export default {
       }
     }, [
       loadingEl,
-
+      h(NuxtBuildIndicator),
       transitionEl
     ])
   },
@@ -186,6 +187,10 @@ export default {
     },
 
     setLayout (layout) {
+      if(layout && typeof layout !== 'string') {
+        throw new Error('[nuxt] Avoid using non-string value as layout property.')
+      }
+
       if (!layout || !layouts['_' + layout]) {
         layout = 'default'
       }
