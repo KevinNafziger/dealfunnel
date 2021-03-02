@@ -46,5 +46,17 @@
   "devDependencies": {
     "@fortawesome/free-brands-svg-icons": "^5.15.1",
     "@fortawesome/free-solid-svg-icons": "^5.15.1"
-  }
+  },
+  "main": "nuxt.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KevinNafziger/dealfunnel.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KevinNafziger/dealfunnel/issues"
+  },
+  "homepage": "https://github.com/KevinNafziger/dealfunnel#readme",
+  "description": ""
 }
