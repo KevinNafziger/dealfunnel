@@ -95,7 +95,6 @@ import MyItem from '@/components/Grid/MyItem';
 import StoriesSpotlight from '@/components/Grid/StoriesSpotlight';
 import CountriesSpotlight from '@/components/Grid/CountriesSpotlight';
 import Vue from 'vue';
-import Vue2TouchEvents from 'vue2-touch-events';
 import '/plugins/vue-gtag.js';
 import  "firebase/auth";
 import firebase from 'firebase';
