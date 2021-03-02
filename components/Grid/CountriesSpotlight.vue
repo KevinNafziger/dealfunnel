@@ -34,7 +34,7 @@
 </a>
 <a
 v-bind:key="dataList.id"
-:href="`posts/${dataList.find(item => item.id === 1012).id}`"
+:href="`posts/${dataList.find(item => item.id === 321).id}`"
 class="Gmodule"
 style="display:flex;text-decoration:none;color:#14a0fd;">
  <div>
