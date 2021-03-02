@@ -30,7 +30,6 @@
     "npm": "^6.14.9",
     "nuxt": "^2.14.12",
     "nuxt-stripe": "0.0.3",
-    "nuxt-stripe-module": "^3.0.1",
     "nuxtjs-mdi-font": "^1.0.2",
     "v-tippy": "^2.0.0",
     "vue-gtag": "^1.11.0",
