@@ -45,9 +45,9 @@ export default {
     },
 
     
-    stripe: {
-    publishableKey: 'pk_live_XfWHUi5ZgIVMcDsaWQDMHFCa',
-     },
+    //stripe: {
+    //publishableKey: 'pk_live_XfWHUi5ZgIVMcDsaWQDMHFCa',
+    // },
    
     env: {
       fbAPIKey: process.env.FB_KEY || 'AIzaSyBzUEYv2IKnQURUERVEH4g_-3OO4XSfWSY',
