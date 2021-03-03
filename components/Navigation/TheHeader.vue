@@ -12,7 +12,7 @@
       <li class="nav-item"><nuxt-link to="/builder">Builder</nuxt-link></li>
       <li class="nav-item"><nuxt-link to="/raises">Raises</nuxt-link></li>
       <li class="nav-item"><nuxt-link  v-show="(this.loggedIn)" to="/companies">Companies</nuxt-link></li>
-      <li class="nav-item"><nuxt-link  v-show="(this.loggedIn)" to="/data">Data</nuxt-link></li>
+      <li class="nav-item"><nuxt-link  to="/data">Data</nuxt-link></li>
       <li class="nav-item"><nuxt-link  v-show="(this.loggedIn)" to="/account">Account</nuxt-link></li>
       <li v-if="!(this.loggedIn)" class="nav-item"><nuxt-link to="/login">Login</nuxt-link></li>
        <li style="display:content;" v-if="this.loggedIn"><br>

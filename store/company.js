@@ -607,6 +607,11 @@ export const mutations = {
 	  currCompany: (state, id ) => {
 
 	  	  return state.activeInfo.find(c => c.id == id);
+	  },
+
+	  companyByName: (state, name) => {
+
+	  	  return state.activeInfo.find(c => c.name == name);	
 	  },	
 
 
