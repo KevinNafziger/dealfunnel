@@ -232,9 +232,9 @@ a {
         <hr>
         <center> <h6></h6> </center></li>
         <br><li class="plan__feature-item">- The
-       <span class="accent-2"><i>DealFunnel</i> newsletter</span></li>
+       <span class="accent-2"><i>finmedialatam</i> newsletter</span></li>
          <li class="plan__feature-item">-<i><span class="accent-2"> </span></i></li>
-         <li class="plan__feature-item">-<i> DealFunnel</i> support<span class="accent-2"></span></li>
+         <li class="plan__feature-item">-<i> finmedialatam</i> support<span class="accent-2"></span></li>
          <li class="plan__feature-item"><span class="accent-2"></span></li>
           <hr>
        </ul>

@@ -2,7 +2,7 @@
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: 'DealFunnel',
+    title: 'Fintech Media LatAm',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -44,11 +44,11 @@ export default {
     baseURL: process.env.BASE_URL || 'https://fintechhorizonsmedia.com/api/v1',
     },
 
-    
+
     //stripe: {
     //publishableKey: 'pk_live_XfWHUi5ZgIVMcDsaWQDMHFCa',
     // },
-   
+
     env: {
       fbAPIKey: process.env.FB_KEY || 'AIzaSyBzUEYv2IKnQURUERVEH4g_-3OO4XSfWSY',
      // stripePRICEID: process.env.STRIPE_PRICE_ID,
