@@ -21,7 +21,7 @@
     </ul>
 
   </Mobilebar>
-  <img src="dealfunnelwhite.png" class="logo"/>
+  <img src="https://firebasestorage.googleapis.com/v0/b/vuedealfunnel.appspot.com/o/finmedialatam.png?alt=media&token=2f5f7b2a-647d-4b2d-9100-b92588d39a19" class="logo"/>
     <div class="navigation-items">
       <ul class="nav-list">
         <li v-if="showLogOutBtn" class="nav-item"><nuxt-link to="/logout">Logout</nuxt-link></li>
