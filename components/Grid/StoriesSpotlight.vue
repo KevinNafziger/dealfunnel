@@ -144,7 +144,7 @@ h2 {
      <img :src="dataList.find(item => item.id === 1040).logo_url">  </img>
      <h6> {{ dataList.find(item => item.id === 1040).title }} </h6>
      <hr>
-     <p> {{ dataList.find(item => item.id === 1040).interest.substring(0,209)}} </p>
+
      <!-- <p v-html="dataList[0].blog_entry"> </p> -->
     </div>
 </a>
@@ -160,7 +160,7 @@ h2 {
      <img :src="dataList.find(item => item.id === 1601).logo_url">  </img>
      <h6> {{ dataList.find(item => item.id === 1601).title }} </h6>
      <hr>
-     <p> {{ dataList.find(item => item.id === 1601).interest.substring(0,300)}} </p>
+ 
      <!-- <p v-html="dataList[0].blog_entry"> </p> -->
     </div>
 </a>
