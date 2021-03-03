@@ -7,7 +7,11 @@
           <center><p>Thank you for visiting <i>finmedialatam.com</i>.</p></center>
         </div>
       </div>
-      <center><img style="margin-top:100px;padding:3px;text-align:center;background:#4f81bd;border-radius:10px;" src="http://localhost:3000/dealfunnelwhite.png"></img></center>
+      <center>
+        <img
+        style="margin-top:100px;padding:20px;text-align:center;background:#4f81bd;border-radius:10px;" 
+        src="https://firebasestorage.googleapis.com/v0/b/vuedealfunnel.appspot.com/o/finmedialatam.png?alt=media&token=2f5f7b2a-647d-4b2d-9100-b92588d39a19"></img>
+      </center>
     </div>
   </body>
 </template>
