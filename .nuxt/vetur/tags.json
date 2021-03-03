@@ -1,4 +1,16 @@
 {
+  "DealTempSearch": {
+    "description": "Auto imported from C:/bfish4/dealfunnel/components/Deals/DealTempSearch.vue"
+  },
+  "LazyDealTempSearch": {
+    "description": "Auto imported from C:/bfish4/dealfunnel/components/Deals/DealTempSearch.vue"
+  },
+  "CompanyTempSearch": {
+    "description": "Auto imported from C:/bfish4/dealfunnel/components/Company/CompanyTempSearch.vue"
+  },
+  "LazyCompanyTempSearch": {
+    "description": "Auto imported from C:/bfish4/dealfunnel/components/Company/CompanyTempSearch.vue"
+  },
   "Postsys": {
     "description": "Auto imported from C:/bfish4/dealfunnel/components/Builder/Postsys.vue"
   },
@@ -11,23 +23,11 @@
   "LazySearchbar": {
     "description": "Auto imported from C:/bfish4/dealfunnel/components/Builder/Searchbar.vue"
   },
-  "CompanyTempSearch": {
-    "description": "Auto imported from C:/bfish4/dealfunnel/components/Company/CompanyTempSearch.vue"
-  },
-  "LazyCompanyTempSearch": {
-    "description": "Auto imported from C:/bfish4/dealfunnel/components/Company/CompanyTempSearch.vue"
-  },
   "DataTempSearch": {
     "description": "Auto imported from C:/bfish4/dealfunnel/components/Data/DataTempSearch.vue"
   },
   "LazyDataTempSearch": {
     "description": "Auto imported from C:/bfish4/dealfunnel/components/Data/DataTempSearch.vue"
-  },
-  "DealTempSearch": {
-    "description": "Auto imported from C:/bfish4/dealfunnel/components/Deals/DealTempSearch.vue"
-  },
-  "LazyDealTempSearch": {
-    "description": "Auto imported from C:/bfish4/dealfunnel/components/Deals/DealTempSearch.vue"
   },
   "Board": {
     "description": "Auto imported from C:/bfish4/dealfunnel/components/Draggable/Board.vue"
@@ -40,12 +40,6 @@
   },
   "LazyCard": {
     "description": "Auto imported from C:/bfish4/dealfunnel/components/Draggable/Card.vue"
-  },
-  "LettersList": {
-    "description": "Auto imported from C:/bfish4/dealfunnel/components/Letters/LettersList.vue"
-  },
-  "LazyLettersList": {
-    "description": "Auto imported from C:/bfish4/dealfunnel/components/Letters/LettersList.vue"
   },
   "CountriesSpotlight": {
     "description": "Auto imported from C:/bfish4/dealfunnel/components/Grid/CountriesSpotlight.vue"
@@ -70,6 +64,12 @@
   },
   "LazyStoriesSpotlight": {
     "description": "Auto imported from C:/bfish4/dealfunnel/components/Grid/StoriesSpotlight.vue"
+  },
+  "LettersList": {
+    "description": "Auto imported from C:/bfish4/dealfunnel/components/Letters/LettersList.vue"
+  },
+  "LazyLettersList": {
+    "description": "Auto imported from C:/bfish4/dealfunnel/components/Letters/LettersList.vue"
   },
   "Burger": {
     "description": "Auto imported from C:/bfish4/dealfunnel/components/Navigation/Burger.vue"

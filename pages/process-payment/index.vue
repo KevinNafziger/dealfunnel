@@ -3,7 +3,7 @@
   <div><center><br><br><br>
     <h4>Thank you for subscribing! </h4>
     <div class="T-T-B">
-    <h4>Enter your email and choose your <i>finmedialatam </i> password.
+    <h4>Enter your email and choose your <i>Fintech Media Latam </i> password.
     </h4>
   </div>
   <br></center></div>

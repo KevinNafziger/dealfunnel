@@ -8,7 +8,7 @@
             <input content="Type your search text"
         v-tippy="{ placement : 'bottom' }" type="text"  name="term" id="term"  v-model="searchMessage" style="margin-right: 10px" width="100%" class="text-field w-input w-col w-col-6" placeholder="search  content">
 
-            <button        class="gardient-button" id="section-10" v-on:click="submitSearch(searchMessage)"  style="margin-left:1px;margin-top:5px;margin-bottom:10px" >
+            <button class="gardient-button" id="section-10" v-on:click="submitSearch(searchMessage)" style="margin-left:1px;margin-top:5px;margin-bottom:10px" >
               <span class="mdi mdi-file-search"></span>
             </button>
             <br><br>
@@ -33,32 +33,29 @@
 
 <script>
 
-  //import 'vuetify/dist/vuetify.min.css';
-  //import Vuetify from 'vuetify';
-
    export default {
    name: 'RaiseTempSearch',
 
    data () {
       return {
-      searchMessage: "",
-     }
+        searchMessage: "",
+      }
     },
 
-      methods: {
+    methods: {
 
-        showGrouping(category) {
+      showGrouping(category) {
           $nuxt.$emit("getCategory", category);
-        },
+      },
 
-        submitSearch: function(topic) {
+      submitSearch: function(topic) {
 
           $nuxt.$emit("submitSearch", topic);
           this.searchMessage = '';
 
-        }
+      }
 
-      },
+    },
 
    }
 
