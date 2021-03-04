@@ -1,16 +1,4 @@
 {
-  "Postsys": {
-    "description": "Auto imported from C:/bfish4/dealfunnel/components/Builder/Postsys.vue"
-  },
-  "LazyPostsys": {
-    "description": "Auto imported from C:/bfish4/dealfunnel/components/Builder/Postsys.vue"
-  },
-  "Searchbar": {
-    "description": "Auto imported from C:/bfish4/dealfunnel/components/Builder/Searchbar.vue"
-  },
-  "LazySearchbar": {
-    "description": "Auto imported from C:/bfish4/dealfunnel/components/Builder/Searchbar.vue"
-  },
   "CompanyTempSearch": {
     "description": "Auto imported from C:/bfish4/dealfunnel/components/Company/CompanyTempSearch.vue"
   },
@@ -28,6 +16,18 @@
   },
   "LazyDealTempSearch": {
     "description": "Auto imported from C:/bfish4/dealfunnel/components/Deals/DealTempSearch.vue"
+  },
+  "Postsys": {
+    "description": "Auto imported from C:/bfish4/dealfunnel/components/Builder/Postsys.vue"
+  },
+  "LazyPostsys": {
+    "description": "Auto imported from C:/bfish4/dealfunnel/components/Builder/Postsys.vue"
+  },
+  "Searchbar": {
+    "description": "Auto imported from C:/bfish4/dealfunnel/components/Builder/Searchbar.vue"
+  },
+  "LazySearchbar": {
+    "description": "Auto imported from C:/bfish4/dealfunnel/components/Builder/Searchbar.vue"
   },
   "Board": {
     "description": "Auto imported from C:/bfish4/dealfunnel/components/Draggable/Board.vue"
@@ -95,6 +95,12 @@
   "LazyTheHeader": {
     "description": "Auto imported from C:/bfish4/dealfunnel/components/Navigation/TheHeader.vue"
   },
+  "NewsTempSearch": {
+    "description": "Auto imported from C:/bfish4/dealfunnel/components/News/NewsTempSearch.vue"
+  },
+  "LazyNewsTempSearch": {
+    "description": "Auto imported from C:/bfish4/dealfunnel/components/News/NewsTempSearch.vue"
+  },
   "PostList": {
     "description": "Auto imported from C:/bfish4/dealfunnel/components/Posts/PostList.vue"
   },
@@ -107,29 +113,23 @@
   "LazyPostTempSearch": {
     "description": "Auto imported from C:/bfish4/dealfunnel/components/Posts/PostTempSearch.vue"
   },
-  "NewsTempSearch": {
-    "description": "Auto imported from C:/bfish4/dealfunnel/components/News/NewsTempSearch.vue"
-  },
-  "LazyNewsTempSearch": {
-    "description": "Auto imported from C:/bfish4/dealfunnel/components/News/NewsTempSearch.vue"
-  },
   "RaiseTempSearch": {
     "description": "Auto imported from C:/bfish4/dealfunnel/components/Raises/RaiseTempSearch.vue"
   },
   "LazyRaiseTempSearch": {
     "description": "Auto imported from C:/bfish4/dealfunnel/components/Raises/RaiseTempSearch.vue"
   },
-  "Sidebar": {
-    "description": "Auto imported from C:/bfish4/dealfunnel/components/Sidebar/Sidebar.vue"
-  },
-  "LazySidebar": {
-    "description": "Auto imported from C:/bfish4/dealfunnel/components/Sidebar/Sidebar.vue"
-  },
   "StripeRegistration": {
     "description": "Auto imported from C:/bfish4/dealfunnel/components/Stripe/StripeRegistration.vue"
   },
   "LazyStripeRegistration": {
     "description": "Auto imported from C:/bfish4/dealfunnel/components/Stripe/StripeRegistration.vue"
+  },
+  "Sidebar": {
+    "description": "Auto imported from C:/bfish4/dealfunnel/components/Sidebar/Sidebar.vue"
+  },
+  "LazySidebar": {
+    "description": "Auto imported from C:/bfish4/dealfunnel/components/Sidebar/Sidebar.vue"
   },
   "Visits": {
     "description": "Auto imported from C:/bfish4/dealfunnel/components/Visits/Visits.vue"

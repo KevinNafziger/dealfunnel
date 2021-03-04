@@ -2,7 +2,21 @@
   <div class="exespotbody">
     <center><h2> Country Spotlight: <span style="color:red"> Colombia</span> </h2></center><br>
   <div class="Fgrid">
+<a
+v-bind:key="dataList.id"
+:href="`posts/${dataList.find(item => item.id === 608).id}`"
+class="Gmodule"
+style="display:flex;text-decoration:none;color:#14a0fd;">
+ <div>
 
+  <img :src="dataList.find(item => item.id === 608).logo_url">  </img>
+    <h6> {{dataList.find(item => item.id === 608).title }} </h6>
+    <hr>
+     <p> {{ dataList.find(item => item.id === 608).interest.substring(0,148) + "..." }} </p>
+   <!-- <p v-html="dataList[0].blog_entry"> </p> -->
+
+ </div>
+</a>
  <a
      v-bind:key="dataList.id"
      :href="`posts/${dataList.find(item => item.id === 529).id}`"
@@ -15,7 +29,7 @@
       <h6> {{ dataList.find(item => item.id === 529).title }} </h6>
        <!-- <p v-html="dataList[0].blog_entry"> </p> -->
        <hr>
-        <p> {{ dataList.find(item => item.id === 529).interest.substring(0,160) + "..." }} </p>
+        <p> {{ dataList.find(item => item.id === 529).interest.substring(0,150) + "..." }} </p>
    </div>
  </a>
  <a
@@ -43,21 +57,6 @@ style="display:flex;text-decoration:none;color:#14a0fd;">
     <hr>
      <p> {{ dataList.find(item => item.id === 321).interest.substring(0,145) + "..." }} </p>
    <!-- <p v-html="dataList[0].blog_entry"> </p> -->
- </div>
-</a>
-<a
-v-bind:key="dataList.id"
-:href="`posts/${dataList.find(item => item.id === 608).id}`"
-class="Gmodule"
-style="display:flex;text-decoration:none;color:#14a0fd;">
- <div>
-
-  <img :src="dataList.find(item => item.id === 608).logo_url">  </img>
-    <h6> {{dataList.find(item => item.id === 608).title }} </h6>
-    <hr>
-     <p> {{ dataList.find(item => item.id === 608).interest.substring(0,140) + "..." }} </p>
-   <!-- <p v-html="dataList[0].blog_entry"> </p> -->
-
  </div>
 </a>
 <a v-bind:key="dataList.id"

@@ -11,7 +11,7 @@
   </h1><br>
   <p class="MsoNormal">
   <span class="intro-p">
-    <i>Fintech Media LatAm</i> features articles, reports, and data on fast growing companies in Latin America. While Fintech remains our focus, our coverage has expanded to encompass technology businesses serving the financial services industry and beyond. This includes companies in Blockchain, DLT and Crypto as well as in HealthTech, Artificial Intelligence, LegalTech, and Cybersecurity.
+    <i>Fintech Media LatAm</i> features articles, reports, and data on fast growing companies in Latin America. While Fintech remains the focus, our coverage has expanded to include technology businesses serving the financial services industry and beyond. This includes companies in Blockchain, DLT and Crypto as well as in HealthTech, Artificial Intelligence, LegalTech, and Cybersecurity.
   </span>
   </p>
   <p class="intro-p" >
@@ -21,10 +21,10 @@
   </p>
   <p class="intro-p">
   <b>Premium Content</b>–<span class="SpellE"></span>
-  <i>Fintech Media LatAm</i> members receive online acccess to all FHM content. This includes reports on trending topics along with sets of auto-generated reports which include all of the company-related articles and capital raise data for that topic.  
+  <i>Fintech Media LatAm</i> members receive online acccess to FHM content, including reports on trending topics along with auto-generated reports which include  related articles and capital raise data.  
   </p>
   <p class="intro-p"><b>Value Proposition</b>–<span></span>
-  The Fintech Revolution is fueling growth across Latin America. <i>Fintech Media LatAm</i> showcases companies driving that growth.
+  The Fintech Revolution is fueling growth across Latin America. <i>Fintech Media LatAm</i> showcases the companies driving that growth.
   </p>
   <nuxt-link class="gardient-button" to="/subscription">Plan Details</nuxt-link>
   <p class="intro-p"><b>Team</b>–<span></span>
