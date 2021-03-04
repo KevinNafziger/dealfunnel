@@ -28,7 +28,7 @@
    <img :src="dataList.find(item => item.id === 543).logo_url">  </img>
      <h6> {{ dataList.find(item => item.id === 543).title }} </h6>
      <hr>
-      <p> {{ dataList.find(item => item.id === 543).interest.substring(0,175) + "..." }} </p>
+      <p> {{ dataList.find(item => item.id === 543).interest.substring(0,165) + "..." }} </p>
     <!-- <p v-html="dataList[0].blog_entry"> </p> -->
   </div>
 </a>
@@ -41,7 +41,7 @@ style="display:flex;text-decoration:none;color:#14a0fd;">
   <img :src="dataList.find(item => item.id === 321).logo_url">  </img>
     <h6> {{ dataList.find(item => item.id === 321).title }} </h6>
     <hr>
-     <p> {{ dataList.find(item => item.id === 321).interest.substring(0,150) + "..." }} </p>
+     <p> {{ dataList.find(item => item.id === 321).interest.substring(0,145) + "..." }} </p>
    <!-- <p v-html="dataList[0].blog_entry"> </p> -->
  </div>
 </a>
@@ -79,16 +79,19 @@ style="display:flex;text-decoration:none;color:#14a0fd;">
 </template>
 
 <script>
-import dataData from "@/data/data.json";
-export default {
-  name: 'CountriesSpotlight',
-  data() {
-    return {
+
+  import dataData from "@/data/data.json";
+
+  export default {
+    name: 'CountriesSpotlight',
+    data() {
+      return {
       dataList: dataData,
+      }
     }
-  }
-}
+   }
 </script>
+
 <style scoped>
 img {
   max-height: 100px;
@@ -97,12 +100,15 @@ img {
   margin:20px;
   border-radius: 20px;
 }
+
 h2 {
   color: #4f81bd;
 }
+
 .Gmodule p {
   color: #474747;
 }
+
 .Gmodule {
     background: white;
     display: inline-table;
@@ -122,12 +128,14 @@ h2 {
     margin: 0;
     color:#4f81bd !important;
 }
+
 .Gmodule:hover {
     background: #fbfbfb;
     -webkit-box-shadow: 0px 0px 35px -16px rgba(161,161,161,1);
     -moz-box-shadow: 0px 0px 35px -16px rgba(161,161,161,1);
     box-shadow: 0px 0px 35px -16px rgba(161,161,161,1);
 }
+
 .Fgrid {
     display: flex;
     flex-wrap: wrap;
@@ -141,10 +149,12 @@ h2 {
     margin-bottom: 50px;
 
 }
-.exespotbody{
+
+.exespotbody {
   margin-top:100px;
   max-wdth: 1000px;
 }
+
 @media screen and (max-width:1400px) {
   .grid {
     max-width: 600px;
