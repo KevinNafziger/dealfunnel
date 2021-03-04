@@ -17,29 +17,18 @@
   <p class="intro-p" >
   <b>Exceptional</b> –
   <span class="SpellE"><i>Fintech Media LatAm</i></span>
-  is beloved by executives, dealmakers and practitioners including investment bankers, partners and associates of venture capital firms, industry attorneys and PE practitioners. 
-  </p>
-  <p class="intro-p"><b>Data Driven</b>–<span class="SpellE"></span>
-  <i>Fintech Media LatAm</i> members receive online access to searchable data on capital raises, companies and articles. The data can be exported to <i>Excel</i> and other spreadsheet programs.
-  <span style="mso-spacerun:yes"></span>
-  </p>
-  <p class="intro-p" ><b>Multi-channel support </b>–<span class="SpellE"></span>
-  The <i>Fintech Media LatAm</i> team is here to help. You can contact us by email,
-  phone or join our Slack channel.
-  <span style="mso-spacerun:yes"></span>
+  is beloved by executives, and dealmakers including investment bankers, partners and associates of venture capital firms, industry attorneys and PE practitioners. 
   </p>
   <p class="intro-p">
-  <b>Propietary Content</b>–<span class="SpellE"></span>
-  <i>Fintech Media LatAm</i> members receive online acccess to all of FHM;s propietary content.</i>
-  This includes reports on trending topics along with sets of auto-generated reports which include all of the company-related articles and capital raise data for that topic. <i>FHM's</i> auto-generated reports are grouped by strategic action, size of expected raise, timing of expected raise, geography, subsector, and by broader categories such as 'Blockchain', 'Insurtech', 'Payments', 'AI', 'Lending' and 'OpenBanking. <i>FHM</i> reports aggregate all of <i>FHM's</i> own company-specific intelligence on that topic, derived from interviews with an executive or executives at the featured company.
-  Our reports can generate a "wow" from some readers when they see the sheer volume of company-specific intelligence they provide. <i>FHM </i> reports aren't designed to provide a quick overview but to serve practitioners who want to review a large amount of company-specific intelligence related to a topic in a single document. 
+  <b>Premium Content</b>–<span class="SpellE"></span>
+  <i>Fintech Media LatAm</i> members receive online acccess to all FHM content. This includes reports on trending topics along with sets of auto-generated reports which include all of the company-related articles and capital raise data for that topic.  
   </p>
   <p class="intro-p"><b>Value Proposition</b>–<span></span>
-  The Fintech Revolution is fueling economic growth throughout Latin America. <i>Fintech Media LatAm</i> showcases the companies driving that growth. We also provides propietary reports, data, articles and newsletters that serve as a rich repository of information to executives, practitioners, and dealmakers. 
+  The Fintech Revolution is fueling growth across Latin America. <i>Fintech Media LatAm</i> showcases companies driving that growth.
   </p>
   <nuxt-link class="gardient-button" to="/subscription">Plan Details</nuxt-link>
   <p class="intro-p"><b>Team</b>–<span></span>
-    <i>Fintech Media LatAm</i> is a publication of <i>Fintech Horizons Media</i>, a news organization founded by information specialists from the US and Latin America. The team includes Kevin Nafziger, CEO and Co-founder; Berenice Cabellero, Head of Research; Abraham Felix, Head of IT; and Rebecca Wenzel, Americas Editor.
+    <i>Fintech Media LatAm</i> is a publication of <i>Fintech Horizons Media</i>, a company founded by information specialists from the US and Latin America. The team includes Kevin Nafziger, CEO and Co-founder; Berenice Cabellero, Head of Research; Abraham Felix, Head of IT; and Rebecca Wenzel, Americas Editor.
   </p>
 </div>
 <StoriesSpotlight/>
