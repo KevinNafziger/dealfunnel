@@ -63,16 +63,13 @@ body {
 .card--2 .card__img, .card--2 .card__img--hover {
 }
 
-.card__like {
-    width: 18px;
-}
 
 .card__clock {
     width: 15px;
   vertical-align: middle;
     fill: #AD7D52;
     color: #474747;
-
+    padding: 0px !important;
 }
 .card__time {
     font-size: 12px;
@@ -83,12 +80,8 @@ body {
 
 .card__clock-info {
     float: right;
-    position: fixed;
-padding: 2px;
-width: 100%;
-opacity: 0;
-top: 0;
-background: #0000001f;
+    background: #0000001f;
+    border-radius: 5px;
 }
 
 .card__img {
@@ -212,6 +205,7 @@ img {
 
      </div>
      <div class="card__info">
+       <country-flag country='us' size='small'/>
        <span class="card__category"> {{ dataList.find(item => item.id === 315).region }}</span>
        <h3 class="card__title"> {{ dataList.find(item => item.id === 315).title }}</h3>
        <span class="card__by">by <a href="/" class="card__author" title="author">{{ dataList.find(item => item.id === 315).author.name }}</a></span>
@@ -231,6 +225,7 @@ img {
 
      </div>
      <div class="card__info">
+       <country-flag country='can' size='small'/>
        <span class="card__category"> {{ dataList.find(item => item.id === 615).region }}</span>
        <h3 class="card__title"> {{ dataList.find(item => item.id === 615).title }}</h3>
        <span class="card__by">by <a href="/" class="card__author" title="author">{{ dataList.find(item => item.id === 615).author.name }}</a></span>
@@ -250,6 +245,7 @@ img {
 
      </div>
      <div class="card__info">
+       <country-flag country='us' size='small'/>
        <span class="card__category"> {{ dataList.find(item => item.id === 115).region }}</span>
        <h3 class="card__title"> {{ dataList.find(item => item.id === 115).title }}</h3>
        <span class="card__by">by <a href="/" class="card__author" title="author">{{ dataList.find(item => item.id === 115).author.name }}</a></span>

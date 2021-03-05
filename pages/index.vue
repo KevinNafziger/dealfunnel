@@ -93,6 +93,7 @@ import OriginSpotlight from '@/components/Grid/OriginSpotlight';
 import MexicoSpotlight from '@/components/Grid/MexicoSpotlight';
 import Vue from 'vue';
 import '/plugins/vue-gtag.js';
+import '/plugins/vue-country-flag.js';
 import  "firebase/auth";
 import firebase from 'firebase';
 import {mapState, mapMutations} from 'vuex';
