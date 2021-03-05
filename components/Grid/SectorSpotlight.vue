@@ -61,7 +61,7 @@ style="display:flex;text-decoration:none;color:#14a0fd;">
     <img v-bind:src="dataList.find(item => item.id === 808).logo_url">
     <h6> {{ dataList.find(item => item.id === 808).title }} </h6>
     <hr>
-      <p> {{ dataList.find(item => item.id === 808).interest.substring(0,860) + "..."}} </p>
+      <p> {{ dataList.find(item => item.id === 808).interest.substring(0,700) + "..."}} </p>
  </div>
 </a>
 <!-- End of Block -->

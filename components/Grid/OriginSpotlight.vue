@@ -19,20 +19,6 @@ style="display:flex;text-decoration:none;color:#14a0fd;">
 </a>
 <a
 v-bind:key="dataList.id"
-:href="`posts/${dataList.find(item => item.id === 305).id}`"
-class="Gmodule"
-style="display:flex;text-decoration:none;color:#14a0fd;">
- <div>
-
-  <img :src="dataList.find(item => item.id === 305).logo_url">  </img>
-     <h6>{{dataList.find(item => item.id === 305).title }}</h6> 
-    <hr>
-     <p>{{ dataList.find(item => item.id === 305).interest.substring(0,280) + "..."}} 
-     </p>
- </div>
-</a>
-<a
-v-bind:key="dataList.id"
 :href="`posts/${dataList.find(item => item.id === 89).id}`"
 class="Gmodule"
 style="display:flex;text-decoration:none;color:#14a0fd;">
@@ -41,7 +27,7 @@ style="display:flex;text-decoration:none;color:#14a0fd;">
   <img :src="dataList.find(item => item.id === 89).logo_url">  </img>
      <h6>{{dataList.find(item => item.id === 89).title }}</h6> 
     <hr>
-     <p>{{ dataList.find(item => item.id === 89).interest.substring(0,380) + "..."}} 
+     <p>{{ dataList.find(item => item.id === 89).interest.substring(0,330) + "..."}} 
      </p>
  </div>
 </a>
