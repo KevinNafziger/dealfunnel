@@ -37,6 +37,7 @@
 <FHMSpotlight/>
 <SectorSpotlight/>
 <OriginSpotlight/>
+<MexicoSpotlight/>
 <!-- Girl Image
 <img class="img-G" width="300px;" src="https://firebasestorage.googleapis.com/v0/b/deal-funnel.appspot.com/o/deal%20funnel%20web%20stock%2Fsada.png?alt=media&amp;token=dad23bb5-f65c-414d-807e-372dee5a5522">
 
@@ -88,6 +89,7 @@ import CountriesSpotlight from '@/components/Grid/CountriesSpotlight';
 import FHMSpotlight from '@/components/Grid/FHMSpotlight';
 import SectorSpotlight from '@/components/Grid/SectorSpotlight';
 import OriginSpotlight from '@/components/Grid/OriginSpotlight';
+import MexicoSpotlight from '@/components/Grid/MexicoSpotlight';
 import Vue from 'vue';
 import '/plugins/vue-gtag.js';
 import  "firebase/auth";
