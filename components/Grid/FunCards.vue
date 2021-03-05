@@ -191,7 +191,7 @@ img {
 
 
   <div class="exespotbody"><br><br>
-    <center><h2> Fun Cards </h2></center><br>
+    <center><h2> Exclusive Content </h2></center><br>
     <section class="cards">
    <a :href="`posts/${dataList.find(item => item.id === 315).id}`" class="card card--1"  v-bind:key="dataList.id" >
      <img :src="dataList.find(item => item.id === 315).logo_url" class="card card--1">
@@ -207,7 +207,7 @@ img {
      <div class="card__info">
        <country-flag country='us' size='small'/>
        <span class="card__category"> {{ dataList.find(item => item.id === 315).region }}</span>
-       <h5 class="card__title"> {{ dataList.find(item => item.id === 315).title }}</h5>
+       <h6 class="card__title"> {{ dataList.find(item => item.id === 315).title }}</h6>
        <span class="card__by">by <a href="/" class="card__author" title="author">{{ dataList.find(item => item.id === 315).author.name }}</a></span>
      </div>
      </img>
@@ -227,7 +227,7 @@ img {
      <div class="card__info">
        <country-flag country='can' size='small'/>
        <span class="card__category"> {{ dataList.find(item => item.id === 615).region }}</span>
-       <h5 class="card__title"> {{ dataList.find(item => item.id === 615).title }}</h5>
+       <h6 class="card__title"> {{ dataList.find(item => item.id === 615).title }}</h6>
        <span class="card__by">by <a href="/" class="card__author" title="author">{{ dataList.find(item => item.id === 615).author.name }}</a></span>
      </div>
      </img>
@@ -247,7 +247,7 @@ img {
      <div class="card__info">
        <country-flag country='us' size='small'/>
        <span class="card__category"> {{ dataList.find(item => item.id === 115).region }}</span>
-       <h5 class="card__title"> {{ dataList.find(item => item.id === 115).title }}</h5>
+       <h6 class="card__title"> {{ dataList.find(item => item.id === 115).title }}</h6>
        <span class="card__by">by <a href="/" class="card__author" title="author">{{ dataList.find(item => item.id === 115).author.name }}</a></span>
      </div>
      </img>
@@ -266,7 +266,7 @@ img {
      </div>
      <div class="card__info">
        <span class="card__category"> {{ dataList.find(item => item.id === 15).region }}</span>
-       <h5 class="card__title"> {{ dataList.find(item => item.id === 15).title }}</h5>
+       <h6 class="card__title"> {{ dataList.find(item => item.id === 15).title }}</h6>
        <span class="card__by">by <a href="/" class="card__author" title="author">{{ dataList.find(item => item.id === 15).author.name }}</a></span>
      </div>
      </img>
