@@ -1,5 +1,55 @@
 
 <style scoped>
+
+.Gmodule p {
+  color: #474747;
+}
+
+.Gmodule {
+    background: white;
+    display: inline-table;
+    align-items: center;
+    justify-content: center;
+    height: 350px;
+    padding: 15px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 25px -16px rgba(161,161,161,1);
+    -moz-box-shadow: 0px 0px 25px -16px rgba(161,161,161,1);
+    box-shadow: 0px 0px 25px -16px rgba(161,161,161,1);
+    text-align: center;
+    text-decoration: none;
+    margin-left: 5px;
+    margin-right: 5px;
+    flex: 1 1 100px;
+    margin: 0;
+    color:#4f81bd !important;
+}
+
+.Gmodule:hover {
+    background: #fbfbfb;
+    -webkit-box-shadow: 0px 0px 35px -16px rgba(161,161,161,1);
+    -moz-box-shadow: 0px 0px 35px -16px rgba(161,161,161,1);
+    box-shadow: 0px 0px 35px -16px rgba(161,161,161,1);
+}
+
+.Fgrid {
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-rows: minmax(150px, auto);
+    grid-gap: 3em;
+    max-width: 1000px !important;
+    width: 90%;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom: 50px;
+    width: 100%;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    -webkit-justify-content: center;
+
+}
 a {
   text-decoration: none !important;
 }
@@ -49,13 +99,7 @@ body {
   align-items: center;
 }
 
-.cards {
-    width: 100%;
-    display: flex;
-    display: -webkit-flex;
-    justify-content: center;
-    -webkit-justify-content: center;
-}
+
 
 .card--1 .card__img, .card--1 .card__img--hover {
     }
@@ -118,7 +162,6 @@ top: 0;
 
 }
 .card {
-  margin-right: 25px;
   transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
   background-color: #fff;
     width: 33.3%;
@@ -192,8 +235,8 @@ img {
 
   <div class="exespotbody"><br><br>
     <center><h2> Exclusive Content </h2></center><br>
-    <section class="cards">
-   <a :href="`posts/${dataList.find(item => item.id === 315).id}`" class="card card--1"  v-bind:key="dataList.id" >
+    <section  class="Fgrid ">
+   <a :href="`posts/${dataList.find(item => item.id === 315).id}`" class="Gmodule card card--1"  v-bind:key="dataList.id" >
      <img :src="dataList.find(item => item.id === 315).logo_url" class="card card--1">
      <hr>
      <div class="card__info-hover">
@@ -213,7 +256,7 @@ img {
      </img>
    </a>
 
-   <a :href="`posts/${dataList.find(item => item.id === 615).id}`" class="card card--1"  v-bind:key="dataList.id" >
+   <a :href="`posts/${dataList.find(item => item.id === 615).id}`" class="Gmodule card card--1"  v-bind:key="dataList.id" >
      <img :src="dataList.find(item => item.id === 615).logo_url" class="card card--1">
       <hr>
      <div class="card__info-hover">
@@ -234,7 +277,7 @@ img {
      </img>
    </a>
 
-   <a :href="`posts/${dataList.find(item => item.id === 115).id}`" class="card card--1"  v-bind:key="dataList.id" >
+   <a :href="`posts/${dataList.find(item => item.id === 115).id}`" class=" Gmodule card card--1"  v-bind:key="dataList.id" >
      <img :src="dataList.find(item => item.id === 115).logo_url" class="card card--1">
      <hr>
      <div class="card__info-hover">
@@ -254,7 +297,7 @@ img {
      </img>
    </a>
 
-   <a :href="`posts/${dataList.find(item => item.id === 15).id}`" class="card card--1"  v-bind:key="dataList.id" >
+   <a :href="`posts/${dataList.find(item => item.id === 15).id}`" class="Gmodule card card--1"  v-bind:key="dataList.id" >
      <img :src="dataList.find(item => item.id === 15).logo_url" class="card card--1">
      <hr>
      <div class="card__info-hover">
