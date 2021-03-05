@@ -1,6 +1,6 @@
 <template>
   <div class="exespotbody">
-    <center><h2>Parent Spotlight: <span style=""><i><a href="wwww.fintechhorizonsmedia.com" >Fintech Horizons Media </a></i></span> </h2></center><br>
+    <center><h2>Parent Spotlight: <span style=""><i><a href="https://www.fintechhorizonsmedia.com"  target="_blank"  >Fintech Horizons Media </a></i></span> </h2></center><br>
   <div class="Fgrid">
 <a
 v-bind:key="dataList.id"
