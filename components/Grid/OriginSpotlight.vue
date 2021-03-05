@@ -13,7 +13,7 @@ style="display:flex;text-decoration:none;color:#14a0fd;">
     <h6> {{ dataList.find(item => item.id === 1238).title }} </h6>
     <hr>
     <p>
-       {{ dataList.find(item => item.id === 1238).interest.substring(0,250) + "..."}}
+       {{ dataList.find(item => item.id === 1238).interest.substring(0,228) + "..."}}
       </p> 
  </div>
 </a>
@@ -27,7 +27,7 @@ style="display:flex;text-decoration:none;color:#14a0fd;">
   <img :src="dataList.find(item => item.id === 305).logo_url">  </img>
      <h6>{{dataList.find(item => item.id === 305).title }}</h6> 
     <hr>
-     <p>{{ dataList.find(item => item.id === 305).interest.substring(0,290) + "..."}} 
+     <p>{{ dataList.find(item => item.id === 305).interest.substring(0,280) + "..."}} 
      </p>
  </div>
 </a>
