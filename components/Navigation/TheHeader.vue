@@ -31,7 +31,7 @@
         <li v-show="(this.loggedIn)" class="nav-item"><nuxt-link v-show="(this.loggedIn)"to="/newsletters">Newsletters</nuxt-link></li>
         <li class="nav-item"><nuxt-link to="/reports">Reports</nuxt-link></li>
         <li  class="nav-item"><nuxt-link to="/builder">Builder</nuxt-link></li>
-        <li v-show="(this.loggedIn)" class="nav-item"><nuxt-link to="/raises">Raises</nuxt-link></li>
+        <li class="nav-item"><nuxt-link to="/raises">Raises</nuxt-link></li>
         <li  class="nav-item"><nuxt-link   to="/companies">Companies</nuxt-link></li>
         <li class="nav-item"><nuxt-link v-show="(this.loggedIn)" to="/data">Data</nuxt-link></li>
         <li class="nav-item"><nuxt-link v-show="(this.loggedIn)" to="/account">Account</nuxt-link></li>
