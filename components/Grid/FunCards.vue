@@ -148,7 +148,7 @@ border-bottom-right-radius: 12px;
 }
 
 .card__category {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
     font-size: 13px;
     letter-spacing: 2px;
@@ -159,12 +159,12 @@ border-bottom-right-radius: 12px;
 .card__title {
     margin-top: 5px;
     margin-bottom: 10px;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Roboto sans', serif;
 }
 
 .card__by {
     font-size: 12px;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 500;
 }
 
