@@ -45,7 +45,7 @@ style="display:flex;text-decoration:none;color:#14a0fd;">
    v-bind:key="dataList.id"
    :href="`posts/${dataList.find(item => item.id === 1288).id}`"
    class="Gmodule"
-   style="display:flex;text-decoration:none;color:#14a0fd;"
+   style="display:flex;text-decoration:none;color:#14a0fd;""
 >
   <div>
    <img :src="dataList.find(item => item.id === 1288).logo_url">  </img>
@@ -57,13 +57,13 @@ style="display:flex;text-decoration:none;color:#14a0fd;">
    v-bind:key="dataList.id"
    :href="`posts/${dataList.find(item => item.id === 855).id}`"
    class="Gmodule"
-   style="display:flex;text-decoration:none;color:#14a0fd;"
+   style="display:flex;text-decoration:none;color:#14a0fd;height: 450px;"
 >
   <div>
    <img :src="dataList.find(item => item.id === 855).logo_url">  </img>
      <h6> {{ dataList.find(item => item.id === 855).title }} </h6>
      <hr>
-      <p> {{ dataList.find(item => item.id === 855).interest.substring(0,400) + "..." }} </p>
+      <p> {{ dataList.find(item => item.id === 855).interest.substring(0,280) + "..." }} </p>
     <!-- <p v-html="dataList[0].blog_entry"> </p> -->
   </div>
 </a>
@@ -71,13 +71,13 @@ style="display:flex;text-decoration:none;color:#14a0fd;">
    v-bind:key="dataList.id"
    :href="`posts/${dataList.find(item => item.id === 153).id}`"
    class="Gmodule"
-   style="display:flex;text-decoration:none;color:#14a0fd;"
+   style="display:flex;text-decoration:none;color:#14a0fd; height: 445px;"
 >
   <div>
    <img :src="dataList.find(item => item.id === 153).logo_url">  </img>
      <h6> {{ dataList.find(item => item.id === 153).title }} </h6>
      <hr>
-      <p> {{ dataList.find(item => item.id === 153).interest.substring(0,400) + "..." }} </p>
+      <p> {{ dataList.find(item => item.id === 153).interest.substring(0,280) + "..." }} </p>
     <!-- <p v-html="dataList[0].blog_entry"> </p> -->
   </div>
 </a>

@@ -6,7 +6,7 @@
 <a v-bind:key="dataList.id"
 :href="`posts/${dataList.find(item => item.id ===1238).id}`"
 class="Gmodule"
-style="display:flex;text-decoration:none;color:#14a0fd;">
+style="display:flex;text-decoration:none;color:#14a0fd; height: 400px important!;">
  <div>
 
     <img v-bind:src="dataList.find(item => item.id === 1238).logo_url">
@@ -21,7 +21,7 @@ style="display:flex;text-decoration:none;color:#14a0fd;">
 v-bind:key="dataList.id"
 :href="`posts/${dataList.find(item => item.id === 89).id}`"
 class="Gmodule"
-style="display:flex;text-decoration:none;color:#14a0fd;">
+style="display:flex;text-decoration:none;color:#14a0fd; height: 400px important!;">
  <div>
 
   <img :src="dataList.find(item => item.id === 89).logo_url">  </img>
@@ -73,7 +73,7 @@ h2 {
     display: inline-table;
     align-items: center;
     justify-content: center;
-    height: 350px;
+    height: 390px;
     padding: 15px;
     border-radius: 10px;
     -webkit-box-shadow: 0px 0px 25px -16px rgba(161,161,161,1);
@@ -98,14 +98,14 @@ h2 {
 .Fgrid {
     display: flex;
     flex-wrap: wrap;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-auto-rows: minmax(150px, auto);
     grid-gap: 3em;
     max-width: 1000px !important;
     width: 90%;
     margin-left:auto;
     margin-right:auto;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 
 }
 

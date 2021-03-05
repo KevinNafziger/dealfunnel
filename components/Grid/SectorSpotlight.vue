@@ -55,7 +55,7 @@ style="display:flex;text-decoration:none;color:#14a0fd;">
 <a v-bind:key="dataList.id"
 :href="`posts/${dataList.find(item => item.id ===808).id}`"
 class="Gmodule"
-style="display:flex;text-decoration:none;color:#14a0fd;">
+style="display:flex;text-decoration:none;color:#14a0fd; height: 450px;">
  <div>
 
     <img v-bind:src="dataList.find(item => item.id === 808).logo_url">
@@ -106,7 +106,7 @@ h2 {
     display: inline-table;
     align-items: center;
     justify-content: center;
-    height: 350px;
+    height: 360px;
     padding: 15px;
     border-radius: 10px;
     -webkit-box-shadow: 0px 0px 25px -16px rgba(161,161,161,1);
