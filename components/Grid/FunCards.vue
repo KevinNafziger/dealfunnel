@@ -250,8 +250,6 @@ img {
      <div class="card__info">
        <h6 class="card__title"> {{ dataList.find(item => item.id === 315).title }}</h6>
        <country-flag country='us' size='small'/>
-       <span class="card__category"> {{ dataList.find(item => item.id === 315).country }}</span><br>
-       <span class="card__by">by <a href="/" class="card__author" title="author">{{ dataList.find(item => item.id === 315).author.name }}</a></span>
      </div>
      </img>
    </a>

@@ -11,7 +11,7 @@
   </h1><br>
   <p class="MsoNormal">
   <span class="intro-p">
-    <i>Fintech Media LatAm</i> features articles, reports, and data on fast growing companies in Latin America. While Fintech is the focus, we look to cover a wide group of technology businesses serving the financial services industry and beyond. This includes companies in Blockchain, DLT and Crypto as well as in HealthTech, Artificial Intelligence, LegalTech, and Cybersecurity.
+    <i>Fintech Media LatAm</i> features articles, reports, and data on fast growing companies in Latin America. While Fintech is a key focus, we also cover a wide group of technology businesses serving the financial services industry and beyond. This includes companies in Blockchain, DLT and Crypto as well as in HealthTech, Artificial Intelligence, LegalTech, and Cybersecurity.
   </span>
   </p>
   <p class="intro-p" >
@@ -31,7 +31,6 @@
     <i>Fintech Media LatAm</i> is a publication of <i>Fintech Horizons Media</i>, a company founded by information specialists from the US and Latin America. The team includes Kevin Nafziger, CEO and Co-founder; Berenice Cabellero, Head of Research; Abraham Felix, Head of IT; and Rebecca Wenzel, Americas Editor.
   </p>
 </div>
-<FunCards/>
 <StoriesSpotlight/>
 <MyItem/>
 <CountriesSpotlight/>
