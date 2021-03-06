@@ -10,7 +10,7 @@ style="display:flex;text-decoration:none;color:#14a0fd;">
  <div class="card_category card_info">
 
   <img :src="dataList.find(item => item.id === 1492).logo_url">  </img>
-    <h6 class="card__title">   <country-flag country='mx' size='small'/> {{dataList.find(item => item.id === 1492).title }} </h6>
+    <h6 class="card__title"> {{dataList.find(item => item.id === 1492).title }} </h6>
     <hr>
      <p> {{ dataList.find(item => item.id === 1492).interest.substring(0,188) + "..." }} </p>
    <!-- <p v-html="dataList[0].blog_entry"> </p> -->
@@ -26,10 +26,10 @@ style="display:flex;text-decoration:none;color:#14a0fd;">
    <div class="card_category card_info">
 
     <img :src="dataList.find(item => item.id === 1206).logo_url">  </img>
-      <h6 class="card__title">  <country-flag country='mx' size='small'/> {{ dataList.find(item => item.id === 1206).title }}  </h6>
+      <h6 class="card__title"> {{ dataList.find(item => item.id === 1206).title }}  </h6>
        <!-- <p v-html="dataList[0].blog_entry"> </p> -->
        <hr>
-        <p> {{ dataList.find(item => item.id === 1206).interest.substring(0,190) + "..." }} </p>
+        <p> {{ dataList.find(item => item.id === 1206).interest.substring(0,190) }} </p>
    </div>
  </a>
  <a
@@ -40,10 +40,10 @@ style="display:flex;text-decoration:none;color:#14a0fd;">
 >
   <div class="card_info card_category">
    <img :src="dataList.find(item => item.id === 1168).logo_url">  </img>
-     <h6 class="card__title"> <country-flag country='mx' size='small'/>  {{ dataList.find(item => item.id === 1168).title }} </h6>
+     <h6 class="card__title">  {{ dataList.find(item => item.id === 1168).title }} </h6>
      <hr>
-      <p> {{ dataList.find(item => item.id === 1168).interest.substring(0,205) + "..." }} </p>
-    <!-- <p v-html="dataList[0].blog_entry"> </p> -->
+      <p> {{ dataList.find(item => item.id === 1168).interest.substring(0,205)}} </p>
+  
   </div>
 </a>
 <a
@@ -53,7 +53,7 @@ class="Gmodule card card--1"
 style="display:flex;text-decoration:none;color:#14a0fd;">
  <div class="card_info card_category">
   <img :src="dataList.find(item => item.id === 1128).logo_url">  </img>
-    <h6 class="card__title">  <country-flag country='mx' size='small'/> {{ dataList.find(item => item.id === 1128).title }}  </h6>
+    <h6 class="card__title"> {{ dataList.find(item => item.id === 1128).title }}  </h6>
     <hr>
      <p> {{ dataList.find(item => item.id === 1128).interest.substring(0,138) + "..." }} </p>
    <!-- <p v-html="dataList[0].blog_entry"> </p> -->

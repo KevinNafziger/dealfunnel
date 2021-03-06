@@ -1,6 +1,6 @@
 <template>
   <div class="exespotbody">
-    <center><h2>Parent Spotlight: <span style=""><i><a href="https://www.fintechhorizonsmedia.com"  target="_blank"  >Fintech Horizons Media </a></i></span> </h2></center><br>
+    <center><h2>Parent Spotlight: <span style="text-decoration:none;color:#14a0fd;"><a href="https://www.fintechhorizonsmedia.com" target="_blank" >Fintech Horizons Media</a></span> </h2></center><br>
   <div class="Fgrid">
 <a
 v-bind:key="dataList.id"
@@ -10,7 +10,7 @@ style="display:flex;text-decoration:none;color:#14a0fd;">
  <div class="card_category card_info">
 
   <img :src="dataList.find(item => item.id === 1613).logo_url">  </img>
-    <h6 class="card__title">  <country-flag country='us' size='small'/> {{dataList.find(item => item.id === 1613).title }} </h6>
+    <h6 class="card__title"> {{dataList.find(item => item.id === 1613).title }} </h6>
     <hr>
 
  </div>
@@ -24,7 +24,7 @@ style="display:flex;text-decoration:none;color:#14a0fd;">
    <div class="card_category card_info">
 
     <img :src="dataList.find(item => item.id === 1384).logo_url">  </img>
-      <h6 class="card__title"> <country-flag country='us' size='small'/> {{ dataList.find(item => item.id === 1384).title }}  </h6>
+      <h6 class="card__title"> {{ dataList.find(item => item.id === 1384).title }}  </h6>
        <!-- <p v-html="dataList[0].blog_entry"> </p> -->
        <hr>
    </div>
@@ -37,7 +37,7 @@ style="display:flex;text-decoration:none;color:#14a0fd;">
 >
   <div class="card_category card_info">
    <img :src="dataList.find(item => item.id === 146).logo_url">  </img>
-     <h6 class="card__title"> <country-flag country='us' size='small'/> {{ dataList.find(item => item.id === 146).title }}  </h6>
+     <h6 class="card__title"> {{ dataList.find(item => item.id === 146).title }}  </h6>
      <hr>
   </div>
 </a>
@@ -49,7 +49,7 @@ style="display:flex;text-decoration:none;color:#14a0fd;">
 >
   <div class="card_category card_info">
    <img :src="dataList.find(item => item.id === 1288).logo_url">  </img>
-     <h6 class="card__title"> <country-flag country='ee' size='small'/>  {{ dataList.find(item => item.id === 1288).title }} </h6>
+     <h6 class="card__title">  {{ dataList.find(item => item.id === 1288).title }} </h6>
      <hr>
   </div>
 </a>
@@ -60,8 +60,7 @@ style="display:flex;text-decoration:none;color:#14a0fd;">
    style="display:flex;text-decoration:none;color:#14a0fd;height: 450px;"
 >
   <div class="card_category card_info">
-   <img :src="dataList.find(item => item.id === 855).logo_url">  </img>
-     <h6 class="card__title">  <country-flag country='es' size='small'/> {{ dataList.find(item => item.id === 855).title }}  </h6>
+   <img :src="dataList.find(item => item.id === 855).logo_url">  </img> <h6> {{ dataList.find(item => item.id === 855).title }}  </h6>
      <hr>
       <p> {{ dataList.find(item => item.id === 855).interest.substring(0,426) + "..." }} </p>
     <!-- <p v-html="dataList[0].blog_entry"> </p> -->
@@ -75,7 +74,7 @@ style="display:flex;text-decoration:none;color:#14a0fd;">
 >
   <div class="card_category card_info">
    <img :src="dataList.find(item => item.id === 153).logo_url">  </img>
-     <h6 class="card__title">  <country-flag country='es' size='small'/> {{ dataList.find(item => item.id === 153).title }}  </h6>
+     <h6 class="card__title">  {{ dataList.find(item => item.id === 153).title }}  </h6>
      <hr>
       <p> {{ dataList.find(item => item.id === 153).interest.substring(0,440) + "..." }} </p>
     <!-- <p v-html="dataList[0].blog_entry"> </p> -->

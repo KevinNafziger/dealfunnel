@@ -199,7 +199,7 @@ border-bottom-right-radius: 12px;
    <div class="card_category card_info">
 
     <img :src="dataList.find(item => item.id === 1061).logo_url">  </img>
-      <h6 class="card__title"> <country-flag country='mx' size='small'/> {{ dataList.find(item => item.id === 1061).title }} </h6>
+      <h6 class="card__title"> {{ dataList.find(item => item.id === 1061).title }} </h6>
     
        <hr>
         <p> {{ dataList.find(item => item.id === 1061).interest.substring(0,158) }} </p>
@@ -213,7 +213,7 @@ border-bottom-right-radius: 12px;
 >
   <div class="card_category card_info">
    <img :src="dataList.find(item => item.id === 1511).logo_url">  </img>
-     <h6 class="card__title"> <country-flag country='ar' size='small'/> {{ dataList.find(item => item.id === 1511).title }}</h6>
+     <h6 class="card__title">  {{ dataList.find(item => item.id === 1511).title }}</h6>
        <hr>
       <p>{{ dataList.find(item => item.id === 1511).interest.substring(0,125)  }}</p>
  
@@ -226,7 +226,7 @@ class="Gmodule card card--1"
 style="display:flex;text-decoration:none;color:#14a0fd;">
  <div class="card_category card_info">
   <img :src="dataList.find(item => item.id === 1012).logo_url">  </img>
-    <h6 class="card__title"> <country-flag country='mx' size='small'/> {{ dataList.find(item => item.id === 1012).title }}</h6>
+    <h6 class="card__title"> {{ dataList.find(item => item.id === 1012).title }}</h6>
     <hr>
      <p> {{ dataList.find(item => item.id === 1012).interest.substring(0,120)}} </p>
  
@@ -240,7 +240,7 @@ style="display:flex;text-decoration:none;color:#14a0fd;">
  <div class="card_category card_info">
 
   <img :src="dataList.find(item => item.id === 411).logo_url">  </img>
-    <h6 class="card__title"> <country-flag country='co' size='small'/> {{ dataList.find(item => item.id === 411).title}} </h6>
+    <h6 class="card__title"> {{ dataList.find(item => item.id === 411).title}} </h6>
     <hr>
      <p> {{ dataList.find(item => item.id === 411).interest.substring(0,147)}} </p>
    
@@ -254,7 +254,7 @@ style="display:flex;text-decoration:none;color:#14a0fd;">
  <div class="card_category card_info">
 
     <img v-bind:src="dataList.find(item => item.id === 970).logo_url">
-    <h6 class="card__title"> <country-flag country='mx' size='small'/> {{ dataList.find(item => item.id === 970).title}}</h6>
+    <h6 class="card__title"> {{ dataList.find(item => item.id === 970).title}}</h6>
     <hr>
       <p> {{ dataList.find(item => item.id === 970).interest.substring(0,247)}} </p>
  </div>
@@ -266,7 +266,7 @@ style="display:flex;text-decoration:none;color:#14a0fd;">
  <div class="card_category card_info">
 
     <img v-bind:src="dataList.find(item => item.id === 1169).logo_url">
-    <h6 class="card__title"> <country-flag country='pe' size='small'/> {{ dataList.find(item => item.id === 1169).title }}</h6>
+    <h6 class="card__title"> {{ dataList.find(item => item.id === 1169).title }}</h6>
     <hr>
       <p>{{ dataList.find(item => item.id === 1169).interest.substring(0,197)}} </p>
  </div>

@@ -10,7 +10,7 @@ style="display:flex;text-decoration:none;color:#14a0fd;">
  <div class="card_category card_info">
 
   <img :src="dataList.find(item => item.id === 502).logo_url">  </img>
-    <h6 class="card__title">  <country-flag country='gb' size='small'/> {{dataList.find(item => item.id === 502).title }} </h6>
+    <h6 class="card__title"> {{dataList.find(item => item.id === 502).title }} </h6>
     <hr>
  </div>
 </a>
@@ -23,8 +23,8 @@ style="display:flex;text-decoration:none;color:#14a0fd;">
    <div class="card_category card_info">
 
     <img :src="dataList.find(item => item.id === 1053).logo_url">  </img>
-      <h6 class="card__title"> <country-flag country='de' size='small'/> {{ dataList.find(item => item.id === 1053).title }}   </h6>
-       <!-- <p v-html="dataList[0].blog_entry"> </p> -->
+      <h6 class="card__title"> {{ dataList.find(item => item.id === 1053).title }}  </h6>
+    
        <hr>
    </div>
  </a>
@@ -36,7 +36,7 @@ style="display:flex;text-decoration:none;color:#14a0fd;">
 >
   <div class="card_category card_info">
    <img :src="dataList.find(item => item.id === 506).logo_url">  </img>
-     <h6 class="card__title"> <country-flag country='ar' size='small'/>{{ dataList.find(item => item.id === 506).title }} </h6>
+     <h6 class="card__title"> {{ dataList.find(item => item.id === 506).title }} </h6>
      <hr>
   </div>
 </a>
@@ -48,7 +48,7 @@ class="Gmodule card card--1"
 style="display:flex;text-decoration:none;color:#14a0fd;">
  <div class="card_category card_info">
   <img :src="dataList.find(item => item.id === 547).logo_url">  </img>
-    <h6 class="card__title"> <country-flag country='mx' size='small'/> {{ dataList.find(item => item.id === 547).title }}</h6>
+    <h6 class="card__title"> {{ dataList.find(item => item.id === 547).title }}</h6>
     <hr>
  </div>
 </a>
@@ -59,9 +59,9 @@ style="display:flex;text-decoration:none;color:#14a0fd; height: 450px;">
  <div class="card_category card_info">
 
     <img v-bind:src="dataList.find(item => item.id === 808).logo_url">
-    <h6 class="card__title"><country-flag country='us' size='small'/> {{ dataList.find(item => item.id === 808).title }}  </h6>
+    <h6 class="card__title"> {{ dataList.find(item => item.id === 808).title }}  </h6>
     <hr>
-      <p> {{ dataList.find(item => item.id === 808).interest.substring(0,830) + "..."}} </p>
+      <p> {{ dataList.find(item => item.id === 808).interest.substring(0,830) }} </p>
  </div>
 </a>
 <!-- End of Block -->

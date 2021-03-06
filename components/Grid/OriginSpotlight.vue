@@ -10,7 +10,7 @@ style="display:flex;text-decoration:none;color:#14a0fd; height: 420px important!
  <div class="card_category card_info">
 
     <img v-bind:src="dataList.find(item => item.id === 1238).logo_url">
-    <h6 class="card__title"> <country-flag country='us' size='small'/> {{ dataList.find(item => item.id === 1238).title }}</h6>
+    <h6 class="card__title"> {{ dataList.find(item => item.id === 1238).title }}</h6>
     <hr>
     <p>
        {{dataList.find(item => item.id === 1238).interest.substring(0,365)}}
@@ -25,7 +25,7 @@ style="display:flex;text-decoration:none;color:#14a0fd; height: 420px important!
  <div class="card_category card_info">
 
   <img :src="dataList.find(item => item.id === 89).logo_url"> </img>
-     <h6 class="card__title"><country-flag country='de' size='small'/>  {{dataList.find(item => item.id === 89).title }}</h6> 
+     <h6 class="card__title"> {{dataList.find(item => item.id === 89).title }}</h6> 
     <hr>
      <p>{{ dataList.find(item => item.id === 89).interest.substring(0,365) }} 
      </p>
