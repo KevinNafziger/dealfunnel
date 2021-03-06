@@ -11,7 +11,7 @@
   </h1><br>
   <p class="MsoNormal">
   <span class="intro-p">
-    <i>Fintech Media LatAm</i> features articles, reports, and data on fast growing companies in Latin America. While Fintech remains the focus, our coverage has expanded to include technology businesses serving the financial services industry and beyond. This includes companies in Blockchain, DLT and Crypto as well as in HealthTech, Artificial Intelligence, LegalTech, and Cybersecurity.
+    <i>Fintech Media LatAm</i> features articles, reports, and data on fast growing companies in Latin America. While Fintech is the focus, we look to cover a wide group of technology businesses serving the financial services industry and beyond. This includes companies in Blockchain, DLT and Crypto as well as in HealthTech, Artificial Intelligence, LegalTech, and Cybersecurity.
   </span>
   </p>
   <p class="intro-p" >
@@ -37,6 +37,7 @@
 <FHMSpotlight/>
 <SectorSpotlight/>
 <OriginSpotlight/>
+<Origin2/>
 <MexicoSpotlight/>
 <!-- Girl Image
 <img class="img-G" width="300px;" src="https://firebasestorage.googleapis.com/v0/b/deal-funnel.appspot.com/o/deal%20funnel%20web%20stock%2Fsada.png?alt=media&amp;token=dad23bb5-f65c-414d-807e-372dee5a5522">

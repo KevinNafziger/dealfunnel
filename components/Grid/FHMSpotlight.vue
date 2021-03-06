@@ -63,7 +63,7 @@ style="display:flex;text-decoration:none;color:#14a0fd;">
    <img :src="dataList.find(item => item.id === 855).logo_url">  </img>
      <h6> {{ dataList.find(item => item.id === 855).title }} </h6>
      <hr>
-      <p> {{ dataList.find(item => item.id === 855).interest.substring(0,280) + "..." }} </p>
+      <p> {{ dataList.find(item => item.id === 855).interest.substring(0,426) + "..." }} </p>
     <!-- <p v-html="dataList[0].blog_entry"> </p> -->
   </div>
 </a>
@@ -77,7 +77,7 @@ style="display:flex;text-decoration:none;color:#14a0fd;">
    <img :src="dataList.find(item => item.id === 153).logo_url">  </img>
      <h6> {{ dataList.find(item => item.id === 153).title }} </h6>
      <hr>
-      <p> {{ dataList.find(item => item.id === 153).interest.substring(0,280) + "..." }} </p>
+      <p> {{ dataList.find(item => item.id === 153).interest.substring(0,440) + "..." }} </p>
     <!-- <p v-html="dataList[0].blog_entry"> </p> -->
   </div>
 </a>

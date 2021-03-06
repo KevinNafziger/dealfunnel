@@ -6,14 +6,14 @@
 <a v-bind:key="dataList.id"
 :href="`posts/${dataList.find(item => item.id ===1238).id}`"
 class="Gmodule"
-style="display:flex;text-decoration:none;color:#14a0fd; height: 400px important!;">
+style="display:flex;text-decoration:none;color:#14a0fd; height: 420px important!;">
  <div>
 
     <img v-bind:src="dataList.find(item => item.id === 1238).logo_url">
     <h6> {{ dataList.find(item => item.id === 1238).title }} </h6>
     <hr>
     <p>
-       {{ dataList.find(item => item.id === 1238).interest.substring(0,228) + "..."}}
+       {{ dataList.find(item => item.id === 1238).interest.substring(0,355) + "..."}}
       </p> 
  </div>
 </a>
@@ -21,13 +21,13 @@ style="display:flex;text-decoration:none;color:#14a0fd; height: 400px important!
 v-bind:key="dataList.id"
 :href="`posts/${dataList.find(item => item.id === 89).id}`"
 class="Gmodule"
-style="display:flex;text-decoration:none;color:#14a0fd; height: 400px important!;">
+style="display:flex;text-decoration:none;color:#14a0fd; height: 420px important!;">
  <div>
 
   <img :src="dataList.find(item => item.id === 89).logo_url">  </img>
      <h6>{{dataList.find(item => item.id === 89).title }}</h6> 
     <hr>
-     <p>{{ dataList.find(item => item.id === 89).interest.substring(0,330) + "..."}} 
+     <p>{{ dataList.find(item => item.id === 89).interest.substring(0,355) + "..."}} 
      </p>
  </div>
 </a>
