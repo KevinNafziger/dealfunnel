@@ -17,11 +17,11 @@
   <p class="intro-p" >
   <b>Exceptional</b> –
   <span class="SpellE"><i>Fintech Media LatAm</i></span>
-  is beloved by executives, and dealmakers including investment bankers, partners and associates of venture capital firms, industry attorneys and PE practitioners. 
+  is beloved by executives, and dealmakers including investment bankers, partners and associates of venture capital firms, industry attorneys and PE practitioners.
   </p>
   <p class="intro-p">
   <b>Premium Content</b>–<span class="SpellE"></span>
-  <i>Fintech Media LatAm</i> members receive online acccess to FHM content, including reports on trending topics along with auto-generated reports which include  related articles and capital raise data.  
+  <i>Fintech Media LatAm</i> members receive online acccess to FHM content, including reports on trending topics along with auto-generated reports which include  related articles and capital raise data.
   </p>
   <p class="intro-p"><b>Value Proposition</b>–<span></span>
   The Fintech Revolution is fueling growth across Latin America. <i>Fintech Media LatAm</i> showcases the companies driving that growth.
@@ -31,6 +31,7 @@
     <i>Fintech Media LatAm</i> is a publication of <i>Fintech Horizons Media</i>, a company founded by information specialists from the US and Latin America. The team includes Kevin Nafziger, CEO and Co-founder; Berenice Cabellero, Head of Research; Abraham Felix, Head of IT; and Rebecca Wenzel, Americas Editor.
   </p>
 </div>
+<FunCards/>
 <StoriesSpotlight/>
 <MyItem/>
 <CountriesSpotlight/>
@@ -93,6 +94,7 @@ import OriginSpotlight from '@/components/Grid/OriginSpotlight';
 import MexicoSpotlight from '@/components/Grid/MexicoSpotlight';
 import Vue from 'vue';
 import '/plugins/vue-gtag.js';
+import '/plugins/vue-country-flag.js';
 import  "firebase/auth";
 import firebase from 'firebase';
 import {mapState, mapMutations} from 'vuex';
@@ -442,6 +444,7 @@ border-radius: 20px;
   text-align: justify;
   letter-spacing: 0.3px;
 }
+
 
 
 </style>
