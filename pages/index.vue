@@ -31,8 +31,8 @@
     <i>Fintech Media LatAm</i> is a publication of <i>Fintech Horizons Media</i>, a company founded by information specialists from the US and Latin America. The team includes Kevin Nafziger, CEO and Co-founder; Berenice Cabellero, Head of Research; Abraham Felix, Head of IT; and Rebecca Wenzel, Americas Editor.
   </p>
 </div>
+<CompanySpotlight/>
 <StoriesSpotlight/>
-<MyItem/>
 <CountriesSpotlight/>
 <FHMSpotlight/>
 <SectorSpotlight/>
@@ -84,7 +84,7 @@
 </template>
 
 <script>
-import MyItem from '@/components/Grid/MyItem';
+import CompanySpotlight from '@/components/Grid/CompanySpotlight';
 import StoriesSpotlight from '@/components/Grid/StoriesSpotlight';
 import CountriesSpotlight from '@/components/Grid/CountriesSpotlight';
 import FHMSpotlight from '@/components/Grid/FHMSpotlight';

@@ -1,8 +1,8 @@
 
 <style scoped>
 img {
-  heigth: auto;
   max-height: 100px;
+  heigth: auto;
   width: 100px;
   margin:20px;
   border-radius: 20px;
@@ -51,11 +51,16 @@ h2 {
     margin-bottom: 50px;
 
 }
+.exespotbody{
+  margin-top:100px;
+  max-wdth: 1000px;
+}
 .card--1 .card__img, .card--1 .card__img--hover {
     }
 
 .card--2 .card__img, .card--2 .card__img--hover {
 }
+
 
 .card__clock {
     width: 15px;
@@ -173,10 +178,7 @@ border-bottom-right-radius: 12px;
     opacity: 1;
 }
 
-.exespotbody{
-  margin-top:100px;
-  max-wdth: 1000px;
-}
+
 @media screen and (max-width:1400px) {
   .grid {
     max-width: 600px;
@@ -186,103 +188,91 @@ border-bottom-right-radius: 12px;
 
 <template>
   <div class="exespotbody">
-    <center><h2> Company Spotlight </h2></center><br>
+    <center><h2> Story Spotlight </h2></center><br>
   <div class="Fgrid">
 
- <!-- story blocks start-->
-<a
-   v-bind:key="dataList.id"
-   :href="`posts/${dataList.find(item => item.id === 815).id}`"
-   class="Gmodule card card--1"
-   style="display:flex;text-decoration:none;color:#14a0fd;"
+ <a
+     v-bind:key="dataList.id"
+     :href="`posts/${dataList.find(item => item.id === 1061).id}`"
+     class="Gmodule card card--1"
+     style="display:flex;text-decoration:none;color:#14a0fd;"
    >
    <div class="card_category card_info">
-   <!-- <img  src="https://fintechapp.s3.us-east-2.amazonaws.com/y2qYjf8e2hp8z5yrgyfxF2NN?response-content-disposition=inline%3B%20filename%3D%22BoxLogo.png%22%3B%20filename%2A%3DUTF-8%27%27BoxLogo.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJG6DG75G7BXQ3XUA%2F20210115%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210115T192217Z&X-Amz-Expires=518400&X-Amz-SignedHeaders=host&X-Amz-Signature=26b742c676a7fc0854c1efa0c81bf60e9239bc5068606262b3b1eab0f7a21245">
-   -->
-     <img :src="dataList.find(item => item.id === 815).logo_url">  </img>
-     <h6 class="card__title"> {{ dataList.find(item => item.id === 815).title }}</h6>
-     <hr>
-  
-    </div>
-</a>
-<a
-   v-bind:key="dataList.id"
-   :href="`posts/${dataList.find(item => item.id === 1120).id}`"
-   class="Gmodule card card--1"
-   style="display:flex;text-decoration:none;
-   color:#14a0fd;"
-   >
-   <div class="card_category card_info">
-   <!-- <img  src="https://fintechapp.s3.us-east-2.amazonaws.com/y2qYjf8e2hp8z5yrgyfxF2NN?response-content-disposition=inline%3B%20filename%3D%22BoxLogo.png%22%3B%20filename%2A%3DUTF-8%27%27BoxLogo.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJG6DG75G7BXQ3XUA%2F20210115%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210115T192217Z&X-Amz-Expires=518400&X-Amz-SignedHeaders=host&X-Amz-Signature=26b742c676a7fc0854c1efa0c81bf60e9239bc5068606262b3b1eab0f7a21245">
-   -->
-     <img :src="dataList.find(item => item.id === 1120).logo_url">  </img>
-     <h6 class="card__title"> {{ dataList.find(item => item.id === 1120).title}} </h6>
-     <hr>
-    </div>
-</a>
-<a
-   v-bind:key="dataList.id"
-   :href="`posts/${dataList.find(item => item.id === 1561).id}`"
-   class="Gmodule card card--1"
-   style="display:flex;text-decoration:none;
-   color:#14a0fd;"
-   >
-   <div class="card_category card_info">
-   <!-- <img  src="https://fintechapp.s3.us-east-2.amazonaws.com/y2qYjf8e2hp8z5yrgyfxF2NN?response-content-disposition=inline%3B%20filename%3D%22BoxLogo.png%22%3B%20filename%2A%3DUTF-8%27%27BoxLogo.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJG6DG75G7BXQ3XUA%2F20210115%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210115T192217Z&X-Amz-Expires=518400&X-Amz-SignedHeaders=host&X-Amz-Signature=26b742c676a7fc0854c1efa0c81bf60e9239bc5068606262b3b1eab0f7a21245">
-   -->
-     <img :src="dataList.find(item => item.id === 1561).logo_url">  </img>
-     <h6 class="card__title"> {{ dataList.find(item => item.id === 1561).title }} </h6>
-     <hr>
-    </div>
-</a>
-<a
-   v-bind:key="dataList.id"
-   :href="`posts/${dataList.find(item => item.id === 678).id}`"
-   class="Gmodule card card--1"
-   style="display:flex;text-decoration:none;color:#14a0fd;"
-   >
-   <div class="card_category card_info">
-   <!-- <img  src="https://fintechapp.s3.us-east-2.amazonaws.com/y2qYjf8e2hp8z5yrgyfxF2NN?response-content-disposition=inline%3B%20filename%3D%22BoxLogo.png%22%3B%20filename%2A%3DUTF-8%27%27BoxLogo.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJG6DG75G7BXQ3XUA%2F20210115%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210115T192217Z&X-Amz-Expires=518400&X-Amz-SignedHeaders=host&X-Amz-Signature=26b742c676a7fc0854c1efa0c81bf60e9239bc5068606262b3b1eab0f7a21245">
-   -->
-     <img :src="dataList.find(item => item.id === 678).logo_url"> </img>
-     <h6 class="card__title"> {{ dataList.find(item => item.id === 678).title }} </h6>
-     <hr>
-     
-    </div>
-</a>
-<a
-   v-bind:key="dataList.id"
-   :href="`posts/${dataList.find(item => item.id === 1040).id}`"
-   class="Gmodule card card--1"
-   style="display:flex;text-decoration:none;color:#14a0fd;"
-   >
-   <div class="card_category card_info">
-   <!-- <img  src="https://fintechapp.s3.us-east-2.amazonaws.com/y2qYjf8e2hp8z5yrgyfxF2NN?response-content-disposition=inline%3B%20filename%3D%22BoxLogo.png%22%3B%20filename%2A%3DUTF-8%27%27BoxLogo.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJG6DG75G7BXQ3XUA%2F20210115%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210115T192217Z&X-Amz-Expires=518400&X-Amz-SignedHeaders=host&X-Amz-Signature=26b742c676a7fc0854c1efa0c81bf60e9239bc5068606262b3b1eab0f7a21245">
-   -->
-     <img :src="dataList.find(item => item.id === 1040).logo_url">  </img>
-     <h6 class="card__title">{{ dataList.find(item => item.id === 1040).title }}</h6>
-     <hr>
-    </div>
-</a>
-<a
-   v-bind:key="dataList.id"
-   :href="`posts/${dataList.find(item => item.id === 1601).id}`"
-   class="Gmodule card card--1"
-   style="display:flex;text-decoration:none;color:#14a0fd;"
-   >
-   <div class="card_category card_info">
-   <!-- <img  src="https://fintechapp.s3.us-east-2.amazonaws.com/y2qYjf8e2hp8z5yrgyfxF2NN?response-content-disposition=inline%3B%20filename%3D%22BoxLogo.png%22%3B%20filename%2A%3DUTF-8%27%27BoxLogo.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJG6DG75G7BXQ3XUA%2F20210115%2Fus-east-2%2Fs3%2Faws4_request&X-Amz-Date=20210115T192217Z&X-Amz-Expires=518400&X-Amz-SignedHeaders=host&X-Amz-Signature=26b742c676a7fc0854c1efa0c81bf60e9239bc5068606262b3b1eab0f7a21245">
-   -->
-     <img :src="dataList.find(item => item.id === 1601).logo_url">  </img>
-     <h6 class="card__title"> {{ dataList.find(item => item.id === 1601).title }} </h6>
-     <hr>
- 
-    </div>
-</a>
 
-<!-- story blocks END-->
+    <img :src="dataList.find(item => item.id === 1061).logo_url">  </img>
+      <h6 class="card__title"> {{ dataList.find(item => item.id === 1061).title }} </h6>
+
+       <hr>
+        <p> {{ dataList.find(item => item.id === 1061).interest.substring(0,158) }} </p>
+   </div>
+ </a>
+ <a
+   v-bind:key="dataList.id"
+   :href="`posts/${dataList.find(item => item.id === 1511).id}`"
+   class="Gmodule card card--1"
+   style="display:flex;text-decoration:none;color:#14a0fd;"
+>
+  <div class="card_category card_info">
+   <img :src="dataList.find(item => item.id === 1511).logo_url">  </img>
+     <h6 class="card__title">  {{ dataList.find(item => item.id === 1511).title }}</h6>
+       <hr>
+      <p>{{ dataList.find(item => item.id === 1511).interest.substring(0,125)  }}</p>
+
+  </div>
+</a>
+<a
+v-bind:key="dataList.id"
+:href="`posts/${dataList.find(item => item.id === 1012).id}`"
+class="Gmodule card card--1"
+style="display:flex;text-decoration:none;color:#14a0fd;">
+ <div class="card_category card_info">
+  <img :src="dataList.find(item => item.id === 1012).logo_url">  </img>
+    <h6 class="card__title"> {{ dataList.find(item => item.id === 1012).title }}</h6>
+    <hr>
+     <p> {{ dataList.find(item => item.id === 1012).interest.substring(0,120)}} </p>
+
+ </div>
+</a>
+<a
+v-bind:key="dataList.id"
+:href="`posts/${dataList.find(item => item.id === 411).id}`"
+class="Gmodule card card--1"
+style="display:flex;text-decoration:none;color:#14a0fd;">
+ <div class="card_category card_info">
+
+  <img :src="dataList.find(item => item.id === 411).logo_url">  </img>
+    <h6 class="card__title"> {{ dataList.find(item => item.id === 411).title}} </h6>
+    <hr>
+     <p> {{ dataList.find(item => item.id === 411).interest.substring(0,147)}} </p>
 
 
+ </div>
+</a>
+<a v-bind:key="dataList.id"
+:href="`posts/${dataList.find(item => item.id === 970).id}`"
+class="Gmodule card card--1"
+style="display:flex;text-decoration:none;color:#14a0fd;">
+ <div class="card_category card_info">
+
+    <img v-bind:src="dataList.find(item => item.id === 970).logo_url">
+    <h6 class="card__title"> {{ dataList.find(item => item.id === 970).title}}</h6>
+    <hr>
+      <p> {{ dataList.find(item => item.id === 970).interest.substring(0,247)}} </p>
+ </div>
+</a>
+<a v-bind:key="dataList.id"
+:href="`posts/${dataList.find(item => item.id === 1169).id}`"
+class="Gmodule card card--1"
+style="display:flex;text-decoration:none;color:#14a0fd;">
+ <div class="card_category card_info">
+
+    <img v-bind:src="dataList.find(item => item.id === 1169).logo_url">
+    <h6 class="card__title"> {{ dataList.find(item => item.id === 1169).title }}</h6>
+    <hr>
+      <p>{{ dataList.find(item => item.id === 1169).interest.substring(0,197)}} </p>
+ </div>
+</a>
+<!-- End of Block -->
   </div>
 
   </div>
@@ -291,7 +281,7 @@ border-bottom-right-radius: 12px;
 <script>
 import dataData from "@/data/data.json";
 export default {
-  name: 'StoriesSpotlight',
+  name: 'MyItem',
   data() {
     return {
       dataList: dataData,
