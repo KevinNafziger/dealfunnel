@@ -107,7 +107,8 @@ i.v-icon.notranslate.mdi.mdi-chevron-left.theme--light {
                         <v-text-field append-icon="mdi-magnify" v-model="search" :label="searchLabel" class="mx-4"></v-text-field>
                     </template>
 							  </v-data-table>
-                <!-- <table class="table table-striped ">
+
+								  <!-- <table class="table table-striped ">
                     <thead>
                         <tr>
                             <th>Company</th>

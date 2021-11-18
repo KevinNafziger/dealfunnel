@@ -1,7 +1,7 @@
 <template>
-<div>
-
-  <center>
+<div class="container-fluid">
+  <div class="row ">
+    <main  class="col-md-12 ml-sm-auto col-lg-12 px-4">
     <div class="sectionix" id="top">
        <div class="title">
           <div class="content">
@@ -13,22 +13,49 @@
           </div>
         </div>
     </div>
-  </center>
 
-  <RaiseTempSearch></RaiseTempSearch> <br>
+  <!-- <RaiseTempSearch/> --> <br>
 
-<div class="col-reports-div"><center>
-  <a  v-if="loggedIn" href="https://fintechhorizonsmedia.com/fintechraises.xlsx">
-    <center><span content="export to Excel"
-  v-tippy="{ placement : 'bottom' }" id="oki" class="mdi mdi-file-excel" style="margin:20px;font-size: 34px;"></span></center><br>
-  </a>
 
-  <nuxt-link title="Please Login to export data to Excel"  v-else to="/login">
-    <span class="mdi mdi-login-color mdi-key"></span><br>
-    Login to export data
-  </nuxt-link></center><br>
+<v-data-table v-if="loading" item-key="name" class="elevation-1" loading loading-text="Loading SD data... Please wait"></v-data-table>
+
+<div v-else class="mb-5  table-responsive">
+<v-data-table :headers="headers" :search="search" :items="raises" class="elevation-1 ">
+
+  <template v-slot:top>
+    <v-row>
+    <v-col cols="8" md="10">
+        <v-text-field append-icon="mdi-magnify" v-model="search" :label="searchLabel" class="mx-4"></v-text-field>
+
+      </v-col>
+      <v-col cols="4" md="2">
+        <div class="col-reports-div">
+          <center>
+          <a  v-if="loggedIn" href="https://fintechhorizonsmedia.com/fintechraises.xlsx">
+            <center><span content="export to Excel"
+          v-tippy="{ placement : 'bottom' }" id="oki" class="mdi mdi-file-excel" style="margin:20px;font-size: 34px;"></span></center><br>
+          </a>
+          <nuxt-link title="Please Login to export data to Excel"  v-else to="/login">
+            <v-btn class="mt-3">
+            <span class="mdi mdi-login-color mdi-key"> </span>
+            Data export
+           </v-btn>
+          </nuxt-link>
+        </center><br>
+        </div>
+      </v-col>
+    </v-row>
+    </template>
+
+
+    <template #item.company="{ item }">
+      <nuxt-link :to="'/companies/' + item.company_id " >
+       <b>{{item.company}}</b>
+      </nuxt-link>
+    </template>
+</v-data-table>
 </div>
-  <div class="draft-div">
+  <!-- <div class="draft-div">
     <table class="table-striped" width="100%">
       <thead class="fixed-head">
       <th>
@@ -107,14 +134,15 @@
       </tr>
     </tbody>
   </table>
+  </div> -->
+   </main>
   </div>
-
 </div>
 </template>
 
 <script>
 
- import RaiseTempSearch from '@/components/Raises/RaiseTempSearch';
+ //import RaiseTempSearch from '@/components/Raises/RaiseTempSearch';
  import {mapState} from 'vuex';
  export default {
 
@@ -123,14 +151,49 @@
      data () {
       return {
       sortBy: "",
-     }
-    },
+      headers: [
+        {
+          text: 'Date',
+          align: 'start',
+          sortable: false,
+          value: 'item_date',
+        },
+        {
+          text: 'company',
+          value: 'company'
+        },
+        {
+          text: 'amount',
+          value: 'amount'
+        },
+        {
+          text: 'lead',
+          value: 'lead'
+        },
+        {
+          text: 'participating',
+          value: 'participating'
+        },
+        {
+          text: 'city',
+          value: 'city'
+        },
+        {
+          text: 'country',
+          value: 'country_item'
+        },
 
+    ],
+      //rows: [],
+      loading: false,
+      search: '',
+    searchLabel: 'Search',
+    }
+  },
     methods: {
+       getbyCategory(category) {
 
-      getbyCategory(category) {
-
-        switch(category) {
+         switch(category) {
 
           case 'Insurtech':
              this.sortBy = "";
@@ -226,7 +289,6 @@
       this.$store.dispatch("posts/setView", "Raises");
        this.$nuxt.$on("getCategory", (category) => this.getbyCategory(category));
        this.$nuxt.$on("submitSearch", (topic) => this.submitSearch(topic));
-
     },
 
     async fetch({store}) {
@@ -340,6 +402,15 @@
 
 
     }
+
+    .v-data-footer {
+    display: flex;
+    align-items: center;
+    font-size: 0.75rem;
+    padding: 0 8px;
+    flex-direction: row;
+    justify-content: space-around !important;
+}
 
     .valuebtn {
       width: 240px !important;
@@ -607,5 +678,96 @@
     margin-bottom: 20px;
 
   }
+
+  html {
+    overflow-y: hidden !important;
+}
+
+h2 {
+    font-stretch: expanded;
+}
+
+.table-responsive {
+    display: block;
+    width: 100%;
+    box-shadow: 0px 0px 10px -6px;
+    border-radius: 10px;
+}
+
+thead {
+    background-color: #343a40d6;
+    color: white;
+    vertical-align: baseline !important;
+}
+
+.table thead tr {
+    text-align: -webkit-center;
+    width: 100%;
+}
+
+.table td {
+    text-align: -webkit-center;
+}
+
+.table-span {
+    width: 100%;
+    height: 500px;
+    display: block;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    overflow-x: auto;
+}
+
+.table thead th {
+    width: 206px !important;
+    min-width: 200px;
+}
+
+.table td {
+    width: 206px !important;
+}
+
+
+/* vuetify table classes */
+
+th.text-start {
+    color: white !important;
+}
+
+img.logo-img {
+    height: auto;
+    max-height: 50px;
+    max-width: 50px;
+}
+
+i.v-icon.notranslate.v-data-table-header__icon.mdi.mdi-arrow-up.theme--light {
+    color: #ffffff !important;
+}
+
+i.v-icon.notranslate.mdi.mdi-menu-down.theme--light {
+    color: #1976d2 !important;
+}
+
+i.v-icon.notranslate.mdi.mdi-chevron-right.theme--light,
+i.v-icon.notranslate.mdi.mdi-chevron-left.theme--light {
+    color: #1976d2;
+}
+
+.theme--light.v-data-table > .v-data-table__wrapper > table > thead > tr:last-child > th {
+    padding-top: 10px;
+    background: #333333;
+}
+
+
+.v-application--is-ltr .v-text-field .v-label {
+    color: #b0bcc9 !important;
+}
+
+
+.theme--light.v-chip:not(.v-chip--active) {
+    background: #1976d2 !important;
+    color: #ffffff;
+}
+
 
 </style>
