@@ -109,7 +109,7 @@ computed: {
 }
 
 </script>
-<style scoped>
+<style >
 
 .p-class-j {
   text-align:justify;
@@ -117,12 +117,11 @@ computed: {
 }
 a {
   box-shadow: none;
-  color:#ffffff;
   text-decoration: none !important;
 }
 
 body{
-
+  background-color: #f1f1f1 !important;
   margin:0;
   padding:0;
   width:100%;
@@ -444,6 +443,8 @@ border-radius: 20px;
   letter-spacing: 0.3px;
 }
 
-
+.center {
+  text-align: center;
+}
 
 </style>
