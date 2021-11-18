@@ -23,7 +23,7 @@ export default {
   ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: [ '@plugins/firebase',  '@plugins/vue-material',
+  plugins: [ '@plugins/firebase',  '@plugins/vue-material'
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -31,6 +31,8 @@ export default {
 
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
+    // Simple usage
+    '@nuxtjs/vuetify',
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -51,6 +53,7 @@ export default {
 
     env: {
       fbAPIKey: process.env.FB_KEY || 'AIzaSyBzUEYv2IKnQURUERVEH4g_-3OO4XSfWSY',
+      GS_MXDV_KEY: process.env.GS_MXDV_KEY || '1t19HcSTysd_Va13NDE4kVVSuAo_G7y9dv8bM9cHlWpQ'
      // stripePRICEID: process.env.STRIPE_PRICE_ID,
      // stripePUBLIC: process.env.STRIPE_PUBLIC_KEY,
      // stripeSECRET: process.env.STRIPE_SECRET_KEY,
@@ -58,6 +61,14 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
+    extend(config, {}) {
+      config.node = {
+          fs: 'empty',
+          net: 'empty',
+          tls: 'empty',
+          child_process: 'empty'
+      }
+  }
   }
 
 }
