@@ -21,27 +21,34 @@
     </ul>
 
   </Mobilebar>
+  <v-col cols="3">
   <img src="https://firebasestorage.googleapis.com/v0/b/vuedealfunnel.appspot.com/o/finmedialatam.png?alt=media&token=7abacd23-1869-492f-891f-cbe764ce464e" class="logo"/>
+  </v-col>
+  <v-col cols="6">
     <div class="navigation-items">
       <ul class="nav-list">
         <li v-if="showLogOutBtn" class="nav-item"><nuxt-link to="/logout">Logout</nuxt-link></li>
-        <li class="nav-item"><nuxt-link to="/"><span class="mdi mdi-home"></span></nuxt-link></li>
-        <li  class="nav-item"><nuxt-link v-show="(this.loggedIn)" to="/posts">Articles</nuxt-link></li>
-        <li class="nav-item"><nuxt-link to="/news">News</nuxt-link></li>
-        <li v-show="(this.loggedIn)" class="nav-item"><nuxt-link v-show="(this.loggedIn)"to="/newsletters">Newsletters</nuxt-link></li>
-        <li class="nav-item"><nuxt-link to="/reports">Reports</nuxt-link></li>
-        <li  class="nav-item"><nuxt-link to="/builder">Builder</nuxt-link></li>
-        <li class="nav-item"><nuxt-link to="/raises">Raises</nuxt-link></li>
-        <li  class="nav-item"><nuxt-link   to="/companies">Companies</nuxt-link></li>
-        <li class="nav-item"><nuxt-link v-show="(this.loggedIn)" to="/data">Data</nuxt-link></li>
-        <li class="nav-item"><nuxt-link v-show="(this.loggedIn)" to="/account">Account</nuxt-link></li>
-        <li v-if="!(this.loggedIn)" class="nav-item"><nuxt-link to="/login">Login</nuxt-link></li>
-         <li style="display:content;" v-if="this.loggedIn">
-             <i style="place-self: center;color:#b9cfe6">signed in: <b> {{email}}</b></i>
-         </li>
+        <li class="nav-item"><nuxt-link class="nav-item" to="/"><span class="mdi mdi-home"></span></nuxt-link></li>
+        <li  class="nav-item"><nuxt-link class="nav-item" v-show="(this.loggedIn)" to="/posts">Articles</nuxt-link></li>
+        <li class="nav-item"><nuxt-link class="nav-item" to="/news">News</nuxt-link></li>
+        <li v-show="(this.loggedIn)" class="nav-item"><nuxt-link class="nav-item" v-show="(this.loggedIn)"to="/newsletters">Newsletters</nuxt-link></li>
+        <li class="nav-item"><nuxt-link class="nav-item" to="/reports">Reports</nuxt-link></li>
+        <li  class="nav-item"><nuxt-link class="nav-item" to="/builder">Builder</nuxt-link></li>
+        <li class="nav-item"><nuxt-link class="nav-item" to="/raises">Raises</nuxt-link></li>
+        <li  class="nav-item"><nuxt-link  class="nav-item" to="/companies">Companies</nuxt-link></li>
+        <li class="nav-item"><nuxt-link class="nav-item" v-show="(this.loggedIn)" to="/data">Data</nuxt-link></li>
+
 
       </ul>
     </div>
+  </v-col cols="3">
+   <v-col class="d-flex justify-right">
+     <li class="nav-item"><nuxt-link class="nav-item" v-show="(this.loggedIn)" to="/account">Account</nuxt-link></li>
+     <li v-if="!(this.loggedIn)" class="nav-item"><nuxt-link class="nav-item" to="/login">Login</nuxt-link></li>
+      <li style="display:content;" v-if="this.loggedIn">
+          <i class="nav-item" style="right:0;color:#b9cfe6">signed in: {{email}}</i>
+      </li>
+   </v-col>
   </header>
 </div>
 </template>
@@ -188,7 +195,7 @@ export default {
 .nav-item a {
   text-decoration: none;
   color: white;
-  padding:5px;
+  padding: 10px;
   margin:10px auto;
   text-align: center;
 }
